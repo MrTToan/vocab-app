@@ -20,6 +20,13 @@
 # production
 /build
 
+# app data (local JSON store, usage log)
+/.data/
+
+# personal word data (import seed) — kept local, not published
+/tracker.csv
+/words.csv
+
 # misc
 .DS_Store
 *.pem
