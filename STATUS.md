@@ -36,8 +36,7 @@ learner. Per-word stage ladder + smart picker + varied, mostly-typed exercises. 
   scenario, cycled least-recently-shown via `store.pickQuestion`. Authored by Claude subagents
   (`/enrich-questions-bank` skill), 30/word. **~1,119 of ~1,121 words banked** (~33,600 questions,
   ~30/word baseline; the total grows as practice self-harvests). New words added later start with no
-  bank — re-run `/enrich-questions-bank` to fill only those. `scripts/overnight-resume.sh` is an optional
-  headless backstop (not scheduled).
+  bank — re-run `/enrich-questions-bank` to fill only those.
 - **Unit tests** (`npm test`, vitest) cover the pure logic: `lib/engine.ts`, `lib/grade.ts`, `lib/ui.ts`,
   `lib/spell.ts`, `lib/cloze.ts`, `lib/harvest.ts`. **Gate:
   keep `npm test` green on every change** (see CLAUDE.md).
