@@ -1,11 +1,36 @@
 # STATUS — where Lexi is right now (handoff)
 
-_Last updated: 2026-08-02._ Read this first when resuming.
+_Last updated: 2026-08-09._ Read this first when resuming.
 
 ## What this is
-Personal English-vocabulary **practice engine** ("Lexi") for one intermediate B1–B2 Vietnamese
-learner. Per-word stage ladder + smart picker + varied, mostly-typed exercises. Specs: `PRD.md`,
-`TECH.md`. Setup: `SETUP.md`, `docs/`. Project guide for Claude: `CLAUDE.md`.
+Personal English **practice engine** ("Lexi") for one intermediate B1–B2 Vietnamese learner.
+**Two modules now:** (1) **Vocabulary** — per-word stage ladder + smart picker + varied, mostly-typed
+exercises; (2) **Writing (IELTS Academic)** — Task 1 (chart) + Task 2 (essay) with one-shot LLM
+feedback on the four criteria. A SaaS-style **landing page** sits at `/`; the app is split into
+`(marketing)` + `(app)` route groups with a cross-skill `/report`. Specs: `PRD.md`, `TECH.md`,
+`docs/WRITING-SPEC.md`. Setup: `SETUP.md`, `docs/`. Project guide for Claude: `CLAUDE.md`.
+
+## Writing module (IELTS Academic) — built & verified
+- **Two sub-modules:** Task 1 (`/writing/task1`, chart description) + Task 2 (`/writing/task2`, essay).
+  Shared loop (`components/writing/WritingPractice.tsx`) + feedback renderer with **inline, numbered
+  correction highlights** (`components/writing/Feedback.tsx`).
+- **One-shot LLM feedback** on the four official criteria (Task Achievement / Coherence & Cohesion /
+  Lexical Resource / Grammar), overall band, inline corrections (located by exact-substring match, pure
+  helper), synonym suggestions, and an error-type breakdown. Scoring = new **`score-writing`** task on
+  the same provider chain; `maxTokens` 3500.
+- **Task 1 reads each chart ONCE** at ingest (Claude's vision → `chart_data`), stored and reused as the
+  scoring ground truth — **no vision model at app runtime**. Verified live: a deliberate chart misread
+  was caught by the scorer.
+- **Teacher's guidance** in `content/writing/guidance/*.md` is injected into every score (no RAG).
+- **Storage:** self-contained `lib/writing/store.ts` (libSQL, same `.data/lexi.db`) — tables
+  `writing_prompts`, `writing_submissions`, `writing_corrections`. Vocab `Store`/Sheet untouched.
+- **Prompt bank:** 5 seeded Task 2 prompts (`scripts/seed-writing-prompts.mjs`) + 1 sample Task 1
+  (hand-authored SVG chart). Add more via the **`/ingest-writing-prompts`** skill (drop `.docx`/`.pdf`
+  in `content/writing/*/inbox/`, run on request) → `scripts/add-writing-prompt.mjs`.
+- **Cross-skill report** (`/report` + `/api/writing/stats`): band trend, per-criterion averages,
+  **most-common-mistakes** bar chart, recent submissions — beside the vocab mastery summary.
+- **Not connected to vocab yet** (by design) — the "force N vocab words in an essay" link is a seam only.
+- **12 unit tests** for the pure writing helpers (`tests/writing.test.ts`); suite is **80/80 green**.
 
 ## Built & verified
 - **Full app**, typechecks, clean `next build`. Next.js 16 + TS + Tailwind v4.
@@ -52,8 +77,10 @@ learner. Per-word stage ladder + smart picker + varied, mostly-typed exercises. 
   seeds cloze(s) from a new word's example sentences. All additive — no schema change.
 
 ## Data state
-- **~1,121 words** in `.data/lexi.db`, imported from `tracker.csv` (`scripts/import-tracker.mjs` split
-  the combined meaning cell, no LLM).
+- **~1,128 words** in `.data/lexi.db` (~33,650 bank questions). Writing tables present with the seeded
+  prompt bank (6 prompts); submissions/corrections start empty (test data was cleared after verifying).
+- Originally imported from `tracker.csv` (`scripts/import-tracker.mjs` split the combined meaning cell,
+  no LLM).
 - **Cleaned:** 123 meanings had `Input:/Response:`/markdown junk — stripped. 13 sentence-fragment
   "words" deleted; 6 empty meanings filled (incl. `reinder→reindeer`).
 - **Enriched:** synonyms + collocations authored by Claude (me + 8 parallel subagents) — collocations

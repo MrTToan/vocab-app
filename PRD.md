@@ -1,6 +1,6 @@
 # PRD — Personal English Vocabulary Trainer (working title: "Lexi")
 
-**Owner:** you (single user) · **Status:** ✅ Phase 1 built & in use · **Created:** 2026-08-01
+**Owner:** you (single user) · **Status:** ✅ Phase 1 built & in use · **+ Writing module (IELTS) built** · **Created:** 2026-08-01
 
 > This PRD is kept in sync with what's actually shipped. For the live state (data,
 > providers, known gaps) see `STATUS.md`; for architecture see `TECH.md`.
@@ -128,6 +128,22 @@ answers in a row** (near-misses count). Active working set ~35 words.
   result), answer breakdown, **accuracy by exercise type**, most-practiced words. Hand-built SVG/CSS
   (no chart dependency). Backed by an `attempts` log written on every graded answer.
 - **No streak-shaming, no due-count dread.**
+
+### 4.7 Writing module — IELTS Academic (built)
+A second learning module beside vocabulary (full design: `docs/WRITING-SPEC.md`; behavior:
+`docs/features/writing-feedback.md`).
+- **[built] Task 1 (chart) + Task 2 (essay).** Write a response to a real prompt; get **one-shot**
+  feedback: an overall band + bands for the four official criteria (Task Achievement, Coherence &
+  Cohesion, Lexical Resource, Grammar), **inline corrections**, synonym suggestions, and an error-type
+  breakdown for review. LLM-scored (`score-writing` task on the same chain).
+- **[built] Grades by your teacher's rules.** Curated markdown in `content/writing/guidance/` is injected
+  into every score — no RAG.
+- **[built] Task 1 vision-once.** Each chart is read a single time at ingest into `chart_data` (the
+  `/ingest-writing-prompts` skill); scoring checks the description against that stored data, so the app
+  needs no vision model at runtime.
+- **[built] Cross-skill report** (`/report`): band trend, per-criterion averages, most-common mistakes.
+- **[seam, not built] Vocab↔writing link** — an assignment that forces you to use N words you're learning.
+- **Data:** `writing_prompts` / `writing_submissions` / `writing_corrections` (additive; vocab untouched).
 
 ## 5. Out of scope (for now)
 Audio/TTS, speaking/pronunciation scoring, full SRS intervals, multi-user/accounts,

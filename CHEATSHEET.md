@@ -15,15 +15,38 @@ folder** (`/home/toan999/coding/vocab-app`).
 npm run dev
 ```
 Then open in your browser:
-- **http://localhost:3001**            → home (progress overview)
-- **http://localhost:3001/practice**   → practice (this is where the questions appear).
+- **http://localhost:3001**            → landing page (the front door)
+- **http://localhost:3001/vocab**      → vocabulary home (progress overview)
+- **http://localhost:3001/practice**   → vocabulary practice (where the questions appear).
   Tip: the **🔀 Explore new words** button (top-right) swaps your usual review words for random
   new ones you haven't started; press it again to go back to normal review.
+- **http://localhost:3001/writing**    → IELTS writing (Task 1 chart · Task 2 essay)
 - **http://localhost:3001/library**    → all your words
-- **http://localhost:3001/progress**   → charts of your results
+- **http://localhost:3001/report**     → cross-skill report (vocab + writing)
 - **http://localhost:3001/add**        → add a new word
 
 To stop the app: press `Ctrl+C` in the terminal that's running it.
+
+---
+
+## Practise IELTS writing
+- Go to **/writing**, pick **Task 1** (describe a chart) or **Task 2** (essay), write your response,
+  and press **Submit for feedback** — you get a band estimate on all four IELTS criteria, inline
+  corrections, and an error breakdown. Scoring needs an LLM provider configured.
+- **Add your teacher's advice/formulas** so the examiner grades by your rules: edit the markdown in
+  `content/writing/guidance/` (`general.md`, `task1.md`, `task2.md`). Takes effect on the next submit.
+
+### Add writing prompts (questions)
+1. Drop the source files (`.docx`/`.pdf` you found online) into `content/writing/task1/inbox/` or
+   `content/writing/task2/inbox/`.
+2. Ask Claude: **"run the ingest-writing-prompts skill"** (or `/ingest-writing-prompts`). It processes
+   them on request — for Task 1 it reads each chart **once** and asks you to confirm the data.
+```bash
+# quick seed of 5 sample Task 2 essay prompts (idempotent):
+node scripts/seed-writing-prompts.mjs
+# how many prompts are in the bank, by task:
+sqlite3 .data/lexi.db "SELECT task_type, COUNT(*) FROM writing_prompts GROUP BY task_type;"
+```
 
 ---
 
@@ -109,6 +132,8 @@ Tips:
 | Your API keys | `.env.local` |
 | Review-a-word script | `scripts/show-questions.mjs` |
 | Question-bank generator (skill) | `/enrich-questions-bank` |
+| Writing-prompt ingester (skill) | `/ingest-writing-prompts` |
+| Your teacher's grading rules | `content/writing/guidance/*.md` |
 | How each feature works (plain language) | `docs/features/` |
 | Project status / what's built | `STATUS.md` |
 | Full project guide (for Claude) | `CLAUDE.md` |

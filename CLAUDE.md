@@ -25,7 +25,8 @@ npm run test:watch
 ```
 Covers the pure logic: `lib/engine.ts` (stage ladder, picker, counts), `lib/grade.ts`
 (local answer matching — Levenshtein close-match + fuzzy Vietnamese meaning), `lib/ui.ts`,
-`lib/spell.ts` (spelling suggestion), `lib/cloze.ts` + `lib/harvest.ts` (bank self-harvesting).
+`lib/spell.ts` (spelling suggestion), `lib/cloze.ts` + `lib/harvest.ts` (bank self-harvesting),
+`lib/writing/grade.ts` (writing: word count, band clamp, correction-span location, error aggregation).
 Tests live in `tests/` with a `mkWord` fixture factory. **When you change any of that logic,
 update/extend the tests and keep `npm test` passing.** Grading helpers were extracted from the
 practice page into `lib/grade.ts` specifically so they're testable — keep them there, not inline.
@@ -43,6 +44,12 @@ practice page into `lib/grade.ts` specifically so they're testable — keep them
 - **Question bank** → `questions` table, served least-recently-shown via `store.pickQuestion`. Built by
   the `/enrich-questions-bank` skill AND self-harvested from LLM output at runtime (`lib/harvest.ts` +
   `lib/cloze.ts` — fire-and-forget, deterministic-id dedup, no schema change).
+- **Writing module (IELTS)** → `lib/writing/*` (self-contained: own libSQL store over the same DB,
+  pure `grade.ts`, `score-writing` LLM task). Tables `writing_prompts`/`writing_submissions`/
+  `writing_corrections`. UI `components/writing/*`, routes `app/(app)/writing/*` + `app/api/writing/*`.
+  Task 1 charts read once at ingest (`/ingest-writing-prompts` skill) → `chart_data`; no runtime vision.
+  Design: `docs/WRITING-SPEC.md`. **App is split into `app/(marketing)` (landing at `/`) + `app/(app)`
+  (nav + vocab at `/vocab` + writing + `/report`).**
 - **Types/schemas** → `lib/types.ts`. **UI helpers** → `lib/ui.ts`. **API** → `app/api/*`.
 
 ## Conventions & gotchas

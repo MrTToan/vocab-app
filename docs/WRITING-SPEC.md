@@ -1,8 +1,10 @@
 # Writing module — design spec (IELTS Academic)
 
-**Status:** design agreed, not yet built · Companion to `PRD.md` / `TECH.md` · Author: engineering + PM, 2026-08-09.
-This is the plan we build to. As each slice ships, its behavior moves into `docs/features/writing/` and the
-relevant lines land in `PRD.md` / `TECH.md` / `STATUS.md`.
+**Status:** ✅ built (2026-08-09) · Companion to `PRD.md` / `TECH.md` · This was the design; it now ships.
+For how it behaves today see `docs/features/writing-feedback.md`; for architecture see `TECH.md` §4b; for
+live state see `STATUS.md`. The one deliberate deviation from the plan below: correction **spans are located
+by exact-substring match** in `grade.ts` (the LLM returns the verbatim `original`, we compute start/end) —
+more robust than asking the model for character offsets.
 
 ---
 
