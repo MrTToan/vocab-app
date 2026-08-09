@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { hasProvider } from "@/lib/providers";
 import { writingStore } from "@/lib/writing/store";
+import { currentUserId } from "@/lib/auth/user";
+import { reserveQuota, QuotaError } from "@/lib/auth/quota";
 import { scoreWriting } from "@/lib/writing/score";
 
 /**
@@ -16,6 +18,10 @@ export async function POST(req: Request) {
     );
   }
 
+  const userId = await currentUserId();
+  if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+  const store = writingStore.forUser(userId);
+
   const { promptId, text } = (await req.json()) as { promptId?: string; text?: string };
   const essay = (text ?? "").trim();
   if (!promptId) return NextResponse.json({ error: "promptId required" }, { status: 400 });
@@ -23,12 +29,13 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Please write a full response before submitting." }, { status: 400 });
   }
 
-  const prompt = await writingStore.getPrompt(promptId);
+  const prompt = await store.getPrompt(promptId);
   if (!prompt) return NextResponse.json({ error: "prompt not found" }, { status: 404 });
 
   try {
+    await reserveQuota(userId, "score-writing");
     const scored = await scoreWriting(prompt, essay);
-    const submission = await writingStore.addSubmission({
+    const submission = await store.addSubmission({
       prompt_id: prompt.id,
       task_type: prompt.task_type,
       text: essay,
@@ -42,6 +49,9 @@ export async function POST(req: Request) {
     });
     return NextResponse.json({ submission });
   } catch (err: any) {
+    if (err instanceof QuotaError) {
+      return NextResponse.json({ error: err.message }, { status: 429 });
+    }
     return NextResponse.json(
       { error: `Scoring failed: ${err?.message ?? err}` },
       { status: 502 },

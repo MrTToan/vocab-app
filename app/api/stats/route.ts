@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { getStore } from "@/lib/store";
+import { currentUserId } from "@/lib/auth/user";
 import { recentAccuracy, stageCounts } from "@/lib/engine";
 import type { Result } from "@/lib/types";
 
@@ -17,7 +18,9 @@ function label(ts: number): string {
 }
 
 export async function GET() {
-  const store = getStore();
+  const userId = await currentUserId();
+  if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+  const store = getStore().forUser(userId);
   const words = await store.all();
   const attempts = await store.attempts();
 

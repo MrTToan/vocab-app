@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import type { ReactNode } from "react";
 
 // Two peer modules. The nav shows a module switch (Vocabulary | Writing) plus a
 // context sub-nav for whichever module you're in. Vocab keeps all its original
@@ -30,7 +31,9 @@ function moduleOf(path: string): "vocab" | "writing" {
   return path === "/writing" || path.startsWith("/writing/") ? "writing" : "vocab";
 }
 
-export default function Nav() {
+// `authSlot` is a server component (AuthStatus) passed in by the layout — a
+// client component can still render server nodes it receives as props.
+export default function Nav({ authSlot }: { authSlot?: ReactNode }) {
   const path = usePathname();
   const active = moduleOf(path);
 
@@ -63,17 +66,20 @@ export default function Nav() {
             );
           })}
         </div>
-        <Link
-          href="/report"
-          className="ml-auto px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap transition-colors"
-          style={
-            path === "/report"
-              ? { background: "var(--accent-soft)", color: "var(--accent)" }
-              : { color: "var(--muted)" }
-          }
-        >
-          📊 Report
-        </Link>
+        <div className="ml-auto flex items-center gap-2">
+          <Link
+            href="/report"
+            className="px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap transition-colors"
+            style={
+              path === "/report"
+                ? { background: "var(--accent-soft)", color: "var(--accent)" }
+                : { color: "var(--muted)" }
+            }
+          >
+            📊 Report
+          </Link>
+          {authSlot}
+        </div>
       </div>
 
       {/* Row 2 — sub-nav for the active module */}

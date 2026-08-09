@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { getStore } from "@/lib/store";
+import { currentUserId } from "@/lib/auth/user";
 
 /**
  * GET /api/questions/pending
@@ -7,7 +8,9 @@ import { getStore } from "@/lib/store";
  * Used by the /enrich-questions-bank skill to know what to generate.
  */
 export async function GET() {
-  const store = getStore();
+  const userId = await currentUserId();
+  if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+  const store = getStore().forUser(userId);
   const words = await store.all();
   const have = new Set(await store.questionWordIds());
   const pending = words

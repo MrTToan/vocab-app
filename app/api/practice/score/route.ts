@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 import { getStore } from "@/lib/store";
+import { currentUserId } from "@/lib/auth/user";
+import { reserveQuota, QuotaError } from "@/lib/auth/quota";
 import { scoreAnswer, hasProvider } from "@/lib/llm";
 import { clozeFromSentence, saveHarvest } from "@/lib/harvest";
 import type { ExerciseType, GeneratedExercise } from "@/lib/types";
@@ -22,11 +24,14 @@ export async function POST(req: Request) {
     generated: GeneratedExercise;
     answer: string;
   };
-  const store = getStore();
+  const userId = await currentUserId();
+  if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+  const store = getStore().forUser(userId);
   const word = await store.get(wordId);
   if (!word) return NextResponse.json({ error: "word not found" }, { status: 404 });
 
   try {
+    await reserveQuota(userId, "score");
     const gen = generated ?? {};
     const score = await scoreAnswer(word, exerciseType, gen, answer ?? "");
 
@@ -46,6 +51,9 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ score });
   } catch (err: any) {
+    if (err instanceof QuotaError) {
+      return NextResponse.json({ error: err.message }, { status: 429 });
+    }
     return NextResponse.json(
       { error: `Scoring failed: ${err?.message ?? err}` },
       { status: 502 },

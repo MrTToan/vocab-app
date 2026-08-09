@@ -7,13 +7,20 @@ import type { Word, Attempt, Question } from "./types";
  * Storage lives behind this one interface. Two backends:
  *   - SqliteStore : libSQL/SQLite. Local = a fast file (.data/lexi.db, zero setup);
  *                   the SAME client talks to Turso (hosted libSQL) when deployed.
- *                   This is the default.
- *   - SheetStore  : Google Sheet via a service account — for the "open my words in
- *                   a spreadsheet" workflow. Used when Sheet creds are configured.
+ *                   This is the default and the multi-tenant (deploy) backend.
+ *   - SheetStore  : Google Sheet via a service account — a single-user local
+ *                   workflow ("open my words in a spreadsheet"). NOT multi-tenant:
+ *                   it ignores the user scope (one sheet = one user).
  * getStore() picks the backend from env and caches a single instance.
+ *
+ * MULTI-TENANCY: every row carries a user_id. Call sites never touch the raw
+ * store — they go through getStore().forUser(userId), which returns a ScopedStore
+ * whose every method is bound to that user. This keeps user scoping impossible to
+ * forget at a call site.
  */
 
-export interface Store {
+/** A user-scoped view of the store — every method operates on one user's data. */
+export interface ScopedStore {
   all(): Promise<Word[]>;
   get(id: string): Promise<Word | undefined>;
   findByWord(word: string): Promise<Word | undefined>;
@@ -29,6 +36,12 @@ export interface Store {
   questionCount(): Promise<number>;
   /** Distinct word_ids that already have at least one bank question. */
   questionWordIds(): Promise<string[]>;
+  backend(): "sheet" | "sqlite";
+}
+
+export interface Store {
+  /** Return a view of the store scoped to a single user. */
+  forUser(userId: string): ScopedStore;
   backend(): "sheet" | "sqlite";
 }
 
@@ -157,6 +170,10 @@ class SqliteStore implements Store {
     return "sqlite";
   }
 
+  forUser(userId: string): ScopedStore {
+    return makeScoped(this, userId);
+  }
+
   private async connect(): Promise<void> {
     if (this.ready) return this.ready;
     this.ready = (async () => {
@@ -176,20 +193,33 @@ class SqliteStore implements Store {
         authToken: process.env.DATABASE_AUTH_TOKEN, // for Turso; undefined for file
       });
       const cols = HEADERS.map((h) => `"${h}" TEXT`).join(", ");
+      // user_id carried on every table for multi-tenancy.
       await this.db.execute(
-        `CREATE TABLE IF NOT EXISTS words (${cols}, PRIMARY KEY ("id"))`,
+        `CREATE TABLE IF NOT EXISTS words (${cols}, user_id TEXT, PRIMARY KEY ("id"))`,
       );
       await this.db.execute(
-        `CREATE INDEX IF NOT EXISTS idx_word ON words (word COLLATE NOCASE)`,
+        `CREATE TABLE IF NOT EXISTS attempts (ts INTEGER, word_id TEXT, exercise_type TEXT, result TEXT, user_id TEXT)`,
       );
       await this.db.execute(
-        `CREATE TABLE IF NOT EXISTS attempts (ts INTEGER, word_id TEXT, exercise_type TEXT, result TEXT)`,
+        `CREATE TABLE IF NOT EXISTS questions (id TEXT PRIMARY KEY, word_id TEXT, type TEXT, direction TEXT, payload TEXT, answer TEXT, last_shown INTEGER DEFAULT 0, user_id TEXT)`,
       );
       await this.db.execute(
-        `CREATE TABLE IF NOT EXISTS questions (id TEXT PRIMARY KEY, word_id TEXT, type TEXT, direction TEXT, payload TEXT, answer TEXT, last_shown INTEGER DEFAULT 0)`,
+        `CREATE TABLE IF NOT EXISTS users (id TEXT PRIMARY KEY, email TEXT, name TEXT, image TEXT, created_at INTEGER)`,
+      );
+      // Additive migrations for DBs created before multi-tenancy. Each ALTER is
+      // guarded so a re-run (column already exists) is a no-op.
+      await addColumn(this.db, "words", "user_id TEXT");
+      await addColumn(this.db, "attempts", "user_id TEXT");
+      await addColumn(this.db, "questions", "user_id TEXT");
+      // Per-user lookup indexes.
+      await this.db.execute(
+        `CREATE INDEX IF NOT EXISTS idx_word ON words (user_id, word COLLATE NOCASE)`,
       );
       await this.db.execute(
-        `CREATE INDEX IF NOT EXISTS idx_q ON questions (word_id, type)`,
+        `CREATE INDEX IF NOT EXISTS idx_q ON questions (user_id, word_id, type)`,
+      );
+      await this.db.execute(
+        `CREATE UNIQUE INDEX IF NOT EXISTS idx_users_email ON users (email)`,
       );
     })();
     return this.ready;
@@ -199,99 +229,120 @@ class SqliteStore implements Store {
     return fromRow((k) => (row[k] == null ? undefined : String(row[k])));
   }
 
-  async all(): Promise<Word[]> {
+  async all(userId: string): Promise<Word[]> {
     await this.connect();
-    const rs = await this.db.execute(
-      "SELECT * FROM words ORDER BY created_at DESC",
-    );
+    const rs = await this.db.execute({
+      sql: "SELECT * FROM words WHERE user_id = ? ORDER BY created_at DESC",
+      args: [userId],
+    });
     return rs.rows.map((r: any) => this.mapRow(r));
   }
-  async get(id: string): Promise<Word | undefined> {
+  async get(userId: string, id: string): Promise<Word | undefined> {
     await this.connect();
     const rs = await this.db.execute({
-      sql: "SELECT * FROM words WHERE id = ? LIMIT 1",
-      args: [id],
+      sql: "SELECT * FROM words WHERE user_id = ? AND id = ? LIMIT 1",
+      args: [userId, id],
     });
     return rs.rows[0] ? this.mapRow(rs.rows[0]) : undefined;
   }
-  async findByWord(word: string): Promise<Word | undefined> {
+  async findByWord(userId: string, word: string): Promise<Word | undefined> {
     await this.connect();
     const rs = await this.db.execute({
-      sql: "SELECT * FROM words WHERE lower(trim(word)) = ? LIMIT 1",
-      args: [normalizeWord(word)],
+      sql: "SELECT * FROM words WHERE user_id = ? AND lower(trim(word)) = ? LIMIT 1",
+      args: [userId, normalizeWord(word)],
     });
     return rs.rows[0] ? this.mapRow(rs.rows[0]) : undefined;
   }
-  async add(input: NewWord): Promise<Word> {
+  async add(userId: string, input: NewWord): Promise<Word> {
     await this.connect();
     const w = makeWord(input);
-    await this.db.execute(insertStmt(w));
+    await this.db.execute(insertStmt(w, userId));
     return w;
   }
-  async addMany(inputs: NewWord[]): Promise<Word[]> {
+  async addMany(userId: string, inputs: NewWord[]): Promise<Word[]> {
     await this.connect();
     const created = inputs.map(makeWord);
-    if (created.length) await this.db.batch(created.map(insertStmt), "write");
+    if (created.length)
+      await this.db.batch(
+        created.map((w) => insertStmt(w, userId)),
+        "write",
+      );
     return created;
   }
-  async update(id: string, patch: Partial<Word>): Promise<Word | undefined> {
+  async update(
+    userId: string,
+    id: string,
+    patch: Partial<Word>,
+  ): Promise<Word | undefined> {
     await this.connect();
-    const cur = await this.get(id);
+    const cur = await this.get(userId, id);
     if (!cur) return undefined;
     const next = { ...cur, ...patch, id };
     const r = toRow(next);
     const sets = HEADERS.filter((h) => h !== "id").map((h) => `"${h}" = ?`);
     await this.db.execute({
-      sql: `UPDATE words SET ${sets.join(", ")} WHERE id = ?`,
-      args: [...HEADERS.filter((h) => h !== "id").map((h) => r[h]), id],
+      sql: `UPDATE words SET ${sets.join(", ")} WHERE id = ? AND user_id = ?`,
+      args: [
+        ...HEADERS.filter((h) => h !== "id").map((h) => r[h]),
+        id,
+        userId,
+      ],
     });
     return next;
   }
-  async remove(id: string): Promise<void> {
-    await this.connect();
-    await this.db.execute({ sql: "DELETE FROM words WHERE id = ?", args: [id] });
-  }
-  async logAttempt(a: Attempt): Promise<void> {
+  async remove(userId: string, id: string): Promise<void> {
     await this.connect();
     await this.db.execute({
-      sql: "INSERT INTO attempts (ts, word_id, exercise_type, result) VALUES (?,?,?,?)",
-      args: [a.ts, a.word_id, a.exercise_type, a.result],
+      sql: "DELETE FROM words WHERE id = ? AND user_id = ?",
+      args: [id, userId],
     });
   }
-  async attempts(): Promise<Attempt[]> {
+  async logAttempt(userId: string, a: Attempt): Promise<void> {
     await this.connect();
-    const rs = await this.db.execute(
-      "SELECT ts, word_id, exercise_type, result FROM attempts ORDER BY ts",
-    );
+    await this.db.execute({
+      sql: "INSERT INTO attempts (ts, word_id, exercise_type, result, user_id) VALUES (?,?,?,?,?)",
+      args: [a.ts, a.word_id, a.exercise_type, a.result, userId],
+    });
+  }
+  async attempts(userId: string): Promise<Attempt[]> {
+    await this.connect();
+    const rs = await this.db.execute({
+      sql: "SELECT ts, word_id, exercise_type, result FROM attempts WHERE user_id = ? ORDER BY ts",
+      args: [userId],
+    });
     return rs.rows.map((r: any) => ({
       word_id: String(r.word_id ?? ""),
       exercise_type: String(r.exercise_type ?? ""),
-      result: (String(r.result ?? "incorrect")) as Attempt["result"],
+      result: String(r.result ?? "incorrect") as Attempt["result"],
       ts: Number(r.ts ?? 0),
     }));
   }
-  async addQuestions(qs: Question[]): Promise<void> {
+  async addQuestions(userId: string, qs: Question[]): Promise<void> {
     await this.connect();
     if (!qs.length) return;
     await this.db.batch(
       qs.map((q) => ({
-        sql: "INSERT OR REPLACE INTO questions (id, word_id, type, direction, payload, answer, last_shown) VALUES (?,?,?,?,?,?,0)",
-        args: [q.id, q.word_id, q.type, q.direction, q.payload, q.answer],
+        sql: "INSERT OR REPLACE INTO questions (id, word_id, type, direction, payload, answer, last_shown, user_id) VALUES (?,?,?,?,?,?,0,?)",
+        args: [q.id, q.word_id, q.type, q.direction, q.payload, q.answer, userId],
       })),
       "write",
     );
   }
-  async pickQuestion(wordId: string, type: string): Promise<Question | undefined> {
+  async pickQuestion(
+    userId: string,
+    wordId: string,
+    type: string,
+  ): Promise<Question | undefined> {
     await this.connect();
     const rs = await this.db.execute({
-      sql: "SELECT * FROM questions WHERE word_id=? AND type=? ORDER BY last_shown ASC, RANDOM() LIMIT 1",
-      args: [wordId, type],
+      sql: "SELECT * FROM questions WHERE user_id=? AND word_id=? AND type=? ORDER BY last_shown ASC, RANDOM() LIMIT 1",
+      args: [userId, wordId, type],
     });
     const r: any = rs.rows[0];
     if (!r) return undefined;
     await this.db.execute({
-      sql: "UPDATE questions SET last_shown=? WHERE id=?",
-      args: [Date.now(), String(r.id)],
+      sql: "UPDATE questions SET last_shown=? WHERE id=? AND user_id=?",
+      args: [Date.now(), String(r.id), userId],
     });
     return {
       id: String(r.id),
@@ -302,23 +353,62 @@ class SqliteStore implements Store {
       answer: String(r.answer ?? ""),
     };
   }
-  async questionCount(): Promise<number> {
+  async questionCount(userId: string): Promise<number> {
     await this.connect();
-    const rs = await this.db.execute("SELECT COUNT(*) c FROM questions");
+    const rs = await this.db.execute({
+      sql: "SELECT COUNT(*) c FROM questions WHERE user_id = ?",
+      args: [userId],
+    });
     return Number(rs.rows[0]?.c ?? 0);
   }
-  async questionWordIds(): Promise<string[]> {
+  async questionWordIds(userId: string): Promise<string[]> {
     await this.connect();
-    const rs = await this.db.execute("SELECT DISTINCT word_id FROM questions");
+    const rs = await this.db.execute({
+      sql: "SELECT DISTINCT word_id FROM questions WHERE user_id = ?",
+      args: [userId],
+    });
     return rs.rows.map((r: any) => String(r.word_id));
   }
 }
 
-function insertStmt(w: Word) {
+/** Add a column if it doesn't already exist (SQLite has no IF NOT EXISTS for ADD COLUMN). */
+async function addColumn(db: any, table: string, colDef: string): Promise<void> {
+  try {
+    await db.execute(`ALTER TABLE ${table} ADD COLUMN ${colDef}`);
+  } catch {
+    /* column already exists */
+  }
+}
+
+function insertStmt(w: Word, userId: string) {
   const r = toRow(w);
+  const cols = [...HEADERS, "user_id"];
   return {
-    sql: `INSERT INTO words (${HEADERS.map((h) => `"${h}"`).join(", ")}) VALUES (${HEADERS.map(() => "?").join(", ")})`,
-    args: HEADERS.map((h) => r[h]),
+    sql: `INSERT INTO words (${cols.map((h) => `"${h}"`).join(", ")}) VALUES (${cols.map(() => "?").join(", ")})`,
+    args: [...HEADERS.map((h) => r[h]), userId],
+  };
+}
+
+/**
+ * Bind a raw (userId-first) store to one user, producing the ScopedStore the app
+ * calls. Works for both backends: SheetStore's raw methods ignore the id.
+ */
+function makeScoped(raw: any, userId: string): ScopedStore {
+  return {
+    all: () => raw.all(userId),
+    get: (id) => raw.get(userId, id),
+    findByWord: (word) => raw.findByWord(userId, word),
+    add: (word) => raw.add(userId, word),
+    addMany: (words) => raw.addMany(userId, words),
+    update: (id, patch) => raw.update(userId, id, patch),
+    remove: (id) => raw.remove(userId, id),
+    logAttempt: (a) => raw.logAttempt(userId, a),
+    attempts: () => raw.attempts(userId),
+    addQuestions: (qs) => raw.addQuestions(userId, qs),
+    pickQuestion: (wordId, type) => raw.pickQuestion(userId, wordId, type),
+    questionCount: () => raw.questionCount(userId),
+    questionWordIds: () => raw.questionWordIds(userId),
+    backend: () => raw.backend(),
   };
 }
 
@@ -331,6 +421,11 @@ type GRow = {
   delete(): Promise<void>;
 };
 
+/*
+ * SINGLE-USER backend. One Sheet == one user, so the raw methods accept a userId
+ * to satisfy the shared shape but deliberately ignore it. Do not use the Sheet
+ * backend for a multi-tenant deploy — use SqliteStore/Turso.
+ */
 class SheetStore implements Store {
   private cache: Word[] | null = null;
   private rows = new Map<string, GRow>();
@@ -344,6 +439,10 @@ class SheetStore implements Store {
 
   backend(): "sheet" {
     return "sheet";
+  }
+
+  forUser(userId: string): ScopedStore {
+    return makeScoped(this, userId);
   }
 
   private async connect(): Promise<void> {
@@ -380,17 +479,17 @@ class SheetStore implements Store {
     await this.connect();
     return this.cache!;
   }
-  async all(): Promise<Word[]> {
+  async all(_userId: string): Promise<Word[]> {
     return [...(await this.load())];
   }
-  async get(id: string): Promise<Word | undefined> {
+  async get(_userId: string, id: string): Promise<Word | undefined> {
     return (await this.load()).find((w) => w.id === id);
   }
-  async findByWord(word: string): Promise<Word | undefined> {
+  async findByWord(_userId: string, word: string): Promise<Word | undefined> {
     const n = normalizeWord(word);
     return (await this.load()).find((w) => normalizeWord(w.word) === n);
   }
-  async add(input: NewWord): Promise<Word> {
+  async add(_userId: string, input: NewWord): Promise<Word> {
     await this.connect();
     const w = makeWord(input);
     const row = await this.sheet.addRow(toRow(w));
@@ -398,7 +497,7 @@ class SheetStore implements Store {
     this.rows.set(w.id, row as unknown as GRow);
     return w;
   }
-  async addMany(inputs: NewWord[]): Promise<Word[]> {
+  async addMany(_userId: string, inputs: NewWord[]): Promise<Word[]> {
     await this.connect();
     const created = inputs.map(makeWord);
     const rows = await this.sheet.addRows(created.map(toRow));
@@ -408,7 +507,11 @@ class SheetStore implements Store {
     });
     return created;
   }
-  async update(id: string, patch: Partial<Word>): Promise<Word | undefined> {
+  async update(
+    _userId: string,
+    id: string,
+    patch: Partial<Word>,
+  ): Promise<Word | undefined> {
     await this.connect();
     const i = this.cache!.findIndex((w) => w.id === id);
     if (i === -1) return undefined;
@@ -422,7 +525,7 @@ class SheetStore implements Store {
     }
     return next;
   }
-  async remove(id: string): Promise<void> {
+  async remove(_userId: string, id: string): Promise<void> {
     await this.connect();
     const i = this.cache!.findIndex((w) => w.id === id);
     if (i !== -1) this.cache!.splice(i, 1);
@@ -450,7 +553,7 @@ class SheetStore implements Store {
       result: (r.get("result") || "incorrect") as Attempt["result"],
     }));
   }
-  async logAttempt(a: Attempt): Promise<void> {
+  async logAttempt(_userId: string, a: Attempt): Promise<void> {
     await this.ensureAttempts();
     await this.attemptsSheet.addRow({
       ts: String(a.ts),
@@ -460,7 +563,7 @@ class SheetStore implements Store {
     });
     this.attemptCache!.push(a);
   }
-  async attempts(): Promise<Attempt[]> {
+  async attempts(_userId: string): Promise<Attempt[]> {
     await this.ensureAttempts();
     return [...this.attemptCache!];
   }
@@ -484,24 +587,28 @@ class SheetStore implements Store {
       answer: r.get("answer") || "",
     }));
   }
-  async addQuestions(qs: Question[]): Promise<void> {
+  async addQuestions(_userId: string, qs: Question[]): Promise<void> {
     await this.ensureQuestions();
     if (!qs.length) return;
     await this.questionsSheet.addRows(qs.map((q) => ({ ...q })));
     this.questionCache!.push(...qs);
   }
-  async pickQuestion(wordId: string, type: string): Promise<Question | undefined> {
+  async pickQuestion(
+    _userId: string,
+    wordId: string,
+    type: string,
+  ): Promise<Question | undefined> {
     await this.ensureQuestions();
     const pool = this.questionCache!.filter(
       (q) => q.word_id === wordId && q.type === type,
     );
     return pool.length ? pool[Math.floor(Math.random() * pool.length)] : undefined;
   }
-  async questionCount(): Promise<number> {
+  async questionCount(_userId: string): Promise<number> {
     await this.ensureQuestions();
     return this.questionCache!.length;
   }
-  async questionWordIds(): Promise<string[]> {
+  async questionWordIds(_userId: string): Promise<string[]> {
     await this.ensureQuestions();
     return [...new Set(this.questionCache!.map((q) => q.word_id))];
   }

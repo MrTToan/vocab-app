@@ -26,6 +26,14 @@ One `Store` interface, selected by env:
 Both implement `all / get / findByWord / add / addMany / update / remove / logAttempt / attempts` plus the question-bank methods `addQuestions / pickQuestion / questionCount / questionWordIds`.
 Swapping backends is env-only; the app never touches storage directly.
 
+**Multi-tenancy.** Every table carries a `user_id`. Call sites never use the raw
+store — they go through `getStore().forUser(userId)` (and `writingStore.forUser(userId)`),
+which returns a scoped view whose every method is bound to that user, so scoping
+is impossible to forget. The caller is resolved once per request via
+`currentUserId()` (`lib/auth/user.ts`), the single auth choke point. `SqliteStore`
+is the multi-tenant/deploy backend; `SheetStore` is single-user-local and ignores
+the scope. A per-user daily LLM cap lives in `lib/auth/quota.ts` (`llm_usage` table).
+
 ## 3. LLM strategy (`lib/providers.ts`, `lib/llm.ts`)
 
 Three tasks — **enrich**, **generate** (fresh cloze/translate/scenario), **score** — each resolved to a provider.
@@ -119,8 +127,14 @@ vocab-app/
 ## 7. Security / secrets
 - All LLM + storage calls run in **server-side API routes**; keys never reach the browser.
 - `.env.local` gitignored; `.data/` gitignored.
-- **Before public deploy:** add a shared password/auth (not built yet).
+- **Auth (branch `multitenant-deploy`):** NextAuth v5, Google OAuth, JWT sessions.
+  Enforced in route handlers via `currentUserId()` (a DAL), **not** middleware —
+  this Next 16 deprecated `middleware.ts` (→ `proxy.ts`). Every route rejects
+  unauthenticated callers (401) and scopes storage to the session user. Config
+  guarded: with no `AUTH_*` env it falls back to the local owner (dev seam).
 
 ## 8. Known gaps / next
-- No auth; no retry/backoff on LLM calls (a burst can trip a provider's rate limit); no `engine.ts`
-  unit tests yet; progress writes per-answer (not batched).
+- No retry/backoff on LLM calls (a burst can trip a provider's rate limit); no
+  `engine.ts` unit tests yet; progress writes per-answer (not batched).
+- Provider circuit-breaker state is in-memory (`activeIndex`/`consecutiveFailures`)
+  — won't persist across serverless invocations on Vercel (fast-follow).

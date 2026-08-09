@@ -41,9 +41,11 @@ async function main() {
     `CREATE TABLE IF NOT EXISTS writing_prompts (
       id TEXT PRIMARY KEY, task_type TEXT, title TEXT, prompt_text TEXT,
       image_path TEXT, chart_data TEXT, model_answer TEXT, source_file TEXT,
-      tags TEXT, last_shown INTEGER DEFAULT 0, created_at INTEGER
+      tags TEXT, last_shown INTEGER DEFAULT 0, created_at INTEGER, user_id TEXT
     )`,
   );
+  try { await db.execute("ALTER TABLE writing_prompts ADD COLUMN user_id TEXT"); } catch {}
+  const OWNER_ID = process.env.SEED_USER_ID || "local-user";
   const now = Date.now();
   let n = 0;
   for (let i = 0; i < TASK2.length; i++) {
@@ -51,9 +53,9 @@ async function main() {
     const id = `seed-task2-${i + 1}`;
     await db.execute({
       sql: `INSERT OR REPLACE INTO writing_prompts
-        (id, task_type, title, prompt_text, image_path, chart_data, model_answer, source_file, tags, last_shown, created_at)
-        VALUES (?,?,?,?,?,?,?,?,?,COALESCE((SELECT last_shown FROM writing_prompts WHERE id=?),0),?)`,
-      args: [id, "task2", p.title, p.prompt_text, null, null, null, "seed", JSON.stringify(["seed"]), id, now],
+        (id, task_type, title, prompt_text, image_path, chart_data, model_answer, source_file, tags, last_shown, created_at, user_id)
+        VALUES (?,?,?,?,?,?,?,?,?,COALESCE((SELECT last_shown FROM writing_prompts WHERE id=?),0),?,?)`,
+      args: [id, "task2", p.title, p.prompt_text, null, null, null, "seed", JSON.stringify(["seed"]), id, now, OWNER_ID],
     });
     n++;
   }

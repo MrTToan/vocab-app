@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { writingStore } from "@/lib/writing/store";
+import { currentUserId } from "@/lib/auth/user";
 
 /**
  * GET /api/writing/submission?promptId=X -> { submission } — the most recent
@@ -9,6 +10,8 @@ import { writingStore } from "@/lib/writing/store";
 export async function GET(req: Request) {
   const promptId = new URL(req.url).searchParams.get("promptId");
   if (!promptId) return NextResponse.json({ error: "promptId required" }, { status: 400 });
-  const submission = await writingStore.latestSubmission(promptId);
+  const userId = await currentUserId();
+  if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+  const submission = await writingStore.forUser(userId).latestSubmission(promptId);
   return NextResponse.json({ submission });
 }

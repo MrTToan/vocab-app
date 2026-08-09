@@ -1,10 +1,14 @@
 import { NextResponse } from "next/server";
 import { getStore, type NewWord } from "@/lib/store";
+import { currentUserId } from "@/lib/auth/user";
+import { reserveQuota, QuotaError } from "@/lib/auth/quota";
 import { enrichWord, hasProvider } from "@/lib/llm";
 import { clozeFromSentence, saveHarvest } from "@/lib/harvest";
 
 export async function GET() {
-  const words = await getStore().all();
+  const userId = await currentUserId();
+  if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+  const words = await getStore().forUser(userId).all();
   // newest first
   words.sort((a, b) => b.created_at - a.created_at);
   return NextResponse.json({ words });
@@ -23,9 +27,13 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "word is required" }, { status: 400 });
   }
 
+  const userId = await currentUserId();
+  if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+  const store = getStore().forUser(userId);
+
   // duplicate guard — reject unless the caller explicitly allows it
   if (!body.allow_duplicate) {
-    const existing = await getStore().findByWord(body.word);
+    const existing = await store.findByWord(body.word);
     if (existing) {
       return NextResponse.json(
         {
@@ -47,9 +55,13 @@ export async function POST(req: Request) {
 
   if (body.enrich && hasProvider("enrich")) {
     try {
+      await reserveQuota(userId, "enrich");
       const { enrichment: e } = await enrichWord(body.word, body);
       fields = { ...e, ...stripEmpty(body) }; // keep any learner-supplied values
     } catch (err: any) {
+      if (err instanceof QuotaError) {
+        return NextResponse.json({ error: err.message }, { status: 429 });
+      }
       return NextResponse.json(
         { error: `Enrichment failed: ${err?.message ?? err}` },
         { status: 502 },
@@ -57,10 +69,10 @@ export async function POST(req: Request) {
     }
   }
 
-  const created = await getStore().add({ ...fields, word: body.word });
+  const created = await store.add({ ...fields, word: body.word });
   // Seed cloze(s) from the word's example sentences so a newly-added word has a
   // few questions before the batch enrich skill ever runs.
-  saveHarvest(getStore(), [
+  saveHarvest(store, [
     clozeFromSentence(created.id, created.word, created.example_simple),
     clozeFromSentence(created.id, created.word, created.example_complex),
   ]);

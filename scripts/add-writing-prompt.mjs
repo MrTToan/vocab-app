@@ -22,14 +22,19 @@ if (!file) {
 const url = process.env.DATABASE_URL || `file:${path.join(process.cwd(), ".data", "lexi.db")}`;
 const db = createClient({ url, authToken: process.env.DATABASE_AUTH_TOKEN });
 
+// Prompts belong to the owner account (multi-tenancy). Override via env if ever
+// ingesting for another user.
+const OWNER_ID = process.env.SEED_USER_ID || "local-user";
+
 async function main() {
   await db.execute(
     `CREATE TABLE IF NOT EXISTS writing_prompts (
       id TEXT PRIMARY KEY, task_type TEXT, title TEXT, prompt_text TEXT,
       image_path TEXT, chart_data TEXT, model_answer TEXT, source_file TEXT,
-      tags TEXT, last_shown INTEGER DEFAULT 0, created_at INTEGER
+      tags TEXT, last_shown INTEGER DEFAULT 0, created_at INTEGER, user_id TEXT
     )`,
   );
+  try { await db.execute("ALTER TABLE writing_prompts ADD COLUMN user_id TEXT"); } catch {}
 
   const raw = JSON.parse(readFileSync(path.resolve(file), "utf8"));
   const prompts = Array.isArray(raw) ? raw : [raw];
@@ -43,14 +48,14 @@ async function main() {
     const id = p.id ?? randomUUID();
     await db.execute({
       sql: `INSERT OR REPLACE INTO writing_prompts
-        (id, task_type, title, prompt_text, image_path, chart_data, model_answer, source_file, tags, last_shown, created_at)
-        VALUES (?,?,?,?,?,?,?,?,?,COALESCE((SELECT last_shown FROM writing_prompts WHERE id=?),0),?)`,
+        (id, task_type, title, prompt_text, image_path, chart_data, model_answer, source_file, tags, last_shown, created_at, user_id)
+        VALUES (?,?,?,?,?,?,?,?,?,COALESCE((SELECT last_shown FROM writing_prompts WHERE id=?),0),?,?)`,
       args: [
         id, p.task_type, p.title ?? "", p.prompt_text,
         p.image_path ?? null,
         p.chart_data ? JSON.stringify(p.chart_data) : null,
         p.model_answer ?? null, p.source_file ?? null,
-        JSON.stringify(p.tags ?? []), id, now,
+        JSON.stringify(p.tags ?? []), id, now, OWNER_ID,
       ],
     });
     n++;

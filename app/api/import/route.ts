@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 import { getStore, normalizeWord, type NewWord } from "@/lib/store";
+import { currentUserId } from "@/lib/auth/user";
+import { reserveQuota, QuotaError } from "@/lib/auth/quota";
 import { enrichWord, hasProvider } from "@/lib/llm";
 
 /**
@@ -16,7 +18,9 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "rows is required" }, { status: 400 });
   }
 
-  const store = getStore();
+  const userId = await currentUserId();
+  if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+  const store = getStore().forUser(userId);
 
   // dedupe: skip words already stored and repeats within this batch
   const seen = new Set((await store.all()).map((w) => normalizeWord(w.word)));
@@ -40,12 +44,14 @@ export async function POST(req: Request) {
     const base: NewWord = { ...row, source: row.source ?? "csv" };
     if (!doEnrich) return base;
     try {
+      await reserveQuota(userId, "enrich"); // per-user daily cap
       const { enrichment: e } = await enrichWord(row.word, row);
       // enrichment fills gaps; learner-supplied non-empty values win
       return { ...e, ...stripEmpty(row), word: row.word, source: "csv" as const };
     } catch (err: any) {
-      errors.push({ word: row.word, error: err?.message ?? String(err) });
-      return base; // save the raw row anyway
+      const msg = err instanceof QuotaError ? err.message : err?.message ?? String(err);
+      errors.push({ word: row.word, error: msg });
+      return base; // save the raw row anyway (un-enriched)
     }
   });
 

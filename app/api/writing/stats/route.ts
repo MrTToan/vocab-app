@@ -1,13 +1,17 @@
 import { NextResponse } from "next/server";
 import { writingStore } from "@/lib/writing/store";
+import { currentUserId } from "@/lib/auth/user";
 import { aggregateErrors } from "@/lib/writing/grade";
 import { CRITERIA, type Criterion } from "@/lib/writing/types";
 
 /** Aggregates for the writing side of the cross-skill report. */
 export async function GET() {
+  const userId = await currentUserId();
+  if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+  const store = writingStore.forUser(userId);
   const [subs, corrections] = await Promise.all([
-    writingStore.submissions(),
-    writingStore.allCorrections(),
+    store.submissions(),
+    store.allCorrections(),
   ]);
 
   const chrono = [...subs].sort((a, b) => a.created_at - b.created_at);

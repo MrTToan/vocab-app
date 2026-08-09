@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { getStore } from "@/lib/store";
+import { currentUserId } from "@/lib/auth/user";
 import { exerciseForStage, pickNext } from "@/lib/engine";
 import { generateExercise, hasProvider } from "@/lib/llm";
 import { toCloze } from "@/lib/cloze";
@@ -29,7 +30,9 @@ export async function POST(req: Request) {
     seenIds?: string[];
     explore?: boolean;
   };
-  const store = getStore();
+  const userId = await currentUserId();
+  if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+  const store = getStore().forUser(userId);
   const words = await store.all();
   if (words.length === 0) {
     return NextResponse.json({ word: null });
