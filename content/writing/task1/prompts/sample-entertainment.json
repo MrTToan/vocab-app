@@ -1,0 +1,27 @@
+{
+  "id": "sample-task1-entertainment",
+  "task_type": "task1",
+  "title": "Monthly entertainment spending by age group (2020)",
+  "prompt_text": "The chart below shows the average monthly spending on entertainment by different age groups in one country in 2020.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+  "image_path": "/writing/task1/sample-entertainment.svg",
+  "source_file": "sample (hand-authored)",
+  "tags": ["sample", "bar-chart"],
+  "chart_data": {
+    "chart_type": "bar",
+    "unit": "USD per person per month",
+    "year": 2020,
+    "series": [
+      { "category": "18–25", "value": 80 },
+      { "category": "26–40", "value": 120 },
+      { "category": "41–60", "value": 95 },
+      { "category": "60+", "value": 50 }
+    ],
+    "key_trends": [
+      "The 26–40 group spends the most, at USD 120 per month.",
+      "Spending declines with age after 40; the 60+ group spends the least (USD 50).",
+      "The 18–25 group (USD 80) spends less than 26–40 but the gap to 41–60 (USD 95) is small.",
+      "The highest figure (120) is more than double the lowest (50)."
+    ],
+    "overview": "Monthly entertainment spending peaks in the 26–40 age group and then falls steadily with age, reaching its lowest among those over 60."
+  }
+}

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" font-family="ui-sans-serif, system-ui, sans-serif">
+  <rect x="0" y="0" width="640" height="400" fill="#ffffff"/>
+  <text x="320" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1c1b19">
+    Average monthly spending on entertainment by age group (2020)
+  </text>
+  <text x="320" y="54" text-anchor="middle" font-size="12" fill="#6b6a66">USD per person</text>
+
+  <!-- axes -->
+  <line x1="80" y1="320" x2="600" y2="320" stroke="#c9c8c4" stroke-width="1.5"/>
+  <line x1="80" y1="60" x2="80" y2="320" stroke="#c9c8c4" stroke-width="1.5"/>
+
+  <!-- gridlines + y labels (0..140 step 20) -->
+  <g font-size="11" fill="#6b6a66">
+    <line x1="80" y1="320" x2="600" y2="320" stroke="#eeeeec"/>
+    <text x="70" y="324" text-anchor="end">0</text>
+    <line x1="80" y1="283" x2="600" y2="283" stroke="#eeeeec"/><text x="70" y="287" text-anchor="end">20</text>
+    <line x1="80" y1="246" x2="600" y2="246" stroke="#eeeeec"/><text x="70" y="250" text-anchor="end">40</text>
+    <line x1="80" y1="209" x2="600" y2="209" stroke="#eeeeec"/><text x="70" y="213" text-anchor="end">60</text>
+    <line x1="80" y1="172" x2="600" y2="172" stroke="#eeeeec"/><text x="70" y="176" text-anchor="end">80</text>
+    <line x1="80" y1="135" x2="600" y2="135" stroke="#eeeeec"/><text x="70" y="139" text-anchor="end">100</text>
+    <line x1="80" y1="98"  x2="600" y2="98"  stroke="#eeeeec"/><text x="70" y="102" text-anchor="end">120</text>
+    <line x1="80" y1="61"  x2="600" y2="61"  stroke="#eeeeec"/><text x="70" y="65"  text-anchor="end">140</text>
+  </g>
+
+  <!-- bars: 80, 120, 95, 50 (scale 1.85 px/unit, baseline y=320) -->
+  <g fill="#4f46e5">
+    <rect x="110" y="172" width="70" height="148"/>
+    <rect x="240" y="98"  width="70" height="222"/>
+    <rect x="370" y="144" width="70" height="176"/>
+    <rect x="500" y="228" width="70" height="92"/>
+  </g>
+
+  <!-- value labels -->
+  <g font-size="13" font-weight="700" fill="#1c1b19" text-anchor="middle">
+    <text x="145" y="164">80</text>
+    <text x="275" y="90">120</text>
+    <text x="405" y="136">95</text>
+    <text x="535" y="220">50</text>
+  </g>
+
+  <!-- category labels -->
+  <g font-size="13" fill="#1c1b19" text-anchor="middle">
+    <text x="145" y="342">18–25</text>
+    <text x="275" y="342">26–40</text>
+    <text x="405" y="342">41–60</text>
+    <text x="535" y="342">60+</text>
+  </g>
+  <text x="340" y="372" text-anchor="middle" font-size="12" fill="#6b6a66">Age group</text>
+</svg>
