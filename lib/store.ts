@@ -2,6 +2,8 @@ import { promises as fs } from "fs";
 import path from "path";
 import { randomUUID } from "crypto";
 import type { Word, Attempt, Question } from "./types";
+// NOTE: writing prompts are a SHARED pool (see lib/writing/store.ts); only the
+// vocab data below is per-user. Writing submissions/scores are per-user there.
 
 /*
  * Storage lives behind this one interface. Two backends:

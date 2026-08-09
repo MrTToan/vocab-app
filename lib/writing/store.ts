@@ -17,10 +17,14 @@ import {
  * vocab store uses (.data/lexi.db by default, or DATABASE_URL/Turso). Kept
  * separate from lib/store.ts so the writing module is self-contained.
  *
- * MULTI-TENANCY: every row carries a user_id. Call sites use
- * writingStore.forUser(userId), which returns a WritingScope whose methods are
- * all bound to that user, so no query is ever un-scoped. Writing prompts are
- * per-user (consistent with the per-user vocab model).
+ * MULTI-TENANCY:
+ *  - writing_prompts are a SHARED pool — every user practises the same IELTS
+ *    questions. Prompt reads are NOT filtered by user; the user_id column on a
+ *    prompt is just "who ingested it" (metadata), never a visibility gate.
+ *  - writing_submissions + writing_corrections are PER-USER — each student's
+ *    essays, bands and stats are private (scoped by user_id).
+ * Call sites use writingStore.forUser(userId): shared prompt methods ignore the
+ * bound user; submission/stats methods scope to it.
  *
  * Tables (all additive): writing_prompts, writing_submissions, writing_corrections.
  */
@@ -82,7 +86,10 @@ async function connect(): Promise<any> {
       await addColumn(db, "writing_submissions", "user_id TEXT");
       await addColumn(db, "writing_corrections", "user_id TEXT");
       await db.execute(
-        `CREATE INDEX IF NOT EXISTS idx_wp_task ON writing_prompts (user_id, task_type)`,
+        `CREATE INDEX IF NOT EXISTS idx_wp_task ON writing_prompts (task_type)`,
+      );
+      await db.execute(
+        `CREATE INDEX IF NOT EXISTS idx_ws_user ON writing_submissions (user_id, prompt_id)`,
       );
       await db.execute(
         `CREATE INDEX IF NOT EXISTS idx_wc_sub ON writing_corrections (submission_id)`,
@@ -189,38 +196,39 @@ const raw = {
     return full;
   },
 
-  async listPrompts(userId: string, task?: WritingTask): Promise<WritingPrompt[]> {
+  // ── SHARED prompt pool (no user filter) ──
+  async listPrompts(task?: WritingTask): Promise<WritingPrompt[]> {
     const c = await connect();
     const rs = task
-      ? await c.execute({ sql: "SELECT * FROM writing_prompts WHERE user_id=? AND task_type=? ORDER BY created_at DESC", args: [userId, task] })
-      : await c.execute({ sql: "SELECT * FROM writing_prompts WHERE user_id=? ORDER BY created_at DESC", args: [userId] });
+      ? await c.execute({ sql: "SELECT * FROM writing_prompts WHERE task_type=? ORDER BY created_at DESC", args: [task] })
+      : await c.execute("SELECT * FROM writing_prompts ORDER BY created_at DESC");
     return rs.rows.map(rowToPrompt);
   },
 
-  async getPrompt(userId: string, id: string): Promise<WritingPrompt | undefined> {
+  async getPrompt(id: string): Promise<WritingPrompt | undefined> {
     const c = await connect();
-    const rs = await c.execute({ sql: "SELECT * FROM writing_prompts WHERE user_id=? AND id=? LIMIT 1", args: [userId, id] });
+    const rs = await c.execute({ sql: "SELECT * FROM writing_prompts WHERE id=? LIMIT 1", args: [id] });
     return rs.rows[0] ? rowToPrompt(rs.rows[0]) : undefined;
   },
 
-  /** Least-recently-shown prompt for a task; marks it shown (rotates the set). */
-  async pickPrompt(userId: string, task: WritingTask): Promise<WritingPrompt | undefined> {
+  /** Least-recently-shown prompt for a task; marks it shown (global rotation across the shared pool). */
+  async pickPrompt(task: WritingTask): Promise<WritingPrompt | undefined> {
     const c = await connect();
     const rs = await c.execute({
-      sql: "SELECT * FROM writing_prompts WHERE user_id=? AND task_type=? ORDER BY last_shown ASC, RANDOM() LIMIT 1",
-      args: [userId, task],
+      sql: "SELECT * FROM writing_prompts WHERE task_type=? ORDER BY last_shown ASC, RANDOM() LIMIT 1",
+      args: [task],
     });
     if (!rs.rows[0]) return undefined;
     const p = rowToPrompt(rs.rows[0]);
-    await c.execute({ sql: "UPDATE writing_prompts SET last_shown=? WHERE id=? AND user_id=?", args: [Date.now(), p.id, userId] });
+    await c.execute({ sql: "UPDATE writing_prompts SET last_shown=? WHERE id=?", args: [Date.now(), p.id] });
     return p;
   },
 
-  async promptCount(userId: string, task?: WritingTask): Promise<number> {
+  async promptCount(task?: WritingTask): Promise<number> {
     const c = await connect();
     const rs = task
-      ? await c.execute({ sql: "SELECT COUNT(*) n FROM writing_prompts WHERE user_id=? AND task_type=?", args: [userId, task] })
-      : await c.execute({ sql: "SELECT COUNT(*) n FROM writing_prompts WHERE user_id=?", args: [userId] });
+      ? await c.execute({ sql: "SELECT COUNT(*) n FROM writing_prompts WHERE task_type=?", args: [task] })
+      : await c.execute("SELECT COUNT(*) n FROM writing_prompts");
     return Number(rs.rows[0]?.n ?? 0);
   },
 
@@ -351,11 +359,13 @@ export const writingStore = {
   /** Return a view of the writing store scoped to a single user. */
   forUser(userId: string): WritingScope {
     return {
+      // shared prompt pool — user id is ingest metadata only
       addPrompts: (prompts) => raw.addPrompts(userId, prompts),
-      listPrompts: (task) => raw.listPrompts(userId, task),
-      getPrompt: (id) => raw.getPrompt(userId, id),
-      pickPrompt: (task) => raw.pickPrompt(userId, task),
-      promptCount: (task) => raw.promptCount(userId, task),
+      listPrompts: (task) => raw.listPrompts(task),
+      getPrompt: (id) => raw.getPrompt(id),
+      pickPrompt: (task) => raw.pickPrompt(task),
+      promptCount: (task) => raw.promptCount(task),
+      // per-user submissions / scores / stats
       addSubmission: (sub) => raw.addSubmission(userId, sub),
       submissions: (task) => raw.submissions(userId, task),
       allCorrections: (task) => raw.allCorrections(userId, task),

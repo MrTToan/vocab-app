@@ -67,6 +67,38 @@ describe("multi-tenant store scoping", () => {
   });
 });
 
+describe("writing: shared prompts, private scores", () => {
+  it("prompts are shared across users but submissions/stats stay private", async () => {
+    const { writingStore } = await import("../lib/writing/store");
+    const a = writingStore.forUser(A);
+    const b = writingStore.forUser(B);
+
+    // A ingests a prompt — it belongs to the shared pool
+    await a.addPrompts([
+      { id: "p1", task_type: "task2", title: "T", prompt_text: "Write about X." },
+    ]);
+
+    // both users see the same shared prompt
+    expect((await a.listPrompts()).map((p: any) => p.id)).toContain("p1");
+    expect((await b.listPrompts()).map((p: any) => p.id)).toContain("p1");
+    expect((await b.getPrompt("p1"))?.id).toBe("p1"); // B can score it too
+
+    // A submits an essay — private to A
+    await a.addSubmission({
+      prompt_id: "p1", task_type: "task2", text: "an essay long enough", word_count: 10,
+      overall_band: 6, bands: {} as any, strengths: [], general_feedback: "",
+      priorities: [], corrections: [],
+    });
+
+    expect(await a.submissionCount()).toBe(1);
+    expect(await b.submissionCount()).toBe(0); // B never sees A's work
+    expect(Object.keys(await a.promptStats())).toContain("p1");
+    expect(Object.keys(await b.promptStats())).toHaveLength(0);
+    expect(await b.latestSubmission("p1")).toBeNull();
+    expect((await a.latestSubmission("p1"))?.prompt_id).toBe("p1");
+  });
+});
+
 describe("per-user LLM quota", () => {
   it("never throttles the owner", async () => {
     const { reserveQuota } = await import("../lib/auth/quota");

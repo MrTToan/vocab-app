@@ -26,13 +26,20 @@ One `Store` interface, selected by env:
 Both implement `all / get / findByWord / add / addMany / update / remove / logAttempt / attempts` plus the question-bank methods `addQuestions / pickQuestion / questionCount / questionWordIds`.
 Swapping backends is env-only; the app never touches storage directly.
 
-**Multi-tenancy.** Every table carries a `user_id`. Call sites never use the raw
-store — they go through `getStore().forUser(userId)` (and `writingStore.forUser(userId)`),
-which returns a scoped view whose every method is bound to that user, so scoping
-is impossible to forget. The caller is resolved once per request via
-`currentUserId()` (`lib/auth/user.ts`), the single auth choke point. `SqliteStore`
-is the multi-tenant/deploy backend; `SheetStore` is single-user-local and ignores
-the scope. A per-user daily LLM cap lives in `lib/auth/quota.ts` (`llm_usage` table).
+**Multi-tenancy.** Call sites never use the raw store — they go through
+`getStore().forUser(userId)` (and `writingStore.forUser(userId)`), which return a
+scoped view, so scoping is impossible to forget. The caller is resolved once per
+request via `currentUserId()` (`lib/auth/user.ts`), the single auth choke point.
+- **Per-user:** vocab `words`/`attempts`/`questions` and writing
+  `writing_submissions`/`writing_corrections` — each carries `user_id` and is
+  filtered by it (your words, your essays, your bands/stats are private).
+- **Shared:** `writing_prompts` are one pool everyone practises — reads are NOT
+  user-filtered; the prompt's `user_id` is just "who ingested it". Each student's
+  per-prompt stats come from their own submissions.
+
+`SqliteStore` is the multi-tenant/deploy backend; `SheetStore` is
+single-user-local and ignores the scope. A per-user daily LLM cap lives in
+`lib/auth/quota.ts` (`llm_usage` table).
 
 ## 3. LLM strategy (`lib/providers.ts`, `lib/llm.ts`)
 
