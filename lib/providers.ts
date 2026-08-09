@@ -23,7 +23,7 @@ import path from "path";
  * default Anthropic (ANTHROPIC_API_KEY, Haiku for enrich/generate, Sonnet for score).
  */
 
-export type Task = "enrich" | "generate" | "score";
+export type Task = "enrich" | "generate" | "score" | "score-writing";
 export type ProviderName = "anthropic" | "openai";
 
 interface TaskConfig {
@@ -39,6 +39,7 @@ const DEFAULT_ANTHROPIC_MODEL: Record<Task, string> = {
   enrich: "claude-haiku-4-5",
   generate: "claude-haiku-4-5",
   score: "claude-sonnet-5",
+  "score-writing": "claude-sonnet-5",
 };
 
 function env(...names: string[]): string | undefined {
@@ -122,7 +123,7 @@ export function hasProvider(task: Task): boolean {
   return resolveChain(task).length > 0;
 }
 export function hasAnyLLM(): boolean {
-  return (["enrich", "generate", "score"] as Task[]).some(hasProvider);
+  return (["enrich", "generate", "score", "score-writing"] as Task[]).some(hasProvider);
 }
 export function mode(): "default" | "custom" | "chain" {
   if (numberedChain("enrich").length) return "chain";
