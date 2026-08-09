@@ -64,6 +64,17 @@ export default function Nav() {
             );
           })}
         </div>
+        <Link
+          href="/report"
+          className="ml-auto px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap transition-colors"
+          style={
+            path === "/report"
+              ? { background: "var(--accent-soft)", color: "var(--accent)" }
+              : { color: "var(--muted)" }
+          }
+        >
+          📊 Report
+        </Link>
       </div>
 
       {/* Row 2 — sub-nav for the active module */}
