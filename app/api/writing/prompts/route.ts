@@ -20,6 +20,12 @@ export async function GET(req: Request) {
     return NextResponse.json({ prompt });
   }
 
-  const prompts = await writingStore.listPrompts(task ?? undefined);
-  return NextResponse.json({ prompts });
+  const [prompts, stats] = await Promise.all([
+    writingStore.listPrompts(task ?? undefined),
+    writingStore.promptStats(task ?? undefined),
+  ]);
+  // attach each prompt's practice summary (null if never attempted)
+  return NextResponse.json({
+    prompts: prompts.map((p) => ({ ...p, stats: stats[p.id] ?? null })),
+  });
 }

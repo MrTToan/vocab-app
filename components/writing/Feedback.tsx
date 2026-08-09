@@ -84,8 +84,8 @@ export default function Feedback({ submission }: { submission: WritingSubmission
       {/* Essay + comment panel (widened breakout so both columns breathe) */}
       <div>
         <h3 className="font-bold mb-2">Your writing, annotated</h3>
-        <div className="lg:w-[76rem] lg:max-w-[94vw] lg:relative lg:left-1/2 lg:-translate-x-1/2">
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_21rem] gap-4 items-start">
+        <div>
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_20rem] gap-4 items-start">
             {/* essay */}
             <div className="card p-5 leading-8 text-[15px] whitespace-pre-wrap">
               <AnnotatedEssay

@@ -260,4 +260,62 @@ export const writingStore = {
     const rs = await c.execute("SELECT COUNT(*) n FROM writing_submissions");
     return Number(rs.rows[0]?.n ?? 0);
   },
+
+  /** Per-prompt practice summary (attempts, best/last band, last date). */
+  async promptStats(task?: WritingTask): Promise<Record<string, { attempts: number; bestBand: number; lastBand: number; lastAt: number }>> {
+    const c = await connect();
+    const rs = task
+      ? await c.execute({ sql: "SELECT prompt_id, overall_band, created_at FROM writing_submissions WHERE task_type=?", args: [task] })
+      : await c.execute("SELECT prompt_id, overall_band, created_at FROM writing_submissions");
+    const out: Record<string, { attempts: number; bestBand: number; lastBand: number; lastAt: number }> = {};
+    for (const r of rs.rows as any[]) {
+      const pid = String(r.prompt_id);
+      const band = Number(r.overall_band ?? 0);
+      const at = Number(r.created_at ?? 0);
+      const g = out[pid] ?? { attempts: 0, bestBand: 0, lastBand: 0, lastAt: 0 };
+      g.attempts++;
+      g.bestBand = Math.max(g.bestBand, band);
+      if (at >= g.lastAt) { g.lastAt = at; g.lastBand = band; }
+      out[pid] = g;
+    }
+    return out;
+  },
+
+  /** The most recent full submission (with corrections) for a prompt, or null. */
+  async latestSubmission(promptId: string): Promise<WritingSubmission | null> {
+    const c = await connect();
+    const rs = await c.execute({
+      sql: "SELECT * FROM writing_submissions WHERE prompt_id=? ORDER BY created_at DESC LIMIT 1",
+      args: [promptId],
+    });
+    const r: any = rs.rows[0];
+    if (!r) return null;
+    const cr = await c.execute({ sql: 'SELECT * FROM writing_corrections WHERE submission_id=?', args: [String(r.id)] });
+    return {
+      id: String(r.id),
+      prompt_id: String(r.prompt_id),
+      task_type: String(r.task_type) as WritingTask,
+      text: String(r.text ?? ""),
+      word_count: Number(r.word_count ?? 0),
+      overall_band: Number(r.overall_band ?? 0),
+      bands: jsonParse<Record<Criterion, CriterionScore>>(
+        r.bands,
+        Object.fromEntries(CRITERIA.map((k) => [k, { band: 0, comment: "" }])) as Record<Criterion, CriterionScore>,
+      ),
+      strengths: jsonParse<string[]>(r.strengths, []),
+      general_feedback: String(r.general_feedback ?? ""),
+      corrections: (cr.rows as any[]).map((x) => ({
+        id: String(x.id),
+        submission_id: String(x.submission_id),
+        original: String(x.original ?? ""),
+        suggestion: String(x.suggestion ?? ""),
+        error_type: String(x.error_type ?? "other") as WritingCorrection["error_type"],
+        criterion: String(x.criterion ?? "task_achievement") as WritingCorrection["criterion"],
+        explanation: String(x.explanation ?? ""),
+        start: x.start == null ? null : Number(x.start),
+        end: x.end == null ? null : Number(x.end),
+      })),
+      created_at: Number(r.created_at ?? 0),
+    };
+  },
 };
