@@ -117,3 +117,64 @@ body {
     color: var(--muted);
   }
 }
+
+/* correction-card detail: collapsed on screen (shown when its card is active),
+   always shown in print so the exported PDF is complete. */
+.cc-detail {
+  display: none;
+}
+.cc-detail[data-open="true"] {
+  display: block;
+}
+
+/* ── Print / "Save as PDF" ── reformats the feedback for paper ── */
+@media print {
+  :root {
+    --bg: #ffffff; --panel: #ffffff; --ink: #111111; --muted: #555555; --line: #d0d0d0;
+    --accent: #4f46e5; --accent-soft: #eef0ff; --good: #166534; --good-soft: #e8f5ec;
+    --warn: #b45309; --warn-soft: #fdf1e3; --bad: #b91c1c; --bad-soft: #fbeaea;
+  }
+  header,
+  .no-print {
+    display: none !important;
+  }
+  main {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+  /* undo the widened workspace breakout */
+  .print-linear {
+    position: static !important;
+    left: auto !important;
+    width: auto !important;
+    max-width: none !important;
+    transform: none !important;
+  }
+  /* stack the essay + comments into one column for paper */
+  .print-stack {
+    display: block !important;
+  }
+  .print-stack > * {
+    width: 100% !important;
+    max-width: none !important;
+  }
+  .cc-detail {
+    display: block !important;
+  }
+  .cc-orig {
+    white-space: normal !important;
+    overflow: visible !important;
+  }
+  .card {
+    break-inside: avoid;
+    box-shadow: none !important;
+  }
+  body {
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  @page {
+    margin: 1.4cm;
+  }
+}

@@ -85,7 +85,7 @@ export default function Feedback({ submission }: { submission: WritingSubmission
       <div>
         <h3 className="font-bold mb-2">Your writing, annotated</h3>
         <div>
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_20rem] gap-4 items-start">
+          <div className="print-stack grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_20rem] gap-4 items-start">
             {/* essay */}
             <div className="card p-5 leading-8 text-[15px] whitespace-pre-wrap">
               <AnnotatedEssay
@@ -123,7 +123,7 @@ export default function Feedback({ submission }: { submission: WritingSubmission
             </div>
           </div>
         </div>
-        <p className="muted text-xs mt-2">Hover a highlight to jump to its note — or hover a note to find the phrase. Click to pin.</p>
+        <p className="muted text-xs mt-2 no-print">Hover a highlight to jump to its note — or hover a note to find the phrase. Click to pin.</p>
       </div>
 
       {/* Error summary */}
@@ -296,21 +296,19 @@ const CommentCard = ({
         >
           {n}
         </span>
-        <span className={active ? "" : "truncate"}>
+        <span className={"cc-orig " + (active ? "" : "truncate")}>
           <span style={{ textDecoration: "line-through", opacity: 0.55 }}>{c.original || "—"}</span>{" "}
           <span className="muted">→</span>{" "}
           <span className="font-semibold" style={{ color: "var(--good)" }}>{c.suggestion}</span>
         </span>
       </div>
 
-      {active && (
-        <div className="mt-1.5 pl-7">
-          <span className="chip">{ERROR_LABEL[c.error_type]}</span>
-          {pinned && <span className="text-[10px] muted ml-2">📌 pinned</span>}
-          {c.start == null && <span className="text-[10px] muted ml-2">not in text</span>}
-          <p className="muted mt-1.5 text-[13px] leading-snug">{c.explanation}</p>
-        </div>
-      )}
+      <div className="cc-detail mt-1.5 pl-7" data-open={active ? "true" : "false"}>
+        <span className="chip">{ERROR_LABEL[c.error_type]}</span>
+        {pinned && <span className="text-[10px] muted ml-2">📌 pinned</span>}
+        {c.start == null && <span className="text-[10px] muted ml-2">not in text</span>}
+        <p className="muted mt-1.5 text-[13px] leading-snug">{c.explanation}</p>
+      </div>
     </div>
   );
 };

@@ -116,8 +116,8 @@ export default function WritingPractice({ task }: { task: WritingTask }) {
   }
 
   return (
-    <div className="lg:w-[80rem] lg:max-w-[94vw] lg:relative lg:left-1/2 lg:-translate-x-1/2">
-      <div className="grid grid-cols-1 lg:grid-cols-[17rem_minmax(0,1fr)] gap-5 items-start">
+    <div className="print-linear lg:w-[80rem] lg:max-w-[94vw] lg:relative lg:left-1/2 lg:-translate-x-1/2">
+      <div className="print-stack grid grid-cols-1 lg:grid-cols-[17rem_minmax(0,1fr)] gap-5 items-start">
         {/* ── question picker ── */}
         <QuestionList prompts={prompts} selectedId={selectedId} onPick={pick} />
 
@@ -133,9 +133,12 @@ export default function WritingPractice({ task }: { task: WritingTask }) {
             <div className="card p-6 text-center muted">Pick a question from the list to start.</div>
           ) : view === "result" && result ? (
             <>
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between gap-2">
                 <h2 className="font-bold">{selected.title || "Feedback"}</h2>
-                <button className="btn" onClick={writeAgain}>Write again</button>
+                <div className="flex gap-2 no-print">
+                  <button className="btn" onClick={() => window.print()}>⬇ Export PDF</button>
+                  <button className="btn" onClick={writeAgain}>Write again</button>
+                </div>
               </div>
               <Feedback submission={result} />
             </>
@@ -146,7 +149,10 @@ export default function WritingPractice({ task }: { task: WritingTask }) {
                   <h2 className="font-bold">{selected.title || "Your last attempt"}</h2>
                   <p className="muted text-xs">Reviewed from {new Date(review.created_at).toLocaleDateString()} — not a new score.</p>
                 </div>
-                <button className="btn btn-primary" onClick={writeAgain}>Write again</button>
+                <div className="flex gap-2 no-print">
+                  <button className="btn" onClick={() => window.print()}>⬇ Export PDF</button>
+                  <button className="btn btn-primary" onClick={writeAgain}>Write again</button>
+                </div>
               </div>
               <Feedback submission={review} />
             </>
@@ -188,7 +194,7 @@ function QuestionList({
   onPick: (id: string) => void;
 }) {
   return (
-    <div className="flex lg:flex-col gap-2 overflow-x-auto lg:overflow-x-visible lg:overflow-y-auto lg:max-h-[calc(100vh-8rem)] lg:sticky lg:top-24 pb-1 lg:pb-0 -mx-1 px-1">
+    <div className="no-print flex lg:flex-col gap-2 overflow-x-auto lg:overflow-x-visible lg:overflow-y-auto lg:max-h-[calc(100vh-8rem)] lg:sticky lg:top-24 pb-1 lg:pb-0 -mx-1 px-1">
       <div className="hidden lg:block text-xs font-bold muted uppercase tracking-wide px-1 pb-1">
         Questions · {prompts.length}
       </div>
