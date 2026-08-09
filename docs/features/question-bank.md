@@ -20,7 +20,7 @@ Duplicates are prevented automatically, so the same sentence is never stored twi
 ## Good to know
 - A **newly added word starts with no bank** — it fills in as you practise it, and fully when you next
   run the enrich skill.
-- To see any word's bank in plain text: `node scripts/show-questions.mjs <word>` (see `CHEATSHEET.md`).
+- To see any word's bank in plain text: `node scripts/show-questions.mjs <word>`.
 
 ---
 *Under the hood: `questions` table + `store.pickQuestion`, `lib/harvest.ts` + `lib/cloze.ts` (self-refill), `.claude/skills/enrich-questions-bank` (bulk).*

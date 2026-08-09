@@ -27,6 +27,13 @@
 /tracker.csv
 /words.csv
 
+# internal working docs — kept local, off the public repo
+/CLAUDE.md
+/AGENTS.md
+/STATUS.md
+/CHEATSHEET.md
+/.claude/
+
 # personal writing sources — real Google Doc links stay local, never committed
 /content/writing/sources.local.json
 

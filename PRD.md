@@ -2,8 +2,7 @@
 
 **Owner:** you (single user) · **Status:** ✅ Phase 1 built & in use · **+ Writing module (IELTS) built** · **Created:** 2026-08-01
 
-> This PRD is kept in sync with what's actually shipped. For the live state (data,
-> providers, known gaps) see `STATUS.md`; for architecture see `TECH.md`.
+> This PRD is kept in sync with what's actually shipped. For architecture see `TECH.md`.
 
 ---
 

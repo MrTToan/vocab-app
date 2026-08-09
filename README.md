@@ -12,6 +12,18 @@ corrections and coaching). An LLM enriches words and scores what you write. Buil
 > and has **no auth by design** — a deliberate choice for a personal app, not an oversight. See
 > [Design decisions](#design-decisions--tradeoffs).
 
+## Screenshots
+
+![Landing page](docs/screenshots/landing.jpg)
+
+| IELTS writing feedback — annotated, Google-Docs-style | "How to raise your band" — AI coaching, not just fixes |
+|---|---|
+| ![Writing feedback](docs/screenshots/writing-feedback.jpg) | ![Writing coaching](docs/screenshots/writing-coaching.jpg) |
+
+**Cross-skill progress report** (hand-built charts, no chart library)
+
+![Report](docs/screenshots/report.jpg)
+
 ## What it does
 
 **Vocabulary:**
@@ -114,11 +126,10 @@ process, not multi-instance safe); and everything assumes a **single user** (no 
 | `lib/writing/` | The writing module — score schema, pure `grade`, prompt, guidance loader, and its own store |
 | `app/` | Next.js App Router — `(marketing)` landing + `(app)` pages, and `app/api/*` routes |
 | `components/writing/` | The writing workspace + feedback UI |
-| `content/writing/` | Google-Doc source links, guidance markdown, processed prompts |
+| `content/writing/` | Grading guidance, a sample prompt, and the Google-Doc source template |
 | `tests/` | Vitest unit tests for the pure logic |
 | `docs/features/` | Plain-language guide to how each feature behaves |
-| `PRD.md` · `TECH.md` · `STATUS.md` · `docs/WRITING-SPEC.md` | Product intent · architecture · current snapshot · writing design |
-| `CHEATSHEET.md` | Everyday commands (run, review questions, ingest prompts, back up data) |
+| `PRD.md` · `TECH.md` · `docs/WRITING-SPEC.md` | Product intent · architecture · writing-module design |
 
 ## Stack
 

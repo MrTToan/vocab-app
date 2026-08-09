@@ -1,6 +1,6 @@
 # Technical Architecture — Lexi (Personal Vocab Trainer)
 
-**Status:** reflects what's built · Companion to `PRD.md` · Live state in `STATUS.md`
+**Status:** reflects what's built · Companion to `PRD.md`
 
 ---
 
@@ -123,4 +123,4 @@ vocab-app/
 
 ## 8. Known gaps / next
 - No auth; no retry/backoff on LLM calls (a burst can trip a provider's rate limit); no `engine.ts`
-  unit tests yet; progress writes per-answer (not batched). See `STATUS.md`.
+  unit tests yet; progress writes per-answer (not batched).

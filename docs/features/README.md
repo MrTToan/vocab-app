@@ -2,10 +2,9 @@
 
 Plain-language docs for **how each part of the app behaves today**. One file per feature.
 
-- For commands & setup → `CHEATSHEET.md`
-- For architecture / code map → `CLAUDE.md`, `TECH.md`
+- For architecture / code map → `TECH.md`
 - For the product vision & requirements → `PRD.md`
-- For the current build snapshot → `STATUS.md`
+- For setup → `docs/SETUP-*.md`
 
 The app has **two modules** — Vocabulary and IELTS Writing — reachable from the top nav, with a
 cross-skill Report. A SaaS-style landing page sits at `/`.

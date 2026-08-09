@@ -1,8 +1,7 @@
 # Writing module — design spec (IELTS Academic)
 
 **Status:** ✅ built (2026-08-09) · Companion to `PRD.md` / `TECH.md` · This was the design; it now ships.
-For how it behaves today see `docs/features/writing-feedback.md`; for architecture see `TECH.md` §4b; for
-live state see `STATUS.md`.
+For how it behaves today see `docs/features/writing-feedback.md`; for architecture see `TECH.md` §4b.
 
 **As-built changes since this design (the doc below is the original plan):**
 - **Ingest is ONLINE, not offline.** §4's `.docx`/`.pdf` inbox was replaced by **two Google Docs** (links in
