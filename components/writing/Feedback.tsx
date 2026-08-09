@@ -151,10 +151,45 @@ export default function Feedback({ submission }: { submission: WritingSubmission
           </ul>
         </div>
       )}
-      {s.general_feedback && (
-        <div className="card p-4">
-          <div className="font-bold text-sm mb-1">Priority to improve</div>
-          <p className="text-sm">{s.general_feedback}</p>
+      {(s.priorities?.length > 0 || s.general_feedback) && (
+        <div>
+          <h3 className="font-bold mb-1">How to raise your band</h3>
+          {s.general_feedback && <p className="text-sm muted mb-3">{s.general_feedback}</p>}
+          <div className="space-y-3">
+            {(s.priorities ?? []).map((p, i) => (
+              <div key={i} className="card p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <span
+                    className="inline-flex items-center justify-center w-5 h-5 rounded-full text-[11px] font-bold text-white shrink-0"
+                    style={{ background: CRITERION_COLOR[p.criterion] }}
+                  >
+                    {i + 1}
+                  </span>
+                  <span className="font-bold">{p.title}</span>
+                  <span className="chip ml-auto shrink-0">{CRITERION_LABEL[p.criterion]}</span>
+                </div>
+                <div className="space-y-1.5 text-sm">
+                  <p>
+                    <span className="font-semibold muted">Why · </span>
+                    {p.why}
+                  </p>
+                  <p>
+                    <span className="font-semibold" style={{ color: "var(--accent)" }}>How · </span>
+                    {p.how}
+                  </p>
+                  {p.example && (
+                    <div
+                      className="mt-1 rounded-lg px-3 py-2 text-[13px]"
+                      style={{ background: "var(--good-soft)", borderLeft: "3px solid var(--good)" }}
+                    >
+                      <span className="font-semibold" style={{ color: "var(--good)" }}>Try: </span>
+                      {p.example}
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       )}
     </div>

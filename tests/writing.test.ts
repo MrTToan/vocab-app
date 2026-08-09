@@ -106,6 +106,9 @@ describe("normalizeScore", () => {
       ],
       strengths: ["good"],
       general_feedback: "improve",
+      priorities: [
+        { criterion: "Task Achievement", title: "Develop ideas", why: "thin", how: "add examples", example: "For instance…" },
+      ],
     };
     const n = normalizeScore(raw, "the cat sat");
     expect(n.overall_band).toBe(6.5);
@@ -113,5 +116,6 @@ describe("normalizeScore", () => {
     expect(n.bands.lexical_resource.band).toBe(5.5);
     expect(n.corrections[0].start).toBe(4);
     expect(n.corrections[0].error_type).toBe("tense");
+    expect(n.priorities[0].criterion).toBe("task_achievement"); // normalized
   });
 });

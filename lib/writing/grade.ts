@@ -4,6 +4,7 @@ import {
   type Criterion,
   type ErrorType,
   type WritingCorrection,
+  type WritingPriority,
   type WritingScoreRaw,
   type CriterionScore,
 } from "./types";
@@ -94,6 +95,7 @@ export function normalizeScore(
   corrections: WritingCorrection[];
   strengths: string[];
   general_feedback: string;
+  priorities: WritingPriority[];
 } {
   const bands = {} as Record<Criterion, CriterionScore>;
   for (const c of CRITERIA) {
@@ -108,6 +110,13 @@ export function normalizeScore(
     corrections: locateCorrections(text, raw.corrections),
     strengths: raw.strengths,
     general_feedback: raw.general_feedback,
+    priorities: (raw.priorities ?? []).map((p) => ({
+      criterion: normalizeCriterion(p.criterion),
+      title: p.title,
+      why: p.why,
+      how: p.how,
+      example: p.example,
+    })),
   };
 }
 

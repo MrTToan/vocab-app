@@ -37,6 +37,7 @@ export async function POST(req: Request) {
       bands: scored.bands,
       strengths: scored.strengths,
       general_feedback: scored.general_feedback,
+      priorities: scored.priorities,
       corrections: scored.corrections,
     });
     return NextResponse.json({ submission });

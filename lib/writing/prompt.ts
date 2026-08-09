@@ -23,7 +23,15 @@ Corrections: list the most impactful errors and improvements (aim for 6–15, no
 - "criterion" is the criterion it most affects (task_achievement, coherence_cohesion, lexical_resource, grammatical_range_accuracy).
 - "explanation" is one concise sentence a B1–B2 learner understands.
 
-Also give 2–4 genuine "strengths" and a short "general_feedback" paragraph with the single highest-priority thing to improve. Be encouraging but honest; do not inflate bands.`;
+Also give 2–4 genuine "strengths" and a short "general_feedback" paragraph (1–2 sentences) summarising the single biggest lever for improvement.
+
+"priorities": the MOST IMPORTANT part — 2–3 higher-order improvements this candidate must make to raise their band. These are NOT the small line-level slips already in "corrections"; they are the strategic weaknesses that actually cap the score (e.g. underdeveloped ideas, missing/weak overview in Task 1, no clear position, weak paragraphing, mechanical linking, narrow grammatical range, imprecise or repetitive vocabulary, inaccurate data reporting). Order them by impact (most band-limiting first). Each has:
+- "criterion": the criterion it targets.
+- "title": a short, actionable label (e.g. "Develop each idea with a specific example").
+- "why": what is holding the score back, referring to THIS response specifically (quote or point to what they did) — and what higher band it would help reach.
+- "how": a concrete technique or steps they can actually apply next time, not a vague instruction.
+- "example": one short model phrase or sentence they could emulate that demonstrates the improvement ("" only if truly not applicable).
+Be specific to this candidate's writing, coaching them like a tutor — not generic IELTS tips. Be encouraging but honest; do not inflate bands.`;
 
 export function writingScoreUser(
   prompt: WritingPrompt,

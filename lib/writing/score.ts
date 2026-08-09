@@ -17,8 +17,8 @@ export async function scoreWriting(prompt: WritingPrompt, text: string) {
     system: WRITING_SCORE_SYSTEM,
     user: writingScoreUser(prompt, prompt.task_type, text, wordCount, guidance),
     schema: WRITING_SCORE_JSON_SCHEMA,
-    // Feedback JSON is larger than a single-answer score; give thinking models room.
-    maxTokens: 3500,
+    // Feedback JSON is large (corrections + coaching priorities); give room.
+    maxTokens: 4500,
   });
 
   const parsed = WritingScoreSchema.parse(raw);

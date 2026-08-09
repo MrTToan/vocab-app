@@ -6,6 +6,7 @@ import {
   type WritingPrompt,
   type WritingSubmission,
   type WritingCorrection,
+  type WritingPriority,
   type WritingTask,
   type Criterion,
   type CriterionScore,
@@ -53,9 +54,15 @@ async function connect(): Promise<any> {
         `CREATE TABLE IF NOT EXISTS writing_submissions (
           id TEXT PRIMARY KEY, prompt_id TEXT, task_type TEXT, text TEXT,
           word_count INTEGER, overall_band REAL, bands TEXT, strengths TEXT,
-          general_feedback TEXT, created_at INTEGER
+          general_feedback TEXT, priorities TEXT, created_at INTEGER
         )`,
       );
+      // migration: add priorities to DBs created before this column existed
+      try {
+        await db.execute("ALTER TABLE writing_submissions ADD COLUMN priorities TEXT");
+      } catch {
+        /* column already exists */
+      }
       await db.execute(
         `CREATE TABLE IF NOT EXISTS writing_corrections (
           id TEXT PRIMARY KEY, submission_id TEXT, original TEXT, suggestion TEXT,
@@ -178,17 +185,18 @@ export const writingStore = {
       bands: sub.bands,
       strengths: sub.strengths,
       general_feedback: sub.general_feedback,
+      priorities: sub.priorities,
       corrections: sub.corrections,
       created_at: sub.created_at ?? Date.now(),
     };
     await c.execute({
       sql: `INSERT INTO writing_submissions
-        (id, prompt_id, task_type, text, word_count, overall_band, bands, strengths, general_feedback, created_at)
-        VALUES (?,?,?,?,?,?,?,?,?,?)`,
+        (id, prompt_id, task_type, text, word_count, overall_band, bands, strengths, general_feedback, priorities, created_at)
+        VALUES (?,?,?,?,?,?,?,?,?,?,?)`,
       args: [
         full.id, full.prompt_id, full.task_type, full.text, full.word_count,
         full.overall_band, JSON.stringify(full.bands), JSON.stringify(full.strengths),
-        full.general_feedback, full.created_at,
+        full.general_feedback, JSON.stringify(full.priorities), full.created_at,
       ],
     });
     if (full.corrections.length) {
@@ -226,6 +234,7 @@ export const writingStore = {
       ),
       strengths: jsonParse<string[]>(r.strengths, []),
       general_feedback: String(r.general_feedback ?? ""),
+      priorities: jsonParse<WritingPriority[]>(r.priorities, []),
       corrections: [],
       created_at: Number(r.created_at ?? 0),
     }));
@@ -304,6 +313,7 @@ export const writingStore = {
       ),
       strengths: jsonParse<string[]>(r.strengths, []),
       general_feedback: String(r.general_feedback ?? ""),
+      priorities: jsonParse<WritingPriority[]>(r.priorities, []),
       corrections: (cr.rows as any[]).map((x) => ({
         id: String(x.id),
         submission_id: String(x.submission_id),

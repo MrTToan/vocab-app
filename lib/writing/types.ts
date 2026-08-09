@@ -103,6 +103,15 @@ export interface CriterionScore {
   comment: string;
 }
 
+/** A higher-order coaching point — what to seriously improve to raise the band. */
+export interface WritingPriority {
+  criterion: Criterion;
+  title: string; // short actionable label
+  why: string; // what is holding the score back, specific to this response
+  how: string; // concrete technique/steps to fix it
+  example: string; // a short model phrase/sentence to emulate ("" if none)
+}
+
 export interface WritingSubmission {
   id: string;
   prompt_id: string;
@@ -113,6 +122,7 @@ export interface WritingSubmission {
   bands: Record<Criterion, CriterionScore>;
   strengths: string[];
   general_feedback: string;
+  priorities: WritingPriority[];
   corrections: WritingCorrection[];
   created_at: number;
 }
@@ -142,6 +152,15 @@ export const WritingScoreSchema = z.object({
   ),
   strengths: z.array(z.string()),
   general_feedback: z.string(),
+  priorities: z.array(
+    z.object({
+      criterion: z.string(),
+      title: z.string(),
+      why: z.string(),
+      how: z.string(),
+      example: z.string(),
+    }),
+  ),
 });
 export type WritingScoreRaw = z.infer<typeof WritingScoreSchema>;
 
@@ -179,8 +198,23 @@ export const WRITING_SCORE_JSON_SCHEMA = {
     },
     strengths: { type: "array", items: { type: "string" } },
     general_feedback: { type: "string" },
+    priorities: {
+      type: "array",
+      items: {
+        type: "object",
+        additionalProperties: false,
+        properties: {
+          criterion: { type: "string", enum: [...CRITERIA] },
+          title: { type: "string" },
+          why: { type: "string" },
+          how: { type: "string" },
+          example: { type: "string" },
+        },
+        required: ["criterion", "title", "why", "how", "example"],
+      },
+    },
   },
-  required: ["overall_band", "criteria", "corrections", "strengths", "general_feedback"],
+  required: ["overall_band", "criteria", "corrections", "strengths", "general_feedback", "priorities"],
 } as const;
 
 function criterionJson() {
