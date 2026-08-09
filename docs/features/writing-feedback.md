@@ -5,13 +5,26 @@ A separate practice module for **IELTS Academic writing**, alongside vocabulary.
 **Task 1** (describe a chart/graph) and **Task 2** (write an essay). You write a response to a real
 prompt and get **one-shot feedback** — no back-and-forth, no repeats.
 
+## Choosing what to practise
+Writing isn't spaced-repetition — you decide. Each task page has a **left pane listing every question**
+with your **best band so far** (or a "New" tag), so you can pick a fresh one or redo a weak one. If you've
+already done a question, a **"View last feedback"** button re-opens your last scored attempt so you can
+review it without rewriting.
+
 ## What you get back
 For every submission, the app shows:
 - an **overall band estimate** plus a band for each of the four official IELTS criteria —
   Task Achievement, Coherence & Cohesion, Lexical Resource, and Grammar;
-- your writing with **inline highlights** — hover a highlight to see the fix;
-- a list of **corrections** (what → what, why), each tagged by error type, with better-word suggestions;
-- a summary of your **error types**, your **strengths**, and the single highest-priority thing to improve.
+- your writing **annotated Google-Docs-style** — the essay on the left, compact correction notes on the
+  right; hover or click a highlight and its note lights up (and vice versa);
+- each correction shows *what → what*, the error type, and why, with better-word suggestions;
+- **"How to raise your band"** — 2–3 *prioritised, higher-order* improvements (not the small fixes):
+  the strategic weaknesses capping your score, each with **why** (specific to your essay), **how** (a
+  technique), and a **model sentence** to emulate;
+- a summary of your **error types** and your **strengths**.
+
+**Export PDF:** an *⬇ Export PDF* button turns the whole report into a PDF (via your browser's Save-as-PDF)
+you can save or send.
 
 The four criteria, the corrections, and the error tags all feed the **Report** page (`/report`), so you
 can see your band trend and your most common mistakes over time.
@@ -25,10 +38,12 @@ can see your band trend and your most common mistakes over time.
   the feedback catches it — and the app never needs to "see" images while you practise.
 
 ## Getting prompts in
-Prompts come from documents you collect and drop into `content/writing/task1/inbox/` or
-`content/writing/task2/inbox/`. Then ask Claude to run the **`/ingest-writing-prompts`** skill — it
-processes them on request (for Task 1 it reads the chart and asks you to confirm the data). A few sample
-prompts are seeded so you can start immediately.
+Prompts come from **two Google Docs** you keep — one for Task 1, one for Task 2 — with each question
+**numbered `Question 1`, `Question 2`, …** (Task 1 questions include the chart as a pasted screenshot).
+The doc links live in `content/writing/sources.json`. Ask Claude to run the **`/ingest-writing-prompts`**
+skill and it reads the docs on request, indexing only the new numbers (so re-running never duplicates);
+for Task 1 it reads each chart once and asks you to confirm the figures. A few sample prompts are seeded
+so you can start immediately.
 
 ---
 *Under the hood: `lib/writing/*`, tables `writing_prompts` / `writing_submissions` / `writing_corrections`,

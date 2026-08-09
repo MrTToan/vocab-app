@@ -57,19 +57,30 @@ Additive second module beside vocab; reuses storage + the LLM chain, adds its ow
   **`app/(app)`** (shared nav + centered column). Vocab dashboard moved from `/` to `/vocab`; every
   other vocab URL unchanged. Writing lives at `/writing/{task1,task2}`; cross-skill report at `/report`.
 - **Domain (`lib/writing/`)** — `types.ts` (records + Zod/JSON score schema, criteria + error taxonomy),
-  `grade.ts` (**pure, unit-tested**: `countWords`, `clampBand`, `normalizeScore`, and `locateCorrections`
-  which assigns each correction a char span by exact-substring match), `prompt.ts` (scoring prompt),
-  `guidance.ts` (loads `content/writing/guidance/*.md`), `score.ts` (`callStructured("score-writing")`).
+  `grade.ts` (**pure, unit-tested**: `countWords`, `clampBand`, `normalizeScore`, `locateCorrections`
+  = char-span by exact-substring match, error/criterion normalizers), `prompt.ts` (scoring prompt),
+  `guidance.ts` (loads `content/writing/guidance/*.md`), `score.ts` (`callStructured("score-writing")`, maxTokens 4500).
 - **Storage (`lib/writing/store.ts`)** — its own small libSQL layer over the **same** DB file. Tables:
-  `writing_prompts` (incl. `chart_data` JSON + `image_path` for Task 1), `writing_submissions`
-  (the four bands), `writing_corrections`. Kept separate so the vocab `Store` + Sheet backend are untouched.
-- **Scoring:** one-shot. Structured output = overall band + 4 criteria + corrections (`original`,
-  `suggestion`, `error_type`, `criterion`, `explanation`) + strengths + general feedback. Bands normalized
-  and correction spans located in `grade.ts`. Task 1 injects the prompt's `chart_data` as ground truth.
-- **Task 1 vision-once:** charts are read a single time at ingest (the `/ingest-writing-prompts` skill,
-  Claude's own vision) into `chart_data`; the **app runtime needs no vision provider**.
-- **API:** `GET /api/writing/prompts` (list/least-recently-shown pick), `POST /api/writing/submit`
-  (score + persist), `GET /api/writing/stats` (report aggregates).
+  `writing_prompts` (`chart_data` JSON + `image_path` for Task 1), `writing_submissions` (four bands +
+  `priorities` JSON), `writing_corrections`. Kept separate so the vocab `Store` + Sheet backend are
+  untouched. Schema evolves via `ALTER TABLE … ADD COLUMN` in a try/catch at connect (e.g. `priorities`).
+- **Scoring:** one-shot structured output = overall band + 4 criteria + corrections (`original`,
+  `suggestion`, `error_type`, `criterion`, `explanation`) + strengths + `general_feedback` + **`priorities`**
+  (2–3 higher-order coaching items: criterion/title/why/how/example). Bands normalized + correction spans
+  located in `grade.ts`. Task 1 injects the prompt's `chart_data` as ground truth.
+- **Ingest = online (Google Docs), manual, on-request** (`/ingest-writing-prompts` skill): two doc links
+  in `content/writing/sources.json`; text via the `mcp__claude_ai_Google_Drive__*` connector, chart images
+  via DOCX/PDF export. **Task 1 charts read once → `chart_data`** (Claude's vision; **no runtime vision
+  provider**). Dedup by question number → id `task{1,2}-q<N>`; re-runs skip indexed numbers.
+  `scripts/add-writing-prompt.mjs` upserts.
+- **UI** (`components/writing/`) — `WritingPractice.tsx` (question-picker workspace + write/result/review),
+  `Feedback.tsx` (Google-Docs side panel: annotated essay ↔ compact correction cards, coaching section,
+  Export-PDF via `window.print()` + `@media print` in `globals.css`).
+- **API:** `GET /api/writing/prompts` (list w/ per-prompt stats, or pick), `POST /api/writing/submit`
+  (score + persist), `GET /api/writing/submission?promptId=` (latest attempt for review),
+  `GET /api/writing/stats` (report aggregates).
+- **Report:** `/report` is the single cross-skill analytics page (vocab dashboard + writing analytics);
+  `/progress` redirects to it.
 
 ## 5. Project structure
 ```
@@ -88,12 +99,12 @@ vocab-app/
       config/ words/ words/[id]/ words/check/      # vocab CRUD + dup check
       enrich/ import/ stats/                       # enrich · bulk add · /progress aggregates
       practice/{next,score,result}/route.ts        # picker · LLM grade · apply+log
-      writing/{prompts,submit,stats}/route.ts      # writing bank · score+persist · report
+      writing/{prompts,submit,submission,stats}/route.ts  # bank+stats · score · review · report
   lib/  store.ts providers.ts llm.ts prompts.ts engine.ts types.ts ui.ts
         writing/{types,grade,guidance,prompt,score,store}.ts   # writing module
   components/Nav.tsx  components/writing/{WritingPractice,Feedback}.tsx
-  content/writing/     # guidance/*.md (injected) · {task1,task2}/{inbox,prompts}/
-  public/writing/task1/  # extracted/served chart images
+  content/writing/     # sources.json (gdoc links) · guidance/*.md · {task1,task2}/prompts/
+  public/writing/task1/  # served chart images (extracted at ingest)
   scripts/  import-tracker.mjs  seed-writing-prompts.mjs  add-writing-prompt.mjs
 ```
 

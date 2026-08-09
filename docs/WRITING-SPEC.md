@@ -2,9 +2,17 @@
 
 **Status:** ✅ built (2026-08-09) · Companion to `PRD.md` / `TECH.md` · This was the design; it now ships.
 For how it behaves today see `docs/features/writing-feedback.md`; for architecture see `TECH.md` §4b; for
-live state see `STATUS.md`. The one deliberate deviation from the plan below: correction **spans are located
-by exact-substring match** in `grade.ts` (the LLM returns the verbatim `original`, we compute start/end) —
-more robust than asking the model for character offsets.
+live state see `STATUS.md`.
+
+**As-built changes since this design (the doc below is the original plan):**
+- **Ingest is ONLINE, not offline.** §4's `.docx`/`.pdf` inbox was replaced by **two Google Docs** (links in
+  `content/writing/sources.json`) read via the Google Drive connector. Dedup is by **question number**
+  (`Question N` → id `task{1,2}-q<N>`), not a content hash — the user numbers and only appends.
+- **Correction spans** are located by exact-substring match in `grade.ts` (LLM returns the verbatim
+  `original`; we compute start/end) — more robust than model-provided offsets.
+- **Added beyond the plan:** a **question-picker workspace** with per-question past scores + "view last
+  feedback"; a **"How to raise your band"** coaching section (`priorities`); **Export PDF** (browser print);
+  a Google-Docs-style **side-panel feedback UI**; and `/report` absorbing the full vocab dashboard.
 
 ---
 

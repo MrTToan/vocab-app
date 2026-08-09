@@ -12,25 +12,40 @@ feedback on the four criteria. A SaaS-style **landing page** sits at `/`; the ap
 
 ## Writing module (IELTS Academic) — built & verified
 - **Two sub-modules:** Task 1 (`/writing/task1`, chart description) + Task 2 (`/writing/task2`, essay).
-  Shared loop (`components/writing/WritingPractice.tsx`) + feedback renderer with **inline, numbered
-  correction highlights** (`components/writing/Feedback.tsx`).
+- **Question-picker workspace** (not random — deliberate practice): a left pane lists every question for
+  the task with your **best band + attempts** (or "New"); pick one to write. Previously-done questions
+  show a summary and **"View last feedback"** (re-read your last scored attempt without rewriting) via
+  `GET /api/writing/submission`. `components/writing/WritingPractice.tsx`.
 - **One-shot LLM feedback** on the four official criteria (Task Achievement / Coherence & Cohesion /
-  Lexical Resource / Grammar), overall band, inline corrections (located by exact-substring match, pure
-  helper), synonym suggestions, and an error-type breakdown. Scoring = new **`score-writing`** task on
-  the same provider chain; `maxTokens` 3500.
-- **Task 1 reads each chart ONCE** at ingest (Claude's vision → `chart_data`), stored and reused as the
+  Lexical Resource / Grammar) + overall band. Scoring = **`score-writing`** task on the same provider
+  chain; `maxTokens` 4500.
+- **Feedback UI = Google-Docs-style** (`components/writing/Feedback.tsx`): the annotated essay on the
+  left, **compact one-line correction cards** on the right; hover/click a highlight ↔ its note (only the
+  focused card expands). Corrections located by exact-substring match (pure `locateCorrections`).
+- **"How to raise your band" coaching** — beyond the line-level fixes, the scorer returns 2–3
+  **prioritized, higher-order improvements** (development, coherence, range, precise vocab, data accuracy),
+  each with Why (specific to the essay + the band it unlocks) / How (a technique) / a model sentence to
+  emulate. Stored in a new `priorities` column (migration-added).
+- **Export PDF** — an "⬇ Export PDF" button on the feedback view uses the browser's print / Save-as-PDF
+  (`window.print()` + a print stylesheet). No PDF library.
+- **Task 1 reads each chart ONCE** at ingest (Claude's vision → `chart_data`), stored + reused as the
   scoring ground truth — **no vision model at app runtime**. Verified live: a deliberate chart misread
   was caught by the scorer.
 - **Teacher's guidance** in `content/writing/guidance/*.md` is injected into every score (no RAG).
 - **Storage:** self-contained `lib/writing/store.ts` (libSQL, same `.data/lexi.db`) — tables
-  `writing_prompts`, `writing_submissions`, `writing_corrections`. Vocab `Store`/Sheet untouched.
-- **Prompt bank:** 5 seeded Task 2 prompts (`scripts/seed-writing-prompts.mjs`) + 1 sample Task 1
-  (hand-authored SVG chart). Add more via the **`/ingest-writing-prompts`** skill (drop `.docx`/`.pdf`
-  in `content/writing/*/inbox/`, run on request) → `scripts/add-writing-prompt.mjs`.
-- **Cross-skill report** (`/report` + `/api/writing/stats`): band trend, per-criterion averages,
-  **most-common-mistakes** bar chart, recent submissions — beside the vocab mastery summary.
+  `writing_prompts`, `writing_submissions` (bands + `priorities`), `writing_corrections`. Vocab
+  `Store`/Sheet untouched. Schema migrations via `ALTER TABLE … ADD COLUMN` (try/catch) at connect.
+- **Prompt ingest = ONLINE (Google Docs).** Two docs (Task 1 + Task 2) whose links live in
+  `content/writing/sources.json`; the **`/ingest-writing-prompts`** skill reads them on request (text via
+  the Google Drive connector; charts via DOCX/PDF export → view once → `chart_data`). Questions are
+  **numbered `Question N`** → id `task{1,2}-q<N>`; re-runs skip already-indexed numbers (idempotent).
+  `scripts/add-writing-prompt.mjs` stores. (The old `.docx`/`.pdf` inbox flow is retired.)
+- **Cross-skill report** (`/report`): now the **single analytics home** — the full vocab dashboard
+  (mastery, 14-day activity, breakdown, by-type, most-practiced) **plus** writing analytics (band trend,
+  per-criterion averages, most-common-mistakes, recent submissions) via `/api/writing/stats`. `/progress`
+  redirects here. (Fixed: the 14-day activity chart rendered nothing — flex-percentage-height collapse.)
 - **Not connected to vocab yet** (by design) — the "force N vocab words in an essay" link is a seam only.
-- **12 unit tests** for the pure writing helpers (`tests/writing.test.ts`); suite is **80/80 green**.
+- **Unit tests** for the pure writing helpers (`tests/writing.test.ts`); suite is **80/80 green**.
 
 ## Built & verified
 - **Full app**, typechecks, clean `next build`. Next.js 16 + TS + Tailwind v4.
@@ -77,8 +92,10 @@ feedback on the four criteria. A SaaS-style **landing page** sits at `/`; the ap
   seeds cloze(s) from a new word's example sentences. All additive — no schema change.
 
 ## Data state
-- **~1,128 words** in `.data/lexi.db` (~33,650 bank questions). Writing tables present with the seeded
-  prompt bank (6 prompts); submissions/corrections start empty (test data was cleared after verifying).
+- **~1,128 words** in `.data/lexi.db` (~33,650 bank questions). Writing bank: **7 prompts** — 5 seeded
+  Task 2 essays + 1 sample Task 1 (SVG) + **1 real Task 1 (`task1-q1`, UK sports interest)** ingested from
+  the user's Google Doc. `task1-q1` has 2 real practice submissions (best band 5.0). Google Doc source
+  links are in `content/writing/sources.json` (Task 1 + Task 2 docs, both owned by the user).
 - Originally imported from `tracker.csv` (`scripts/import-tracker.mjs` split the combined meaning cell,
   no LLM).
 - **Cleaned:** 123 meanings had `Input:/Response:`/markdown junk — stripped. 13 sentence-fragment

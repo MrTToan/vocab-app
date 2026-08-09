@@ -133,17 +133,25 @@ answers in a row** (near-misses count). Active working set ~35 words.
 A second learning module beside vocabulary (full design: `docs/WRITING-SPEC.md`; behavior:
 `docs/features/writing-feedback.md`).
 - **[built] Task 1 (chart) + Task 2 (essay).** Write a response to a real prompt; get **one-shot**
-  feedback: an overall band + bands for the four official criteria (Task Achievement, Coherence &
-  Cohesion, Lexical Resource, Grammar), **inline corrections**, synonym suggestions, and an error-type
-  breakdown for review. LLM-scored (`score-writing` task on the same chain).
+  feedback: overall band + the four official criteria bands, **inline corrections** (Google-Docs-style
+  highlight↔note side panel), synonym suggestions, and an error-type breakdown. LLM-scored (`score-writing`).
+- **[built] Choose what to practise (not random).** A question-picker pane lists every question with your
+  **past scores**; you pick. Done questions offer **"View last feedback"** to review without rewriting.
+- **[built] "How to raise your band" coaching.** Beyond the minor fixes, the scorer returns 2–3
+  prioritized, essay-specific improvements (development, coherence, range, precise vocab, data accuracy),
+  each with why / how / a model sentence — the serious levers to the next band.
+- **[built] Export PDF.** One-click browser Save-as-PDF of the full feedback report to send out (no deps).
 - **[built] Grades by your teacher's rules.** Curated markdown in `content/writing/guidance/` is injected
   into every score — no RAG.
-- **[built] Task 1 vision-once.** Each chart is read a single time at ingest into `chart_data` (the
-  `/ingest-writing-prompts` skill); scoring checks the description against that stored data, so the app
-  needs no vision model at runtime.
-- **[built] Cross-skill report** (`/report`): band trend, per-criterion averages, most-common mistakes.
+- **[built] Task 1 vision-once.** Each chart is read a single time at ingest into `chart_data`; scoring
+  checks the description against that stored data, so the app needs no vision model at runtime.
+- **[built] Prompt ingest from Google Docs.** You keep two Google Docs (Task 1 + Task 2), numbering
+  questions `Question N`; the `/ingest-writing-prompts` skill reads them on request and indexes new ones
+  (idempotent by number).
+- **[built] Cross-skill report** (`/report`): the single analytics home — vocab dashboard + writing band
+  trend, per-criterion averages, most-common mistakes.
 - **[seam, not built] Vocab↔writing link** — an assignment that forces you to use N words you're learning.
-- **Data:** `writing_prompts` / `writing_submissions` / `writing_corrections` (additive; vocab untouched).
+- **Data:** `writing_prompts` / `writing_submissions` (+ `priorities`) / `writing_corrections` (additive).
 
 ## 5. Out of scope (for now)
 Audio/TTS, speaking/pronunciation scoring, full SRS intervals, multi-user/accounts,
