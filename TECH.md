@@ -8,9 +8,9 @@
 
 | Layer | Choice | Notes |
 |---|---|---|
-| **Framework** | **Next.js 16** (App Router) + React 19 + TypeScript | One repo, one `npm run dev`; API routes keep keys server-side; deploys to Vercel. |
+| **Framework** | **Next.js 16** (App Router) + React 19 + TypeScript | One repo, one `npm run dev`; API routes keep keys server-side. **Self-hosted** via Docker (`next start`) — see `Dockerfile`/`docker-compose.yml`. |
 | **Styling** | **Tailwind v4** | Responsive; light/dark via CSS variables. |
-| **Storage** | **SQLite via libSQL** (`@libsql/client`) — default | Local file (`.data/lexi.db`); the same client targets **Turso** for serverless deploy. Google Sheet is an optional backend. Behind one interface: `lib/store.ts`. |
+| **Storage** | **SQLite via libSQL** (`@libsql/client`) — default | File `.data/lexi.db`, persisted via a Docker volume on the self-host box (no Turso needed; the same client can target Turso if ever wanted). Google Sheet is an optional backend. Behind one interface: `lib/store.ts`. |
 | **LLM** | **Provider abstraction** (`lib/providers.ts`) | Anthropic SDK **or** any OpenAI-compatible HTTP endpoint; single provider or an ordered fallback chain. |
 | **Validation** | **Zod** (`lib/types.ts`) | Validates every LLM output at the boundary. |
 
@@ -143,5 +143,6 @@ vocab-app/
 ## 8. Known gaps / next
 - No retry/backoff on LLM calls (a burst can trip a provider's rate limit); no
   `engine.ts` unit tests yet; progress writes per-answer (not batched).
-- Provider circuit-breaker state is in-memory (`activeIndex`/`consecutiveFailures`)
-  — won't persist across serverless invocations on Vercel (fast-follow).
+- Provider circuit-breaker state is in-memory (`activeIndex`/`consecutiveFailures`).
+  Fine when self-hosted (one long-lived process keeps the state); would reset per
+  invocation only on serverless — not our deploy model.

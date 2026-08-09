@@ -1,0 +1,18 @@
+# Reverse proxy + automatic HTTPS for a self-hosted Lexi.
+# Caddy fetches and renews Let's Encrypt certs for you — no manual TLS.
+#
+# Usage:
+#   1) point your domain's A record at this server
+#   2) copy this to /etc/caddy/Caddyfile (edit the domain + email)
+#   3) sudo systemctl reload caddy
+# Caddy then serves https://lexi.example.com and proxies to the container on :3001.
+
+lexi.example.com {
+    encode zstd gzip
+    reverse_proxy localhost:3001
+}
+
+# Local/no-domain testing without TLS:
+# :8080 {
+#     reverse_proxy localhost:3001
+# }

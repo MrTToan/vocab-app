@@ -1,0 +1,15 @@
+# Keep the build context small and never bake secrets/data into the image.
+node_modules
+.next
+.git
+.data
+.env.local
+.env*.local
+npm-debug.log*
+*.log
+# internal docs (not needed in the image)
+MULTITENANT-CHECKLIST.md
+STATUS.md
+CLAUDE.md
+AGENTS.md
+CHEATSHEET.md
