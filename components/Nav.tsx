@@ -15,7 +15,6 @@ const SUBNAV: Record<string, { href: string; label: string }[]> = {
   vocab: [
     { href: "/vocab", label: "Home" },
     { href: "/practice", label: "Practice" },
-    { href: "/progress", label: "Progress" },
     { href: "/library", label: "Library" },
     { href: "/add", label: "Add" },
     { href: "/import", label: "Import" },

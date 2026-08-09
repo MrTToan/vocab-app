@@ -21,6 +21,6 @@ cross-skill Report. A SaaS-style landing page sits at `/`.
 6. [IELTS writing feedback](writing-feedback.md) — Task 1 & Task 2, band scoring, inline corrections
 
 ## Across the app
-7. [Progress tracking](progress-tracking.md) — charts & what's measured (vocab `/progress`; cross-skill `/report`)
+7. [Progress tracking](progress-tracking.md) — the cross-skill `/report` (vocab + writing charts; `/progress` redirects here)
 8. [AI providers](ai-providers.md) — the fallback chain & running with no key
 9. [Data & storage](data-and-storage.md) — what's stored, where, and backups
