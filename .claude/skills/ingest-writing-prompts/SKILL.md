@@ -27,6 +27,16 @@ A Task 1 chart is viewed a **single time**, here, into a structured `chart_data`
 the prompt and reused as the scoring ground truth for **every** future submission — so the app never needs
 a vision model at runtime, and the same chart is never re-read. Get the facts right once.
 
+## Numbering & incremental dedup (how re-runs stay clean)
+The user numbers every question in the doc — **`Question 1`, `Question 2`, …** — and only ever **appends**
+(never removes or renumbers old ones). So the question number IS the stable id: `task1-q<N>` / `task2-q<N>`.
+Before processing, read which numbers are already indexed and **skip them** — only do the new (higher) ones:
+```bash
+sqlite3 .data/lexi.db "SELECT id FROM writing_prompts WHERE task_type='task1' ORDER BY id;"
+```
+This means you don't re-view charts you've already done. (`INSERT OR REPLACE` by id also makes any re-run
+idempotent, so no duplicates even if you do reprocess one.)
+
 ## 1. Read each doc (text + images)
 For each configured task, using its file ID:
 1. **Text:** `read_file_content(fileId)` → the natural-language content. Use this to pull the **exact
@@ -46,30 +56,25 @@ For each configured task, using its file ID:
    - **Size caution:** exports are returned as inline base64. If a doc is large/image-heavy, process it in
      **batches** (a few questions per pass) rather than one giant download. Tell the user what you covered.
 
-## 2. Convert each question to a prompt JSON
-Give each question a **deterministic id** so re-indexing upserts instead of duplicating — derive it from
-the prompt text:
-```bash
-python3 -c "import hashlib,sys; print('task2-'+hashlib.sha1(sys.argv[1].encode()).hexdigest()[:10])" "<prompt_text>"
-```
+## 2. Convert each NEW question to a prompt JSON
+Use the question number as the id: `task2-q<N>` / `task1-q<N>`.
 
 **Task 2** (text-only) → one object:
 ```json
-{ "id": "task2-<hash>", "task_type": "task2", "title": "<short title>",
-  "prompt_text": "<full prompt, verbatim>", "source_file": "gdoc:task2", "tags": [] }
+{ "id": "task2-q<N>", "task_type": "task2", "title": "Q<N> · <short title>",
+  "prompt_text": "<full prompt, verbatim>", "source_file": "gdoc:task2 Question <N>", "tags": [] }
 ```
 
-**Task 1** (chart) → for each chart:
-1. Copy its screenshot from `word/media/imageN.png` to `public/writing/task1/<slug>.png`
-   (served path `/writing/task1/<slug>.png` → `image_path`).
+**Task 1** (chart) → for each chart (image `word/media/imageN.png` corresponds to the Nth image in doc order):
+1. Copy its screenshot to `public/writing/task1/<slug>.png` (served path `/writing/task1/<slug>.png` → `image_path`).
 2. **View the chart** (Read the PNG or the PDF page) and write a faithful `chart_data`
    `{ chart_type, unit, series:[…actual values…], key_trends:[…], overview }` — transcribe every value/label.
 3. Build the object:
 ```json
-{ "id": "task1-<hash>", "task_type": "task1", "title": "<short title>",
+{ "id": "task1-q<N>", "task_type": "task1", "title": "Q<N> · <short title>",
   "prompt_text": "<full prompt + 'Write at least 150 words.'>",
   "image_path": "/writing/task1/<slug>.png", "chart_data": { … },
-  "source_file": "gdoc:task1", "tags": [] }
+  "source_file": "gdoc:task1 Question <N>", "tags": [] }
 ```
 (Complete example: `content/writing/task1/prompts/sample-entertainment.json`.)
 
