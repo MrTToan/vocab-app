@@ -1,5 +1,6 @@
 "use client";
 
+import { useRef, useState } from "react";
 import {
   CRITERIA,
   CRITERION_LABEL,
@@ -21,9 +22,33 @@ const CRITERION_COLOR: Record<Criterion, string> = {
   task_achievement: "var(--accent)",
 };
 
+/** corrections in reading order: by position in the essay, unlocated ones last. */
+function orderedCorrections(cs: WritingCorrection[]) {
+  return cs
+    .map((c, i) => ({ c, i }))
+    .sort((a, b) => (a.c.start ?? Number.MAX_SAFE_INTEGER) - (b.c.start ?? Number.MAX_SAFE_INTEGER));
+}
+
 export default function Feedback({ submission }: { submission: WritingSubmission }) {
   const s = submission;
   const errAgg = aggregateErrors(s.corrections);
+  const ordered = orderedCorrections(s.corrections); // display order; index = "di"
+
+  // hover state (transient) vs pinned (click). Effective focus = hover ?? pinned.
+  const [hover, setHover] = useState<number | null>(null);
+  const [pinned, setPinned] = useState<number | null>(null);
+  const focused = hover ?? pinned;
+
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  const focusFromEssay = (di: number) => {
+    setHover(di);
+    cardRefs.current[di]?.scrollIntoView({ block: "nearest", behavior: "smooth" });
+  };
+  const pinFromEssay = (di: number) => {
+    setPinned((p) => (p === di ? null : di));
+    cardRefs.current[di]?.scrollIntoView({ block: "nearest", behavior: "smooth" });
+  };
 
   return (
     <div className="space-y-6">
@@ -56,26 +81,50 @@ export default function Feedback({ submission }: { submission: WritingSubmission
         ))}
       </div>
 
-      {/* Essay with inline corrections */}
+      {/* Essay + comment panel (widened breakout so both columns breathe) */}
       <div>
         <h3 className="font-bold mb-2">Your writing, annotated</h3>
-        <div className="card p-4 leading-8 text-[15px] whitespace-pre-wrap">
-          <InlineText text={s.text} corrections={s.corrections} />
-        </div>
-        <p className="muted text-xs mt-1">Hover a highlight to see the fix.</p>
-      </div>
+        <div className="lg:w-[76rem] lg:max-w-[94vw] lg:relative lg:left-1/2 lg:-translate-x-1/2">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_21rem] gap-4 items-start">
+            {/* essay */}
+            <div className="card p-5 leading-8 text-[15px] whitespace-pre-wrap">
+              <AnnotatedEssay
+                text={s.text}
+                ordered={ordered}
+                focused={focused}
+                onEnter={focusFromEssay}
+                onLeave={() => setHover(null)}
+                onClick={pinFromEssay}
+              />
+              {s.corrections.length === 0 && <span className="muted"> </span>}
+            </div>
 
-      {/* Corrections list */}
-      {s.corrections.length > 0 && (
-        <div>
-          <h3 className="font-bold mb-2">Corrections</h3>
-          <div className="space-y-2">
-            {s.corrections.map((c, i) => (
-              <CorrectionRow key={i} n={i + 1} c={c} />
-            ))}
+            {/* comment cards */}
+            <div className="space-y-2 lg:sticky lg:top-24 lg:max-h-[calc(100vh-8rem)] lg:overflow-y-auto pr-0.5">
+              {ordered.length === 0 ? (
+                <div className="card p-4 text-sm muted">No corrections — clean writing!</div>
+              ) : (
+                ordered.map((o, di) => (
+                  <CommentCard
+                    key={o.i}
+                    ref={(el) => {
+                      cardRefs.current[di] = el;
+                    }}
+                    n={di + 1}
+                    c={o.c}
+                    active={focused === di}
+                    pinned={pinned === di}
+                    onEnter={() => setHover(di)}
+                    onLeave={() => setHover(null)}
+                    onClick={() => setPinned((p) => (p === di ? null : di))}
+                  />
+                ))
+              )}
+            </div>
           </div>
         </div>
-      )}
+        <p className="muted text-xs mt-2">Hover a highlight to jump to its note — or hover a note to find the phrase. Click to pin.</p>
+      </div>
 
       {/* Error summary */}
       {errAgg.length > 0 && (
@@ -112,17 +161,108 @@ export default function Feedback({ submission }: { submission: WritingSubmission
   );
 }
 
-function CorrectionRow({ n, c }: { n: number; c: WritingCorrection }) {
+/* ── the essay with synced highlights ── */
+
+function AnnotatedEssay({
+  text,
+  ordered,
+  focused,
+  onEnter,
+  onLeave,
+  onClick,
+}: {
+  text: string;
+  ordered: { c: WritingCorrection; i: number }[];
+  focused: number | null;
+  onEnter: (di: number) => void;
+  onLeave: () => void;
+  onClick: (di: number) => void;
+}) {
+  // located corrections, in start order, carrying their display index (di)
+  const located = ordered
+    .map((o, di) => ({ ...o, di }))
+    .filter((x) => x.c.start != null && x.c.end != null);
+
+  const parts: React.ReactNode[] = [];
+  let cursor = 0;
+  for (const { c, di } of located) {
+    const start = c.start!;
+    const end = c.end!;
+    if (start < cursor) continue; // defensive: skip overlaps
+    if (start > cursor) parts.push(<span key={`t${cursor}`}>{text.slice(cursor, start)}</span>);
+    const color = CRITERION_COLOR[c.criterion];
+    const on = focused === di;
+    parts.push(
+      <mark
+        key={`m${di}`}
+        onMouseEnter={() => onEnter(di)}
+        onMouseLeave={onLeave}
+        onClick={() => onClick(di)}
+        style={{
+          background: on ? `color-mix(in srgb, ${color} 22%, transparent)` : "transparent",
+          color: "inherit",
+          borderBottom: `2px solid ${color}`,
+          borderRadius: on ? 3 : 0,
+          padding: on ? "0 2px" : 0,
+          cursor: "pointer",
+          transition: "background 0.12s ease",
+        }}
+      >
+        {text.slice(start, end)}
+        <sup className="text-[10px] font-bold" style={{ color }}>{di + 1}</sup>
+      </mark>,
+    );
+    cursor = end;
+  }
+  if (cursor < text.length) parts.push(<span key="tend">{text.slice(cursor)}</span>);
+  return <>{parts}</>;
+}
+
+/* ── a comment card ── */
+
+const CommentCard = ({
+  ref,
+  n,
+  c,
+  active,
+  pinned,
+  onEnter,
+  onLeave,
+  onClick,
+}: {
+  ref: (el: HTMLDivElement | null) => void;
+  n: number;
+  c: WritingCorrection;
+  active: boolean;
+  pinned: boolean;
+  onEnter: () => void;
+  onLeave: () => void;
+  onClick: () => void;
+}) => {
+  const color = CRITERION_COLOR[c.criterion];
   return (
-    <div className="card p-3 text-sm">
+    <div
+      ref={ref}
+      onMouseEnter={onEnter}
+      onMouseLeave={onLeave}
+      onClick={onClick}
+      className="card p-3 text-sm cursor-pointer transition-all"
+      style={{
+        borderColor: active ? color : "var(--line)",
+        boxShadow: active ? `0 4px 16px color-mix(in srgb, ${color} 30%, transparent)` : "none",
+        transform: active ? "translateX(-3px)" : "none",
+      }}
+    >
       <div className="flex items-center gap-2">
         <span
           className="inline-flex items-center justify-center w-5 h-5 rounded-full text-xs font-bold text-white shrink-0"
-          style={{ background: CRITERION_COLOR[c.criterion] }}
+          style={{ background: color }}
         >
           {n}
         </span>
         <span className="chip">{ERROR_LABEL[c.error_type]}</span>
+        {pinned && <span className="text-[10px] muted ml-auto">📌 pinned</span>}
+        {c.start == null && <span className="text-[10px] muted ml-auto">not in text</span>}
       </div>
       <div className="mt-2">
         <span style={{ textDecoration: "line-through", opacity: 0.6 }}>{c.original || "—"}</span>{" "}
@@ -132,41 +272,4 @@ function CorrectionRow({ n, c }: { n: number; c: WritingCorrection }) {
       <p className="muted mt-1">{c.explanation}</p>
     </div>
   );
-}
-
-/** Render the essay, wrapping located corrections in colored, numbered marks. */
-function InlineText({ text, corrections }: { text: string; corrections: WritingCorrection[] }) {
-  const located = corrections
-    .map((c, i) => ({ c, i }))
-    .filter((x) => x.c.start != null && x.c.end != null)
-    .sort((a, b) => (a.c.start! - b.c.start!));
-
-  const parts: React.ReactNode[] = [];
-  let cursor = 0;
-  for (const { c, i } of located) {
-    const start = c.start!;
-    const end = c.end!;
-    if (start < cursor) continue; // defensive: skip any overlap
-    if (start > cursor) parts.push(<span key={`t${cursor}`}>{text.slice(cursor, start)}</span>);
-    parts.push(
-      <mark
-        key={`m${i}`}
-        title={`${c.original} → ${c.suggestion} — ${c.explanation}`}
-        style={{
-          background: "transparent",
-          color: "inherit",
-          borderBottom: `2px solid ${CRITERION_COLOR[c.criterion]}`,
-          cursor: "help",
-        }}
-      >
-        {text.slice(start, end)}
-        <sup className="text-[10px] font-bold" style={{ color: CRITERION_COLOR[c.criterion] }}>
-          {i + 1}
-        </sup>
-      </mark>,
-    );
-    cursor = end;
-  }
-  if (cursor < text.length) parts.push(<span key="tend">{text.slice(cursor)}</span>);
-  return <>{parts}</>;
-}
+};
