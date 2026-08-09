@@ -240,36 +240,42 @@ const CommentCard = ({
   onClick: () => void;
 }) => {
   const color = CRITERION_COLOR[c.criterion];
+  // Compact by default (one line: number + fix). Expands only when focused, so
+  // the pane stays roughly as tall as the essay instead of a long, bulky stack.
   return (
     <div
       ref={ref}
       onMouseEnter={onEnter}
       onMouseLeave={onLeave}
       onClick={onClick}
-      className="card p-3 text-sm cursor-pointer transition-all"
+      className="card px-2.5 py-2 text-sm cursor-pointer transition-all"
       style={{
         borderColor: active ? color : "var(--line)",
-        boxShadow: active ? `0 4px 16px color-mix(in srgb, ${color} 30%, transparent)` : "none",
-        transform: active ? "translateX(-3px)" : "none",
+        boxShadow: active ? `0 4px 16px color-mix(in srgb, ${color} 28%, transparent)` : "none",
       }}
     >
       <div className="flex items-center gap-2">
         <span
-          className="inline-flex items-center justify-center w-5 h-5 rounded-full text-xs font-bold text-white shrink-0"
+          className="inline-flex items-center justify-center w-5 h-5 rounded-full text-[11px] font-bold text-white shrink-0"
           style={{ background: color }}
         >
           {n}
         </span>
-        <span className="chip">{ERROR_LABEL[c.error_type]}</span>
-        {pinned && <span className="text-[10px] muted ml-auto">📌 pinned</span>}
-        {c.start == null && <span className="text-[10px] muted ml-auto">not in text</span>}
+        <span className={active ? "" : "truncate"}>
+          <span style={{ textDecoration: "line-through", opacity: 0.55 }}>{c.original || "—"}</span>{" "}
+          <span className="muted">→</span>{" "}
+          <span className="font-semibold" style={{ color: "var(--good)" }}>{c.suggestion}</span>
+        </span>
       </div>
-      <div className="mt-2">
-        <span style={{ textDecoration: "line-through", opacity: 0.6 }}>{c.original || "—"}</span>{" "}
-        <span className="muted">→</span>{" "}
-        <span className="font-semibold" style={{ color: "var(--good)" }}>{c.suggestion}</span>
-      </div>
-      <p className="muted mt-1">{c.explanation}</p>
+
+      {active && (
+        <div className="mt-1.5 pl-7">
+          <span className="chip">{ERROR_LABEL[c.error_type]}</span>
+          {pinned && <span className="text-[10px] muted ml-2">📌 pinned</span>}
+          {c.start == null && <span className="text-[10px] muted ml-2">not in text</span>}
+          <p className="muted mt-1.5 text-[13px] leading-snug">{c.explanation}</p>
+        </div>
+      )}
     </div>
   );
 };
