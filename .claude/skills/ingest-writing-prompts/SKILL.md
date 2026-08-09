@@ -14,9 +14,12 @@ question into a bank entry, and indexes it into `writing_prompts`. Prompts are c
 Background: `CLAUDE.md`, `docs/WRITING-SPEC.md` (§4), `STATUS.md`.
 
 ## The links
-The two Google Doc links (or file IDs) live in **`content/writing/sources.json`**
-(`{ "task1": "<link>", "task2": "<link>" }`). If either is blank, tell the user and skip that task.
+The two Google Doc links (or file IDs) live in **`content/writing/sources.local.json`** — this file is
+**gitignored** (real links stay off GitHub); read it first. Fall back to the tracked template
+`content/writing/sources.json` only if the local file is missing (it will have empty values). Shape:
+`{ "task1": "<link>", "task2": "<link>" }`. If a link is blank, tell the user and skip that task.
 Extract the file ID from a link like `https://docs.google.com/document/d/<FILE_ID>/edit`.
+**Never write a real link into a committed file** (skill docs, the template, prompt JSON, commit messages).
 
 Access is via the connected **Google Drive** tools (`mcp__claude_ai_Google_Drive__*`). The docs must be
 accessible to the user's connected Google account (owned by them, or shared/link-viewable). If a read

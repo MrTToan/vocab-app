@@ -1,5 +1,5 @@
 {
-  "_comment": "Google Docs that hold your IELTS writing questions. Paste the share link (or file ID) for each. The /ingest-writing-prompts skill reads these, converts the content (text + chart screenshots), and indexes it into the database. Re-running re-reads the docs and upserts by a content hash, so already-indexed questions are never duplicated.",
-  "task1": "https://docs.google.com/document/d/REDACTED_TASK1_DOC_ID/edit",
-  "task2": "https://docs.google.com/document/d/REDACTED_TASK2_DOC_ID/edit"
+  "_comment": "TEMPLATE (committed). Do NOT put real links here — they would be committed to git. Put your real Google Doc links in content/writing/sources.local.json (gitignored); the /ingest-writing-prompts skill reads that file first.",
+  "task1": "",
+  "task2": ""
 }

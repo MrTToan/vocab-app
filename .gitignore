@@ -27,6 +27,9 @@
 /tracker.csv
 /words.csv
 
+# personal writing sources — real Google Doc links stay local, never committed
+/content/writing/sources.local.json
+
 # misc
 .DS_Store
 *.pem
