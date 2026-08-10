@@ -11,6 +11,9 @@ export type WritingTask = (typeof WRITING_TASKS)[number];
 /** Minimum word count IELTS expects per task. */
 export const MIN_WORDS: Record<WritingTask, number> = { task1: 150, task2: 250 };
 
+/** Recommended minutes to spend per task (the exam gives 60 min total). */
+export const REC_MINUTES: Record<WritingTask, number> = { task1: 20, task2: 40 };
+
 /** The four official IELTS writing criteria (our internal keys). */
 export const CRITERIA = [
   "task_achievement",

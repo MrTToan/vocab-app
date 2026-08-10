@@ -11,6 +11,14 @@ with your **best band so far** (or a "New" tag), so you can pick a fresh one or 
 already done a question, a **"View last feedback"** button re-opens your last scored attempt so you can
 review it without rewriting.
 
+## Timing yourself like the real exam
+The exam gives 60 minutes for both tasks; the rule of thumb is **20 minutes for Task 1, 40 for Task 2**.
+A **floating countdown clock** sits in the bottom-right of the writing screen, pre-set to the recommended
+time for that task. Press **Start** to begin (Pause/Resume and Reset are there too); it stays pinned as
+you scroll, turns amber in the last two minutes, and keeps counting into overtime (shown as `+m:ss`) so
+you can see how far past the recommendation you've gone. It resets when you switch questions and never
+appears in the exported PDF.
+
 ## What you get back
 For every submission, the app shows:
 - an **overall band estimate** plus a band for each of the four official IELTS criteria —

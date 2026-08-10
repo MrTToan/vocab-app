@@ -26,6 +26,11 @@ checking are used: **local** (instant, no AI) and **AI-scored** (for open-ended 
 Vietnamese answers are matched **diacritic-insensitively** and against any comma-separated part of the
 stored meaning, so "con cho" matches "con chó".
 
+## After every answer
+The reveal panel shows the word's learning context — the word, its meaning, an example sentence, and its
+**collocations** (the natural word partnerships, e.g. *religious dogma*, *rigid dogma*), so you pick up
+how the word is actually used, not just what it means. A false-friend warning shows when the word has one.
+
 Every graded answer is logged for [Progress tracking](progress-tracking.md).
 
 ---

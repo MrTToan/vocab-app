@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { jsonFetch } from "@/lib/ui";
-import { MIN_WORDS, type WritingPrompt, type WritingSubmission, type WritingTask } from "@/lib/writing/types";
+import { MIN_WORDS, REC_MINUTES, type WritingPrompt, type WritingSubmission, type WritingTask } from "@/lib/writing/types";
 import { countWords } from "@/lib/writing/grade";
 import Feedback, { bandColor } from "./Feedback";
 
@@ -27,6 +27,7 @@ export default function WritingPractice({ task }: { task: WritingTask }) {
   const [hasLLM, setHasLLM] = useState(true);
 
   const min = MIN_WORDS[task];
+  const recMinutes = REC_MINUTES[task];
   const words = countWords(text);
   const selected = prompts?.find((p) => p.id === selectedId) ?? null;
 
@@ -116,7 +117,13 @@ export default function WritingPractice({ task }: { task: WritingTask }) {
   }
 
   return (
-    <div className="print-linear lg:w-[80rem] lg:max-w-[94vw] lg:relative lg:left-1/2 lg:-translate-x-1/2">
+    <>
+      {/* Floating exam clock — rendered outside the translated container below so
+          `position: fixed` tracks the viewport (a CSS transform on an ancestor
+          would otherwise anchor it to that ancestor). Keyed by question → resets. */}
+      {selected && view === "write" && <Timer key={selected.id} minutes={recMinutes} />}
+
+      <div className="print-linear lg:w-[80rem] lg:max-w-[94vw] lg:relative lg:left-1/2 lg:-translate-x-1/2">
       <div className="print-stack grid grid-cols-1 lg:grid-cols-[17rem_minmax(0,1fr)] gap-5 items-start">
         {/* ── question picker ── */}
         <QuestionList prompts={prompts} selectedId={selectedId} onPick={pick} />
@@ -178,7 +185,8 @@ export default function WritingPractice({ task }: { task: WritingTask }) {
           )}
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }
 
@@ -301,6 +309,88 @@ function PromptWriter({
         </div>
         <button className="btn btn-primary" onClick={onSubmit} disabled={submitting || !hasLLM || words < 5}>
           {submitting ? "Scoring…" : done ? "Submit new attempt" : "Submit for feedback"}
+        </button>
+      </div>
+    </div>
+  );
+}
+
+/* ── countdown clock: the exam-pacing recommendation (20 min T1 / 40 min T2) ── */
+
+function fmtClock(sec: number): string {
+  const a = Math.abs(sec);
+  return `${Math.floor(a / 60)}:${String(a % 60).padStart(2, "0")}`;
+}
+
+/** A clock face whose hand sweeps as time runs down (fraction 1 → 0). */
+function ClockIcon({ color, fraction }: { color: string; fraction: number }) {
+  const f = Math.max(0, Math.min(1, fraction));
+  const angle = (1 - f) * 2 * Math.PI; // 0 at top, clockwise as time passes
+  const hx = 12 + 5 * Math.sin(angle);
+  const hy = 12 - 5 * Math.cos(angle);
+  return (
+    <svg
+      width="30"
+      height="30"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+    >
+      <circle cx="12" cy="12" r="9" />
+      <line x1="12" y1="12" x2={hx.toFixed(2)} y2={hy.toFixed(2)} />
+    </svg>
+  );
+}
+
+function Timer({ minutes }: { minutes: number }) {
+  const total = minutes * 60;
+  const [left, setLeft] = useState(total);
+  const [running, setRunning] = useState(false);
+
+  useEffect(() => {
+    if (!running) return;
+    const id = setInterval(() => setLeft((v) => v - 1), 1000);
+    return () => clearInterval(id);
+  }, [running]);
+
+  const over = left <= 0;
+  const low = left > 0 && left <= 120; // last 2 minutes
+  const started = running || left !== total;
+  const color = over ? "var(--bad)" : low ? "var(--warn)" : "var(--ink)";
+  const compact = "text-sm !px-3 !py-1.5";
+
+  return (
+    <div
+      className="no-print fixed bottom-4 right-4 z-40 card shadow-lg flex items-center gap-3 pl-3 pr-3 py-2"
+      style={{ borderColor: over ? "var(--bad)" : low ? "var(--warn)" : "var(--line)" }}
+    >
+      <ClockIcon color={color} fraction={left / total} />
+      <div className="flex flex-col leading-none">
+        <span className="text-2xl font-extrabold tabular-nums" style={{ color }}>
+          {over && "+"}
+          {fmtClock(left)}
+        </span>
+        <span className="muted text-[11px] mt-1">
+          {over ? `over ${minutes} min` : `of ${minutes} min`}
+        </span>
+      </div>
+      <div className="flex flex-col gap-1.5">
+        <button className={`btn ${compact}`} onClick={() => setRunning((r) => !r)}>
+          {running ? "Pause" : started ? "Resume" : "Start"}
+        </button>
+        <button
+          className={`btn ${compact}`}
+          onClick={() => {
+            setRunning(false);
+            setLeft(total);
+          }}
+          disabled={!started}
+        >
+          Reset
         </button>
       </div>
     </div>

@@ -556,6 +556,16 @@ function Feedback({
         {cur.word.example_complex && (
           <div className="muted italic">“{cur.word.example_complex}”</div>
         )}
+        {cur.word.collocations.length > 0 && (
+          <div className="pt-1">
+            <span className="muted">Collocations: </span>
+            <span className="flex flex-wrap gap-1.5 mt-1">
+              {cur.word.collocations.map((c) => (
+                <span key={c} className="chip">{c}</span>
+              ))}
+            </span>
+          </div>
+        )}
         {cur.word.false_friend_note && (
           <div style={{ color: "var(--warn)" }}>⚠ {cur.word.false_friend_note}</div>
         )}
