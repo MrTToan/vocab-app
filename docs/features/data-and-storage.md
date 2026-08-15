@@ -1,12 +1,16 @@
 # Data & storage
 
 ## Where everything lives
-Lexi is a **single-user, local** app. All your data sits in one SQLite file: **`.data/lexi.db`**, with
-three tables:
+Lexi is a **single-user, local** app. All your data sits in one SQLite file: **`.data/lexi.db`**. The
+vocabulary module uses three tables:
 
 - **words** — your vocabulary and each word's progress (stage, times seen, recent results).
 - **attempts** — one row per graded answer, powering [Progress tracking](progress-tracking.md).
 - **questions** — the [pre-generated + harvested question bank](question-bank.md).
+
+The [writing module](writing-feedback.md) adds its own tables to the **same** file: **writing_prompts**
+(questions + Task 1 `chart_data`/image), **writing_submissions** (bands + coaching), **writing_corrections**
+(inline fixes), and **writing_discussions** (your saved per-card "Discuss with the AI" threads).
 
 Your API keys live separately in **`.env.local`**. Neither file is in version control — they're yours
 and local.

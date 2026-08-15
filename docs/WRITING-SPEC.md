@@ -7,6 +7,14 @@ For how it behaves today see `docs/features/writing-feedback.md`; for architectu
 - **Ingest is ONLINE, not offline.** §4's `.docx`/`.pdf` inbox was replaced by **two Google Docs** (links in
   `content/writing/sources.json`) read via the Google Drive connector. Dedup is by **question number**
   (`Question N` → id `task{1,2}-q<N>`), not a content hash — the user numbers and only appends.
+- **Self-serve in-app ingest (primary path now).** `/writing/add` lets the user add a question directly:
+  Task 2 = paste text; Task 1 = paste text + chart image. The chart is read **once** by the vision LLM via
+  the user's provider chain — a new `extract-chart` task in `lib/providers.ts` (image support added) +
+  `lib/writing/extract.ts`, `POST /api/writing/extract-chart` — and the user confirms/edits the numbers
+  before `POST /api/writing/prompts` saves them. The image is stored **inline as a data URL** in
+  `image_path` (no filesystem writes → portable for the multi-user deploy). This relaxes the original
+  "vision only in the Claude skill" note (§ line 44): ingest vision may now run in-app, but the core
+  invariant is unchanged — **scoring/practice stays text-only**, reading the stored `chart_data`.
 - **Correction spans** are located by exact-substring match in `grade.ts` (LLM returns the verbatim
   `original`; we compute start/end) — more robust than model-provided offsets.
 - **Added beyond the plan:** a **question-picker workspace** with per-question past scores + "view last

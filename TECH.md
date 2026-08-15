@@ -28,12 +28,21 @@ Swapping backends is env-only; the app never touches storage directly.
 
 ## 3. LLM strategy (`lib/providers.ts`, `lib/llm.ts`)
 
-Three tasks — **enrich**, **generate** (fresh cloze/translate/scenario), **score** — each resolved to a provider.
+Six tasks — **enrich**, **generate** (fresh cloze/translate/scenario), **score**, **score-writing**,
+**extract-chart** (vision — read a Task 1 chart into `chart_data` at ingest), **discuss-writing**
+(follow-up Q&A on a feedback card) — each resolved to a provider. Vision calls pass an optional `images`
+(base64) alongside the text prompt; supported on both the Anthropic and OpenAI-compatible paths.
 
 **Modes (env):**
 - **default** — Anthropic. Haiku 4.5 for enrich/generate, Sonnet 5 for score. Needs `ANTHROPIC_API_KEY`.
 - **custom** (`LLM_MODE=custom`) — one provider you choose: any OpenAI-compatible endpoint (`LLM_PROVIDER=openai` + `LLM_BASE_URL` + `LLM_API_KEY` + `LLM_MODEL`) or Anthropic.
-- **chain** (numbered `LLM_1_*`, `LLM_2_*`, …) — an **ordered fallback chain**. Uses #1; after **3 consecutive failures** permanently drops to #2, then #3… (recovers on restart). One global chain, strict, in-memory `activeIndex`/`consecutiveFailures`. Surfaced on Home + `/api/config`.
+- **chain** (numbered `LLM_1_*`, `LLM_2_*`, …) — an **ordered fallback chain**. `callStructured` starts at the
+  active provider and **falls through the rest of the chain within the same request**, so a transient blip
+  on #1 no longer fails a single call; the **3-consecutive-failure** counter still advances the *default*
+  start (#1→#2→#3…, recovers on restart) so a persistently-dead provider isn't retried first every time.
+  `callVisionStructured` (used by `extract-chart`) instead always walks from the top so a vision read
+  prefers the vision-capable provider even if `activeIndex` advanced for text. One global chain, strict,
+  in-memory `activeIndex`/`consecutiveFailures`. Surfaced on Home + `/api/config`.
 
 **Structured output:** Anthropic uses `output_config.format` (json_schema); OpenAI-compatible tries strict `response_format: json_schema`, falling back to `json_object` with the schema embedded in the prompt. Result is always `JSON.parse`d then Zod-validated.
 
@@ -62,16 +71,28 @@ Additive second module beside vocab; reuses storage + the LLM chain, adds its ow
   `guidance.ts` (loads `content/writing/guidance/*.md`), `score.ts` (`callStructured("score-writing")`, maxTokens 4500).
 - **Storage (`lib/writing/store.ts`)** — its own small libSQL layer over the **same** DB file. Tables:
   `writing_prompts` (`chart_data` JSON + `image_path` for Task 1), `writing_submissions` (four bands +
-  `priorities` JSON), `writing_corrections`. Kept separate so the vocab `Store` + Sheet backend are
+  `priorities` JSON), `writing_corrections`, and **`writing_discussions`** (per-feedback-card Q&A:
+  `submission_id, card_key, role, content, seq`). Kept separate so the vocab `Store` + Sheet backend are
   untouched. Schema evolves via `ALTER TABLE … ADD COLUMN` in a try/catch at connect (e.g. `priorities`).
 - **Scoring:** one-shot structured output = overall band + 4 criteria + corrections (`original`,
   `suggestion`, `error_type`, `criterion`, `explanation`) + strengths + `general_feedback` + **`priorities`**
   (2–3 higher-order coaching items: criterion/title/why/how/example). Bands normalized + correction spans
   located in `grade.ts`. Task 1 injects the prompt's `chart_data` as ground truth.
-- **Ingest = online (Google Docs), manual, on-request** (`/ingest-writing-prompts` skill): two doc links
-  in `content/writing/sources.json`; text via the `mcp__claude_ai_Google_Drive__*` connector, chart images
-  via DOCX/PDF export. **Task 1 charts read once → `chart_data`** (Claude's vision; **no runtime vision
-  provider**). Dedup by question number → id `task{1,2}-q<N>`; re-runs skip indexed numbers.
+- **Discuss feedback (`lib/writing/discuss.ts`, `/api/writing/discuss`):** every feedback card (criterion,
+  coaching point, inline correction) has a **saved, multi-turn** "Discuss with the AI" thread. `card_key`
+  (`criterion:<c>` | `priority:<i>` | `correction:<i>`) is resolved to context **server-side** from the
+  stored submission; the thread history + prompt + essay are replayed to the `discuss-writing` task. UI:
+  `components/writing/CardDiscussion.tsx` (inline + expand-to-modal).
+- **Ingest — two paths.** (a) **In-app self-serve** (`/writing/add` → `POST /api/writing/prompts`): paste
+  text (Task 2) or text + chart image (Task 1); the chart is read **once** via `extract-chart`
+  (`callVisionStructured`) into `chart_data`, shown for confirm/edit, image stored inline as a data URL.
+  (b) **Bulk from Google Docs**, manual (`/ingest-writing-prompts` skill): two doc links in
+  `content/writing/sources.json`, text via the `mcp__claude_ai_Google_Drive__*` connector, charts via
+  DOCX/PDF export, dedup by question number → id `task{1,2}-q<N>`. **Vision runs only at ingest** (either
+  path) → `chart_data`; **scoring/practice stays text-only** (no vision at score time).
+- **Practice UX niceties:** the essay box disables browser spellcheck/autocorrect (exam-like); the
+  exam-pacing **timer is draggable** (position saved in `localStorage`); annotated-essay **pins lock**
+  (hover no longer overrides a pinned correction card).
   `scripts/add-writing-prompt.mjs` upserts.
 - **UI** (`components/writing/`) — `WritingPractice.tsx` (question-picker workspace + write/result/review),
   `Feedback.tsx` (Google-Docs side panel: annotated essay ↔ compact correction cards, coaching section,
@@ -122,5 +143,5 @@ vocab-app/
 - **Before public deploy:** add a shared password/auth (not built yet).
 
 ## 8. Known gaps / next
-- No auth; no retry/backoff on LLM calls (a burst can trip a provider's rate limit); no `engine.ts`
-  unit tests yet; progress writes per-answer (not batched).
+- No auth; LLM calls fall through the chain on failure but have no *backoff* (a sustained burst can still
+  trip a provider's rate limit); no `engine.ts` unit tests yet; progress writes per-answer (not batched).
