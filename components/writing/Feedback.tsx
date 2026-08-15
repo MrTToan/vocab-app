@@ -39,7 +39,9 @@ export default function Feedback({ submission }: { submission: WritingSubmission
   // hover state (transient) vs pinned (click). Effective focus = hover ?? pinned.
   const [hover, setHover] = useState<number | null>(null);
   const [pinned, setPinned] = useState<number | null>(null);
-  const focused = hover ?? pinned;
+  // A pin LOCKS the focus: once pinned, moving the cursor (hover) must not change
+  // or collapse it — only clicking to unpin (or pin another) does. So pin wins.
+  const focused = pinned ?? hover;
 
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -97,6 +99,7 @@ export default function Feedback({ submission }: { submission: WritingSubmission
   }
 
   const focusFromEssay = (di: number) => {
+    if (pinned !== null) return; // locked while pinned — don't hover-jump away
     setHover(di);
     cardRefs.current[di]?.scrollIntoView({ block: "nearest", behavior: "smooth" });
   };
@@ -137,6 +140,7 @@ export default function Feedback({ submission }: { submission: WritingSubmission
               busy={busyCard === `criterion:${c}`}
               onSend={(t) => sendDiscuss(`criterion:${c}`, t)}
               accent={CRITERION_COLOR[c]}
+              title={`${CRITERION_LABEL[c]} · band ${s.bands[c].band.toFixed(1)}`}
             />
           </div>
         ))}
@@ -175,7 +179,9 @@ export default function Feedback({ submission }: { submission: WritingSubmission
                     c={o.c}
                     active={focused === di}
                     pinned={pinned === di}
-                    onEnter={() => setHover(di)}
+                    onEnter={() => {
+                      if (pinned === null) setHover(di);
+                    }}
                     onLeave={() => setHover(null)}
                     onClick={() => setPinned((p) => (p === di ? null : di))}
                     messages={threads[`correction:${o.i}`] ?? []}
@@ -256,6 +262,7 @@ export default function Feedback({ submission }: { submission: WritingSubmission
                   busy={busyCard === `priority:${i}`}
                   onSend={(t) => sendDiscuss(`priority:${i}`, t)}
                   accent={CRITERION_COLOR[p.criterion]}
+                  title={p.title}
                 />
               </div>
             ))}
@@ -384,7 +391,13 @@ const CommentCard = ({
         {pinned && <span className="text-[10px] muted ml-2">📌 pinned</span>}
         {c.start == null && <span className="text-[10px] muted ml-2">not in text</span>}
         <p className="muted mt-1.5 text-[13px] leading-snug">{c.explanation}</p>
-        <CardDiscussion messages={messages} busy={busy} onSend={onSend} accent={color} />
+        <CardDiscussion
+          messages={messages}
+          busy={busy}
+          onSend={onSend}
+          accent={color}
+          title={`"${c.original}" → "${c.suggestion}"`}
+        />
       </div>
     </div>
   );
