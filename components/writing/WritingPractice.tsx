@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { jsonFetch } from "@/lib/ui";
 import { MIN_WORDS, REC_MINUTES, type WritingPrompt, type WritingSubmission, type WritingTask } from "@/lib/writing/types";
 import { countWords } from "@/lib/writing/grade";
@@ -352,6 +352,8 @@ function ClockIcon({ color, fraction }: { color: string; fraction: number }) {
   );
 }
 
+const TIMER_POS_KEY = "lexi-writing-timer-pos";
+
 function Timer({ minutes }: { minutes: number }) {
   const total = minutes * 60;
   const [left, setLeft] = useState(total);
@@ -363,6 +365,73 @@ function Timer({ minutes }: { minutes: number }) {
     return () => clearInterval(id);
   }, [running]);
 
+  // Draggable position. null = default bottom-right; otherwise a saved {left, top}.
+  const boxRef = useRef<HTMLDivElement | null>(null);
+  const dragOffset = useRef<{ dx: number; dy: number } | null>(null);
+  const [pos, setPos] = useState<{ left: number; top: number } | null>(null);
+
+  useEffect(() => {
+    try {
+      const s = localStorage.getItem(TIMER_POS_KEY);
+      if (s) setPos(JSON.parse(s));
+    } catch {
+      /* ignore */
+    }
+  }, []);
+
+  // Keep it on-screen if the window is resized.
+  useEffect(() => {
+    if (!pos) return;
+    const clamp = () => {
+      const el = boxRef.current;
+      if (!el) return;
+      const w = el.offsetWidth, h = el.offsetHeight;
+      setPos((p) =>
+        p
+          ? {
+              left: Math.max(4, Math.min(p.left, window.innerWidth - w - 4)),
+              top: Math.max(4, Math.min(p.top, window.innerHeight - h - 4)),
+            }
+          : p,
+      );
+    };
+    window.addEventListener("resize", clamp);
+    return () => window.removeEventListener("resize", clamp);
+  }, [pos]);
+
+  function onGripDown(e: React.PointerEvent) {
+    const el = boxRef.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    dragOffset.current = { dx: e.clientX - rect.left, dy: e.clientY - rect.top };
+    setPos({ left: rect.left, top: rect.top }); // switch from bottom-right to explicit coords
+    e.currentTarget.setPointerCapture?.(e.pointerId);
+    e.preventDefault();
+  }
+  function onGripMove(e: React.PointerEvent) {
+    const d = dragOffset.current;
+    const el = boxRef.current;
+    if (!d || !el) return;
+    const w = el.offsetWidth, h = el.offsetHeight;
+    const nextLeft = Math.max(4, Math.min(e.clientX - d.dx, window.innerWidth - w - 4));
+    const nextTop = Math.max(4, Math.min(e.clientY - d.dy, window.innerHeight - h - 4));
+    setPos({ left: nextLeft, top: nextTop });
+  }
+  function onGripUp() {
+    if (!dragOffset.current) return;
+    dragOffset.current = null;
+    setPos((p) => {
+      if (p) {
+        try {
+          localStorage.setItem(TIMER_POS_KEY, JSON.stringify(p));
+        } catch {
+          /* ignore */
+        }
+      }
+      return p;
+    });
+  }
+
   const over = left <= 0;
   const low = left > 0 && left <= 120; // last 2 minutes
   const started = running || left !== total;
@@ -371,9 +440,24 @@ function Timer({ minutes }: { minutes: number }) {
 
   return (
     <div
-      className="no-print fixed bottom-4 right-4 z-40 card shadow-lg flex items-center gap-3 pl-3 pr-3 py-2"
-      style={{ borderColor: over ? "var(--bad)" : low ? "var(--warn)" : "var(--line)" }}
+      ref={boxRef}
+      className="no-print fixed z-40 card shadow-lg flex items-center gap-2 pr-3 py-2"
+      style={{
+        ...(pos ? { left: pos.left, top: pos.top } : { right: 16, bottom: 16 }),
+        borderColor: over ? "var(--bad)" : low ? "var(--warn)" : "var(--line)",
+      }}
     >
+      <div
+        onPointerDown={onGripDown}
+        onPointerMove={onGripMove}
+        onPointerUp={onGripUp}
+        className="self-stretch flex items-center px-1.5 cursor-move select-none muted"
+        style={{ touchAction: "none" }}
+        title="Drag to move the timer"
+        aria-label="Drag to move the timer"
+      >
+        ⠿
+      </div>
       <ClockIcon color={color} fraction={left / total} />
       <div className="flex flex-col leading-none">
         <span className="text-2xl font-extrabold tabular-nums" style={{ color }}>
