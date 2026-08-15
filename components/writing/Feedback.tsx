@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   CRITERIA,
   CRITERION_LABEL,
@@ -8,8 +8,10 @@ import {
   type Criterion,
   type WritingCorrection,
   type WritingSubmission,
+  type WritingDiscussionMessage,
 } from "@/lib/writing/types";
 import { aggregateErrors } from "@/lib/writing/grade";
+import CardDiscussion from "./CardDiscussion";
 
 export function bandColor(b: number): string {
   return b >= 7 ? "var(--good)" : b >= 5.5 ? "var(--warn)" : "var(--bad)";
@@ -40,6 +42,59 @@ export default function Feedback({ submission }: { submission: WritingSubmission
   const focused = hover ?? pinned;
 
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  // Per-card discussion threads (keyed by card_key). Loaded once for the submission.
+  const [threads, setThreads] = useState<Record<string, WritingDiscussionMessage[]>>({});
+  const [busyCard, setBusyCard] = useState<string | null>(null);
+
+  useEffect(() => {
+    let alive = true;
+    fetch(`/api/writing/discuss?submissionId=${encodeURIComponent(s.id)}`)
+      .then((r) => r.json())
+      .then((d) => {
+        if (!alive) return;
+        const map: Record<string, WritingDiscussionMessage[]> = {};
+        for (const m of (d.messages ?? []) as WritingDiscussionMessage[]) (map[m.card_key] ??= []).push(m);
+        setThreads(map);
+      })
+      .catch(() => {});
+    return () => {
+      alive = false;
+    };
+  }, [s.id]);
+
+  async function sendDiscuss(cardKey: string, text: string) {
+    setBusyCard(cardKey);
+    try {
+      const res = await fetch("/api/writing/discuss", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ submissionId: s.id, cardKey, message: text }),
+      });
+      const d = await res.json();
+      if (!res.ok) throw new Error(d.error || "Failed");
+      setThreads((t) => ({ ...t, [cardKey]: d.messages }));
+    } catch (e: any) {
+      // Surface the failure inline as a synthetic assistant note (not persisted).
+      setThreads((t) => ({
+        ...t,
+        [cardKey]: [
+          ...(t[cardKey] ?? []),
+          {
+            id: `err-${Date.now()}`,
+            submission_id: s.id,
+            card_key: cardKey,
+            role: "assistant",
+            content: `⚠️ ${e.message}. Try again in a moment.`,
+            seq: (t[cardKey]?.length ?? 0),
+            created_at: Date.now(),
+          },
+        ],
+      }));
+    } finally {
+      setBusyCard(null);
+    }
+  }
 
   const focusFromEssay = (di: number) => {
     setHover(di);
@@ -77,6 +132,12 @@ export default function Feedback({ submission }: { submission: WritingSubmission
               </div>
             </div>
             <p className="muted text-sm mt-1">{s.bands[c].comment}</p>
+            <CardDiscussion
+              messages={threads[`criterion:${c}`] ?? []}
+              busy={busyCard === `criterion:${c}`}
+              onSend={(t) => sendDiscuss(`criterion:${c}`, t)}
+              accent={CRITERION_COLOR[c]}
+            />
           </div>
         ))}
       </div>
@@ -117,6 +178,9 @@ export default function Feedback({ submission }: { submission: WritingSubmission
                     onEnter={() => setHover(di)}
                     onLeave={() => setHover(null)}
                     onClick={() => setPinned((p) => (p === di ? null : di))}
+                    messages={threads[`correction:${o.i}`] ?? []}
+                    busy={busyCard === `correction:${o.i}`}
+                    onSend={(t) => sendDiscuss(`correction:${o.i}`, t)}
                   />
                 ))
               )}
@@ -187,6 +251,12 @@ export default function Feedback({ submission }: { submission: WritingSubmission
                     </div>
                   )}
                 </div>
+                <CardDiscussion
+                  messages={threads[`priority:${i}`] ?? []}
+                  busy={busyCard === `priority:${i}`}
+                  onSend={(t) => sendDiscuss(`priority:${i}`, t)}
+                  accent={CRITERION_COLOR[p.criterion]}
+                />
               </div>
             ))}
           </div>
@@ -264,6 +334,9 @@ const CommentCard = ({
   onEnter,
   onLeave,
   onClick,
+  messages,
+  busy,
+  onSend,
 }: {
   ref: (el: HTMLDivElement | null) => void;
   n: number;
@@ -273,6 +346,9 @@ const CommentCard = ({
   onEnter: () => void;
   onLeave: () => void;
   onClick: () => void;
+  messages: WritingDiscussionMessage[];
+  busy: boolean;
+  onSend: (text: string) => void | Promise<void>;
 }) => {
   const color = CRITERION_COLOR[c.criterion];
   // Compact by default (one line: number + fix). Expands only when focused, so
@@ -308,6 +384,7 @@ const CommentCard = ({
         {pinned && <span className="text-[10px] muted ml-2">📌 pinned</span>}
         {c.start == null && <span className="text-[10px] muted ml-2">not in text</span>}
         <p className="muted mt-1.5 text-[13px] leading-snug">{c.explanation}</p>
+        <CardDiscussion messages={messages} busy={busy} onSend={onSend} accent={color} />
       </div>
     </div>
   );

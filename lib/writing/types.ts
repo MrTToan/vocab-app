@@ -130,6 +130,17 @@ export interface WritingSubmission {
   created_at: number;
 }
 
+/** One message in a per-feedback-card discussion thread (student ⇄ AI tutor). */
+export interface WritingDiscussionMessage {
+  id: string;
+  submission_id: string;
+  card_key: string; // which feedback card: "criterion:<c>" | "priority:<i>" | "correction:<i>"
+  role: "user" | "assistant";
+  content: string;
+  seq: number; // order within the (submission, card) thread
+  created_at: number;
+}
+
 /* ───────────────────────── LLM output schema ─────────────────────── */
 // Kept lenient (bands as numbers, error_type/criterion as free strings) so a
 // slightly-off model response is normalized in grade.ts rather than rejected.

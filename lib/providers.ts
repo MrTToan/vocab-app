@@ -23,7 +23,7 @@ import path from "path";
  * default Anthropic (ANTHROPIC_API_KEY, Haiku for enrich/generate, Sonnet for score).
  */
 
-export type Task = "enrich" | "generate" | "score" | "score-writing" | "extract-chart";
+export type Task = "enrich" | "generate" | "score" | "score-writing" | "extract-chart" | "discuss-writing";
 export type ProviderName = "anthropic" | "openai";
 
 /** An image passed alongside the text prompt (vision). `data` is raw base64, no data: prefix. */
@@ -47,6 +47,7 @@ const DEFAULT_ANTHROPIC_MODEL: Record<Task, string> = {
   score: "claude-sonnet-5",
   "score-writing": "claude-sonnet-5",
   "extract-chart": "claude-sonnet-5", // vision — read a Task 1 chart into structured data
+  "discuss-writing": "claude-sonnet-5", // follow-up Q&A about a piece of feedback
 };
 
 function env(...names: string[]): string | undefined {
@@ -130,7 +131,7 @@ export function hasProvider(task: Task): boolean {
   return resolveChain(task).length > 0;
 }
 export function hasAnyLLM(): boolean {
-  return (["enrich", "generate", "score", "score-writing", "extract-chart"] as Task[]).some(hasProvider);
+  return (["enrich", "generate", "score", "score-writing", "extract-chart", "discuss-writing"] as Task[]).some(hasProvider);
 }
 export function mode(): "default" | "custom" | "chain" {
   if (numberedChain("enrich").length) return "chain";
@@ -173,30 +174,44 @@ export async function callStructured(
   const chain = resolveChain(task);
   if (!chain.length) throw new Error(`No LLM configured for "${task}"`);
 
-  const idx = Math.min(activeIndex, chain.length - 1);
-  const cfg = chain[idx];
-  try {
-    const result =
-      cfg.provider === "anthropic"
-        ? await anthropicStructured(task, cfg, opts)
-        : await openaiStructured(task, cfg, opts);
-    consecutiveFailures = 0; // success on the active provider resets the counter
-    return result;
-  } catch (err) {
-    consecutiveFailures++;
-    // strict: this request still fails; after 3 in a row, permanently drop down
-    if (consecutiveFailures >= FAIL_THRESHOLD && activeIndex < chain.length - 1) {
-      activeIndex++;
-      consecutiveFailures = 0;
-      const next = chain[activeIndex];
-      console.warn(
-        `[llm] provider #${idx + 1} (${cfg.provider}/${cfg.model}) failed ` +
-          `${FAIL_THRESHOLD}x in a row — falling back to #${activeIndex + 1} ` +
-          `(${next.provider}/${next.model}). Reason: ${errMsg(err)}`,
-      );
+  const start = Math.min(activeIndex, chain.length - 1);
+  let lastErr: unknown;
+  // Try the active provider, then fall THROUGH the rest of the chain in the SAME
+  // request. A transient blip on #1 (e.g. "fetch failed") no longer fails the user's
+  // one call — it transparently retries #2/#3. The 3-strike counter still advances
+  // the *default* starting provider so we don't keep hitting a persistently-dead one.
+  for (let i = start; i < chain.length; i++) {
+    const cfg = chain[i];
+    try {
+      const result =
+        cfg.provider === "anthropic"
+          ? await anthropicStructured(task, cfg, opts)
+          : await openaiStructured(task, cfg, opts);
+      if (i === start) consecutiveFailures = 0; // active provider healthy again
+      return result;
+    } catch (err) {
+      lastErr = err;
+      if (i === start) {
+        consecutiveFailures++;
+        if (consecutiveFailures >= FAIL_THRESHOLD && activeIndex < chain.length - 1) {
+          activeIndex++;
+          consecutiveFailures = 0;
+          const next = chain[activeIndex];
+          console.warn(
+            `[llm] provider #${i + 1} (${cfg.provider}/${cfg.model}) failed ` +
+              `${FAIL_THRESHOLD}x in a row — default now #${activeIndex + 1} ` +
+              `(${next.provider}/${next.model}). Reason: ${errMsg(err)}`,
+          );
+        }
+      }
+      if (i < chain.length - 1) {
+        console.warn(
+          `[llm] ${cfg.provider}/${cfg.model} failed for "${task}" (${errMsg(err)}) — trying next in chain`,
+        );
+      }
     }
-    throw err;
   }
+  throw lastErr instanceof Error ? lastErr : new Error(String(lastErr));
 }
 
 function errMsg(e: unknown): string {

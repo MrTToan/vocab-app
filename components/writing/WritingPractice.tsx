@@ -301,6 +301,12 @@ function PromptWriter({
         value={text}
         onChange={(e) => setText(e.target.value)}
         disabled={submitting}
+        // No browser spell-check/autocorrect while practising — exam-like, so
+        // catching your own spelling is part of the test, not the browser's job.
+        spellCheck={false}
+        autoCorrect="off"
+        autoCapitalize="off"
+        autoComplete="off"
       />
 
       <div className="flex items-center justify-between gap-3">
