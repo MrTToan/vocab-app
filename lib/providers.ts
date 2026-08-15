@@ -23,8 +23,14 @@ import path from "path";
  * default Anthropic (ANTHROPIC_API_KEY, Haiku for enrich/generate, Sonnet for score).
  */
 
-export type Task = "enrich" | "generate" | "score" | "score-writing";
+export type Task = "enrich" | "generate" | "score" | "score-writing" | "extract-chart";
 export type ProviderName = "anthropic" | "openai";
+
+/** An image passed alongside the text prompt (vision). `data` is raw base64, no data: prefix. */
+export interface ImagePart {
+  mediaType: string; // e.g. "image/png", "image/jpeg"
+  data: string; // base64, no "data:...;base64," prefix
+}
 
 interface TaskConfig {
   provider: ProviderName;
@@ -40,6 +46,7 @@ const DEFAULT_ANTHROPIC_MODEL: Record<Task, string> = {
   generate: "claude-haiku-4-5",
   score: "claude-sonnet-5",
   "score-writing": "claude-sonnet-5",
+  "extract-chart": "claude-sonnet-5", // vision — read a Task 1 chart into structured data
 };
 
 function env(...names: string[]): string | undefined {
@@ -123,7 +130,7 @@ export function hasProvider(task: Task): boolean {
   return resolveChain(task).length > 0;
 }
 export function hasAnyLLM(): boolean {
-  return (["enrich", "generate", "score", "score-writing"] as Task[]).some(hasProvider);
+  return (["enrich", "generate", "score", "score-writing", "extract-chart"] as Task[]).some(hasProvider);
 }
 export function mode(): "default" | "custom" | "chain" {
   if (numberedChain("enrich").length) return "chain";
@@ -161,7 +168,7 @@ export function taskSummary(task: Task): { provider: ProviderName; model: string
 
 export async function callStructured(
   task: Task,
-  opts: { system: string; user: string; schema: unknown; maxTokens: number },
+  opts: { system: string; user: string; schema: unknown; maxTokens: number; images?: ImagePart[] },
 ): Promise<unknown> {
   const chain = resolveChain(task);
   if (!chain.length) throw new Error(`No LLM configured for "${task}"`);
@@ -196,6 +203,34 @@ function errMsg(e: unknown): string {
   return e instanceof Error ? e.message : String(e);
 }
 
+/**
+ * Like callStructured, but for a ONE-SHOT vision read: walk the whole chain in
+ * order and return the first provider that succeeds, skipping any that error
+ * (e.g. a text-only model that can't accept an image, or a provider having a
+ * transient outage). Does NOT touch the global active-provider state, so a blip
+ * here never poisons the text chain used for scoring. Meant for occasional,
+ * manual ingest — trying an extra provider is fine.
+ */
+export async function callVisionStructured(
+  task: Task,
+  opts: { system: string; user: string; schema: unknown; maxTokens: number; images?: ImagePart[] },
+): Promise<unknown> {
+  const chain = resolveChain(task);
+  if (!chain.length) throw new Error(`No LLM configured for "${task}"`);
+  let lastErr: unknown;
+  for (const cfg of chain) {
+    try {
+      return cfg.provider === "anthropic"
+        ? await anthropicStructured(task, cfg, opts)
+        : await openaiStructured(task, cfg, opts);
+    } catch (err) {
+      lastErr = err;
+      console.warn(`[llm] vision read on ${cfg.provider}/${cfg.model} failed: ${errMsg(err)} — trying next`);
+    }
+  }
+  throw lastErr instanceof Error ? lastErr : new Error(String(lastErr));
+}
+
 /* ── Anthropic ── */
 
 const anthropicClients = new Map<string, Anthropic>();
@@ -211,14 +246,21 @@ function anthropicClient(apiKey: string): Anthropic {
 async function anthropicStructured(
   task: Task,
   cfg: TaskConfig,
-  { system, user, schema, maxTokens }: { system: string; user: string; schema: unknown; maxTokens: number },
+  { system, user, schema, maxTokens, images }: { system: string; user: string; schema: unknown; maxTokens: number; images?: ImagePart[] },
 ): Promise<unknown> {
+  const content: unknown[] = [{ type: "text", text: user }];
+  for (const img of images ?? []) {
+    content.push({
+      type: "image",
+      source: { type: "base64", media_type: img.mediaType, data: img.data },
+    });
+  }
   const resp = await anthropicClient(cfg.apiKey).messages.create({
     model: cfg.model,
     max_tokens: maxTokens,
     system: [{ type: "text", text: system, cache_control: { type: "ephemeral" } }],
     output_config: { format: { type: "json_schema", schema } },
-    messages: [{ role: "user", content: user }],
+    messages: [{ role: "user", content }],
   } as any);
   logUsage(task, "anthropic", cfg.model, {
     input: (resp as any).usage?.input_tokens,
@@ -236,14 +278,24 @@ async function anthropicStructured(
 async function openaiStructured(
   task: Task,
   cfg: TaskConfig,
-  { system, user, schema, maxTokens }: { system: string; user: string; schema: unknown; maxTokens: number },
+  { system, user, schema, maxTokens, images }: { system: string; user: string; schema: unknown; maxTokens: number; images?: ImagePart[] },
 ): Promise<unknown> {
+  // With images, the user turn becomes multimodal content parts; otherwise a plain string.
+  const userContent = images?.length
+    ? [
+        { type: "text", text: user },
+        ...images.map((img) => ({
+          type: "image_url",
+          image_url: { url: `data:${img.mediaType};base64,${img.data}` },
+        })),
+      ]
+    : user;
   const messages = [
     {
       role: "system",
       content: `${system}\n\nReturn ONLY a single JSON object (no markdown, no prose) matching this JSON schema:\n${JSON.stringify(schema)}`,
     },
-    { role: "user", content: user },
+    { role: "user", content: userContent },
   ];
 
   let res = await openaiPost(cfg, messages, maxTokens, {
