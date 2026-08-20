@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { getStore } from "@/lib/store";
-import { exerciseForStage, pickNext } from "@/lib/engine";
+import { exerciseForStage, pickNext, scopeToCollection } from "@/lib/engine";
 import { generateExercise, hasProvider } from "@/lib/llm";
 import { toCloze } from "@/lib/cloze";
 import {
@@ -25,14 +25,26 @@ import {
  * example; LLM-scored exercises fall back to type-from-definition.
  */
 export async function POST(req: Request) {
-  const { seenIds, explore } = (await req.json()) as {
+  const { seenIds, explore, collectionId } = (await req.json()) as {
     seenIds?: string[];
     explore?: boolean;
+    collectionId?: string;
   };
   const store = getStore();
-  const words = await store.all();
+  let words = await store.all();
   if (words.length === 0) {
     return NextResponse.json({ word: null });
+  }
+
+  // Scope to a chosen collection, if any — the stage ladder / picker then runs
+  // over just its members. `reason: "empty-collection"` lets the client show a
+  // distinct "this collection has no words" message vs. an empty library.
+  if (collectionId) {
+    const memberIds = new Set(await store.wordIdsInCollection(collectionId));
+    words = scopeToCollection(words, memberIds);
+    if (words.length === 0) {
+      return NextResponse.json({ word: null, reason: "empty-collection" });
+    }
   }
 
   const word = pickNext(words, Date.now(), new Set(seenIds ?? []), Math.random, {

@@ -20,11 +20,13 @@ Rejected Python/FastAPI (two processes). Next.js full-stack is the least moving 
 
 One `Store` interface, selected by env:
 
-- **`SqliteStore` (default)** — libSQL. `url = DATABASE_URL` or `file:.data/lexi.db`; `DATABASE_AUTH_TOKEN` for Turso. Tables: `words` (one row/word, arrays stored as JSON text), `attempts` (`ts, word_id, exercise_type, result`), and `questions` (the pre-generated + self-harvested practice bank). Queries the DB per request (no stale in-memory cache — correct on serverless).
-- **`SheetStore` (optional)** — Google Sheet via service account (`google-spreadsheet`). Used when `SHEET_ID` + creds are set. `Words` + `Attempts` + `Questions` tabs, with an in-memory cache.
+- **`SqliteStore` (default)** — libSQL. `url = DATABASE_URL` or `file:.data/lexi.db`; `DATABASE_AUTH_TOKEN` for Turso. Tables: `words` (one row/word, arrays stored as JSON text), `attempts` (`ts, word_id, exercise_type, result`), `questions` (the pre-generated + self-harvested practice bank), and the collections pair `collections` + `word_collections` (many-to-many word grouping; see below). Queries the DB per request (no stale in-memory cache — correct on serverless).
+- **`SheetStore` (optional)** — Google Sheet via service account (`google-spreadsheet`). Used when `SHEET_ID` + creds are set. `Words` + `Attempts` + `Questions` + `Collections` + `WordCollections` tabs, with an in-memory cache.
 
-Both implement `all / get / findByWord / add / addMany / update / remove / logAttempt / attempts` plus the question-bank methods `addQuestions / pickQuestion / questionCount / questionWordIds`.
+Both implement `all / get / findByWord / add / addMany / update / remove / logAttempt / attempts`, the question-bank methods `addQuestions / pickQuestion / questionCount / questionWordIds`, and the collections methods `collections / createCollection / updateCollection / removeCollection / wordIdsInCollection / memberships / setCollectionMembers / setWordCollections`.
 Swapping backends is env-only; the app never touches storage directly.
+
+**Collections** (`collections`, `word_collections`) are named, curated word groups — a study *lens*, additive over the existing tables. The practice route filters `store.all()` through the pure `scopeToCollection(words, memberIds)` (in `lib/engine.ts`) before `pickNext`, so the whole stage ladder runs over just the chosen collection; a word's `stage` stays global. UI: `/collections` (manage), a switcher on `/practice` (remembered in `localStorage`), assignment from Library + Add. APIs under `/api/collections`. Feature doc: `docs/features/collections.md`. **Multi-tenant note:** both tables need per-user scoping via `forUser()` when merged to `multitenant-deploy`.
 
 ## 3. LLM strategy (`lib/providers.ts`, `lib/llm.ts`)
 
@@ -74,6 +76,10 @@ Additive second module beside vocab; reuses storage + the LLM chain, adds its ow
   `priorities` JSON), `writing_corrections`, and **`writing_discussions`** (per-feedback-card Q&A:
   `submission_id, card_key, role, content, seq`). Kept separate so the vocab `Store` + Sheet backend are
   untouched. Schema evolves via `ALTER TABLE … ADD COLUMN` in a try/catch at connect (e.g. `priorities`).
+  Prompts are added via `addPrompts` (respects each prompt's `task_type`) and removed via `deletePrompt`.
+  The self-serve add UI (`components/writing/AddPrompt.tsx`) is a segmented Task-1/Task-2 control with an
+  explicit active style — the earlier `chip btn-primary` combo lost the CSS cascade to `.chip`, hiding the
+  selection and silently filing essays under Task 1.
 - **Scoring:** one-shot structured output = overall band + 4 criteria + corrections (`original`,
   `suggestion`, `error_type`, `criterion`, `explanation`) + strengths + `general_feedback` + **`priorities`**
   (2–3 higher-order coaching items: criterion/title/why/how/example). Bands normalized + correction spans

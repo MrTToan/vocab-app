@@ -1,7 +1,7 @@
 import { promises as fs } from "fs";
 import path from "path";
 import { randomUUID } from "crypto";
-import type { Word, Attempt, Question } from "./types";
+import type { Word, Attempt, Question, Collection } from "./types";
 
 /*
  * Storage lives behind this one interface. Two backends:
@@ -29,6 +29,30 @@ export interface Store {
   questionCount(): Promise<number>;
   /** Distinct word_ids that already have at least one bank question. */
   questionWordIds(): Promise<string[]>;
+  // ── collections (many-to-many word grouping) ─────────────────────────
+  /** All collections, each with its member `count`, newest first. */
+  collections(): Promise<Collection[]>;
+  createCollection(input: {
+    name: string;
+    description?: string;
+    emoji?: string;
+  }): Promise<Collection>;
+  updateCollection(
+    id: string,
+    patch: Partial<Pick<Collection, "name" | "description" | "emoji">>,
+  ): Promise<Collection | undefined>;
+  removeCollection(id: string): Promise<void>;
+  /** Ids of the words in a collection — used to scope the practice picker. */
+  wordIdsInCollection(collectionId: string): Promise<string[]>;
+  /** Every word↔collection link (small; the Library page inverts it per word). */
+  memberships(): Promise<Array<{ word_id: string; collection_id: string }>>;
+  /** Add/remove words in a collection (bulk assign from Library / Collections). */
+  setCollectionMembers(
+    collectionId: string,
+    change: { add?: string[]; remove?: string[] },
+  ): Promise<void>;
+  /** Replace the full set of collections a single word belongs to (Add page). */
+  setWordCollections(wordId: string, collectionIds: string[]): Promise<void>;
   backend(): "sheet" | "sqlite";
 }
 
@@ -191,6 +215,18 @@ class SqliteStore implements Store {
       await this.db.execute(
         `CREATE INDEX IF NOT EXISTS idx_q ON questions (word_id, type)`,
       );
+      await this.db.execute(
+        `CREATE TABLE IF NOT EXISTS collections (id TEXT PRIMARY KEY, name TEXT, description TEXT, emoji TEXT, created_at INTEGER)`,
+      );
+      await this.db.execute(
+        `CREATE TABLE IF NOT EXISTS word_collections (word_id TEXT, collection_id TEXT, PRIMARY KEY (word_id, collection_id))`,
+      );
+      await this.db.execute(
+        `CREATE INDEX IF NOT EXISTS idx_wc_collection ON word_collections (collection_id)`,
+      );
+      await this.db.execute(
+        `CREATE INDEX IF NOT EXISTS idx_wc_word ON word_collections (word_id)`,
+      );
     })();
     return this.ready;
   }
@@ -249,7 +285,13 @@ class SqliteStore implements Store {
   }
   async remove(id: string): Promise<void> {
     await this.connect();
-    await this.db.execute({ sql: "DELETE FROM words WHERE id = ?", args: [id] });
+    await this.db.batch(
+      [
+        { sql: "DELETE FROM words WHERE id = ?", args: [id] },
+        { sql: "DELETE FROM word_collections WHERE word_id = ?", args: [id] },
+      ],
+      "write",
+    );
   }
   async logAttempt(a: Attempt): Promise<void> {
     await this.connect();
@@ -312,6 +354,135 @@ class SqliteStore implements Store {
     const rs = await this.db.execute("SELECT DISTINCT word_id FROM questions");
     return rs.rows.map((r: any) => String(r.word_id));
   }
+
+  async collections(): Promise<Collection[]> {
+    await this.connect();
+    const rs = await this.db.execute(
+      `SELECT c.id, c.name, c.description, c.emoji, c.created_at,
+              COUNT(wc.word_id) AS cnt
+         FROM collections c
+         LEFT JOIN word_collections wc ON wc.collection_id = c.id
+        GROUP BY c.id
+        ORDER BY c.created_at DESC`,
+    );
+    return rs.rows.map((r: any) => mapCollection(r, Number(r.cnt ?? 0)));
+  }
+  async createCollection(input: {
+    name: string;
+    description?: string;
+    emoji?: string;
+  }): Promise<Collection> {
+    await this.connect();
+    const c: Collection = {
+      id: randomUUID(),
+      name: input.name.trim(),
+      description: input.description ?? "",
+      emoji: input.emoji ?? "",
+      created_at: Date.now(),
+    };
+    await this.db.execute({
+      sql: "INSERT INTO collections (id, name, description, emoji, created_at) VALUES (?,?,?,?,?)",
+      args: [c.id, c.name, c.description, c.emoji, c.created_at],
+    });
+    return { ...c, count: 0 };
+  }
+  async updateCollection(
+    id: string,
+    patch: Partial<Pick<Collection, "name" | "description" | "emoji">>,
+  ): Promise<Collection | undefined> {
+    await this.connect();
+    const rs = await this.db.execute({
+      sql: "SELECT * FROM collections WHERE id = ? LIMIT 1",
+      args: [id],
+    });
+    const cur: any = rs.rows[0];
+    if (!cur) return undefined;
+    const next = {
+      name: (patch.name ?? String(cur.name ?? "")).trim(),
+      description: patch.description ?? String(cur.description ?? ""),
+      emoji: patch.emoji ?? String(cur.emoji ?? ""),
+    };
+    await this.db.execute({
+      sql: "UPDATE collections SET name = ?, description = ?, emoji = ? WHERE id = ?",
+      args: [next.name, next.description, next.emoji, id],
+    });
+    return { id, ...next, created_at: Number(cur.created_at ?? 0) };
+  }
+  async removeCollection(id: string): Promise<void> {
+    await this.connect();
+    await this.db.batch(
+      [
+        { sql: "DELETE FROM word_collections WHERE collection_id = ?", args: [id] },
+        { sql: "DELETE FROM collections WHERE id = ?", args: [id] },
+      ],
+      "write",
+    );
+  }
+  async wordIdsInCollection(collectionId: string): Promise<string[]> {
+    await this.connect();
+    const rs = await this.db.execute({
+      sql: "SELECT word_id FROM word_collections WHERE collection_id = ?",
+      args: [collectionId],
+    });
+    return rs.rows.map((r: any) => String(r.word_id));
+  }
+  async memberships(): Promise<
+    Array<{ word_id: string; collection_id: string }>
+  > {
+    await this.connect();
+    const rs = await this.db.execute(
+      "SELECT word_id, collection_id FROM word_collections",
+    );
+    return rs.rows.map((r: any) => ({
+      word_id: String(r.word_id),
+      collection_id: String(r.collection_id),
+    }));
+  }
+  async setCollectionMembers(
+    collectionId: string,
+    change: { add?: string[]; remove?: string[] },
+  ): Promise<void> {
+    await this.connect();
+    const stmts: { sql: string; args: any[] }[] = [];
+    for (const wid of change.add ?? [])
+      stmts.push({
+        sql: "INSERT OR IGNORE INTO word_collections (word_id, collection_id) VALUES (?,?)",
+        args: [wid, collectionId],
+      });
+    for (const wid of change.remove ?? [])
+      stmts.push({
+        sql: "DELETE FROM word_collections WHERE word_id = ? AND collection_id = ?",
+        args: [wid, collectionId],
+      });
+    if (stmts.length) await this.db.batch(stmts, "write");
+  }
+  async setWordCollections(
+    wordId: string,
+    collectionIds: string[],
+  ): Promise<void> {
+    await this.connect();
+    const stmts: { sql: string; args: any[] }[] = [
+      { sql: "DELETE FROM word_collections WHERE word_id = ?", args: [wordId] },
+    ];
+    for (const cid of collectionIds)
+      stmts.push({
+        sql: "INSERT OR IGNORE INTO word_collections (word_id, collection_id) VALUES (?,?)",
+        args: [wordId, cid],
+      });
+    await this.db.batch(stmts, "write");
+  }
+}
+
+/** Row → Collection (shared by both backends). */
+function mapCollection(r: any, count: number): Collection {
+  return {
+    id: String(r.id),
+    name: String(r.name ?? ""),
+    description: String(r.description ?? ""),
+    emoji: String(r.emoji ?? ""),
+    created_at: Number(r.created_at ?? 0),
+    count,
+  };
 }
 
 function insertStmt(w: Word) {
@@ -340,6 +511,13 @@ class SheetStore implements Store {
   private attemptCache: Attempt[] | null = null;
   private questionsSheet: any = null;
   private questionCache: Question[] | null = null;
+  private collectionsSheet: any = null;
+  private membersSheet: any = null;
+  private collectionCache: Collection[] | null = null;
+  private memberCache: Array<{ word_id: string; collection_id: string }> | null =
+    null;
+  private collectionRows = new Map<string, GRow>();
+  private memberRows: GRow[] | null = null;
   private ready: Promise<void> | null = null;
 
   backend(): "sheet" {
@@ -431,6 +609,7 @@ class SheetStore implements Store {
       await row.delete();
       this.rows.delete(id);
     }
+    if (this.memberCache) await this.removeMemberRows((m) => m.word_id === id);
   }
   private async ensureAttempts(): Promise<void> {
     await this.connect();
@@ -504,6 +683,170 @@ class SheetStore implements Store {
   async questionWordIds(): Promise<string[]> {
     await this.ensureQuestions();
     return [...new Set(this.questionCache!.map((q) => q.word_id))];
+  }
+
+  private async ensureCollections(): Promise<void> {
+    await this.connect();
+    if (this.collectionsSheet && this.membersSheet) return;
+    let cs = this.doc.sheetsByTitle["Collections"];
+    if (!cs)
+      cs = await this.doc.addSheet({
+        title: "Collections",
+        headerValues: ["id", "name", "description", "emoji", "created_at"],
+      });
+    this.collectionsSheet = cs;
+    let ms = this.doc.sheetsByTitle["WordCollections"];
+    if (!ms)
+      ms = await this.doc.addSheet({
+        title: "WordCollections",
+        headerValues: ["word_id", "collection_id"],
+      });
+    this.membersSheet = ms;
+    const crows = await cs.getRows();
+    this.collectionCache = crows.map((r: any) => ({
+      id: r.get("id") || "",
+      name: r.get("name") || "",
+      description: r.get("description") || "",
+      emoji: r.get("emoji") || "",
+      created_at: Number(r.get("created_at") || 0),
+    }));
+    this.collectionRows = new Map(
+      crows.map((r: any) => [r.get("id") || "", r as GRow]),
+    );
+    const mrows = await ms.getRows();
+    this.memberCache = mrows.map((r: any) => ({
+      word_id: r.get("word_id") || "",
+      collection_id: r.get("collection_id") || "",
+    }));
+    this.memberRows = mrows as unknown as GRow[];
+  }
+  async collections(): Promise<Collection[]> {
+    await this.ensureCollections();
+    const counts = new Map<string, number>();
+    for (const m of this.memberCache!)
+      counts.set(m.collection_id, (counts.get(m.collection_id) ?? 0) + 1);
+    return [...this.collectionCache!]
+      .sort((a, b) => b.created_at - a.created_at)
+      .map((c) => ({ ...c, count: counts.get(c.id) ?? 0 }));
+  }
+  async createCollection(input: {
+    name: string;
+    description?: string;
+    emoji?: string;
+  }): Promise<Collection> {
+    await this.ensureCollections();
+    const c: Collection = {
+      id: randomUUID(),
+      name: input.name.trim(),
+      description: input.description ?? "",
+      emoji: input.emoji ?? "",
+      created_at: Date.now(),
+    };
+    const row = await this.collectionsSheet.addRow({
+      ...c,
+      created_at: String(c.created_at),
+    });
+    this.collectionCache!.push(c);
+    this.collectionRows!.set(c.id, row as unknown as GRow);
+    return { ...c, count: 0 };
+  }
+  async updateCollection(
+    id: string,
+    patch: Partial<Pick<Collection, "name" | "description" | "emoji">>,
+  ): Promise<Collection | undefined> {
+    await this.ensureCollections();
+    const i = this.collectionCache!.findIndex((c) => c.id === id);
+    if (i === -1) return undefined;
+    const next = {
+      ...this.collectionCache![i],
+      ...patch,
+      name: (patch.name ?? this.collectionCache![i].name).trim(),
+    };
+    this.collectionCache![i] = next;
+    const row = this.collectionRows!.get(id);
+    if (row) {
+      row.set("name", next.name);
+      row.set("description", next.description);
+      row.set("emoji", next.emoji);
+      await row.save();
+    }
+    return next;
+  }
+  async removeCollection(id: string): Promise<void> {
+    await this.ensureCollections();
+    const i = this.collectionCache!.findIndex((c) => c.id === id);
+    if (i !== -1) this.collectionCache!.splice(i, 1);
+    const row = this.collectionRows!.get(id);
+    if (row) {
+      await row.delete();
+      this.collectionRows!.delete(id);
+    }
+    await this.removeMemberRows((m) => m.collection_id === id);
+  }
+  async wordIdsInCollection(collectionId: string): Promise<string[]> {
+    await this.ensureCollections();
+    return this.memberCache!
+      .filter((m) => m.collection_id === collectionId)
+      .map((m) => m.word_id);
+  }
+  async memberships(): Promise<
+    Array<{ word_id: string; collection_id: string }>
+  > {
+    await this.ensureCollections();
+    return this.memberCache!.map((m) => ({ ...m }));
+  }
+  async setCollectionMembers(
+    collectionId: string,
+    change: { add?: string[]; remove?: string[] },
+  ): Promise<void> {
+    await this.ensureCollections();
+    const present = new Set(
+      this.memberCache!
+        .filter((m) => m.collection_id === collectionId)
+        .map((m) => m.word_id),
+    );
+    for (const wid of change.add ?? []) {
+      if (present.has(wid)) continue;
+      const row = await this.membersSheet.addRow({
+        word_id: wid,
+        collection_id: collectionId,
+      });
+      this.memberCache!.push({ word_id: wid, collection_id: collectionId });
+      this.memberRows!.push(row as unknown as GRow);
+      present.add(wid);
+    }
+    const removeSet = new Set(change.remove ?? []);
+    if (removeSet.size)
+      await this.removeMemberRows(
+        (m) => m.collection_id === collectionId && removeSet.has(m.word_id),
+      );
+  }
+  async setWordCollections(
+    wordId: string,
+    collectionIds: string[],
+  ): Promise<void> {
+    await this.ensureCollections();
+    await this.removeMemberRows((m) => m.word_id === wordId);
+    for (const cid of collectionIds) {
+      const row = await this.membersSheet.addRow({
+        word_id: wordId,
+        collection_id: cid,
+      });
+      this.memberCache!.push({ word_id: wordId, collection_id: cid });
+      this.memberRows!.push(row as unknown as GRow);
+    }
+  }
+  /** Delete member rows matching a predicate, keeping cache and row list aligned. */
+  private async removeMemberRows(
+    pred: (m: { word_id: string; collection_id: string }) => boolean,
+  ): Promise<void> {
+    for (let i = this.memberCache!.length - 1; i >= 0; i--) {
+      if (!pred(this.memberCache![i])) continue;
+      const row = this.memberRows![i];
+      if (row) await row.delete();
+      this.memberCache!.splice(i, 1);
+      this.memberRows!.splice(i, 1);
+    }
   }
 }
 

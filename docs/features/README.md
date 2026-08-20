@@ -15,11 +15,12 @@ cross-skill Report. A SaaS-style landing page sits at `/`.
 3. [Explore mode](explore-mode.md) — the 🔀 "new words" toggle
 4. [Question bank](question-bank.md) — pre-generated + self-refilling questions
 5. [Adding words](adding-words.md) — enrichment, duplicate & spelling checks, manual entry, CSV import
+6. [Collections](collections.md) — curated word groups + scoped practice
 
 ## Writing
-6. [IELTS writing feedback](writing-feedback.md) — Task 1 & Task 2, band scoring, inline corrections
+7. [IELTS writing feedback](writing-feedback.md) — Task 1 & Task 2, band scoring, inline corrections
 
 ## Across the app
-7. [Progress tracking](progress-tracking.md) — the cross-skill `/report` (vocab + writing charts; `/progress` redirects here)
-8. [AI providers](ai-providers.md) — the fallback chain & running with no key
-9. [Data & storage](data-and-storage.md) — what's stored, where, and backups
+8. [Progress tracking](progress-tracking.md) — the cross-skill `/report` (vocab + writing charts; `/progress` redirects here)
+9. [AI providers](ai-providers.md) — the fallback chain & running with no key
+10. [Data & storage](data-and-storage.md) — what's stored, where, and backups

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import type {
+  Collection,
   ExerciseType,
   GeneratedExercise,
   Result,
@@ -17,6 +18,7 @@ interface Payload {
   word: Word | null;
   exerciseType?: ExerciseType;
   generated?: GeneratedExercise;
+  reason?: string; // "empty-collection" when a scoped collection has no words
 }
 interface Current {
   word: Word;
@@ -43,6 +45,10 @@ export default function PracticePage() {
   const recent = useRef<string[]>([]);
   const buffer = useRef<Payload | null>(null);
   const explore = useRef(false); // "new words" mode: pick fresh/random words
+  const collectionId = useRef<string>(""); // "" = all words; else scope the picker
+  const [collections, setCollections] = useState<Collection[]>([]);
+  const [activeCollection, setActiveCollection] = useState<string>("");
+  const [emptyReason, setEmptyReason] = useState<"none" | "collection">("none");
   const [cur, setCur] = useState<Current | null>(null);
   const [status, setStatus] = useState<
     "loading" | "answer" | "grading" | "confirm" | "feedback" | "empty"
@@ -72,6 +78,7 @@ export default function PracticePage() {
       body: JSON.stringify({
         seenIds: recent.current.slice(-COOLDOWN),
         explore: explore.current,
+        collectionId: collectionId.current || undefined,
       }),
     });
   }, []);
@@ -79,6 +86,7 @@ export default function PracticePage() {
   const present = useCallback((p: Payload) => {
     const c = toCurrent(p);
     if (!c) {
+      setEmptyReason(p.reason === "empty-collection" ? "collection" : "none");
       setStatus("empty");
       setCur(null);
       return;
@@ -114,11 +122,56 @@ export default function PracticePage() {
   }, [fetchNext, present]);
 
   useEffect(() => {
+    // Resolve the initial collection before the first fetch: a ?collection=<id>
+    // link (from the Collections page) wins, else the last choice is remembered.
+    let initial = "";
+    try {
+      const param = new URLSearchParams(window.location.search).get("collection");
+      initial = param ?? localStorage.getItem("lexi-collection") ?? "";
+    } catch {
+      /* ignore */
+    }
+    collectionId.current = initial;
+    setActiveCollection(initial);
+    jsonFetch<{ collections: Collection[] }>("/api/collections")
+      .then((r) => setCollections(r.collections))
+      .catch(() => {});
     fetchNext().then(present).catch((e) => {
       setError(e.message);
       setStatus("empty");
     });
-  }, [fetchNext, present]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // If a remembered collection was since deleted, fall back to "All words".
+  useEffect(() => {
+    if (
+      activeCollection &&
+      collections.length &&
+      !collections.some((c) => c.id === activeCollection)
+    ) {
+      changeCollection("");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [collections]);
+
+  /** Switch the studied collection: remember it, drop the prefetch, jump next. */
+  const changeCollection = useCallback(
+    (id: string) => {
+      collectionId.current = id;
+      setActiveCollection(id);
+      try {
+        if (id) localStorage.setItem("lexi-collection", id);
+        else localStorage.removeItem("lexi-collection");
+      } catch {
+        /* ignore */
+      }
+      buffer.current = null; // the buffered word belongs to the previous scope
+      setEmptyReason("none");
+      advance();
+    },
+    [advance],
+  );
 
   /** Toggle "new words" mode and immediately jump to a word in the new mode. */
   const toggleExplore = useCallback(() => {
@@ -200,13 +253,38 @@ export default function PracticePage() {
   }
 
   if (status === "empty") {
+    const inCollection = emptyReason === "collection";
     return (
-      <div className="card p-8 text-center space-y-3">
-        <div className="text-2xl font-extrabold">No words to practise yet</div>
-        <p className="muted">Add a few words, then come back.</p>
-        <div className="flex gap-2 justify-center">
-          <Link href="/add" className="btn btn-primary">Add a word</Link>
-          <Link href="/import" className="btn">Import CSV</Link>
+      <div className="space-y-4">
+        <CollectionBar
+          collections={collections}
+          active={activeCollection}
+          onChange={changeCollection}
+        />
+        <div className="card p-8 text-center space-y-3">
+          <div className="text-2xl font-extrabold">
+            {inCollection
+              ? "This collection has no words yet"
+              : "No words to practise yet"}
+          </div>
+          <p className="muted">
+            {inCollection
+              ? "Assign words to it from the Library, or switch back to All words above."
+              : "Add a few words, then come back."}
+          </p>
+          <div className="flex gap-2 justify-center">
+            {inCollection ? (
+              <>
+                <Link href="/library" className="btn btn-primary">Assign words</Link>
+                <Link href="/collections" className="btn">Manage collections</Link>
+              </>
+            ) : (
+              <>
+                <Link href="/add" className="btn btn-primary">Add a word</Link>
+                <Link href="/import" className="btn">Import CSV</Link>
+              </>
+            )}
+          </div>
         </div>
       </div>
     );
@@ -214,6 +292,11 @@ export default function PracticePage() {
 
   return (
     <div className="space-y-5">
+      <CollectionBar
+        collections={collections}
+        active={activeCollection}
+        onChange={changeCollection}
+      />
       <div className="flex items-center justify-between text-sm muted">
         <span>Session: {stats.done} done · {stats.correct} strong</span>
         <div className="flex items-center gap-2">
@@ -281,6 +364,41 @@ export default function PracticePage() {
           {error}
         </div>
       )}
+    </div>
+  );
+}
+
+/* ────────────────────  Collection switcher  ─────────────────── */
+
+function CollectionBar({
+  collections,
+  active,
+  onChange,
+}: {
+  collections: Collection[];
+  active: string;
+  onChange: (id: string) => void;
+}) {
+  return (
+    <div className="flex items-center gap-2 text-sm">
+      <span className="muted">Studying</span>
+      <select
+        className="input py-1.5 flex-1 min-w-0"
+        value={active}
+        onChange={(e) => onChange(e.target.value)}
+        aria-label="Collection to practise"
+      >
+        <option value="">All words</option>
+        {collections.map((c) => (
+          <option key={c.id} value={c.id}>
+            {(c.emoji ? `${c.emoji} ` : "") + c.name}
+            {typeof c.count === "number" ? ` (${c.count})` : ""}
+          </option>
+        ))}
+      </select>
+      <Link href="/collections" className="muted text-xs underline whitespace-nowrap">
+        manage
+      </Link>
     </div>
   );
 }

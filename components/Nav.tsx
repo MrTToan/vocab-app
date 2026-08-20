@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import ThemeToggle from "./ThemeToggle";
 
 // Two peer modules. The nav shows a module switch (Vocabulary | Writing) plus a
 // context sub-nav for whichever module you're in. Vocab keeps all its original
@@ -16,6 +17,7 @@ const SUBNAV: Record<string, { href: string; label: string }[]> = {
     { href: "/vocab", label: "Home" },
     { href: "/practice", label: "Practice" },
     { href: "/library", label: "Library" },
+    { href: "/collections", label: "Collections" },
     { href: "/add", label: "Add" },
     { href: "/import", label: "Import" },
   ],
@@ -54,7 +56,7 @@ export default function Nav() {
                 className="px-3 py-1.5 rounded-lg text-sm font-bold whitespace-nowrap transition-colors"
                 style={
                   on
-                    ? { background: "var(--accent)", color: "var(--bg)" }
+                    ? { background: "var(--accent)", color: "var(--accent-ink)" }
                     : { color: "var(--muted)" }
                 }
               >
@@ -74,6 +76,7 @@ export default function Nav() {
         >
           📊 Report
         </Link>
+        <ThemeToggle />
       </div>
 
       {/* Row 2 — sub-nav for the active module */}

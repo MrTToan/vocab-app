@@ -148,6 +148,20 @@ export function pickNext(
   return pool[pool.length - 1];
 }
 
+/* ───────────────────────────  collections  ──────────────────────── */
+
+/**
+ * Restrict a word list to a collection's members (by id). Pure — the practice
+ * route calls this before `pickNext` so the whole stage ladder / working-set
+ * picker runs over just the chosen collection, unchanged.
+ */
+export function scopeToCollection(
+  words: Word[],
+  memberIds: ReadonlySet<string>,
+): Word[] {
+  return words.filter((w) => memberIds.has(w.id));
+}
+
 /* ───────────────────────────  helpers  ──────────────────────────── */
 
 function pickOne<T>(arr: T[], rand: () => number = Math.random): T {

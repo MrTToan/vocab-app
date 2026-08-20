@@ -6,6 +6,7 @@ import {
   weightFor,
   pickNext,
   stageCounts,
+  scopeToCollection,
   TARGET_ACTIVE,
 } from "../lib/engine";
 import { mkWord } from "./factory";
@@ -215,5 +216,38 @@ describe("stageCounts", () => {
       production: 0,
       known: 1,
     });
+  });
+});
+
+describe("scopeToCollection", () => {
+  const words = [
+    mkWord({ id: "a" }),
+    mkWord({ id: "b" }),
+    mkWord({ id: "c" }),
+  ];
+
+  it("keeps only words whose id is in the member set", () => {
+    const scoped = scopeToCollection(words, new Set(["a", "c"]));
+    expect(scoped.map((w) => w.id)).toEqual(["a", "c"]);
+  });
+
+  it("returns an empty list when no ids match (empty collection)", () => {
+    expect(scopeToCollection(words, new Set(["z"]))).toEqual([]);
+    expect(scopeToCollection(words, new Set())).toEqual([]);
+  });
+
+  it("preserves original order and does not mutate the input", () => {
+    const before = words.map((w) => w.id);
+    const scoped = scopeToCollection(words, new Set(["c", "a"]));
+    expect(scoped.map((w) => w.id)).toEqual(["a", "c"]); // input order, not set order
+    expect(words.map((w) => w.id)).toEqual(before); // untouched
+  });
+
+  it("feeds pickNext so the picker only ever surfaces collection members", () => {
+    const scoped = scopeToCollection(words, new Set(["b"]));
+    for (let i = 0; i < 20; i++) {
+      const picked = pickNext(scoped, 0, new Set(), () => 0.5);
+      expect(picked?.id).toBe("b");
+    }
   });
 });

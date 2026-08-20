@@ -73,6 +73,21 @@ export interface Word {
   created_at: number;
 }
 
+/**
+ * A named, curated group of words (many-to-many via a join table). A study
+ * "lens", not a separate progress track: picking a collection on /practice
+ * scopes the picker to its members, but a word's stage stays global — so
+ * drilling a word inside a collection advances it everywhere.
+ */
+export interface Collection {
+  id: string;
+  name: string;
+  description: string;
+  emoji: string;
+  created_at: number;
+  count?: number; // member word count, populated by store.collections()
+}
+
 /** The enrichable fields the LLM fills. Everything else is app-managed. */
 export type EnrichableFields = Pick<
   Word,

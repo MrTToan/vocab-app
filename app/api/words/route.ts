@@ -18,6 +18,7 @@ export async function POST(req: Request) {
   const body = (await req.json()) as NewWord & {
     enrich?: boolean;
     allow_duplicate?: boolean;
+    collectionIds?: string[];
   };
   if (!body.word || !body.word.trim()) {
     return NextResponse.json({ error: "word is required" }, { status: 400 });
@@ -41,9 +42,13 @@ export async function POST(req: Request) {
     }
   }
 
+  const collectionIds = Array.isArray(body.collectionIds)
+    ? body.collectionIds
+    : [];
   let fields: Partial<NewWord> = { ...body };
   delete (fields as any).enrich;
   delete (fields as any).allow_duplicate;
+  delete (fields as any).collectionIds;
 
   if (body.enrich && hasProvider("enrich")) {
     try {
@@ -58,6 +63,8 @@ export async function POST(req: Request) {
   }
 
   const created = await getStore().add({ ...fields, word: body.word });
+  if (collectionIds.length)
+    await getStore().setWordCollections(created.id, collectionIds);
   // Seed cloze(s) from the word's example sentences so a newly-added word has a
   // few questions before the batch enrich skill ever runs.
   saveHarvest(getStore(), [
