@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { STAGE_ORDER, STAGE_LABEL, STAGE_VAR, jsonFetch } from "@/lib/ui";
+import { STAGE_ORDER, STAGE_LABEL, STAGE_VAR, stageBarWidth, jsonFetch } from "@/lib/ui";
 
 interface Summary {
   provider: string;
@@ -114,12 +114,13 @@ export default function Home() {
                   <div
                     className="h-full rounded-full"
                     style={{
-                      width: total ? `${(n / total) * 100}%` : "0%",
+                      width: `${stageBarWidth(stage, stats?.words.stageCounts ?? {})}%`,
                       background: STAGE_VAR[stage],
+                      opacity: stage === "new" ? 0.35 : 1,
                     }}
                   />
                 </div>
-                <div className="w-8 text-right text-sm muted">{n}</div>
+                <div className="w-10 text-right text-sm muted tabular-nums">{n}</div>
               </div>
             ))}
           </div>

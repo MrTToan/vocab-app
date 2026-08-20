@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { recentAccuracy, isWeak } from "../lib/ui";
+import { recentAccuracy, isWeak, stageBarWidth } from "../lib/ui";
 import { mkWord } from "./factory";
 
 describe("recentAccuracy (ui)", () => {
@@ -24,5 +24,24 @@ describe("isWeak", () => {
   });
   it("is false when the word is answered well", () => {
     expect(isWeak(mkWord({ recent_results: ["correct", "correct"] }))).toBe(false);
+  });
+});
+
+describe("stageBarWidth", () => {
+  it("renders 'new' as a full backlog bar regardless of size", () => {
+    expect(stageBarWidth("new", { new: 9999, recognition: 5 })).toBe(100);
+    expect(stageBarWidth("new", {})).toBe(100);
+  });
+
+  it("scales started stages against the largest STARTED stage, ignoring 'new'", () => {
+    // recognition is the biggest started stage (20); recall (10) -> 50%
+    const counts = { new: 9999, recognition: 20, recall: 10, production: 0, known: 0 };
+    expect(stageBarWidth("recognition", counts)).toBe(100);
+    expect(stageBarWidth("recall", counts)).toBe(50);
+    expect(stageBarWidth("production", counts)).toBe(0);
+  });
+
+  it("does not divide by zero when no started stage has words", () => {
+    expect(stageBarWidth("recognition", { new: 100 })).toBe(0);
   });
 });

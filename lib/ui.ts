@@ -24,6 +24,21 @@ export const STAGE_VAR: Record<Stage, string> = {
   known: "var(--good)",
 };
 
+/**
+ * Bar width (0–100) for the "mastery by stage" chart. "New" (the untouched
+ * backlog) usually dwarfs everything, which flattens the started stages into
+ * invisible slivers — so scale the *started* stages against the largest STARTED
+ * stage instead of the total, and render "New" as a full, muted backlog bar.
+ */
+export function stageBarWidth(stage: Stage, counts: Record<string, number>): number {
+  if (stage === "new") return 100;
+  const startedMax = Math.max(
+    1,
+    ...STAGE_ORDER.filter((s) => s !== "new").map((s) => counts[s] ?? 0),
+  );
+  return Math.min(100, ((counts[stage] ?? 0) / startedMax) * 100);
+}
+
 export function recentAccuracy(w: Pick<Word, "recent_results">): number {
   const r = w.recent_results;
   if (!r?.length) return 0;
