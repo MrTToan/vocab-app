@@ -164,21 +164,46 @@ export default function AddPrompt() {
 
   return (
     <div className="space-y-4">
-      {/* task toggle */}
-      <div className="flex gap-2">
-        {(["task1", "task2"] as WritingTask[]).map((t) => (
-          <button
-            key={t}
-            className={`chip ${task === t ? "btn-primary" : ""}`}
-            style={task === t ? {} : { cursor: "pointer" }}
-            onClick={() => {
-              setTask(t);
-              setSavedId(null);
-            }}
-          >
-            {t === "task1" ? "Task 1 (chart)" : "Task 2 (essay)"}
-          </button>
-        ))}
+      {/* Task toggle — a segmented control whose ACTIVE option is clearly filled.
+          Previously this used `chip btn-primary`, but `.chip` is defined after
+          `.btn-primary` in globals.css, so its background won the cascade and the
+          selected task looked identical to the unselected one — Task 2 essays were
+          silently saved to Task 1. Inline styles here make the choice unambiguous. */}
+      <div>
+        <span className="text-sm muted block mb-1">Which task is this?</span>
+        <div className="flex gap-2" role="group" aria-label="Task type">
+          {(["task1", "task2"] as WritingTask[]).map((t) => {
+            const on = task === t;
+            return (
+              <button
+                key={t}
+                type="button"
+                aria-pressed={on}
+                className="px-3.5 py-1.5 rounded-full text-sm font-semibold border transition-colors"
+                style={
+                  on
+                    ? {
+                        background: "var(--accent)",
+                        borderColor: "var(--accent)",
+                        color: "var(--accent-ink)",
+                      }
+                    : {
+                        background: "transparent",
+                        borderColor: "var(--line)",
+                        color: "var(--muted)",
+                        cursor: "pointer",
+                      }
+                }
+                onClick={() => {
+                  setTask(t);
+                  setSavedId(null);
+                }}
+              >
+                {t === "task1" ? "Task 1 (chart)" : "Task 2 (essay)"}
+              </button>
+            );
+          })}
+        </div>
       </div>
 
       <div className="card p-5 space-y-4">
@@ -306,7 +331,9 @@ export default function AddPrompt() {
             </span>
           )}
           <button className="btn btn-primary" onClick={save} disabled={!canSave}>
-            {saving ? "Saving…" : "Save question"}
+            {saving
+              ? "Saving…"
+              : `Save to ${task === "task1" ? "Task 1" : "Task 2"}`}
           </button>
         </div>
       </div>

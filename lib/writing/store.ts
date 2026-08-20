@@ -162,6 +162,12 @@ export const writingStore = {
     return rs.rows[0] ? rowToPrompt(rs.rows[0]) : undefined;
   },
 
+  /** Remove a prompt from the bank (its submissions/corrections are left intact). */
+  async deletePrompt(id: string): Promise<void> {
+    const c = await connect();
+    await c.execute({ sql: "DELETE FROM writing_prompts WHERE id=?", args: [id] });
+  },
+
   /** Least-recently-shown prompt for a task; marks it shown (rotates the set). */
   async pickPrompt(task: WritingTask): Promise<WritingPrompt | undefined> {
     const c = await connect();
