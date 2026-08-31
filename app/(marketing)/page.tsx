@@ -374,6 +374,8 @@ function Footer() {
         <div className="flex items-center gap-5">
           <Link href="/vocab" className="hover:opacity-70">Vocabulary</Link>
           <Link href="/writing" className="hover:opacity-70">Writing</Link>
+          <Link href="/privacy" className="hover:opacity-70">Privacy</Link>
+          <Link href="/terms" className="hover:opacity-70">Terms</Link>
         </div>
       </div>
     </footer>
