@@ -11,9 +11,12 @@ Current order:
 
 **#1 Google Gemini → #2 Groq (free) → #3 OpenAI (paid, last resort)**
 
-If a provider fails **3 times in a row** (e.g. it runs out of daily quota), Lexi drops to the next one
-for the rest of the session and recovers on the next restart. In practice this means the free providers
-absorb the load and your paid key is only touched as a last resort.
+Every call also **falls through the chain within the same request**: if the active provider errors
+(even a one-off network blip), Lexi immediately tries the next one before giving up — so a single hiccup
+no longer fails your click. On top of that, if a provider fails **3 times in a row** (e.g. it runs out of
+daily quota), Lexi advances its *default* starting provider for the rest of the session and recovers on the
+next restart. In practice this means the free providers absorb the load and your paid key is only touched
+as a last resort. (Chart-reading always prefers the vision-capable provider, skipping any that can't see images.)
 
 Any OpenAI-compatible provider slots in — each is just a `base URL + model + key` in `.env.local`
 (`LLM_1_*`, `LLM_2_*`, …). There are also simpler **default** (Anthropic) and **custom** (single

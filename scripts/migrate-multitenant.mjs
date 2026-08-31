@@ -29,6 +29,8 @@ const DATA_TABLES = [
   "words",
   "attempts",
   "questions",
+  "collections",
+  "word_collections",
   "writing_prompts",
   "writing_submissions",
   "writing_corrections",

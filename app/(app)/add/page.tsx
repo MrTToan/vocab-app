@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import type { Enrichment, Word } from "@/lib/types";
+import type { Collection, Enrichment, Word } from "@/lib/types";
 import { jsonFetch } from "@/lib/ui";
 
 type Fields = Enrichment & { personal_note: string; tags: string };
@@ -32,10 +32,17 @@ export default function AddPage() {
     null,
   );
   const [suggestion, setSuggestion] = useState(""); // spelling correction from enrichment
+  const [collections, setCollections] = useState<Collection[]>([]);
+  const [selectedCollections, setSelectedCollections] = useState<Set<string>>(
+    new Set(),
+  );
   const wordRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     jsonFetch<{ hasLLM: boolean }>("/api/config").then((c) => setHasLLM(c.hasLLM));
+    jsonFetch<{ collections: Collection[] }>("/api/collections")
+      .then((r) => setCollections(r.collections))
+      .catch(() => {});
   }, []);
 
   // duplicate check (debounced) as the word is typed
@@ -114,6 +121,7 @@ export default function AddPage() {
         source: "manual" as const,
         enrich: false,
         allow_duplicate: !!dup, // user has seen the warning
+        collectionIds: [...selectedCollections],
       };
       await jsonFetch<{ word: Word }>("/api/words", {
         method: "POST",
@@ -125,6 +133,7 @@ export default function AddPage() {
       setPhase("input");
       setDup(null);
       setSuggestion("");
+      // keep the collection selection — adding several words to the same set is common
       wordRef.current?.focus();
     } catch (e: any) {
       setError(
@@ -326,6 +335,41 @@ export default function AddPage() {
               onChange={(v) => setFields({ ...fields, tags: v })}
             />
           </Grid>
+
+          {collections.length > 0 && (
+            <div>
+              <span className="text-xs font-semibold muted">
+                Add to collections
+              </span>
+              <div className="flex flex-wrap gap-1.5 mt-1">
+                {collections.map((c) => {
+                  const on = selectedCollections.has(c.id);
+                  return (
+                    <button
+                      key={c.id}
+                      type="button"
+                      onClick={() =>
+                        setSelectedCollections((prev) => {
+                          const next = new Set(prev);
+                          if (next.has(c.id)) next.delete(c.id);
+                          else next.add(c.id);
+                          return next;
+                        })
+                      }
+                      className="px-2.5 py-1 rounded-full text-sm font-semibold border transition-colors"
+                      style={
+                        on
+                          ? { background: "var(--accent)", borderColor: "var(--accent)", color: "#fff" }
+                          : { borderColor: "var(--line)", color: "var(--muted)" }
+                      }
+                    >
+                      {(c.emoji ? `${c.emoji} ` : "") + c.name}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
 
           <button
             className="btn btn-primary w-full"

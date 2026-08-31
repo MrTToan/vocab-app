@@ -10,6 +10,7 @@ import {
   type WritingTask,
   type Criterion,
   type CriterionScore,
+  type WritingDiscussionMessage,
 } from "./types";
 
 /*
@@ -86,6 +87,12 @@ async function connect(): Promise<any> {
       await addColumn(db, "writing_submissions", "user_id TEXT");
       await addColumn(db, "writing_corrections", "user_id TEXT");
       await db.execute(
+        `CREATE TABLE IF NOT EXISTS writing_discussions (
+          id TEXT PRIMARY KEY, submission_id TEXT, card_key TEXT,
+          role TEXT, content TEXT, seq INTEGER, created_at INTEGER
+        )`,
+      );
+      await db.execute(
         `CREATE INDEX IF NOT EXISTS idx_wp_task ON writing_prompts (task_type)`,
       );
       await db.execute(
@@ -93,6 +100,9 @@ async function connect(): Promise<any> {
       );
       await db.execute(
         `CREATE INDEX IF NOT EXISTS idx_wc_sub ON writing_corrections (submission_id)`,
+      );
+      await db.execute(
+        `CREATE INDEX IF NOT EXISTS idx_wd_sub ON writing_discussions (submission_id, card_key, seq)`,
       );
     })();
   }
@@ -209,6 +219,12 @@ const raw = {
     const c = await connect();
     const rs = await c.execute({ sql: "SELECT * FROM writing_prompts WHERE id=? LIMIT 1", args: [id] });
     return rs.rows[0] ? rowToPrompt(rs.rows[0]) : undefined;
+  },
+
+  /** Remove a prompt from the shared bank (its submissions/corrections are left intact). */
+  async deletePrompt(id: string): Promise<void> {
+    const c = await connect();
+    await c.execute({ sql: "DELETE FROM writing_prompts WHERE id=?", args: [id] });
   },
 
   /** Least-recently-shown prompt for a task; marks it shown (global rotation across the shared pool). */
@@ -373,5 +389,101 @@ export const writingStore = {
       promptStats: (task) => raw.promptStats(userId, task),
       latestSubmission: (promptId) => raw.latestSubmission(userId, promptId),
     };
+  },
+
+  /**
+   * One stored submission by id (with its corrections) — used by the discuss flow.
+   * Scoped to the owner: a caller can only read their OWN submission (isolation).
+   */
+  async getSubmission(userId: string, id: string): Promise<WritingSubmission | null> {
+    const c = await connect();
+    const rs = await c.execute({ sql: "SELECT * FROM writing_submissions WHERE id=? AND user_id=?", args: [id, userId] });
+    const r: any = rs.rows[0];
+    if (!r) return null;
+    const cr = await c.execute({ sql: "SELECT * FROM writing_corrections WHERE submission_id=?", args: [id] });
+    return {
+      id: String(r.id),
+      prompt_id: String(r.prompt_id),
+      task_type: String(r.task_type) as WritingTask,
+      text: String(r.text ?? ""),
+      word_count: Number(r.word_count ?? 0),
+      overall_band: Number(r.overall_band ?? 0),
+      bands: jsonParse<Record<Criterion, CriterionScore>>(
+        r.bands,
+        Object.fromEntries(CRITERIA.map((k) => [k, { band: 0, comment: "" }])) as Record<Criterion, CriterionScore>,
+      ),
+      strengths: jsonParse<string[]>(r.strengths, []),
+      general_feedback: String(r.general_feedback ?? ""),
+      priorities: jsonParse<WritingPriority[]>(r.priorities, []),
+      corrections: (cr.rows as any[]).map((x) => ({
+        id: String(x.id),
+        submission_id: String(x.submission_id),
+        original: String(x.original ?? ""),
+        suggestion: String(x.suggestion ?? ""),
+        error_type: String(x.error_type ?? "other") as WritingCorrection["error_type"],
+        criterion: String(x.criterion ?? "task_achievement") as WritingCorrection["criterion"],
+        explanation: String(x.explanation ?? ""),
+        start: x.start == null ? null : Number(x.start),
+        end: x.end == null ? null : Number(x.end),
+      })),
+      created_at: Number(r.created_at ?? 0),
+    };
+  },
+
+  /** All discussion messages for a submission, ordered — grouped by card on the client. */
+  async listDiscussion(submissionId: string): Promise<WritingDiscussionMessage[]> {
+    const c = await connect();
+    const rs = await c.execute({
+      sql: "SELECT * FROM writing_discussions WHERE submission_id=? ORDER BY card_key, seq",
+      args: [submissionId],
+    });
+    return (rs.rows as any[]).map((x) => ({
+      id: String(x.id),
+      submission_id: String(x.submission_id),
+      card_key: String(x.card_key),
+      role: String(x.role) === "assistant" ? "assistant" : "user",
+      content: String(x.content ?? ""),
+      seq: Number(x.seq ?? 0),
+      created_at: Number(x.created_at ?? 0),
+    }));
+  },
+
+  /** Append messages to one (submission, card) thread; returns the full updated thread. */
+  async addDiscussionMessages(
+    submissionId: string,
+    cardKey: string,
+    msgs: { role: "user" | "assistant"; content: string }[],
+  ): Promise<WritingDiscussionMessage[]> {
+    const c = await connect();
+    const rs = await c.execute({
+      sql: "SELECT COALESCE(MAX(seq), -1) m FROM writing_discussions WHERE submission_id=? AND card_key=?",
+      args: [submissionId, cardKey],
+    });
+    let seq = Number((rs.rows[0] as any)?.m ?? -1);
+    const now = Date.now();
+    await c.batch(
+      msgs.map((m) => {
+        seq += 1;
+        return {
+          sql: `INSERT INTO writing_discussions (id, submission_id, card_key, role, content, seq, created_at)
+                VALUES (?,?,?,?,?,?,?)`,
+          args: [randomUUID(), submissionId, cardKey, m.role, m.content, seq, now],
+        };
+      }),
+      "write",
+    );
+    const thread = await c.execute({
+      sql: "SELECT * FROM writing_discussions WHERE submission_id=? AND card_key=? ORDER BY seq",
+      args: [submissionId, cardKey],
+    });
+    return (thread.rows as any[]).map((x) => ({
+      id: String(x.id),
+      submission_id: String(x.submission_id),
+      card_key: String(x.card_key),
+      role: String(x.role) === "assistant" ? "assistant" : "user",
+      content: String(x.content ?? ""),
+      seq: Number(x.seq ?? 0),
+      created_at: Number(x.created_at ?? 0),
+    }));
   },
 };

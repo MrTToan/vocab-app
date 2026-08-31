@@ -1,37 +1,68 @@
 @import "tailwindcss";
 
+/* ── Identity: "exam paper & fountain-pen ink" ──
+   Light is the base. Dark applies when the OS is dark (unless the user forced
+   light) OR when the user explicitly picks dark (data-theme="dark"). */
 :root {
-  --bg: #f7f7f5;
-  --panel: #ffffff;
-  --ink: #1c1b19;
-  --muted: #6b6a66;
-  --line: #e7e6e2;
-  --accent: #4f46e5;
-  --accent-soft: #eef0ff;
-  --good: #15803d;
-  --good-soft: #e8f5ec;
-  --warn: #b45309;
-  --warn-soft: #fdf1e3;
-  --bad: #b91c1c;
-  --bad-soft: #fbeaea;
+  --bg: #f4f1ea;          /* warm exam paper */
+  --panel: #fffdf7;       /* brighter card paper */
+  --ink: #211f1a;         /* warm near-black */
+  --muted: #6f695d;
+  --line: #e4ddce;        /* warm hairline */
+  --accent: #0c7a48;      /* deep emerald */
+  --accent-ink: #ffffff;  /* text on --accent */
+  --accent-soft: #e2f1e9;
+  --highlight: #f2c343;   /* highlighter — the signature mark */
+  --highlight-ink: #2a230a;
+  --highlight-soft: #f9edc0;
+  --good: #2f7d4f;
+  --good-soft: #e4f0e6;
+  --warn: #a86a17;
+  --warn-soft: #f6ead2;
+  --bad: #b23a30;
+  --bad-soft: #f5e1dc;
 }
 
+/* dark palette, reused for both "system dark" and "forced dark" */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #16161a;
-    --panel: #1f1f25;
-    --ink: #f2f1ee;
-    --muted: #a3a2a0;
-    --line: #33333b;
-    --accent: #8b83ff;
-    --accent-soft: #26263a;
-    --good: #6ee7a8;
-    --good-soft: #163024;
-    --warn: #f5c073;
-    --warn-soft: #33280f;
-    --bad: #f4a3a3;
-    --bad-soft: #341a1a;
+  :root:not([data-theme="light"]) {
+    --bg: #08100b;          /* black with a faint green cast (agency dark) */
+    --panel: #0f1a13;
+    --ink: #eef4ee;
+    --muted: #8fa295;
+    --line: #1f2c24;
+    --accent: #34e88f;      /* electric green */
+    --accent-ink: #05140b;
+    --accent-soft: #10241a;
+    --highlight: #efc24a;
+    --highlight-ink: #241d06;
+    --highlight-soft: #2f2914;
+    --good: #8be3a8;
+    --good-soft: #10281a;
+    --warn: #f0c05a;
+    --warn-soft: #2c2410;
+    --bad: #ff7a6d;
+    --bad-soft: #2c1614;
   }
+}
+:root[data-theme="dark"] {
+  --bg: #08100b;
+  --panel: #0f1a13;
+  --ink: #eef4ee;
+  --muted: #8fa295;
+  --line: #1f2c24;
+  --accent: #34e88f;
+  --accent-ink: #05140b;
+  --accent-soft: #10241a;
+  --highlight: #efc24a;
+  --highlight-ink: #241d06;
+  --highlight-soft: #2f2914;
+  --good: #8be3a8;
+  --good-soft: #10281a;
+  --warn: #f0c05a;
+  --warn-soft: #2c2410;
+  --bad: #ff7a6d;
+  --bad-soft: #2c1614;
 }
 
 html,
@@ -40,10 +71,26 @@ body {
   color: var(--ink);
 }
 body {
-  font-family:
-    ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif;
+  font-family: var(--font-body), ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Headings carry the personality — literary serif display face. */
+h1,
+h2,
+h3,
+.display {
+  font-family: var(--font-display), Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.08;
+}
+.font-mono,
+.tabular-nums {
+  font-family: var(--font-mono), ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-feature-settings: "tnum" 1;
 }
 
 /* small utility layer so markup stays clean */
@@ -83,10 +130,20 @@ body {
   .btn-primary {
     background: var(--accent);
     border-color: var(--accent);
-    color: #fff;
+    color: var(--accent-ink);
   }
   .btn-primary:hover:not(:disabled) {
-    background: color-mix(in srgb, var(--accent) 88%, #000);
+    background: color-mix(in srgb, var(--accent) 88%, var(--ink));
+  }
+  /* the signature "highlighter" mark — a hand-drawn swipe behind key words */
+  .mark {
+    background-color: transparent; /* override the UA <mark> yellow */
+    background-image: linear-gradient(var(--highlight-soft), var(--highlight-soft));
+    background-repeat: no-repeat;
+    background-position: 0 82%;
+    background-size: 100% 44%;
+    padding: 0 0.12em;
+    border-radius: 2px;
   }
   .input {
     width: 100%;
@@ -118,6 +175,160 @@ body {
   }
 }
 
+/* ─────────────────────────  motion  ─────────────────────────
+   Deliberate, subject-grounded moments. All disabled under reduced-motion. */
+@keyframes mark-draw {
+  from { background-size: 0% 44%; }
+  to { background-size: 100% 44%; }
+}
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* the highlighter swipes in under a word (hero signature) */
+.mark-draw {
+  background-size: 0% 44%;
+  animation: mark-draw 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) 0.45s forwards;
+}
+/* an inline correction "marks itself" — the tint draws across, then the fix appears */
+.hl-draw {
+  background-color: transparent; /* override the UA <mark> yellow */
+  background-repeat: no-repeat;
+  background-position: 0 82%;
+  background-size: 0% 42%;
+  border-radius: 3px;
+  padding: 0 0.12em;
+  animation: mark-draw 0.5s ease-out forwards;
+}
+
+.fade-up {
+  animation: fade-up 0.6s ease-out both;
+}
+
+/* scroll-reveal (paired with the <Reveal> observer) */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.reveal-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* gentle card lift on hover */
+.hover-lift {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px color-mix(in srgb, var(--ink) 13%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mark-draw,
+  .hl-draw,
+  .fade-up {
+    animation: none !important;
+  }
+  .mark-draw { background-size: 100% 44% !important; }
+  .hl-draw { background-size: 100% 42% !important; }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .hover-lift:hover { transform: none; }
+}
+
+/* ────────────────  marketing "agency" look (LANDING ONLY)  ────────────────
+   A self-contained black + electric-orange theme. It redefines the palette
+   tokens on a wrapper so the shared .card/.btn/.chip components adopt it, and
+   swaps headings to a bold grotesque. The app (outside .agency) is untouched. */
+.agency {
+  --bg: #08100b;          /* near-black with a faint green cast */
+  --panel: #0f1a13;
+  --ink: #eef4ee;
+  --muted: #8fa295;
+  --line: #1f2c24;
+  --accent: #34e88f;      /* vivid green */
+  --accent-ink: #05140b;  /* near-black text on green */
+  --accent-soft: #10241a;
+  --highlight: #2fe08a;
+  --highlight-soft: #10241a;
+  --highlight-ink: #c6f4da;
+  --good: #8be3a8;
+  --good-soft: #10281a;
+  --warn: #f0c05a;
+  --warn-soft: #2c2410;
+  --bad: #ff7a6d;
+  --bad-soft: #2c1614;
+  color-scheme: dark;
+  background: var(--bg);
+  color: var(--ink);
+}
+.agency h1,
+.agency h2,
+.agency h3,
+.agency .display {
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 0.98;
+}
+.agency .btn {
+  border-radius: 999px;
+}
+/* outline-style secondary button on the dark canvas */
+.agency .btn:not(.btn-primary) {
+  background: transparent;
+  border-color: color-mix(in srgb, var(--ink) 35%, transparent);
+  color: var(--ink);
+}
+.agency .btn:not(.btn-primary):hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: transparent;
+}
+/* luminous green glow on the primary CTA */
+.agency .btn-primary {
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 55%, transparent),
+    0 8px 34px color-mix(in srgb, var(--accent) 40%, transparent);
+}
+.agency .btn-primary:hover:not(:disabled) {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 30%, transparent),
+    0 10px 40px color-mix(in srgb, var(--accent) 55%, transparent);
+}
+
+/* dimensional emerald→lime gradient text with a soft bloom — the hero accent */
+.grad-accent {
+  background-image: linear-gradient(100deg, #12d98a 0%, #56f07c 46%, #c6ff4d 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 2px 22px color-mix(in srgb, #5cf07a 30%, transparent));
+}
+
+/* scrolling marquee ticker — the agency signature motion */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marquee 24s linear infinite;
+}
+/* outlined display text (agency headline accent) */
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--ink);
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}
+
 /* correction-card detail: collapsed on screen (shown when its card is active),
    always shown in print so the exported PDF is complete. */
 .cc-detail {
@@ -131,7 +342,7 @@ body {
 @media print {
   :root {
     --bg: #ffffff; --panel: #ffffff; --ink: #111111; --muted: #555555; --line: #d0d0d0;
-    --accent: #4f46e5; --accent-soft: #eef0ff; --good: #166534; --good-soft: #e8f5ec;
+    --accent: #0c7a48; --accent-soft: #e2f1e9; --good: #166534; --good-soft: #e8f5ec;
     --warn: #b45309; --warn-soft: #fdf1e3; --bad: #b91c1c; --bad-soft: #fbeaea;
   }
   header,

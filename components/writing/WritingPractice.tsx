@@ -1,8 +1,8 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { jsonFetch } from "@/lib/ui";
-import { MIN_WORDS, type WritingPrompt, type WritingSubmission, type WritingTask } from "@/lib/writing/types";
+import { MIN_WORDS, REC_MINUTES, type WritingPrompt, type WritingSubmission, type WritingTask } from "@/lib/writing/types";
 import { countWords } from "@/lib/writing/grade";
 import Feedback, { bandColor } from "./Feedback";
 
@@ -27,6 +27,7 @@ export default function WritingPractice({ task }: { task: WritingTask }) {
   const [hasLLM, setHasLLM] = useState(true);
 
   const min = MIN_WORDS[task];
+  const recMinutes = REC_MINUTES[task];
   const words = countWords(text);
   const selected = prompts?.find((p) => p.id === selectedId) ?? null;
 
@@ -116,7 +117,13 @@ export default function WritingPractice({ task }: { task: WritingTask }) {
   }
 
   return (
-    <div className="print-linear lg:w-[80rem] lg:max-w-[94vw] lg:relative lg:left-1/2 lg:-translate-x-1/2">
+    <>
+      {/* Floating exam clock — rendered outside the translated container below so
+          `position: fixed` tracks the viewport (a CSS transform on an ancestor
+          would otherwise anchor it to that ancestor). Keyed by question → resets. */}
+      {selected && view === "write" && <Timer key={selected.id} minutes={recMinutes} />}
+
+      <div className="print-linear lg:w-[80rem] lg:max-w-[94vw] lg:relative lg:left-1/2 lg:-translate-x-1/2">
       <div className="print-stack grid grid-cols-1 lg:grid-cols-[17rem_minmax(0,1fr)] gap-5 items-start">
         {/* ── question picker ── */}
         <QuestionList prompts={prompts} selectedId={selectedId} onPick={pick} />
@@ -178,7 +185,8 @@ export default function WritingPractice({ task }: { task: WritingTask }) {
           )}
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }
 
@@ -293,6 +301,12 @@ function PromptWriter({
         value={text}
         onChange={(e) => setText(e.target.value)}
         disabled={submitting}
+        // No browser spell-check/autocorrect while practising — exam-like, so
+        // catching your own spelling is part of the test, not the browser's job.
+        spellCheck={false}
+        autoCorrect="off"
+        autoCapitalize="off"
+        autoComplete="off"
       />
 
       <div className="flex items-center justify-between gap-3">
@@ -301,6 +315,172 @@ function PromptWriter({
         </div>
         <button className="btn btn-primary" onClick={onSubmit} disabled={submitting || !hasLLM || words < 5}>
           {submitting ? "Scoring…" : done ? "Submit new attempt" : "Submit for feedback"}
+        </button>
+      </div>
+    </div>
+  );
+}
+
+/* ── countdown clock: the exam-pacing recommendation (20 min T1 / 40 min T2) ── */
+
+function fmtClock(sec: number): string {
+  const a = Math.abs(sec);
+  return `${Math.floor(a / 60)}:${String(a % 60).padStart(2, "0")}`;
+}
+
+/** A clock face whose hand sweeps as time runs down (fraction 1 → 0). */
+function ClockIcon({ color, fraction }: { color: string; fraction: number }) {
+  const f = Math.max(0, Math.min(1, fraction));
+  const angle = (1 - f) * 2 * Math.PI; // 0 at top, clockwise as time passes
+  const hx = 12 + 5 * Math.sin(angle);
+  const hy = 12 - 5 * Math.cos(angle);
+  return (
+    <svg
+      width="30"
+      height="30"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+    >
+      <circle cx="12" cy="12" r="9" />
+      <line x1="12" y1="12" x2={hx.toFixed(2)} y2={hy.toFixed(2)} />
+    </svg>
+  );
+}
+
+const TIMER_POS_KEY = "lexi-writing-timer-pos";
+
+function Timer({ minutes }: { minutes: number }) {
+  const total = minutes * 60;
+  const [left, setLeft] = useState(total);
+  const [running, setRunning] = useState(false);
+
+  useEffect(() => {
+    if (!running) return;
+    const id = setInterval(() => setLeft((v) => v - 1), 1000);
+    return () => clearInterval(id);
+  }, [running]);
+
+  // Draggable position. null = default bottom-right; otherwise a saved {left, top}.
+  const boxRef = useRef<HTMLDivElement | null>(null);
+  const dragOffset = useRef<{ dx: number; dy: number } | null>(null);
+  const [pos, setPos] = useState<{ left: number; top: number } | null>(null);
+
+  useEffect(() => {
+    try {
+      const s = localStorage.getItem(TIMER_POS_KEY);
+      if (s) setPos(JSON.parse(s));
+    } catch {
+      /* ignore */
+    }
+  }, []);
+
+  // Keep it on-screen if the window is resized.
+  useEffect(() => {
+    if (!pos) return;
+    const clamp = () => {
+      const el = boxRef.current;
+      if (!el) return;
+      const w = el.offsetWidth, h = el.offsetHeight;
+      setPos((p) =>
+        p
+          ? {
+              left: Math.max(4, Math.min(p.left, window.innerWidth - w - 4)),
+              top: Math.max(4, Math.min(p.top, window.innerHeight - h - 4)),
+            }
+          : p,
+      );
+    };
+    window.addEventListener("resize", clamp);
+    return () => window.removeEventListener("resize", clamp);
+  }, [pos]);
+
+  function onGripDown(e: React.PointerEvent) {
+    const el = boxRef.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    dragOffset.current = { dx: e.clientX - rect.left, dy: e.clientY - rect.top };
+    setPos({ left: rect.left, top: rect.top }); // switch from bottom-right to explicit coords
+    e.currentTarget.setPointerCapture?.(e.pointerId);
+    e.preventDefault();
+  }
+  function onGripMove(e: React.PointerEvent) {
+    const d = dragOffset.current;
+    const el = boxRef.current;
+    if (!d || !el) return;
+    const w = el.offsetWidth, h = el.offsetHeight;
+    const nextLeft = Math.max(4, Math.min(e.clientX - d.dx, window.innerWidth - w - 4));
+    const nextTop = Math.max(4, Math.min(e.clientY - d.dy, window.innerHeight - h - 4));
+    setPos({ left: nextLeft, top: nextTop });
+  }
+  function onGripUp() {
+    if (!dragOffset.current) return;
+    dragOffset.current = null;
+    setPos((p) => {
+      if (p) {
+        try {
+          localStorage.setItem(TIMER_POS_KEY, JSON.stringify(p));
+        } catch {
+          /* ignore */
+        }
+      }
+      return p;
+    });
+  }
+
+  const over = left <= 0;
+  const low = left > 0 && left <= 120; // last 2 minutes
+  const started = running || left !== total;
+  const color = over ? "var(--bad)" : low ? "var(--warn)" : "var(--ink)";
+  const compact = "text-sm !px-3 !py-1.5";
+
+  return (
+    <div
+      ref={boxRef}
+      className="no-print fixed z-40 card shadow-lg flex items-center gap-2 pr-3 py-2"
+      style={{
+        ...(pos ? { left: pos.left, top: pos.top } : { right: 16, bottom: 16 }),
+        borderColor: over ? "var(--bad)" : low ? "var(--warn)" : "var(--line)",
+      }}
+    >
+      <div
+        onPointerDown={onGripDown}
+        onPointerMove={onGripMove}
+        onPointerUp={onGripUp}
+        className="self-stretch flex items-center px-1.5 cursor-move select-none muted"
+        style={{ touchAction: "none" }}
+        title="Drag to move the timer"
+        aria-label="Drag to move the timer"
+      >
+        ⠿
+      </div>
+      <ClockIcon color={color} fraction={left / total} />
+      <div className="flex flex-col leading-none">
+        <span className="text-2xl font-extrabold tabular-nums" style={{ color }}>
+          {over && "+"}
+          {fmtClock(left)}
+        </span>
+        <span className="muted text-[11px] mt-1">
+          {over ? `over ${minutes} min` : `of ${minutes} min`}
+        </span>
+      </div>
+      <div className="flex flex-col gap-1.5">
+        <button className={`btn ${compact}`} onClick={() => setRunning((r) => !r)}>
+          {running ? "Pause" : started ? "Resume" : "Start"}
+        </button>
+        <button
+          className={`btn ${compact}`}
+          onClick={() => {
+            setRunning(false);
+            setLeft(total);
+          }}
+          disabled={!started}
+        >
+          Reset
         </button>
       </div>
     </div>

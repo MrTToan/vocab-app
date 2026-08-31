@@ -6,12 +6,17 @@ import Link from "next/link";
 export default function WritingHome() {
   return (
     <div className="space-y-6">
-      <section>
-        <h1 className="text-3xl font-extrabold tracking-tight">Writing — IELTS Academic</h1>
-        <p className="muted mt-1">
-          Write an answer, get feedback graded against the four IELTS criteria with inline
-          corrections. One-shot feedback, no repeats.
-        </p>
+      <section className="flex items-start justify-between gap-3">
+        <div>
+          <h1 className="text-3xl font-extrabold tracking-tight">Writing — IELTS Academic</h1>
+          <p className="muted mt-1">
+            Write an answer, get feedback graded against the four IELTS criteria with inline
+            corrections. One-shot feedback, no repeats.
+          </p>
+        </div>
+        <Link href="/writing/add" className="btn btn-primary whitespace-nowrap">
+          ＋ Add a question
+        </Link>
       </section>
 
       <section className="grid grid-cols-1 sm:grid-cols-2 gap-3">

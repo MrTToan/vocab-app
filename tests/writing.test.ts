@@ -9,6 +9,7 @@ import {
   normalizeScore,
 } from "../lib/writing/grade";
 import type { WritingScoreRaw } from "../lib/writing/types";
+import { resolveCardContext } from "../lib/writing/discuss";
 
 describe("countWords", () => {
   it("counts whitespace-separated tokens with a letter/digit", () => {
@@ -117,5 +118,57 @@ describe("normalizeScore", () => {
     expect(n.corrections[0].start).toBe(4);
     expect(n.corrections[0].error_type).toBe("tense");
     expect(n.priorities[0].criterion).toBe("task_achievement"); // normalized
+  });
+});
+
+describe("resolveCardContext (discuss)", () => {
+  const sub: any = {
+    id: "s1",
+    prompt_id: "p1",
+    task_type: "task2",
+    text: "Some essay text.",
+    word_count: 3,
+    overall_band: 6.5,
+    bands: {
+      task_achievement: { band: 6, comment: "Address all parts." },
+      coherence_cohesion: { band: 6.5, comment: "Link ideas." },
+      lexical_resource: { band: 6, comment: "Widen vocab." },
+      grammatical_range_accuracy: { band: 5.5, comment: "Watch tenses." },
+    },
+    strengths: [],
+    general_feedback: "",
+    priorities: [
+      { criterion: "lexical_resource", title: "Use topic words", why: "repetitive", how: "vary", example: "myriad" },
+    ],
+    corrections: [
+      { original: "is", suggestion: "are", error_type: "subject_verb_agreement", criterion: "grammatical_range_accuracy", explanation: "Plural subject." },
+    ],
+    created_at: 0,
+  };
+
+  it("resolves a criterion card with band + comment", () => {
+    const ctx = resolveCardContext(sub, "criterion:lexical_resource");
+    expect(ctx).not.toBeNull();
+    expect(ctx!.label).toContain("Lexical Resource");
+    expect(ctx!.label).toContain("6.0");
+    expect(ctx!.detail).toContain("Widen vocab.");
+  });
+
+  it("resolves a coaching (priority) card by index", () => {
+    const ctx = resolveCardContext(sub, "priority:0");
+    expect(ctx!.label).toContain("Use topic words");
+    expect(ctx!.detail).toContain("vary");
+  });
+
+  it("resolves an inline correction by index", () => {
+    const ctx = resolveCardContext(sub, "correction:0");
+    expect(ctx!.label).toContain('"is"');
+    expect(ctx!.label).toContain('"are"');
+    expect(ctx!.detail).toContain("Plural subject.");
+  });
+
+  it("returns null for an unknown or out-of-range card", () => {
+    expect(resolveCardContext(sub, "priority:9")).toBeNull();
+    expect(resolveCardContext(sub, "bogus:1")).toBeNull();
   });
 });

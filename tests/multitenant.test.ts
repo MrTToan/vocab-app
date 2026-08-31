@@ -75,7 +75,10 @@ describe("writing: shared prompts, private scores", () => {
 
     // A ingests a prompt — it belongs to the shared pool
     await a.addPrompts([
-      { id: "p1", task_type: "task2", title: "T", prompt_text: "Write about X." },
+      {
+        id: "p1", task_type: "task2", title: "T", prompt_text: "Write about X.",
+        image_path: null, chart_data: null, model_answer: null, source_file: "test",
+      },
     ]);
 
     // both users see the same shared prompt

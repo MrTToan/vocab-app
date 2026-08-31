@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { STAGE_ORDER, STAGE_LABEL, STAGE_VAR, jsonFetch } from "@/lib/ui";
+import { STAGE_ORDER, STAGE_LABEL, STAGE_VAR, stageBarWidth, jsonFetch } from "@/lib/ui";
 import {
   CRITERIA,
   CRITERION_LABEL,
@@ -101,18 +101,26 @@ export default function ReportPage() {
       {/* ══════════ VOCABULARY ══════════ */}
       <h2 className="text-xl font-bold pt-2">Vocabulary</h2>
 
-      <Section title="Mastery by stage">
+      <Section title="Mastery by stage" subtitle="New is your not-yet-started backlog; the coloured bars compare your started stages to each other.">
         <div className="space-y-2">
           {STAGE_ORDER.map((st) => {
             const n = words?.stageCounts[st] ?? 0;
-            const pct = words?.total ? (n / words.total) * 100 : 0;
+            const pct = stageBarWidth(st, words?.stageCounts ?? {});
+            const isNew = st === "new";
             return (
               <div key={st} className="flex items-center gap-3">
                 <div className="w-24 text-sm font-semibold">{STAGE_LABEL[st]}</div>
                 <div className="flex-1 h-3 rounded-full overflow-hidden bg-black/5 dark:bg-white/10">
-                  <div className="h-full rounded-full" style={{ width: `${pct}%`, background: STAGE_VAR[st] }} />
+                  <div
+                    className="h-full rounded-full"
+                    style={{
+                      width: `${pct}%`,
+                      background: STAGE_VAR[st],
+                      opacity: isNew ? 0.35 : 1,
+                    }}
+                  />
                 </div>
-                <div className="w-8 text-right text-sm muted">{n}</div>
+                <div className="w-10 text-right text-sm muted tabular-nums">{n}</div>
               </div>
             );
           })}

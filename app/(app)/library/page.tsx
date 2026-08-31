@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import type { Stage, Word } from "@/lib/types";
+import Link from "next/link";
+import type { Collection, Stage, Word } from "@/lib/types";
 import {
   STAGE_ORDER,
   STAGE_LABEL,
@@ -12,19 +13,42 @@ import {
 } from "@/lib/ui";
 
 type Filter = "all" | "weak" | Stage;
+type Membership = { word_id: string; collection_id: string };
+const EMPTY_SET: ReadonlySet<string> = new Set();
 
 export default function LibraryPage() {
   const [words, setWords] = useState<Word[] | null>(null);
+  const [collections, setCollections] = useState<Collection[]>([]);
+  const [memberships, setMemberships] = useState<Membership[]>([]);
   const [q, setQ] = useState("");
   const [filter, setFilter] = useState<Filter>("all");
+  const [collectionFilter, setCollectionFilter] = useState<string>(""); // "" = any
 
   async function reload() {
-    const { words } = await jsonFetch<{ words: Word[] }>("/api/words");
-    setWords(words);
+    const [w, c] = await Promise.all([
+      jsonFetch<{ words: Word[] }>("/api/words"),
+      jsonFetch<{ collections: Collection[]; memberships: Membership[] }>(
+        "/api/collections",
+      ),
+    ]);
+    setWords(w.words);
+    setCollections(c.collections);
+    setMemberships(c.memberships);
   }
   useEffect(() => {
     reload();
   }, []);
+
+  // word id -> set of its collection ids (from the flat membership list)
+  const memberMap = useMemo(() => {
+    const m = new Map<string, Set<string>>();
+    for (const { word_id, collection_id } of memberships) {
+      (m.get(word_id) ?? m.set(word_id, new Set()).get(word_id)!).add(
+        collection_id,
+      );
+    }
+    return m;
+  }, [memberships]);
 
   const shown = useMemo(() => {
     if (!words) return [];
@@ -33,6 +57,8 @@ export default function LibraryPage() {
       if (filter === "weak" && !isWeak(w)) return false;
       if (filter !== "all" && filter !== "weak" && w.stage !== filter)
         return false;
+      if (collectionFilter && !memberMap.get(w.id)?.has(collectionFilter))
+        return false;
       if (!needle) return true;
       return (
         w.word.toLowerCase().includes(needle) ||
@@ -40,7 +66,7 @@ export default function LibraryPage() {
         w.tags.some((t) => t.toLowerCase().includes(needle))
       );
     });
-  }, [words, q, filter]);
+  }, [words, q, filter, collectionFilter, memberMap]);
 
   return (
     <div className="space-y-4">
@@ -70,6 +96,28 @@ export default function LibraryPage() {
         ))}
       </div>
 
+      {collections.length > 0 && (
+        <div className="flex items-center gap-2 text-sm">
+          <span className="muted">Collection</span>
+          <select
+            className="input py-1.5 flex-1 min-w-0"
+            value={collectionFilter}
+            onChange={(e) => setCollectionFilter(e.target.value)}
+            aria-label="Filter by collection"
+          >
+            <option value="">Any</option>
+            {collections.map((c) => (
+              <option key={c.id} value={c.id}>
+                {(c.emoji ? `${c.emoji} ` : "") + c.name} ({c.count ?? 0})
+              </option>
+            ))}
+          </select>
+          <Link href="/collections" className="muted text-xs underline whitespace-nowrap">
+            manage
+          </Link>
+        </div>
+      )}
+
       {words === null ? (
         <p className="muted">Loading…</p>
       ) : shown.length === 0 ? (
@@ -77,7 +125,13 @@ export default function LibraryPage() {
       ) : (
         <div className="space-y-2">
           {shown.map((w) => (
-            <Row key={w.id} word={w} onChanged={reload} />
+            <Row
+              key={w.id}
+              word={w}
+              collections={collections}
+              memberIds={memberMap.get(w.id) ?? EMPTY_SET}
+              onChanged={reload}
+            />
           ))}
         </div>
       )}
@@ -113,11 +167,34 @@ function Pill({
   );
 }
 
-function Row({ word, onChanged }: { word: Word; onChanged: () => void }) {
+function Row({
+  word,
+  collections,
+  memberIds,
+  onChanged,
+}: {
+  word: Word;
+  collections: Collection[];
+  memberIds: ReadonlySet<string>;
+  onChanged: () => void;
+}) {
   const [open, setOpen] = useState(false);
   const [edit, setEdit] = useState<Word>(word);
   const [busy, setBusy] = useState(false);
   const acc = recentAccuracy(word);
+
+  async function toggleCollection(collectionId: string, on: boolean) {
+    setBusy(true);
+    try {
+      await jsonFetch(`/api/collections/${collectionId}/members`, {
+        method: "POST",
+        body: JSON.stringify(on ? { add: [word.id] } : { remove: [word.id] }),
+      });
+      await onChanged();
+    } finally {
+      setBusy(false);
+    }
+  }
 
   async function save() {
     setBusy(true);
@@ -215,6 +292,39 @@ function Row({ word, onChanged }: { word: Word; onChanged: () => void }) {
           <E label="Usage trap" v={edit.false_friend_note} set={(x) => setEdit({ ...edit, false_friend_note: x })} />
           <E label="Your note" v={edit.personal_note} set={(x) => setEdit({ ...edit, personal_note: x })} />
           <E label="Tags" v={edit.tags.join(", ")} set={(x) => setEdit({ ...edit, tags: splitList(x) })} />
+
+          <div>
+            <span className="text-xs font-semibold muted">Collections</span>
+            {collections.length === 0 ? (
+              <p className="muted text-sm mt-1">
+                No collections yet —{" "}
+                <a href="/collections" className="underline">create one</a>.
+              </p>
+            ) : (
+              <div className="flex flex-wrap gap-1.5 mt-1">
+                {collections.map((c) => {
+                  const on = memberIds.has(c.id);
+                  return (
+                    <button
+                      key={c.id}
+                      type="button"
+                      disabled={busy}
+                      onClick={() => toggleCollection(c.id, !on)}
+                      className="px-2.5 py-1 rounded-full text-sm font-semibold border transition-colors"
+                      style={
+                        on
+                          ? { background: "var(--accent)", borderColor: "var(--accent)", color: "#fff" }
+                          : { borderColor: "var(--line)", color: "var(--muted)" }
+                      }
+                      title={on ? "Click to remove" : "Click to add"}
+                    >
+                      {(c.emoji ? `${c.emoji} ` : "") + c.name}
+                    </button>
+                  );
+                })}
+              </div>
+            )}
+          </div>
 
           <div className="flex flex-wrap gap-2 pt-1">
             <button className="btn btn-primary" onClick={save} disabled={busy}>
