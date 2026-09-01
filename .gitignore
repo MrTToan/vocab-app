@@ -28,6 +28,8 @@
 /words.csv
 
 # internal working docs — kept local, off the public repo
+/TECH.md
+/PRD.md
 /CLAUDE.md
 /AGENTS.md
 /STATUS.md
