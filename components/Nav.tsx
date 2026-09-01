@@ -33,7 +33,7 @@ function moduleOf(path: string): "vocab" | "writing" {
 
 // `authSlot` is a server component (AuthStatus) passed in by the layout — a
 // client component can still render server nodes it receives as props.
-export default function Nav({ authSlot, showAdmin }: { authSlot?: ReactNode; showAdmin?: boolean }) {
+export default function Nav({ authSlot, adminSlot }: { authSlot?: ReactNode; adminSlot?: ReactNode }) {
   const path = usePathname();
   const active = moduleOf(path);
 
@@ -80,20 +80,7 @@ export default function Nav({ authSlot, showAdmin }: { authSlot?: ReactNode; sho
           >
             📊<span className="hidden sm:inline"> Report</span>
           </Link>
-          {showAdmin && (
-            <Link
-              href="/admin"
-              title="Admin"
-              className="px-2.5 sm:px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap transition-colors"
-              style={
-                path === "/admin" || path.startsWith("/admin/")
-                  ? { background: "var(--accent-soft)", color: "var(--accent)" }
-                  : { color: "var(--muted)" }
-              }
-            >
-              🛠️<span className="hidden sm:inline"> Admin</span>
-            </Link>
-          )}
+          {adminSlot}
           <ThemeToggle />
           {authSlot}
         </div>
