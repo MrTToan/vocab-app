@@ -3,6 +3,7 @@ import path from "path";
 import { randomUUID } from "crypto";
 import type {
   Word,
+  WordListItem,
   Attempt,
   Question,
   Collection,
@@ -53,6 +54,9 @@ export class ForbiddenError extends Error {
 export interface ScopedStore {
   /** Words this user is STUDYING (has a user_words row for), hydrated with progress. */
   all(): Promise<Word[]>;
+  /** Like `all()` but returns only the slim fields the Library list view needs
+   *  (see WordListItem) — skips the heavy text columns so the payload stays small. */
+  listLite(): Promise<WordListItem[]>;
   /** A single visible content word (public catalog or this user's own), hydrated
    *  with this user's progress (defaults to stage `new` if not yet studied). */
   get(id: string): Promise<Word | undefined>;
@@ -407,6 +411,32 @@ class SqliteStore implements Store {
       args: [userId],
     });
     return rs.rows.map((r: any) => this.mapWord(r));
+  }
+
+  async listLite(userId: string): Promise<WordListItem[]> {
+    await this.connect();
+    // Only the slim columns the Library list view needs — the heavy text fields
+    // (definition, examples, notes, synonyms, collocations) are left on the row
+    // and fetched per-word via get() when a row is expanded to edit.
+    const rs = await this.db.execute({
+      sql: `SELECT w."id", w."word", w."ipa", w."vi_meaning", w."tags",
+                   w."created_at", ${W_PROGRESS}
+              FROM user_words uw JOIN words w ON w.id = uw.word_id
+             WHERE uw.user_id = ?
+             ORDER BY w.created_at DESC`,
+      args: [userId],
+    });
+    return rs.rows.map((r: any) => ({
+      id: r.id,
+      word: r.word || "",
+      ipa: r.ipa || "",
+      vi_meaning: r.vi_meaning || "",
+      tags: jsonArr(r.tags),
+      stage: (r.p_stage as WordListItem["stage"]) || "new",
+      times_seen: Number(r.p_times || 0),
+      recent_results: jsonArr(r.p_recent) as WordListItem["recent_results"],
+      created_at: Number(r.created_at || Date.now()),
+    }));
   }
 
   async get(userId: string, id: string): Promise<Word | undefined> {
@@ -965,6 +995,7 @@ function userWordInsert(userId: string, w: Word) {
 function makeScoped(raw: any, userId: string): ScopedStore {
   return {
     all: () => raw.all(userId),
+    listLite: () => raw.listLite(userId),
     get: (id) => raw.get(userId, id),
     findByWord: (word) => raw.findByWord(userId, word),
     add: (word) => raw.add(userId, word),
@@ -1080,6 +1111,20 @@ class SheetStore implements Store {
   }
   async all(userId: string): Promise<Word[]> {
     return (await this.load()).map((w) => this.own(w, userId));
+  }
+  // Single-user local backend — no perf concern, so just trim full rows.
+  async listLite(userId: string): Promise<WordListItem[]> {
+    return (await this.all(userId)).map((w) => ({
+      id: w.id,
+      word: w.word,
+      ipa: w.ipa,
+      vi_meaning: w.vi_meaning,
+      tags: w.tags,
+      stage: w.stage,
+      times_seen: w.times_seen,
+      recent_results: w.recent_results,
+      created_at: w.created_at,
+    }));
   }
   async get(userId: string, id: string): Promise<Word | undefined> {
     const w = (await this.load()).find((x) => x.id === id);

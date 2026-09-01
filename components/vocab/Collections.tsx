@@ -4,6 +4,12 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import type { Collection } from "@/lib/types";
 import { jsonFetch } from "@/lib/ui";
+import {
+  useCollections,
+  revalidateCollections,
+  revalidateWords,
+  revalidateStats,
+} from "@/lib/swr";
 
 /**
  * Manage word collections — named, curated study sets. Create / rename / delete
@@ -18,24 +24,17 @@ import { jsonFetch } from "@/lib/ui";
  * keeps working after the redirect.
  */
 export default function Collections({ highlightId }: { highlightId?: string }) {
-  const [collections, setCollections] = useState<Collection[] | null>(null);
-  const [owner, setOwner] = useState(false);
+  // Shared SWR cache — the same /api/collections fetch the Library and Add pages
+  // use, so it's deduped and every collection write here is reflected there.
+  const { data } = useCollections();
+  const collections = data?.collections ?? null;
+  const owner = !!data?.owner;
   const [name, setName] = useState("");
   const [emoji, setEmoji] = useState("");
   const [description, setDescription] = useState("");
   const [busy, setBusy] = useState(false);
 
-  async function reload() {
-    const { collections, owner } = await jsonFetch<{
-      collections: Collection[];
-      owner: boolean;
-    }>("/api/collections");
-    setCollections(collections);
-    setOwner(!!owner);
-  }
-  useEffect(() => {
-    reload();
-  }, []);
+  const reload = revalidateCollections;
 
   async function create() {
     if (!name.trim()) return;
@@ -216,6 +215,8 @@ function CollectionRow({
         `/api/collections/${collection.id}/adopt`,
         { method: "POST" },
       );
+      // Adopting inserts user_words rows, so the Library list and stats change.
+      await Promise.all([revalidateWords(), revalidateStats()]);
       alert(`Added ${adopted} word${adopted === 1 ? "" : "s"} to your rotation.`);
     } finally {
       setBusy(false);

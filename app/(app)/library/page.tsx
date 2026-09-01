@@ -2,7 +2,8 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import type { Collection, Stage, Word } from "@/lib/types";
+import { mutate } from "swr";
+import type { Collection, Stage, Word, WordListItem } from "@/lib/types";
 import {
   STAGE_ORDER,
   STAGE_LABEL,
@@ -11,51 +12,43 @@ import {
   isWeak,
   jsonFetch,
 } from "@/lib/ui";
+import {
+  useWordsList,
+  useCollections,
+  useWord,
+  wordKey,
+  applyMembershipToCache,
+  mutateAfterWordChange,
+} from "@/lib/swr";
 
 type Filter = "all" | "weak" | Stage;
-type Membership = { word_id: string; collection_id: string };
 const EMPTY_SET: ReadonlySet<string> = new Set();
 
 export default function LibraryPage() {
-  const [words, setWords] = useState<Word[] | null>(null);
-  const [collections, setCollections] = useState<Collection[]>([]);
-  const [memberships, setMemberships] = useState<Membership[]>([]);
+  // SWR: the slim word list + collections/memberships are cached, so a repeat
+  // visit paints instantly and revalidates in the background. Shared keys mean
+  // the collections fetch is deduped with the Home/Add pages.
+  const { data: wordsData } = useWordsList();
+  const { data: colData } = useCollections();
+  const words = wordsData?.words ?? null;
+  const collections = colData?.collections ?? [];
+  const memberships = colData?.memberships ?? [];
+
   const [q, setQ] = useState("");
   const [filter, setFilter] = useState<Filter>("all");
   const [collectionFilter, setCollectionFilter] = useState<string>(""); // "" = any
-
-  async function reload() {
-    const [w, c] = await Promise.all([
-      jsonFetch<{ words: Word[] }>("/api/words"),
-      jsonFetch<{ collections: Collection[]; memberships: Membership[] }>(
-        "/api/collections",
-      ),
-    ]);
-    setWords(w.words);
-    setCollections(c.collections);
-    setMemberships(c.memberships);
-  }
+  // Render the (possibly ~1,200-row) list in chunks so a phone never builds the
+  // whole DOM at once. Reset the window whenever the visible set changes.
+  const PAGE = 60;
+  const [limit, setLimit] = useState(PAGE);
   useEffect(() => {
-    reload();
-  }, []);
+    setLimit(PAGE);
+  }, [q, filter, collectionFilter]);
 
-  // Optimistic, in-place membership toggle — no full reload.
+  // Optimistic, in-place membership toggle in the SWR cache — no full reload,
+  // no refetch (composes with the instant chip toggle from PR #11).
   function applyMembership(wordId: string, collectionId: string, on: boolean) {
-    setMemberships((prev) => {
-      const exists = prev.some(
-        (m) => m.word_id === wordId && m.collection_id === collectionId,
-      );
-      if (on) {
-        return exists
-          ? prev
-          : [...prev, { word_id: wordId, collection_id: collectionId }];
-      }
-      return exists
-        ? prev.filter(
-            (m) => !(m.word_id === wordId && m.collection_id === collectionId),
-          )
-        : prev;
-    });
+    applyMembershipToCache(wordId, collectionId, on);
   }
 
   // word id -> set of its collection ids (from the flat membership list)
@@ -143,16 +136,23 @@ export default function LibraryPage() {
         <p className="muted">No words match.</p>
       ) : (
         <div className="space-y-2">
-          {shown.map((w) => (
+          {shown.slice(0, limit).map((w) => (
             <Row
               key={w.id}
-              word={w}
+              item={w}
               collections={collections}
               memberIds={memberMap.get(w.id) ?? EMPTY_SET}
-              onChanged={reload}
               onToggleMembership={applyMembership}
             />
           ))}
+          {shown.length > limit && (
+            <button
+              className="btn w-full"
+              onClick={() => setLimit((n) => n + PAGE)}
+            >
+              Show more ({shown.length - limit} more)
+            </button>
+          )}
         </div>
       )}
     </div>
@@ -188,41 +188,49 @@ function Pill({
 }
 
 function Row({
-  word,
+  item,
   collections,
   memberIds,
-  onChanged,
   onToggleMembership,
 }: {
-  word: Word;
+  item: WordListItem;
   collections: Collection[];
   memberIds: ReadonlySet<string>;
-  onChanged: () => void;
   onToggleMembership: (wordId: string, collectionId: string, on: boolean) => void;
 }) {
   const [open, setOpen] = useState(false);
-  const [edit, setEdit] = useState<Word>(word);
+  // Full word (definition/examples/notes) is loaded on demand only when the row
+  // is expanded — the list itself carries just the slim fields. SWR caches it, so
+  // reopening is instant.
+  const { data: fullData } = useWord(open ? item.id : null);
+  const full = fullData?.word;
+  const [edit, setEdit] = useState<Word | null>(null);
   const [busy, setBusy] = useState(false);
   const [membershipError, setMembershipError] = useState<string | null>(null);
   // Per-collection in-flight guard so rapid taps on the same chip don't race.
   const [pending, setPending] = useState<ReadonlySet<string>>(EMPTY_SET);
-  const acc = recentAccuracy(word);
+  const acc = recentAccuracy(item);
+
+  // Seed the editor once the full word arrives.
+  useEffect(() => {
+    if (full) setEdit(full);
+  }, [full]);
 
   async function toggleCollection(collectionId: string, on: boolean) {
     if (pending.has(collectionId)) return;
     setMembershipError(null);
-    // 1. Optimistic: flip the chip immediately.
-    onToggleMembership(word.id, collectionId, on);
+    // 1. Optimistic: flip the chip immediately (in the SWR cache, no refetch).
+    onToggleMembership(item.id, collectionId, on);
     setPending((prev) => new Set(prev).add(collectionId));
     // 2. Persist in the background — no full reload.
     try {
       await jsonFetch(`/api/collections/${collectionId}/members`, {
         method: "POST",
-        body: JSON.stringify(on ? { add: [word.id] } : { remove: [word.id] }),
+        body: JSON.stringify(on ? { add: [item.id] } : { remove: [item.id] }),
       });
     } catch {
       // 3. Revert on failure.
-      onToggleMembership(word.id, collectionId, !on);
+      onToggleMembership(item.id, collectionId, !on);
       setMembershipError("Couldn't update collection. Try again.");
     } finally {
       setPending((prev) => {
@@ -234,34 +242,41 @@ function Row({
   }
 
   async function save() {
+    if (!edit) return;
     setBusy(true);
     try {
-      await jsonFetch(`/api/words/${word.id}`, {
-        method: "PATCH",
-        body: JSON.stringify({
-          vi_meaning: edit.vi_meaning,
-          definition_en: edit.definition_en,
-          example_simple: edit.example_simple,
-          example_complex: edit.example_complex,
-          false_friend_note: edit.false_friend_note,
-          personal_note: edit.personal_note,
-          synonyms: edit.synonyms,
-          collocations: edit.collocations,
-          tags: edit.tags,
-        }),
-      });
-      await onChanged();
+      const { word: updated } = await jsonFetch<{ word: Word }>(
+        `/api/words/${item.id}`,
+        {
+          method: "PATCH",
+          body: JSON.stringify({
+            vi_meaning: edit.vi_meaning,
+            definition_en: edit.definition_en,
+            example_simple: edit.example_simple,
+            example_complex: edit.example_complex,
+            false_friend_note: edit.false_friend_note,
+            personal_note: edit.personal_note,
+            synonyms: edit.synonyms,
+            collocations: edit.collocations,
+            tags: edit.tags,
+          }),
+        },
+      );
+      // Prime the per-word cache with the fresh detail, then refresh the list/stats.
+      mutate(wordKey(item.id), { word: updated }, { revalidate: false });
+      await mutateAfterWordChange();
       setOpen(false);
     } finally {
       setBusy(false);
     }
   }
   async function remove() {
-    if (!confirm(`Delete “${word.word}”?`)) return;
+    if (!confirm(`Delete “${item.word}”?`)) return;
     setBusy(true);
     try {
-      await jsonFetch(`/api/words/${word.id}`, { method: "DELETE" });
-      await onChanged();
+      await jsonFetch(`/api/words/${item.id}`, { method: "DELETE" });
+      mutate(wordKey(item.id), undefined, { revalidate: false });
+      await mutateAfterWordChange();
     } finally {
       setBusy(false);
     }
@@ -269,16 +284,20 @@ function Row({
   async function resetProgress() {
     setBusy(true);
     try {
-      await jsonFetch(`/api/words/${word.id}`, {
-        method: "PATCH",
-        body: JSON.stringify({
-          stage: "new",
-          times_seen: 0,
-          recent_results: [],
-          last_seen_at: null,
-        }),
-      });
-      await onChanged();
+      const { word: updated } = await jsonFetch<{ word: Word }>(
+        `/api/words/${item.id}`,
+        {
+          method: "PATCH",
+          body: JSON.stringify({
+            stage: "new",
+            times_seen: 0,
+            recent_results: [],
+            last_seen_at: null,
+          }),
+        },
+      );
+      mutate(wordKey(item.id), { word: updated }, { revalidate: false });
+      await mutateAfterWordChange();
     } finally {
       setBusy(false);
     }
@@ -292,26 +311,26 @@ function Row({
       >
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2">
-            <span className="font-bold truncate">{word.word}</span>
-            {word.ipa && (
-              <span className="muted text-xs truncate">{word.ipa}</span>
+            <span className="font-bold truncate">{item.word}</span>
+            {item.ipa && (
+              <span className="muted text-xs truncate">{item.ipa}</span>
             )}
           </div>
           <div className="muted text-sm truncate">
-            {word.vi_meaning || "— no meaning yet —"}
+            {item.vi_meaning || "— no meaning yet —"}
           </div>
         </div>
         <span
           className="chip"
           style={{
             background: "transparent",
-            color: STAGE_VAR[word.stage],
-            borderColor: STAGE_VAR[word.stage],
+            color: STAGE_VAR[item.stage],
+            borderColor: STAGE_VAR[item.stage],
           }}
         >
-          {STAGE_LABEL[word.stage]}
+          {STAGE_LABEL[item.stage]}
         </span>
-        {word.times_seen > 0 && (
+        {item.times_seen > 0 && (
           <span className="muted text-xs w-10 text-right">
             {Math.round(acc * 100)}%
           </span>
@@ -320,69 +339,75 @@ function Row({
 
       {open && (
         <div className="px-4 pb-4 space-y-3 border-t pt-3" style={{ borderColor: "var(--line)" }}>
-          <E label="Vietnamese meaning" v={edit.vi_meaning} set={(x) => setEdit({ ...edit, vi_meaning: x })} />
-          <E label="English definition" v={edit.definition_en} set={(x) => setEdit({ ...edit, definition_en: x })} />
-          <E label="Example (simple)" v={edit.example_simple} set={(x) => setEdit({ ...edit, example_simple: x })} area />
-          <E label="Example (complex)" v={edit.example_complex} set={(x) => setEdit({ ...edit, example_complex: x })} area />
-          <E label="Synonyms" v={edit.synonyms.join(", ")} set={(x) => setEdit({ ...edit, synonyms: splitList(x) })} />
-          <E label="Collocations" v={edit.collocations.join(", ")} set={(x) => setEdit({ ...edit, collocations: splitList(x) })} />
-          <E label="Usage trap" v={edit.false_friend_note} set={(x) => setEdit({ ...edit, false_friend_note: x })} />
-          <E label="Your note" v={edit.personal_note} set={(x) => setEdit({ ...edit, personal_note: x })} />
-          <E label="Tags" v={edit.tags.join(", ")} set={(x) => setEdit({ ...edit, tags: splitList(x) })} />
+          {!edit ? (
+            <p className="muted text-sm">Loading…</p>
+          ) : (
+            <>
+              <E label="Vietnamese meaning" v={edit.vi_meaning} set={(x) => setEdit({ ...edit, vi_meaning: x })} />
+              <E label="English definition" v={edit.definition_en} set={(x) => setEdit({ ...edit, definition_en: x })} />
+              <E label="Example (simple)" v={edit.example_simple} set={(x) => setEdit({ ...edit, example_simple: x })} area />
+              <E label="Example (complex)" v={edit.example_complex} set={(x) => setEdit({ ...edit, example_complex: x })} area />
+              <E label="Synonyms" v={edit.synonyms.join(", ")} set={(x) => setEdit({ ...edit, synonyms: splitList(x) })} />
+              <E label="Collocations" v={edit.collocations.join(", ")} set={(x) => setEdit({ ...edit, collocations: splitList(x) })} />
+              <E label="Usage trap" v={edit.false_friend_note} set={(x) => setEdit({ ...edit, false_friend_note: x })} />
+              <E label="Your note" v={edit.personal_note} set={(x) => setEdit({ ...edit, personal_note: x })} />
+              <E label="Tags" v={edit.tags.join(", ")} set={(x) => setEdit({ ...edit, tags: splitList(x) })} />
 
-          <div>
-            <span className="text-xs font-semibold muted">Collections</span>
-            {collections.length === 0 ? (
-              <p className="muted text-sm mt-1">
-                No collections yet —{" "}
-                <a href="/vocab#collections" className="underline">create one</a>.
-              </p>
-            ) : (
-              <div className="flex flex-wrap gap-1.5 mt-1">
-                {collections.map((c) => {
-                  const on = memberIds.has(c.id);
-                  return (
-                    <button
-                      key={c.id}
-                      type="button"
-                      onClick={() => toggleCollection(c.id, !on)}
-                      className="px-2.5 py-1 rounded-full text-sm font-semibold border transition-colors"
-                      style={
-                        on
-                          ? { background: "var(--accent)", borderColor: "var(--accent)", color: "#fff" }
-                          : { borderColor: "var(--line)", color: "var(--muted)" }
-                      }
-                      title={on ? "Click to remove" : "Click to add"}
-                    >
-                      {(c.emoji ? `${c.emoji} ` : "") + c.name}
-                    </button>
-                  );
-                })}
+              <div>
+                <span className="text-xs font-semibold muted">Collections</span>
+                {collections.length === 0 ? (
+                  <p className="muted text-sm mt-1">
+                    No collections yet —{" "}
+                    <a href="/vocab#collections" className="underline">create one</a>.
+                  </p>
+                ) : (
+                  <div className="flex flex-wrap gap-1.5 mt-1">
+                    {collections.map((c) => {
+                      const on = memberIds.has(c.id);
+                      return (
+                        <button
+                          key={c.id}
+                          type="button"
+                          onClick={() => toggleCollection(c.id, !on)}
+                          className="px-2.5 py-1 rounded-full text-sm font-semibold border transition-colors"
+                          style={
+                            on
+                              ? { background: "var(--accent)", borderColor: "var(--accent)", color: "#fff" }
+                              : { borderColor: "var(--line)", color: "var(--muted)" }
+                          }
+                          title={on ? "Click to remove" : "Click to add"}
+                        >
+                          {(c.emoji ? `${c.emoji} ` : "") + c.name}
+                        </button>
+                      );
+                    })}
+                  </div>
+                )}
+                {membershipError && (
+                  <p className="text-sm mt-1" style={{ color: "var(--bad)" }}>
+                    {membershipError}
+                  </p>
+                )}
               </div>
-            )}
-            {membershipError && (
-              <p className="text-sm mt-1" style={{ color: "var(--bad)" }}>
-                {membershipError}
-              </p>
-            )}
-          </div>
 
-          <div className="flex flex-wrap gap-2 pt-1">
-            <button className="btn btn-primary" onClick={save} disabled={busy}>
-              Save
-            </button>
-            <button className="btn" onClick={resetProgress} disabled={busy}>
-              Reset progress
-            </button>
-            <button
-              className="btn"
-              style={{ color: "var(--bad)", borderColor: "var(--bad)" }}
-              onClick={remove}
-              disabled={busy}
-            >
-              Delete
-            </button>
-          </div>
+              <div className="flex flex-wrap gap-2 pt-1">
+                <button className="btn btn-primary" onClick={save} disabled={busy}>
+                  Save
+                </button>
+                <button className="btn" onClick={resetProgress} disabled={busy}>
+                  Reset progress
+                </button>
+                <button
+                  className="btn"
+                  style={{ color: "var(--bad)", borderColor: "var(--bad)" }}
+                  onClick={remove}
+                  disabled={busy}
+                >
+                  Delete
+                </button>
+              </div>
+            </>
+          )}
         </div>
       )}
     </div>

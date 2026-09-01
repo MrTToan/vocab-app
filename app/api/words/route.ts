@@ -5,10 +5,18 @@ import { reserveQuota, QuotaError } from "@/lib/auth/quota";
 import { enrichWord, hasProvider } from "@/lib/llm";
 import { clozeFromSentence, saveHarvest } from "@/lib/harvest";
 
-export async function GET() {
+export async function GET(req: Request) {
   const userId = await currentUserId();
   if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
-  const words = await getStore().forUser(userId).all();
+  const store = getStore().forUser(userId);
+  // ?fields=list -> slim rows for the Library list view (no heavy text columns).
+  // The full word (definition/examples/notes) is fetched per-id on demand.
+  if (new URL(req.url).searchParams.get("fields") === "list") {
+    const words = await store.listLite();
+    words.sort((a, b) => b.created_at - a.created_at);
+    return NextResponse.json({ words });
+  }
+  const words = await store.all();
   // newest first
   words.sort((a, b) => b.created_at - a.created_at);
   return NextResponse.json({ words });

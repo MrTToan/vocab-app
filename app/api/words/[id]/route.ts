@@ -5,6 +5,17 @@ import type { Word } from "@/lib/types";
 
 type Ctx = { params: Promise<{ id: string }> };
 
+/** Full word (all fields) — used to lazily load a word's editor detail after the
+ *  Library list is fetched slim via GET /api/words?fields=list. */
+export async function GET(_req: Request, ctx: Ctx) {
+  const { id } = await ctx.params;
+  const userId = await currentUserId();
+  if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+  const word = await getStore().forUser(userId).get(id);
+  if (!word) return NextResponse.json({ error: "not found" }, { status: 404 });
+  return NextResponse.json({ word });
+}
+
 export async function PATCH(req: Request, ctx: Ctx) {
   const { id } = await ctx.params;
   const userId = await currentUserId();

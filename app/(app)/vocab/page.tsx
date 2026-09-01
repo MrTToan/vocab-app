@@ -2,7 +2,9 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { STAGE_ORDER, STAGE_LABEL, STAGE_VAR, stageBarWidth, jsonFetch } from "@/lib/ui";
+import useSWR from "swr";
+import { STAGE_ORDER, STAGE_LABEL, STAGE_VAR, stageBarWidth } from "@/lib/ui";
+import { fetcher, KEY_STATS, KEY_CONFIG } from "@/lib/swr";
 import Collections from "@/components/vocab/Collections";
 
 interface Summary {
@@ -22,16 +24,15 @@ interface Stats {
 
 export default function Home() {
   // Home only needs the aggregate numbers, so it reads /api/stats (a small
-  // payload) instead of downloading the full word list.
-  const [stats, setStats] = useState<Stats | null>(null);
-  const [config, setConfig] = useState<Config | null>(null);
+  // payload) instead of downloading the full word list. SWR caches both, so a
+  // repeat visit paints instantly and the /api/config key is deduped with Add.
+  const { data: stats = null } = useSWR<Stats>(KEY_STATS, fetcher);
+  const { data: config = null } = useSWR<Config>(KEY_CONFIG, fetcher);
   // Carried over from the old /collections?collection=<id> deep-link (via the
   // redirect) so the folded-in Collections section highlights the right set.
   const [highlightCollection, setHighlightCollection] = useState<string | undefined>();
 
   useEffect(() => {
-    jsonFetch<Stats>("/api/stats").then(setStats);
-    jsonFetch<Config>("/api/config").then(setConfig);
     try {
       const c = new URLSearchParams(window.location.search).get("collection");
       if (c) setHighlightCollection(c);
