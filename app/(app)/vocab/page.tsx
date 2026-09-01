@@ -11,13 +11,18 @@ interface Summary {
   provider: string;
   model: string;
 }
-interface Config {
-  backend: "sheet" | "sqlite";
-  hasLLM: boolean;
-  mode: "default" | "custom" | "chain";
-  active: number;
-  chain: Summary[];
-}
+// /api/config only includes the diagnostic fields (backend, provider chain)
+// for the owner; everyone else gets `{ hasLLM, owner: false }`.
+type Config =
+  | { hasLLM: boolean; owner: false }
+  | {
+      hasLLM: boolean;
+      owner: true;
+      backend: "sheet" | "sqlite";
+      mode: "default" | "custom" | "chain";
+      active: number;
+      chain: Summary[];
+    };
 interface Stats {
   words: { total: number; weak: number; stageCounts: Record<string, number> };
 }
@@ -60,9 +65,12 @@ export default function Home() {
         </p>
       </section>
 
-      {config && !config.hasLLM && <SetupBanner config={config} />}
+      {/* Owner-only diagnostics: the setup nudge (it points at a repo doc) and the
+          storage/provider strip. End users never see backend or vendor names —
+          if AI is off they just get a plain functional note. */}
+      {config && config.owner && !config.hasLLM && <SetupBanner />}
 
-      {config && (
+      {config && config.owner ? (
         <div className="flex flex-wrap items-center gap-2 text-xs muted">
           <span className="chip">
             storage: {config.backend === "sheet" ? "Google Sheet" : "SQLite"}
@@ -96,7 +104,11 @@ export default function Home() {
             <span>AI off — flashcards, cloze & type-the-word still work</span>
           )}
         </div>
-      )}
+      ) : config && !config.hasLLM ? (
+        <p className="text-xs muted">
+          AI features are off right now — flashcards, cloze &amp; type-the-word still work.
+        </p>
+      ) : null}
 
       <section className="card p-5">
         <div className="flex items-center justify-between gap-4">
@@ -141,7 +153,7 @@ export default function Home() {
       <section className="grid grid-cols-2 gap-3">
         <Link href="/add" className="card p-4 hover:opacity-90">
           <div className="font-bold">＋ Add a word</div>
-          <div className="muted text-sm">LLM fills meaning &amp; examples</div>
+          <div className="muted text-sm">Meaning &amp; examples filled in for you</div>
         </Link>
         <Link href="/add?tab=import" className="card p-4 hover:opacity-90">
           <div className="font-bold">⇪ Import CSV</div>
@@ -159,7 +171,7 @@ export default function Home() {
   );
 }
 
-function SetupBanner({ config }: { config: Config }) {
+function SetupBanner() {
   return (
     <section
       className="card p-4 text-sm"

@@ -25,6 +25,7 @@ export default function WritingPractice({ task }: { task: WritingTask }) {
   const [loadingReview, setLoadingReview] = useState(false);
   const [error, setError] = useState("");
   const [hasLLM, setHasLLM] = useState(true);
+  const [isOwner, setIsOwner] = useState(false); // gates the setup hint (repo doc path)
 
   const min = MIN_WORDS[task];
   const recMinutes = REC_MINUTES[task];
@@ -43,7 +44,12 @@ export default function WritingPractice({ task }: { task: WritingTask }) {
   }, [task]);
 
   useEffect(() => {
-    jsonFetch<{ hasLLM: boolean }>("/api/config").then((c) => setHasLLM(!!c.hasLLM)).catch(() => {});
+    jsonFetch<{ hasLLM: boolean; owner?: boolean }>("/api/config")
+      .then((c) => {
+        setHasLLM(!!c.hasLLM);
+        setIsOwner(!!c.owner);
+      })
+      .catch(() => {});
     loadList();
   }, [loadList]);
 
@@ -132,7 +138,14 @@ export default function WritingPractice({ task }: { task: WritingTask }) {
         <div className="min-w-0 space-y-4">
           {!hasLLM && (
             <div className="card p-3 text-sm" style={{ background: "var(--warn-soft)", borderColor: "var(--warn)" }}>
-              No LLM is configured, so scoring is off. Set up a provider in <code>docs/SETUP-LLM-PROVIDERS.md</code>.
+              {isOwner ? (
+                <>
+                  No LLM is configured, so scoring is off. Set up a provider in{" "}
+                  <code>docs/SETUP-LLM-PROVIDERS.md</code>.
+                </>
+              ) : (
+                <>AI scoring is off right now, so answers can&apos;t be graded yet.</>
+              )}
             </div>
           )}
 

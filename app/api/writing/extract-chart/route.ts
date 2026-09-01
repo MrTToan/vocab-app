@@ -10,7 +10,7 @@ import { extractChartData } from "@/lib/writing/extract";
 export async function POST(req: Request) {
   if (!hasProvider("extract-chart")) {
     return NextResponse.json(
-      { error: "No LLM configured. Add a provider (see docs/SETUP-LLM-PROVIDERS.md) to auto-read charts." },
+      { error: "AI chart reading is not available right now — describe the chart yourself." },
       { status: 400 },
     );
   }
