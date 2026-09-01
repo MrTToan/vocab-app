@@ -130,8 +130,8 @@ export default function ImportWords() {
             </div>
             <div className="space-y-2">
               {TARGETS.map((t) => (
-                <div key={t.key} className="flex items-center gap-3">
-                  <div className="w-40 text-sm font-semibold">
+                <div key={t.key} className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
+                  <div className="sm:w-40 text-sm font-semibold sm:shrink-0">
                     {t.label}
                     {"required" in t && t.required && (
                       <span style={{ color: "var(--bad)" }}> *</span>

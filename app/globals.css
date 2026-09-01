@@ -70,6 +70,11 @@ body {
   background: var(--bg);
   color: var(--ink);
 }
+/* Never let a stray wide element push the whole page sideways on a phone.
+   Real layout still uses fluid widths — this is only a last-resort guard. */
+html {
+  overflow-x: hidden;
+}
 body {
   font-family: var(--font-body), ui-sans-serif, system-ui, -apple-system, "Segoe UI",
     Roboto, Helvetica, Arial, sans-serif;
@@ -108,6 +113,8 @@ h3,
     font-weight: 600;
     border-radius: 10px;
     padding: 0.6rem 1rem;
+    /* comfortable thumb target on phones (~44px) without looking oversized on desktop */
+    min-height: 2.75rem;
     border: 1px solid var(--line);
     background: var(--panel);
     color: var(--ink);
@@ -151,6 +158,10 @@ h3,
     border: 1px solid var(--line);
     border-radius: 10px;
     padding: 0.6rem 0.8rem;
+    /* 16px floor keeps mobile Safari from auto-zooming on focus; a comfortable
+       tap height on phones. Utilities like `min-h-[…]` still win for textareas. */
+    font-size: 16px;
+    min-height: 2.75rem;
     color: var(--ink);
     outline: none;
   }

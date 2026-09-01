@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function WritingHome() {
   return (
     <div className="space-y-6">
-      <section className="flex items-start justify-between gap-3">
+      <section className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <h1 className="text-3xl font-extrabold tracking-tight">Writing — IELTS Academic</h1>
           <p className="muted mt-1">

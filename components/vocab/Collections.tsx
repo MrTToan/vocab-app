@@ -263,58 +263,66 @@ function CollectionRow({
           </div>
         </div>
       ) : (
-        <div className="flex flex-wrap items-center gap-3">
-          <span className="text-xl shrink-0" aria-hidden>
-            {collection.emoji || "📁"}
-          </span>
-          <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-2">
-              <span className="font-bold truncate">{collection.name}</span>
-              {isPublic && (
-                <span
-                  className="chip text-xs shrink-0"
-                  style={{ color: "var(--accent)", borderColor: "var(--accent)" }}
-                >
-                  Public
-                </span>
-              )}
-            </div>
-            <div className="muted text-sm truncate">
-              {collection.count ?? 0} word{(collection.count ?? 0) === 1 ? "" : "s"}
-              {collection.description ? ` · ${collection.description}` : ""}
+        <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+          <div className="flex items-center gap-3 min-w-0">
+            <span className="text-xl shrink-0" aria-hidden>
+              {collection.emoji || "📁"}
+            </span>
+            <div className="flex-1 min-w-0">
+              {/* name must truncate on a plain span (not a flex parent), and the
+                  Public chip must not shrink — otherwise the name collapses (#8). */}
+              <div className="flex items-center gap-2">
+                <span className="font-bold truncate">{collection.name}</span>
+                {isPublic && (
+                  <span
+                    className="chip text-xs shrink-0"
+                    style={{ color: "var(--accent)", borderColor: "var(--accent)" }}
+                  >
+                    Public
+                  </span>
+                )}
+              </div>
+              <div className="muted text-sm truncate">
+                {collection.count ?? 0} word{(collection.count ?? 0) === 1 ? "" : "s"}
+                {collection.description ? ` · ${collection.description}` : ""}
+              </div>
             </div>
           </div>
-          <Link
-            href={`/practice?collection=${collection.id}`}
-            className="btn btn-primary shrink-0"
-          >
-            Study →
-          </Link>
-          {!collection.mine && (
-            <button className="btn shrink-0" onClick={adopt} disabled={busy}>
-              Add all
-            </button>
-          )}
-          {collection.mine && owner && (
-            <button className="btn shrink-0" onClick={toggleVisibility} disabled={busy}>
-              {isPublic ? "Make private" : "Make public"}
-            </button>
-          )}
-          {collection.mine && (
-            <>
-              <button className="btn shrink-0" onClick={() => setEditing(true)} disabled={busy}>
-                Edit
+          {/* Actions: wrap under the name on phones, stay inline on the right on
+              desktop; each button is shrink-0 so it keeps its size. */}
+          <div className="flex flex-wrap items-center gap-2 sm:ml-auto sm:shrink-0">
+            <Link
+              href={`/practice?collection=${collection.id}`}
+              className="btn btn-primary shrink-0"
+            >
+              Study →
+            </Link>
+            {!collection.mine && (
+              <button className="btn shrink-0" onClick={adopt} disabled={busy}>
+                Add all
               </button>
-              <button
-                className="btn shrink-0"
-                style={{ color: "var(--bad)", borderColor: "var(--bad)" }}
-                onClick={remove}
-                disabled={busy}
-              >
-                Delete
+            )}
+            {collection.mine && owner && (
+              <button className="btn shrink-0" onClick={toggleVisibility} disabled={busy}>
+                {isPublic ? "Make private" : "Make public"}
               </button>
-            </>
-          )}
+            )}
+            {collection.mine && (
+              <>
+                <button className="btn shrink-0" onClick={() => setEditing(true)} disabled={busy}>
+                  Edit
+                </button>
+                <button
+                  className="btn shrink-0"
+                  style={{ color: "var(--bad)", borderColor: "var(--bad)" }}
+                  onClick={remove}
+                  disabled={busy}
+                >
+                  Delete
+                </button>
+              </>
+            )}
+          </div>
         </div>
       )}
     </div>
