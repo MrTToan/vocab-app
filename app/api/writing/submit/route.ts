@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { hasProvider } from "@/lib/providers";
 import { writingStore } from "@/lib/writing/store";
 import { currentUserId } from "@/lib/auth/user";
-import { reserveQuota, QuotaError } from "@/lib/auth/quota";
+import { reserveQuota, isRateLimitError } from "@/lib/auth/quota";
 import { scoreWriting } from "@/lib/writing/score";
 
 /**
@@ -49,7 +49,7 @@ export async function POST(req: Request) {
     });
     return NextResponse.json({ submission });
   } catch (err: any) {
-    if (err instanceof QuotaError) {
+    if (isRateLimitError(err)) {
       return NextResponse.json({ error: err.message }, { status: 429 });
     }
     return NextResponse.json(

@@ -3,6 +3,10 @@ import { hasProvider } from "@/lib/providers";
 import { writingStore } from "@/lib/writing/store";
 import { discussCard } from "@/lib/writing/discuss";
 import { currentUserId } from "@/lib/auth/user";
+import { reserveQuota, isRateLimitError } from "@/lib/auth/quota";
+
+/** Longest question a student can send in one turn. */
+export const MAX_MESSAGE_CHARS = 1000;
 
 /**
  * GET  /api/writing/discuss?submissionId=..  -> { messages: [...] }  (all cards)
@@ -10,6 +14,7 @@ import { currentUserId } from "@/lib/auth/user";
  *
  * A per-feedback-card Q&A thread. The card's context is resolved server-side from
  * the stored submission, so the client only sends which card + the question.
+ * POST is metered (QUOTA_DISCUSS + burst window) and the message is length-capped.
  */
 export async function GET(req: Request) {
   const userId = await currentUserId();
@@ -45,6 +50,12 @@ export async function POST(req: Request) {
   if (question.length < 2) {
     return NextResponse.json({ error: "Please type a question." }, { status: 400 });
   }
+  if (question.length > MAX_MESSAGE_CHARS) {
+    return NextResponse.json(
+      { error: `Please keep your question under ${MAX_MESSAGE_CHARS} characters.` },
+      { status: 400 },
+    );
+  }
 
   const submission = await writingStore.getSubmission(userId, submissionId);
   if (!submission) return NextResponse.json({ error: "submission not found" }, { status: 404 });
@@ -56,15 +67,19 @@ export async function POST(req: Request) {
   const history = all.filter((m) => m.card_key === cardKey).sort((a, b) => a.seq - b.seq);
 
   try {
+    await reserveQuota(userId, "discuss-writing");
     const reply = await discussCard(prompt, submission, cardKey, history, question);
     const messages = await writingStore.addDiscussionMessages(submissionId, cardKey, [
       { role: "user", content: question },
       { role: "assistant", content: reply },
     ]);
     return NextResponse.json({ messages });
-  } catch (err: any) {
+  } catch (err: unknown) {
+    if (isRateLimitError(err)) {
+      return NextResponse.json({ error: err.message }, { status: 429 });
+    }
     return NextResponse.json(
-      { error: `Couldn't get an answer: ${err?.message ?? err}` },
+      { error: `Couldn't get an answer: ${err instanceof Error ? err.message : String(err)}` },
       { status: 502 },
     );
   }

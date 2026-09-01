@@ -12,9 +12,13 @@ import {
  * "Discuss this feedback with the AI." A student opens a thread on ONE feedback
  * card (a criterion band, a coaching point, or an inline correction) and asks
  * follow-up questions; the tutor answers grounded in their actual essay, the
- * prompt, and that specific piece of feedback. Multi-turn: the whole thread so
- * far is replayed each time. Answers are persisted (writing_discussions table).
+ * prompt, and that specific piece of feedback. Multi-turn: the last few turns
+ * of the thread are replayed each time (bounded — see HISTORY_TURNS — so a long
+ * thread can't inflate the prompt). Answers are persisted (writing_discussions).
  */
+
+/** How many prior messages of the card's thread are sent to the model. */
+export const HISTORY_TURNS = 6;
 
 export const DISCUSS_SYSTEM = `You are a patient, precise IELTS writing tutor talking with a student (English level B1–B2, first language Vietnamese) about ONE specific piece of feedback on an essay they wrote.
 
@@ -81,10 +85,11 @@ function buildUser(
   parts.push(`# The writing task (${s.task_type === "task1" ? "IELTS Task 1" : "IELTS Task 2"})\n${prompt.prompt_text}`);
   parts.push(`# The student's essay (${s.word_count} words)\n${s.text}`);
   parts.push(`# The feedback card being discussed\n${card.label}\n${card.detail}`);
-  if (history.length) {
+  const recent = history.slice(-HISTORY_TURNS);
+  if (recent.length) {
     parts.push(
       "# Conversation so far\n" +
-        history.map((m) => `${m.role === "user" ? "Student" : "Tutor"}: ${m.content}`).join("\n"),
+        recent.map((m) => `${m.role === "user" ? "Student" : "Tutor"}: ${m.content}`).join("\n"),
     );
   }
   parts.push(`# The student's new question\n${question}`);
