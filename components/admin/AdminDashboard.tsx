@@ -1,8 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { STAGE_ORDER, STAGE_LABEL, STAGE_VAR, stageBarWidth, jsonFetch } from "@/lib/ui";
+import { useEffect, useMemo, useState } from "react";
+import { jsonFetch } from "@/lib/ui";
+import { paginate } from "@/lib/admin/paginate";
 import type { AdminStats } from "@/lib/admin/stats";
+
+const USERS_PER_PAGE = 10;
 
 /*
  * Owner-only admin dashboard. Renders the aggregate metrics from
@@ -13,10 +16,16 @@ import type { AdminStats } from "@/lib/admin/stats";
 export default function AdminDashboard() {
   const [s, setS] = useState<AdminStats | null>(null);
   const [err, setErr] = useState<string | null>(null);
+  const [userPage, setUserPage] = useState(1);
 
   useEffect(() => {
     jsonFetch<AdminStats>("/api/admin/stats").then(setS).catch((e) => setErr(String(e.message ?? e)));
   }, []);
+
+  const usersPage = useMemo(
+    () => paginate(s?.vocab.topUsers ?? [], userPage, USERS_PER_PAGE),
+    [s, userPage],
+  );
 
   if (err) {
     return (
@@ -69,47 +78,34 @@ export default function AdminDashboard() {
         <BarChart points={s.users.cumulative} color="var(--accent)" />
       </Section>
 
-      {/* ══════════ VOCABULARY ══════════ */}
-      <h2 className="text-xl font-bold pt-2">Vocabulary</h2>
-
-      <Section title="Most active users" subtitle="By words studied">
-        {s.vocab.topUsers.length === 0 ? (
+      <Section
+        title="Most active users"
+        subtitle={`Ranked by words studied · ${usersPage.total} total`}
+      >
+        {usersPage.total === 0 ? (
           <Empty>No study activity yet.</Empty>
         ) : (
-          <RankBars
-            rows={s.vocab.topUsers.map((u) => ({
-              key: u.user_id,
-              label: u.label,
-              value: u.studied,
-              note: `${u.mastered} mastered`,
-            }))}
-          />
+          <>
+            <RankBars
+              rows={usersPage.items.map((u, i) => ({
+                key: u.user_id,
+                rank: (usersPage.page - 1) * USERS_PER_PAGE + i + 1,
+                label: u.label,
+                value: u.studied,
+                note: `${u.mastered} mastered`,
+              }))}
+              max={s.vocab.topUsers[0]?.studied ?? 1}
+            />
+            <Pager
+              page={usersPage.page}
+              pageCount={usersPage.pageCount}
+              hasPrev={usersPage.hasPrev}
+              hasNext={usersPage.hasNext}
+              onPrev={() => setUserPage((p) => p - 1)}
+              onNext={() => setUserPage((p) => p + 1)}
+            />
+          </>
         )}
-      </Section>
-
-      {/* ══════════ PROGRESS ══════════ */}
-      <h2 className="text-xl font-bold pt-2">Progress</h2>
-
-      <Section title="Words by stage" subtitle="Across all users’ study lists">
-        <div className="space-y-2">
-          {STAGE_ORDER.map((st) => {
-            const n = s.progress.stages[st] ?? 0;
-            const pct = stageBarWidth(st, s.progress.stages);
-            const isNew = st === "new";
-            return (
-              <div key={st} className="flex items-center gap-3">
-                <div className="w-24 text-sm font-semibold">{STAGE_LABEL[st]}</div>
-                <div className="flex-1 h-3 rounded-full overflow-hidden bg-black/5 dark:bg-white/10">
-                  <div
-                    className="h-full rounded-full"
-                    style={{ width: `${pct}%`, background: STAGE_VAR[st], opacity: isNew ? 0.35 : 1 }}
-                  />
-                </div>
-                <div className="w-12 text-right text-sm muted tabular-nums">{n}</div>
-              </div>
-            );
-          })}
-        </div>
       </Section>
 
       {/* ══════════ ACTIVITY ══════════ */}
@@ -236,15 +232,20 @@ function BarChart({ points, color }: { points: Point[]; color: string }) {
 function RankBars({
   rows,
   color = "var(--accent)",
+  max: maxProp,
 }: {
-  rows: { key: string; label: string; value: number; note?: string }[];
+  rows: { key: string; label: string; value: number; note?: string; rank?: number }[];
   color?: string;
+  max?: number; // fixed scale (keeps bars comparable across paginated pages)
 }) {
-  const max = Math.max(1, ...rows.map((r) => r.value));
+  const max = Math.max(1, maxProp ?? Math.max(0, ...rows.map((r) => r.value)));
   return (
     <div className="space-y-1.5">
       {rows.map((r) => (
         <div key={r.key} className="flex items-center gap-2 sm:gap-3">
+          {r.rank != null && (
+            <div className="w-6 shrink-0 text-right text-sm muted tabular-nums">{r.rank}</div>
+          )}
           <div className="w-24 sm:w-40 truncate text-sm font-semibold" title={r.label}>{r.label}</div>
           <div className="flex-1 h-2.5 rounded-full overflow-hidden bg-black/5 dark:bg-white/10">
             <div className="h-full rounded-full" style={{ width: `${(r.value / max) * 100}%`, background: color }} />
@@ -255,6 +256,37 @@ function RankBars({
           </div>
         </div>
       ))}
+    </div>
+  );
+}
+
+function Pager({
+  page,
+  pageCount,
+  hasPrev,
+  hasNext,
+  onPrev,
+  onNext,
+}: {
+  page: number;
+  pageCount: number;
+  hasPrev: boolean;
+  hasNext: boolean;
+  onPrev: () => void;
+  onNext: () => void;
+}) {
+  if (pageCount <= 1) return null;
+  return (
+    <div className="flex items-center justify-between gap-3 pt-1">
+      <button className="btn" onClick={onPrev} disabled={!hasPrev} aria-label="Previous page">
+        ‹ Prev
+      </button>
+      <span className="muted text-sm tabular-nums">
+        Page {page} of {pageCount}
+      </span>
+      <button className="btn" onClick={onNext} disabled={!hasNext} aria-label="Next page">
+        Next ›
+      </button>
     </div>
   );
 }
