@@ -81,13 +81,15 @@ describe("adminStats aggregates", () => {
     expect(s.vocab.topUsers[0]).toMatchObject({ label: "Alice", studied: 3, mastered: 1 });
   });
 
-  it("distributes progress across stages", async () => {
+  it("counts mastered (stage=known) across all users", async () => {
     const s = await adminStats(NOW);
-    expect(s.progress.stages.known).toBe(2); // alice w1 + bob w1
-    expect(s.progress.stages.recall).toBe(1);
-    expect(s.progress.stages.new).toBe(1);
-    expect(s.progress.stages.production).toBe(0);
-    expect(s.progress.mastered).toBe(2);
+    expect(s.progress.mastered).toBe(2); // alice w1 + bob w1
+  });
+
+  it("ranks all users by words studied (descending), unpaginated", async () => {
+    const s = await adminStats(NOW);
+    expect(s.vocab.topUsers.map((u) => u.label)).toEqual(["Alice", "Bob"]);
+    expect(s.vocab.topUsers.map((u) => u.studied)).toEqual([3, 1]);
   });
 
   it("aggregates activity: attempts and daily active users", async () => {
