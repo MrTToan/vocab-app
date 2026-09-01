@@ -10,6 +10,9 @@
  * nothing else in the app needs to change.
  */
 
+import { cache } from "react";
+import type { Session } from "next-auth";
+
 // The pre-auth owner (you). The migration assigns all existing data to this id,
 // and on first Google sign-in the users row for OWNER_EMAIL reuses this id, so
 // your existing ~1,128 words reunite with your real account.
@@ -47,13 +50,25 @@ export function authConfigured(): boolean {
   return !!process.env.AUTH_GOOGLE_ID && !!process.env.AUTH_SECRET;
 }
 
+/**
+ * Resolve the NextAuth session ONCE per request. `cache()` memoizes for the
+ * lifetime of a single server request, so the several call sites that need the
+ * caller (the app layout's Suspense children, AuthStatus, route handlers) share
+ * one `auth()` session-decode instead of paying it each. Returns null when auth
+ * is not configured (the dev seam) or there is no session.
+ */
+export const getSession = cache(async (): Promise<Session | null> => {
+  if (!authConfigured()) return null;
+  const { auth } = await import("@/auth");
+  return auth();
+});
+
 /** Resolve the current user's id, or null if unauthenticated. */
 export async function currentUserId(): Promise<string | null> {
   // Dev seam: with no auth configured, the app runs as the local owner exactly
   // as before. The moment AUTH_* creds are set, real Google sessions take over.
   if (!authConfigured()) return DEV_USER_ID;
-  const { auth } = await import("@/auth");
-  const session = await auth();
+  const session = await getSession();
   return (session?.user as { id?: string } | undefined)?.id ?? null;
 }
 

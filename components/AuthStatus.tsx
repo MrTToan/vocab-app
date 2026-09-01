@@ -1,5 +1,5 @@
-import { auth, signIn, signOut } from "@/auth";
-import { authConfigured } from "@/lib/auth/user";
+import { signIn, signOut } from "@/auth";
+import { authConfigured, getSession } from "@/lib/auth/user";
 
 /*
  * Sign-in / sign-out control for the nav. Server component.
@@ -9,7 +9,7 @@ import { authConfigured } from "@/lib/auth/user";
  */
 export default async function AuthStatus() {
   if (!authConfigured()) return null;
-  const session = await auth();
+  const session = await getSession();
 
   if (!session?.user) {
     return (
