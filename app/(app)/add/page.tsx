@@ -2,13 +2,14 @@
 
 import { useEffect, useState } from "react";
 import AddWord from "@/components/vocab/AddWord";
-import ImportWords from "@/components/vocab/ImportWords";
+import PasteImport from "@/components/vocab/PasteImport";
 
 type Tab = "single" | "import";
 
 /**
  * Combined "Add" page: one nav entry that hosts both ways to add words — a
- * single word (with live duplicate check + enrichment) and a bulk CSV import.
+ * single word (with live duplicate check + enrichment) and a paste-a-list bulk
+ * import (parse, dedupe, enrich each new word).
  * The old /import route redirects here with ?tab=import so its deep-links still
  * open straight on the importer.
  */
@@ -53,11 +54,11 @@ export default function AddPage() {
           ＋ Single word
         </TabButton>
         <TabButton on={tab === "import"} onClick={() => select("import")}>
-          ⇪ Import CSV
+          ⇪ Paste a list
         </TabButton>
       </div>
 
-      {tab === "single" ? <AddWord /> : <ImportWords />}
+      {tab === "single" ? <AddWord /> : <PasteImport />}
     </div>
   );
 }
