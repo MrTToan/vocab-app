@@ -1,6 +1,6 @@
 # PRD — Personal English Vocabulary Trainer (working title: "Lexi")
 
-**Owner:** you (single user) · **Status:** ✅ Phase 1 built & in use · **+ Writing module (IELTS) built** · **Created:** 2026-08-01
+**Owner:** you · **Status:** ✅ Phase 1 built & in use · **+ Writing module (IELTS) built** · **+ deployed multi-tenant (Google auth, shared public catalog, admin portal)** · **Created:** 2026-08-01
 
 > This PRD is kept in sync with what's actually shipped. For architecture see `TECH.md`.
 
@@ -52,9 +52,9 @@ which retires the word from active rotation.
 > plain language), see the **[Feature Guide](docs/features/)**.
 
 ### 4.1 Word intake
-- **[core] One-time CSV import** — your file has English + extra columns (POS / notes / examples).
-  Map columns → keep what you have, LLM fills the gaps (VN meaning, definition, missing examples,
-  collocations, false-friend flags). Preview before commit.
+- **[core] Bulk import** — the primary path is now **paste a list** of words (newline/comma
+  separated) → dedup preview → auto-enrich → add. **CSV import** (map columns, LLM fills gaps,
+  preview before commit) is kept as an advanced option. See `docs/features/adding-words.md`.
 - **[core] Add one word (or a pasted sentence)** — type a word; LLM auto-enriches all fields.
   Quick "add a word I just met" flow.
 - **[core] Word list / library view** — browse, search, filter (by stage, tag, weak words),
@@ -153,8 +153,9 @@ A second learning module beside vocabulary (full design: `docs/WRITING-SPEC.md`;
 - **Data:** `writing_prompts` / `writing_submissions` (+ `priorities`) / `writing_corrections` (additive).
 
 ## 5. Out of scope (for now)
-Audio/TTS, speaking/pronunciation scoring, full SRS intervals, multi-user/accounts,
-mobile native app, social/sharing, images.
+Audio/TTS, speaking/pronunciation scoring, full SRS intervals, mobile native app,
+social/sharing, images. *(Multi-user/accounts, originally out of scope, has since shipped —
+Google auth + a shared public catalog with per-user progress; see `TECH.md`.)*
 
 ## 6. Phasing
 - **Phase 1 (MVP) — ✅ built & in use:** CSV import + add word + enrichment · library (+ duplicate
@@ -162,8 +163,9 @@ mobile native app, social/sharing, images.
   scored) · stage ladder + smart picker · **progress page**. Runs locally on SQLite.
   *Beyond the original MVP, also shipped:* provider-flexible LLM (Anthropic / OpenAI-compatible /
   Gemini + ordered fallback chain), SQLite/libSQL storage (+ Turso for deploy), typed two-way flashcards.
-- **Phase 2 — not yet:** roleplay chat, cloze story, TTS + listening/dictation, deploy (auth + Turso),
-  retry/backoff on LLM calls, `engine.ts` unit tests.
+- **Phase 2 — partly shipped:** ✅ **deploy** (Docker self-host + NextAuth Google sign-in, multi-tenant),
+  ✅ shared **public collections** + owner admin portal, ✅ content/progress split. *Not yet:* roleplay
+  chat, cloze story, TTS + listening/dictation, retry/backoff on LLM calls, `engine.ts` unit tests.
 
 ## 7. Success criteria
 - Adding/importing words feels effortless; enrichment is genuinely useful.

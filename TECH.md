@@ -76,10 +76,14 @@ members appear as `new`, so **public packs are practisable**) — then runs the
 unchanged `pickNext` over exactly that set; a word's `stage` stays global. Adopting
 a public pack (`POST /api/collections/:id/adopt`) inserts `user_words` rows for its
 members and **copies no content**. Only the owner/admin marks a collection public
-(system-owned). UI: `/collections` (manage + publish toggle + "Add all"), the
-`/practice` switcher (remembered in `localStorage`), assignment from Library + Add.
-Feature doc: `docs/features/collections.md`. Migration: `scripts/migrate-content-split.mjs`
-(idempotent).
+(system-owned). Four public packs are seeded (IELTS Task 1 & 2, Casual English 100, Academic
+Writing 100) via `scripts/ingest-public-collections.mjs` + `content/collections/`. UI: the
+collections manager is folded into **Home** (`/vocab#collections`, `components/vocab/Collections.tsx`;
+`/collections` redirects there) with the publish toggle + "Add all", the `/practice` switcher
+(remembered in `localStorage`), and per-word assignment from Library + Add.
+Feature doc: `docs/features/collections.md`. Migration path (against a copy first):
+`scripts/migrate-multitenant.mjs` → `scripts/migrate-content-split.mjs` →
+`scripts/ingest-public-collections.mjs` (all idempotent).
 
 ## 3. LLM strategy (`lib/providers.ts`, `lib/llm.ts`)
 
@@ -162,34 +166,68 @@ Additive second module beside vocab; reuses storage + the LLM chain, adds its ow
 - **Report:** `/report` is the single cross-skill analytics page (vocab dashboard + writing analytics);
   `/progress` redirects to it.
 
+## 4c. Admin portal (owner-only)
+
+Read-only usage dashboard at `/admin`, gated to the owner (`isOwner`). Metrics are aggregated
+**in SQL** over the same libSQL DB via a private client (`lib/admin/stats.ts` → `AdminStats`):
+users (total + 30-day signups/cumulative), vocab (catalog words, `user_words` studied instances,
+distinct studied, most-active users), mastered count, activity (attempts/day + daily-active users),
+and LLM usage (all-time/today/by-task/heaviest consumers, from `llm_usage`). Only counts + display
+labels leave the DB — never a user's content. Gating is enforced in both `app/(app)/admin/page.tsx`
+(`force-dynamic`, 403 view) and `app/api/admin/stats/route.ts`. The users list paginates 10/page
+client-side (`lib/admin/paginate.ts`); daily series shaped by `lib/admin/aggregate.ts`. UI:
+`components/admin/AdminDashboard.tsx`. Feature doc: `docs/features/admin.md`.
+
+## 4d. Client caching (`lib/swr.ts`)
+
+The client uses **SWR** — one typed fetcher + one cache key per endpoint (`KEY_WORDS_LIST`,
+`KEY_COLLECTIONS`, `KEY_STATS`, `KEY_CONFIG`, `KEY_WRITING_STATS`, per-word `wordKey(id)`). Shared
+data (collections, stats, config) is fetched once and deduped across pages, so repeat visits paint
+from cache and revalidate in the background; every write revalidates the affected key(s) via the
+`mutate*` helpers. The **Library** was slimmed: it loads `/api/words?fields=list` (`store.listLite`
+— id/word/ipa/meaning/tags/progress only, heavy text fields omitted) and lazy-loads full detail per
+word (`useWord`) only when a row is expanded; Home reads only `/api/stats`. The Library
+collection-chip toggle is **optimistic** — `applyMembershipToCache` flips one membership (and the
+count chip) with `revalidate:false`, reverting if the persist fails.
+
 ## 5. Project structure
 ```
 vocab-app/
   .env.local              # provider keys + optional storage config (gitignored)
   app/
     layout.tsx            # root document shell only (html/body)
-    (marketing)/          # landing route group — full-bleed SaaS page at /
+    (marketing)/          # landing route group — SaaS page at /, plus /privacy /terms
     (app)/                # app chrome (Nav + centered column)
       layout.tsx
-      vocab/page.tsx      # vocab dashboard (was /)
-      practice/ progress/ library/ add/ import/   # unchanged vocab URLs
-      writing/{page,task1,task2}/page.tsx          # IELTS writing module
+      vocab/page.tsx      # Home dashboard + folded-in Collections manager (was /)
+      practice/ library/ add/    # vocab tabs (Home · Practice · Library · Add)
+      collections/ import/ progress/   # redirects → /vocab#collections, /add?tab=import, /report
+      admin/page.tsx      # owner-only usage dashboard
+      writing/{page,add,task1,task2}/page.tsx      # IELTS writing module
       report/page.tsx     # cross-skill dashboard
     api/
-      config/ words/ words/[id]/ words/check/      # vocab CRUD + dup check
-      enrich/ import/ stats/                       # enrich · bulk add · /progress aggregates
+      auth/[...nextauth]/ config/                  # NextAuth · runtime config
+      words/ words/[id]/ words/check/ words/check-bulk/ words/import-paste/  # CRUD · dup · paste import
+      enrich/ import/ stats/                       # enrich · CSV import · /report aggregates
+      collections/ collections/[id]/{adopt,members}/  # list+create · edit · adopt · membership
+      admin/stats/                                 # owner-only metrics
       practice/{next,score,result}/route.ts        # picker · LLM grade · apply+log
-      writing/{prompts,submit,submission,stats}/route.ts  # bank+stats · score · review · report
-  lib/  store.ts providers.ts llm.ts prompts.ts engine.ts types.ts ui.ts
-        writing/{types,grade,guidance,prompt,score,store}.ts   # writing module
-  components/Nav.tsx  components/writing/{WritingPractice,Feedback}.tsx
+      writing/{prompts,submit,submission,stats,discuss,extract-chart}/route.ts
+  lib/  store.ts providers.ts llm.ts prompts.ts engine.ts types.ts ui.ts paste.ts swr.ts
+        auth/{user,quota,store}.ts  admin/{stats,aggregate,paginate}.ts
+        writing/{types,grade,guidance,prompt,score,store,discuss}.ts   # writing module
+  components/Nav.tsx  components/vocab/{Collections,PasteImport,NewCollection,…}.tsx
+        components/admin/AdminDashboard.tsx  components/writing/{WritingPractice,Feedback}.tsx
   content/writing/     # sources.json (gdoc links) · guidance/*.md · {task1,task2}/prompts/
   public/writing/task1/  # served chart images (extracted at ingest)
   scripts/  import-tracker.mjs  seed-writing-prompts.mjs  add-writing-prompt.mjs
 ```
 
 ## 6. Key flows
-- **Import:** client parses CSV → maps columns → chunks to `/api/import` (dedupe; optional per-row enrich).
+- **Import (paste a list — primary):** `parsePasteList` (`lib/paste.ts`) splits/dedupes client-side
+  → `/api/words/check-bulk` for a new-vs-existing preview → `/api/words/import-paste` enriches +
+  adds in chunks (quota-guarded). **CSV (advanced):** client parses CSV → maps columns → chunks to
+  `/api/import` (dedupe; optional per-row enrich).
 - **Add:** type word → `/api/enrich` preview (if provider set) → review/edit → save (dup-guarded).
 - **Practice:** `/api/practice/next` (picker + stage→exercise; LLM-generates cloze/translate/scenario) →
   answer graded **locally** (flashcard/cloze/type, incl. fuzzy VN + close-match) or via `/api/practice/score`
@@ -199,7 +237,7 @@ vocab-app/
 ## 7. Security / secrets
 - All LLM + storage calls run in **server-side API routes**; keys never reach the browser.
 - `.env.local` gitignored; `.data/` gitignored.
-- **Auth (branch `multitenant-deploy`):** NextAuth v5, Google OAuth, JWT sessions.
+- **Auth (shipped, multi-tenant):** NextAuth v5, Google OAuth, JWT sessions.
   Enforced in route handlers via `currentUserId()` (a DAL), **not** middleware —
   this Next 16 deprecated `middleware.ts` (→ `proxy.ts`). Every route rejects
   unauthenticated callers (401) and scopes storage to the session user. Config

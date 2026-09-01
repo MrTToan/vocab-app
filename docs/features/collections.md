@@ -17,11 +17,14 @@ instead of drilling your whole vocabulary.
   Task 1 collection advances it in every collection and in All words too — collections never
   fork a word's progress.
 
-## Managing them (`/collections`)
+## Managing them (on **Home**)
 
-Create, rename (name / emoji / description), and delete collections, and see each one's word
-count. **Study →** jumps straight into practising that collection. Deleting a collection
-removes only the grouping — the words themselves are kept.
+The collections manager lives on the **Home** tab (`/vocab`) — it was folded in there during the
+nav restructure (the old `/collections` URL now redirects to `/vocab#collections`). Create, rename
+(name / emoji / description), and delete collections, and see each one's word count. **Study →**
+jumps straight into practising that collection. Deleting a collection removes only the grouping —
+the words themselves are kept. (New collections are also created from the **Add** tab, with a
+tap-to-pick icon picker.)
 
 ## Adding words to a collection
 
@@ -39,8 +42,10 @@ Three ways:
 
 A collection is **private** (only its owner sees it) or **public** (everyone sees it in
 their list and on the Practice switcher). Public collections are the shared catalog packs;
-only the owner/admin can mark a collection public (the `Make public/private` toggle on
-`/collections`). Practising a public pack works even before you've "added" it — its words
+only the owner/admin can mark a collection public (the publish toggle on the Home manager, gated
+by the `owner` flag from `GET /api/collections`). The shared catalog packs are IELTS Task 1 &
+Task 2, Casual English 100, and Academic Writing 100. Practising a public pack works even before
+you've "added" it — its words
 enter the picker as `new`, and answering them creates your own progress. **Add all** (or
 `POST /api/collections/:id/adopt`) bulk-adds the whole pack to your rotation. Either way
 **no content is copied** — the words stay shared; only your `user_words` progress is yours.
