@@ -1,0 +1,572 @@
+{
+  "automation": {
+    "cloze": [
+      { "sentence": "Many factory workers fear that ____ will eventually make their jobs obsolete.", "answer": "automation" },
+      { "sentence": "The rise of ____ has transformed the way goods are produced in modern economies.", "answer": "automation" },
+      { "sentence": "While ____ increases efficiency, it also raises difficult questions about unemployment.", "answer": "automation" },
+      { "sentence": "Governments should invest in retraining programmes to help workers displaced by ____.", "answer": "automation" },
+      { "sentence": "Supporters argue that ____ frees people from repetitive and dangerous tasks.", "answer": "automation" },
+      { "sentence": "The introduction of ____ on the assembly line cut production costs dramatically.", "answer": "automation" },
+      { "sentence": "Critics warn that unchecked ____ could widen the gap between rich and poor.", "answer": "automation" },
+      { "sentence": "Thanks to ____, the warehouse now operates around the clock with very few staff.", "answer": "automation" },
+      { "sentence": "The debate over ____ is likely to dominate labour policy for decades to come.", "answer": "automation" },
+      { "sentence": "Some experts believe ____ will create as many jobs as it destroys.", "answer": "automation" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Tự động hóa đang dần thay thế nhiều công việc chân tay trong nhà máy." },
+      { "direction": "vn_to_en", "source": "Nhiều người lo ngại rằng tự động hóa sẽ khiến tỷ lệ thất nghiệp tăng cao." },
+      { "direction": "vn_to_en", "source": "Chính phủ nên hỗ trợ những người mất việc vì tự động hóa." },
+      { "direction": "vn_to_en", "source": "Tự động hóa giúp các công ty giảm chi phí sản xuất đáng kể." },
+      { "direction": "vn_to_en", "source": "Theo tôi, tự động hóa mang lại nhiều lợi ích hơn là tác hại." },
+      { "direction": "en_to_vn", "source": "Automation has already replaced thousands of jobs in the manufacturing sector." },
+      { "direction": "en_to_vn", "source": "Increased automation could lead to widespread unemployment if left unregulated." },
+      { "direction": "en_to_vn", "source": "Automation allows businesses to operate more efficiently and at a lower cost." },
+      { "direction": "en_to_vn", "source": "Some argue that automation will ultimately improve our quality of life." },
+      { "direction": "en_to_vn", "source": "The government must prepare society for the impact of automation." }
+    ],
+    "scenario": [
+      "In an academic IELTS essay, write a sentence arguing that automation harms low-skilled workers. Use a formal, argumentative tone.",
+      "You are giving a persuasive class presentation. Write one sentence claiming automation benefits society overall. Keep the tone confident and formal.",
+      "Write a neutral, informative sentence for a news report explaining how automation has changed a local car factory.",
+      "In a casual conversation with a friend, mention how automation at your workplace has changed your daily tasks. Use an informal, relaxed tone.",
+      "You are writing a formal email to your manager suggesting more automation in the office. Use a polite, professional tone.",
+      "Write a cautious, hedged sentence for an academic essay conceding one drawback of automation.",
+      "In a job-interview answer, describe how you helped introduce automation to a previous team. Use a professional, positive tone.",
+      "Write a headline-style short comment for a debate forum expressing concern about automation. Keep it punchy but civil.",
+      "For an economics report, write a balanced sentence weighing the pros and cons of automation. Use an objective, formal register.",
+      "You are advising a younger student on career choices. Write a supportive sentence about preparing for a world shaped by automation."
+    ]
+  },
+  "deterrent": {
+    "cloze": [
+      { "sentence": "Many people believe that the death penalty acts as a powerful ____ to serious crime.", "answer": "deterrent" },
+      { "sentence": "Heavy fines can serve as an effective ____ against dangerous driving.", "answer": "deterrent" },
+      { "sentence": "Critics argue that longer prison sentences are not a genuine ____ at all.", "answer": "deterrent" },
+      { "sentence": "The presence of visible security cameras is a strong ____ to shoplifting.", "answer": "deterrent" },
+      { "sentence": "Some studies suggest that harsh punishment is a weak ____ for impulsive offenders.", "answer": "deterrent" },
+      { "sentence": "The threat of expulsion works as a ____ against cheating in exams.", "answer": "deterrent" },
+      { "sentence": "Higher taxes on cigarettes are intended to be a ____ to smoking.", "answer": "deterrent" },
+      { "sentence": "Whether prison actually functions as a ____ remains a matter of debate.", "answer": "deterrent" },
+      { "sentence": "For many economists, high import tariffs act as a ____ to foreign competition.", "answer": "deterrent" },
+      { "sentence": "The community hoped that better street lighting would be a ____ to night-time crime.", "answer": "deterrent" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Nhiều người tin rằng án tù dài hạn là một biện pháp răn đe hiệu quả." },
+      { "direction": "vn_to_en", "source": "Camera an ninh có thể là một biện pháp răn đe đối với nạn trộm cắp." },
+      { "direction": "vn_to_en", "source": "Một số người cho rằng hình phạt nặng không phải là biện pháp răn đe thực sự." },
+      { "direction": "vn_to_en", "source": "Tăng thuế thuốc lá được xem như một biện pháp răn đe việc hút thuốc." },
+      { "direction": "vn_to_en", "source": "Mức phạt cao là một biện pháp răn đe đối với hành vi lái xe ẩu." },
+      { "direction": "en_to_vn", "source": "Supporters claim that capital punishment is the strongest possible deterrent to murder." },
+      { "direction": "en_to_vn", "source": "There is little evidence that harsh sentences act as an effective deterrent." },
+      { "direction": "en_to_vn", "source": "The company installed alarms as a deterrent against break-ins." },
+      { "direction": "en_to_vn", "source": "A large fine can be a useful deterrent for repeat offenders." },
+      { "direction": "en_to_vn", "source": "Many argue that education, not punishment, is the best deterrent to crime." }
+    ],
+    "scenario": [
+      "In an IELTS essay on crime, write a formal sentence arguing that strict punishment is an effective deterrent.",
+      "Write a counter-argument sentence for the same essay claiming that punishment is a poor deterrent. Keep the tone academic.",
+      "You are a school principal writing a formal notice. Explain that suspension will act as a deterrent to bullying.",
+      "In a casual chat with a neighbour, say that the new streetlights are a deterrent to burglars. Use an informal tone.",
+      "Write a policy-brief sentence recommending higher fines as a deterrent to littering. Use a formal, objective register.",
+      "For a debate, write a persuasive opening line insisting that tougher laws are the only real deterrent. Be confident.",
+      "In a formal report, concede that a deterrent may not work on impulsive criminals. Use hedged, cautious language.",
+      "Write a short social-media style comment questioning whether prison is really a deterrent. Keep it civil.",
+      "You are advising a small shop owner. Suggest a security measure as a deterrent to theft. Use a helpful, professional tone.",
+      "In an economics essay, write a sentence describing tariffs as a deterrent to imports. Use a neutral academic tone."
+    ]
+  },
+  "rehabilitation": {
+    "cloze": [
+      { "sentence": "The prison introduced new programmes focused on the ____ of young offenders.", "answer": "rehabilitation" },
+      { "sentence": "Many experts argue that ____ is more effective than punishment in reducing reoffending.", "answer": "rehabilitation" },
+      { "sentence": "Without proper ____, released prisoners often return to a life of crime.", "answer": "rehabilitation" },
+      { "sentence": "Investing in the ____ of criminals can benefit society in the long run.", "answer": "rehabilitation" },
+      { "sentence": "The centre offers education and job training as part of its ____ scheme.", "answer": "rehabilitation" },
+      { "sentence": "Critics claim that ____ programmes are too costly and rarely succeed.", "answer": "rehabilitation" },
+      { "sentence": "Successful ____ requires both counselling and support after release.", "answer": "rehabilitation" },
+      { "sentence": "The judge emphasised ____ rather than a lengthy prison term.", "answer": "rehabilitation" },
+      { "sentence": "Countries that prioritise ____ tend to have lower rates of reoffending.", "answer": "rehabilitation" },
+      { "sentence": "Drug ____ can help addicts reintegrate into their communities.", "answer": "rehabilitation" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Sự cải tạo tội phạm quan trọng hơn việc trừng phạt họ." },
+      { "direction": "vn_to_en", "source": "Nếu không được cải tạo tốt, nhiều tù nhân sẽ tái phạm." },
+      { "direction": "vn_to_en", "source": "Chính phủ nên đầu tư nhiều hơn vào việc cải tạo người phạm tội trẻ tuổi." },
+      { "direction": "vn_to_en", "source": "Các chương trình cải tạo giúp tù nhân tái hòa nhập cộng đồng." },
+      { "direction": "vn_to_en", "source": "Cải tạo bao gồm cả giáo dục và đào tạo nghề." },
+      { "direction": "en_to_vn", "source": "Rehabilitation gives former prisoners a genuine chance to rebuild their lives." },
+      { "direction": "en_to_vn", "source": "Many believe that rehabilitation is a wiser investment than long prison sentences." },
+      { "direction": "en_to_vn", "source": "The programme's focus on rehabilitation has reduced the reoffending rate." },
+      { "direction": "en_to_vn", "source": "Effective rehabilitation depends on support both inside and outside prison." },
+      { "direction": "en_to_vn", "source": "Some countries treat rehabilitation as the main goal of their justice system." }
+    ],
+    "scenario": [
+      "In an IELTS essay on crime, write a formal sentence arguing that rehabilitation should be the main goal of prisons.",
+      "Write a counter-argument sentence claiming rehabilitation is too expensive to justify. Keep the tone academic.",
+      "You are a social worker writing a formal case report. Describe an offender's progress through a rehabilitation programme.",
+      "In a casual conversation, tell a friend that you think rehabilitation works better than harsh punishment. Use an informal tone.",
+      "Write a persuasive charity-appeal sentence urging donations to a rehabilitation centre. Use a warm, motivating tone.",
+      "For a policy paper, write a balanced sentence weighing rehabilitation against deterrence. Use an objective register.",
+      "In a formal debate, deliver a confident line defending rehabilitation as the wiser long-term choice.",
+      "Write a hedged, cautious sentence for an essay acknowledging that rehabilitation does not always succeed.",
+      "You are a judge explaining a sentencing decision. Write a formal sentence emphasising rehabilitation over imprisonment.",
+      "In a supportive message to a recovering friend, mention their rehabilitation. Use a gentle, encouraging tone."
+    ]
+  },
+  "crime rate": {
+    "cloze": [
+      { "sentence": "The city's ____ has fallen sharply since the new policing strategy was introduced.", "answer": "crime rate" },
+      { "sentence": "Poverty and unemployment are often linked to a higher ____.", "answer": "crime rate" },
+      { "sentence": "Better education can help to reduce the ____ in the long term.", "answer": "crime rate" },
+      { "sentence": "Statistics show that the ____ tends to rise during economic recessions.", "answer": "crime rate" },
+      { "sentence": "Governments introduce harsher laws in an attempt to bring down the ____.", "answer": "crime rate" },
+      { "sentence": "The ____ in rural areas is generally lower than in large cities.", "answer": "crime rate" },
+      { "sentence": "Some argue that a low ____ reflects a fairer distribution of wealth.", "answer": "crime rate" },
+      { "sentence": "Increased surveillance has done little to lower the overall ____.", "answer": "crime rate" },
+      { "sentence": "Researchers examined how the ____ changed after the factory closed.", "answer": "crime rate" },
+      { "sentence": "A rising ____ often puts pressure on politicians to act quickly.", "answer": "crime rate" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Tỷ lệ tội phạm ở thành phố đã giảm đáng kể trong năm qua." },
+      { "direction": "vn_to_en", "source": "Nghèo đói thường dẫn đến tỷ lệ tội phạm cao hơn." },
+      { "direction": "vn_to_en", "source": "Giáo dục tốt có thể giúp giảm tỷ lệ tội phạm." },
+      { "direction": "vn_to_en", "source": "Tỷ lệ tội phạm ở nông thôn thường thấp hơn ở thành thị." },
+      { "direction": "vn_to_en", "source": "Chính phủ đang tìm cách kéo giảm tỷ lệ tội phạm." },
+      { "direction": "en_to_vn", "source": "The crime rate has increased significantly in urban areas this decade." },
+      { "direction": "en_to_vn", "source": "A high crime rate can discourage people from moving to a city." },
+      { "direction": "en_to_vn", "source": "Experts believe that unemployment is closely tied to the crime rate." },
+      { "direction": "en_to_vn", "source": "The government claims its policies have lowered the crime rate." },
+      { "direction": "en_to_vn", "source": "Improving living standards is one way to reduce the crime rate." }
+    ],
+    "scenario": [
+      "In an IELTS essay, write a formal sentence linking poverty to a rising crime rate.",
+      "Write an academic sentence arguing that education lowers the crime rate over time.",
+      "You are a journalist reporting local news. Write a neutral sentence about a fall in the crime rate.",
+      "In a casual chat with a friend, comment on the crime rate in your neighbourhood. Use an informal tone.",
+      "Write a formal sentence for a city-council report recommending measures to cut the crime rate.",
+      "For a debate, deliver a confident claim that stricter laws reduce the crime rate.",
+      "Write a hedged, cautious academic sentence noting that the crime rate has many causes.",
+      "You are a police spokesperson at a press conference. Announce a drop in the crime rate in a formal tone.",
+      "In a sociology essay, write an objective sentence comparing the crime rate in cities and villages.",
+      "Write a persuasive campaign-speech line promising to bring down the crime rate. Keep it energetic but formal."
+    ]
+  },
+  "obesity": {
+    "cloze": [
+      { "sentence": "Childhood ____ has become a serious public health concern in many countries.", "answer": "obesity" },
+      { "sentence": "A diet high in sugar and fat is one of the main causes of ____.", "answer": "obesity" },
+      { "sentence": "Governments are introducing taxes on junk food to combat rising ____.", "answer": "obesity" },
+      { "sentence": "____ increases the risk of heart disease and diabetes.", "answer": "obesity" },
+      { "sentence": "Regular exercise is essential in preventing ____.", "answer": "obesity" },
+      { "sentence": "The dramatic rise in ____ places a heavy burden on healthcare systems.", "answer": "obesity" },
+      { "sentence": "Experts link ____ to increasingly sedentary lifestyles.", "answer": "obesity" },
+      { "sentence": "Schools can help reduce ____ by offering healthier meals.", "answer": "obesity" },
+      { "sentence": "____ among adults has nearly doubled over the past thirty years.", "answer": "obesity" },
+      { "sentence": "Advertising unhealthy food to children may contribute to ____.", "answer": "obesity" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Béo phì ở trẻ em đang trở thành một vấn đề đáng lo ngại." },
+      { "direction": "vn_to_en", "source": "Ăn quá nhiều đồ ăn nhanh là một nguyên nhân chính gây béo phì." },
+      { "direction": "vn_to_en", "source": "Tập thể dục thường xuyên giúp ngăn ngừa béo phì." },
+      { "direction": "vn_to_en", "source": "Béo phì làm tăng nguy cơ mắc bệnh tim." },
+      { "direction": "vn_to_en", "source": "Chính phủ đánh thuế đồ ăn vặt để giảm tình trạng béo phì." },
+      { "direction": "en_to_vn", "source": "Obesity has become one of the leading health problems of our time." },
+      { "direction": "en_to_vn", "source": "A sedentary lifestyle is a major contributor to obesity." },
+      { "direction": "en_to_vn", "source": "Rising obesity rates put enormous pressure on public healthcare." },
+      { "direction": "en_to_vn", "source": "Educating children about nutrition can help prevent obesity." },
+      { "direction": "en_to_vn", "source": "Many experts blame fast food advertising for the increase in obesity." }
+    ],
+    "scenario": [
+      "In an IELTS essay on health, write a formal sentence explaining the main causes of obesity.",
+      "Write an academic sentence arguing that governments should act to reduce obesity.",
+      "You are a doctor speaking to a patient. Explain the risks of obesity in a caring but formal tone.",
+      "In a casual conversation with a friend, mention how office jobs can lead to obesity. Use an informal tone.",
+      "Write a formal public-health poster line warning about childhood obesity.",
+      "For a debate, deliver a confident claim that fast food companies are responsible for obesity.",
+      "Write a hedged, cautious academic sentence noting that obesity has multiple causes.",
+      "You are a school nutritionist writing a report. Recommend measures to lower obesity among students.",
+      "In a persuasive campaign speech, urge people to fight obesity through exercise. Keep it motivating but formal.",
+      "Write an objective sentence for a statistics report describing the rise in obesity over recent decades."
+    ]
+  },
+  "sedentary lifestyle": {
+    "cloze": [
+      { "sentence": "Spending hours at a desk each day contributes to a ____.", "answer": "sedentary lifestyle" },
+      { "sentence": "A ____ is linked to obesity, heart disease and other health problems.", "answer": "sedentary lifestyle" },
+      { "sentence": "Many office workers unknowingly adopt a ____.", "answer": "sedentary lifestyle" },
+      { "sentence": "Doctors warn that a ____ can shorten a person's life expectancy.", "answer": "sedentary lifestyle" },
+      { "sentence": "Modern technology has encouraged a more ____ than ever before.", "answer": "sedentary lifestyle" },
+      { "sentence": "Regular exercise is the best way to counter the effects of a ____.", "answer": "sedentary lifestyle" },
+      { "sentence": "Children who spend all day on screens risk developing a ____.", "answer": "sedentary lifestyle" },
+      { "sentence": "A ____ combined with poor diet is a recipe for ill health.", "answer": "sedentary lifestyle" },
+      { "sentence": "Public health campaigns aim to discourage a ____ among young people.", "answer": "sedentary lifestyle" },
+      { "sentence": "Working from home has, for some, meant an even more ____.", "answer": "sedentary lifestyle" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Lối sống ít vận động là nguyên nhân gây ra nhiều bệnh tật." },
+      { "direction": "vn_to_en", "source": "Nhiều nhân viên văn phòng có lối sống ít vận động." },
+      { "direction": "vn_to_en", "source": "Công nghệ hiện đại khiến con người có lối sống ít vận động hơn." },
+      { "direction": "vn_to_en", "source": "Tập thể dục có thể khắc phục tác hại của lối sống ít vận động." },
+      { "direction": "vn_to_en", "source": "Trẻ em ngồi xem màn hình cả ngày dễ có lối sống ít vận động." },
+      { "direction": "en_to_vn", "source": "A sedentary lifestyle increases the risk of many serious diseases." },
+      { "direction": "en_to_vn", "source": "Office work often forces people into a sedentary lifestyle." },
+      { "direction": "en_to_vn", "source": "Health experts urge us to break free from a sedentary lifestyle." },
+      { "direction": "en_to_vn", "source": "A sedentary lifestyle, combined with junk food, damages our health." },
+      { "direction": "en_to_vn", "source": "Technology has made a sedentary lifestyle more common among young people." }
+    ],
+    "scenario": [
+      "In an IELTS essay on health, write a formal sentence blaming modern technology for a sedentary lifestyle.",
+      "Write an academic sentence linking a sedentary lifestyle to rising obesity.",
+      "You are a doctor advising a patient. Warn them about their sedentary lifestyle in a caring but formal tone.",
+      "In a casual chat with a colleague, joke about your shared sedentary lifestyle at the office. Use an informal tone.",
+      "Write a formal fitness-app notification encouraging users to avoid a sedentary lifestyle.",
+      "For a debate, deliver a confident claim that a sedentary lifestyle is the biggest health threat today.",
+      "Write a hedged, cautious academic sentence noting one nuance about a sedentary lifestyle.",
+      "You are a workplace wellness officer writing a memo. Recommend ways to reduce employees' sedentary lifestyle.",
+      "In a persuasive speech, urge students to escape a sedentary lifestyle through sport. Keep it motivating but formal.",
+      "Write an objective sentence for a research summary describing the health effects of a sedentary lifestyle."
+    ]
+  },
+  "public healthcare": {
+    "cloze": [
+      { "sentence": "The government has pledged to increase funding for ____.", "answer": "public healthcare" },
+      { "sentence": "In many countries, ____ is free at the point of use.", "answer": "public healthcare" },
+      { "sentence": "An ageing population places a growing strain on ____.", "answer": "public healthcare" },
+      { "sentence": "Supporters argue that ____ ensures equal access to medical treatment.", "answer": "public healthcare" },
+      { "sentence": "Rising obesity is putting enormous pressure on ____ systems.", "answer": "public healthcare" },
+      { "sentence": "Some believe that higher taxes are justified if they improve ____.", "answer": "public healthcare" },
+      { "sentence": "Without adequate ____, poorer families cannot afford treatment.", "answer": "public healthcare" },
+      { "sentence": "Critics claim that ____ is often underfunded and overstretched.", "answer": "public healthcare" },
+      { "sentence": "Investing in ____ can reduce inequality across society.", "answer": "public healthcare" },
+      { "sentence": "The quality of ____ varies greatly from one country to another.", "answer": "public healthcare" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Chính phủ nên đầu tư nhiều hơn vào y tế công cộng." },
+      { "direction": "vn_to_en", "source": "Y tế công cộng giúp mọi người được tiếp cận dịch vụ khám chữa bệnh." },
+      { "direction": "vn_to_en", "source": "Dân số già đang gây áp lực lớn lên hệ thống y tế công cộng." },
+      { "direction": "vn_to_en", "source": "Nhiều người sẵn sàng đóng thuế cao hơn để cải thiện y tế công cộng." },
+      { "direction": "vn_to_en", "source": "Nếu không có y tế công cộng, người nghèo khó có thể chữa bệnh." },
+      { "direction": "en_to_vn", "source": "Public healthcare guarantees that everyone can see a doctor when they need to." },
+      { "direction": "en_to_vn", "source": "An efficient public healthcare system reduces inequality in society." },
+      { "direction": "en_to_vn", "source": "Many argue that public healthcare should be funded through general taxation." },
+      { "direction": "en_to_vn", "source": "Public healthcare in that country is struggling with long waiting lists." },
+      { "direction": "en_to_vn", "source": "Improving public healthcare is a top priority for the new government." }
+    ],
+    "scenario": [
+      "In an IELTS essay, write a formal sentence arguing that public healthcare should be free for all.",
+      "Write a counter-argument sentence claiming public healthcare leads to long waiting times. Keep it academic.",
+      "You are a politician giving a formal speech. Promise to improve public healthcare. Keep the tone dignified.",
+      "In a casual conversation with a friend, compare public healthcare in two countries. Use an informal tone.",
+      "Write a formal policy-brief sentence recommending more investment in public healthcare.",
+      "For a debate, deliver a confident claim that public healthcare is a basic human right.",
+      "Write a hedged, cautious academic sentence about the funding challenges of public healthcare.",
+      "You are a hospital administrator writing a report. Describe the pressures on public healthcare in a formal tone.",
+      "In a persuasive campaign leaflet, urge voters to protect public healthcare. Keep it motivating but respectful.",
+      "Write an objective sentence for an economics essay comparing public healthcare funding models."
+    ]
+  },
+  "standard of living": {
+    "cloze": [
+      { "sentence": "Economic growth has significantly raised the ____ in developing nations.", "answer": "standard of living" },
+      { "sentence": "A higher income usually leads to a better ____.", "answer": "standard of living" },
+      { "sentence": "Access to clean water and education improves people's ____.", "answer": "standard of living" },
+      { "sentence": "Despite rapid growth, the ____ of many workers has barely improved.", "answer": "standard of living" },
+      { "sentence": "The government aims to raise the ____ for the poorest citizens.", "answer": "standard of living" },
+      { "sentence": "Rising prices have lowered the ____ for ordinary families.", "answer": "standard of living" },
+      { "sentence": "A high ____ often comes at an environmental cost.", "answer": "standard of living" },
+      { "sentence": "Immigrants frequently move abroad in search of a higher ____.", "answer": "standard of living" },
+      { "sentence": "The ____ in cities is often higher than in the countryside.", "answer": "standard of living" },
+      { "sentence": "Better infrastructure can dramatically improve the ____ of a region.", "answer": "standard of living" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Tăng trưởng kinh tế đã nâng cao mức sống của người dân." },
+      { "direction": "vn_to_en", "source": "Thu nhập cao hơn thường dẫn đến mức sống tốt hơn." },
+      { "direction": "vn_to_en", "source": "Chính phủ muốn nâng cao mức sống cho người nghèo." },
+      { "direction": "vn_to_en", "source": "Giá cả tăng cao làm giảm mức sống của nhiều gia đình." },
+      { "direction": "vn_to_en", "source": "Nhiều người ra nước ngoài để tìm kiếm mức sống cao hơn." },
+      { "direction": "en_to_vn", "source": "The standard of living has risen steadily over the past decade." },
+      { "direction": "en_to_vn", "source": "A good education is essential for improving the standard of living." },
+      { "direction": "en_to_vn", "source": "Rapid inflation has eroded the standard of living for millions." },
+      { "direction": "en_to_vn", "source": "People in rural areas often enjoy a lower standard of living than city dwellers." },
+      { "direction": "en_to_vn", "source": "Better public services can raise the standard of living for everyone." }
+    ],
+    "scenario": [
+      "In an IELTS essay, write a formal sentence arguing that economic growth raises the standard of living.",
+      "Write an academic sentence noting that a higher standard of living can harm the environment.",
+      "You are an economist presenting findings. Describe changes in the standard of living in a formal tone.",
+      "In a casual conversation with a friend, compare the standard of living in two cities. Use an informal tone.",
+      "Write a formal government-report sentence about plans to raise the standard of living.",
+      "For a debate, deliver a confident claim that money alone does not determine the standard of living.",
+      "Write a hedged, cautious academic sentence about measuring the standard of living.",
+      "You are advising someone considering emigration. Discuss the standard of living abroad in a helpful, professional tone.",
+      "In a persuasive campaign speech, promise to improve the standard of living. Keep it energetic but formal.",
+      "Write an objective sentence for a development-studies essay comparing the standard of living across regions."
+    ]
+  },
+  "income inequality": {
+    "cloze": [
+      { "sentence": "Many economists warn that ____ is growing in most developed countries.", "answer": "income inequality" },
+      { "sentence": "High levels of ____ can lead to social unrest and instability.", "answer": "income inequality" },
+      { "sentence": "Progressive taxation is one tool used to reduce ____.", "answer": "income inequality" },
+      { "sentence": "Globalisation has, in some cases, widened ____ within nations.", "answer": "income inequality" },
+      { "sentence": "The government introduced new policies to tackle ____.", "answer": "income inequality" },
+      { "sentence": "Access to quality education can help narrow ____.", "answer": "income inequality" },
+      { "sentence": "Critics argue that unchecked capitalism inevitably increases ____.", "answer": "income inequality" },
+      { "sentence": "Rising ____ often fuels resentment among the working class.", "answer": "income inequality" },
+      { "sentence": "Some countries have far greater ____ than others.", "answer": "income inequality" },
+      { "sentence": "Reducing ____ is seen as key to building a fairer society.", "answer": "income inequality" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Bất bình đẳng thu nhập đang gia tăng ở nhiều quốc gia." },
+      { "direction": "vn_to_en", "source": "Bất bình đẳng thu nhập cao có thể gây ra bất ổn xã hội." },
+      { "direction": "vn_to_en", "source": "Thuế lũy tiến giúp giảm bất bình đẳng thu nhập." },
+      { "direction": "vn_to_en", "source": "Giáo dục tốt có thể thu hẹp bất bình đẳng thu nhập." },
+      { "direction": "vn_to_en", "source": "Chính phủ đang cố gắng giải quyết bất bình đẳng thu nhập." },
+      { "direction": "en_to_vn", "source": "Income inequality has widened dramatically over the past few decades." },
+      { "direction": "en_to_vn", "source": "Extreme income inequality can undermine social cohesion." },
+      { "direction": "en_to_vn", "source": "Many believe that education is the best way to reduce income inequality." },
+      { "direction": "en_to_vn", "source": "Globalisation is often blamed for rising income inequality." },
+      { "direction": "en_to_vn", "source": "Governments use welfare programmes to combat income inequality." }
+    ],
+    "scenario": [
+      "In an IELTS essay, write a formal sentence arguing that income inequality threatens social stability.",
+      "Write an academic sentence proposing a solution to income inequality.",
+      "You are an economist at a conference. Describe trends in income inequality in a formal tone.",
+      "In a casual conversation with a friend, express frustration about income inequality. Use an informal tone.",
+      "Write a formal policy-brief sentence recommending measures to reduce income inequality.",
+      "For a debate, deliver a confident claim that income inequality is the defining issue of our era.",
+      "Write a hedged, cautious academic sentence about the causes of income inequality.",
+      "You are a charity director writing an appeal. Highlight income inequality to motivate donors. Keep it earnest.",
+      "In a persuasive campaign speech, promise to fight income inequality. Keep it passionate but formal.",
+      "Write an objective sentence for a sociology report comparing income inequality across countries."
+    ]
+  },
+  "globalisation": {
+    "cloze": [
+      { "sentence": "____ has connected economies around the world more closely than ever before.", "answer": "globalisation" },
+      { "sentence": "Supporters argue that ____ has lifted millions out of poverty.", "answer": "globalisation" },
+      { "sentence": "Critics claim that ____ threatens local cultures and traditions.", "answer": "globalisation" },
+      { "sentence": "Thanks to ____, companies can now sell their products worldwide.", "answer": "globalisation" },
+      { "sentence": "____ has made international travel and trade far easier.", "answer": "globalisation" },
+      { "sentence": "Some workers feel that ____ has cost them their jobs.", "answer": "globalisation" },
+      { "sentence": "The spread of English is one visible effect of ____.", "answer": "globalisation" },
+      { "sentence": "____ allows ideas and information to flow across borders instantly.", "answer": "globalisation" },
+      { "sentence": "Whether ____ benefits everyone equally is a matter of debate.", "answer": "globalisation" },
+      { "sentence": "The rapid pace of ____ has reshaped the modern economy.", "answer": "globalisation" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Toàn cầu hóa đã kết nối các nền kinh tế trên khắp thế giới." },
+      { "direction": "vn_to_en", "source": "Nhiều người cho rằng toàn cầu hóa giúp giảm nghèo." },
+      { "direction": "vn_to_en", "source": "Toàn cầu hóa có thể đe dọa các nền văn hóa địa phương." },
+      { "direction": "vn_to_en", "source": "Nhờ toàn cầu hóa, các công ty có thể bán sản phẩm ra toàn thế giới." },
+      { "direction": "vn_to_en", "source": "Một số người lo ngại toàn cầu hóa khiến họ mất việc làm." },
+      { "direction": "en_to_vn", "source": "Globalisation has transformed the way businesses operate worldwide." },
+      { "direction": "en_to_vn", "source": "Some argue that globalisation widens the gap between rich and poor nations." },
+      { "direction": "en_to_vn", "source": "Globalisation has made cultural exchange easier than ever before." },
+      { "direction": "en_to_vn", "source": "Opponents of globalisation fear the loss of local identity." },
+      { "direction": "en_to_vn", "source": "Globalisation has both economic benefits and social costs." }
+    ],
+    "scenario": [
+      "In an IELTS essay, write a formal sentence arguing that globalisation benefits developing countries.",
+      "Write a counter-argument sentence claiming globalisation harms local cultures. Keep it academic.",
+      "You are a business analyst at a seminar. Describe how globalisation affects trade in a formal tone.",
+      "In a casual conversation with a friend, mention how globalisation lets you buy products from abroad. Use an informal tone.",
+      "Write a formal report sentence assessing the economic impact of globalisation.",
+      "For a debate, deliver a confident claim that globalisation is unstoppable.",
+      "Write a hedged, cautious academic sentence about the mixed effects of globalisation.",
+      "You are a cultural commentator writing an article. Reflect on globalisation and identity in a thoughtful, formal tone.",
+      "In a persuasive speech, argue that globalisation should be better regulated. Keep it firm but formal.",
+      "Write an objective sentence for an economics essay explaining what globalisation involves."
+    ]
+  },
+  "urbanisation": {
+    "cloze": [
+      { "sentence": "Rapid ____ has led to overcrowding in many major cities.", "answer": "urbanisation" },
+      { "sentence": "____ often puts enormous pressure on housing and transport.", "answer": "urbanisation" },
+      { "sentence": "As ____ continues, more farmland is being lost to construction.", "answer": "urbanisation" },
+      { "sentence": "____ has drawn millions of people from the countryside into cities.", "answer": "urbanisation" },
+      { "sentence": "Poor planning during ____ can create sprawling slums.", "answer": "urbanisation" },
+      { "sentence": "The government struggles to provide services amid rapid ____.", "answer": "urbanisation" },
+      { "sentence": "____ brings both economic opportunity and environmental problems.", "answer": "urbanisation" },
+      { "sentence": "Traffic congestion is one of the most visible effects of ____.", "answer": "urbanisation" },
+      { "sentence": "Developing countries are experiencing ____ at an unprecedented rate.", "answer": "urbanisation" },
+      { "sentence": "Careful planning can make ____ more sustainable.", "answer": "urbanisation" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Đô thị hóa nhanh đã gây ra tình trạng quá tải ở nhiều thành phố." },
+      { "direction": "vn_to_en", "source": "Đô thị hóa gây áp lực lớn lên nhà ở và giao thông." },
+      { "direction": "vn_to_en", "source": "Đô thị hóa khiến nhiều người rời nông thôn lên thành phố." },
+      { "direction": "vn_to_en", "source": "Đô thị hóa vừa mang lại cơ hội vừa gây ra vấn đề môi trường." },
+      { "direction": "vn_to_en", "source": "Quy hoạch tốt có thể làm cho đô thị hóa bền vững hơn." },
+      { "direction": "en_to_vn", "source": "Urbanisation has accelerated rapidly in developing nations." },
+      { "direction": "en_to_vn", "source": "Uncontrolled urbanisation can lead to serious housing shortages." },
+      { "direction": "en_to_vn", "source": "Urbanisation is transforming rural societies across the globe." },
+      { "direction": "en_to_vn", "source": "Traffic and pollution are common consequences of urbanisation." },
+      { "direction": "en_to_vn", "source": "Governments must plan carefully to manage rapid urbanisation." }
+    ],
+    "scenario": [
+      "In an IELTS essay, write a formal sentence arguing that urbanisation causes overcrowding.",
+      "Write an academic sentence noting one economic benefit of urbanisation.",
+      "You are an urban planner presenting to a council. Describe the challenges of urbanisation in a formal tone.",
+      "In a casual conversation with a friend, comment on how urbanisation has changed your hometown. Use an informal tone.",
+      "Write a formal government-report sentence recommending ways to manage urbanisation.",
+      "For a debate, deliver a confident claim that urbanisation is inevitable and should be embraced.",
+      "Write a hedged, cautious academic sentence about the environmental effects of urbanisation.",
+      "You are an environmental journalist writing an article. Reflect on urbanisation and green space in a thoughtful tone.",
+      "In a persuasive speech, urge better planning for urbanisation. Keep it firm but formal.",
+      "Write an objective sentence for a geography essay describing the pace of urbanisation worldwide."
+    ]
+  },
+  "infrastructure": {
+    "cloze": [
+      { "sentence": "The government has promised to invest heavily in the country's ____.", "answer": "infrastructure" },
+      { "sentence": "Good transport ____ is essential for economic growth.", "answer": "infrastructure" },
+      { "sentence": "Poor ____ discourages foreign companies from investing.", "answer": "infrastructure" },
+      { "sentence": "The earthquake destroyed much of the region's ____.", "answer": "infrastructure" },
+      { "sentence": "Modern ____ such as roads and bridges supports daily life.", "answer": "infrastructure" },
+      { "sentence": "Developing nations often lack the ____ needed for rapid growth.", "answer": "infrastructure" },
+      { "sentence": "Reliable digital ____ has become as important as physical roads.", "answer": "infrastructure" },
+      { "sentence": "Upgrading the nation's ____ would create thousands of jobs.", "answer": "infrastructure" },
+      { "sentence": "Without proper ____, rural areas remain isolated and poor.", "answer": "infrastructure" },
+      { "sentence": "The city's ageing ____ can no longer cope with its population.", "answer": "infrastructure" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Chính phủ đang đầu tư mạnh vào cơ sở hạ tầng." },
+      { "direction": "vn_to_en", "source": "Cơ sở hạ tầng giao thông tốt rất quan trọng cho tăng trưởng kinh tế." },
+      { "direction": "vn_to_en", "source": "Cơ sở hạ tầng yếu kém khiến nhà đầu tư nước ngoài e ngại." },
+      { "direction": "vn_to_en", "source": "Nâng cấp cơ sở hạ tầng sẽ tạo ra nhiều việc làm." },
+      { "direction": "vn_to_en", "source": "Nếu không có cơ sở hạ tầng tốt, vùng nông thôn vẫn bị cô lập." },
+      { "direction": "en_to_vn", "source": "Investing in infrastructure is a key driver of long-term growth." },
+      { "direction": "en_to_vn", "source": "The country's poor infrastructure hampers its development." },
+      { "direction": "en_to_vn", "source": "Reliable infrastructure attracts businesses and creates jobs." },
+      { "direction": "en_to_vn", "source": "Much of the city's infrastructure needs urgent repair." },
+      { "direction": "en_to_vn", "source": "Digital infrastructure is now essential for a modern economy." }
+    ],
+    "scenario": [
+      "In an IELTS essay, write a formal sentence arguing that governments should prioritise infrastructure spending.",
+      "Write an academic sentence linking good infrastructure to economic development.",
+      "You are an engineer presenting a project. Describe the region's infrastructure needs in a formal tone.",
+      "In a casual conversation with a friend, complain about the poor infrastructure in your area. Use an informal tone.",
+      "Write a formal budget-proposal sentence requesting funds for new infrastructure.",
+      "For a debate, deliver a confident claim that infrastructure is the foundation of prosperity.",
+      "Write a hedged, cautious academic sentence about the costs of infrastructure projects.",
+      "You are a mayor at a press conference. Announce a new infrastructure plan in a formal tone.",
+      "In a persuasive campaign speech, promise to modernise the nation's infrastructure. Keep it energetic but formal.",
+      "Write an objective sentence for an economics essay explaining why infrastructure matters."
+    ]
+  },
+  "work-life balance": {
+    "cloze": [
+      { "sentence": "Many employees now value ____ more than a high salary.", "answer": "work-life balance" },
+      { "sentence": "Long working hours can destroy a person's ____.", "answer": "work-life balance" },
+      { "sentence": "Flexible schedules help workers achieve a better ____.", "answer": "work-life balance" },
+      { "sentence": "Companies that promote ____ tend to have happier staff.", "answer": "work-life balance" },
+      { "sentence": "Remote work has, for some, improved their ____.", "answer": "work-life balance" },
+      { "sentence": "Poor ____ often leads to stress and burnout.", "answer": "work-life balance" },
+      { "sentence": "Achieving a healthy ____ is a growing priority for young professionals.", "answer": "work-life balance" },
+      { "sentence": "Some argue that technology has blurred our ____.", "answer": "work-life balance" },
+      { "sentence": "Governments can encourage ____ by limiting working hours.", "answer": "work-life balance" },
+      { "sentence": "A good ____ allows people to spend more time with their families.", "answer": "work-life balance" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Nhiều người coi trọng sự cân bằng công việc và cuộc sống hơn lương cao." },
+      { "direction": "vn_to_en", "source": "Làm việc quá nhiều giờ phá hỏng sự cân bằng công việc và cuộc sống." },
+      { "direction": "vn_to_en", "source": "Lịch làm việc linh hoạt giúp cải thiện cân bằng công việc và cuộc sống." },
+      { "direction": "vn_to_en", "source": "Công ty đề cao cân bằng công việc và cuộc sống thường có nhân viên hạnh phúc hơn." },
+      { "direction": "vn_to_en", "source": "Cân bằng công việc và cuộc sống tốt giúp ta có thời gian cho gia đình." },
+      { "direction": "en_to_vn", "source": "A healthy work-life balance is essential for long-term wellbeing." },
+      { "direction": "en_to_vn", "source": "Many young workers are prepared to earn less for a better work-life balance." },
+      { "direction": "en_to_vn", "source": "Technology has made it harder to maintain a work-life balance." },
+      { "direction": "en_to_vn", "source": "Flexible hours can greatly improve employees' work-life balance." },
+      { "direction": "en_to_vn", "source": "Companies that ignore work-life balance often lose talented staff." }
+    ],
+    "scenario": [
+      "In an IELTS essay, write a formal sentence arguing that work-life balance is more important than a high income.",
+      "Write an academic sentence noting how technology affects work-life balance.",
+      "You are an HR manager writing a policy. Explain measures to support work-life balance in a formal tone.",
+      "In a casual chat with a colleague, talk about your struggle with work-life balance. Use an informal tone.",
+      "Write a formal job-advert line highlighting the company's commitment to work-life balance.",
+      "For a debate, deliver a confident claim that good work-life balance boosts productivity.",
+      "Write a hedged, cautious academic sentence about measuring work-life balance.",
+      "You are writing a polite email to your boss requesting flexible hours for better work-life balance.",
+      "In a motivational blog post, encourage readers to protect their work-life balance. Keep it warm but professional.",
+      "Write an objective sentence for a management report on trends in work-life balance."
+    ]
+  },
+  "quota": {
+    "cloze": [
+      { "sentence": "The government introduced a strict ____ on the number of migrants allowed each year.", "answer": "quota" },
+      { "sentence": "Some universities set a ____ to ensure a diverse student body.", "answer": "quota" },
+      { "sentence": "The country imposed an import ____ to protect local farmers.", "answer": "quota" },
+      { "sentence": "Each salesperson must meet a monthly ____ to keep their job.", "answer": "quota" },
+      { "sentence": "Critics argue that a gender ____ can undermine fair competition.", "answer": "quota" },
+      { "sentence": "Fishing ____s were introduced to prevent stocks from collapsing.", "answer": "quota" },
+      { "sentence": "The factory exceeded its production ____ for the third month running.", "answer": "quota" },
+      { "sentence": "Supporters say a hiring ____ helps correct historical discrimination.", "answer": "quota" },
+      { "sentence": "The airline set a strict baggage ____ for economy passengers.", "answer": "quota" },
+      { "sentence": "Meeting the export ____ proved difficult during the recession.", "answer": "quota" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Chính phủ đặt ra hạn ngạch nhập cư mỗi năm." },
+      { "direction": "vn_to_en", "source": "Một số trường đại học áp dụng chỉ tiêu để đảm bảo sự đa dạng." },
+      { "direction": "vn_to_en", "source": "Nước này áp đặt hạn ngạch nhập khẩu để bảo vệ nông dân trong nước." },
+      { "direction": "vn_to_en", "source": "Mỗi nhân viên bán hàng phải đạt chỉ tiêu hàng tháng." },
+      { "direction": "vn_to_en", "source": "Hạn ngạch đánh bắt cá được đưa ra để bảo vệ nguồn lợi thủy sản." },
+      { "direction": "en_to_vn", "source": "The company set an ambitious sales quota for the new team." },
+      { "direction": "en_to_vn", "source": "A hiring quota can help increase diversity in the workplace." },
+      { "direction": "en_to_vn", "source": "Import quotas are often used to shield domestic industries." },
+      { "direction": "en_to_vn", "source": "Critics claim that quotas reward candidates unfairly." },
+      { "direction": "en_to_vn", "source": "The country introduced a strict quota on carbon emissions." }
+    ],
+    "scenario": [
+      "In an IELTS essay, write a formal sentence arguing that a gender quota promotes fairness at work.",
+      "Write a counter-argument sentence claiming quotas undermine merit. Keep it academic.",
+      "You are a trade official explaining policy. Describe an import quota in a formal tone.",
+      "In a casual chat with a colleague, grumble about meeting your sales quota. Use an informal tone.",
+      "Write a formal HR-memo sentence introducing a hiring quota for underrepresented groups.",
+      "For a debate, deliver a confident claim that immigration quotas are necessary.",
+      "Write a hedged, cautious academic sentence about the effects of a university quota.",
+      "You are an environmental officer writing a report. Recommend a fishing quota in a formal tone.",
+      "In a persuasive speech, argue for or against emission quotas. Keep it firm but formal.",
+      "Write an objective sentence for an economics essay explaining how a quota affects trade."
+    ]
+  },
+  "subsidy": {
+    "cloze": [
+      { "sentence": "The government provides a generous ____ to encourage renewable energy.", "answer": "subsidy" },
+      { "sentence": "Farmers rely on a state ____ to keep their businesses afloat.", "answer": "subsidy" },
+      { "sentence": "Critics argue that a fuel ____ mainly benefits the wealthy.", "answer": "subsidy" },
+      { "sentence": "Without a housing ____, many families could not afford rent.", "answer": "subsidy" },
+      { "sentence": "The removal of the ____ caused food prices to rise sharply.", "answer": "subsidy" },
+      { "sentence": "An export ____ helps domestic firms compete abroad.", "answer": "subsidy" },
+      { "sentence": "Some economists believe a ____ can distort the free market.", "answer": "subsidy" },
+      { "sentence": "The company received a government ____ to build a new factory.", "answer": "subsidy" },
+      { "sentence": "A childcare ____ allows more parents to return to work.", "answer": "subsidy" },
+      { "sentence": "The tuition ____ makes higher education more accessible to the poor.", "answer": "subsidy" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Chính phủ cấp một khoản trợ cấp lớn để khuyến khích năng lượng tái tạo." },
+      { "direction": "vn_to_en", "source": "Nông dân phụ thuộc vào trợ cấp của nhà nước để duy trì sản xuất." },
+      { "direction": "vn_to_en", "source": "Nếu không có trợ cấp nhà ở, nhiều gia đình không đủ tiền thuê nhà." },
+      { "direction": "vn_to_en", "source": "Việc cắt bỏ trợ cấp khiến giá thực phẩm tăng mạnh." },
+      { "direction": "vn_to_en", "source": "Trợ cấp học phí giúp người nghèo dễ tiếp cận giáo dục đại học hơn." },
+      { "direction": "en_to_vn", "source": "A government subsidy can make clean energy more affordable." },
+      { "direction": "en_to_vn", "source": "Removing the subsidy would hurt low-income households the most." },
+      { "direction": "en_to_vn", "source": "Some argue that a farming subsidy distorts the global market." },
+      { "direction": "en_to_vn", "source": "The childcare subsidy has helped many mothers return to work." },
+      { "direction": "en_to_vn", "source": "Critics say the subsidy is an inefficient use of public money." }
+    ],
+    "scenario": [
+      "In an IELTS essay, write a formal sentence arguing that governments should offer a subsidy for renewable energy.",
+      "Write a counter-argument sentence claiming a subsidy wastes taxpayers' money. Keep it academic.",
+      "You are a finance official explaining policy. Describe a farming subsidy in a formal tone.",
+      "In a casual conversation with a friend, mention how a housing subsidy helped your family. Use an informal tone.",
+      "Write a formal proposal sentence requesting a subsidy for a community project.",
+      "For a debate, deliver a confident claim that a childcare subsidy benefits the whole economy.",
+      "Write a hedged, cautious academic sentence about the drawbacks of a subsidy.",
+      "You are an economist writing a report. Analyse the effect of removing a fuel subsidy in a formal tone.",
+      "In a persuasive campaign speech, promise a subsidy for struggling farmers. Keep it warm but formal.",
+      "Write an objective sentence for an economics essay explaining how a subsidy influences prices."
+    ]
+  }
+}

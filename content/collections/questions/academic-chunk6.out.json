@@ -1,0 +1,572 @@
+{
+  "prevalent": {
+    "cloze": [
+      { "sentence": "Obesity has become increasingly ____ among young adults in industrialised nations.", "answer": "prevalent" },
+      { "sentence": "The study found that misconceptions about vaccines were more ____ than researchers had expected.", "answer": "prevalent" },
+      { "sentence": "Anxiety disorders are particularly ____ in high-pressure academic environments.", "answer": "prevalent" },
+      { "sentence": "These farming practices were ____ throughout the region long before industrialisation.", "answer": "prevalent" },
+      { "sentence": "The survey shows that remote working is now more ____ than it was a decade ago.", "answer": "prevalent" },
+      { "sentence": "Such attitudes remain ____ despite decades of public education campaigns.", "answer": "prevalent" },
+      { "sentence": "Malaria is still highly ____ in several tropical regions.", "answer": "prevalent" },
+      { "sentence": "The most ____ view among economists is that inflation will ease gradually.", "answer": "prevalent" },
+      { "sentence": "Certain grammatical errors are especially ____ among learners whose first language is tonal.", "answer": "prevalent" },
+      { "sentence": "Corruption was so ____ that it undermined public trust in the institution.", "answer": "prevalent" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Béo phì đang ngày càng trở nên phổ biến ở giới trẻ." },
+      { "direction": "vn_to_en", "source": "Quan niệm sai lầm này vẫn còn rất phổ biến trong cộng đồng." },
+      { "direction": "vn_to_en", "source": "Làm việc từ xa hiện nay phổ biến hơn nhiều so với trước đây." },
+      { "direction": "vn_to_en", "source": "Sốt rét vẫn còn thịnh hành ở nhiều vùng nhiệt đới." },
+      { "direction": "vn_to_en", "source": "Những lỗi ngữ pháp như vậy đặc biệt phổ biến ở người mới học." },
+      { "direction": "en_to_vn", "source": "Smartphone addiction is becoming alarmingly prevalent among teenagers." },
+      { "direction": "en_to_vn", "source": "This belief was prevalent throughout the medieval period." },
+      { "direction": "en_to_vn", "source": "The disease is most prevalent in areas with poor sanitation." },
+      { "direction": "en_to_vn", "source": "Such stereotypes remain prevalent in mainstream media." },
+      { "direction": "en_to_vn", "source": "Short-term contracts have grown more prevalent in the modern labour market." }
+    ],
+    "scenario": [
+      "In a public-health essay, describe how a certain disease is widespread in a particular region. Write one formal sentence using 'prevalent'.",
+      "You are writing the introduction to a research paper on social media. State that a problem is common among young people, in an academic tone.",
+      "In a report for a university committee, note that a particular attitude is common among students. Keep the register formal.",
+      "Write a sentence for a sociology assignment describing a belief that was common in a past era.",
+      "During a formal presentation, mention that a working practice has become more common in recent years.",
+      "In an academic abstract, summarise that a certain error is especially common among a group of learners.",
+      "You are drafting a literature review; state that one viewpoint is the most common among scholars.",
+      "In a formal policy brief, point out that a harmful practice remains common despite reforms.",
+      "Write a sentence for an economics essay noting that a type of employment has become more common.",
+      "In a scientific discussion section, comment that a condition is most common in a specific population."
+    ]
+  },
+  "robust": {
+    "cloze": [
+      { "sentence": "The findings are based on a ____ statistical analysis of over ten thousand cases.", "answer": "robust" },
+      { "sentence": "We need a more ____ methodology before these conclusions can be trusted.", "answer": "robust" },
+      { "sentence": "The evidence for this hypothesis is surprisingly ____.", "answer": "robust" },
+      { "sentence": "A ____ experimental design controls for as many confounding variables as possible.", "answer": "robust" },
+      { "sentence": "The economy has proven remarkably ____ in the face of external shocks.", "answer": "robust" },
+      { "sentence": "The correlation remained ____ even after the researchers removed the outliers.", "answer": "robust" },
+      { "sentence": "Peer reviewers praised the paper for its ____ theoretical framework.", "answer": "robust" },
+      { "sentence": "The model produced ____ predictions across a wide range of conditions.", "answer": "robust" },
+      { "sentence": "A ____ sample size is essential for drawing reliable inferences.", "answer": "robust" },
+      { "sentence": "The results proved ____ when the experiment was replicated by an independent team.", "answer": "robust" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Kết luận này dựa trên một phân tích thống kê vững chắc." },
+      { "direction": "vn_to_en", "source": "Chúng ta cần một phương pháp đáng tin cậy hơn." },
+      { "direction": "vn_to_en", "source": "Bằng chứng cho giả thuyết này khá vững chắc." },
+      { "direction": "vn_to_en", "source": "Mối tương quan vẫn vững chắc sau khi loại bỏ các giá trị ngoại lai." },
+      { "direction": "vn_to_en", "source": "Một thiết kế thí nghiệm chặt chẽ sẽ kiểm soát các biến gây nhiễu." },
+      { "direction": "en_to_vn", "source": "The study offers robust evidence for the proposed link." },
+      { "direction": "en_to_vn", "source": "Their conclusions rest on a robust and transparent methodology." },
+      { "direction": "en_to_vn", "source": "The framework proved robust across several independent datasets." },
+      { "direction": "en_to_vn", "source": "A robust research design minimises the risk of bias." },
+      { "direction": "en_to_vn", "source": "The banking sector remained robust despite the recession." }
+    ],
+    "scenario": [
+      "In the methodology section of a thesis, describe your statistical analysis as reliable and rigorous. Use 'robust'.",
+      "You are reviewing a peer's paper; comment formally that the study needs a stronger, more reliable method.",
+      "In a research abstract, state that the evidence for your hypothesis is strong and dependable.",
+      "Write a sentence for an economics report describing a resilient economy that withstood shocks.",
+      "In a discussion section, note that a result held up even after outliers were removed.",
+      "During a formal defence, explain that your experimental design controls for confounding variables reliably.",
+      "In a grant proposal, argue that your proposed framework is theoretically sound and reliable.",
+      "Write a sentence for a lab report stating that findings were confirmed by an independent replication.",
+      "In an academic email to a supervisor, ask whether the sample size is large enough to be reliable.",
+      "In a literature review, praise a cited study for its dependable and well-controlled design."
+    ]
+  },
+  "comprehensive": {
+    "cloze": [
+      { "sentence": "The report provides a ____ overview of current climate policy.", "answer": "comprehensive" },
+      { "sentence": "A ____ review of the literature revealed several unresolved questions.", "answer": "comprehensive" },
+      { "sentence": "The government introduced a ____ reform of the education system.", "answer": "comprehensive" },
+      { "sentence": "Students are expected to submit a ____ analysis of the case study.", "answer": "comprehensive" },
+      { "sentence": "This textbook offers the most ____ treatment of the subject available.", "answer": "comprehensive" },
+      { "sentence": "We conducted a ____ survey covering every district in the region.", "answer": "comprehensive" },
+      { "sentence": "The database provides ____ coverage of publications since 1990.", "answer": "comprehensive" },
+      { "sentence": "A ____ understanding of the problem requires input from several disciplines.", "answer": "comprehensive" },
+      { "sentence": "The committee called for a ____ strategy rather than piecemeal measures.", "answer": "comprehensive" },
+      { "sentence": "Her dissertation gives a ____ account of the reforms and their effects.", "answer": "comprehensive" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Báo cáo cung cấp một cái nhìn tổng quan toàn diện về chính sách khí hậu." },
+      { "direction": "vn_to_en", "source": "Một đánh giá tài liệu toàn diện đã cho thấy nhiều câu hỏi chưa được giải đáp." },
+      { "direction": "vn_to_en", "source": "Chính phủ đã tiến hành một cuộc cải cách toàn diện hệ thống giáo dục." },
+      { "direction": "vn_to_en", "source": "Sinh viên phải nộp một bản phân tích đầy đủ về nghiên cứu tình huống." },
+      { "direction": "vn_to_en", "source": "Cần một chiến lược toàn diện thay vì các biện pháp rời rạc." },
+      { "direction": "en_to_vn", "source": "The paper presents a comprehensive analysis of the data." },
+      { "direction": "en_to_vn", "source": "We aimed for comprehensive coverage of all relevant studies." },
+      { "direction": "en_to_vn", "source": "A comprehensive understanding of the issue is still lacking." },
+      { "direction": "en_to_vn", "source": "The manual is comprehensive but somewhat difficult to navigate." },
+      { "direction": "en_to_vn", "source": "Their comprehensive dataset spans three decades of observations." }
+    ],
+    "scenario": [
+      "In a research proposal, promise a thorough, all-inclusive review of the existing literature. Use 'comprehensive'.",
+      "You are writing an executive summary; describe your report as covering every aspect of the topic.",
+      "In a policy recommendation, argue for a wide-ranging strategy instead of small, isolated fixes.",
+      "Write a sentence for a course syllabus describing an all-inclusive textbook on the subject.",
+      "In a formal cover letter for a grant, state that your survey covered the entire region.",
+      "In a discussion section, admit that a full understanding of the problem needs several disciplines.",
+      "Write a sentence for a database description advertising complete coverage of publications since 1990.",
+      "In an academic report, describe a government reform as sweeping and all-encompassing.",
+      "In feedback to a student, praise a dissertation for its thorough and complete account of the reforms.",
+      "In a formal abstract, state that your paper offers a complete analysis of the collected data."
+    ]
+  },
+  "underlying": {
+    "cloze": [
+      { "sentence": "The researchers sought to identify the ____ causes of the conflict.", "answer": "underlying" },
+      { "sentence": "There is an ____ assumption in this argument that markets are always rational.", "answer": "underlying" },
+      { "sentence": "Understanding the ____ mechanisms is essential for effective treatment.", "answer": "underlying" },
+      { "sentence": "The paper challenges the theory's ____ premises.", "answer": "underlying" },
+      { "sentence": "Poverty is often the ____ factor behind poor educational outcomes.", "answer": "underlying" },
+      { "sentence": "We must address the ____ problem, not merely its symptoms.", "answer": "underlying" },
+      { "sentence": "The ____ principle behind the experiment is deceptively simple.", "answer": "underlying" },
+      { "sentence": "Her analysis exposes the ____ tensions within the organisation.", "answer": "underlying" },
+      { "sentence": "Several ____ trends explain the sudden shift in public opinion.", "answer": "underlying" },
+      { "sentence": "The model rests on a number of ____ assumptions that are rarely examined.", "answer": "underlying" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Các nhà nghiên cứu tìm cách xác định nguyên nhân cơ bản của xung đột." },
+      { "direction": "vn_to_en", "source": "Có một giả định ẩn sau lập luận này rằng thị trường luôn hợp lý." },
+      { "direction": "vn_to_en", "source": "Chúng ta phải giải quyết vấn đề cốt lõi, chứ không chỉ các triệu chứng." },
+      { "direction": "vn_to_en", "source": "Nghèo đói thường là yếu tố nằm bên dưới của kết quả học tập kém." },
+      { "direction": "vn_to_en", "source": "Mô hình này dựa trên một số giả định cơ bản hiếm khi được xem xét." },
+      { "direction": "en_to_vn", "source": "The study examines the underlying causes of urban migration." },
+      { "direction": "en_to_vn", "source": "An underlying assumption of the model is that behaviour is rational." },
+      { "direction": "en_to_vn", "source": "Treating symptoms ignores the underlying condition." },
+      { "direction": "en_to_vn", "source": "The report reveals the underlying tensions in the negotiations." },
+      { "direction": "en_to_vn", "source": "We need to understand the underlying mechanism before proposing a solution." }
+    ],
+    "scenario": [
+      "In a research introduction, state that you aim to uncover the root causes of a social problem. Use 'underlying'.",
+      "You are critiquing an argument; point out a hidden assumption behind it, in a formal tone.",
+      "In a medical essay, explain that treatment must target the deeper cause, not just symptoms.",
+      "Write a sentence for a policy paper identifying poverty as the deeper factor behind an outcome.",
+      "In a discussion section, note that a model rests on unexamined basic assumptions.",
+      "In a formal analysis, describe the deeper tensions within an organisation.",
+      "Write a sentence for a science report describing the basic principle behind an experiment.",
+      "In an academic abstract, say that several deeper trends explain a shift in public opinion.",
+      "In a literature review, challenge the fundamental premises of an established theory.",
+      "In a formal report, argue that the underlying problem must be addressed before real progress is possible."
+    ]
+  },
+  "respective": {
+    "cloze": [
+      { "sentence": "The two authors discuss the topic from their ____ disciplinary perspectives.", "answer": "respective" },
+      { "sentence": "Participants returned to their ____ groups after the briefing.", "answer": "respective" },
+      { "sentence": "France and Germany pursued their ____ energy strategies independently.", "answer": "respective" },
+      { "sentence": "Each region has developed according to its ____ historical circumstances.", "answer": "respective" },
+      { "sentence": "The findings were reported to the ____ funding agencies.", "answer": "respective" },
+      { "sentence": "The students presented the results of their ____ experiments.", "answer": "respective" },
+      { "sentence": "Both theories have their ____ strengths and weaknesses.", "answer": "respective" },
+      { "sentence": "The committees will review the proposals within their ____ jurisdictions.", "answer": "respective" },
+      { "sentence": "The delegates spoke on behalf of their ____ countries.", "answer": "respective" },
+      { "sentence": "The samples were stored in their ____ containers to avoid contamination.", "answer": "respective" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Hai tác giả bàn về chủ đề từ góc nhìn chuyên ngành tương ứng của họ." },
+      { "direction": "vn_to_en", "source": "Những người tham gia trở về nhóm tương ứng của mình sau buổi phổ biến." },
+      { "direction": "vn_to_en", "source": "Mỗi vùng phát triển theo hoàn cảnh lịch sử tương ứng của nó." },
+      { "direction": "vn_to_en", "source": "Các đại biểu phát biểu thay mặt cho quốc gia tương ứng của họ." },
+      { "direction": "vn_to_en", "source": "Cả hai lý thuyết đều có điểm mạnh và điểm yếu tương ứng." },
+      { "direction": "en_to_vn", "source": "The two groups completed their respective tasks on time." },
+      { "direction": "en_to_vn", "source": "Each department manages its respective budget." },
+      { "direction": "en_to_vn", "source": "The scholars are experts in their respective fields." },
+      { "direction": "en_to_vn", "source": "The results were sent to the respective authors for review." },
+      { "direction": "en_to_vn", "source": "The countries signed the treaty in their respective capitals." }
+    ],
+    "scenario": [
+      "In a comparative essay, note that two authors write from their own particular disciplines. Use 'respective'.",
+      "You are writing procedure notes; state that participants returned to the groups each of them belonged to.",
+      "In a formal report, describe how each country pursued its own energy strategy.",
+      "Write a sentence for a conference summary noting that delegates spoke for their own nations.",
+      "In an evaluation, state that two theories each have their own strengths and weaknesses.",
+      "In a lab methods section, explain that samples were kept in their own containers.",
+      "Write a sentence for an academic acknowledgement thanking the relevant funding agencies for each project.",
+      "In a formal memo, note that each committee reviewed proposals within its own jurisdiction.",
+      "In a research summary, say that students presented results from the experiments each had conducted.",
+      "In a formal introduction, describe several scholars as leaders in their own particular fields."
+    ]
+  },
+  "feasible": {
+    "cloze": [
+      { "sentence": "The committee concluded that the proposal was technically ____.", "answer": "feasible" },
+      { "sentence": "It is not ____ to survey the entire population within the given timeframe.", "answer": "feasible" },
+      { "sentence": "Researchers must demonstrate that their methods are ____ before securing funding.", "answer": "feasible" },
+      { "sentence": "A pilot study will determine whether the larger project is ____.", "answer": "feasible" },
+      { "sentence": "Given the budget, only a small-scale trial seemed ____.", "answer": "feasible" },
+      { "sentence": "The engineers assessed whether the design was economically ____.", "answer": "feasible" },
+      { "sentence": "It may be ____ to reduce emissions without harming economic growth.", "answer": "feasible" },
+      { "sentence": "The authors propose a more ____ alternative to the existing approach.", "answer": "feasible" },
+      { "sentence": "Such a timeline is simply not ____ under current conditions.", "answer": "feasible" },
+      { "sentence": "The study evaluated whether the intervention would be ____ in rural clinics.", "answer": "feasible" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Ủy ban kết luận rằng đề xuất này khả thi về mặt kỹ thuật." },
+      { "direction": "vn_to_en", "source": "Việc khảo sát toàn bộ dân số trong thời gian này là không khả thi." },
+      { "direction": "vn_to_en", "source": "Các nhà nghiên cứu phải chứng minh phương pháp của họ khả thi trước khi nhận tài trợ." },
+      { "direction": "vn_to_en", "source": "Một nghiên cứu thử nghiệm sẽ xác định liệu dự án lớn có khả thi hay không." },
+      { "direction": "vn_to_en", "source": "Với ngân sách hiện tại, chỉ một thử nghiệm quy mô nhỏ mới khả thi." },
+      { "direction": "en_to_vn", "source": "It is feasible to complete the analysis within six months." },
+      { "direction": "en_to_vn", "source": "The plan is ambitious but not economically feasible." },
+      { "direction": "en_to_vn", "source": "The researchers proposed a feasible alternative method." },
+      { "direction": "en_to_vn", "source": "A feasibility study confirmed that the project was viable." },
+      { "direction": "en_to_vn", "source": "Reducing costs by half is simply not feasible right now." }
+    ],
+    "scenario": [
+      "In a project proposal, argue that your plan can realistically be carried out. Use 'feasible'.",
+      "You are writing a limitations section; admit that surveying everyone was not practical within the timeframe.",
+      "In a grant application, state that a pilot study will test whether the larger project is workable.",
+      "Write a sentence for an engineering report assessing whether a design is economically practical.",
+      "In a policy brief, argue that cutting emissions without harming growth may be achievable.",
+      "In a formal recommendation, propose a more practical alternative to an existing approach.",
+      "Write a sentence for a research plan explaining that budget limits make only a small trial practical.",
+      "In a methods section, state that you evaluated whether an intervention could work in rural clinics.",
+      "In a committee report, conclude that a proposed timeline is not realistic under current conditions.",
+      "In a formal email to a supervisor, ask whether completing the analysis in six months is realistic."
+    ]
+  },
+  "negligible": {
+    "cloze": [
+      { "sentence": "The difference between the two groups was statistically ____.", "answer": "negligible" },
+      { "sentence": "The environmental impact of the change was found to be ____.", "answer": "negligible" },
+      { "sentence": "The effect of the treatment was small, indeed almost ____.", "answer": "negligible" },
+      { "sentence": "The cost of implementing the reform is ____ compared with its benefits.", "answer": "negligible" },
+      { "sentence": "At such low concentrations, the risk to health is ____.", "answer": "negligible" },
+      { "sentence": "The additional error introduced by rounding is ____.", "answer": "negligible" },
+      { "sentence": "The correlation was so weak as to be ____.", "answer": "negligible" },
+      { "sentence": "The influence of this variable on the outcome proved ____.", "answer": "negligible" },
+      { "sentence": "The delay had a ____ effect on the overall results.", "answer": "negligible" },
+      { "sentence": "The savings, though real, were ____ in the long run.", "answer": "negligible" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Sự khác biệt giữa hai nhóm là không đáng kể về mặt thống kê." },
+      { "direction": "vn_to_en", "source": "Tác động môi trường của thay đổi này được cho là không đáng kể." },
+      { "direction": "vn_to_en", "source": "Chi phí thực hiện cải cách là không đáng kể so với lợi ích." },
+      { "direction": "vn_to_en", "source": "Ở nồng độ thấp như vậy, nguy cơ đối với sức khỏe là không đáng kể." },
+      { "direction": "vn_to_en", "source": "Ảnh hưởng của biến số này lên kết quả là không đáng kể." },
+      { "direction": "en_to_vn", "source": "The measurement error was negligible." },
+      { "direction": "en_to_vn", "source": "The two methods produced negligible differences in output." },
+      { "direction": "en_to_vn", "source": "The financial cost was negligible compared to the potential gains." },
+      { "direction": "en_to_vn", "source": "The effect of temperature was negligible in this experiment." },
+      { "direction": "en_to_vn", "source": "The improvement was so small as to be practically negligible." }
+    ],
+    "scenario": [
+      "In a results section, report that the difference between two groups was too small to matter. Use 'negligible'.",
+      "You are writing an environmental assessment; state that the impact of a change was insignificant.",
+      "In a cost-benefit analysis, argue that implementation costs are tiny compared with the benefits.",
+      "Write a sentence for a chemistry report noting that the health risk at low concentrations is minimal.",
+      "In a discussion section, admit that a treatment's effect was almost too small to detect.",
+      "In a formal report, note that rounding introduced only an insignificant amount of error.",
+      "Write a sentence for a statistics summary describing a correlation as too weak to matter.",
+      "In an academic evaluation, conclude that a variable's influence on the outcome was minimal.",
+      "In a project review, state that a delay had almost no effect on the final results.",
+      "In a financial analysis, describe long-term savings from a measure as insignificant."
+    ]
+  },
+  "with regard to": {
+    "cloze": [
+      { "sentence": "____ funding, the department has faced significant cuts this year.", "answer": "With regard to" },
+      { "sentence": "The policy remains unclear ____ part-time employees.", "answer": "with regard to" },
+      { "sentence": "____ the second hypothesis, the results were inconclusive.", "answer": "With regard to" },
+      { "sentence": "There is little consensus ____ the causes of the decline.", "answer": "with regard to" },
+      { "sentence": "The report makes several recommendations ____ data protection.", "answer": "with regard to" },
+      { "sentence": "____ methodology, the authors adopted a mixed-methods approach.", "answer": "With regard to" },
+      { "sentence": "Opinions differ sharply ____ the best course of action.", "answer": "with regard to" },
+      { "sentence": "The committee expressed concern ____ the study's ethical implications.", "answer": "with regard to" },
+      { "sentence": "____ the first research question, our findings support previous work.", "answer": "With regard to" },
+      { "sentence": "Guidance is limited ____ how these standards should be applied.", "answer": "with regard to" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Về vấn đề tài trợ, bộ phận này đã phải đối mặt với nhiều cắt giảm." },
+      { "direction": "vn_to_en", "source": "Chính sách vẫn chưa rõ ràng liên quan đến nhân viên bán thời gian." },
+      { "direction": "vn_to_en", "source": "Về giả thuyết thứ hai, kết quả không thuyết phục." },
+      { "direction": "vn_to_en", "source": "Có rất ít sự đồng thuận về nguyên nhân của sự suy giảm." },
+      { "direction": "vn_to_en", "source": "Báo cáo đưa ra nhiều khuyến nghị liên quan đến bảo vệ dữ liệu." },
+      { "direction": "en_to_vn", "source": "With regard to the budget, further discussion is needed." },
+      { "direction": "en_to_vn", "source": "The rules are strict with regard to plagiarism." },
+      { "direction": "en_to_vn", "source": "With regard to the third variable, no significant effect was observed." },
+      { "direction": "en_to_vn", "source": "Several questions remain with regard to the study's reliability." },
+      { "direction": "en_to_vn", "source": "The author says little with regard to the limitations of the method." }
+    ],
+    "scenario": [
+      "In a formal report, introduce a comment about the funding situation. Use 'with regard to' to signal the topic.",
+      "You are writing a policy memo; note that the rules are unclear concerning part-time staff.",
+      "In a results section, introduce a discussion of the second hypothesis in a formal way.",
+      "Write a sentence for a literature review noting a lack of agreement about the causes of a trend.",
+      "In an executive summary, introduce recommendations concerning data protection.",
+      "In a methods section, formally introduce the topic of methodology before describing your approach.",
+      "Write a sentence for a committee report expressing concern about a study's ethical issues.",
+      "In an academic answer, introduce your response to the first research question formally.",
+      "In a formal letter, note that guidance is limited concerning how a standard should be applied.",
+      "In a discussion, introduce a point about the reliability of a study using a formal connector."
+    ]
+  },
+  "in terms of": {
+    "cloze": [
+      { "sentence": "____ cost, the new system is far more efficient than its predecessor.", "answer": "In terms of" },
+      { "sentence": "The two approaches differ significantly ____ their theoretical foundations.", "answer": "in terms of" },
+      { "sentence": "____ accuracy, the revised model outperforms the original.", "answer": "In terms of" },
+      { "sentence": "The country has made progress ____ literacy but not employment.", "answer": "in terms of" },
+      { "sentence": "The results can be interpreted ____ social rather than economic factors.", "answer": "in terms of" },
+      { "sentence": "____ sample size, this study is one of the largest of its kind.", "answer": "In terms of" },
+      { "sentence": "The policy should be evaluated ____ its long-term effects.", "answer": "in terms of" },
+      { "sentence": "The groups were similar ____ age and educational background.", "answer": "in terms of" },
+      { "sentence": "____ methodology, the two studies are broadly comparable.", "answer": "In terms of" },
+      { "sentence": "The theory explains behaviour ____ underlying psychological needs.", "answer": "in terms of" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Về mặt chi phí, hệ thống mới hiệu quả hơn nhiều." },
+      { "direction": "vn_to_en", "source": "Hai cách tiếp cận khác nhau đáng kể về nền tảng lý thuyết." },
+      { "direction": "vn_to_en", "source": "Xét về độ chính xác, mô hình đã chỉnh sửa vượt trội hơn." },
+      { "direction": "vn_to_en", "source": "Đất nước đã tiến bộ về mặt xóa mù chữ nhưng chưa về việc làm." },
+      { "direction": "vn_to_en", "source": "Chính sách nên được đánh giá về mặt tác động dài hạn của nó." },
+      { "direction": "en_to_vn", "source": "In terms of performance, the two devices are nearly identical." },
+      { "direction": "en_to_vn", "source": "The groups were matched in terms of age and gender." },
+      { "direction": "en_to_vn", "source": "The novel is remarkable in terms of its narrative structure." },
+      { "direction": "en_to_vn", "source": "In terms of reliability, the older method still has advantages." },
+      { "direction": "en_to_vn", "source": "The results are best understood in terms of cultural context." }
+    ],
+    "scenario": [
+      "In a comparison essay, introduce a point about cost when comparing two systems. Use 'in terms of'.",
+      "You are writing an analysis; state that two approaches differ regarding their theoretical basis.",
+      "In a results section, note that a revised model is better with respect to accuracy.",
+      "Write a sentence for a development report noting progress in one area but not another.",
+      "In a discussion, explain that results can be understood with respect to social factors.",
+      "In a methods section, describe your study as large with respect to sample size.",
+      "Write a sentence for a policy evaluation focusing on long-term effects.",
+      "In a formal report, state that two groups were similar with respect to age and education.",
+      "In a literature review, note that two studies are comparable with respect to methodology.",
+      "In a theoretical essay, explain that a theory accounts for behaviour with respect to psychological needs."
+    ]
+  },
+  "constitute": {
+    "cloze": [
+      { "sentence": "Together, these factors ____ a serious threat to biodiversity.", "answer": "constitute" },
+      { "sentence": "Women now ____ the majority of undergraduate students.", "answer": "constitute" },
+      { "sentence": "Such behaviour may ____ a breach of academic integrity.", "answer": "constitute" },
+      { "sentence": "The twelve chapters ____ a comprehensive introduction to the field.", "answer": "constitute" },
+      { "sentence": "These findings ____ strong evidence against the prevailing theory.", "answer": "constitute" },
+      { "sentence": "Repeated failure to cite sources can ____ plagiarism.", "answer": "constitute" },
+      { "sentence": "The three regions together ____ nearly half the national population.", "answer": "constitute" },
+      { "sentence": "This does not ____ proof, but it is highly suggestive.", "answer": "constitute" },
+      { "sentence": "Migrant workers ____ a significant proportion of the labour force.", "answer": "constitute" },
+      { "sentence": "The signed agreement ____ a legally binding contract.", "answer": "constitutes" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Cùng nhau, những yếu tố này tạo nên một mối đe dọa nghiêm trọng." },
+      { "direction": "vn_to_en", "source": "Phụ nữ hiện chiếm phần lớn sinh viên đại học." },
+      { "direction": "vn_to_en", "source": "Hành vi như vậy có thể được coi là vi phạm liêm chính học thuật." },
+      { "direction": "vn_to_en", "source": "Những phát hiện này cấu thành bằng chứng mạnh mẽ chống lại lý thuyết hiện hành." },
+      { "direction": "vn_to_en", "source": "Lao động nhập cư chiếm một tỷ lệ đáng kể trong lực lượng lao động." },
+      { "direction": "en_to_vn", "source": "These three parts constitute the whole system." },
+      { "direction": "en_to_vn", "source": "Such actions constitute a violation of the code of conduct." },
+      { "direction": "en_to_vn", "source": "The data do not constitute conclusive proof." },
+      { "direction": "en_to_vn", "source": "Young people constitute the fastest-growing segment of users." },
+      { "direction": "en_to_vn", "source": "The essays together constitute a valuable collection." }
+    ],
+    "scenario": [
+      "In an environmental report, state that several factors together make up a serious threat. Use 'constitute'.",
+      "You are writing a demographic analysis; note that women now make up the majority of students.",
+      "In an academic-integrity policy, warn that certain behaviour amounts to a breach of the rules.",
+      "Write a sentence for a book review saying that the chapters together form a full introduction.",
+      "In a discussion, argue that your findings amount to strong evidence against a theory.",
+      "In a formal warning, explain that failing to cite sources can amount to plagiarism.",
+      "Write a sentence for a statistics report noting that three regions make up half the population.",
+      "In a cautious discussion, admit that your data do not amount to proof.",
+      "In a labour-market report, state that migrant workers make up a large share of the workforce.",
+      "In a legal-studies essay, note that a signed agreement forms a binding contract."
+    ]
+  },
+  "warrant": {
+    "cloze": [
+      { "sentence": "The unusual results ____ further investigation.", "answer": "warrant" },
+      { "sentence": "The evidence is not strong enough to ____ such a bold conclusion.", "answer": "warrant" },
+      { "sentence": "These findings ____ a re-examination of the standard model.", "answer": "warrant" },
+      { "sentence": "The severity of the problem ____ immediate action.", "answer": "warrants" },
+      { "sentence": "Does the data really ____ so much confidence in the theory?", "answer": "warrant" },
+      { "sentence": "The case ____ closer scrutiny than it has so far received.", "answer": "warrants" },
+      { "sentence": "Nothing in the study ____ the sweeping claims made by the media.", "answer": "warrants" },
+      { "sentence": "Such a significant deviation would certainly ____ concern.", "answer": "warrant" },
+      { "sentence": "The topic ____ a dedicated chapter of its own.", "answer": "warrants" },
+      { "sentence": "The limited sample does not ____ generalisation to the wider population.", "answer": "warrant" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Những kết quả bất thường này đáng để điều tra thêm." },
+      { "direction": "vn_to_en", "source": "Bằng chứng không đủ mạnh để biện minh cho một kết luận táo bạo như vậy." },
+      { "direction": "vn_to_en", "source": "Mức độ nghiêm trọng của vấn đề đòi hỏi hành động ngay lập tức." },
+      { "direction": "vn_to_en", "source": "Chủ đề này đáng có một chương riêng." },
+      { "direction": "vn_to_en", "source": "Mẫu nhỏ này không cho phép khái quát hóa cho toàn bộ dân số." },
+      { "direction": "en_to_vn", "source": "These preliminary results warrant a larger study." },
+      { "direction": "en_to_vn", "source": "The situation warrants careful consideration." },
+      { "direction": "en_to_vn", "source": "Nothing in the report warrants such alarm." },
+      { "direction": "en_to_vn", "source": "The anomaly warrants further explanation." },
+      { "direction": "en_to_vn", "source": "The evidence does not warrant firm conclusions at this stage." }
+    ],
+    "scenario": [
+      "In a discussion section, argue that surprising results justify further study. Use 'warrant'.",
+      "You are writing a cautious conclusion; state that the evidence does not justify a bold claim.",
+      "In a research summary, argue that your findings justify re-examining an established model.",
+      "Write a sentence for a policy brief stating that a problem's severity justifies immediate action.",
+      "In a critical review, question whether the data justify so much confidence in a theory.",
+      "In a formal recommendation, say that a case deserves closer scrutiny than it has received.",
+      "Write a sentence for a media-critique essay noting that a study does not justify sweeping claims.",
+      "In a results section, state that a significant deviation justifies concern.",
+      "In a book proposal, argue that a topic deserves a chapter of its own.",
+      "In a limitations section, admit that a small sample does not justify broad generalisation."
+    ]
+  },
+  "underpin": {
+    "cloze": [
+      { "sentence": "A strong theoretical framework should ____ any empirical study.", "answer": "underpin" },
+      { "sentence": "These principles ____ the entire legal system.", "answer": "underpin" },
+      { "sentence": "The assumption that ____ this argument is rarely stated explicitly.", "answer": "underpins" },
+      { "sentence": "Trust ____ every successful collaboration between researchers.", "answer": "underpins" },
+      { "sentence": "Several key studies ____ the current consensus on the issue.", "answer": "underpin" },
+      { "sentence": "The values that ____ democratic institutions are under increasing strain.", "answer": "underpin" },
+      { "sentence": "A robust evidence base must ____ effective policy.", "answer": "underpin" },
+      { "sentence": "The theory is ____ by decades of experimental research.", "answer": "underpinned" },
+      { "sentence": "Economic stability ____ long-term investment in education.", "answer": "underpins" },
+      { "sentence": "The concept of fairness ____ much of modern political philosophy.", "answer": "underpins" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Một khung lý thuyết vững chắc nên làm nền tảng cho mọi nghiên cứu thực nghiệm." },
+      { "direction": "vn_to_en", "source": "Những nguyên tắc này làm nền tảng cho toàn bộ hệ thống pháp luật." },
+      { "direction": "vn_to_en", "source": "Sự tin tưởng củng cố mọi sự hợp tác thành công giữa các nhà nghiên cứu." },
+      { "direction": "vn_to_en", "source": "Một cơ sở bằng chứng vững chắc phải làm nền tảng cho chính sách hiệu quả." },
+      { "direction": "vn_to_en", "source": "Ổn định kinh tế củng cố cho đầu tư dài hạn vào giáo dục." },
+      { "direction": "en_to_vn", "source": "These ideas underpin the author's entire argument." },
+      { "direction": "en_to_vn", "source": "The theory is underpinned by extensive experimental data." },
+      { "direction": "en_to_vn", "source": "Shared values underpin a stable society." },
+      { "direction": "en_to_vn", "source": "A clear methodology underpins the credibility of the study." },
+      { "direction": "en_to_vn", "source": "The reforms are underpinned by a commitment to equality." }
+    ],
+    "scenario": [
+      "In a thesis introduction, state that a theoretical framework supports your empirical study. Use 'underpin'.",
+      "You are writing a legal essay; explain that certain principles form the basis of the legal system.",
+      "In a critical analysis, point out an unstated assumption that forms the basis of an argument.",
+      "Write a sentence for a policy paper arguing that solid evidence must support effective policy.",
+      "In a discussion, note that several key studies form the basis of the current consensus.",
+      "In a political-science essay, argue that certain values form the foundation of democratic institutions.",
+      "Write a sentence stating that a theory is supported by decades of experimental research.",
+      "In an economics report, explain that economic stability supports long-term investment.",
+      "In a philosophy essay, note that the concept of fairness forms the basis of modern political thought.",
+      "In a methodology discussion, state that a clear method supports the credibility of a study."
+    ]
+  },
+  "corroborate": {
+    "cloze": [
+      { "sentence": "The new data strongly ____ the original findings.", "answer": "corroborate" },
+      { "sentence": "Independent witnesses were able to ____ the account.", "answer": "corroborate" },
+      { "sentence": "These results ____ the hypothesis proposed in earlier studies.", "answer": "corroborate" },
+      { "sentence": "The archaeological evidence ____ the historical records.", "answer": "corroborates" },
+      { "sentence": "Further experiments are needed to ____ these preliminary observations.", "answer": "corroborate" },
+      { "sentence": "The survey data ____ what interviews had already suggested.", "answer": "corroborate" },
+      { "sentence": "No independent source could ____ the researcher's claims.", "answer": "corroborate" },
+      { "sentence": "The findings were later ____ by a much larger study.", "answer": "corroborated" },
+      { "sentence": "Multiple lines of evidence ____ this interpretation.", "answer": "corroborate" },
+      { "sentence": "Field observations ____ the predictions of the model.", "answer": "corroborate" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Dữ liệu mới chứng thực mạnh mẽ cho các phát hiện ban đầu." },
+      { "direction": "vn_to_en", "source": "Các nhân chứng độc lập đã có thể chứng thực lời khai." },
+      { "direction": "vn_to_en", "source": "Bằng chứng khảo cổ củng cố cho các ghi chép lịch sử." },
+      { "direction": "vn_to_en", "source": "Cần thêm thí nghiệm để chứng thực những quan sát sơ bộ này." },
+      { "direction": "vn_to_en", "source": "Nhiều nguồn bằng chứng cùng củng cố cho cách diễn giải này." },
+      { "direction": "en_to_vn", "source": "The results corroborate earlier research on the topic." },
+      { "direction": "en_to_vn", "source": "Her testimony was corroborated by several documents." },
+      { "direction": "en_to_vn", "source": "These findings corroborate the theory's central prediction." },
+      { "direction": "en_to_vn", "source": "The experiment corroborates what had long been suspected." },
+      { "direction": "en_to_vn", "source": "No further evidence has emerged to corroborate the claim." }
+    ],
+    "scenario": [
+      "In a results section, report that new data support your original findings. Use 'corroborate'.",
+      "You are writing a history essay; note that archaeological evidence supports the written records.",
+      "In a discussion, state that your results support a hypothesis from earlier studies.",
+      "Write a sentence for a research plan explaining that more experiments are needed to confirm early observations.",
+      "In a formal report, note that survey data confirm what interviews had suggested.",
+      "In a critical review, point out that no independent source could confirm a researcher's claims.",
+      "Write a sentence noting that findings were later confirmed by a larger study.",
+      "In a discussion, argue that several lines of evidence support one interpretation.",
+      "In a science report, state that field observations confirm a model's predictions.",
+      "In a formal summary, say that a testimony was supported by several documents."
+    ]
+  },
+  "refute": {
+    "cloze": [
+      { "sentence": "The experiment was designed to ____ the competing hypothesis.", "answer": "refute" },
+      { "sentence": "Recent evidence appears to ____ the long-held assumption.", "answer": "refute" },
+      { "sentence": "The author systematically ____ each of the opposing arguments.", "answer": "refutes" },
+      { "sentence": "It is difficult to ____ a claim that cannot be tested.", "answer": "refute" },
+      { "sentence": "These findings ____ the idea that the two variables are unrelated.", "answer": "refute" },
+      { "sentence": "The government was quick to ____ the allegations.", "answer": "refute" },
+      { "sentence": "No single study can definitively ____ a well-established theory.", "answer": "refute" },
+      { "sentence": "The data neither confirm nor ____ the proposed mechanism.", "answer": "refute" },
+      { "sentence": "Her paper convincingly ____ the earlier interpretation.", "answer": "refutes" },
+      { "sentence": "Scientists later ____ the claim using more precise instruments.", "answer": "refuted" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Thí nghiệm được thiết kế để bác bỏ giả thuyết đối lập." },
+      { "direction": "vn_to_en", "source": "Bằng chứng gần đây dường như bác bỏ giả định lâu nay." },
+      { "direction": "vn_to_en", "source": "Tác giả lần lượt phản bác từng lập luận đối lập." },
+      { "direction": "vn_to_en", "source": "Rất khó để bác bỏ một tuyên bố không thể kiểm chứng." },
+      { "direction": "vn_to_en", "source": "Những phát hiện này bác bỏ ý kiến cho rằng hai biến số không liên quan." },
+      { "direction": "en_to_vn", "source": "The evidence refutes the popular misconception." },
+      { "direction": "en_to_vn", "source": "The author sets out to refute the prevailing view." },
+      { "direction": "en_to_vn", "source": "These results refute the null hypothesis." },
+      { "direction": "en_to_vn", "source": "The spokesperson firmly refuted the accusations." },
+      { "direction": "en_to_vn", "source": "Later studies refuted the initial conclusion." }
+    ],
+    "scenario": [
+      "In a methods section, explain that your experiment was designed to disprove a competing hypothesis. Use 'refute'.",
+      "You are writing a critical essay; note that recent evidence disproves a long-held assumption.",
+      "In a literature review, describe how an author disproves each opposing argument in turn.",
+      "Write a sentence for a philosophy essay noting that an untestable claim is hard to disprove.",
+      "In a discussion, state that your findings disprove the idea that two variables are unrelated.",
+      "In a news-analysis essay, report that a government quickly denied and disproved allegations.",
+      "Write a cautious sentence noting that no single study can conclusively disprove a well-established theory.",
+      "In a results section, admit that the data neither confirm nor disprove a proposed mechanism.",
+      "In a review, praise a paper that convincingly disproves an earlier interpretation.",
+      "In a history-of-science essay, note that scientists later disproved a claim with better instruments."
+    ]
+  },
+  "substantiate": {
+    "cloze": [
+      { "sentence": "The author fails to ____ these claims with any real evidence.", "answer": "substantiate" },
+      { "sentence": "More data are needed to ____ the proposed relationship.", "answer": "substantiate" },
+      { "sentence": "The theory has yet to be fully ____ by empirical research.", "answer": "substantiated" },
+      { "sentence": "It is not enough to assert a point; you must ____ it.", "answer": "substantiate" },
+      { "sentence": "The committee asked the researchers to ____ their conclusions.", "answer": "substantiate" },
+      { "sentence": "These anecdotes do little to ____ such a sweeping generalisation.", "answer": "substantiate" },
+      { "sentence": "Her argument is well ____ by references to primary sources.", "answer": "substantiated" },
+      { "sentence": "The allegations remain unproven and difficult to ____.", "answer": "substantiate" },
+      { "sentence": "Peer reviewers demanded further evidence to ____ the findings.", "answer": "substantiate" },
+      { "sentence": "The study provides enough data to ____ its central hypothesis.", "answer": "substantiate" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Tác giả không chứng minh được những tuyên bố này bằng bất kỳ bằng chứng thực sự nào." },
+      { "direction": "vn_to_en", "source": "Cần thêm dữ liệu để chứng minh mối quan hệ được đề xuất." },
+      { "direction": "vn_to_en", "source": "Chỉ khẳng định một điểm là chưa đủ; bạn phải chứng minh nó." },
+      { "direction": "vn_to_en", "source": "Ủy ban yêu cầu các nhà nghiên cứu chứng minh kết luận của họ." },
+      { "direction": "vn_to_en", "source": "Nghiên cứu cung cấp đủ dữ liệu để chứng minh giả thuyết trung tâm của nó." },
+      { "direction": "en_to_vn", "source": "The report lacks the data needed to substantiate its claims." },
+      { "direction": "en_to_vn", "source": "You must substantiate every assertion with evidence." },
+      { "direction": "en_to_vn", "source": "The theory has not yet been substantiated." },
+      { "direction": "en_to_vn", "source": "Her conclusions are substantiated by extensive fieldwork." },
+      { "direction": "en_to_vn", "source": "The accusations could not be substantiated." }
+    ],
+    "scenario": [
+      "In a critical review, point out that an author does not back up claims with evidence. Use 'substantiate'.",
+      "You are writing a research proposal; state that more data are needed to prove a proposed relationship.",
+      "In a discussion, admit that a theory has not yet been fully proven by empirical research.",
+      "Write a sentence for a writing-skills guide reminding students that assertions must be backed up.",
+      "In a committee report, note that researchers were asked to back up their conclusions.",
+      "In a critique, argue that anecdotes do little to prove a sweeping generalisation.",
+      "Write a sentence praising an argument that is well supported by primary sources.",
+      "In a formal analysis, note that allegations remain unproven and hard to back up.",
+      "In a peer review, demand further evidence to support the reported findings.",
+      "In a results section, state that your study provides enough data to support its central hypothesis."
+    ]
+  }
+}

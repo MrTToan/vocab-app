@@ -1,0 +1,572 @@
+{
+  "kind of": {
+    "cloze": [
+      { "sentence": "I'm ____ tired today, so I might just stay home tonight.", "answer": "kind of" },
+      { "sentence": "The movie was ____ boring, but the ending saved it.", "answer": "kind of" },
+      { "sentence": "\"Do you like your new job?\" \"____, but the hours are rough.\"", "answer": "Kind of" },
+      { "sentence": "It's ____ cold in here. Can we close the window?", "answer": "kind of" },
+      { "sentence": "I ____ want to go, but I also kind of don't.", "answer": "kind of" },
+      { "sentence": "She was ____ upset when I forgot her birthday.", "answer": "kind of" },
+      { "sentence": "The soup tastes ____ weird. Did you add something new?", "answer": "kind of" },
+      { "sentence": "\"Are you two dating?\" \"We're ____ seeing each other, I guess.\"", "answer": "kind of" },
+      { "sentence": "I'm ____ nervous about the interview tomorrow.", "answer": "kind of" },
+      { "sentence": "That painting is ____ nice, actually. Where did you get it?", "answer": "kind of" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Tôi đại loại là hơi mệt, chắc tối nay ở nhà thôi." },
+      { "direction": "vn_to_en", "source": "Bộ phim đó hơi hơi chán, nhưng cũng ổn." },
+      { "direction": "vn_to_en", "source": "Tôi cũng hơi muốn đi, nhưng lại hơi lười." },
+      { "direction": "vn_to_en", "source": "Cô ấy hơi buồn khi tôi quên mất." },
+      { "direction": "vn_to_en", "source": "Trong này hơi lạnh, đóng cửa sổ được không?" },
+      { "direction": "en_to_vn", "source": "I'm kind of hungry, do you want to grab something to eat?" },
+      { "direction": "en_to_vn", "source": "It was kind of a strange conversation, to be honest." },
+      { "direction": "en_to_vn", "source": "She's kind of shy when you first meet her." },
+      { "direction": "en_to_vn", "source": "The party was kind of fun, but I left early." },
+      { "direction": "en_to_vn", "source": "I kind of forgot we had a meeting today, sorry." }
+    ],
+    "scenario": [
+      "Casual: A friend asks if you liked the restaurant, but you only half-enjoyed it. Reply softening your opinion.",
+      "Friendly: Someone asks if you want to come to a party and you're not fully sure. Give a wishy-washy answer.",
+      "Casual: Your roommate asks how the new show is and you have mixed feelings. Answer.",
+      "Relaxed: A classmate asks if you understood the lesson, and you only partly did. Respond.",
+      "Casual: A friend asks if you're cold, and you're a little bit. Say so.",
+      "Friendly: Someone asks whether you like a song that's playing and you're lukewarm about it. Reply.",
+      "Casual: A coworker asks if you're stressed about the deadline, and you're a bit. Answer honestly but lightly.",
+      "Relaxed: A friend asks if the coffee is good and it's just okay. Give a soft answer.",
+      "Casual: Someone asks if you're ready to leave and you're almost but not quite. Respond.",
+      "Friendly: A friend asks if you miss your hometown, and you sort of do. Answer."
+    ]
+  },
+  "awesome": {
+    "cloze": [
+      { "sentence": "That concert last night was absolutely ____!", "answer": "awesome" },
+      { "sentence": "\"I got the job!\" \"That's ____! Congrats!\"", "answer": "awesome" },
+      { "sentence": "You finished the whole project already? ____!", "answer": "Awesome" },
+      { "sentence": "We had an ____ time at the beach this weekend.", "answer": "awesome" },
+      { "sentence": "\"I'll pick you up at seven.\" \"____, see you then.\"", "answer": "Awesome" },
+      { "sentence": "The view from the top of the mountain was ____.", "answer": "awesome" },
+      { "sentence": "She's an ____ cook; you have to try her noodles.", "answer": "awesome" },
+      { "sentence": "\"They said yes to our idea.\" \"____, let's get started.\"", "answer": "Awesome" },
+      { "sentence": "This new phone has some ____ features.", "answer": "awesome" },
+      { "sentence": "Thanks so much for helping me move; you're ____.", "answer": "awesome" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Buổi hòa nhạc tối qua tuyệt vời thật sự!" },
+      { "direction": "vn_to_en", "source": "Cậu làm xong hết rồi à? Hết sảy!" },
+      { "direction": "vn_to_en", "source": "Chúng tôi có một kỳ nghỉ tuyệt vời ở biển." },
+      { "direction": "vn_to_en", "source": "Cô ấy nấu ăn siêu ngon, tuyệt vời luôn." },
+      { "direction": "vn_to_en", "source": "\"Bảy giờ tôi qua đón.\" \"Tuyệt, gặp lúc đó nhé.\"" },
+      { "direction": "en_to_vn", "source": "You passed the exam? That's awesome, well done!" },
+      { "direction": "en_to_vn", "source": "The food at that place is awesome, you should try it." },
+      { "direction": "en_to_vn", "source": "We had an awesome weekend camping in the mountains." },
+      { "direction": "en_to_vn", "source": "Awesome, I'll see you at the party tonight then." },
+      { "direction": "en_to_vn", "source": "Thanks for the ride, you're awesome." }
+    ],
+    "scenario": [
+      "Casual: A friend tells you they just got promoted. React with excitement.",
+      "Friendly: Your buddy suggests meeting at a cafe you love. Agree enthusiastically.",
+      "Casual: You just tried a delicious dish your friend cooked. Compliment it.",
+      "Excited: You come back from an amazing trip and a friend asks how it was. Answer.",
+      "Casual: A teammate confirms the plan works out. Show approval in one word plus a follow-up.",
+      "Friendly: A friend offers to lend you their car. Thank them warmly.",
+      "Casual: You see a cool new gadget your friend bought. Compliment it.",
+      "Enthusiastic: Your favorite band announces a concert in your city. React to a friend.",
+      "Casual: Someone shares good news that everything got approved. Cheer them on.",
+      "Friendly: A friend helped you fix your bike for free. Tell them they're great."
+    ]
+  },
+  "gotcha": {
+    "cloze": [
+      { "sentence": "\"Turn left at the second light, then it's on your right.\" \"____, thanks.\"", "answer": "Gotcha" },
+      { "sentence": "\"You need to submit it by Friday, not Monday.\" \"____.\"", "answer": "Gotcha" },
+      { "sentence": "\"Press this button first, then that one.\" \"____, makes sense.\"", "answer": "Gotcha" },
+      { "sentence": "\"I'm allergic to peanuts, so no peanut sauce.\" \"____, I'll tell the chef.\"", "answer": "Gotcha" },
+      { "sentence": "\"Call me only after six.\" \"____, no problem.\"", "answer": "Gotcha" },
+      { "sentence": "\"The blue folder is for receipts.\" \"____, got it.\"", "answer": "Gotcha" },
+      { "sentence": "\"You have to log in before it'll save.\" \"____, that explains it.\"", "answer": "Gotcha" },
+      { "sentence": "\"We're meeting at the back entrance, not the front.\" \"____.\"", "answer": "Gotcha" },
+      { "sentence": "\"Don't reply all, just reply to me.\" \"____, my bad.\"", "answer": "Gotcha" },
+      { "sentence": "\"The wifi password is on the fridge.\" \"____, thanks a lot.\"", "answer": "Gotcha" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "\"Rẽ trái ở đèn thứ hai nhé.\" \"Hiểu rồi, cảm ơn.\"" },
+      { "direction": "vn_to_en", "source": "\"Nộp trước thứ Sáu chứ không phải thứ Hai.\" \"Nắm rồi.\"" },
+      { "direction": "vn_to_en", "source": "\"Bấm nút này trước.\" \"Hiểu rồi, hợp lý.\"" },
+      { "direction": "vn_to_en", "source": "\"Gọi tôi sau sáu giờ thôi nhé.\" \"Rõ rồi, không sao.\"" },
+      { "direction": "vn_to_en", "source": "\"Mật khẩu wifi dán trên tủ lạnh.\" \"Nắm rồi, cảm ơn nhiều.\"" },
+      { "direction": "en_to_vn", "source": "\"You just need to save it as a PDF.\" \"Gotcha.\"" },
+      { "direction": "en_to_vn", "source": "\"Meet me by the elevator, not the stairs.\" \"Gotcha, see you there.\"" },
+      { "direction": "en_to_vn", "source": "\"The report goes to Sarah, not me.\" \"Gotcha, I'll fix it.\"" },
+      { "direction": "en_to_vn", "source": "\"Bring your own cup tomorrow.\" \"Gotcha, will do.\"" },
+      { "direction": "en_to_vn", "source": "\"It only works when it's plugged in.\" \"Gotcha, that makes sense.\"" }
+    ],
+    "scenario": [
+      "Casual: A friend gives you quick directions to their house. Show you understood.",
+      "Friendly: Your coworker explains a small change to the schedule. Acknowledge it briefly.",
+      "Casual: Someone tells you how to work the coffee machine. Confirm you got it.",
+      "Relaxed: A friend reminds you to bring your ID. Reply that you understand.",
+      "Casual: Your teammate explains where to send a file. Acknowledge quickly.",
+      "Friendly: Someone clears up a misunderstanding you had. React showing it clicked.",
+      "Casual: A neighbor tells you which bin is for recycling. Confirm you understand.",
+      "Relaxed: A friend explains a rule of a new card game. Show you got it.",
+      "Casual: Your roommate says not to use the top shelf. Acknowledge lightly.",
+      "Friendly: Someone gives you a tip to avoid traffic. Reply that you understand."
+    ]
+  },
+  "take it easy": {
+    "cloze": [
+      { "sentence": "You've been working nonstop; ____ for a while.", "answer": "take it easy" },
+      { "sentence": "\"See you later!\" \"Bye, ____!\"", "answer": "take it easy" },
+      { "sentence": "The doctor told me to ____ until my ankle heals.", "answer": "take it easy" },
+      { "sentence": "Hey, ____, it's not a big deal, we'll fix it.", "answer": "take it easy" },
+      { "sentence": "After the exams, I just want to ____ this weekend.", "answer": "take it easy" },
+      { "sentence": "\"I'm heading out now.\" \"Alright, ____, man.\"", "answer": "take it easy" },
+      { "sentence": "You should ____ today; you look exhausted.", "answer": "take it easy" },
+      { "sentence": "Whoa, ____ on the coffee, that's your fourth cup.", "answer": "take it easy" },
+      { "sentence": "Let's just ____ tonight and watch a movie.", "answer": "take it easy" },
+      { "sentence": "He needs to ____ and stop stressing about everything.", "answer": "take it easy" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Cậu làm việc nhiều quá rồi, thư giãn một chút đi." },
+      { "direction": "vn_to_en", "source": "Bác sĩ bảo tôi nghỉ ngơi cho đến khi khỏi." },
+      { "direction": "vn_to_en", "source": "Bình tĩnh đi, có gì to tát đâu, mình sửa được mà." },
+      { "direction": "vn_to_en", "source": "\"Tôi đi trước đây.\" \"Ừ, đi cẩn thận nhé.\"" },
+      { "direction": "vn_to_en", "source": "Cuối tuần này tôi chỉ muốn nghỉ ngơi thôi." },
+      { "direction": "en_to_vn", "source": "Take it easy this weekend, you deserve some rest." },
+      { "direction": "en_to_vn", "source": "Take it easy, we still have plenty of time." },
+      { "direction": "en_to_vn", "source": "See you tomorrow, take it easy!" },
+      { "direction": "en_to_vn", "source": "The nurse told him to take it easy for a few days." },
+      { "direction": "en_to_vn", "source": "Take it easy on yourself; nobody's perfect." }
+    ],
+    "scenario": [
+      "Friendly: A stressed coworker keeps overworking. Tell them to relax a bit.",
+      "Casual: A friend is leaving and you're saying a light goodbye. Sign off with this phrase.",
+      "Caring: Your friend just recovered from a cold. Advise them not to overdo it.",
+      "Relaxed: You and a friend plan a lazy Sunday. Suggest just chilling.",
+      "Friendly: Someone is panicking over a small mistake. Calm them down.",
+      "Casual: A buddy is heading home after a long day. Wish them a relaxed goodbye.",
+      "Caring: A friend hurt their knee. Tell them to go easy on it.",
+      "Casual: Someone is drinking coffee too fast. Playfully tell them to slow down.",
+      "Friendly: A friend is anxious before a trip. Reassure them to relax.",
+      "Relaxed: After finishing a big project, tell your teammate to take a breather."
+    ]
+  },
+  "good for you": {
+    "cloze": [
+      { "sentence": "\"I finally quit smoking.\" \"____! That's a big step.\"", "answer": "Good for you" },
+      { "sentence": "You got into your first-choice university? ____!", "answer": "Good for you" },
+      { "sentence": "\"I started going to the gym every morning.\" \"____!\"", "answer": "Good for you" },
+      { "sentence": "\"I told my boss how I really felt.\" \"____, that took courage.\"", "answer": "Good for you" },
+      { "sentence": "She saved enough to travel for a year. ____, honestly.", "answer": "Good for you" },
+      { "sentence": "\"I've been reading a book a week lately.\" \"____!\"", "answer": "Good for you" },
+      { "sentence": "\"I finally learned to swim at thirty.\" \"____, that's awesome.\"", "answer": "Good for you" },
+      { "sentence": "You stood up for yourself? ____.", "answer": "Good for you" },
+      { "sentence": "\"I passed my driving test on the first try.\" \"____!\"", "answer": "Good for you" },
+      { "sentence": "\"I decided to go back to school.\" \"____, I'm proud of you.\"", "answer": "Good for you" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "\"Tôi bỏ thuốc lá rồi.\" \"Tốt cho bạn quá! Giỏi lắm.\"" },
+      { "direction": "vn_to_en", "source": "Cậu đậu nguyện vọng một à? Chúc mừng nhé!" },
+      { "direction": "vn_to_en", "source": "\"Dạo này tôi tập gym mỗi sáng.\" \"Tốt cho bạn quá!\"" },
+      { "direction": "vn_to_en", "source": "Cô ấy tiết kiệm đủ tiền đi du lịch cả năm, giỏi thật đấy." },
+      { "direction": "vn_to_en", "source": "\"Tôi quyết định quay lại đi học.\" \"Mừng cho bạn, tự hào về bạn lắm.\"" },
+      { "direction": "en_to_vn", "source": "\"I finally got my own apartment.\" \"Good for you!\"" },
+      { "direction": "en_to_vn", "source": "You ran a whole marathon? Good for you!" },
+      { "direction": "en_to_vn", "source": "\"I've been eating healthier this month.\" \"Good for you.\"" },
+      { "direction": "en_to_vn", "source": "Good for you for standing up to him." },
+      { "direction": "en_to_vn", "source": "\"I saved up and bought my first car.\" \"Good for you, that's great!\"" }
+    ],
+    "scenario": [
+      "Friendly: A friend tells you they quit a bad habit. Congratulate them warmly.",
+      "Casual: Your cousin says they got accepted to university. React happily.",
+      "Supportive: A friend shares they started exercising daily. Encourage them.",
+      "Warm: Someone tells you they finally chased a dream. Show you're proud.",
+      "Casual: A coworker says they got a raise. React positively.",
+      "Friendly: A friend learned a new skill as an adult. Praise them.",
+      "Supportive: Someone stood up for themselves at work. Approve of it.",
+      "Casual: A classmate says they passed a tough test. Congratulate them.",
+      "Warm: A friend saved money for a big trip. Cheer them on.",
+      "Friendly: Someone tells you they started their own small business. React with support."
+    ]
+  },
+  "I mean": {
+    "cloze": [
+      { "sentence": "It's not that I don't like her, ____, she's just a bit loud.", "answer": "I mean" },
+      { "sentence": "We should leave at eight, ____ maybe seven-thirty to be safe.", "answer": "I mean" },
+      { "sentence": "____, it's your choice, but I'd think about it more.", "answer": "I mean" },
+      { "sentence": "He's coming on Tuesday, ____ Wednesday, sorry, I got confused.", "answer": "I mean" },
+      { "sentence": "____, who wouldn't be nervous before a big interview?", "answer": "I mean" },
+      { "sentence": "The food was fine, ____, it wasn't amazing, but it was okay.", "answer": "I mean" },
+      { "sentence": "I'll pay you back tomorrow, ____ as soon as I get to the bank.", "answer": "I mean" },
+      { "sentence": "____, I like the plan, I'm just not sure about the timing.", "answer": "I mean" },
+      { "sentence": "She's really talented, ____, have you heard her sing?", "answer": "I mean" },
+      { "sentence": "It costs about fifty, ____, closer to sixty with tax.", "answer": "I mean" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Không phải tôi ghét cô ấy, ý tôi là cô ấy chỉ hơi ồn thôi." },
+      { "direction": "vn_to_en", "source": "Mình nên đi lúc tám giờ, ý tôi là bảy rưỡi cho chắc." },
+      { "direction": "vn_to_en", "source": "Ý tôi là, ai mà chẳng hồi hộp trước buổi phỏng vấn lớn chứ?" },
+      { "direction": "vn_to_en", "source": "Anh ấy đến thứ Ba, à ý tôi là thứ Tư, xin lỗi tôi nhầm." },
+      { "direction": "vn_to_en", "source": "Ý tôi là, tôi thích kế hoạch đó, chỉ chưa chắc về thời gian thôi." },
+      { "direction": "en_to_vn", "source": "I like it here, I mean, it's a little far, but it's nice." },
+      { "direction": "en_to_vn", "source": "We could go on Friday, I mean, Saturday works too." },
+      { "direction": "en_to_vn", "source": "I mean, it's not the end of the world if we're late." },
+      { "direction": "en_to_vn", "source": "He's smart, I mean, he finished the whole thing in an hour." },
+      { "direction": "en_to_vn", "source": "It's about ten dollars, I mean, maybe twelve." }
+    ],
+    "scenario": [
+      "Casual: You just gave your opinion but want to soften or explain it. Add a clarifying comment.",
+      "Friendly: You said the wrong day and want to correct yourself mid-sentence. Fix it.",
+      "Relaxed: A friend seems surprised you're nervous. Explain that it's normal.",
+      "Casual: You're not fully committing to a plan and want to explain your hesitation. Speak.",
+      "Friendly: You praised someone and want to back it up with a reason. Continue your thought.",
+      "Casual: You gave a rough price but want to correct it slightly. Adjust it.",
+      "Relaxed: You criticized something lightly but want to clarify you don't fully mean it. Explain.",
+      "Casual: You suggested a time but immediately reconsider. Revise it.",
+      "Friendly: You want to explain what you really meant after a comment. Clarify.",
+      "Relaxed: You're expressing mixed feelings about an idea. Explain the nuance."
+    ]
+  },
+  "to be honest": {
+    "cloze": [
+      { "sentence": "____, I didn't really enjoy the movie that much.", "answer": "To be honest" },
+      { "sentence": "The food was okay, but ____, I've had better.", "answer": "to be honest" },
+      { "sentence": "____, I completely forgot we had plans tonight.", "answer": "To be honest" },
+      { "sentence": "I'd rather stay in, ____; I'm pretty tired.", "answer": "to be honest" },
+      { "sentence": "____, I'm not sure this is the right decision.", "answer": "To be honest" },
+      { "sentence": "It's a nice car, but ____, it's a bit out of my budget.", "answer": "to be honest" },
+      { "sentence": "____, I didn't understand a word he said.", "answer": "To be honest" },
+      { "sentence": "I like him, but ____, he can be a little annoying.", "answer": "to be honest" },
+      { "sentence": "____, I've never really liked coffee that much.", "answer": "To be honest" },
+      { "sentence": "The trip was fun, but ____, I was glad to get home.", "answer": "to be honest" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Thành thật mà nói, tôi không thích bộ phim đó lắm." },
+      { "direction": "vn_to_en", "source": "Thật ra thì tôi quên mất là tối nay mình có hẹn." },
+      { "direction": "vn_to_en", "source": "Nói thật, tôi không chắc đây là quyết định đúng." },
+      { "direction": "vn_to_en", "source": "Thành thật mà nói, tôi thà ở nhà còn hơn." },
+      { "direction": "vn_to_en", "source": "Nói thật thì tôi chưa bao giờ thích cà phê lắm." },
+      { "direction": "en_to_vn", "source": "To be honest, I think we should just cancel." },
+      { "direction": "en_to_vn", "source": "The party was fine, but to be honest, I left early." },
+      { "direction": "en_to_vn", "source": "To be honest, I didn't expect it to be this hard." },
+      { "direction": "en_to_vn", "source": "I like the idea, but to be honest, it's too expensive." },
+      { "direction": "en_to_vn", "source": "To be honest, I've never been a fan of horror movies." }
+    ],
+    "scenario": [
+      "Casual: A friend asks if you liked a film you weren't into. Give your honest opinion gently.",
+      "Friendly: Someone asks if you want to go out, but you'd rather rest. Admit it.",
+      "Relaxed: A friend asks your real thoughts on a decision. Share your doubt honestly.",
+      "Casual: You forgot about plans and want to admit it openly. Confess lightly.",
+      "Friendly: A friend asks how the trip was and you have honest mixed feelings. Reply.",
+      "Casual: Someone asks if you like a dish and you're not a fan. Say it kindly but honestly.",
+      "Relaxed: A coworker asks if you followed the meeting. Admit you didn't really.",
+      "Friendly: A friend asks your opinion about a mutual friend. Be honest but tactful.",
+      "Casual: Someone asks whether you like coffee and you don't. Admit it.",
+      "Relaxed: A friend asks if a purchase is worth it, and you think it's pricey. Say so honestly."
+    ]
+  },
+  "come on": {
+    "cloze": [
+      { "sentence": "____, we're going to be late if you don't hurry!", "answer": "Come on" },
+      { "sentence": "____, you can do it! Just one more push.", "answer": "Come on" },
+      { "sentence": "____, that's not fair and you know it.", "answer": "Come on" },
+      { "sentence": "\"I can't come tonight.\" \"____, please, it won't be the same without you.\"", "answer": "Come on" },
+      { "sentence": "____, don't be like that, I was only joking.", "answer": "Come on" },
+      { "sentence": "____, everyone, let's get moving, the bus is here.", "answer": "Come on" },
+      { "sentence": "____, you really believe that? No way.", "answer": "Come on" },
+      { "sentence": "____, give it a try, what's the worst that could happen?", "answer": "Come on" },
+      { "sentence": "____, cheer up, it's not the end of the world.", "answer": "Come on" },
+      { "sentence": "____, we've been waiting for ages, let's just go.", "answer": "Come on" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Thôi nào, nhanh lên không thì trễ mất bây giờ!" },
+      { "direction": "vn_to_en", "source": "Cố lên, cậu làm được mà, ráng thêm chút nữa!" },
+      { "direction": "vn_to_en", "source": "Thôi mà, đừng giận, tôi chỉ đùa thôi." },
+      { "direction": "vn_to_en", "source": "Thôi nào, cậu tin chuyện đó thật à? Không đời nào." },
+      { "direction": "vn_to_en", "source": "Đi mà, thử một lần đi, có gì đâu mà sợ." },
+      { "direction": "en_to_vn", "source": "Come on, we don't have all day!" },
+      { "direction": "en_to_vn", "source": "Come on, you promised you'd help me today." },
+      { "direction": "en_to_vn", "source": "Come on, that can't be true." },
+      { "direction": "en_to_vn", "source": "Come on, cheer up, things will get better." },
+      { "direction": "en_to_vn", "source": "Come on, just give it a shot!" }
+    ],
+    "scenario": [
+      "Casual: Your friend is moving slowly and you're running late. Urge them to hurry.",
+      "Encouraging: A friend is about to give up during a workout. Push them to keep going.",
+      "Friendly: Your buddy says they can't come to your party. Playfully persuade them.",
+      "Casual: A friend is sulking over a joke you made. Coax them out of it.",
+      "Skeptical: Someone tells you something hard to believe. React with disbelief.",
+      "Encouraging: A shy friend won't try something new. Nudge them to try.",
+      "Casual: Everyone needs to get on the bus now. Rush the group along.",
+      "Friendly: A friend is feeling down. Cheer them up.",
+      "Casual: You've been waiting a long time and want to leave. Urge your friend.",
+      "Playful: A friend claims something unfair happened in your favor. Protest lightly."
+    ]
+  },
+  "guess what": {
+    "cloze": [
+      { "sentence": "____? I just got tickets to the concert!", "answer": "Guess what" },
+      { "sentence": "Hey, ____? Mom said we can get a dog!", "answer": "guess what" },
+      { "sentence": "____? I ran into your old teacher at the mall today.", "answer": "Guess what" },
+      { "sentence": "____? I finally finished writing my book!", "answer": "Guess what" },
+      { "sentence": "Oh my gosh, ____? They're getting married!", "answer": "guess what" },
+      { "sentence": "____? I got the promotion I told you about!", "answer": "Guess what" },
+      { "sentence": "____? We're moving to a new apartment next month.", "answer": "Guess what" },
+      { "sentence": "____? The restaurant gave us a free dessert.", "answer": "Guess what" },
+      { "sentence": "____? I passed my exam with the highest score!", "answer": "Guess what" },
+      { "sentence": "____? I found twenty dollars in my old jacket!", "answer": "Guess what" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Này, đố biết chuyện gì? Tôi vừa mua được vé xem hòa nhạc!" },
+      { "direction": "vn_to_en", "source": "Đố biết gì không? Mẹ cho phép nuôi chó rồi!" },
+      { "direction": "vn_to_en", "source": "Này biết gì không? Tôi vừa gặp thầy cũ ở trung tâm thương mại." },
+      { "direction": "vn_to_en", "source": "Đố biết chuyện gì? Tôi viết xong cuốn sách rồi!" },
+      { "direction": "vn_to_en", "source": "Đố biết gì không? Hai người họ sắp cưới rồi!" },
+      { "direction": "en_to_vn", "source": "Guess what? I got the job!" },
+      { "direction": "en_to_vn", "source": "Guess what? We're going to Da Nang this weekend!" },
+      { "direction": "en_to_vn", "source": "Hey, guess what? I finally learned to drive." },
+      { "direction": "en_to_vn", "source": "Guess what? The tickets were on sale, so I bought two." },
+      { "direction": "en_to_vn", "source": "Guess what? Your favorite band is coming to town!" }
+    ],
+    "scenario": [
+      "Excited: You just got concert tickets and want to tell a friend. Lead with the news.",
+      "Casual: You have surprising good news about a pet. Tease your sibling before telling.",
+      "Friendly: You bumped into an old friend today. Start telling a friend the story.",
+      "Excited: You finished a big personal project. Announce it to a close friend.",
+      "Casual: You heard two friends got engaged. Share the gossip.",
+      "Happy: You got a promotion at work. Break the news to your partner.",
+      "Casual: You're moving to a new place soon. Tell a friend the news.",
+      "Playful: Something lucky happened at a restaurant. Tell your friend.",
+      "Excited: You aced your exam. Share it with a classmate.",
+      "Casual: You found money in an old jacket. Tell your roommate."
+    ]
+  },
+  "you know what": {
+    "cloze": [
+      { "sentence": "____, let's just order pizza instead of cooking tonight.", "answer": "You know what" },
+      { "sentence": "____, I think you're right about that.", "answer": "You know what" },
+      { "sentence": "____, maybe we should take a different route.", "answer": "You know what" },
+      { "sentence": "____, I've changed my mind, let's go to the beach.", "answer": "You know what" },
+      { "sentence": "____, I don't think I want to work there anymore.", "answer": "You know what" },
+      { "sentence": "____, forget it, it's not worth arguing about.", "answer": "You know what" },
+      { "sentence": "____, let's give it one more try before we quit.", "answer": "You know what" },
+      { "sentence": "____, I actually think the blue one looks better.", "answer": "You know what" },
+      { "sentence": "____, we should invite them over sometime.", "answer": "You know what" },
+      { "sentence": "____, I just realized I left my keys at home.", "answer": "You know what" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "À mà, thôi tối nay mình gọi pizza cho khỏe đi." },
+      { "direction": "vn_to_en", "source": "Bạn biết gì không, tôi thấy cậu nói đúng đấy." },
+      { "direction": "vn_to_en", "source": "À này, hay là mình đi đường khác đi." },
+      { "direction": "vn_to_en", "source": "À mà, tôi đổi ý rồi, mình đi biển đi." },
+      { "direction": "vn_to_en", "source": "Bạn biết gì không, tôi không muốn làm ở đó nữa." },
+      { "direction": "en_to_vn", "source": "You know what, let's just stay home tonight." },
+      { "direction": "en_to_vn", "source": "You know what, I think I'll take the job after all." },
+      { "direction": "en_to_vn", "source": "You know what, forget what I said earlier." },
+      { "direction": "en_to_vn", "source": "You know what, maybe we should ask for help." },
+      { "direction": "en_to_vn", "source": "You know what, I actually like this idea." }
+    ],
+    "scenario": [
+      "Casual: You suddenly decide to change dinner plans. Introduce your new idea.",
+      "Friendly: Mid-conversation you realize your friend was right. Admit it.",
+      "Relaxed: You want to suggest a different route while driving. Bring it up.",
+      "Casual: You've just changed your mind about the day's plan. Announce it.",
+      "Thoughtful: You suddenly decide you don't want a certain job. Share the realization.",
+      "Casual: You want to drop an argument that isn't worth it. Say so.",
+      "Encouraging: You want to give something one more try. Suggest it.",
+      "Casual: You suddenly prefer a different option while shopping. Voice it.",
+      "Friendly: You get the idea to invite someone over. Bring it up.",
+      "Casual: You just realized you forgot something. Introduce the realization."
+    ]
+  },
+  "whatever": {
+    "cloze": [
+      { "sentence": "\"Do you want pizza or pasta?\" \"____, I don't mind either.\"", "answer": "Whatever" },
+      { "sentence": "Fine, ____, do what you want then.", "answer": "whatever" },
+      { "sentence": "\"You're wrong about this.\" \"____, I'm not going to argue.\"", "answer": "Whatever" },
+      { "sentence": "We can watch ____ you like, I'm easy.", "answer": "whatever" },
+      { "sentence": "\"He said it was your fault.\" \"____, I don't care what he thinks.\"", "answer": "Whatever" },
+      { "sentence": "Order ____ you want; it's on me tonight.", "answer": "whatever" },
+      { "sentence": "\"You should apologize.\" \"____, he started it.\"", "answer": "Whatever" },
+      { "sentence": "Pick ____ seat you like, they're all free.", "answer": "whatever" },
+      { "sentence": "\"They didn't invite us.\" \"____, their loss.\"", "answer": "Whatever" },
+      { "sentence": "Wear ____ makes you comfortable; it's a casual party.", "answer": "whatever" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "\"Ăn pizza hay mì?\" \"Sao cũng được, tôi ăn gì cũng ok.\"" },
+      { "direction": "vn_to_en", "source": "Thôi, sao cũng được, muốn làm gì thì làm." },
+      { "direction": "vn_to_en", "source": "\"Cậu sai rồi đấy.\" \"Mặc kệ, tôi không thèm cãi.\"" },
+      { "direction": "vn_to_en", "source": "Chọn ghế nào cũng được, chỗ nào cũng trống mà." },
+      { "direction": "vn_to_en", "source": "\"Họ không mời mình.\" \"Kệ đi, thiệt thòi của họ thôi.\"" },
+      { "direction": "en_to_vn", "source": "\"Which movie do you want to watch?\" \"Whatever, you choose.\"" },
+      { "direction": "en_to_vn", "source": "Whatever, I don't feel like arguing anymore." },
+      { "direction": "en_to_vn", "source": "You can order whatever you like." },
+      { "direction": "en_to_vn", "source": "\"He was really rude to you.\" \"Whatever, I've moved on.\"" },
+      { "direction": "en_to_vn", "source": "Wear whatever you want, it's not a formal event." }
+    ],
+    "scenario": [
+      "Casual: A friend asks whether you prefer pizza or pasta, and you truly don't mind. Answer easily.",
+      "Slightly annoyed: Someone insists on doing things their way. Give in with mild indifference.",
+      "Casual: A friend offers to let you pick the movie. Tell them you're flexible.",
+      "Indifferent: Someone tells you a person spoke badly about you. Show you don't care.",
+      "Friendly: You're treating a friend and want them to order freely. Encourage them.",
+      "Relaxed: A friend asks which seat you want. Tell them any is fine.",
+      "Dismissive: You hear you weren't invited somewhere. React like it doesn't bother you.",
+      "Casual: A friend asks what to wear to a casual hangout. Reassure them anything's fine.",
+      "Mildly annoyed: Someone keeps pushing you to apologize. Brush it off.",
+      "Easygoing: A friend asks where you want to eat and you have no preference. Answer."
+    ]
+  },
+  "actually": {
+    "cloze": [
+      { "sentence": "I thought it would be hard, but it was ____ pretty easy.", "answer": "actually" },
+      { "sentence": "\"You're from Hanoi, right?\" \"____, I'm from Hue.\"", "answer": "Actually" },
+      { "sentence": "I don't usually like tea, but this one is ____ nice.", "answer": "actually" },
+      { "sentence": "____, could you pass me the salt instead?", "answer": "Actually" },
+      { "sentence": "He said he'd be late, but he ____ arrived early.", "answer": "actually" },
+      { "sentence": "\"Isn't it closed today?\" \"____, they're open until nine.\"", "answer": "Actually" },
+      { "sentence": "I was going to skip the gym, but I ____ went.", "answer": "actually" },
+      { "sentence": "____, I think I'll have the fish, not the chicken.", "answer": "Actually" },
+      { "sentence": "The meeting was ____ quite useful, believe it or not.", "answer": "actually" },
+      { "sentence": "\"You've never been abroad?\" \"____, I went to Japan last year.\"", "answer": "Actually" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Tôi tưởng khó lắm, nhưng thực ra khá dễ." },
+      { "direction": "vn_to_en", "source": "\"Cậu là người Hà Nội đúng không?\" \"Thực ra tôi là người Huế.\"" },
+      { "direction": "vn_to_en", "source": "Bình thường tôi không thích trà, nhưng loại này thật ra ngon đấy." },
+      { "direction": "vn_to_en", "source": "Thật ra, cho tôi đổi sang món cá thay vì gà nhé." },
+      { "direction": "vn_to_en", "source": "Anh ấy bảo sẽ đến trễ, nhưng thực ra lại đến sớm." },
+      { "direction": "en_to_vn", "source": "Actually, I think you're right about that." },
+      { "direction": "en_to_vn", "source": "It was actually a really good movie." },
+      { "direction": "en_to_vn", "source": "Actually, could we meet a bit later instead?" },
+      { "direction": "en_to_vn", "source": "I didn't expect to, but I actually enjoyed the trip." },
+      { "direction": "en_to_vn", "source": "Actually, I've already finished the report." }
+    ],
+    "scenario": [
+      "Casual: You expected a task to be hard but it wasn't. Share your surprise.",
+      "Friendly: Someone assumes something about you that's wrong. Gently correct them.",
+      "Relaxed: You want to change your order politely at a cafe. Speak to the server.",
+      "Casual: A friend is surprised a place is open. Correct their assumption.",
+      "Friendly: You surprised yourself by enjoying something. Tell a friend.",
+      "Casual: You want to change your mind mid-decision. Announce the switch.",
+      "Relaxed: Someone assumes you've never traveled. Correct them with a fact.",
+      "Friendly: A meeting turned out better than expected. Comment on it.",
+      "Casual: You almost skipped the gym but went. Mention it to a friend.",
+      "Polite: You realize you'd prefer a different dish. Tell the waiter."
+    ]
+  },
+  "basically": {
+    "cloze": [
+      { "sentence": "____, all you have to do is press this one button.", "answer": "Basically" },
+      { "sentence": "The plot is ____ about a guy who loses his memory.", "answer": "basically" },
+      { "sentence": "We're ____ done; there's just a little cleanup left.", "answer": "basically" },
+      { "sentence": "____, it's the same as the old model, just cheaper.", "answer": "Basically" },
+      { "sentence": "He ____ told us to figure it out ourselves.", "answer": "basically" },
+      { "sentence": "The recipe is ____ just eggs, flour, and sugar.", "answer": "basically" },
+      { "sentence": "____, if you're late again, you're fired.", "answer": "Basically" },
+      { "sentence": "My job is ____ answering emails all day.", "answer": "basically" },
+      { "sentence": "The two options are ____ identical, so pick either.", "answer": "basically" },
+      { "sentence": "____, we ran out of money halfway through the trip.", "answer": "Basically" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Về cơ bản, cậu chỉ cần bấm đúng cái nút này thôi." },
+      { "direction": "vn_to_en", "source": "Nói đơn giản thì phim kể về một anh chàng mất trí nhớ." },
+      { "direction": "vn_to_en", "source": "Mình về cơ bản là xong rồi, chỉ còn dọn dẹp chút thôi." },
+      { "direction": "vn_to_en", "source": "Về cơ bản nó giống hệt bản cũ, chỉ rẻ hơn thôi." },
+      { "direction": "vn_to_en", "source": "Công việc của tôi về cơ bản là trả lời email cả ngày." },
+      { "direction": "en_to_vn", "source": "Basically, we just need to wait and see." },
+      { "direction": "en_to_vn", "source": "The soup is basically just water and vegetables." },
+      { "direction": "en_to_vn", "source": "He basically ignored everything I said." },
+      { "direction": "en_to_vn", "source": "Basically, the trip was a disaster from start to finish." },
+      { "direction": "en_to_vn", "source": "The two phones are basically the same." }
+    ],
+    "scenario": [
+      "Casual: A friend asks how to use a gadget. Explain it in the simplest terms.",
+      "Friendly: Someone asks what a movie is about. Summarize the plot briefly.",
+      "Relaxed: A friend asks if you're finished with a task. Explain you're almost done.",
+      "Casual: You compare a new product to an old one. Sum up the difference simply.",
+      "Friendly: A friend asks what your job involves. Boil it down to one thing.",
+      "Casual: You want to summarize a boss's blunt message. Paraphrase it simply.",
+      "Relaxed: A friend asks what's in a dish. List the main ingredients simply.",
+      "Casual: Someone asks how a trip went, and it went badly. Sum it up bluntly.",
+      "Friendly: A friend can't decide between two similar options. Point out they're the same.",
+      "Casual: You explain the core rule of a simple game. State it plainly."
+    ]
+  },
+  "honestly": {
+    "cloze": [
+      { "sentence": "____, I have no idea how we're going to finish this on time.", "answer": "Honestly" },
+      { "sentence": "____, that was one of the best meals I've ever had.", "answer": "Honestly" },
+      { "sentence": "I ____ don't remember saying that.", "answer": "honestly" },
+      { "sentence": "____, you don't have to worry about me.", "answer": "Honestly" },
+      { "sentence": "____, I'd rather not go, but I will if you need me.", "answer": "Honestly" },
+      { "sentence": "He ____ tried his best, so don't be too hard on him.", "answer": "honestly" },
+      { "sentence": "____, I'm just glad it's finally over.", "answer": "Honestly" },
+      { "sentence": "I can't ____ tell the difference between the two.", "answer": "honestly" },
+      { "sentence": "____, that's the funniest thing I've heard all week.", "answer": "Honestly" },
+      { "sentence": "____, I think you should just talk to her directly.", "answer": "Honestly" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Thật lòng mà nói, tôi chẳng biết làm sao xong kịp giờ." },
+      { "direction": "vn_to_en", "source": "Thật ra đó là một trong những bữa ngon nhất tôi từng ăn." },
+      { "direction": "vn_to_en", "source": "Tôi thật sự không nhớ là mình đã nói câu đó." },
+      { "direction": "vn_to_en", "source": "Thật lòng thì tôi không muốn đi lắm, nhưng nếu cần thì tôi đi." },
+      { "direction": "vn_to_en", "source": "Thật lòng mà nói, tôi chỉ mừng là chuyện đó cuối cùng cũng xong." },
+      { "direction": "en_to_vn", "source": "Honestly, I think you did a great job." },
+      { "direction": "en_to_vn", "source": "I honestly didn't mean to upset you." },
+      { "direction": "en_to_vn", "source": "Honestly, I can't thank you enough for this." },
+      { "direction": "en_to_vn", "source": "Honestly, I'm not sure it's worth the money." },
+      { "direction": "en_to_vn", "source": "He honestly had no idea what was going on." }
+    ],
+    "scenario": [
+      "Casual: You're overwhelmed by a deadline and admitting it to a friend. Express your worry honestly.",
+      "Friendly: You just had an amazing meal. Praise it sincerely to your host.",
+      "Relaxed: A friend asks if you're okay, and you truly are. Reassure them honestly.",
+      "Casual: You don't remember saying something you're accused of. Deny it sincerely.",
+      "Honest: A friend asks your real opinion on their work. Give sincere praise.",
+      "Casual: You'd honestly rather skip an event but would go for a friend. Be candid.",
+      "Relaxed: A stressful project just ended. Express your honest relief.",
+      "Friendly: You can't tell two things apart and admit it. Say so genuinely.",
+      "Casual: You heard something hilarious. React with sincere amusement.",
+      "Supportive: A friend is unsure what to do, and you have honest advice. Share it."
+    ]
+  },
+  "literally": {
+    "cloze": [
+      { "sentence": "I ____ just walked in the door two seconds ago.", "answer": "literally" },
+      { "sentence": "There were ____ hundreds of people waiting outside.", "answer": "literally" },
+      { "sentence": "I ____ can't stop laughing at that video.", "answer": "literally" },
+      { "sentence": "He ____ fell asleep at the dinner table.", "answer": "literally" },
+      { "sentence": "The word 'astronaut' ____ means 'star sailor.'", "answer": "literally" },
+      { "sentence": "I've ____ told you this a thousand times.", "answer": "literally" },
+      { "sentence": "She ____ ran out of the room screaming.", "answer": "literally" },
+      { "sentence": "My phone battery ____ died right as I was calling you.", "answer": "literally" },
+      { "sentence": "We were ____ the last people to leave the party.", "answer": "literally" },
+      { "sentence": "The city was ____ underwater after the storm.", "answer": "literally" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Tôi vừa mới bước vào cửa cách đây đúng hai giây thôi." },
+      { "direction": "vn_to_en", "source": "Có đúng nghĩa là hàng trăm người đứng chờ bên ngoài." },
+      { "direction": "vn_to_en", "source": "Tôi cười không nhịn được với cái video đó luôn." },
+      { "direction": "vn_to_en", "source": "Anh ấy ngủ gục ngay tại bàn ăn luôn đấy." },
+      { "direction": "vn_to_en", "source": "Tôi đã nói với cậu chuyện này cả nghìn lần rồi đấy." },
+      { "direction": "en_to_vn", "source": "I literally have nothing to wear to the party." },
+      { "direction": "en_to_vn", "source": "The bag was literally falling apart at the seams." },
+      { "direction": "en_to_vn", "source": "She literally screamed when she saw the spider." },
+      { "direction": "en_to_vn", "source": "I'm literally starving, let's eat now." },
+      { "direction": "en_to_vn", "source": "He literally lives next door to the office." }
+    ],
+    "scenario": [
+      "Casual: You just got home this very second when a friend calls. Emphasize how recent it is.",
+      "Excited: You saw a huge crowd and want to stress the number. Tell a friend.",
+      "Casual: A funny video has you cracking up. Describe your reaction with emphasis.",
+      "Friendly: You witnessed someone fall asleep at dinner. Recount it emphatically.",
+      "Relaxed: You want to stress how many times you've repeated something. Complain lightly.",
+      "Casual: Your phone died at the worst moment. Explain to a friend with emphasis.",
+      "Excited: You were the very last to leave a party. Mention it emphatically.",
+      "Casual: You're extremely hungry and want to stress it. Tell your friend.",
+      "Friendly: You want to point out how close someone lives to work. Emphasize it.",
+      "Casual: You explain the true meaning of a word. State what it means literally."
+    ]
+  }
+}

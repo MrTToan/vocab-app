@@ -1,0 +1,572 @@
+{
+  "up in the air": {
+    "cloze": [
+      { "sentence": "Our holiday plans are still ____, so I can't tell you the dates yet.", "answer": "up in the air" },
+      { "sentence": "Nothing's decided about the wedding venue; it's all ____ right now.", "answer": "up in the air" },
+      { "sentence": "Whether we move to a bigger office is completely ____ at the moment.", "answer": "up in the air" },
+      { "sentence": "The match might be cancelled because of the rain, so it's ____.", "answer": "up in the air" },
+      { "sentence": "My job situation is a bit ____ since the company got taken over.", "answer": "up in the air" },
+      { "sentence": "We were going to visit Grandma this weekend, but that's ____ now.", "answer": "up in the air" },
+      { "sentence": "The budget for the project is still ____, so hold off on ordering anything.", "answer": "up in the air" },
+      { "sentence": "Everything about the trip is ____ until my boss approves the leave.", "answer": "up in the air" },
+      { "sentence": "Honestly, our future in this city feels totally ____ right now.", "answer": "up in the air" },
+      { "sentence": "The kickoff time is ____ because they haven't confirmed the room.", "answer": "up in the air" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Kế hoạch cuối tuần của tụi mình vẫn còn bỏ ngỏ." },
+      { "direction": "vn_to_en", "source": "Chuyện chuyển nhà vẫn chưa chắc chắn gì cả." },
+      { "direction": "vn_to_en", "source": "Ngày cưới vẫn còn treo đó, chưa quyết được." },
+      { "direction": "vn_to_en", "source": "Công việc mới của tôi hiện tại vẫn chưa rõ ràng." },
+      { "direction": "vn_to_en", "source": "Chuyến đi biển vẫn còn bỏ ngỏ vì thời tiết xấu." },
+      { "direction": "en_to_vn", "source": "The whole schedule is up in the air until the client replies." },
+      { "direction": "en_to_vn", "source": "Our summer plans are still up in the air." },
+      { "direction": "en_to_vn", "source": "Where we'll live next year is completely up in the air." },
+      { "direction": "en_to_vn", "source": "The concert date is up in the air right now." },
+      { "direction": "en_to_vn", "source": "My promotion is a bit up in the air after the reshuffle." }
+    ],
+    "scenario": [
+      "A friend asks if you're free next Saturday, but your plans aren't settled. Reply casually.",
+      "Your cousin asks when the family trip is. Tell her nothing is decided yet, in a friendly way.",
+      "A coworker over coffee asks whether the new project is happening. Say it's still undecided.",
+      "Someone asks if the football match is on tonight despite the rain. Answer casually.",
+      "A classmate asks where you'll study abroad. Explain it's not confirmed yet, informally.",
+      "Your roommate asks if you're renewing the lease. Say it's not decided, relaxed tone.",
+      "A friend asks about your wedding venue. Tell them it's all still open, casually.",
+      "Your boss asks in a quick chat if the deadline is fixed. Say it isn't settled yet, politely casual.",
+      "A neighbor asks when you're painting the house. Reply that it's uncertain, friendly.",
+      "Your sibling asks if you're coming home for the holidays. Say it's still undecided, warm and casual."
+    ]
+  },
+  "no worries": {
+    "cloze": [
+      { "sentence": "\"Sorry I'm a bit late!\" \"____, we haven't even ordered yet.\"", "answer": "No worries" },
+      { "sentence": "\"Thanks for helping me move.\" \"____, happy to help.\"", "answer": "No worries" },
+      { "sentence": "\"I might have to cancel tomorrow.\" \"____, just let me know.\"", "answer": "No worries" },
+      { "sentence": "\"I forgot to bring your book back.\" \"____, bring it whenever.\"", "answer": "No worries" },
+      { "sentence": "\"Is it okay if I sit here?\" \"Yeah, ____.\"", "answer": "no worries" },
+      { "sentence": "\"I spilled a little water on the table.\" \"____, it'll dry.\"", "answer": "No worries" },
+      { "sentence": "\"Sorry for the mix-up with the times.\" \"____, it happens.\"", "answer": "No worries" },
+      { "sentence": "\"Can I pay you back next week?\" \"____, take your time.\"", "answer": "No worries" },
+      { "sentence": "\"I couldn't finish the whole report.\" \"____, we'll sort it tomorrow.\"", "answer": "No worries" },
+      { "sentence": "\"Hope I'm not bothering you.\" \"____ at all, come in.\"", "answer": "No worries" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Không sao đâu, cứ từ từ." },
+      { "direction": "vn_to_en", "source": "Đừng lo, chuyện nhỏ mà." },
+      { "direction": "vn_to_en", "source": "Không có gì đâu, mình vui được giúp." },
+      { "direction": "vn_to_en", "source": "Không sao, hôm nào trả cũng được." },
+      { "direction": "vn_to_en", "source": "Đừng lo, để mình lo phần đó cho." },
+      { "direction": "en_to_vn", "source": "No worries, I'll wait for you outside." },
+      { "direction": "en_to_vn", "source": "No worries, it was an easy fix." },
+      { "direction": "en_to_vn", "source": "No worries at all, take your time." },
+      { "direction": "en_to_vn", "source": "No worries, I've got a spare charger." },
+      { "direction": "en_to_vn", "source": "No worries, these things happen." }
+    ],
+    "scenario": [
+      "A friend apologizes for running ten minutes late. Reassure them casually.",
+      "Someone thanks you for lending them your umbrella. Respond warmly and informally.",
+      "A classmate asks to reschedule your study session. Say it's fine, relaxed.",
+      "Your coworker apologizes for a small typo in an email. Tell them it's fine, friendly.",
+      "A friend says they can't pay you back until next week. Reassure them casually.",
+      "Someone bumps your arm on the bus and says sorry. Respond kindly and informally.",
+      "Your neighbor apologizes for their dog barking. Tell them it's no problem, friendly.",
+      "A friend cancels dinner last minute. Reply that it's okay, warm tone.",
+      "Someone forgets to reply to your text and apologizes. Reassure them casually.",
+      "A waiter apologizes for a short wait. Tell them it's fine, easygoing and polite."
+    ]
+  },
+  "no problem": {
+    "cloze": [
+      { "sentence": "\"Could you pass me the salt?\" \"____, here you go.\"", "answer": "No problem" },
+      { "sentence": "\"Thanks so much for the ride.\" \"____, it was on my way.\"", "answer": "No problem" },
+      { "sentence": "\"Do you mind if I open the window?\" \"____ at all.\"", "answer": "No problem" },
+      { "sentence": "\"Sorry to ask again, but can you explain that step?\" \"____, let me show you.\"", "answer": "No problem" },
+      { "sentence": "\"Can you cover my shift on Friday?\" \"Yeah, ____.\"", "answer": "no problem" },
+      { "sentence": "\"Thanks for waiting for me.\" \"____, I wasn't in a rush.\"", "answer": "No problem" },
+      { "sentence": "\"Would it be okay to bring a friend along?\" \"____, the more the merrier.\"", "answer": "No problem" },
+      { "sentence": "\"I appreciate you fixing my laptop.\" \"____, glad it works now.\"", "answer": "No problem" },
+      { "sentence": "\"Can I borrow your notes tonight?\" \"____, I'll send them over.\"", "answer": "No problem" },
+      { "sentence": "\"Sorry for all the questions.\" \"____, that's what I'm here for.\"", "answer": "No problem" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Không có chi, cứ tự nhiên." },
+      { "direction": "vn_to_en", "source": "Không thành vấn đề, để mình làm cho." },
+      { "direction": "vn_to_en", "source": "Được chứ, không sao đâu." },
+      { "direction": "vn_to_en", "source": "Không có gì, mình sẵn lòng giúp." },
+      { "direction": "vn_to_en", "source": "Không vấn đề gì, mai mình gửi cho bạn." },
+      { "direction": "en_to_vn", "source": "No problem, I can drop it off after work." },
+      { "direction": "en_to_vn", "source": "No problem, just call me if you need anything." },
+      { "direction": "en_to_vn", "source": "No problem, I finished mine early anyway." },
+      { "direction": "en_to_vn", "source": "No problem, happy to help out." },
+      { "direction": "en_to_vn", "source": "No problem, take as long as you need." }
+    ],
+    "scenario": [
+      "A friend asks you to grab them a coffee while you're up. Agree casually.",
+      "Someone thanks you for holding the door. Respond in a friendly, easy way.",
+      "A coworker asks if you can cover part of their task. Say yes, relaxed.",
+      "A classmate asks to borrow your charger. Agree warmly and informally.",
+      "Your neighbor asks if they can park in front of your house today. Say it's fine, casual.",
+      "A friend apologizes for asking a lot of favors. Reassure them, easygoing.",
+      "Someone asks if it's okay to join your table. Welcome them casually.",
+      "A colleague thanks you for staying late to help. Respond modestly and friendly.",
+      "A friend asks if you can pick them up on the way. Agree cheerfully.",
+      "Someone asks you to explain something one more time. Say it's fine, patient and casual."
+    ]
+  },
+  "fair enough": {
+    "cloze": [
+      { "sentence": "\"I'd rather stay in tonight, I'm exhausted.\" \"____, we'll go out another time.\"", "answer": "Fair enough" },
+      { "sentence": "\"I can't lend it to you because I need it myself.\" \"____, no problem.\"", "answer": "Fair enough" },
+      { "sentence": "\"I skipped the gym because it was pouring rain.\" \"____, I don't blame you.\"", "answer": "Fair enough" },
+      { "sentence": "\"I want to split the bill evenly.\" \"____, that works for me.\"", "answer": "Fair enough" },
+      { "sentence": "\"I didn't call because it was really late.\" \"____, you could've texted though.\"", "answer": "Fair enough" },
+      { "sentence": "\"I'm charging a bit more for the rush job.\" \"____, that's reasonable.\"", "answer": "Fair enough" },
+      { "sentence": "\"I don't want to talk about work on the weekend.\" \"____, let's change the subject.\"", "answer": "Fair enough" },
+      { "sentence": "\"I'll come, but I have to leave by nine.\" \"____, we'll get you home in time.\"", "answer": "Fair enough" },
+      { "sentence": "\"I prefer to drive myself so I can leave early.\" \"____, whatever suits you.\"", "answer": "Fair enough" },
+      { "sentence": "\"I'd rather not commit until I see the schedule.\" \"____, take your time.\"", "answer": "Fair enough" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Cũng hợp lý, thôi để lần khác vậy." },
+      { "direction": "vn_to_en", "source": "Được thôi, lý do đó cũng chính đáng." },
+      { "direction": "vn_to_en", "source": "Ừ, nghe cũng có lý đấy." },
+      { "direction": "vn_to_en", "source": "Thôi được, mình đồng ý chia đều." },
+      { "direction": "vn_to_en", "source": "Cũng phải, mình không trách bạn đâu." },
+      { "direction": "en_to_vn", "source": "Fair enough, I see your point." },
+      { "direction": "en_to_vn", "source": "Fair enough, we can do it your way." },
+      { "direction": "en_to_vn", "source": "Fair enough, that's a decent reason." },
+      { "direction": "en_to_vn", "source": "Fair enough, I won't push you on it." },
+      { "direction": "en_to_vn", "source": "Fair enough, let's leave it at that." }
+    ],
+    "scenario": [
+      "A friend says they'd rather not go clubbing tonight. Accept their reason casually.",
+      "Your roommate explains why they can't split a chore today. Agree it's reasonable, relaxed.",
+      "A coworker gives a solid reason for missing a meeting. Acknowledge it, friendly.",
+      "A friend suggests splitting a bill a certain way. Agree it's fair, casual.",
+      "Someone explains why they were late. Accept the explanation, easygoing.",
+      "A seller explains why the price is a bit higher. Concede it's reasonable, polite.",
+      "A friend declines a favor with a good reason. Accept it gracefully and casually.",
+      "Your teammate wants to do a task their own way. Agree it's fair, relaxed.",
+      "A classmate says they can only meet briefly. Accept the condition, friendly.",
+      "A friend prefers not to discuss a touchy topic. Respect that casually."
+    ]
+  },
+  "you bet": {
+    "cloze": [
+      { "sentence": "\"Are you coming to the party?\" \"____, wouldn't miss it.\"", "answer": "You bet" },
+      { "sentence": "\"Thanks for the help earlier.\" \"____, anytime.\"", "answer": "You bet" },
+      { "sentence": "\"Can you keep this between us?\" \"____, my lips are sealed.\"", "answer": "You bet" },
+      { "sentence": "\"Do you want to grab pizza after?\" \"____, I'm starving.\"", "answer": "You bet" },
+      { "sentence": "\"Will you be there on time?\" \"____, I'll leave early.\"", "answer": "You bet" },
+      { "sentence": "\"Is this seat free?\" \"____, go ahead.\"", "answer": "You bet" },
+      { "sentence": "\"Can I count on you for the weekend?\" \"____, I'll be there.\"", "answer": "You bet" },
+      { "sentence": "\"Did you enjoy the trip?\" \"____, best week all year.\"", "answer": "You bet" },
+      { "sentence": "\"Would you recommend that restaurant?\" \"____, the food is amazing.\"", "answer": "You bet" },
+      { "sentence": "\"Can you give me a hand carrying these?\" \"____, hand me a box.\"", "answer": "You bet" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Chắc chắn rồi, mình sẽ đến." },
+      { "direction": "vn_to_en", "source": "Tất nhiên rồi, cứ hỏi mình bất cứ lúc nào." },
+      { "direction": "vn_to_en", "source": "Được chứ, để mình lo phần đó." },
+      { "direction": "vn_to_en", "source": "Chắc chắn, mình giữ bí mật cho bạn." },
+      { "direction": "vn_to_en", "source": "Dĩ nhiên rồi, mình rất thích chỗ đó." },
+      { "direction": "en_to_vn", "source": "You bet, I'll be there first thing." },
+      { "direction": "en_to_vn", "source": "You bet, count me in." },
+      { "direction": "en_to_vn", "source": "You bet, I'd do it again in a heartbeat." },
+      { "direction": "en_to_vn", "source": "You bet, anytime you need me." },
+      { "direction": "en_to_vn", "source": "You bet, that place is worth the trip." }
+    ],
+    "scenario": [
+      "A friend asks if you'll come to their birthday. Answer enthusiastically and casually.",
+      "Someone thanks you for a favor. Reply in a warm, upbeat American-casual way.",
+      "A buddy asks if you're up for a road trip. Say yes eagerly.",
+      "A coworker asks if you can be trusted with a secret. Confirm confidently and casually.",
+      "A friend asks if the movie was good. Answer with strong agreement, informal.",
+      "Someone asks if you'll help move boxes on Sunday. Agree cheerfully.",
+      "A friend asks if you want dessert. Say yes eagerly and casually.",
+      "A teammate asks if you'll show up on time. Reassure them enthusiastically.",
+      "Someone asks if they can rely on you. Confirm confidently, friendly.",
+      "A friend asks if you'd recommend a cafe. Give an enthusiastic yes, casual."
+    ]
+  },
+  "for sure": {
+    "cloze": [
+      { "sentence": "\"That was the best concert ever.\" \"____, absolutely amazing.\"", "answer": "for sure" },
+      { "sentence": "\"We should do this again sometime.\" \"____, let's plan it.\"", "answer": "For sure" },
+      { "sentence": "\"Are you in for Saturday?\" \"Yeah, ____.\"", "answer": "for sure" },
+      { "sentence": "\"He's the fastest runner in class, ____.\"", "answer": "for sure" },
+      { "sentence": "\"I'll text you the details later, ____.\"", "answer": "for sure" },
+      { "sentence": "\"This is ____ my favorite place to eat.\"", "answer": "for sure" },
+      { "sentence": "\"Do you think it'll rain?\" \"____, look at those clouds.\"", "answer": "For sure" },
+      { "sentence": "\"You're coming to the reunion, right?\" \"____, I already booked the flight.\"", "answer": "For sure" },
+      { "sentence": "\"She's going to ace that exam, ____.\"", "answer": "for sure" },
+      { "sentence": "\"Can you make it by seven?\" \"____, I'll leave now.\"", "answer": "For sure" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Chắc chắn rồi, mình đồng ý." },
+      { "direction": "vn_to_en", "source": "Chắc chắn tụi mình sẽ làm lại lần nữa." },
+      { "direction": "vn_to_en", "source": "Đây chắc chắn là quán ăn mình thích nhất." },
+      { "direction": "vn_to_en", "source": "Chắc chắn trời sắp mưa rồi." },
+      { "direction": "vn_to_en", "source": "Ừ, chắc chắn mình sẽ đến đúng giờ." },
+      { "direction": "en_to_vn", "source": "That's for sure the best pizza in town." },
+      { "direction": "en_to_vn", "source": "We'll be there for sure." },
+      { "direction": "en_to_vn", "source": "For sure, I'll send you the photos tonight." },
+      { "direction": "en_to_vn", "source": "He's the strongest on the team, for sure." },
+      { "direction": "en_to_vn", "source": "For sure, count on me to help." }
+    ],
+    "scenario": [
+      "A friend says a restaurant was great. Agree strongly and casually.",
+      "Someone suggests hanging out again soon. Confirm enthusiastically.",
+      "A classmate asks if you're joining the group project. Say yes confidently, informal.",
+      "A friend predicts your team will win. Agree firmly, casual.",
+      "Someone asks if you'll send photos later. Promise you will, relaxed.",
+      "A buddy asks if the trip was worth it. Confirm it definitely was.",
+      "A friend asks if you'll be at the meetup. Confirm you'll be there for certain.",
+      "Someone comments the weather looks like rain. Agree it definitely will, casual.",
+      "A coworker asks if you can finish by five. Reassure them confidently.",
+      "A friend calls a cafe the best in town. Back them up strongly, informal."
+    ]
+  },
+  "sounds good": {
+    "cloze": [
+      { "sentence": "\"Let's meet at the cafe at ten.\" \"____, see you there.\"", "answer": "Sounds good" },
+      { "sentence": "\"How about we split the driving?\" \"____ to me.\"", "answer": "Sounds good" },
+      { "sentence": "\"I'll book the table for six-thirty.\" \"____, thanks for organizing.\"", "answer": "Sounds good" },
+      { "sentence": "\"We could watch a movie after dinner.\" \"____, I'm in.\"", "answer": "Sounds good" },
+      { "sentence": "\"Why don't we go hiking this weekend?\" \"That ____.\"", "answer": "sounds good" },
+      { "sentence": "\"I'll send the plan over tonight.\" \"____, I'll take a look.\"", "answer": "Sounds good" },
+      { "sentence": "\"Let's just order pizza and relax.\" \"____ to me right now.\"", "answer": "Sounds good" },
+      { "sentence": "\"How about we start early to beat the traffic?\" \"____, I'll set an alarm.\"", "answer": "Sounds good" },
+      { "sentence": "\"We can catch up over coffee tomorrow.\" \"____, I'll be free after two.\"", "answer": "Sounds good" },
+      { "sentence": "\"Let's take turns cooking this week.\" \"____, I'll start tonight.\"", "answer": "Sounds good" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Nghe hay đấy, gặp bạn ở đó nhé." },
+      { "direction": "vn_to_en", "source": "Được đó, mình đồng ý luôn." },
+      { "direction": "vn_to_en", "source": "Nghe ổn đấy, cứ làm vậy đi." },
+      { "direction": "vn_to_en", "source": "Kế hoạch đó nghe được đấy." },
+      { "direction": "vn_to_en", "source": "Ừ, đi leo núi cuối tuần nghe hay đó." },
+      { "direction": "en_to_vn", "source": "Sounds good, let's do that." },
+      { "direction": "en_to_vn", "source": "That sounds good to me." },
+      { "direction": "en_to_vn", "source": "Sounds good, I'll see you at noon." },
+      { "direction": "en_to_vn", "source": "Sounds good, send me the address." },
+      { "direction": "en_to_vn", "source": "Sounds good, I'm happy with that plan." }
+    ],
+    "scenario": [
+      "A friend proposes meeting at a cafe at a set time. Agree casually.",
+      "Someone suggests splitting the driving on a trip. Accept the idea, relaxed.",
+      "A coworker offers to book a table for dinner. Approve it, friendly.",
+      "A friend suggests a movie after dinner. Agree you're in, casual.",
+      "A classmate proposes a weekend hike. Say the plan works, informal.",
+      "Someone says they'll email the schedule tonight. Accept it, easygoing.",
+      "A friend suggests ordering takeout instead of cooking. Agree happily.",
+      "A teammate proposes starting early to avoid traffic. Approve it, casual.",
+      "A friend suggests coffee tomorrow afternoon. Accept the plan, warm.",
+      "Your roommate proposes taking turns cooking. Agree to the arrangement, friendly."
+    ]
+  },
+  "my bad": {
+    "cloze": [
+      { "sentence": "\"You gave me the wrong file.\" \"Oh, ____, I'll resend the right one.\"", "answer": "my bad" },
+      { "sentence": "\"That's my coffee you just drank.\" \"____! I thought it was mine.\"", "answer": "My bad" },
+      { "sentence": "\"You were supposed to bring the tickets.\" \"____, I totally forgot.\"", "answer": "My bad" },
+      { "sentence": "\"You stepped on my foot.\" \"Oops, ____, didn't see you there.\"", "answer": "my bad" },
+      { "sentence": "\"We were meeting at noon, not one.\" \"Ah, ____, I misread the message.\"", "answer": "my bad" },
+      { "sentence": "\"You cc'd the whole team by mistake.\" \"Ugh, ____, sending a correction now.\"", "answer": "my bad" },
+      { "sentence": "\"That was a foul, you bumped me.\" \"____, my fault, let's replay it.\"", "answer": "My bad" },
+      { "sentence": "\"You left the milk out all night.\" \"____, I'll grab a new carton.\"", "answer": "My bad" },
+      { "sentence": "\"You spelled my name wrong again.\" \"Oh no, ____, I'll fix it.\"", "answer": "my bad" },
+      { "sentence": "\"You took my charger by accident.\" \"____! Here, take it back.\"", "answer": "My bad" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Lỗi của mình, mình gửi lại file đúng nhé." },
+      { "direction": "vn_to_en", "source": "Ối, lỗi mình, mình quên mất." },
+      { "direction": "vn_to_en", "source": "Xin lỗi nha, mình nhìn nhầm giờ hẹn." },
+      { "direction": "vn_to_en", "source": "Lỗi mình, để mình sửa lại ngay." },
+      { "direction": "vn_to_en", "source": "Ôi lỗi mình, mình tưởng đó là ly của mình." },
+      { "direction": "en_to_vn", "source": "My bad, I'll fix it right away." },
+      { "direction": "en_to_vn", "source": "Oops, my bad, I grabbed the wrong bag." },
+      { "direction": "en_to_vn", "source": "My bad, I should have double-checked." },
+      { "direction": "en_to_vn", "source": "My bad, I completely forgot to text you." },
+      { "direction": "en_to_vn", "source": "My bad, I'll buy you another one." }
+    ],
+    "scenario": [
+      "You accidentally sent a friend the wrong link. Own the mistake casually.",
+      "You bump into someone in a hallway. Apologize lightly and informally.",
+      "You forgot to bring something you promised. Admit the slip casually to a friend.",
+      "You misread a meeting time and showed up late. Own it with a coworker, light tone.",
+      "You drank someone's coffee by mistake. Admit it playfully and apologize.",
+      "You mixed up two names in a group chat. Acknowledge the error casually.",
+      "During a pickup game you cause a foul. Admit fault to your teammates, easygoing.",
+      "You left a shared item out overnight. Own the mistake to your roommate.",
+      "You grabbed a friend's charger thinking it was yours. Apologize casually.",
+      "You typed the wrong date on a group invite. Admit the mistake lightly."
+    ]
+  },
+  "never mind": {
+    "cloze": [
+      { "sentence": "\"What did you say?\" \"Oh, ____, it wasn't important.\"", "answer": "never mind" },
+      { "sentence": "I was going to ask for help, but ____, I figured it out myself.", "answer": "never mind" },
+      { "sentence": "\"Do you need the ladder?\" \"____, I already reached it.\"", "answer": "Never mind" },
+      { "sentence": "____ the mess, I'll clean it up later.", "answer": "Never mind" },
+      { "sentence": "\"Which bus should I take?\" \"____, here comes a taxi.\"", "answer": "Never mind" },
+      { "sentence": "I wanted to complain, but ____, it's not worth the hassle.", "answer": "never mind" },
+      { "sentence": "\"Sorry, I didn't catch your question.\" \"____, forget it.\"", "answer": "Never mind" },
+      { "sentence": "____ what he said, he was just joking.", "answer": "Never mind" },
+      { "sentence": "\"Should I bring an umbrella?\" \"____, the sun's out now.\"", "answer": "Never mind" },
+      { "sentence": "I almost asked you to stay late, but ____, we can finish tomorrow.", "answer": "never mind" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Thôi bỏ đi, chuyện đó không quan trọng." },
+      { "direction": "vn_to_en", "source": "Thôi khỏi, mình tự làm được rồi." },
+      { "direction": "vn_to_en", "source": "Đừng bận tâm mấy lời anh ấy nói, đùa thôi mà." },
+      { "direction": "vn_to_en", "source": "Thôi quên đi, không đáng để bực mình." },
+      { "direction": "vn_to_en", "source": "Thôi khỏi cần, trời hết mưa rồi." },
+      { "direction": "en_to_vn", "source": "Never mind, it's not a big deal." },
+      { "direction": "en_to_vn", "source": "Never mind, I already sorted it out." },
+      { "direction": "en_to_vn", "source": "Never mind what they think." },
+      { "direction": "en_to_vn", "source": "Never mind, forget I asked." },
+      { "direction": "en_to_vn", "source": "Never mind the noise, just focus on the game." }
+    ],
+    "scenario": [
+      "You started to say something but decide it's not worth it. Wave it off casually.",
+      "You were about to ask a friend for help, then solved it yourself. Tell them to forget it.",
+      "Someone offers help you no longer need. Politely tell them not to bother, casual.",
+      "A friend worries about a small mess. Tell them not to bother about it, relaxed.",
+      "You almost asked which route to take, then found another way. Drop it casually.",
+      "You considered complaining about something minor. Decide to let it go, informal.",
+      "Someone didn't hear your question. Tell them it doesn't matter, friendly.",
+      "A friend is upset over a teasing remark. Reassure them to ignore it, warm.",
+      "You wondered aloud about the weather, then it cleared up. Drop the question casually.",
+      "You nearly asked a coworker to stay late, then reconsidered. Tell them to forget it, kind."
+    ]
+  },
+  "no big deal": {
+    "cloze": [
+      { "sentence": "\"Sorry I broke your mug.\" \"It's ____, I have loads of them.\"", "answer": "no big deal" },
+      { "sentence": "Missing one class is ____, just borrow the notes.", "answer": "no big deal" },
+      { "sentence": "\"Thanks for staying late.\" \"____, I had nothing planned.\"", "answer": "No big deal" },
+      { "sentence": "Don't stress about the typo; it's really ____.", "answer": "no big deal" },
+      { "sentence": "\"I forgot to reply to your email.\" \"____, I figured you were busy.\"", "answer": "No big deal" },
+      { "sentence": "Losing a friendly match is ____; we'll win the next one.", "answer": "no big deal" },
+      { "sentence": "\"I can't make it to lunch today.\" \"____, we'll go another day.\"", "answer": "No big deal" },
+      { "sentence": "He acts like the exam is ____, but he still studies hard.", "answer": "no big deal" },
+      { "sentence": "\"Sorry the food's a little cold.\" \"____, I'll pop it in the microwave.\"", "answer": "No big deal" },
+      { "sentence": "A five-minute delay is ____, don't worry about it.", "answer": "no big deal" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Chuyện nhỏ mà, đừng lo." },
+      { "direction": "vn_to_en", "source": "Nghỉ một buổi học thì có sao đâu, mượn vở là được." },
+      { "direction": "vn_to_en", "source": "Không đáng lo đâu, chỉ là lỗi nhỏ thôi." },
+      { "direction": "vn_to_en", "source": "Trễ năm phút thì có gì to tát đâu." },
+      { "direction": "vn_to_en", "source": "Thua một trận giao hữu thì đâu có sao." },
+      { "direction": "en_to_vn", "source": "It's no big deal, don't worry about it." },
+      { "direction": "en_to_vn", "source": "Forgetting one thing is no big deal." },
+      { "direction": "en_to_vn", "source": "It was no big deal to give you a ride." },
+      { "direction": "en_to_vn", "source": "A small scratch on the car is no big deal." },
+      { "direction": "en_to_vn", "source": "Missing the bus is no big deal, there's another one soon." }
+    ],
+    "scenario": [
+      "A friend apologizes for breaking a cheap mug. Reassure them it's minor, casual.",
+      "A classmate frets about missing one lecture. Tell them it's not a big issue, relaxed.",
+      "Someone thanks you profusely for a small favor. Downplay it, friendly.",
+      "A coworker stresses over a tiny typo. Tell them to relax, easygoing.",
+      "A friend apologizes for a late reply. Say it doesn't matter, warm.",
+      "Your team loses a casual game. Tell teammates it's not serious, upbeat.",
+      "A friend cancels lunch. Reassure them it's fine, casual.",
+      "Someone apologizes for slightly cold food. Say it's no problem, friendly.",
+      "A friend feels bad about a five-minute delay. Reassure them, relaxed.",
+      "Someone is embarrassed about a small mistake at work. Downplay it kindly."
+    ]
+  },
+  "what's up": {
+    "cloze": [
+      { "sentence": "\"Hey! ____?\" \"Not much, just chilling.\"", "answer": "What's up" },
+      { "sentence": "He walked in looking upset, so I asked him ____.", "answer": "what's up" },
+      { "sentence": "\"____, man! Long time no see.\"", "answer": "What's up" },
+      { "sentence": "You've been quiet all day; ____ with you?", "answer": "what's up" },
+      { "sentence": "\"Hey, ____? You texted me three times.\"", "answer": "what's up" },
+      { "sentence": "\"____?\" \"Oh, just heading to the gym, you?\"", "answer": "What's up" },
+      { "sentence": "She answered the phone with a cheerful \"____?\"", "answer": "What's up" },
+      { "sentence": "I could tell something was wrong, so I said, \"Hey, ____?\"", "answer": "what's up" },
+      { "sentence": "\"____ with the long face? Bad day?\"", "answer": "What's up" },
+      { "sentence": "\"____, everyone? Ready to get started?\"", "answer": "What's up" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Chào cậu, dạo này sao rồi?" },
+      { "direction": "vn_to_en", "source": "Ê, có chuyện gì vậy? Trông cậu lo lắng ghê." },
+      { "direction": "vn_to_en", "source": "Chào ông, lâu quá không gặp, khỏe không?" },
+      { "direction": "vn_to_en", "source": "Cậu im lặng cả ngày, có chuyện gì à?" },
+      { "direction": "vn_to_en", "source": "Ê, có gì không? Cậu nhắn tin mình mấy lần liền." },
+      { "direction": "en_to_vn", "source": "Hey, what's up? Haven't seen you in ages." },
+      { "direction": "en_to_vn", "source": "What's up? You look a bit down." },
+      { "direction": "en_to_vn", "source": "What's up, guys? Ready to head out?" },
+      { "direction": "en_to_vn", "source": "So what's up with the new haircut?" },
+      { "direction": "en_to_vn", "source": "What's up? Why the sudden call?" }
+    ],
+    "scenario": [
+      "You run into an old friend on the street. Greet them casually.",
+      "A friend looks upset. Ask what's going on, gently and informally.",
+      "You bump into a buddy you haven't seen in months. Greet them warmly.",
+      "A friend has been unusually quiet. Ask what's up with them, caring and casual.",
+      "You return several missed calls from a friend. Ask what's going on, relaxed.",
+      "You answer the phone to a close friend. Greet them casually.",
+      "You start a laid-back group meeting with friends. Open with a casual greeting.",
+      "A roommate seems down. Ask what's wrong, friendly.",
+      "You greet coworkers you're comfortable with as you walk in. Keep it casual.",
+      "A friend calls out of the blue. Answer and ask what's going on, easygoing."
+    ]
+  },
+  "how's it going": {
+    "cloze": [
+      { "sentence": "\"Hey Sam, ____?\" \"Pretty good, thanks. You?\"", "answer": "how's it going" },
+      { "sentence": "I bumped into my old teacher and asked, \"____?\"", "answer": "how's it going" },
+      { "sentence": "\"____ with the new job?\" \"Busy, but I'm enjoying it.\"", "answer": "How's it going" },
+      { "sentence": "He greeted everyone with a friendly \"____?\"", "answer": "how's it going" },
+      { "sentence": "\"____ over there? Need a hand?\"", "answer": "How's it going" },
+      { "sentence": "\"____, mate? Long week?\"", "answer": "How's it going" },
+      { "sentence": "She texted, \"Hey, ____? We should catch up soon.\"", "answer": "how's it going" },
+      { "sentence": "\"____ with the move? Settling in okay?\"", "answer": "How's it going" },
+      { "sentence": "The barista smiled and asked, \"____ today?\"", "answer": "how's it going" },
+      { "sentence": "\"____ with your project?\" \"Almost done, thankfully.\"", "answer": "How's it going" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Chào cậu, dạo này thế nào?" },
+      { "direction": "vn_to_en", "source": "Công việc mới ổn không?" },
+      { "direction": "vn_to_en", "source": "Ê, khỏe không? Lâu rồi mình chưa gặp nhau." },
+      { "direction": "vn_to_en", "source": "Vụ chuyển nhà sao rồi, ổn định chưa?" },
+      { "direction": "vn_to_en", "source": "Dự án của cậu tiến triển thế nào rồi?" },
+      { "direction": "en_to_vn", "source": "Hey, how's it going with the new place?" },
+      { "direction": "en_to_vn", "source": "How's it going? You look happy today." },
+      { "direction": "en_to_vn", "source": "How's it going at work these days?" },
+      { "direction": "en_to_vn", "source": "How's it going, buddy? Long time no see." },
+      { "direction": "en_to_vn", "source": "How's it going with your studies?" }
+    ],
+    "scenario": [
+      "You greet a coworker at the start of the day. Ask how they're doing, casual.",
+      "You run into a former teacher. Greet them politely but warmly.",
+      "A friend just started a new job. Ask how it's going, friendly.",
+      "You walk into a room of friends. Open with a relaxed greeting.",
+      "You see a friend struggling with a task. Check in casually and offer help.",
+      "You greet a buddy who looks tired. Ask how they're doing, easygoing.",
+      "You text a friend you haven't seen in a while. Open with a casual greeting.",
+      "A friend recently moved house. Ask how the move is going, warm.",
+      "You chat with a friendly barista. Return their greeting casually.",
+      "A classmate is working on a big project. Ask how it's coming along, friendly."
+    ]
+  },
+  "take care": {
+    "cloze": [
+      { "sentence": "\"See you next week!\" \"Bye, ____!\"", "answer": "take care" },
+      { "sentence": "Get some rest and ____ of yourself, okay?", "answer": "take care" },
+      { "sentence": "\"Thanks for coming over. ____ on the way home.\"", "answer": "take care" },
+      { "sentence": "She waved from the platform and shouted, \"____!\"", "answer": "take care" },
+      { "sentence": "\"I'm heading off now.\" \"Alright, ____, text me when you're home.\"", "answer": "take care" },
+      { "sentence": "The roads are icy tonight, so ____ driving back.", "answer": "take care" },
+      { "sentence": "\"It was great seeing you. ____ and stay warm!\"", "answer": "take care" },
+      { "sentence": "\"Feel better soon and ____ of that cold.\"", "answer": "take care" },
+      { "sentence": "\"Alright, I'll catch you later. ____!\"", "answer": "Take care" },
+      { "sentence": "Before hanging up, Grandma always says, \"____, dear.\"", "answer": "take care" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Bảo trọng nhé, hẹn gặp lại tuần sau." },
+      { "direction": "vn_to_en", "source": "Nhớ giữ gìn sức khỏe nha." },
+      { "direction": "vn_to_en", "source": "Đường về cẩn thận nhé." },
+      { "direction": "vn_to_en", "source": "Thôi mình đi đây, bảo trọng nha." },
+      { "direction": "vn_to_en", "source": "Trời lạnh, nhớ giữ ấm và bảo trọng nhé." },
+      { "direction": "en_to_vn", "source": "Take care, and text me when you get home." },
+      { "direction": "en_to_vn", "source": "It was lovely seeing you. Take care!" },
+      { "direction": "en_to_vn", "source": "Take care of that cough, get some rest." },
+      { "direction": "en_to_vn", "source": "Drive safe and take care out there." },
+      { "direction": "en_to_vn", "source": "Take care, see you soon." }
+    ],
+    "scenario": [
+      "You're saying goodbye to a friend after a hangout. Wish them well casually.",
+      "A friend is getting over a cold. Tell them to look after themselves, warm.",
+      "A guest is leaving your home late at night. Wish them a safe trip, caring.",
+      "You wave off a friend at a train station. Say a friendly farewell.",
+      "You end a phone call with a close friend. Sign off warmly.",
+      "A friend is driving home in bad weather. Tell them to be careful, caring.",
+      "You part ways with a coworker before a long weekend. Wish them well, friendly.",
+      "A relative isn't feeling great. Tell them to rest and mind their health.",
+      "You finish a chat and are heading off. Say a casual goodbye.",
+      "You're closing a video call with a friend abroad. Sign off warmly and casually."
+    ]
+  },
+  "catch you later": {
+    "cloze": [
+      { "sentence": "\"I've got to run, ____!\" \"Okay, bye!\"", "answer": "catch you later" },
+      { "sentence": "\"Thanks for lunch. ____, yeah?\"", "answer": "catch you later" },
+      { "sentence": "He grabbed his bag and said, \"____, guys.\"", "answer": "catch you later" },
+      { "sentence": "\"I'll be around all evening, so ____.\"", "answer": "catch you later" },
+      { "sentence": "\"Gotta head to class. ____!\" \"See ya!\"", "answer": "Catch you later" },
+      { "sentence": "\"Alright, I'm off. ____ at the game.\"", "answer": "catch you later" },
+      { "sentence": "She waved and called out, \"____!\" as she left.", "answer": "Catch you later" },
+      { "sentence": "\"Text me the details and I'll ____.\"", "answer": "catch you later" },
+      { "sentence": "\"Nice bumping into you. ____ sometime this week.\"", "answer": "Catch you later" },
+      { "sentence": "\"I'm heading out early, so ____, okay?\"", "answer": "catch you later" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Thôi mình đi đây, hẹn gặp lại sau nhé." },
+      { "direction": "vn_to_en", "source": "Cảm ơn bữa trưa, hẹn gặp lại nha." },
+      { "direction": "vn_to_en", "source": "Tớ phải đi học rồi, gặp lại sau nhé." },
+      { "direction": "vn_to_en", "source": "Nhắn tớ chi tiết đi, hẹn gặp lại sau." },
+      { "direction": "vn_to_en", "source": "Vui vì gặp cậu, hẹn gặp lại trong tuần nhé." },
+      { "direction": "en_to_vn", "source": "Gotta go, catch you later!" },
+      { "direction": "en_to_vn", "source": "Catch you later at the party." },
+      { "direction": "en_to_vn", "source": "Thanks for the ride, catch you later." },
+      { "direction": "en_to_vn", "source": "I'll catch you later this week." },
+      { "direction": "en_to_vn", "source": "Catch you later, have a good one!" }
+    ],
+    "scenario": [
+      "You're rushing off but plan to see a friend soon. Say a quick, casual goodbye.",
+      "You finish lunch with a buddy. Sign off in a laid-back way.",
+      "You leave a group of friends to head to class. Say bye casually.",
+      "You'll be around later and might see a friend again. Say a relaxed farewell.",
+      "You wrap up a chat and are heading out. Say a breezy goodbye.",
+      "You agree to meet a friend at a game later. Sign off casually.",
+      "You bump into someone briefly and have to go. End with a casual goodbye.",
+      "You tell a friend to text you and you'll meet up. Say bye informally.",
+      "You're leaving early from a hangout. Say a friendly goodbye.",
+      "You part from a coworker you'll see after the break. Keep the goodbye casual."
+    ]
+  },
+  "I'm good": {
+    "cloze": [
+      { "sentence": "\"How are you feeling today?\" \"____, thanks for asking.\"", "answer": "I'm good" },
+      { "sentence": "\"Want some more cake?\" \"____, thanks, I'm full.\"", "answer": "I'm good" },
+      { "sentence": "\"Do you need a lift home?\" \"____, my place is just around the corner.\"", "answer": "I'm good" },
+      { "sentence": "\"Should I grab you a drink?\" \"____ for now, maybe later.\"", "answer": "I'm good" },
+      { "sentence": "\"You sure you don't want help?\" \"Yeah, ____, I've got it.\"", "answer": "I'm good" },
+      { "sentence": "\"How's everything going?\" \"____, can't complain.\"", "answer": "I'm good" },
+      { "sentence": "\"Want me to top up your coffee?\" \"____, thanks though.\"", "answer": "I'm good" },
+      { "sentence": "\"Are you okay after that fall?\" \"____, just a little scrape.\"", "answer": "I'm good" },
+      { "sentence": "\"Do you want to order dessert?\" \"____, I'm stuffed.\"", "answer": "I'm good" },
+      { "sentence": "\"Need anything from the shop?\" \"____, thanks, I've got everything.\"", "answer": "I'm good" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Mình ổn, cảm ơn đã hỏi thăm." },
+      { "direction": "vn_to_en", "source": "Thôi khỏi, cảm ơn, mình no rồi." },
+      { "direction": "vn_to_en", "source": "Mình không cần đâu, cảm ơn nhé." },
+      { "direction": "vn_to_en", "source": "Mình ổn mà, tự lo được." },
+      { "direction": "vn_to_en", "source": "Thôi không cần đâu, cảm ơn lòng tốt của bạn." },
+      { "direction": "en_to_vn", "source": "I'm good, thanks for offering." },
+      { "direction": "en_to_vn", "source": "No thanks, I'm good for now." },
+      { "direction": "en_to_vn", "source": "I'm good, everything's going fine." },
+      { "direction": "en_to_vn", "source": "I'm good, I don't need a refill." },
+      { "direction": "en_to_vn", "source": "I'm good, really, don't worry about me." }
+    ],
+    "scenario": [
+      "A friend asks how you're doing. Answer positively and casually.",
+      "Someone offers you a second helping of food. Politely decline, informal.",
+      "A friend offers you a ride you don't need. Decline politely and casually.",
+      "Someone asks if you want a drink. Decline for now, friendly.",
+      "A friend offers help with a task you can handle. Decline politely, relaxed.",
+      "A coworker asks how things are going. Give an upbeat, casual reply.",
+      "A host offers to refill your coffee. Politely decline, warm.",
+      "Someone checks if you're hurt after a small stumble. Reassure them casually.",
+      "A waiter asks if you want dessert. Decline because you're full, friendly.",
+      "A friend heading to the shop asks if you need anything. Decline politely, casual."
+    ]
+  }
+}

@@ -1,0 +1,306 @@
+{
+  "pollution": {
+    "cloze": [
+      { "sentence": "Air ____ in major cities has reached levels that seriously threaten public health.", "answer": "pollution" },
+      { "sentence": "Many governments have introduced strict laws to reduce industrial ____.", "answer": "pollution" },
+      { "sentence": "The river was so contaminated that ____ killed almost all of the fish.", "answer": "pollution" },
+      { "sentence": "One of the main causes of ____ is the heavy reliance on private cars.", "answer": "pollution" },
+      { "sentence": "Noise ____ from the nearby airport makes it difficult for residents to sleep.", "answer": "pollution" },
+      { "sentence": "Switching to renewable energy could dramatically cut ____ from power stations.", "answer": "pollution" },
+      { "sentence": "Plastic ____ in the oceans harms marine life and eventually enters the food chain.", "answer": "pollution" },
+      { "sentence": "Factories should be fined heavily if they cause excessive ____.", "answer": "pollution" },
+      { "sentence": "Light ____ in urban areas prevents people from seeing the stars at night.", "answer": "pollution" },
+      { "sentence": "Educating children about ____ is the first step toward a cleaner environment.", "answer": "pollution" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Ô nhiễm không khí là một trong những vấn đề nghiêm trọng nhất ở các thành phố lớn." },
+      { "direction": "vn_to_en", "source": "Chính phủ cần ban hành luật nghiêm khắc hơn để giảm ô nhiễm công nghiệp." },
+      { "direction": "vn_to_en", "source": "Ô nhiễm nguồn nước ảnh hưởng trực tiếp đến sức khỏe của người dân." },
+      { "direction": "vn_to_en", "source": "Sự phụ thuộc vào xe cá nhân là nguyên nhân chính gây ra ô nhiễm." },
+      { "direction": "vn_to_en", "source": "Ô nhiễm nhựa đang đe dọa nghiêm trọng đến sinh vật biển." },
+      { "direction": "en_to_vn", "source": "Pollution from factories has damaged the surrounding farmland." },
+      { "direction": "en_to_vn", "source": "Reducing pollution requires cooperation between governments and citizens." },
+      { "direction": "en_to_vn", "source": "Traffic congestion is a major source of pollution in the capital." },
+      { "direction": "en_to_vn", "source": "Scientists warn that pollution is accelerating climate change." },
+      { "direction": "en_to_vn", "source": "The new policy aims to lower pollution levels by twenty percent." }
+    ],
+    "scenario": [
+      "In an IELTS essay arguing that governments should do more about the environment, write a formal sentence about pollution.",
+      "You are writing a complaint email to the city council about factory smoke near your home; use a polite but firm tone and mention pollution.",
+      "During a class debate, you support banning old vehicles; make a persuasive spoken point about pollution.",
+      "Write a caption for a school poster campaign warning classmates about pollution in an urgent tone.",
+      "In an academic report, describe one measurable effect of pollution using a neutral, factual tone.",
+      "You are chatting casually with a friend about why you dislike the traffic downtown; mention pollution informally.",
+      "Write a sentence for a formal presentation proposing a solution to reduce pollution.",
+      "In a letter to a newspaper editor, express concern about rising pollution in a serious, civic tone.",
+      "You are advising a younger student on essay vocabulary; explain in a simple sentence how pollution harms health.",
+      "Write a motivational message for a community clean-up event that mentions fighting pollution in an encouraging tone."
+    ]
+  },
+  "deforestation": {
+    "cloze": [
+      { "sentence": "____ is destroying the natural habitat of countless species.", "answer": "deforestation" },
+      { "sentence": "Rapid ____ in the tropics contributes significantly to global warming.", "answer": "deforestation" },
+      { "sentence": "The government banned logging in an attempt to slow down ____.", "answer": "deforestation" },
+      { "sentence": "Large-scale ____ often leads to soil erosion and flooding.", "answer": "deforestation" },
+      { "sentence": "Environmental groups are campaigning against the ____ of the rainforest.", "answer": "deforestation" },
+      { "sentence": "One consequence of ____ is the loss of biodiversity.", "answer": "deforestation" },
+      { "sentence": "Farmers clearing land for cattle are a major driver of ____.", "answer": "deforestation" },
+      { "sentence": "Satellite images reveal the alarming rate of ____ over the past decade.", "answer": "deforestation" },
+      { "sentence": "Reforestation projects aim to reverse the damage caused by ____.", "answer": "deforestation" },
+      { "sentence": "Unless ____ is controlled, many indigenous communities will lose their homes.", "answer": "deforestation" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Nạn phá rừng đang phá hủy môi trường sống của nhiều loài động vật." },
+      { "direction": "vn_to_en", "source": "Phá rừng ở vùng nhiệt đới góp phần làm trái đất nóng lên." },
+      { "direction": "vn_to_en", "source": "Chính phủ đã cấm khai thác gỗ để ngăn chặn nạn phá rừng." },
+      { "direction": "vn_to_en", "source": "Phá rừng trên quy mô lớn thường dẫn đến xói mòn đất và lũ lụt." },
+      { "direction": "vn_to_en", "source": "Một hậu quả của nạn phá rừng là mất đa dạng sinh học." },
+      { "direction": "en_to_vn", "source": "Deforestation is one of the leading causes of species extinction." },
+      { "direction": "en_to_vn", "source": "The company was accused of causing deforestation to expand its plantations." },
+      { "direction": "en_to_vn", "source": "Stricter regulations are needed to prevent illegal deforestation." },
+      { "direction": "en_to_vn", "source": "Deforestation reduces the planet's capacity to absorb carbon dioxide." },
+      { "direction": "en_to_vn", "source": "Local activists have protested against deforestation for years." }
+    ],
+    "scenario": [
+      "In an IELTS Task 2 essay about the environment, write a formal sentence explaining a cause of deforestation.",
+      "You are giving an academic seminar; state one serious consequence of deforestation in a scholarly tone.",
+      "Write a persuasive slogan for an NGO poster opposing deforestation in an emotive tone.",
+      "In a formal letter to a government minister, urge action against deforestation in a respectful but insistent tone.",
+      "You are explaining to a curious younger sibling why forests matter; mention deforestation simply and warmly.",
+      "Write a neutral, factual sentence for a geography textbook describing where deforestation occurs most.",
+      "In a debate, argue that economic development does not justify deforestation using a firm tone.",
+      "Write a headline for an environmental news article about rising deforestation in a concise, serious tone.",
+      "You are drafting a proposal for a tree-planting project; mention reversing deforestation in an optimistic tone.",
+      "Post a short awareness message on social media condemning deforestation in an engaging, urgent tone."
+    ]
+  },
+  "unemployment": {
+    "cloze": [
+      { "sentence": "Rising ____ has become a serious concern for the government.", "answer": "unemployment" },
+      { "sentence": "Automation could lead to widespread ____ in the manufacturing sector.", "answer": "unemployment" },
+      { "sentence": "High levels of ____ often result in increased crime rates.", "answer": "unemployment" },
+      { "sentence": "The economic recession pushed ____ to a record high.", "answer": "unemployment" },
+      { "sentence": "Youth ____ is particularly high in many developing countries.", "answer": "unemployment" },
+      { "sentence": "Training programmes can help reduce long-term ____.", "answer": "unemployment" },
+      { "sentence": "____ benefits provide temporary support for those who have lost their jobs.", "answer": "unemployment" },
+      { "sentence": "The factory closure caused a sharp rise in local ____.", "answer": "unemployment" },
+      { "sentence": "Governments try to lower ____ by encouraging foreign investment.", "answer": "unemployment" },
+      { "sentence": "Prolonged ____ can have a damaging effect on people's mental health.", "answer": "unemployment" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Tình trạng thất nghiệp gia tăng đang là mối lo ngại lớn của chính phủ." },
+      { "direction": "vn_to_en", "source": "Tự động hóa có thể dẫn đến thất nghiệp trên diện rộng." },
+      { "direction": "vn_to_en", "source": "Tỷ lệ thất nghiệp cao thường dẫn đến gia tăng tội phạm." },
+      { "direction": "vn_to_en", "source": "Thất nghiệp ở giới trẻ đặc biệt cao ở nhiều nước đang phát triển." },
+      { "direction": "vn_to_en", "source": "Các chương trình đào tạo có thể giúp giảm thất nghiệp lâu dài." },
+      { "direction": "en_to_vn", "source": "Unemployment rose sharply during the financial crisis." },
+      { "direction": "en_to_vn", "source": "The government introduced new policies to tackle unemployment." },
+      { "direction": "en_to_vn", "source": "Long-term unemployment can lower a person's self-esteem." },
+      { "direction": "en_to_vn", "source": "Many economists worry that technology will increase unemployment." },
+      { "direction": "en_to_vn", "source": "Unemployment among graduates has become a growing problem." }
+    ],
+    "scenario": [
+      "In an IELTS essay about the effects of automation, write a formal sentence about unemployment.",
+      "You are presenting economic data at a conference; describe a trend in unemployment using an objective tone.",
+      "Write a sympathetic message to a friend who has just become unemployed in a caring, informal tone.",
+      "In a policy proposal to a city council, suggest a way to reduce unemployment in a formal tone.",
+      "During a job-fair speech, encourage young people facing unemployment in a motivating tone.",
+      "Write a neutral sentence for a news report stating the latest unemployment figures.",
+      "In a classroom debate, argue that education is the best solution to unemployment using a persuasive tone.",
+      "You are writing an academic essay conclusion; summarize the social effects of unemployment formally.",
+      "Draft a headline for a business newspaper about falling unemployment in a concise tone.",
+      "Explain to a beginner learner in a simple sentence what unemployment means and why it matters."
+    ]
+  },
+  "welfare state": {
+    "cloze": [
+      { "sentence": "A generous ____ ensures that no citizen is left without basic support.", "answer": "welfare state" },
+      { "sentence": "Critics argue that the ____ discourages people from finding work.", "answer": "welfare state" },
+      { "sentence": "The ____ provides free healthcare and education to all residents.", "answer": "welfare state" },
+      { "sentence": "Maintaining a ____ requires high levels of taxation.", "answer": "welfare state" },
+      { "sentence": "Many Scandinavian countries are known for their strong ____.", "answer": "welfare state" },
+      { "sentence": "Supporters believe the ____ reduces inequality across society.", "answer": "welfare state" },
+      { "sentence": "The government has promised to protect the ____ despite budget cuts.", "answer": "welfare state" },
+      { "sentence": "An aging population puts enormous pressure on the ____.", "answer": "welfare state" },
+      { "sentence": "The concept of the ____ emerged in Europe after the Second World War.", "answer": "welfare state" },
+      { "sentence": "Some economists claim the ____ is too expensive to sustain.", "answer": "welfare state" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Một nhà nước phúc lợi hào phóng đảm bảo không công dân nào bị bỏ rơi." },
+      { "direction": "vn_to_en", "source": "Nhiều người chỉ trích rằng nhà nước phúc lợi khiến người dân lười lao động." },
+      { "direction": "vn_to_en", "source": "Nhà nước phúc lợi cung cấp y tế và giáo dục miễn phí cho mọi người." },
+      { "direction": "vn_to_en", "source": "Duy trì một nhà nước phúc lợi đòi hỏi mức thuế cao." },
+      { "direction": "vn_to_en", "source": "Các nước Bắc Âu nổi tiếng với nhà nước phúc lợi vững mạnh." },
+      { "direction": "en_to_vn", "source": "The welfare state was designed to protect the most vulnerable citizens." },
+      { "direction": "en_to_vn", "source": "An aging population threatens the future of the welfare state." },
+      { "direction": "en_to_vn", "source": "Opponents claim the welfare state creates a culture of dependency." },
+      { "direction": "en_to_vn", "source": "The welfare state relies heavily on income from taxes." },
+      { "direction": "en_to_vn", "source": "A well-funded welfare state can significantly reduce poverty." }
+    ],
+    "scenario": [
+      "In an IELTS essay on inequality, write a formal sentence arguing in favour of a welfare state.",
+      "You are debating economics in class; argue against an expensive welfare state using a firm, reasoned tone.",
+      "In an academic essay, explain the historical origins of the welfare state in a scholarly tone.",
+      "Write a sentence for a formal policy brief warning that the welfare state is under financial strain.",
+      "You are chatting with a friend from Sweden about their country's welfare state in a curious, informal tone.",
+      "In a formal presentation, describe one benefit of a welfare state using a neutral, factual tone.",
+      "Write a persuasive opinion-column sentence defending the welfare state in an assertive tone.",
+      "During a university tutorial, ask a thoughtful question about how a welfare state is funded, politely.",
+      "Draft a balanced essay sentence acknowledging both a strength and a weakness of the welfare state.",
+      "Explain to an intermediate learner in a clear, simple sentence what a welfare state is."
+    ]
+  },
+  "mental health": {
+    "cloze": [
+      { "sentence": "Schools should do more to support students' ____.", "answer": "mental health" },
+      { "sentence": "Long working hours can have a serious impact on ____.", "answer": "mental health" },
+      { "sentence": "There is still a strong stigma attached to ____ problems in many societies.", "answer": "mental health" },
+      { "sentence": "Regular exercise is known to improve both physical and ____.", "answer": "mental health" },
+      { "sentence": "The pandemic caused a decline in the ____ of millions of people.", "answer": "mental health" },
+      { "sentence": "Employers are increasingly aware of the importance of ____ in the workplace.", "answer": "mental health" },
+      { "sentence": "Access to ____ services remains limited in rural areas.", "answer": "mental health" },
+      { "sentence": "Talking openly about ____ can help reduce feelings of isolation.", "answer": "mental health" },
+      { "sentence": "Social media has been linked to poor ____ among teenagers.", "answer": "mental health" },
+      { "sentence": "Good ____ is just as important as physical fitness.", "answer": "mental health" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Nhà trường nên làm nhiều hơn để hỗ trợ sức khỏe tinh thần của học sinh." },
+      { "direction": "vn_to_en", "source": "Làm việc quá nhiều giờ có thể ảnh hưởng nghiêm trọng đến sức khỏe tinh thần." },
+      { "direction": "vn_to_en", "source": "Vẫn còn nhiều định kiến về các vấn đề sức khỏe tinh thần trong xã hội." },
+      { "direction": "vn_to_en", "source": "Tập thể dục thường xuyên giúp cải thiện sức khỏe tinh thần." },
+      { "direction": "vn_to_en", "source": "Mạng xã hội có liên quan đến sức khỏe tinh thần kém ở thanh thiếu niên." },
+      { "direction": "en_to_vn", "source": "Many companies now offer support programmes for mental health." },
+      { "direction": "en_to_vn", "source": "Poor mental health can affect a person's ability to work." },
+      { "direction": "en_to_vn", "source": "Raising awareness of mental health is essential in schools." },
+      { "direction": "en_to_vn", "source": "The government has increased funding for mental health services." },
+      { "direction": "en_to_vn", "source": "Good sleep plays an important role in maintaining mental health." }
+    ],
+    "scenario": [
+      "In an IELTS essay about modern lifestyles, write a formal sentence about the importance of mental health.",
+      "You are writing a supportive note to a stressed colleague; mention mental health in a warm, caring tone.",
+      "In an academic report, state one factor that affects mental health using a neutral, factual tone.",
+      "Write a sentence for a public-health campaign encouraging people to talk about mental health.",
+      "During a class discussion, argue that schools neglect mental health using a persuasive tone.",
+      "Write a formal email to a manager proposing a mental health day for staff in a professional tone.",
+      "You are advising a friend to see a counselor; mention mental health gently and informally.",
+      "Draft a headline for a wellness magazine article about mental health in a positive tone.",
+      "In an essay conclusion, summarize why mental health deserves more attention, formally.",
+      "Explain to a beginner learner in a simple sentence what mental health means."
+    ]
+  },
+  "critical thinking": {
+    "cloze": [
+      { "sentence": "Schools should place greater emphasis on developing ____ skills.", "answer": "critical thinking" },
+      { "sentence": "____ allows people to evaluate information rather than accept it blindly.", "answer": "critical thinking" },
+      { "sentence": "Employers increasingly value ____ over the ability to memorize facts.", "answer": "critical thinking" },
+      { "sentence": "Without ____, students may struggle to solve complex problems.", "answer": "critical thinking" },
+      { "sentence": "Reading widely can strengthen a person's ____.", "answer": "critical thinking" },
+      { "sentence": "The course is designed to encourage ____ and independent judgment.", "answer": "critical thinking" },
+      { "sentence": "____ is essential when assessing the reliability of online sources.", "answer": "critical thinking" },
+      { "sentence": "Many argue that traditional exams fail to test ____.", "answer": "critical thinking" },
+      { "sentence": "Debating helps young people sharpen their ____.", "answer": "critical thinking" },
+      { "sentence": "A good education should foster creativity as well as ____.", "answer": "critical thinking" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Nhà trường nên chú trọng hơn vào việc phát triển tư duy phản biện." },
+      { "direction": "vn_to_en", "source": "Tư duy phản biện giúp con người đánh giá thông tin thay vì tin một cách mù quáng." },
+      { "direction": "vn_to_en", "source": "Nhà tuyển dụng ngày càng coi trọng tư duy phản biện." },
+      { "direction": "vn_to_en", "source": "Đọc sách nhiều có thể rèn luyện tư duy phản biện." },
+      { "direction": "vn_to_en", "source": "Tư duy phản biện rất cần thiết khi đánh giá các nguồn tin trên mạng." },
+      { "direction": "en_to_vn", "source": "Critical thinking helps students make better decisions." },
+      { "direction": "en_to_vn", "source": "The ability to apply critical thinking is highly valued in the workplace." },
+      { "direction": "en_to_vn", "source": "Many educators believe critical thinking should be taught from an early age." },
+      { "direction": "en_to_vn", "source": "Critical thinking enables us to question misleading advertisements." },
+      { "direction": "en_to_vn", "source": "Group discussions can encourage critical thinking among learners." }
+    ],
+    "scenario": [
+      "In an IELTS essay about education, write a formal sentence arguing that schools should teach critical thinking.",
+      "You are giving academic advice to a student; explain the value of critical thinking in a supportive tone.",
+      "In a job interview, describe how you use critical thinking at work in a confident, professional tone.",
+      "Write a persuasive debate point claiming that exams ignore critical thinking, in a firm tone.",
+      "In an academic essay, define critical thinking using a precise, scholarly tone.",
+      "Write an encouraging message to a study group about improving critical thinking together, informally.",
+      "Draft a sentence for a university brochure highlighting critical thinking as a course goal, in a formal tone.",
+      "During a class discussion, ask a thoughtful question about how critical thinking is developed, politely.",
+      "Write a neutral sentence for a report explaining why employers seek critical thinking.",
+      "Explain to an intermediate learner in a simple sentence what critical thinking means."
+    ]
+  },
+  "artificial intelligence": {
+    "cloze": [
+      { "sentence": "____ is transforming the way businesses operate around the world.", "answer": "artificial intelligence" },
+      { "sentence": "Some experts warn that ____ could replace millions of jobs.", "answer": "artificial intelligence" },
+      { "sentence": "Hospitals are now using ____ to help diagnose diseases more accurately.", "answer": "artificial intelligence" },
+      { "sentence": "The rapid development of ____ raises important ethical questions.", "answer": "artificial intelligence" },
+      { "sentence": "Many smartphones rely on ____ to improve their cameras.", "answer": "artificial intelligence" },
+      { "sentence": "Governments are struggling to regulate ____ effectively.", "answer": "artificial intelligence" },
+      { "sentence": "____ can process enormous amounts of data in seconds.", "answer": "artificial intelligence" },
+      { "sentence": "Critics fear that ____ may be used to spread misinformation.", "answer": "artificial intelligence" },
+      { "sentence": "Schools are beginning to teach students about the basics of ____.", "answer": "artificial intelligence" },
+      { "sentence": "The benefits of ____ must be weighed against its potential risks.", "answer": "artificial intelligence" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Trí tuệ nhân tạo đang thay đổi cách các doanh nghiệp hoạt động." },
+      { "direction": "vn_to_en", "source": "Một số chuyên gia cảnh báo trí tuệ nhân tạo có thể thay thế hàng triệu việc làm." },
+      { "direction": "vn_to_en", "source": "Các bệnh viện đang dùng trí tuệ nhân tạo để chẩn đoán bệnh chính xác hơn." },
+      { "direction": "vn_to_en", "source": "Sự phát triển nhanh của trí tuệ nhân tạo đặt ra nhiều câu hỏi đạo đức." },
+      { "direction": "vn_to_en", "source": "Các chính phủ đang gặp khó khăn trong việc quản lý trí tuệ nhân tạo." },
+      { "direction": "en_to_vn", "source": "Artificial intelligence can analyze data far faster than humans." },
+      { "direction": "en_to_vn", "source": "Many people worry that artificial intelligence will reduce job opportunities." },
+      { "direction": "en_to_vn", "source": "Artificial intelligence is already used in self-driving cars." },
+      { "direction": "en_to_vn", "source": "The rise of artificial intelligence demands new laws and regulations." },
+      { "direction": "en_to_vn", "source": "Artificial intelligence has the potential to improve healthcare significantly." }
+    ],
+    "scenario": [
+      "In an IELTS essay about technology, write a formal sentence about the benefits of artificial intelligence.",
+      "You are presenting at a tech conference; describe one impact of artificial intelligence in an objective tone.",
+      "Write a cautionary debate point about the risks of artificial intelligence in a serious tone.",
+      "In a job report, explain how artificial intelligence improves productivity, in a professional tone.",
+      "You are chatting with a friend about a new AI app; mention artificial intelligence casually.",
+      "Write a balanced essay sentence weighing the pros and cons of artificial intelligence, formally.",
+      "Draft a headline for a science magazine about artificial intelligence in a concise tone.",
+      "In a university lecture, define artificial intelligence for beginners using a clear, academic tone.",
+      "Write a persuasive sentence urging stricter regulation of artificial intelligence in an assertive tone.",
+      "Explain to an intermediate learner in a simple sentence what artificial intelligence is."
+    ]
+  },
+  "raise awareness": {
+    "cloze": [
+      { "sentence": "The campaign was launched to ____ of climate change.", "answer": "raise awareness" },
+      { "sentence": "Schools can ____ about the dangers of drug abuse.", "answer": "raise awareness" },
+      { "sentence": "Charities often use social media to ____ of their causes.", "answer": "raise awareness" },
+      { "sentence": "The documentary helped ____ of the plight of refugees.", "answer": "raise awareness" },
+      { "sentence": "Governments should do more to ____ of healthy eating.", "answer": "raise awareness" },
+      { "sentence": "The event aims to ____ about mental health issues.", "answer": "raise awareness" },
+      { "sentence": "Celebrities can use their fame to ____ of important social problems.", "answer": "raise awareness" },
+      { "sentence": "Volunteers went door to door to ____ of the recycling scheme.", "answer": "raise awareness" },
+      { "sentence": "Advertising campaigns are designed to ____ of road safety.", "answer": "raise awareness" },
+      { "sentence": "One effective way to ____ is through community workshops.", "answer": "raise awareness" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Chiến dịch được phát động nhằm nâng cao nhận thức về biến đổi khí hậu." },
+      { "direction": "vn_to_en", "source": "Nhà trường có thể nâng cao nhận thức về tác hại của ma túy." },
+      { "direction": "vn_to_en", "source": "Các tổ chức từ thiện thường dùng mạng xã hội để nâng cao nhận thức." },
+      { "direction": "vn_to_en", "source": "Chính phủ nên làm nhiều hơn để nâng cao nhận thức về ăn uống lành mạnh." },
+      { "direction": "vn_to_en", "source": "Những người nổi tiếng có thể nâng cao nhận thức về các vấn đề xã hội." },
+      { "direction": "en_to_vn", "source": "The organization works hard to raise awareness of endangered species." },
+      { "direction": "en_to_vn", "source": "We must raise awareness of the risks of online scams." },
+      { "direction": "en_to_vn", "source": "The march was intended to raise awareness among young voters." },
+      { "direction": "en_to_vn", "source": "Educational programmes can raise awareness of environmental issues." },
+      { "direction": "en_to_vn", "source": "The poster campaign aims to raise awareness of water conservation." }
+    ],
+    "scenario": [
+      "In an IELTS essay about social problems, write a formal sentence about how governments can raise awareness.",
+      "You are drafting a proposal for a charity event; explain how it will raise awareness in a professional tone.",
+      "Write a motivating message rallying volunteers to help raise awareness in an enthusiastic tone.",
+      "In an academic essay, argue that education is the best way to raise awareness, formally.",
+      "Write a social-media caption for a campaign that aims to raise awareness in an engaging tone.",
+      "You are speaking to classmates about a school project to raise awareness; use a friendly, informal tone.",
+      "Draft a press-release sentence stating that an event will raise awareness, in a neutral tone.",
+      "In a formal letter to a sponsor, explain how their support will help raise awareness, respectfully.",
+      "Write a persuasive slogan encouraging people to raise awareness of recycling in a catchy tone.",
+      "Explain to an intermediate learner in a simple sentence what it means to raise awareness."
+    ]
+  }
+}

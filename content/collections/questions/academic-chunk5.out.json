@@ -1,0 +1,572 @@
+{
+  "paradigm": {
+    "cloze": [
+      { "sentence": "The discovery of DNA introduced a new scientific ____ that reshaped the whole field of biology.", "answer": "paradigm" },
+      { "sentence": "For decades, the behaviourist ____ dominated the study of learning in psychology.", "answer": "paradigm" },
+      { "sentence": "Researchers argue that the dominant economic ____ has failed to explain recent financial crises.", "answer": "paradigm" },
+      { "sentence": "A shift in the medical ____ now treats prevention as being as important as cure.", "answer": "paradigm" },
+      { "sentence": "The study challenges the prevailing ____ by proposing an entirely different model of memory.", "answer": "paradigm" },
+      { "sentence": "Each research ____ carries its own assumptions about what counts as valid evidence.", "answer": "paradigm" },
+      { "sentence": "The Copernican ____ replaced the belief that the Earth stood at the centre of the universe.", "answer": "paradigm" },
+      { "sentence": "Digital learning represents a genuine ____ change in how universities deliver education.", "answer": "paradigm" },
+      { "sentence": "The author calls for a new ____ in which sustainability guides every policy decision.", "answer": "paradigm" },
+      { "sentence": "Under the classical ____, illness was often explained as an imbalance of bodily fluids.", "answer": "paradigm" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Phát hiện này đã tạo ra một mô hình tư duy hoàn toàn mới trong ngành vật lý." },
+      { "direction": "vn_to_en", "source": "Nhiều nhà nghiên cứu cho rằng đã đến lúc thay đổi hệ hình cũ." },
+      { "direction": "vn_to_en", "source": "Mô hình giáo dục truyền thống đang dần bị thay thế bởi một hệ hình mới." },
+      { "direction": "vn_to_en", "source": "Bài báo đề xuất một mô hình lý thuyết khác để giải thích hiện tượng này." },
+      { "direction": "vn_to_en", "source": "Sự chuyển đổi mô hình này ảnh hưởng đến toàn bộ cách chúng ta nhìn nhận vấn đề." },
+      { "direction": "en_to_vn", "source": "This experiment does not fit neatly into the existing scientific paradigm." },
+      { "direction": "en_to_vn", "source": "The lecturer explained how a paradigm shapes the questions a discipline is willing to ask." },
+      { "direction": "en_to_vn", "source": "A dominant paradigm can make alternative theories difficult to publish." },
+      { "direction": "en_to_vn", "source": "The thesis situates itself within a constructivist paradigm of learning." },
+      { "direction": "en_to_vn", "source": "Once a paradigm collapses, the whole discipline must rebuild its assumptions." }
+    ],
+    "scenario": [
+      "In a research proposal, describe which theoretical paradigm your study is grounded in. Use a formal academic tone.",
+      "During a seminar presentation, explain to classmates how a major discovery caused a paradigm shift. Keep the register academic.",
+      "Write a sentence for a literature review noting that a long-held paradigm is now being questioned. Use formal English.",
+      "In an essay conclusion, argue that education needs a new paradigm centred on sustainability. Keep it persuasive but academic.",
+      "You are writing a textbook definition. Explain what a scientific paradigm is in one clear formal sentence.",
+      "In a debate on economics, claim that the current paradigm cannot explain recent events. Use a measured, formal tone.",
+      "Write a caption for an academic poster describing the shift from one paradigm to another. Keep it concise and formal.",
+      "In a job talk for a research post, state which paradigm guides your methodology. Use professional register.",
+      "Write a sentence for a history-of-science essay describing how the Copernican paradigm replaced an older view. Formal tone.",
+      "In an abstract, note that your findings challenge the dominant paradigm in the field. Keep it academic and concise."
+    ]
+  },
+  "nonetheless": {
+    "cloze": [
+      { "sentence": "The sample was small; ____, the results point to a clear and consistent trend.", "answer": "nonetheless" },
+      { "sentence": "The theory is decades old but remains, ____, highly influential in the field.", "answer": "nonetheless" },
+      { "sentence": "The evidence is limited. ____, it is sufficient to justify further investigation.", "answer": "nonetheless" },
+      { "sentence": "The two studies used different methods; their conclusions were ____ remarkably similar.", "answer": "nonetheless" },
+      { "sentence": "Critics dismissed the paper, which ____ went on to shape the whole discipline.", "answer": "nonetheless" },
+      { "sentence": "The reform faced strong opposition; it was ____ adopted the following year.", "answer": "nonetheless" },
+      { "sentence": "Funding was cut sharply. The team ____ managed to complete the experiment.", "answer": "nonetheless" },
+      { "sentence": "The model has obvious weaknesses. It is, ____, a useful starting point for analysis.", "answer": "nonetheless" },
+      { "sentence": "Her argument is controversial; it deserves, ____, careful and serious consideration.", "answer": "nonetheless" },
+      { "sentence": "The data are incomplete. ____, some cautious conclusions can reasonably be drawn.", "answer": "nonetheless" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Mẫu nghiên cứu khá nhỏ; tuy nhiên, kết quả vẫn đáng tin cậy." },
+      { "direction": "vn_to_en", "source": "Lý thuyết này đã cũ; dù vậy, nó vẫn rất có ảnh hưởng." },
+      { "direction": "vn_to_en", "source": "Có nhiều hạn chế; tuy nhiên, nghiên cứu vẫn đóng góp quan trọng." },
+      { "direction": "vn_to_en", "source": "Chi phí rất cao; dù vậy, dự án vẫn được phê duyệt." },
+      { "direction": "vn_to_en", "source": "Bằng chứng còn ít; tuy nhiên, chúng ta có thể rút ra vài kết luận thận trọng." },
+      { "direction": "en_to_vn", "source": "The hypothesis was rejected; nonetheless, the experiment yielded valuable data." },
+      { "direction": "en_to_vn", "source": "The book is difficult to read; it is, nonetheless, worth the effort." },
+      { "direction": "en_to_vn", "source": "There were methodological flaws; nonetheless, the pattern is hard to ignore." },
+      { "direction": "en_to_vn", "source": "The policy was unpopular but was nonetheless carried out in full." },
+      { "direction": "en_to_vn", "source": "Progress was slow; nonetheless, the goal was eventually achieved." }
+    ],
+    "scenario": [
+      "In an essay, concede a weakness in your evidence but insist the argument still holds. Use 'nonetheless' in a formal tone.",
+      "Write a sentence for a research discussion acknowledging a limitation while defending the conclusion. Academic register.",
+      "In a review of a book, admit a flaw yet recommend it anyway. Keep the tone formal and balanced.",
+      "During a formal debate, accept an opponent's point but explain why your position stands. Use 'nonetheless'.",
+      "In a lab report, note that despite equipment problems the results are still meaningful. Formal scientific tone.",
+      "Write a sentence for a policy brief admitting costs are high but the reform is still justified. Formal register.",
+      "In a cover letter, acknowledge a gap in your experience while stressing your strengths. Professional tone.",
+      "In an academic abstract, concede the sample size is small but claim the findings are significant. Formal.",
+      "Write a sentence for a history essay noting an idea was rejected at the time but proved influential. Academic tone.",
+      "In a project post-mortem for managers, admit difficulties yet report that the target was met. Formal register."
+    ]
+  },
+  "accordingly": {
+    "cloze": [
+      { "sentence": "The initial results were inconclusive, and the researchers ____ redesigned the experiment.", "answer": "accordingly" },
+      { "sentence": "Demand for the course rose sharply; the university ____ opened three new sections.", "answer": "accordingly" },
+      { "sentence": "The data revealed a clear bias, and the model was ____ adjusted before publication.", "answer": "accordingly" },
+      { "sentence": "Safety standards had changed, so the guidelines were ____ revised.", "answer": "accordingly" },
+      { "sentence": "The committee found the proposal flawed and ____ recommended further revision.", "answer": "accordingly" },
+      { "sentence": "Costs had risen faster than expected; the budget was ____ increased.", "answer": "accordingly" },
+      { "sentence": "The survey showed low satisfaction, and the service was ____ reformed.", "answer": "accordingly" },
+      { "sentence": "New evidence contradicted the theory, and it was ____ abandoned by most scholars.", "answer": "accordingly" },
+      { "sentence": "The deadline was moved forward, and the team planned its work ____.", "answer": "accordingly" },
+      { "sentence": "Readers' needs differ widely, and the textbook was ____ written at several levels.", "answer": "accordingly" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Kết quả không rõ ràng, và do đó nhóm đã thiết kế lại thí nghiệm." },
+      { "direction": "vn_to_en", "source": "Nhu cầu tăng cao, theo đó trường mở thêm nhiều lớp học." },
+      { "direction": "vn_to_en", "source": "Tiêu chuẩn đã thay đổi, do đó hướng dẫn được sửa đổi lại." },
+      { "direction": "vn_to_en", "source": "Ngân sách bị cắt giảm, và kế hoạch được điều chỉnh theo đó." },
+      { "direction": "vn_to_en", "source": "Bằng chứng mới xuất hiện, và lý thuyết cũ do đó bị bác bỏ." },
+      { "direction": "en_to_vn", "source": "The findings were significant, and policy was accordingly reconsidered." },
+      { "direction": "en_to_vn", "source": "The rules had changed, so applicants were advised to act accordingly." },
+      { "direction": "en_to_vn", "source": "Costs exceeded the estimate, and the plan was accordingly scaled back." },
+      { "direction": "en_to_vn", "source": "The audience was mostly beginners, and the lecture was pitched accordingly." },
+      { "direction": "en_to_vn", "source": "Errors were found in the dataset, and the analysis was accordingly repeated." }
+    ],
+    "scenario": [
+      "In a methods section, explain that after a pilot failed you changed the design accordingly. Formal academic tone.",
+      "Write a sentence for a report saying that because demand rose, resources were increased accordingly. Formal register.",
+      "In an email to staff, state that policy changed and they should act accordingly. Keep it professional.",
+      "In an essay, argue that new evidence emerged and a theory was accordingly revised. Academic tone.",
+      "Write a sentence for a business memo noting costs rose and the budget was adjusted accordingly. Formal.",
+      "In a lab report, say that an error was found and the analysis was accordingly repeated. Scientific register.",
+      "In a lecture summary, note the audience were beginners and content was pitched accordingly. Formal tone.",
+      "Write a sentence for a policy brief: feedback was negative, so the service was accordingly reformed. Formal.",
+      "In a research plan, state that the timeline shifted and tasks were scheduled accordingly. Academic register.",
+      "In a committee report, explain the proposal was weak and revision was accordingly recommended. Formal tone."
+    ]
+  },
+  "subsequently": {
+    "cloze": [
+      { "sentence": "The theory was first proposed in 1950 and ____ refined by several other scholars.", "answer": "subsequently" },
+      { "sentence": "The drug passed early trials and was ____ approved for wider use.", "answer": "subsequently" },
+      { "sentence": "The manuscript was rejected once but ____ published in a leading journal.", "answer": "subsequently" },
+      { "sentence": "Participants completed the survey and were ____ interviewed in small groups.", "answer": "subsequently" },
+      { "sentence": "The findings were presented at a conference and ____ expanded into a book.", "answer": "subsequently" },
+      { "sentence": "The policy was introduced in one city and ____ adopted across the country.", "answer": "subsequently" },
+      { "sentence": "The samples were collected on Monday and ____ analysed in the laboratory.", "answer": "subsequently" },
+      { "sentence": "The company launched a pilot scheme, which was ____ rolled out nationwide.", "answer": "subsequently" },
+      { "sentence": "The claim was widely accepted but ____ challenged by newer research.", "answer": "subsequently" },
+      { "sentence": "The students read the article and ____ discussed it in their tutorial.", "answer": "subsequently" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Lý thuyết được đưa ra vào năm 1950 và sau đó được nhiều học giả bổ sung." },
+      { "direction": "vn_to_en", "source": "Loại thuốc này vượt qua thử nghiệm và sau đó được phê duyệt." },
+      { "direction": "vn_to_en", "source": "Bài viết bị từ chối, nhưng sau đó được đăng trên một tạp chí lớn." },
+      { "direction": "vn_to_en", "source": "Chính sách được áp dụng ở một thành phố và sau đó lan ra cả nước." },
+      { "direction": "vn_to_en", "source": "Người tham gia làm khảo sát và sau đó được phỏng vấn." },
+      { "direction": "en_to_vn", "source": "The mixture was heated and subsequently cooled to room temperature." },
+      { "direction": "en_to_vn", "source": "The idea was dismissed at first but subsequently gained wide support." },
+      { "direction": "en_to_vn", "source": "The pilot study was small; a larger trial was subsequently conducted." },
+      { "direction": "en_to_vn", "source": "The report was leaked and subsequently confirmed by officials." },
+      { "direction": "en_to_vn", "source": "The data were recorded and subsequently checked for errors." }
+    ],
+    "scenario": [
+      "In a methods section, describe two steps: samples collected, then subsequently analysed. Formal scientific tone.",
+      "Write a sentence for a literature review noting an idea was proposed and subsequently developed. Academic register.",
+      "In a biography-style essay, note the author's first book was rejected but subsequently celebrated. Formal tone.",
+      "Write a sentence for a report saying a pilot ran first and the scheme was subsequently expanded. Formal.",
+      "In a lab report, describe a two-stage procedure using 'subsequently' to link the steps. Scientific tone.",
+      "In a history essay, explain a policy started locally and was subsequently adopted nationally. Academic register.",
+      "Write a sentence for a case study: participants surveyed, then subsequently interviewed. Formal tone.",
+      "In a news-style summary for a formal newsletter, say a claim was made and subsequently disproved. Formal.",
+      "In a project timeline description, note one phase finished and another subsequently began. Professional tone.",
+      "Write a sentence for an abstract noting findings were presented and subsequently published. Academic register."
+    ]
+  },
+  "hitherto": {
+    "cloze": [
+      { "sentence": "The study reveals connections that had ____ been overlooked by researchers.", "answer": "hitherto" },
+      { "sentence": "The manuscript sheds light on a period that was ____ poorly documented.", "answer": "hitherto" },
+      { "sentence": "This method allows scientists to observe processes ____ hidden from view.", "answer": "hitherto" },
+      { "sentence": "The archive contains letters ____ unknown to historians of the period.", "answer": "hitherto" },
+      { "sentence": "The results challenge assumptions that had been ____ taken for granted.", "answer": "hitherto" },
+      { "sentence": "The technology makes possible measurements ____ considered too difficult.", "answer": "hitherto" },
+      { "sentence": "Her thesis explores questions that scholarship had ____ ignored.", "answer": "hitherto" },
+      { "sentence": "The excavation uncovered artefacts ____ absent from the historical record.", "answer": "hitherto" },
+      { "sentence": "The paper unites two fields that had ____ developed independently.", "answer": "hitherto" },
+      { "sentence": "These findings open a line of inquiry that was ____ thought impossible.", "answer": "hitherto" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Nghiên cứu này làm sáng tỏ những mối liên hệ mà cho đến nay vẫn bị bỏ qua." },
+      { "direction": "vn_to_en", "source": "Phương pháp mới cho phép quan sát những quá trình từ trước tới giờ vẫn ẩn giấu." },
+      { "direction": "vn_to_en", "source": "Tài liệu này đề cập đến một giai đoạn mà cho đến nay ít được ghi chép." },
+      { "direction": "vn_to_en", "source": "Bài báo kết nối hai lĩnh vực mà từ trước tới giờ phát triển độc lập." },
+      { "direction": "vn_to_en", "source": "Các phát hiện thách thức những giả định cho đến nay vẫn được coi là hiển nhiên." },
+      { "direction": "en_to_vn", "source": "The telescope revealed details hitherto invisible to astronomers." },
+      { "direction": "en_to_vn", "source": "The research opens a field hitherto closed to systematic study." },
+      { "direction": "en_to_vn", "source": "The documents describe customs hitherto unrecorded in any source." },
+      { "direction": "en_to_vn", "source": "The theory explains data that had hitherto seemed contradictory." },
+      { "direction": "en_to_vn", "source": "Her work gives a voice to communities hitherto absent from the history." }
+    ],
+    "scenario": [
+      "In a thesis introduction, claim your study examines a topic hitherto neglected. Use a formal academic tone.",
+      "Write a sentence for a research abstract noting your method reveals processes hitherto hidden. Formal register.",
+      "In a history essay, state that new archives contain material hitherto unknown. Academic tone.",
+      "Write a sentence for a grant proposal arguing the project addresses questions hitherto ignored. Formal.",
+      "In a review article, note that two fields had hitherto developed separately until now. Academic register.",
+      "Write a sentence for a science report: the instrument measures values hitherto impossible to obtain. Formal.",
+      "In a literature review, say that a phenomenon had hitherto been taken for granted. Formal tone.",
+      "Write a sentence for a museum catalogue describing an artefact hitherto absent from the record. Formal.",
+      "In an academic conclusion, claim your findings open an area hitherto thought impossible. Formal register.",
+      "Write a sentence for a scholarly preface noting the book covers ground hitherto unexplored. Academic tone."
+    ]
+  },
+  "notably": {
+    "cloze": [
+      { "sentence": "Several factors influenced the outcome, ____ the level of parental support.", "answer": "notably" },
+      { "sentence": "Some regions improved rapidly, ____ those that invested in early education.", "answer": "notably" },
+      { "sentence": "The reform brought clear benefits, ____ a sharp fall in unemployment.", "answer": "notably" },
+      { "sentence": "Many scholars, ____ those in the humanities, questioned the new criteria.", "answer": "notably" },
+      { "sentence": "The results were ____ consistent across all three independent studies.", "answer": "notably" },
+      { "sentence": "Certain species, ____ coral, are especially sensitive to rising temperatures.", "answer": "notably" },
+      { "sentence": "The essay draws on several thinkers, ____ Kant and Mill.", "answer": "notably" },
+      { "sentence": "Attendance rose ____ after the timetable was changed.", "answer": "notably" },
+      { "sentence": "The dataset had a few limitations, ____ its small size.", "answer": "notably" },
+      { "sentence": "Some industries, ____ manufacturing, were hit hardest by the recession.", "answer": "notably" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Nhiều yếu tố ảnh hưởng đến kết quả, đáng chú ý là sự hỗ trợ của gia đình." },
+      { "direction": "vn_to_en", "source": "Một số vùng cải thiện nhanh chóng, đặc biệt là những nơi đầu tư vào giáo dục." },
+      { "direction": "vn_to_en", "source": "Cải cách mang lại lợi ích rõ rệt, đáng chú ý là tỷ lệ thất nghiệp giảm mạnh." },
+      { "direction": "vn_to_en", "source": "Bài luận dựa trên nhiều nhà tư tưởng, đặc biệt là Kant và Mill." },
+      { "direction": "vn_to_en", "source": "Một số ngành, đáng chú ý là sản xuất, chịu ảnh hưởng nặng nề nhất." },
+      { "direction": "en_to_vn", "source": "The findings were notably stronger in the second group of participants." },
+      { "direction": "en_to_vn", "source": "Several countries, notably Japan, have ageing populations." },
+      { "direction": "en_to_vn", "source": "The policy had drawbacks, notably its high cost." },
+      { "direction": "en_to_vn", "source": "Attendance improved notably once the changes took effect." },
+      { "direction": "en_to_vn", "source": "Some critics, notably the reviewers, doubted the method." }
+    ],
+    "scenario": [
+      "In an essay, list contributing factors and single out the most important with 'notably'. Formal academic tone.",
+      "Write a sentence for a report highlighting one striking benefit of a reform using 'notably'. Formal register.",
+      "In a literature review, mention key thinkers your work draws on, notably two of them. Academic tone.",
+      "Write a sentence for a science article naming a species notably affected by warming. Formal.",
+      "In a data-analysis summary, note that results were notably consistent across studies. Scientific register.",
+      "Write a sentence for an economics essay noting industries notably hit by recession. Formal tone.",
+      "In an abstract, point out a notable limitation of your dataset. Academic register.",
+      "Write a sentence for a formal report where attendance rose notably after a change. Formal.",
+      "In a discussion section, say the effect was notably stronger in one group. Academic tone.",
+      "Write a sentence for a policy paper naming countries, notably one, facing a trend. Formal register."
+    ]
+  },
+  "in particular": {
+    "cloze": [
+      { "sentence": "The study looks at renewable energy, and solar power ____.", "answer": "in particular" },
+      { "sentence": "Young people, ____, are affected by rising housing costs.", "answer": "in particular" },
+      { "sentence": "The essay examines several poets, focusing on Wordsworth ____.", "answer": "in particular" },
+      { "sentence": "This chapter, ____, deals with the ethics of artificial intelligence.", "answer": "in particular" },
+      { "sentence": "Certain nutrients, iron ____, are often lacking in the diet.", "answer": "in particular" },
+      { "sentence": "The reforms helped many groups, and rural families ____.", "answer": "in particular" },
+      { "sentence": "One finding, ____, deserves closer attention from future researchers.", "answer": "in particular" },
+      { "sentence": "The report criticises the plan, its cost ____.", "answer": "in particular" },
+      { "sentence": "Coastal cities, ____, face growing risks from rising sea levels.", "answer": "in particular" },
+      { "sentence": "The lecture covered several theories, Darwin's ____.", "answer": "in particular" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Nghiên cứu tập trung vào năng lượng tái tạo, cụ thể là năng lượng mặt trời." },
+      { "direction": "vn_to_en", "source": "Người trẻ, cụ thể là sinh viên, chịu ảnh hưởng bởi chi phí nhà ở tăng cao." },
+      { "direction": "vn_to_en", "source": "Bài luận xem xét nhiều nhà thơ, đặc biệt là Wordsworth." },
+      { "direction": "vn_to_en", "source": "Một số nhóm được hưởng lợi, đặc biệt là các gia đình ở nông thôn." },
+      { "direction": "vn_to_en", "source": "Chương này đặc biệt bàn về đạo đức của trí tuệ nhân tạo." },
+      { "direction": "en_to_vn", "source": "The results, in particular, raise important questions about the method." },
+      { "direction": "en_to_vn", "source": "Coastal regions in particular are vulnerable to flooding." },
+      { "direction": "en_to_vn", "source": "The report focuses on air pollution in particular." },
+      { "direction": "en_to_vn", "source": "One passage in particular illustrates the author's main argument." },
+      { "direction": "en_to_vn", "source": "Older workers in particular struggle to retrain for new jobs." }
+    ],
+    "scenario": [
+      "In an essay introduction, narrow a broad topic to one focus using 'in particular'. Formal academic tone.",
+      "Write a sentence for a report identifying which group is most affected, using 'in particular'. Formal register.",
+      "In a literature review, single out one author for special attention with 'in particular'. Academic tone.",
+      "Write a sentence for a nutrition article naming one nutrient in particular that is lacking. Formal.",
+      "In a chapter opening, state what this chapter in particular will address. Academic register.",
+      "Write a sentence for a policy brief highlighting one criticism in particular. Formal tone.",
+      "In a discussion section, point to one finding in particular that needs attention. Academic tone.",
+      "Write a sentence for an environmental essay noting which cities in particular are at risk. Formal.",
+      "In a lecture summary, say which theory in particular was emphasised. Academic register.",
+      "Write a sentence for a formal report noting which age group in particular benefited. Formal tone."
+    ]
+  },
+  "presumably": {
+    "cloze": [
+      { "sentence": "The author omits the data, ____ because the sample was too small to publish.", "answer": "presumably" },
+      { "sentence": "The results were not replicated, ____ due to differences in the method.", "answer": "presumably" },
+      { "sentence": "The manuscript is undated, but was written, ____, in the early 1600s.", "answer": "presumably" },
+      { "sentence": "The committee rejected the plan, ____ on grounds of cost.", "answer": "presumably" },
+      { "sentence": "Attendance fell sharply, ____ because of the change in timetable.", "answer": "presumably" },
+      { "sentence": "The species disappeared from the region, ____ as a result of habitat loss.", "answer": "presumably" },
+      { "sentence": "The letter is unsigned, but was, ____, written by the same author.", "answer": "presumably" },
+      { "sentence": "The experiment was halted, ____ because funding had run out.", "answer": "presumably" },
+      { "sentence": "The figures were revised upward, ____ to reflect the new evidence.", "answer": "presumably" },
+      { "sentence": "The theory remains popular, ____ because no better model exists.", "answer": "presumably" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Tác giả không đưa ra dữ liệu, có lẽ vì mẫu quá nhỏ." },
+      { "direction": "vn_to_en", "source": "Kết quả không được lặp lại, có lẽ do khác biệt về phương pháp." },
+      { "direction": "vn_to_en", "source": "Bản thảo không ghi ngày, nhưng có lẽ được viết vào đầu thế kỷ 17." },
+      { "direction": "vn_to_en", "source": "Ủy ban từ chối kế hoạch, có lẽ vì lý do chi phí." },
+      { "direction": "vn_to_en", "source": "Loài này biến mất khỏi khu vực, có lẽ do mất môi trường sống." },
+      { "direction": "en_to_vn", "source": "The gap in the record is, presumably, due to a lost document." },
+      { "direction": "en_to_vn", "source": "The results differ, presumably because the samples were collected differently." },
+      { "direction": "en_to_vn", "source": "He did not cite the source, presumably by oversight." },
+      { "direction": "en_to_vn", "source": "The project was cancelled, presumably for financial reasons." },
+      { "direction": "en_to_vn", "source": "The population declined, presumably as a result of disease." }
+    ],
+    "scenario": [
+      "In a discussion section, offer a likely but unconfirmed reason for a result using 'presumably'. Formal academic tone.",
+      "Write a sentence for a history essay dating an undated document, hedging with 'presumably'. Formal register.",
+      "In a report, suggest a probable cause for a decline you cannot prove. Use 'presumably'. Formal tone.",
+      "Write a sentence for a review noting an author omitted data, presumably for a reason. Academic tone.",
+      "In a science write-up, explain a failure to replicate, presumably due to method. Scientific register.",
+      "Write a sentence for a formal analysis giving a presumed reason a plan was rejected. Formal.",
+      "In an essay, hedge about a cause of extinction using 'presumably'. Academic register.",
+      "Write a sentence for a case study suggesting a presumed motive without asserting it. Formal tone.",
+      "In a literature review, note a theory survives, presumably for lack of alternatives. Academic tone.",
+      "Write a sentence for a cautious report explaining a change, presumably reflecting new evidence. Formal."
+    ]
+  },
+  "ostensibly": {
+    "cloze": [
+      { "sentence": "The policy was ____ designed to help students, though its real aim was to cut costs.", "answer": "ostensibly" },
+      { "sentence": "The study was ____ neutral, but its funding came from an interested industry.", "answer": "ostensibly" },
+      { "sentence": "The letter was ____ a routine request, yet it carried a hidden warning.", "answer": "ostensibly" },
+      { "sentence": "The reform, ____ about efficiency, actually reduced public oversight.", "answer": "ostensibly" },
+      { "sentence": "The report was ____ objective, although it quietly favoured one conclusion.", "answer": "ostensibly" },
+      { "sentence": "The organisation is ____ charitable, but it operates for profit.", "answer": "ostensibly" },
+      { "sentence": "The meeting was ____ held to gather feedback, not to make decisions.", "answer": "ostensibly" },
+      { "sentence": "The novel is ____ a love story, yet it is really a critique of society.", "answer": "ostensibly" },
+      { "sentence": "The rule was ____ introduced for safety, though many doubted its purpose.", "answer": "ostensibly" },
+      { "sentence": "The survey was ____ anonymous, but respondents could still be identified.", "answer": "ostensibly" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Chính sách bề ngoài là để giúp học sinh, nhưng thực chất để cắt giảm chi phí." },
+      { "direction": "vn_to_en", "source": "Nghiên cứu có vẻ trung lập, nhưng được tài trợ bởi một ngành có lợi ích liên quan." },
+      { "direction": "vn_to_en", "source": "Cuộc họp bề ngoài là để lấy ý kiến, chứ không phải để ra quyết định." },
+      { "direction": "vn_to_en", "source": "Tổ chức này bề ngoài là từ thiện, nhưng thực ra hoạt động vì lợi nhuận." },
+      { "direction": "vn_to_en", "source": "Quy định này bề ngoài là vì an toàn, dù nhiều người nghi ngờ mục đích của nó." },
+      { "direction": "en_to_vn", "source": "The war was ostensibly about trade, but really about power." },
+      { "direction": "en_to_vn", "source": "The article is ostensibly a review, yet it reads like an advertisement." },
+      { "direction": "en_to_vn", "source": "The committee is ostensibly independent of the government." },
+      { "direction": "en_to_vn", "source": "The programme is ostensibly educational, though it is mostly entertainment." },
+      { "direction": "en_to_vn", "source": "The decision was ostensibly based on merit, but connections clearly mattered." }
+    ],
+    "scenario": [
+      "In a critical essay, describe a policy's stated purpose while hinting at a hidden aim. Use 'ostensibly'. Formal tone.",
+      "Write a sentence for a research critique noting a study was ostensibly neutral but funded by industry. Academic register.",
+      "In a literary analysis, say a novel is ostensibly about one thing but really about another. Formal tone.",
+      "Write a sentence for a report questioning a reform that is ostensibly about efficiency. Formal.",
+      "In an essay on media, note a programme is ostensibly educational. Academic register.",
+      "Write a sentence for a history essay: a war ostensibly about trade, really about power. Formal tone.",
+      "In a formal review, note a report is ostensibly objective but favours one side. Academic tone.",
+      "Write a sentence for an argument that a committee is only ostensibly independent. Formal register.",
+      "In an ethics essay, describe a survey ostensibly anonymous but not truly so. Formal tone.",
+      "Write a sentence for a critique noting a decision was ostensibly based on merit. Academic register."
+    ]
+  },
+  "appear to": {
+    "cloze": [
+      { "sentence": "The results ____ support the hypothesis, though further testing is needed.", "answer": "appear to" },
+      { "sentence": "These two variables ____ be closely related in the dataset.", "answer": "appear to" },
+      { "sentence": "The findings ____ contradict earlier studies in the field.", "answer": "appear to" },
+      { "sentence": "Older participants ____ respond differently from younger ones.", "answer": "appear to" },
+      { "sentence": "The reforms ____ have had little effect on overall outcomes.", "answer": "appear to" },
+      { "sentence": "The samples ____ differ in their chemical composition.", "answer": "appear to" },
+      { "sentence": "Rising temperatures ____ be driving the observed changes.", "answer": "appear to" },
+      { "sentence": "The two theories ____ agree on this particular point.", "answer": "appear to" },
+      { "sentence": "The data ____ suggest a link, but the pattern is not yet clear.", "answer": "appear to" },
+      { "sentence": "Many respondents ____ misunderstand the wording of the question.", "answer": "appear to" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Kết quả dường như ủng hộ giả thuyết, dù vẫn cần kiểm chứng thêm." },
+      { "direction": "vn_to_en", "source": "Hai biến số này dường như có liên hệ chặt chẽ với nhau." },
+      { "direction": "vn_to_en", "source": "Các phát hiện dường như mâu thuẫn với những nghiên cứu trước đó." },
+      { "direction": "vn_to_en", "source": "Nhiệt độ tăng dường như là nguyên nhân của những thay đổi này." },
+      { "direction": "vn_to_en", "source": "Nhiều người trả lời dường như hiểu sai câu hỏi." },
+      { "direction": "en_to_vn", "source": "The evidence appears to point in a single direction." },
+      { "direction": "en_to_vn", "source": "The policy appears to have benefited only a small group." },
+      { "direction": "en_to_vn", "source": "These cells appear to grow faster under the new conditions." },
+      { "direction": "en_to_vn", "source": "The author appears to contradict herself in the final chapter." },
+      { "direction": "en_to_vn", "source": "The trend appears to be slowing in recent years." }
+    ],
+    "scenario": [
+      "In a discussion section, cautiously report that results seem to support your hypothesis. Use 'appear to'. Formal tone.",
+      "Write a sentence for a data summary noting two variables appear to be related. Academic register.",
+      "In a review, note that findings appear to contradict earlier work. Formal tone.",
+      "Write a sentence for a science report saying temperatures appear to drive a change. Scientific register.",
+      "In a survey analysis, observe that respondents appear to misread a question. Formal tone.",
+      "Write a cautious sentence for an essay: the policy appears to have had little effect. Academic register.",
+      "In a lab write-up, note samples appear to differ in composition. Formal tone.",
+      "Write a sentence for a literature review: an author appears to contradict herself. Academic tone.",
+      "In a formal report, hedge that a trend appears to be slowing. Formal register.",
+      "Write a sentence for an abstract stating the data appear to suggest a link. Academic tone."
+    ]
+  },
+  "it is likely that": {
+    "cloze": [
+      { "sentence": "____ the observed decline is linked to changes in land use.", "answer": "It is likely that" },
+      { "sentence": "Given the evidence, ____ the two events are connected.", "answer": "it is likely that" },
+      { "sentence": "____ further research will confirm these preliminary findings.", "answer": "It is likely that" },
+      { "sentence": "Based on the trend, ____ prices will continue to rise next year.", "answer": "it is likely that" },
+      { "sentence": "____ the results were affected by the small sample size.", "answer": "It is likely that" },
+      { "sentence": "From the data, ____ the treatment reduces recovery time.", "answer": "it is likely that" },
+      { "sentence": "____ the author intended the passage to be read ironically.", "answer": "It is likely that" },
+      { "sentence": "Given these conditions, ____ the reaction will occur more quickly.", "answer": "it is likely that" },
+      { "sentence": "____ the policy contributed to the fall in unemployment.", "answer": "It is likely that" },
+      { "sentence": "Considering the pattern, ____ similar results would appear elsewhere.", "answer": "it is likely that" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Có khả năng là sự suy giảm này liên quan đến việc thay đổi sử dụng đất." },
+      { "direction": "vn_to_en", "source": "Dựa trên bằng chứng, có khả năng là hai sự kiện này có liên hệ với nhau." },
+      { "direction": "vn_to_en", "source": "Có khả năng là nghiên cứu tiếp theo sẽ khẳng định những phát hiện này." },
+      { "direction": "vn_to_en", "source": "Có khả năng là kết quả bị ảnh hưởng bởi kích thước mẫu nhỏ." },
+      { "direction": "vn_to_en", "source": "Có khả năng là chính sách đã góp phần làm giảm tỷ lệ thất nghiệp." },
+      { "direction": "en_to_vn", "source": "It is likely that the manuscript was copied by more than one scribe." },
+      { "direction": "en_to_vn", "source": "It is likely that these factors reinforce one another." },
+      { "direction": "en_to_vn", "source": "It is likely that the effect will diminish over time." },
+      { "direction": "en_to_vn", "source": "It is likely that the survey underestimated the true figure." },
+      { "direction": "en_to_vn", "source": "It is likely that both explanations are partly correct." }
+    ],
+    "scenario": [
+      "In a discussion section, state a probable explanation for your findings using 'it is likely that'. Formal tone.",
+      "Write a sentence for a report predicting a trend will continue. Use 'it is likely that'. Formal register.",
+      "In an essay, cautiously claim a policy contributed to an outcome. Academic tone.",
+      "Write a sentence for a science paper inferring a probable cause from data. Scientific register.",
+      "In a literature analysis, suggest an author probably intended irony. Formal tone.",
+      "Write a sentence for an abstract predicting future research will confirm results. Academic register.",
+      "In a formal report, note it is likely the sample size affected the results. Formal tone.",
+      "Write a sentence for a history essay inferring a manuscript had several scribes. Academic tone.",
+      "In a conclusion, state it is likely both explanations are partly right. Formal register.",
+      "Write a sentence for a forecast noting it is likely an effect will fade over time. Formal tone."
+    ]
+  },
+  "broadly speaking": {
+    "cloze": [
+      { "sentence": "____, the results confirm what earlier studies had suggested.", "answer": "Broadly speaking" },
+      { "sentence": "The theories differ in detail but agree, ____, on the main point.", "answer": "broadly speaking" },
+      { "sentence": "____, there are two schools of thought on this question.", "answer": "Broadly speaking" },
+      { "sentence": "The reforms were, ____, successful, despite some local problems.", "answer": "broadly speaking" },
+      { "sentence": "____, the data fall into three distinct categories.", "answer": "Broadly speaking" },
+      { "sentence": "The two regions are, ____, similar in their economic structure.", "answer": "broadly speaking" },
+      { "sentence": "____, historians divide the period into three phases.", "answer": "Broadly speaking" },
+      { "sentence": "The findings, ____, support the wider argument of the book.", "answer": "broadly speaking" },
+      { "sentence": "____, the approach can be applied to many related problems.", "answer": "Broadly speaking" },
+      { "sentence": "The results are, ____, consistent with the theoretical model.", "answer": "broadly speaking" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Nói chung, kết quả xác nhận những gì các nghiên cứu trước đã gợi ý." },
+      { "direction": "vn_to_en", "source": "Nói chung, có hai trường phái tư tưởng về vấn đề này." },
+      { "direction": "vn_to_en", "source": "Nhìn chung, cải cách đã thành công dù có vài vấn đề ở địa phương." },
+      { "direction": "vn_to_en", "source": "Đại thể, dữ liệu được chia thành ba nhóm chính." },
+      { "direction": "vn_to_en", "source": "Nói chung, hai vùng này khá giống nhau về cơ cấu kinh tế." },
+      { "direction": "en_to_vn", "source": "Broadly speaking, the method works well for large datasets." },
+      { "direction": "en_to_vn", "source": "Broadly speaking, the two authors reach the same conclusion." },
+      { "direction": "en_to_vn", "source": "Broadly speaking, the theory holds across different cultures." },
+      { "direction": "en_to_vn", "source": "Broadly speaking, spending rose throughout the decade." },
+      { "direction": "en_to_vn", "source": "Broadly speaking, the results match the predictions of the model." }
+    ],
+    "scenario": [
+      "In an essay introduction, give a general overview of a debate using 'broadly speaking'. Formal academic tone.",
+      "Write a sentence for a report summarising results at a general level. Use 'broadly speaking'. Formal register.",
+      "In a literature review, generalise that two authors agree. Academic tone.",
+      "Write a sentence for a formal summary dividing data into categories broadly. Formal tone.",
+      "In a discussion, state that reforms were broadly successful despite issues. Academic register.",
+      "Write a sentence for a history essay grouping a period into phases broadly. Formal tone.",
+      "In a conclusion, generalise that an approach applies to many problems. Academic tone.",
+      "Write a sentence for a comparative essay noting two regions are broadly similar. Formal register.",
+      "In an abstract, state results are broadly consistent with a model. Formal tone.",
+      "Write a sentence for a policy overview generalising a trend. Academic register."
+    ]
+  },
+  "insofar as": {
+    "cloze": [
+      { "sentence": "The theory is useful ____ it helps us predict behaviour.", "answer": "insofar as" },
+      { "sentence": "The evidence is reliable ____ it comes from independent sources.", "answer": "insofar as" },
+      { "sentence": "The policy succeeded ____ it reduced short-term unemployment.", "answer": "insofar as" },
+      { "sentence": "His work matters ____ it changed how the problem is framed.", "answer": "insofar as" },
+      { "sentence": "The model is valid ____ its assumptions hold in the real world.", "answer": "insofar as" },
+      { "sentence": "The two accounts agree ____ they describe the same basic events.", "answer": "insofar as" },
+      { "sentence": "The method is objective ____ it removes the researcher's influence.", "answer": "insofar as" },
+      { "sentence": "The reform was fair ____ it treated all applicants equally.", "answer": "insofar as" },
+      { "sentence": "The comparison is helpful ____ it highlights the key differences.", "answer": "insofar as" },
+      { "sentence": "The source is trustworthy ____ its claims can be verified elsewhere.", "answer": "insofar as" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Lý thuyết này hữu ích trong chừng mực nó giúp dự đoán hành vi." },
+      { "direction": "vn_to_en", "source": "Bằng chứng đáng tin cậy ở mức độ nó đến từ các nguồn độc lập." },
+      { "direction": "vn_to_en", "source": "Chính sách thành công trong chừng mực nó giảm được thất nghiệp ngắn hạn." },
+      { "direction": "vn_to_en", "source": "Mô hình này có giá trị trong chừng mực các giả định của nó đúng với thực tế." },
+      { "direction": "vn_to_en", "source": "Hai bản tường thuật thống nhất ở mức độ chúng mô tả cùng một sự kiện." },
+      { "direction": "en_to_vn", "source": "The argument holds insofar as the initial premises are accepted." },
+      { "direction": "en_to_vn", "source": "The data are relevant insofar as they relate to the research question." },
+      { "direction": "en_to_vn", "source": "The rule applies insofar as no exception has been granted." },
+      { "direction": "en_to_vn", "source": "Her approach is scientific insofar as it can be tested." },
+      { "direction": "en_to_vn", "source": "The comparison is valid insofar as the two cases are truly similar." }
+    ],
+    "scenario": [
+      "In an essay, qualify a claim by limiting its scope with 'insofar as'. Formal academic tone.",
+      "Write a sentence for a critique stating a theory is useful only to a certain extent. Formal register.",
+      "In a methods discussion, note a method is objective insofar as it removes bias. Academic tone.",
+      "Write a sentence for an evaluation saying a policy succeeded to a limited degree. Formal tone.",
+      "In a philosophy essay, accept an argument insofar as its premises hold. Academic register.",
+      "Write a sentence for a history essay noting two accounts agree to an extent. Formal tone.",
+      "In a review, judge a source trustworthy insofar as it can be verified. Academic tone.",
+      "Write a sentence for a report qualifying that a model is valid under its assumptions. Formal register.",
+      "In a comparative essay, say a comparison helps only to a certain extent. Formal tone.",
+      "Write a sentence for an argument limiting the relevance of data with 'insofar as'. Academic register."
+    ]
+  },
+  "seemingly": {
+    "cloze": [
+      { "sentence": "The two ____ unrelated events turned out to share a common cause.", "answer": "seemingly" },
+      { "sentence": "The problem, ____ simple at first, proved remarkably complex.", "answer": "seemingly" },
+      { "sentence": "The data show a ____ random pattern that in fact follows a rule.", "answer": "seemingly" },
+      { "sentence": "The author makes a ____ minor point that is actually central to the argument.", "answer": "seemingly" },
+      { "sentence": "The reform produced ____ contradictory results in different regions.", "answer": "seemingly" },
+      { "sentence": "A ____ small change in temperature had a large effect on the outcome.", "answer": "seemingly" },
+      { "sentence": "The theory explains ____ unconnected observations within a single framework.", "answer": "seemingly" },
+      { "sentence": "The manuscript contains a ____ endless list of names and dates.", "answer": "seemingly" },
+      { "sentence": "The ____ obvious answer is not, on closer inspection, correct.", "answer": "seemingly" },
+      { "sentence": "The two cultures developed ____ identical customs independently.", "answer": "seemingly" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Hai sự kiện có vẻ không liên quan hóa ra lại có chung một nguyên nhân." },
+      { "direction": "vn_to_en", "source": "Vấn đề thoạt nhìn có vẻ đơn giản nhưng thực ra rất phức tạp." },
+      { "direction": "vn_to_en", "source": "Dữ liệu cho thấy một mẫu hình dường như ngẫu nhiên nhưng thực ra tuân theo quy luật." },
+      { "direction": "vn_to_en", "source": "Một thay đổi có vẻ nhỏ về nhiệt độ lại gây tác động lớn đến kết quả." },
+      { "direction": "vn_to_en", "source": "Lý thuyết này giải thích những quan sát tưởng như rời rạc trong một khung duy nhất." },
+      { "direction": "en_to_vn", "source": "The seemingly straightforward task took months to complete." },
+      { "direction": "en_to_vn", "source": "Her argument rests on a seemingly trivial distinction." },
+      { "direction": "en_to_vn", "source": "The results were seemingly at odds with the theory." },
+      { "direction": "en_to_vn", "source": "The two texts are seemingly independent yet strikingly alike." },
+      { "direction": "en_to_vn", "source": "A seemingly firm conclusion collapsed under closer scrutiny." }
+    ],
+    "scenario": [
+      "In an essay, describe two seemingly unrelated things that share a cause. Formal academic tone.",
+      "Write a sentence for a report noting a problem is seemingly simple but complex. Formal register.",
+      "In a data analysis, note a seemingly random pattern that follows a rule. Academic tone.",
+      "Write a sentence for a literary essay: a seemingly minor point is actually central. Formal tone.",
+      "In a science write-up, say a seemingly small change had a large effect. Scientific register.",
+      "Write a sentence for a review noting seemingly contradictory results. Academic tone.",
+      "In a formal argument, point out that a seemingly obvious answer is wrong. Formal tone.",
+      "Write a sentence for a comparative essay on seemingly identical customs. Academic register.",
+      "In an abstract, note a theory unites seemingly unconnected observations. Formal tone.",
+      "Write a sentence for a critique where a seemingly firm conclusion collapses. Academic register."
+    ]
+  },
+  "substantial": {
+    "cloze": [
+      { "sentence": "The study found a ____ increase in productivity after the training.", "answer": "substantial" },
+      { "sentence": "There is now ____ evidence linking diet to long-term health.", "answer": "substantial" },
+      { "sentence": "The reform required a ____ investment of public money.", "answer": "substantial" },
+      { "sentence": "The two groups showed a ____ difference in their test scores.", "answer": "substantial" },
+      { "sentence": "The author makes a ____ contribution to the debate on migration.", "answer": "substantial" },
+      { "sentence": "A ____ proportion of respondents disagreed with the proposal.", "answer": "substantial" },
+      { "sentence": "The project achieved ____ progress within the first year.", "answer": "substantial" },
+      { "sentence": "The findings have ____ implications for future policy.", "answer": "substantial" },
+      { "sentence": "The company reported a ____ rise in annual profits.", "answer": "substantial" },
+      { "sentence": "There remains ____ disagreement among experts on this issue.", "answer": "substantial" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Nghiên cứu ghi nhận một sự gia tăng đáng kể về năng suất." },
+      { "direction": "vn_to_en", "source": "Hiện đã có bằng chứng đáng kể liên hệ chế độ ăn với sức khỏe." },
+      { "direction": "vn_to_en", "source": "Cải cách này đòi hỏi một khoản đầu tư lớn từ ngân sách công." },
+      { "direction": "vn_to_en", "source": "Có sự khác biệt đáng kể giữa hai nhóm về điểm số." },
+      { "direction": "vn_to_en", "source": "Một tỷ lệ đáng kể người được hỏi không đồng ý với đề xuất." },
+      { "direction": "en_to_vn", "source": "The paper offers a substantial contribution to the field." },
+      { "direction": "en_to_vn", "source": "There has been a substantial decline in biodiversity over the century." },
+      { "direction": "en_to_vn", "source": "The results carry substantial weight in the ongoing debate." },
+      { "direction": "en_to_vn", "source": "A substantial part of the budget was spent on research." },
+      { "direction": "en_to_vn", "source": "The change brought substantial benefits to rural communities." }
+    ],
+    "scenario": [
+      "In a results section, report a large, meaningful increase using 'substantial'. Formal academic tone.",
+      "Write a sentence for a literature review claiming there is substantial evidence for a link. Formal register.",
+      "In a funding proposal, note the project needs a substantial investment. Formal tone.",
+      "Write a sentence for a report noting a substantial difference between two groups. Academic tone.",
+      "In an essay, credit an author with a substantial contribution to a debate. Formal register.",
+      "Write a sentence for a survey summary noting a substantial proportion disagreed. Formal tone.",
+      "In an abstract, state that findings have substantial implications for policy. Academic tone.",
+      "Write a sentence for a business report on a substantial rise in profits. Formal register.",
+      "In a discussion, acknowledge substantial disagreement among experts. Formal tone.",
+      "Write a sentence for an environmental essay on a substantial decline in biodiversity. Academic register."
+    ]
+  }
+}

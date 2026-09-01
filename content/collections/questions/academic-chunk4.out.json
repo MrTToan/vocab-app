@@ -1,0 +1,572 @@
+{
+  "by comparison": {
+    "cloze": [
+      { "sentence": "The first method produced many errors; ____, the second was remarkably accurate.", "answer": "by comparison" },
+      { "sentence": "Urban schools received generous funding, while rural ones, ____, were largely neglected.", "answer": "by comparison" },
+      { "sentence": "The 2020 figures were modest; ____, the 2023 results marked a dramatic increase.", "answer": "by comparison" },
+      { "sentence": "The control group showed little change. The treatment group, ____, improved significantly.", "answer": "by comparison" },
+      { "sentence": "His early essays were undisciplined; his later work, ____, is tightly argued.", "answer": "by comparison" },
+      { "sentence": "The northern region enjoys high literacy rates; the southern provinces lag behind ____.", "answer": "by comparison" },
+      { "sentence": "The older model consumed a great deal of energy; the newer one is efficient ____.", "answer": "by comparison" },
+      { "sentence": "Traditional surveys are slow and costly; online questionnaires are cheap ____.", "answer": "by comparison" },
+      { "sentence": "France invested heavily in renewables; its neighbours did little ____.", "answer": "by comparison" },
+      { "sentence": "The theory explains a narrow set of cases; the newer framework, ____, accounts for many more.", "answer": "by comparison" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Phương pháp cũ tốn nhiều thời gian; so với đó, phương pháp mới nhanh hơn hẳn." },
+      { "direction": "vn_to_en", "source": "Nhóm đối chứng hầu như không thay đổi; xét về mặt so sánh, nhóm thử nghiệm tiến bộ rõ rệt." },
+      { "direction": "vn_to_en", "source": "Nền kinh tế năm ngoái tăng trưởng chậm; so với đó, năm nay khởi sắc hơn nhiều." },
+      { "direction": "vn_to_en", "source": "Bài luận đầu tay còn rời rạc; so với đó, các công trình sau này chặt chẽ hơn." },
+      { "direction": "vn_to_en", "source": "Chi phí của khảo sát truyền thống rất cao; xét về mặt so sánh, khảo sát trực tuyến rẻ hơn nhiều." },
+      { "direction": "en_to_vn", "source": "The first prototype was fragile; the redesigned version, by comparison, proved highly durable." },
+      { "direction": "en_to_vn", "source": "Japan's birth rate is low; by comparison, some African nations remain much higher." },
+      { "direction": "en_to_vn", "source": "The lecture was dense and technical; the seminar, by comparison, was refreshingly clear." },
+      { "direction": "en_to_vn", "source": "Last decade's data were incomplete; the current dataset is comprehensive by comparison." },
+      { "direction": "en_to_vn", "source": "Manual coding is error-prone; automated analysis is reliable by comparison." }
+    ],
+    "scenario": [
+      "In a research paper's discussion section, contrast your experimental group's results with the control group. Write one formal sentence using 'by comparison'.",
+      "You are writing an academic essay contrasting two economic systems. Draft a sentence that highlights the difference using 'by comparison'.",
+      "In a formal report to management, contrast last quarter's poor sales with this quarter's strong figures using 'by comparison'.",
+      "Writing a literature review, contrast an older, limited theory with a newer, broader one. Use 'by comparison' formally.",
+      "In an academic presentation script, compare energy use of two devices in a neutral tone with 'by comparison'.",
+      "Drafting a comparative history essay, contrast one country's policy with another's using 'by comparison'.",
+      "In a formal book review, contrast the author's weak first novel with a stronger later one using 'by comparison'.",
+      "In a scientific abstract, contrast the accuracy of two measurement methods using 'by comparison'.",
+      "Writing a formal environmental report, contrast one region's emissions with another's using 'by comparison'.",
+      "In an academic essay on education, contrast well-funded and underfunded schools using 'by comparison'."
+    ]
+  },
+  "implementation": {
+    "cloze": [
+      { "sentence": "The success of any policy depends heavily on its ____ at the local level.", "answer": "implementation" },
+      { "sentence": "The study examines the gap between the design of the reform and its actual ____.", "answer": "implementation" },
+      { "sentence": "Careful planning is useless without effective ____.", "answer": "implementation" },
+      { "sentence": "The report evaluates the ____ of the new curriculum across ten schools.", "answer": "implementation" },
+      { "sentence": "Delays in ____ undermined the credibility of the entire programme.", "answer": "implementation" },
+      { "sentence": "Researchers identified several barriers to the ____ of the health guidelines.", "answer": "implementation" },
+      { "sentence": "The framework outlines both the theory and the practical ____ of the strategy.", "answer": "implementation" },
+      { "sentence": "Full ____ of the software will take several months to complete.", "answer": "implementation" },
+      { "sentence": "The committee monitored the ____ of the recommendations over two years.", "answer": "implementation" },
+      { "sentence": "Poor ____ can cause even a well-designed policy to fail.", "answer": "implementation" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Thành công của chính sách phụ thuộc rất nhiều vào việc triển khai nó." },
+      { "direction": "vn_to_en", "source": "Nghiên cứu này xem xét khoảng cách giữa thiết kế và sự triển khai thực tế của cải cách." },
+      { "direction": "vn_to_en", "source": "Việc triển khai chương trình mới gặp nhiều rào cản ở cấp địa phương." },
+      { "direction": "vn_to_en", "source": "Kế hoạch tốt sẽ vô nghĩa nếu thiếu sự triển khai hiệu quả." },
+      { "direction": "vn_to_en", "source": "Ủy ban đã theo dõi sự triển khai của các khuyến nghị trong hai năm." },
+      { "direction": "en_to_vn", "source": "The implementation of the reform was delayed by a lack of funding." },
+      { "direction": "en_to_vn", "source": "Researchers documented the challenges of implementation in rural clinics." },
+      { "direction": "en_to_vn", "source": "Successful implementation requires cooperation between multiple agencies." },
+      { "direction": "en_to_vn", "source": "The paper distinguishes between policy formulation and policy implementation." },
+      { "direction": "en_to_vn", "source": "Full implementation of the system is expected by the end of the year." }
+    ],
+    "scenario": [
+      "In a policy analysis paper, describe the difficulties agencies faced when putting a reform into practice. Use 'implementation' formally.",
+      "Writing a project report, explain that planning succeeded but the rollout struggled. Use 'implementation'.",
+      "In an academic abstract, state that your study evaluates how a new curriculum was carried out in schools using 'implementation'.",
+      "In a formal proposal, argue that funding is essential for the actual carrying-out of the plan using 'implementation'.",
+      "Drafting a public-health thesis, list barriers to putting guidelines into practice using 'implementation'.",
+      "In a business review memo, note that the software rollout will take months using 'implementation'.",
+      "Writing a literature review, distinguish designing a policy from carrying it out using 'implementation'.",
+      "In a formal evaluation, describe monitoring how recommendations were put into effect using 'implementation'.",
+      "In a grant application, describe your plan for carrying out the intervention using 'implementation'.",
+      "In a formal conclusion, warn that weak execution can ruin a good design using 'implementation'."
+    ]
+  },
+  "acquisition": {
+    "cloze": [
+      { "sentence": "Second-language ____ is influenced by both age and exposure.", "answer": "acquisition" },
+      { "sentence": "The study focuses on children's ____ of grammatical rules.", "answer": "acquisition" },
+      { "sentence": "The company's ____ of the smaller firm expanded its market share.", "answer": "acquisition" },
+      { "sentence": "Knowledge ____ is a gradual process that requires repeated practice.", "answer": "acquisition" },
+      { "sentence": "Researchers measured the rate of vocabulary ____ among the participants.", "answer": "acquisition" },
+      { "sentence": "The ____ of new skills often depends on motivation.", "answer": "acquisition" },
+      { "sentence": "Data ____ was carried out over a six-month period.", "answer": "acquisition" },
+      { "sentence": "The museum announced the ____ of several rare manuscripts.", "answer": "acquisition" },
+      { "sentence": "Early ____ of literacy skills predicts later academic success.", "answer": "acquisition" },
+      { "sentence": "The theory explains how the brain supports language ____.", "answer": "acquisition" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Sự tiếp thu ngôn ngữ thứ hai chịu ảnh hưởng của tuổi tác và mức độ tiếp xúc." },
+      { "direction": "vn_to_en", "source": "Nghiên cứu tập trung vào sự tiếp thu quy tắc ngữ pháp của trẻ em." },
+      { "direction": "vn_to_en", "source": "Việc thu nhận công ty nhỏ hơn đã mở rộng thị phần của tập đoàn." },
+      { "direction": "vn_to_en", "source": "Sự tiếp thu kiến thức là một quá trình dần dần đòi hỏi luyện tập lặp lại." },
+      { "direction": "vn_to_en", "source": "Sự tiếp thu kỹ năng đọc viết sớm dự báo thành công học tập về sau." },
+      { "direction": "en_to_vn", "source": "The acquisition of new vocabulary improves reading comprehension." },
+      { "direction": "en_to_vn", "source": "Data acquisition was conducted using standardized instruments." },
+      { "direction": "en_to_vn", "source": "The firm's acquisition of its rival raised concerns about competition." },
+      { "direction": "en_to_vn", "source": "Language acquisition begins long before a child speaks its first word." },
+      { "direction": "en_to_vn", "source": "The library celebrated its acquisition of a rare medieval collection." }
+    ],
+    "scenario": [
+      "In a linguistics essay, describe how children learn grammar rules over time using 'acquisition' in a formal register.",
+      "Writing a business case study, describe a company buying a smaller competitor using 'acquisition'.",
+      "In a research methods section, explain how you gathered your data using 'acquisition'.",
+      "In an educational thesis, argue that early reading skills predict success using 'acquisition'.",
+      "In a formal abstract, state that your study measures vocabulary learning rates using 'acquisition'.",
+      "Drafting a cognitive-science paper, describe how the brain supports language learning using 'acquisition'.",
+      "In a museum's formal announcement, report obtaining rare manuscripts using 'acquisition'.",
+      "In a training report, describe how motivation affects skill learning using 'acquisition'.",
+      "In an academic essay, contrast fast and slow knowledge learning using 'acquisition'.",
+      "In a formal proposal, describe a plan to purchase new equipment using 'acquisition'."
+    ]
+  },
+  "assessment": {
+    "cloze": [
+      { "sentence": "A thorough ____ of the risks was carried out before the project began.", "answer": "assessment" },
+      { "sentence": "The teacher's ____ of the students relied on both essays and exams.", "answer": "assessment" },
+      { "sentence": "The report offers a balanced ____ of the policy's strengths and weaknesses.", "answer": "assessment" },
+      { "sentence": "An accurate ____ of the situation is essential before making decisions.", "answer": "assessment" },
+      { "sentence": "The clinical ____ revealed no significant abnormalities.", "answer": "assessment" },
+      { "sentence": "Continuous ____ is often fairer than a single final examination.", "answer": "assessment" },
+      { "sentence": "The committee's ____ of the proposal was largely positive.", "answer": "assessment" },
+      { "sentence": "Environmental ____ must be completed before construction can proceed.", "answer": "assessment" },
+      { "sentence": "The study provides a critical ____ of existing research methods.", "answer": "assessment" },
+      { "sentence": "Her initial ____ of the data proved to be largely correct.", "answer": "assessment" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Một đánh giá kỹ lưỡng về rủi ro đã được thực hiện trước khi dự án bắt đầu." },
+      { "direction": "vn_to_en", "source": "Sự đánh giá học sinh của giáo viên dựa trên cả bài luận lẫn bài thi." },
+      { "direction": "vn_to_en", "source": "Báo cáo đưa ra một sự đánh giá cân bằng về điểm mạnh và điểm yếu của chính sách." },
+      { "direction": "vn_to_en", "source": "Đánh giá liên tục thường công bằng hơn một kỳ thi cuối kỳ duy nhất." },
+      { "direction": "vn_to_en", "source": "Sự thẩm định môi trường phải được hoàn thành trước khi thi công." },
+      { "direction": "en_to_vn", "source": "The assessment of the candidate's skills was conducted by a panel." },
+      { "direction": "en_to_vn", "source": "The paper offers a critical assessment of previous studies." },
+      { "direction": "en_to_vn", "source": "An honest assessment of the risks is necessary before investing." },
+      { "direction": "en_to_vn", "source": "The clinical assessment showed that the patient was recovering well." },
+      { "direction": "en_to_vn", "source": "Her assessment of the market proved remarkably accurate." }
+    ],
+    "scenario": [
+      "In a project-management report, describe evaluating risks before starting work using 'assessment' formally.",
+      "Writing an education paper, argue that ongoing evaluation is fairer than one exam using 'assessment'.",
+      "In a formal literature review, critically evaluate prior research methods using 'assessment'.",
+      "In a medical case report, describe a patient examination using 'assessment' in a clinical register.",
+      "In an environmental impact statement, note that evaluation must precede construction using 'assessment'.",
+      "In a formal committee minute, report the panel's evaluation of a proposal using 'assessment'.",
+      "In a business memo, describe an honest evaluation of investment risks using 'assessment'.",
+      "In an academic abstract, state that your study evaluates policy strengths and weaknesses using 'assessment'.",
+      "In a formal recommendation, describe evaluating a candidate's abilities using 'assessment'.",
+      "In a research discussion, note that your early evaluation of the data was correct using 'assessment'."
+    ]
+  },
+  "distinction": {
+    "cloze": [
+      { "sentence": "The author draws a clear ____ between correlation and causation.", "answer": "distinction" },
+      { "sentence": "It is important to make a ____ between opinion and evidence.", "answer": "distinction" },
+      { "sentence": "The ____ between the two theories is subtle but significant.", "answer": "distinction" },
+      { "sentence": "There is an important ____ between weather and climate.", "answer": "distinction" },
+      { "sentence": "The essay blurs the ____ between fact and interpretation.", "answer": "distinction" },
+      { "sentence": "Scholars often overlook the ____ between these two concepts.", "answer": "distinction" },
+      { "sentence": "The report maintains a careful ____ between short-term and long-term effects.", "answer": "distinction" },
+      { "sentence": "This ____ lies at the heart of the whole debate.", "answer": "distinction" },
+      { "sentence": "She graduated with ____ from a leading university.", "answer": "distinction" },
+      { "sentence": "The theory rests on a ____ between form and function.", "answer": "distinction" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Tác giả vạch ra một sự phân biệt rõ ràng giữa tương quan và nhân quả." },
+      { "direction": "vn_to_en", "source": "Điều quan trọng là phải phân biệt giữa ý kiến và bằng chứng." },
+      { "direction": "vn_to_en", "source": "Sự khác biệt giữa hai lý thuyết tuy tinh tế nhưng quan trọng." },
+      { "direction": "vn_to_en", "source": "Có một sự phân biệt quan trọng giữa thời tiết và khí hậu." },
+      { "direction": "vn_to_en", "source": "Bài luận làm mờ đi ranh giới phân biệt giữa sự thật và cách diễn giải." },
+      { "direction": "en_to_vn", "source": "The distinction between the two terms is often misunderstood." },
+      { "direction": "en_to_vn", "source": "Scholars must make a distinction between theory and practice." },
+      { "direction": "en_to_vn", "source": "This distinction is central to the argument of the paper." },
+      { "direction": "en_to_vn", "source": "He earned his degree with distinction." },
+      { "direction": "en_to_vn", "source": "The report draws a distinction between causes and symptoms." }
+    ],
+    "scenario": [
+      "In an academic essay, explain the difference between correlation and causation using 'distinction' formally.",
+      "Writing a critical-thinking paper, urge readers to separate opinion from evidence using 'distinction'.",
+      "In a science essay, clarify the difference between weather and climate using 'distinction'.",
+      "In a formal literature review, note that scholars overlook a key conceptual difference using 'distinction'.",
+      "In a policy report, separate short-term from long-term effects using 'distinction'.",
+      "In a philosophy essay, base an argument on the difference between form and function using 'distinction'.",
+      "In a formal reference letter, mention that a student graduated with honours using 'distinction'.",
+      "In an academic abstract, state that a subtle difference between theories matters using 'distinction'.",
+      "In a debate essay, identify the difference at the heart of the controversy using 'distinction'.",
+      "In a research paper, separate facts from interpretations using 'distinction'."
+    ]
+  },
+  "emergence": {
+    "cloze": [
+      { "sentence": "The paper traces the ____ of social media as a political force.", "answer": "emergence" },
+      { "sentence": "The ____ of new technologies has transformed the workplace.", "answer": "emergence" },
+      { "sentence": "Scholars debate the causes behind the ____ of nationalism.", "answer": "emergence" },
+      { "sentence": "The study documents the gradual ____ of a middle class.", "answer": "emergence" },
+      { "sentence": "The ____ of antibiotic-resistant bacteria is a growing concern.", "answer": "emergence" },
+      { "sentence": "We are witnessing the ____ of a new economic order.", "answer": "emergence" },
+      { "sentence": "The ____ of the internet reshaped global communication.", "answer": "emergence" },
+      { "sentence": "The report highlights the ____ of renewable energy in developing nations.", "answer": "emergence" },
+      { "sentence": "The ____ of these symptoms marks the onset of the disease.", "answer": "emergence" },
+      { "sentence": "The ____ of complex behaviour from simple rules fascinates researchers.", "answer": "emergence" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Bài báo lần theo sự xuất hiện của mạng xã hội như một thế lực chính trị." },
+      { "direction": "vn_to_en", "source": "Sự xuất hiện của các công nghệ mới đã thay đổi nơi làm việc." },
+      { "direction": "vn_to_en", "source": "Các học giả tranh luận về nguyên nhân đằng sau sự nổi lên của chủ nghĩa dân tộc." },
+      { "direction": "vn_to_en", "source": "Sự nổi lên của tầng lớp trung lưu diễn ra dần dần qua nhiều thập kỷ." },
+      { "direction": "vn_to_en", "source": "Sự xuất hiện của vi khuẩn kháng kháng sinh là một mối lo ngày càng lớn." },
+      { "direction": "en_to_vn", "source": "The emergence of the internet transformed how people communicate." },
+      { "direction": "en_to_vn", "source": "The study examines the emergence of new political movements." },
+      { "direction": "en_to_vn", "source": "The emergence of renewable energy has accelerated in recent years." },
+      { "direction": "en_to_vn", "source": "Researchers are studying the emergence of drug-resistant strains." },
+      { "direction": "en_to_vn", "source": "The emergence of complex patterns from simple rules puzzles scientists." }
+    ],
+    "scenario": [
+      "In a history essay, trace how social media rose as a political force using 'emergence' formally.",
+      "Writing a sociology paper, describe the gradual rise of a middle class using 'emergence'.",
+      "In a public-health report, warn about the rise of antibiotic-resistant bacteria using 'emergence'.",
+      "In an economics essay, describe a new economic order taking shape using 'emergence'.",
+      "In a technology paper, explain how the internet arose and reshaped communication using 'emergence'.",
+      "In a formal abstract, state that your study documents the rise of a phenomenon using 'emergence'.",
+      "In an environmental report, describe renewable energy rising in developing nations using 'emergence'.",
+      "In a medical paper, describe symptoms first appearing at disease onset using 'emergence'.",
+      "In a complexity-science essay, describe complex behaviour arising from simple rules using 'emergence'.",
+      "In a political-science essay, discuss why nationalism arose using 'emergence'."
+    ]
+  },
+  "correlation": {
+    "cloze": [
+      { "sentence": "The study found a strong ____ between income and life expectancy.", "answer": "correlation" },
+      { "sentence": "A ____ does not necessarily imply a causal relationship.", "answer": "correlation" },
+      { "sentence": "Researchers observed a positive ____ between exercise and mood.", "answer": "correlation" },
+      { "sentence": "There is a weak ____ between the two variables.", "answer": "correlation" },
+      { "sentence": "The data revealed a negative ____ between stress and productivity.", "answer": "correlation" },
+      { "sentence": "The ____ between the two factors was statistically significant.", "answer": "correlation" },
+      { "sentence": "No meaningful ____ was found in the sample.", "answer": "correlation" },
+      { "sentence": "The analysis highlights a clear ____ between sleep and academic performance.", "answer": "correlation" },
+      { "sentence": "We must be careful not to mistake ____ for causation.", "answer": "correlation" },
+      { "sentence": "The graph illustrates the ____ between temperature and demand.", "answer": "correlation" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Nghiên cứu tìm thấy mối tương quan mạnh giữa thu nhập và tuổi thọ." },
+      { "direction": "vn_to_en", "source": "Một mối tương quan không nhất thiết ngụ ý quan hệ nhân quả." },
+      { "direction": "vn_to_en", "source": "Các nhà nghiên cứu quan sát thấy tương quan dương giữa tập thể dục và tâm trạng." },
+      { "direction": "vn_to_en", "source": "Dữ liệu cho thấy tương quan âm giữa căng thẳng và năng suất." },
+      { "direction": "vn_to_en", "source": "Chúng ta phải cẩn thận không nhầm lẫn tương quan với nhân quả." },
+      { "direction": "en_to_vn", "source": "The correlation between the two variables was statistically significant." },
+      { "direction": "en_to_vn", "source": "Researchers found no correlation between the two measures." },
+      { "direction": "en_to_vn", "source": "There is a clear correlation between sleep and concentration." },
+      { "direction": "en_to_vn", "source": "A high correlation does not prove that one factor causes the other." },
+      { "direction": "en_to_vn", "source": "The chart shows a positive correlation between spending and satisfaction." }
+    ],
+    "scenario": [
+      "In a statistics report, describe a strong link between income and life expectancy using 'correlation' formally.",
+      "Writing a research discussion, warn readers not to confuse association with cause using 'correlation'.",
+      "In a psychology paper, report a positive link between exercise and mood using 'correlation'.",
+      "In a formal results section, state that a link was statistically significant using 'correlation'.",
+      "In an academic abstract, report that no link was found in the sample using 'correlation'.",
+      "In an education study, describe the link between sleep and academic performance using 'correlation'.",
+      "In a data-analysis report, describe a negative link between stress and productivity using 'correlation'.",
+      "In a methods critique, caution against treating association as causation using 'correlation'.",
+      "In a formal figure caption, describe the relationship a graph shows using 'correlation'.",
+      "In an economics paper, describe the link between temperature and energy demand using 'correlation'."
+    ]
+  },
+  "implication": {
+    "cloze": [
+      { "sentence": "The findings have important ____ for public health policy.", "answer": "implications" },
+      { "sentence": "The author explores the ethical ____ of the new technology.", "answer": "implications" },
+      { "sentence": "One ____ of this theory is that behaviour can be predicted.", "answer": "implication" },
+      { "sentence": "The results carry serious ____ for future research.", "answer": "implications" },
+      { "sentence": "The report discusses the practical ____ of the reform.", "answer": "implications" },
+      { "sentence": "There is a clear ____ that costs will rise.", "answer": "implication" },
+      { "sentence": "The study's ____ extend well beyond the field of economics.", "answer": "implications" },
+      { "sentence": "Policymakers must consider the long-term ____ of their decisions.", "answer": "implications" },
+      { "sentence": "The main ____ of these data is that current methods are inadequate.", "answer": "implication" },
+      { "sentence": "The discovery has profound ____ for our understanding of the brain.", "answer": "implications" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Các phát hiện có những hàm ý quan trọng đối với chính sách y tế công cộng." },
+      { "direction": "vn_to_en", "source": "Tác giả khám phá các hàm ý đạo đức của công nghệ mới." },
+      { "direction": "vn_to_en", "source": "Một hệ quả của lý thuyết này là hành vi có thể được dự đoán." },
+      { "direction": "vn_to_en", "source": "Các nhà hoạch định chính sách phải cân nhắc các hệ quả dài hạn của quyết định." },
+      { "direction": "vn_to_en", "source": "Kết quả mang lại những hàm ý nghiêm túc cho nghiên cứu trong tương lai." },
+      { "direction": "en_to_vn", "source": "The findings have significant implications for education." },
+      { "direction": "en_to_vn", "source": "The author considers the ethical implications of the experiment." },
+      { "direction": "en_to_vn", "source": "One implication of the result is that the model must be revised." },
+      { "direction": "en_to_vn", "source": "The report outlines the practical implications of the policy." },
+      { "direction": "en_to_vn", "source": "The discovery has profound implications for medicine." }
+    ],
+    "scenario": [
+      "In a research conclusion, explain what your findings mean for public-health policy using 'implications' formally.",
+      "Writing an ethics essay, discuss the moral consequences of a new technology using 'implications'.",
+      "In an academic abstract, state a single consequence that follows from your theory using 'implication'.",
+      "In a policy brief, urge decision-makers to weigh long-term consequences using 'implications'.",
+      "In a discussion section, note that your results matter for future research using 'implications'.",
+      "In a formal report, outline the practical consequences of a reform using 'implications'.",
+      "In an economics paper, argue that the study's consequences reach beyond the field using 'implications'.",
+      "In a scientific paper, state that a discovery has deep consequences for understanding the brain using 'implications'.",
+      "In a critique, argue that the data show current methods are inadequate using 'implication'.",
+      "In a business memo, note that a decision carries a clear cost consequence using 'implication'."
+    ]
+  },
+  "tendency": {
+    "cloze": [
+      { "sentence": "There is a growing ____ among students to rely on digital sources.", "answer": "tendency" },
+      { "sentence": "The data reveal a clear ____ toward urbanisation.", "answer": "tendency" },
+      { "sentence": "Humans have a natural ____ to seek patterns.", "answer": "tendency" },
+      { "sentence": "The market shows a ____ to overreact to bad news.", "answer": "tendency" },
+      { "sentence": "Researchers noted a ____ for prices to rise in winter.", "answer": "tendency" },
+      { "sentence": "There is an increasing ____ to publish results online.", "answer": "tendency" },
+      { "sentence": "The author criticises the ____ to oversimplify complex issues.", "answer": "tendency" },
+      { "sentence": "The species displays a ____ to migrate southward in autumn.", "answer": "tendency" },
+      { "sentence": "The study identified a ____ toward greater inequality.", "answer": "tendency" },
+      { "sentence": "There is a worrying ____ among firms to cut safety costs.", "answer": "tendency" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Có một xu hướng ngày càng tăng trong sinh viên là dựa vào các nguồn kỹ thuật số." },
+      { "direction": "vn_to_en", "source": "Dữ liệu cho thấy một xu hướng rõ ràng hướng tới đô thị hóa." },
+      { "direction": "vn_to_en", "source": "Con người có xu hướng tự nhiên là tìm kiếm các quy luật." },
+      { "direction": "vn_to_en", "source": "Tác giả phê phán xu hướng đơn giản hóa quá mức các vấn đề phức tạp." },
+      { "direction": "vn_to_en", "source": "Nghiên cứu xác định một xu hướng hướng tới bất bình đẳng lớn hơn." },
+      { "direction": "en_to_vn", "source": "There is a tendency for costs to increase over time." },
+      { "direction": "en_to_vn", "source": "The market has a tendency to overreact to political news." },
+      { "direction": "en_to_vn", "source": "The author warns against the tendency to generalize too quickly." },
+      { "direction": "en_to_vn", "source": "The data show a tendency toward earlier retirement." },
+      { "direction": "en_to_vn", "source": "Humans have a strong tendency to remember negative events." }
+    ],
+    "scenario": [
+      "In a sociology essay, describe a growing pattern of students relying on digital sources using 'tendency' formally.",
+      "Writing a demographics report, describe a clear movement toward urbanisation using 'tendency'.",
+      "In a psychology paper, describe the human inclination to seek patterns using 'tendency'.",
+      "In an economics analysis, describe how markets over-react to bad news using 'tendency'.",
+      "In a critical essay, criticise the inclination to oversimplify issues using 'tendency'.",
+      "In a biology paper, describe a species' inclination to migrate south using 'tendency'.",
+      "In a formal abstract, state that your study found a movement toward inequality using 'tendency'.",
+      "In a safety report, note a worrying inclination among firms to cut safety costs using 'tendency'.",
+      "In a research discussion, note a pattern for prices to rise in winter using 'tendency'.",
+      "In a formal essay, describe an increasing pattern of publishing online using 'tendency'."
+    ]
+  },
+  "prevalence": {
+    "cloze": [
+      { "sentence": "The study examined the ____ of diabetes among older adults.", "answer": "prevalence" },
+      { "sentence": "The high ____ of smartphones has changed daily life.", "answer": "prevalence" },
+      { "sentence": "Researchers measured the ____ of the disease in rural areas.", "answer": "prevalence" },
+      { "sentence": "The ____ of obesity has risen sharply in recent decades.", "answer": "prevalence" },
+      { "sentence": "The survey reported a growing ____ of anxiety among teenagers.", "answer": "prevalence" },
+      { "sentence": "The ____ of English as a global language is well documented.", "answer": "prevalence" },
+      { "sentence": "The report highlights the ____ of misinformation online.", "answer": "prevalence" },
+      { "sentence": "The ____ of the condition varies widely between countries.", "answer": "prevalence" },
+      { "sentence": "Data show a declining ____ of tuberculosis in the region.", "answer": "prevalence" },
+      { "sentence": "The ____ of part-time work has increased among young people.", "answer": "prevalence" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Nghiên cứu xem xét tỷ lệ hiện mắc bệnh tiểu đường ở người lớn tuổi." },
+      { "direction": "vn_to_en", "source": "Mức độ phổ biến của điện thoại thông minh đã thay đổi cuộc sống hằng ngày." },
+      { "direction": "vn_to_en", "source": "Tỷ lệ béo phì đã tăng mạnh trong những thập kỷ gần đây." },
+      { "direction": "vn_to_en", "source": "Khảo sát báo cáo mức độ phổ biến ngày càng tăng của chứng lo âu ở thanh thiếu niên." },
+      { "direction": "vn_to_en", "source": "Báo cáo nhấn mạnh mức độ phổ biến của thông tin sai lệch trên mạng." },
+      { "direction": "en_to_vn", "source": "The prevalence of the disease is higher in urban areas." },
+      { "direction": "en_to_vn", "source": "The study measured the prevalence of depression among students." },
+      { "direction": "en_to_vn", "source": "The prevalence of English online is difficult to overstate." },
+      { "direction": "en_to_vn", "source": "Data indicate a declining prevalence of the infection." },
+      { "direction": "en_to_vn", "source": "The prevalence of part-time employment has grown steadily." }
+    ],
+    "scenario": [
+      "In an epidemiology paper, report how common diabetes is among older adults using 'prevalence' formally.",
+      "Writing a public-health abstract, describe rising rates of obesity using 'prevalence'.",
+      "In a survey report, describe growing anxiety among teenagers using 'prevalence'.",
+      "In a media-studies essay, describe how widespread online misinformation is using 'prevalence'.",
+      "In a linguistics paper, describe how common English is as a global language using 'prevalence'.",
+      "In a formal results section, note that disease rates vary between countries using 'prevalence'.",
+      "In a health report, describe a decline in tuberculosis rates using 'prevalence'.",
+      "In a labour-economics paper, describe rising part-time work among young people using 'prevalence'.",
+      "In a technology essay, describe how widespread smartphones have become using 'prevalence'.",
+      "In a research methods section, describe measuring how common a disease is in rural areas using 'prevalence'."
+    ]
+  },
+  "magnitude": {
+    "cloze": [
+      { "sentence": "The full ____ of the problem only became clear years later.", "answer": "magnitude" },
+      { "sentence": "The earthquake's ____ was recorded at 7.2.", "answer": "magnitude" },
+      { "sentence": "Researchers were surprised by the ____ of the effect.", "answer": "magnitude" },
+      { "sentence": "The ____ of the change exceeded all predictions.", "answer": "magnitude" },
+      { "sentence": "Policymakers underestimated the ____ of the crisis.", "answer": "magnitude" },
+      { "sentence": "The study measured both the direction and the ____ of the trend.", "answer": "magnitude" },
+      { "sentence": "The sheer ____ of the dataset posed analytical challenges.", "answer": "magnitude" },
+      { "sentence": "The economic impact was of a ____ few had anticipated.", "answer": "magnitude" },
+      { "sentence": "The ____ of the difference between groups was small but consistent.", "answer": "magnitude" },
+      { "sentence": "The report stresses the ____ of the environmental damage.", "answer": "magnitude" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Quy mô đầy đủ của vấn đề chỉ trở nên rõ ràng nhiều năm sau đó." },
+      { "direction": "vn_to_en", "source": "Các nhà nghiên cứu ngạc nhiên trước độ lớn của hiệu ứng." },
+      { "direction": "vn_to_en", "source": "Độ lớn của sự thay đổi vượt quá mọi dự đoán." },
+      { "direction": "vn_to_en", "source": "Các nhà hoạch định chính sách đã đánh giá thấp quy mô của cuộc khủng hoảng." },
+      { "direction": "vn_to_en", "source": "Báo cáo nhấn mạnh quy mô của thiệt hại môi trường." },
+      { "direction": "en_to_vn", "source": "The magnitude of the effect was larger than expected." },
+      { "direction": "en_to_vn", "source": "The study reports both the direction and magnitude of the change." },
+      { "direction": "en_to_vn", "source": "Few understood the magnitude of the financial crisis at the time." },
+      { "direction": "en_to_vn", "source": "The magnitude of the difference between the groups was modest." },
+      { "direction": "en_to_vn", "source": "The sheer magnitude of the data required powerful computers." }
+    ],
+    "scenario": [
+      "In a research discussion, note that the size of the effect surprised the team using 'magnitude' formally.",
+      "Writing a seismology report, state an earthquake's size using 'magnitude'.",
+      "In an economics paper, argue that officials underestimated the crisis's scale using 'magnitude'.",
+      "In a formal results section, report both direction and size of a trend using 'magnitude'.",
+      "In a data-science paper, note that the dataset's size posed challenges using 'magnitude'.",
+      "In an environmental report, stress the scale of the damage using 'magnitude'.",
+      "In an abstract, state that the difference between groups was small but consistent using 'magnitude'.",
+      "In a historical essay, note that a problem's full scale emerged only later using 'magnitude'.",
+      "In a finance memo, describe an impact of an unexpected scale using 'magnitude'.",
+      "In a formal review, note that a change exceeded predictions in scale using 'magnitude'."
+    ]
+  },
+  "discrepancy": {
+    "cloze": [
+      { "sentence": "There was a notable ____ between the two sets of results.", "answer": "discrepancy" },
+      { "sentence": "The auditors found a ____ in the financial records.", "answer": "discrepancy" },
+      { "sentence": "The ____ between theory and observation puzzled the researchers.", "answer": "discrepancy" },
+      { "sentence": "A small ____ in the measurements led to a large error.", "answer": "discrepancy" },
+      { "sentence": "The report notes a ____ between official figures and reality.", "answer": "discrepancy" },
+      { "sentence": "The study aims to explain the ____ between the models.", "answer": "discrepancy" },
+      { "sentence": "There is a growing ____ between rich and poor regions.", "answer": "discrepancy" },
+      { "sentence": "The ____ in the data could not be accounted for.", "answer": "discrepancy" },
+      { "sentence": "Reviewers pointed out a ____ between the abstract and the findings.", "answer": "discrepancy" },
+      { "sentence": "Any ____ between the copies must be reported immediately.", "answer": "discrepancy" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Có một sự chênh lệch đáng chú ý giữa hai bộ kết quả." },
+      { "direction": "vn_to_en", "source": "Các kiểm toán viên phát hiện một sự khác biệt trong hồ sơ tài chính." },
+      { "direction": "vn_to_en", "source": "Sự chênh lệch giữa lý thuyết và quan sát khiến các nhà nghiên cứu bối rối." },
+      { "direction": "vn_to_en", "source": "Báo cáo lưu ý một sự chênh lệch giữa số liệu chính thức và thực tế." },
+      { "direction": "vn_to_en", "source": "Có một sự chênh lệch ngày càng lớn giữa các vùng giàu và nghèo." },
+      { "direction": "en_to_vn", "source": "The discrepancy between the two measurements needs explanation." },
+      { "direction": "en_to_vn", "source": "Auditors identified a discrepancy in the accounts." },
+      { "direction": "en_to_vn", "source": "The study seeks to explain the discrepancy between the models." },
+      { "direction": "en_to_vn", "source": "There is a clear discrepancy between what was promised and what was delivered." },
+      { "direction": "en_to_vn", "source": "Any discrepancy in the data should be reported to the supervisor." }
+    ],
+    "scenario": [
+      "In a research discussion, note the mismatch between two sets of results using 'discrepancy' formally.",
+      "Writing an audit report, describe an inconsistency in financial records using 'discrepancy'.",
+      "In a physics paper, describe the mismatch between theory and observation using 'discrepancy'.",
+      "In a formal report, note a gap between official figures and reality using 'discrepancy'.",
+      "In an economics essay, describe a widening gap between rich and poor regions using 'discrepancy'.",
+      "In a peer review, point out a mismatch between the abstract and findings using 'discrepancy'.",
+      "In a methods section, note that an inconsistency in the data was unexplained using 'discrepancy'.",
+      "In a formal procedure, instruct staff to report any mismatch between copies using 'discrepancy'.",
+      "In an abstract, state that your study explains a mismatch between models using 'discrepancy'.",
+      "In a quality-control memo, describe a small measurement mismatch causing a large error using 'discrepancy'."
+    ]
+  },
+  "framework": {
+    "cloze": [
+      { "sentence": "The paper proposes a theoretical ____ for analysing migration.", "answer": "framework" },
+      { "sentence": "The study is grounded in a well-established ____.", "answer": "framework" },
+      { "sentence": "Existing ____s fail to explain the observed behaviour.", "answer": "framework" },
+      { "sentence": "The author develops a new conceptual ____ for the field.", "answer": "framework" },
+      { "sentence": "The regulatory ____ governs how the data may be used.", "answer": "framework" },
+      { "sentence": "This ____ integrates ideas from several disciplines.", "answer": "framework" },
+      { "sentence": "The report calls for a clearer legal ____ for the industry.", "answer": "framework" },
+      { "sentence": "The findings are interpreted within a Marxist ____.", "answer": "framework" },
+      { "sentence": "A robust analytical ____ is essential for this kind of research.", "answer": "framework" },
+      { "sentence": "The new ____ provides a basis for comparing the two systems.", "answer": "framework" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Bài báo đề xuất một khung lý thuyết để phân tích di cư." },
+      { "direction": "vn_to_en", "source": "Nghiên cứu được đặt nền tảng trên một khuôn khổ được thiết lập vững chắc." },
+      { "direction": "vn_to_en", "source": "Các khung lý thuyết hiện có không giải thích được hành vi quan sát được." },
+      { "direction": "vn_to_en", "source": "Tác giả phát triển một khung khái niệm mới cho lĩnh vực này." },
+      { "direction": "vn_to_en", "source": "Báo cáo kêu gọi một khuôn khổ pháp lý rõ ràng hơn cho ngành." },
+      { "direction": "en_to_vn", "source": "The study adopts a well-known theoretical framework." },
+      { "direction": "en_to_vn", "source": "The author proposes a new framework for understanding the data." },
+      { "direction": "en_to_vn", "source": "Existing frameworks cannot account for these results." },
+      { "direction": "en_to_vn", "source": "The regulatory framework must be updated to reflect new technology." },
+      { "direction": "en_to_vn", "source": "The findings are interpreted within a broader theoretical framework." }
+    ],
+    "scenario": [
+      "In a research introduction, propose a theoretical structure for analysing migration using 'framework' formally.",
+      "Writing a methods section, state that your study rests on an established model using 'framework'.",
+      "In a critical review, argue that existing models fail to explain the behaviour using 'framework'.",
+      "In an abstract, announce a new conceptual structure for the field using 'framework'.",
+      "In a policy report, call for a clearer legal structure for an industry using 'framework'.",
+      "In an interdisciplinary paper, describe a structure integrating several disciplines using 'framework'.",
+      "In a theory chapter, state that you interpret findings within a particular tradition using 'framework'.",
+      "In a formal proposal, argue that a robust analytical structure is essential using 'framework'.",
+      "In a comparative study, describe a structure for comparing two systems using 'framework'.",
+      "In a data-governance memo, describe the regulatory structure governing data use using 'framework'."
+    ]
+  },
+  "phenomenon": {
+    "cloze": [
+      { "sentence": "Globalisation is a complex ____ with many causes.", "answer": "phenomenon" },
+      { "sentence": "Scientists have long struggled to explain this ____.", "answer": "phenomenon" },
+      { "sentence": "The study investigates the ____ of urban migration.", "answer": "phenomenon" },
+      { "sentence": "Climate change is a global ____ affecting every region.", "answer": "phenomenon" },
+      { "sentence": "This ____ has been observed across many different cultures.", "answer": "phenomenon" },
+      { "sentence": "The paper examines the ____ of language loss.", "answer": "phenomenon" },
+      { "sentence": "Such a ____ cannot be explained by a single factor.", "answer": "phenomenon" },
+      { "sentence": "The researchers documented a curious ____ in the data.", "answer": "phenomenon" },
+      { "sentence": "Social exclusion is a widespread ____ in modern cities.", "answer": "phenomenon" },
+      { "sentence": "The natural ____ fascinated observers for centuries.", "answer": "phenomenon" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Toàn cầu hóa là một hiện tượng phức tạp với nhiều nguyên nhân." },
+      { "direction": "vn_to_en", "source": "Các nhà khoa học từ lâu đã cố gắng giải thích hiện tượng này." },
+      { "direction": "vn_to_en", "source": "Nghiên cứu điều tra hiện tượng di cư đô thị." },
+      { "direction": "vn_to_en", "source": "Biến đổi khí hậu là một hiện tượng toàn cầu ảnh hưởng đến mọi khu vực." },
+      { "direction": "vn_to_en", "source": "Hiện tượng như vậy không thể được giải thích bằng một yếu tố duy nhất." },
+      { "direction": "en_to_vn", "source": "The study explores a phenomenon observed in many societies." },
+      { "direction": "en_to_vn", "source": "This phenomenon has puzzled scientists for decades." },
+      { "direction": "en_to_vn", "source": "Urbanisation is a phenomenon with far-reaching consequences." },
+      { "direction": "en_to_vn", "source": "The researchers noticed an unusual phenomenon in their results." },
+      { "direction": "en_to_vn", "source": "Language loss is a phenomenon affecting many minority communities." }
+    ],
+    "scenario": [
+      "In a sociology essay, describe globalisation as a complex, multi-causal event using 'phenomenon' formally.",
+      "Writing a science paper, note that researchers struggled to explain an occurrence using 'phenomenon'.",
+      "In an abstract, state that your study investigates urban migration using 'phenomenon'.",
+      "In an environmental essay, describe climate change as a global event using 'phenomenon'.",
+      "In an anthropology paper, note that an occurrence appears across cultures using 'phenomenon'.",
+      "In a linguistics paper, examine language loss as an occurrence using 'phenomenon'.",
+      "In a discussion section, argue that an event has no single cause using 'phenomenon'.",
+      "In a results section, report a curious occurrence in the data using 'phenomenon'.",
+      "In an urban-studies essay, describe social exclusion as a widespread occurrence using 'phenomenon'.",
+      "In a natural-science essay, describe a natural occurrence that fascinated observers using 'phenomenon'."
+    ]
+  },
+  "hypothesis": {
+    "cloze": [
+      { "sentence": "The experiment was designed to test the central ____.", "answer": "hypothesis" },
+      { "sentence": "The data did not support the researchers' ____.", "answer": "hypothesis" },
+      { "sentence": "Our ____ is that sleep improves memory retention.", "answer": "hypothesis" },
+      { "sentence": "The study set out to confirm or reject this ____.", "answer": "hypothesis" },
+      { "sentence": "A good ____ must be testable and falsifiable.", "answer": "hypothesis" },
+      { "sentence": "The results provide strong support for the alternative ____.", "answer": "hypothesis" },
+      { "sentence": "The researchers formulated a clear ____ before collecting data.", "answer": "hypothesis" },
+      { "sentence": "The null ____ was rejected at the 5% significance level.", "answer": "hypothesis" },
+      { "sentence": "The findings led scientists to revise their original ____.", "answer": "hypothesis" },
+      { "sentence": "This ____ has been tested in numerous independent studies.", "answer": "hypothesis" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Thí nghiệm được thiết kế để kiểm tra giả thuyết trung tâm." },
+      { "direction": "vn_to_en", "source": "Dữ liệu không ủng hộ giả thuyết của các nhà nghiên cứu." },
+      { "direction": "vn_to_en", "source": "Giả thuyết của chúng tôi là giấc ngủ cải thiện khả năng ghi nhớ." },
+      { "direction": "vn_to_en", "source": "Một giả thuyết tốt phải có thể kiểm chứng và có thể bác bỏ được." },
+      { "direction": "vn_to_en", "source": "Các nhà nghiên cứu đã hình thành một giả thuyết rõ ràng trước khi thu thập dữ liệu." },
+      { "direction": "en_to_vn", "source": "The experiment was designed to test a specific hypothesis." },
+      { "direction": "en_to_vn", "source": "The data failed to support the original hypothesis." },
+      { "direction": "en_to_vn", "source": "A scientific hypothesis must be testable." },
+      { "direction": "en_to_vn", "source": "The null hypothesis was rejected after careful analysis." },
+      { "direction": "en_to_vn", "source": "The results forced the team to revise their hypothesis." }
+    ],
+    "scenario": [
+      "In a methods section, state that the experiment was designed to test a central idea using 'hypothesis' formally.",
+      "Writing a results section, report that the data did not support your proposed idea using 'hypothesis'.",
+      "In an abstract, state your prediction that sleep improves memory using 'hypothesis'.",
+      "In a research-methods essay, argue that a good proposed explanation must be testable using 'hypothesis'.",
+      "In a statistics report, state that the null idea was rejected at the 5% level using 'hypothesis'.",
+      "In a discussion, note that findings forced you to revise your original idea using 'hypothesis'.",
+      "In an introduction, state that you formulated a clear prediction before collecting data using 'hypothesis'.",
+      "In a literature review, note that a proposed explanation has been tested in many studies using 'hypothesis'.",
+      "In a formal proposal, describe how you will confirm or reject a proposed explanation using 'hypothesis'.",
+      "In a results section, report strong support for an alternative prediction using 'hypothesis'."
+    ]
+  }
+}

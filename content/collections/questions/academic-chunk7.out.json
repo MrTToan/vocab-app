@@ -1,0 +1,382 @@
+{
+  "postulate": {
+    "cloze": [
+      { "sentence": "The researchers ____ that early childhood experiences shape adult behaviour.", "answer": "postulate" },
+      { "sentence": "In his 1970 paper, Simon ____ a link between memory and problem-solving.", "answer": "postulated" },
+      { "sentence": "Many economists ____ that consumers act rationally when making choices.", "answer": "postulate" },
+      { "sentence": "The theory ____s that language is partly innate rather than fully learned.", "answer": "postulate" },
+      { "sentence": "Before running the experiment, the team ____ a positive correlation between the two variables.", "answer": "postulated" },
+      { "sentence": "It is often ____ that sleep plays a central role in consolidating new information.", "answer": "postulated" },
+      { "sentence": "Darwin ____ that species change gradually through natural selection.", "answer": "postulated" },
+      { "sentence": "The author ____s a direct relationship between income and access to education.", "answer": "postulate" },
+      { "sentence": "Physicists once ____ the existence of a particle before it was ever observed.", "answer": "postulated" },
+      { "sentence": "This model ____s that markets tend to return to equilibrium over time.", "answer": "postulate" }
+    ],
+    "translate": [
+      { "direction": "en_to_vn", "source": "The study postulates that stress reduces long-term memory performance." },
+      { "direction": "en_to_vn", "source": "Newton postulated that gravity acts between all objects with mass." },
+      { "direction": "en_to_vn", "source": "The author postulates a causal link between diet and concentration." },
+      { "direction": "en_to_vn", "source": "It is commonly postulated that motivation drives academic achievement." },
+      { "direction": "en_to_vn", "source": "The theory postulates that human behaviour is shaped by social context." },
+      { "direction": "vn_to_en", "source": "Bài báo đưa ra giả định rằng thu nhập ảnh hưởng đến kết quả học tập." },
+      { "direction": "vn_to_en", "source": "Các nhà khoa học đưa ra giả định về mối liên hệ giữa ô nhiễm và bệnh hô hấp." },
+      { "direction": "vn_to_en", "source": "Lý thuyết này đưa ra giả định rằng thị trường luôn hướng đến cân bằng." },
+      { "direction": "vn_to_en", "source": "Nhà nghiên cứu đưa ra giả định rằng ngôn ngữ một phần là bẩm sinh." },
+      { "direction": "vn_to_en", "source": "Người ta thường đưa ra giả định rằng giấc ngủ giúp củng cố trí nhớ." }
+    ],
+    "scenario": [
+      "In an academic essay introduction, formally state the assumption your argument will build on. Use 'postulate'.",
+      "Writing a research proposal (formal register), state the relationship you assume exists between two variables. Use 'postulate'.",
+      "In a literature review, summarise what an earlier theorist assumed. Use 'postulated'.",
+      "During a formal seminar presentation, introduce the core assumption of your model to the audience. Use 'postulate'.",
+      "In a lab report abstract, note what your hypothesis assumes before testing. Use 'postulated'.",
+      "Writing a formal critique, describe the assumption a rival theory rests on. Use 'postulates'.",
+      "In a dissertation methodology section, explain the theoretical assumption guiding your design. Use 'postulate'.",
+      "In a formal debate on economics, present the assumption underlying classical theory. Use 'postulate'.",
+      "In an academic email to a supervisor, describe the assumption your new chapter will explore. Use 'postulate'.",
+      "In a conference abstract, concisely state the assumption your paper defends. Use 'postulates'."
+    ]
+  },
+  "delineate": {
+    "cloze": [
+      { "sentence": "The opening chapter ____s the scope and aims of the research.", "answer": "delineate" },
+      { "sentence": "The report clearly ____ the boundaries between the two departments' duties.", "answer": "delineates" },
+      { "sentence": "In this section, the author ____ the main stages of the historical process.", "answer": "delineates" },
+      { "sentence": "The proposal ____ a step-by-step plan for reducing emissions.", "answer": "delineates" },
+      { "sentence": "It is important to ____ the key terms before beginning the analysis.", "answer": "delineate" },
+      { "sentence": "The map ____ the regions most affected by drought.", "answer": "delineates" },
+      { "sentence": "The essay carefully ____ the differences between the two theories.", "answer": "delineates" },
+      { "sentence": "The committee ____ the responsibilities of each member in the final report.", "answer": "delineated" },
+      { "sentence": "Her introduction ____ three distinct problems the study will address.", "answer": "delineates" },
+      { "sentence": "The framework helps to ____ what counts as evidence in this field.", "answer": "delineate" }
+    ],
+    "translate": [
+      { "direction": "en_to_vn", "source": "The first paragraph delineates the aims of the paper." },
+      { "direction": "en_to_vn", "source": "The policy clearly delineates the roles of each institution." },
+      { "direction": "en_to_vn", "source": "The author delineates the causes of the economic crisis in detail." },
+      { "direction": "en_to_vn", "source": "This chapter delineates the boundary between fact and interpretation." },
+      { "direction": "en_to_vn", "source": "The study delineates three phases of language development." },
+      { "direction": "vn_to_en", "source": "Chương mở đầu phác họa rõ phạm vi của nghiên cứu." },
+      { "direction": "vn_to_en", "source": "Báo cáo vạch rõ ranh giới trách nhiệm giữa hai bộ phận." },
+      { "direction": "vn_to_en", "source": "Tác giả phác họa các giai đoạn chính của quá trình lịch sử." },
+      { "direction": "vn_to_en", "source": "Phần này vạch rõ sự khác biệt giữa hai khái niệm." },
+      { "direction": "vn_to_en", "source": "Cần phác họa rõ các thuật ngữ then chốt trước khi phân tích." }
+    ],
+    "scenario": [
+      "In an essay's introduction, formally set out the scope of what you will cover. Use 'delineate'.",
+      "In a formal project plan, mark out clearly who is responsible for each task. Use 'delineates'.",
+      "In a research paper, describe how you draw the boundary between two closely related concepts. Use 'delineate'.",
+      "Writing a formal policy document, set out the distinct stages of the new procedure. Use 'delineates'.",
+      "In a dissertation, explain how the theoretical framework marks out what counts as data. Use 'delineate'.",
+      "In an academic report, outline the differences between two competing models. Use 'delineates'.",
+      "During a formal committee meeting, summarise in writing how duties were divided. Use 'delineated'.",
+      "In a grant application, clearly define the limits of the proposed study. Use 'delineate'.",
+      "In a formal review article, describe how the field's key terms have been mapped out. Use 'delineates'.",
+      "In a thesis abstract, concisely lay out the three problems your study addresses. Use 'delineates'."
+    ]
+  },
+  "account for": {
+    "cloze": [
+      { "sentence": "Renewable sources now ____ nearly a third of the country's electricity.", "answer": "account for" },
+      { "sentence": "The theory struggles to ____ the unexpected results of the experiment.", "answer": "account for" },
+      { "sentence": "Women ____ the majority of respondents in the survey.", "answer": "account for" },
+      { "sentence": "These three factors together ____ most of the variation in the data.", "answer": "account for" },
+      { "sentence": "The report does not adequately ____ the sudden drop in productivity.", "answer": "account for" },
+      { "sentence": "International students ____ around 20 per cent of the university's enrolment.", "answer": "account for" },
+      { "sentence": "Genetic differences alone cannot ____ such wide variation in outcomes.", "answer": "account for" },
+      { "sentence": "The model was revised to ____ the influence of seasonal change.", "answer": "account for" },
+      { "sentence": "Manufacturing continues to ____ a large share of national exports.", "answer": "account for" },
+      { "sentence": "The author fails to ____ several exceptions to the general rule.", "answer": "account for" }
+    ],
+    "translate": [
+      { "direction": "en_to_vn", "source": "Tourism accounts for a significant part of the region's income." },
+      { "direction": "en_to_vn", "source": "The new theory can account for the anomalies the old one ignored." },
+      { "direction": "en_to_vn", "source": "These variables account for most of the observed differences." },
+      { "direction": "en_to_vn", "source": "The study fails to account for the effect of family background." },
+      { "direction": "en_to_vn", "source": "Older workers account for a growing proportion of the workforce." },
+      { "direction": "vn_to_en", "source": "Năng lượng tái tạo chiếm khoảng một phần tư tổng sản lượng điện." },
+      { "direction": "vn_to_en", "source": "Lý thuyết này không giải thích được kết quả bất thường của thí nghiệm." },
+      { "direction": "vn_to_en", "source": "Ba yếu tố này cùng nhau giải thích cho phần lớn sự khác biệt." },
+      { "direction": "vn_to_en", "source": "Sinh viên quốc tế chiếm khoảng hai mươi phần trăm số nhập học." },
+      { "direction": "vn_to_en", "source": "Bài báo không giải thích được sự sụt giảm đột ngột về năng suất." }
+    ],
+    "scenario": [
+      "In an academic report, state what proportion of the total a category makes up. Use 'account for'.",
+      "In a discussion section, admit that your model cannot fully explain a surprising finding. Use 'account for'.",
+      "Writing formally about demographics, describe which group makes up most of the sample. Use 'account for'.",
+      "In an essay on energy, state the share renewables contribute to national supply. Use 'account for'.",
+      "In a critique, point out that a theory fails to explain certain exceptions. Use 'account for'.",
+      "In a lab report, explain that you adjusted your model to include a new factor. Use 'account for'.",
+      "In a formal economics essay, note what share manufacturing contributes to exports. Use 'account for'.",
+      "In a research summary, explain which variables explain most of the variation. Use 'account for'.",
+      "In a formal review, argue that genetics alone cannot explain a wide range of results. Use 'account for'.",
+      "In a statistics report, describe how much of the difference three factors explain. Use 'account for'."
+    ]
+  },
+  "as opposed to": {
+    "cloze": [
+      { "sentence": "The study focuses on qualitative data, ____ purely numerical measures.", "answer": "as opposed to" },
+      { "sentence": "This paper examines long-term effects, ____ short-term ones.", "answer": "as opposed to" },
+      { "sentence": "The policy favours prevention, ____ treatment after the fact.", "answer": "as opposed to" },
+      { "sentence": "Learners benefit from active practice, ____ passive listening.", "answer": "as opposed to" },
+      { "sentence": "The theory emphasises cooperation, ____ competition, among group members.", "answer": "as opposed to" },
+      { "sentence": "The research relies on primary sources, ____ secondary summaries.", "answer": "as opposed to" },
+      { "sentence": "We measured actual behaviour, ____ what participants said they would do.", "answer": "as opposed to" },
+      { "sentence": "The author argues for gradual reform, ____ sudden change.", "answer": "as opposed to" },
+      { "sentence": "The programme targets rural areas, ____ urban centres.", "answer": "as opposed to" },
+      { "sentence": "This chapter considers written language, ____ spoken forms.", "answer": "as opposed to" }
+    ],
+    "translate": [
+      { "direction": "en_to_vn", "source": "The study looks at causes, as opposed to symptoms." },
+      { "direction": "en_to_vn", "source": "The essay defends reform, as opposed to revolution." },
+      { "direction": "en_to_vn", "source": "The method uses interviews, as opposed to questionnaires." },
+      { "direction": "en_to_vn", "source": "This section discusses theory, as opposed to practical application." },
+      { "direction": "en_to_vn", "source": "The report measures outcomes, as opposed to intentions." },
+      { "direction": "vn_to_en", "source": "Nghiên cứu tập trung vào dữ liệu định tính, trái với các số liệu thuần túy." },
+      { "direction": "vn_to_en", "source": "Bài viết nhấn mạnh phòng ngừa, khác với việc điều trị sau đó." },
+      { "direction": "vn_to_en", "source": "Chương này xét ngôn ngữ viết, trái với hình thức nói." },
+      { "direction": "vn_to_en", "source": "Chương trình hướng đến vùng nông thôn, khác với các đô thị." },
+      { "direction": "vn_to_en", "source": "Tác giả ủng hộ cải cách dần dần, trái với thay đổi đột ngột." }
+    ],
+    "scenario": [
+      "In a methods section, contrast the type of data you used with the type you did not. Use 'as opposed to'.",
+      "In an academic essay, contrast the approach you favour with the one you reject. Use 'as opposed to'.",
+      "Writing formally, contrast studying long-term effects with short-term ones. Use 'as opposed to'.",
+      "In a policy paper, contrast prevention with treatment. Use 'as opposed to'.",
+      "In a research report, contrast measuring real behaviour with self-reported behaviour. Use 'as opposed to'.",
+      "In a formal comparison, contrast primary sources with secondary ones. Use 'as opposed to'.",
+      "In an education essay, contrast active practice with passive listening. Use 'as opposed to'.",
+      "In a formal argument, contrast gradual reform with sudden change. Use 'as opposed to'.",
+      "In a study design description, contrast a rural focus with an urban one. Use 'as opposed to'.",
+      "In a linguistics essay, contrast written language with spoken language. Use 'as opposed to'."
+    ]
+  },
+  "criterion": {
+    "cloze": [
+      { "sentence": "Accuracy was the most important ____ for judging the translations.", "answer": "criterion" },
+      { "sentence": "Cost is only one ____ among several used to evaluate the proposals.", "answer": "criterion" },
+      { "sentence": "The main ____ for inclusion in the study was age over eighteen.", "answer": "criterion" },
+      { "sentence": "Each ____ was scored on a scale from one to five.", "answer": "criterion" },
+      { "sentence": "Relevance is a key ____ when selecting sources for a review.", "answer": "criterion" },
+      { "sentence": "The panel added a new ____ to assess environmental impact.", "answer": "criterion" },
+      { "sentence": "No single ____ can fully capture the quality of an essay.", "answer": "criterion" },
+      { "sentence": "Reliability is an essential ____ for any scientific instrument.", "answer": "criterion" },
+      { "sentence": "The first ____ the judges considered was originality.", "answer": "criterion" },
+      { "sentence": "Meeting the safety ____ is a condition for approval.", "answer": "criterion" }
+    ],
+    "translate": [
+      { "direction": "en_to_vn", "source": "Clarity is the main criterion for grading the reports." },
+      { "direction": "en_to_vn", "source": "Age was the only criterion for taking part in the study." },
+      { "direction": "en_to_vn", "source": "Relevance is an important criterion when choosing sources." },
+      { "direction": "en_to_vn", "source": "The committee introduced a new criterion for assessment." },
+      { "direction": "en_to_vn", "source": "Each criterion carries equal weight in the final score." },
+      { "direction": "vn_to_en", "source": "Độ chính xác là tiêu chí quan trọng nhất để đánh giá bản dịch." },
+      { "direction": "vn_to_en", "source": "Chi phí chỉ là một tiêu chí trong số nhiều tiêu chí được dùng." },
+      { "direction": "vn_to_en", "source": "Tiêu chí chính để tham gia nghiên cứu là trên mười tám tuổi." },
+      { "direction": "vn_to_en", "source": "Độ tin cậy là một tiêu chí thiết yếu đối với dụng cụ khoa học." },
+      { "direction": "vn_to_en", "source": "Không một tiêu chí đơn lẻ nào có thể phản ánh đầy đủ chất lượng bài luận." }
+    ],
+    "scenario": [
+      "In a methods section, state the single most important standard used to judge results. Use 'criterion'.",
+      "In a formal rubric explanation, describe one standard essays are marked against. Use 'criterion'.",
+      "In a research paper, state the main condition participants had to meet. Use 'criterion'.",
+      "In an academic proposal, introduce a new standard for evaluating quality. Use 'criterion'.",
+      "In a formal review, argue that relevance is a key standard for choosing sources. Use 'criterion'.",
+      "In a lab report, explain that reliability is an essential standard for instruments. Use 'criterion'.",
+      "In a formal committee summary, note the first standard the judges applied. Use 'criterion'.",
+      "In an academic essay, argue that no single standard captures essay quality. Use 'criterion'.",
+      "In a grant document, state the safety standard that must be met for approval. Use 'criterion'.",
+      "In a formal evaluation, explain how each standard was scored. Use 'criterion'."
+    ]
+  },
+  "methodology": {
+    "cloze": [
+      { "sentence": "The paper's ____ is described clearly in the third section.", "answer": "methodology" },
+      { "sentence": "A weak ____ can undermine even the most interesting findings.", "answer": "methodology" },
+      { "sentence": "The two studies used a very different ____ to collect data.", "answer": "methodology" },
+      { "sentence": "The author explains the ____ before presenting the results.", "answer": "methodology" },
+      { "sentence": "Reviewers criticised the ____ for relying on too small a sample.", "answer": "methodology" },
+      { "sentence": "A mixed-methods ____ combines interviews with statistical analysis.", "answer": "methodology" },
+      { "sentence": "The ____ section should allow other researchers to repeat the study.", "answer": "methodology" },
+      { "sentence": "Choosing an appropriate ____ is a crucial step in any project.", "answer": "methodology" },
+      { "sentence": "The new ____ improved the reliability of the measurements.", "answer": "methodology" },
+      { "sentence": "Students must justify the ____ they adopt in their dissertation.", "answer": "methodology" }
+    ],
+    "translate": [
+      { "direction": "en_to_vn", "source": "The methodology of the study is explained in detail." },
+      { "direction": "en_to_vn", "source": "A flawed methodology weakens the whole argument." },
+      { "direction": "en_to_vn", "source": "The researchers adopted a qualitative methodology." },
+      { "direction": "en_to_vn", "source": "Reviewers questioned the methodology used in the trial." },
+      { "direction": "en_to_vn", "source": "The methodology section describes how the data were gathered." },
+      { "direction": "vn_to_en", "source": "Phương pháp luận của nghiên cứu được trình bày rõ ở phần ba." },
+      { "direction": "vn_to_en", "source": "Một phương pháp luận yếu có thể làm suy yếu cả những phát hiện thú vị." },
+      { "direction": "vn_to_en", "source": "Hai nghiên cứu sử dụng phương pháp luận rất khác nhau." },
+      { "direction": "vn_to_en", "source": "Sinh viên phải biện minh cho phương pháp luận họ chọn trong luận văn." },
+      { "direction": "vn_to_en", "source": "Việc chọn phương pháp luận phù hợp là bước then chốt của mọi dự án." }
+    ],
+    "scenario": [
+      "In a dissertation, introduce the section that explains how you carried out the research. Use 'methodology'.",
+      "In a formal peer review, criticise a study for the way it was conducted. Use 'methodology'.",
+      "In a research proposal, justify the overall approach you plan to use. Use 'methodology'.",
+      "In an academic abstract, note that two studies used different approaches. Use 'methodology'.",
+      "In a formal report, explain that the approach lets others repeat the study. Use 'methodology'.",
+      "In a supervisor meeting note, describe the mixed approach you have chosen. Use 'methodology'.",
+      "In a formal critique, argue that a weak approach undermines good findings. Use 'methodology'.",
+      "In a thesis chapter, describe how a new approach improved reliability. Use 'methodology'.",
+      "In a grant application, outline the research approach you will follow. Use 'methodology'.",
+      "In a formal essay on research, stress that choosing the right approach is crucial. Use 'methodology'."
+    ]
+  },
+  "premise": {
+    "cloze": [
+      { "sentence": "The whole argument rests on a single questionable ____.", "answer": "premise" },
+      { "sentence": "If the ____ is false, the conclusion cannot be trusted.", "answer": "premise" },
+      { "sentence": "The author begins from the ____ that education reduces inequality.", "answer": "premise" },
+      { "sentence": "Critics reject the basic ____ of the theory.", "answer": "premise" },
+      { "sentence": "The report accepts the ____ that growth benefits everyone.", "answer": "premise" },
+      { "sentence": "Each ____ in the argument must be supported by evidence.", "answer": "premise" },
+      { "sentence": "The essay challenges the ____ that technology always improves life.", "answer": "premise" },
+      { "sentence": "The debate hinges on whether the first ____ is sound.", "answer": "premise" },
+      { "sentence": "Her thesis is built on the ____ that language shapes thought.", "answer": "premise" },
+      { "sentence": "The plan proceeds on the ____ that funding will be available.", "answer": "premise" }
+    ],
+    "translate": [
+      { "direction": "en_to_vn", "source": "The argument depends on a shaky premise." },
+      { "direction": "en_to_vn", "source": "The author starts from the premise that markets are fair." },
+      { "direction": "en_to_vn", "source": "If the premise is wrong, the whole theory collapses." },
+      { "direction": "en_to_vn", "source": "Critics question the central premise of the study." },
+      { "direction": "en_to_vn", "source": "Each premise must be backed by solid evidence." },
+      { "direction": "vn_to_en", "source": "Toàn bộ lập luận dựa trên một tiền đề đáng ngờ." },
+      { "direction": "vn_to_en", "source": "Nếu tiền đề sai thì không thể tin vào kết luận." },
+      { "direction": "vn_to_en", "source": "Tác giả xuất phát từ tiền đề rằng giáo dục làm giảm bất bình đẳng." },
+      { "direction": "vn_to_en", "source": "Bài luận thách thức tiền đề rằng công nghệ luôn cải thiện cuộc sống." },
+      { "direction": "vn_to_en", "source": "Luận điểm của cô dựa trên tiền đề rằng ngôn ngữ định hình tư duy." }
+    ],
+    "scenario": [
+      "In a formal essay, state the basic assumption your whole argument depends on. Use 'premise'.",
+      "In a critique, argue that a theory fails because its starting assumption is false. Use 'premise'.",
+      "In a philosophy paper, note that each step of the argument must be supported. Use 'premise'.",
+      "In an academic review, reject the fundamental assumption of a study. Use 'premise'.",
+      "In a formal debate, question whether the opponent's first assumption is sound. Use 'premise'.",
+      "In a thesis introduction, state the assumption your work is built on. Use 'premise'.",
+      "In a policy essay, note the assumption that a plan proceeds on. Use 'premise'.",
+      "In a formal analysis, challenge the assumption that growth benefits everyone. Use 'premise'.",
+      "In an argumentative essay, identify the assumption underlying a common claim. Use 'premise'.",
+      "In a research paper, explain how a false starting assumption undermines a conclusion. Use 'premise'."
+    ]
+  },
+  "empirical": {
+    "cloze": [
+      { "sentence": "The claim is interesting but lacks ____ support.", "answer": "empirical" },
+      { "sentence": "The study provides strong ____ evidence for the hypothesis.", "answer": "empirical" },
+      { "sentence": "Theoretical models must eventually be tested against ____ data.", "answer": "empirical" },
+      { "sentence": "There is little ____ research on this particular question.", "answer": "empirical" },
+      { "sentence": "His conclusions rest on careful ____ observation.", "answer": "empirical" },
+      { "sentence": "The paper combines philosophical argument with ____ findings.", "answer": "empirical" },
+      { "sentence": "An ____ approach relies on measurement rather than intuition.", "answer": "empirical" },
+      { "sentence": "The results offer ____ confirmation of the earlier theory.", "answer": "empirical" },
+      { "sentence": "More ____ studies are needed before firm conclusions can be drawn.", "answer": "empirical" },
+      { "sentence": "The debate would benefit from solid ____ evidence.", "answer": "empirical" }
+    ],
+    "translate": [
+      { "direction": "en_to_vn", "source": "The theory lacks empirical support." },
+      { "direction": "en_to_vn", "source": "The study offers empirical evidence for the claim." },
+      { "direction": "en_to_vn", "source": "An empirical approach relies on observation and data." },
+      { "direction": "en_to_vn", "source": "There is little empirical research on this topic." },
+      { "direction": "en_to_vn", "source": "His argument combines theory with empirical findings." },
+      { "direction": "vn_to_en", "source": "Nhận định này thú vị nhưng thiếu bằng chứng thực nghiệm." },
+      { "direction": "vn_to_en", "source": "Nghiên cứu cung cấp bằng chứng thực nghiệm mạnh mẽ cho giả thuyết." },
+      { "direction": "vn_to_en", "source": "Các mô hình lý thuyết cuối cùng phải được kiểm chứng bằng dữ liệu thực nghiệm." },
+      { "direction": "vn_to_en", "source": "Cần thêm nhiều nghiên cứu thực nghiệm trước khi kết luận chắc chắn." },
+      { "direction": "vn_to_en", "source": "Cách tiếp cận thực nghiệm dựa vào đo lường hơn là trực giác." }
+    ],
+    "scenario": [
+      "In a literature review, point out that a popular claim lacks evidence from real data. Use 'empirical'.",
+      "In a results section, state that your study provides observation-based support for a hypothesis. Use 'empirical'.",
+      "In a formal essay, contrast an intuition-based view with a data-based one. Use 'empirical'.",
+      "In a research gap statement, note that little data-based research exists on the topic. Use 'empirical'.",
+      "In a discussion, explain that theoretical models must be tested against real data. Use 'empirical'.",
+      "In a formal critique, argue a debate needs solid evidence from observation. Use 'empirical'.",
+      "In a thesis, describe combining philosophical argument with observed findings. Use 'empirical'.",
+      "In a conference abstract, state that your results confirm an earlier theory through data. Use 'empirical'.",
+      "In a grant proposal, argue that more data-based studies are needed. Use 'empirical'.",
+      "In a formal methods note, describe an approach based on measurement not intuition. Use 'empirical'."
+    ]
+  },
+  "salient": {
+    "cloze": [
+      { "sentence": "The essay highlights the most ____ features of the theory.", "answer": "salient" },
+      { "sentence": "One ____ point emerged repeatedly during the interviews.", "answer": "salient" },
+      { "sentence": "The author summarises the ____ arguments in the final chapter.", "answer": "salient" },
+      { "sentence": "The most ____ difference between the two groups was their income.", "answer": "salient" },
+      { "sentence": "The report draws attention to several ____ trends in the data.", "answer": "salient" },
+      { "sentence": "A ____ weakness of the study is its small sample size.", "answer": "salient" },
+      { "sentence": "The lecturer focused on the ____ issues raised by the text.", "answer": "salient" },
+      { "sentence": "The introduction identifies the ____ questions the paper addresses.", "answer": "salient" },
+      { "sentence": "Among the findings, one particularly ____ result stood out.", "answer": "salient" },
+      { "sentence": "The reviewer noted the ____ contribution of the new method.", "answer": "salient" }
+    ],
+    "translate": [
+      { "direction": "en_to_vn", "source": "The report highlights the most salient trends." },
+      { "direction": "en_to_vn", "source": "One salient point kept coming up in the discussion." },
+      { "direction": "en_to_vn", "source": "The most salient difference was in their level of income." },
+      { "direction": "en_to_vn", "source": "The essay summarises the salient arguments of the debate." },
+      { "direction": "en_to_vn", "source": "A salient weakness of the study is its narrow focus." },
+      { "direction": "vn_to_en", "source": "Bài luận nêu bật những đặc điểm nổi bật nhất của lý thuyết." },
+      { "direction": "vn_to_en", "source": "Một điểm nổi bật đã xuất hiện lặp đi lặp lại trong các cuộc phỏng vấn." },
+      { "direction": "vn_to_en", "source": "Tác giả tóm tắt các luận điểm nổi bật ở chương cuối." },
+      { "direction": "vn_to_en", "source": "Sự khác biệt đáng chú ý nhất giữa hai nhóm là thu nhập." },
+      { "direction": "vn_to_en", "source": "Phần giới thiệu nêu ra những câu hỏi nổi bật mà bài viết giải quyết." }
+    ],
+    "scenario": [
+      "In an essay conclusion, summarise the most important points of your argument. Use 'salient'.",
+      "In a formal report, draw attention to the most noticeable trends in your data. Use 'salient'.",
+      "In a research summary, state the most striking difference between two groups. Use 'salient'.",
+      "In a literature review, note the most notable weakness of a study. Use 'salient'.",
+      "In a formal presentation script, introduce the key issues raised by a text. Use 'salient'.",
+      "In an abstract, identify the most prominent questions your paper addresses. Use 'salient'.",
+      "In a discussion section, highlight the one result that stood out most. Use 'salient'.",
+      "In a peer review, note the most notable contribution of a new method. Use 'salient'.",
+      "In a formal essay, list the most striking features of a theory. Use 'salient'.",
+      "In an interview analysis, describe the point that came up most prominently. Use 'salient'."
+    ]
+  },
+  "pertinent": {
+    "cloze": [
+      { "sentence": "The lawyer asked several ____ questions about the contract.", "answer": "pertinent" },
+      { "sentence": "The essay includes only information that is directly ____ to the argument.", "answer": "pertinent" },
+      { "sentence": "The reviewer raised a highly ____ point about the sample.", "answer": "pertinent" },
+      { "sentence": "Please attach any documents ____ to your application.", "answer": "pertinent" },
+      { "sentence": "The author cites the most ____ studies from the last decade.", "answer": "pertinent" },
+      { "sentence": "It is important to keep the discussion ____ to the research question.", "answer": "pertinent" },
+      { "sentence": "The report leaves out details that are not ____ to the analysis.", "answer": "pertinent" },
+      { "sentence": "Her comment was brief but extremely ____.", "answer": "pertinent" },
+      { "sentence": "The committee considered all the ____ facts before deciding.", "answer": "pertinent" },
+      { "sentence": "This finding is particularly ____ to current policy debates.", "answer": "pertinent" }
+    ],
+    "translate": [
+      { "direction": "en_to_vn", "source": "The reviewer raised a very pertinent point." },
+      { "direction": "en_to_vn", "source": "The essay uses only pertinent examples." },
+      { "direction": "en_to_vn", "source": "Please include any pertinent documents with your form." },
+      { "direction": "en_to_vn", "source": "This finding is highly pertinent to the debate." },
+      { "direction": "en_to_vn", "source": "The author cites the most pertinent research on the topic." },
+      { "direction": "vn_to_en", "source": "Người phản biện đã nêu một ý kiến rất thích đáng." },
+      { "direction": "vn_to_en", "source": "Bài luận chỉ dùng những thông tin liên quan trực tiếp đến lập luận." },
+      { "direction": "vn_to_en", "source": "Xin đính kèm mọi tài liệu liên quan đến đơn của bạn." },
+      { "direction": "vn_to_en", "source": "Cần giữ cho phần thảo luận bám sát câu hỏi nghiên cứu." },
+      { "direction": "vn_to_en", "source": "Phát hiện này đặc biệt liên quan đến các tranh luận chính sách hiện nay." }
+    ],
+    "scenario": [
+      "In an essay, explain that you include only information directly relevant to your argument. Use 'pertinent'.",
+      "In a formal peer review, praise a reviewer for raising a relevant point about the sample. Use 'pertinent'.",
+      "In an application email, ask the reader to attach all relevant documents. Use 'pertinent'.",
+      "In a literature review, note that you cite the most relevant recent studies. Use 'pertinent'.",
+      "In a formal report, explain that irrelevant details were left out. Use 'pertinent'.",
+      "In a discussion section, argue a finding is highly relevant to current policy. Use 'pertinent'.",
+      "In a formal meeting summary, note the committee weighed all relevant facts. Use 'pertinent'.",
+      "In an academic essay, stress the need to keep discussion relevant to the research question. Use 'pertinent'.",
+      "In a formal review, describe a brief but highly relevant comment. Use 'pertinent'.",
+      "In a legal-style report, describe asking relevant questions about a contract. Use 'pertinent'."
+    ]
+  }
+}

@@ -1,0 +1,572 @@
+{
+  "in my opinion": {
+    "cloze": [
+      { "sentence": "____, the government should invest far more in public transport.", "answer": "In my opinion" },
+      { "sentence": "The report was, ____, far too long and full of repetition.", "answer": "in my opinion" },
+      { "sentence": "____, online learning can never fully replace a real classroom.", "answer": "In my opinion" },
+      { "sentence": "Children today spend too much time on screens, ____.", "answer": "in my opinion" },
+      { "sentence": "____, the benefits of this policy clearly outweigh its drawbacks.", "answer": "In my opinion" },
+      { "sentence": "The film was entertaining, but ____ the ending felt rushed.", "answer": "in my opinion" },
+      { "sentence": "____, universities should place more emphasis on practical skills.", "answer": "In my opinion" },
+      { "sentence": "This is, ____, the most serious problem facing our generation.", "answer": "in my opinion" },
+      { "sentence": "____, both sides of the debate have some genuine merit.", "answer": "In my opinion" },
+      { "sentence": "The new tax, ____, will hurt small businesses the most.", "answer": "in my opinion" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Theo ý kiến của tôi, chính phủ nên cấm quảng cáo thuốc lá." },
+      { "direction": "vn_to_en", "source": "Theo ý kiến của tôi, học sinh nên được dạy kỹ năng sống ở trường." },
+      { "direction": "vn_to_en", "source": "Theo ý kiến của tôi, mạng xã hội gây hại nhiều hơn là có lợi." },
+      { "direction": "vn_to_en", "source": "Theo ý kiến của tôi, làm việc từ xa hiệu quả hơn làm ở văn phòng." },
+      { "direction": "vn_to_en", "source": "Theo ý kiến của tôi, du lịch giá rẻ đang phá hủy nhiều thành phố cổ." },
+      { "direction": "en_to_vn", "source": "In my opinion, the voting age should be lowered to sixteen." },
+      { "direction": "en_to_vn", "source": "In my opinion, this restaurant is overrated and far too expensive." },
+      { "direction": "en_to_vn", "source": "In my opinion, everyone should learn at least one foreign language." },
+      { "direction": "en_to_vn", "source": "The plan is, in my opinion, simply too risky to approve." },
+      { "direction": "en_to_vn", "source": "In my opinion, the advantages of remote work are often exaggerated." }
+    ],
+    "scenario": [
+      "In a formal IELTS Task 2 essay, state your view on whether zoos should be banned. (formal, academic)",
+      "You are texting a friend about a phone you just tried. Give your honest view. (casual, informal)",
+      "During a class debate, politely offer your view on school uniforms. (semi-formal, polite)",
+      "Writing an online review of a laptop you bought, share your view of it. (neutral, consumer review)",
+      "In a work meeting, give your view on switching to a four-day week. (professional, measured)",
+      "Commenting under a news article about climate policy, state your view. (public, respectful)",
+      "In a university seminar, express your view on the assigned reading. (academic, tentative)",
+      "Advising a younger sibling about choosing a university major, give your view. (warm, supportive)",
+      "In an opinion paragraph for homework, argue whether homework should be abolished. (formal, structured)",
+      "In a friendly group chat planning a trip, say which destination you prefer. (light, informal)"
+    ]
+  },
+  "from my perspective": {
+    "cloze": [
+      { "sentence": "____, the real problem is a lack of long-term planning.", "answer": "From my perspective" },
+      { "sentence": "The changes seem positive, at least ____, as a daily commuter.", "answer": "from my perspective" },
+      { "sentence": "____, both economic growth and the environment matter equally.", "answer": "From my perspective" },
+      { "sentence": "As a teacher, ____, smaller classes make a huge difference.", "answer": "from my perspective" },
+      { "sentence": "____, the media often exaggerates the dangers of new technology.", "answer": "From my perspective" },
+      { "sentence": "The decision looks unfair ____, though I understand the reasons.", "answer": "from my perspective" },
+      { "sentence": "____, remote work has improved my quality of life enormously.", "answer": "From my perspective" },
+      { "sentence": "Having lived abroad, ____, cultural exchange is priceless.", "answer": "from my perspective" },
+      { "sentence": "____, the policy addresses the symptoms rather than the cause.", "answer": "From my perspective" },
+      { "sentence": "The reform is, ____, a step in the right direction.", "answer": "from my perspective" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Theo quan điểm của tôi, giáo dục miễn phí nên được coi là quyền cơ bản." },
+      { "direction": "vn_to_en", "source": "Theo quan điểm của tôi, thành phố cần nhiều không gian xanh hơn." },
+      { "direction": "vn_to_en", "source": "Theo quan điểm của tôi, kinh nghiệm quan trọng hơn bằng cấp." },
+      { "direction": "vn_to_en", "source": "Theo quan điểm của tôi, công nghệ nên hỗ trợ chứ không thay thế con người." },
+      { "direction": "vn_to_en", "source": "Theo quan điểm của tôi, việc học ngôn ngữ mở ra nhiều cơ hội." },
+      { "direction": "en_to_vn", "source": "From my perspective, tourism brings both benefits and serious costs." },
+      { "direction": "en_to_vn", "source": "From my perspective, the new rules make life harder for students." },
+      { "direction": "en_to_vn", "source": "From my perspective, teamwork matters more than individual talent." },
+      { "direction": "en_to_vn", "source": "The situation looks quite different from my perspective as a parent." },
+      { "direction": "en_to_vn", "source": "From my perspective, cities should prioritise cyclists over cars." }
+    ],
+    "scenario": [
+      "In an academic essay, introduce your standpoint on whether AI threatens jobs. (formal, academic)",
+      "In a job interview, share how you see teamwork based on your experience. (professional, confident)",
+      "Discussing a film with friends, explain how you personally saw it. (casual, relaxed)",
+      "In a panel discussion, frame your view as one of several valid ones. (semi-formal, diplomatic)",
+      "Writing a reflective journal for class, describe how an event looked to you. (personal, thoughtful)",
+      "In a team retrospective at work, give your view on what went wrong. (professional, constructive)",
+      "Advising a friend on a career choice, share how you see the options. (warm, honest)",
+      "In an online forum debate, present your standpoint respectfully. (public, measured)",
+      "In a study-abroad application essay, explain your worldview. (formal, reflective)",
+      "Chatting with classmates about a new school rule, give your take. (informal, friendly)"
+    ]
+  },
+  "I firmly believe that": {
+    "cloze": [
+      { "sentence": "____ education is the most powerful tool for reducing inequality.", "answer": "I firmly believe that" },
+      { "sentence": "____ every citizen has a duty to vote in elections.", "answer": "I firmly believe that" },
+      { "sentence": "____ renewable energy is the only sustainable path forward.", "answer": "I firmly believe that" },
+      { "sentence": "____ hard work matters far more than natural talent.", "answer": "I firmly believe that" },
+      { "sentence": "____ governments should guarantee free healthcare for all.", "answer": "I firmly believe that" },
+      { "sentence": "____ reading widely makes people more open-minded.", "answer": "I firmly believe that" },
+      { "sentence": "____ protecting the environment must come before short-term profit.", "answer": "I firmly believe that" },
+      { "sentence": "____ children learn best through play rather than pressure.", "answer": "I firmly believe that" },
+      { "sentence": "____ honesty is essential to any lasting relationship.", "answer": "I firmly believe that" },
+      { "sentence": "____ this decision will benefit the whole community.", "answer": "I firmly believe that" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Tôi tin chắc rằng giáo dục nên miễn phí cho mọi người." },
+      { "direction": "vn_to_en", "source": "Tôi tin chắc rằng công nghệ sẽ thay đổi cách chúng ta làm việc." },
+      { "direction": "vn_to_en", "source": "Tôi tin chắc rằng đọc sách giúp con người trưởng thành hơn." },
+      { "direction": "vn_to_en", "source": "Tôi tin chắc rằng bảo vệ môi trường là trách nhiệm của mọi người." },
+      { "direction": "vn_to_en", "source": "Tôi tin chắc rằng chăm chỉ quan trọng hơn may mắn." },
+      { "direction": "en_to_vn", "source": "I firmly believe that travel broadens the mind." },
+      { "direction": "en_to_vn", "source": "I firmly believe that no child should go to school hungry." },
+      { "direction": "en_to_vn", "source": "I firmly believe that small daily habits shape our future." },
+      { "direction": "en_to_vn", "source": "I firmly believe that this reform will make our city safer." },
+      { "direction": "en_to_vn", "source": "I firmly believe that everyone deserves a second chance." }
+    ],
+    "scenario": [
+      "Opening an IELTS opinion essay, state your strong stance on capital punishment. (formal, academic)",
+      "Giving a persuasive speech to your class, assert your core belief. (public, emphatic)",
+      "In a debate final, forcefully state the belief your team defends. (formal, assertive)",
+      "In a heartfelt letter to a friend, express a conviction you hold. (personal, sincere)",
+      "In a cover letter, state a professional principle you strongly hold. (professional, confident)",
+      "At a community meeting, make the case for a belief about local safety. (semi-formal, earnest)",
+      "In a motivational post online, share a conviction about hard work. (public, inspiring)",
+      "In a university admissions essay, declare a value that guides you. (formal, reflective)",
+      "During a family discussion, firmly express your stance on a decision. (informal, respectful)",
+      "In a manifesto for a student election, state your central belief. (persuasive, bold)"
+    ]
+  },
+  "it seems to me that": {
+    "cloze": [
+      { "sentence": "____ the problem has been misunderstood from the start.", "answer": "It seems to me that" },
+      { "sentence": "____ people are becoming less patient every year.", "answer": "It seems to me that" },
+      { "sentence": "____ the new policy will do more harm than good.", "answer": "It seems to me that" },
+      { "sentence": "____ we are focusing on the wrong priorities.", "answer": "It seems to me that" },
+      { "sentence": "____ technology is changing childhood in worrying ways.", "answer": "It seems to me that" },
+      { "sentence": "____ the two sides actually want the same thing.", "answer": "It seems to me that" },
+      { "sentence": "____ many students choose subjects for the wrong reasons.", "answer": "It seems to me that" },
+      { "sentence": "____ the argument rests on a rather weak assumption.", "answer": "It seems to me that" },
+      { "sentence": "____ cities are becoming harder to live in.", "answer": "It seems to me that" },
+      { "sentence": "____ we have overlooked a much simpler solution.", "answer": "It seems to me that" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Đối với tôi có vẻ như mọi người ngày càng phụ thuộc vào điện thoại." },
+      { "direction": "vn_to_en", "source": "Đối với tôi có vẻ như kế hoạch này chưa được suy nghĩ kỹ." },
+      { "direction": "vn_to_en", "source": "Đối với tôi có vẻ như học sinh đang chịu quá nhiều áp lực." },
+      { "direction": "vn_to_en", "source": "Đối với tôi có vẻ như chúng ta đang giải quyết sai vấn đề." },
+      { "direction": "vn_to_en", "source": "Đối với tôi có vẻ như cả hai bên đều có lý." },
+      { "direction": "en_to_vn", "source": "It seems to me that the weather has become far less predictable." },
+      { "direction": "en_to_vn", "source": "It seems to me that we are spending too much on advertising." },
+      { "direction": "en_to_vn", "source": "It seems to me that the real cause has been ignored." },
+      { "direction": "en_to_vn", "source": "It seems to me that people value convenience over quality now." },
+      { "direction": "en_to_vn", "source": "It seems to me that this rule is unfair to newcomers." }
+    ],
+    "scenario": [
+      "In a discursive essay, offer a tentative observation about modern work. (formal, cautious)",
+      "In a team meeting, gently raise a concern about the current plan. (professional, tactful)",
+      "Discussing a book in a study group, share a soft impression of the theme. (academic, tentative)",
+      "Chatting with a colleague, hint that something feels off about a schedule. (informal, polite)",
+      "In an online comment, mildly disagree with the article's conclusion. (public, measured)",
+      "Advising a friend, softly suggest that they may be overthinking. (warm, gentle)",
+      "In a report, note an apparent trend without overstating it. (formal, hedged)",
+      "During a seminar, propose an interpretation while inviting disagreement. (academic, open)",
+      "At a family dinner, carefully voice doubt about a shared plan. (informal, considerate)",
+      "In a peer-review comment, suggest a possible weakness in an argument. (semi-formal, constructive)"
+    ]
+  },
+  "there is no doubt that": {
+    "cloze": [
+      { "sentence": "____ climate change is one of our greatest challenges.", "answer": "There is no doubt that" },
+      { "sentence": "____ the internet has transformed the way we communicate.", "answer": "There is no doubt that" },
+      { "sentence": "____ regular exercise improves both body and mind.", "answer": "There is no doubt that" },
+      { "sentence": "____ education plays a key role in economic growth.", "answer": "There is no doubt that" },
+      { "sentence": "____ smoking causes serious harm to human health.", "answer": "There is no doubt that" },
+      { "sentence": "____ globalisation has reshaped the modern economy.", "answer": "There is no doubt that" },
+      { "sentence": "____ these reforms will affect millions of workers.", "answer": "There is no doubt that" },
+      { "sentence": "____ social media has changed how young people interact.", "answer": "There is no doubt that" },
+      { "sentence": "____ clean water is essential to public health.", "answer": "There is no doubt that" },
+      { "sentence": "____ the city has grown rapidly over the past decade.", "answer": "There is no doubt that" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Không còn nghi ngờ gì rằng công nghệ đã thay đổi cuộc sống của chúng ta." },
+      { "direction": "vn_to_en", "source": "Không còn nghi ngờ gì rằng ô nhiễm đang ngày càng nghiêm trọng." },
+      { "direction": "vn_to_en", "source": "Không còn nghi ngờ gì rằng giáo dục mang lại nhiều cơ hội hơn." },
+      { "direction": "vn_to_en", "source": "Không còn nghi ngờ gì rằng thể thao tốt cho sức khỏe." },
+      { "direction": "vn_to_en", "source": "Không còn nghi ngờ gì rằng thành phố đang đối mặt với ùn tắc giao thông." },
+      { "direction": "en_to_vn", "source": "There is no doubt that vaccines have saved millions of lives." },
+      { "direction": "en_to_vn", "source": "There is no doubt that reading improves vocabulary over time." },
+      { "direction": "en_to_vn", "source": "There is no doubt that tourism boosts the local economy." },
+      { "direction": "en_to_vn", "source": "There is no doubt that the project has been a huge success." },
+      { "direction": "en_to_vn", "source": "There is no doubt that this decision will be controversial." }
+    ],
+    "scenario": [
+      "In an IELTS essay introduction, state an undeniable fact about technology. (formal, academic)",
+      "In a presentation, emphasise a point your audience already accepts. (professional, confident)",
+      "Writing a persuasive letter, stress a claim you treat as certain. (formal, emphatic)",
+      "In a science report, highlight a well-established finding. (academic, objective)",
+      "In a debate, open with a premise both sides agree on. (formal, assertive)",
+      "Reassuring a nervous friend, affirm something you are sure of. (warm, confident)",
+      "In a news editorial, underline an obvious social trend. (public, authoritative)",
+      "In a business proposal, state a market fact with certainty. (professional, persuasive)",
+      "In a health leaflet, state a proven medical fact plainly. (informative, clear)",
+      "In a group essay, assert a shared conclusion your team reached. (semi-formal, firm)"
+    ]
+  },
+  "advocate": {
+    "cloze": [
+      { "sentence": "Many economists ____ raising taxes on carbon emissions.", "answer": "advocate" },
+      { "sentence": "She is a passionate ____ for children's rights.", "answer": "advocate" },
+      { "sentence": "The organisation ____ greater transparency in government.", "answer": "advocates" },
+      { "sentence": "For years he has ____ a shorter working week.", "answer": "advocated" },
+      { "sentence": "Some experts ____ banning cars from city centres.", "answer": "advocate" },
+      { "sentence": "As a lifelong ____ of free education, she gave many speeches.", "answer": "advocate" },
+      { "sentence": "The charity is ____ for cleaner rivers across the region.", "answer": "advocating" },
+      { "sentence": "Doctors increasingly ____ a plant-based diet for health.", "answer": "advocate" },
+      { "sentence": "He became a leading ____ of renewable energy.", "answer": "advocate" },
+      { "sentence": "Critics argue the report ____ policies that help only the rich.", "answer": "advocates" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Nhiều nhà khoa học ủng hộ việc giảm sử dụng nhựa." },
+      { "direction": "vn_to_en", "source": "Cô ấy là người ủng hộ mạnh mẽ cho quyền phụ nữ." },
+      { "direction": "vn_to_en", "source": "Chính phủ ủng hộ đầu tư nhiều hơn vào giáo dục." },
+      { "direction": "vn_to_en", "source": "Ông ấy đã ủng hộ cải cách này trong nhiều năm." },
+      { "direction": "vn_to_en", "source": "Một số chuyên gia ủng hộ việc làm việc từ xa lâu dài." },
+      { "direction": "en_to_vn", "source": "Environmental groups advocate stricter limits on pollution." },
+      { "direction": "en_to_vn", "source": "She is a well-known advocate of animal welfare." },
+      { "direction": "en_to_vn", "source": "The report advocates investing more in public transport." },
+      { "direction": "en_to_vn", "source": "He has long advocated free access to healthcare." },
+      { "direction": "en_to_vn", "source": "Teachers who advocate smaller classes cite better results." }
+    ],
+    "scenario": [
+      "In an argumentative essay, support a policy you think experts should back. (formal, academic)",
+      "In a campaign speech, describe yourself as a champion of a cause. (public, passionate)",
+      "In a formal proposal, recommend a specific reform to management. (professional, persuasive)",
+      "Introducing a guest speaker, describe them as a defender of a cause. (semi-formal, respectful)",
+      "In an NGO newsletter, explain what the group pushes for. (informative, committed)",
+      "In a debate, argue in favour of a solution and urge others to support it. (formal, assertive)",
+      "Encouraging a friend to join a cause, explain why you champion it. (warm, personal)",
+      "In an op-ed, call for a policy change you strongly support. (public, urgent)",
+      "In a university society bio, describe a member as a supporter of a cause. (neutral, factual)",
+      "At a town-hall meeting, publicly back a proposal for greener transport. (semi-formal, civic)"
+    ]
+  },
+  "be in favour of": {
+    "cloze": [
+      { "sentence": "Most residents ____ building a new library in the area.", "answer": "are in favour of" },
+      { "sentence": "I ____ stricter rules on plastic packaging.", "answer": "am in favour of" },
+      { "sentence": "The committee ____ extending the school day.", "answer": "is in favour of" },
+      { "sentence": "Are you ____ lowering the driving age?", "answer": "in favour of" },
+      { "sentence": "Many parents ____ banning phones in classrooms.", "answer": "are in favour of" },
+      { "sentence": "She has always ____ free public transport.", "answer": "been in favour of" },
+      { "sentence": "The workers ____ a four-day working week.", "answer": "are in favour of" },
+      { "sentence": "Personally, I ____ investing more in renewable energy.", "answer": "am in favour of" },
+      { "sentence": "A majority of voters ____ the new proposal.", "answer": "are in favour of" },
+      { "sentence": "The council ____ pedestrianising the town centre.", "answer": "is in favour of" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Nhiều người ủng hộ việc tăng lương tối thiểu." },
+      { "direction": "vn_to_en", "source": "Tôi ủng hộ việc cấm hút thuốc ở nơi công cộng." },
+      { "direction": "vn_to_en", "source": "Hầu hết sinh viên ủng hộ học phí thấp hơn." },
+      { "direction": "vn_to_en", "source": "Chính quyền địa phương ủng hộ xây thêm công viên." },
+      { "direction": "vn_to_en", "source": "Cô ấy luôn ủng hộ giáo dục miễn phí." },
+      { "direction": "en_to_vn", "source": "Many economists are in favour of a carbon tax." },
+      { "direction": "en_to_vn", "source": "Are you in favour of longer opening hours for shops?" },
+      { "direction": "en_to_vn", "source": "The staff are strongly in favour of flexible working." },
+      { "direction": "en_to_vn", "source": "I am in favour of recycling schemes in every neighbourhood." },
+      { "direction": "en_to_vn", "source": "Most citizens were in favour of the new bike lanes." }
+    ],
+    "scenario": [
+      "In an opinion essay, state that you support a particular policy. (formal, academic)",
+      "In a meeting vote, say clearly that you support the motion. (professional, direct)",
+      "In a survey comment, indicate you back a proposed change. (neutral, brief)",
+      "Debating with classmates, declare which side you support. (semi-formal, clear)",
+      "Chatting with neighbours, say you support a local plan. (informal, friendly)",
+      "In a letter to the council, express support for a new park. (formal, civic)",
+      "In a family discussion, say you support a shared decision. (informal, warm)",
+      "In a workplace poll, register your support for a policy. (professional, concise)",
+      "In a public forum, voice support for stricter recycling rules. (public, measured)",
+      "In a group project chat, agree in favour of one plan over another. (casual, cooperative)"
+    ]
+  },
+  "be opposed to": {
+    "cloze": [
+      { "sentence": "Many teachers ____ using tablets for very young children.", "answer": "are opposed to" },
+      { "sentence": "I ____ any plan that damages the local wildlife.", "answer": "am opposed to" },
+      { "sentence": "The union ____ cutting workers' overtime pay.", "answer": "is opposed to" },
+      { "sentence": "Residents ____ the construction of a new motorway.", "answer": "are opposed to" },
+      { "sentence": "She has always ____ testing products on animals.", "answer": "been opposed to" },
+      { "sentence": "Are you ____ raising university tuition fees?", "answer": "opposed to" },
+      { "sentence": "Environmentalists ____ drilling for oil in the region.", "answer": "are opposed to" },
+      { "sentence": "The board ____ any further delay to the project.", "answer": "is opposed to" },
+      { "sentence": "Personally, I ____ banning books in schools.", "answer": "am opposed to" },
+      { "sentence": "Most citizens ____ higher taxes on essential goods.", "answer": "are opposed to" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Nhiều người phản đối việc tăng giá điện." },
+      { "direction": "vn_to_en", "source": "Tôi phản đối việc thử nghiệm trên động vật." },
+      { "direction": "vn_to_en", "source": "Người dân phản đối việc xây nhà máy gần khu dân cư." },
+      { "direction": "vn_to_en", "source": "Công đoàn phản đối việc cắt giảm nhân sự." },
+      { "direction": "vn_to_en", "source": "Cô ấy luôn phản đối bạo lực dưới mọi hình thức." },
+      { "direction": "en_to_vn", "source": "Many parents are opposed to longer school hours." },
+      { "direction": "en_to_vn", "source": "The community is strongly opposed to the new landfill." },
+      { "direction": "en_to_vn", "source": "Are you opposed to charging drivers to enter the city?" },
+      { "direction": "en_to_vn", "source": "I am firmly opposed to censoring the press." },
+      { "direction": "en_to_vn", "source": "Some scientists are opposed to releasing the data early." }
+    ],
+    "scenario": [
+      "In an argumentative essay, state your objection to a proposed law. (formal, academic)",
+      "In a meeting, politely register that you object to a plan. (professional, tactful)",
+      "In a petition, state clearly what change people object to. (formal, civic)",
+      "Debating in class, declare that your side opposes the motion. (semi-formal, firm)",
+      "Chatting with friends, say you're against an idea being floated. (informal, honest)",
+      "In a letter to a newspaper, express opposition to a development. (public, measured)",
+      "In a survey, indicate that you disagree with a proposal. (neutral, brief)",
+      "In a workplace discussion, respectfully oppose a new rule. (professional, diplomatic)",
+      "At a community meeting, voice your objection to a road plan. (semi-formal, civic)",
+      "In a family talk, gently say you're against a shared decision. (informal, considerate)"
+    ]
+  },
+  "concede": {
+    "cloze": [
+      { "sentence": "I must ____ that the opposing argument has some merit.", "answer": "concede" },
+      { "sentence": "Although he refused at first, he finally ____ the point.", "answer": "conceded" },
+      { "sentence": "Supporters of the plan ____ that it will be expensive.", "answer": "concede" },
+      { "sentence": "She was unwilling to ____ that she had made a mistake.", "answer": "concede" },
+      { "sentence": "Even critics ____ that the reform improved safety.", "answer": "concede" },
+      { "sentence": "After hours of debate, both sides ____ some ground.", "answer": "conceded" },
+      { "sentence": "The minister ____ that the policy had been rushed.", "answer": "conceded" },
+      { "sentence": "One must ____ that no system is entirely perfect.", "answer": "concede" },
+      { "sentence": "Reluctantly ____ the flaw, he moved on with his speech.", "answer": "conceding" },
+      { "sentence": "I readily ____ that technology also brings real dangers.", "answer": "concede" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Tôi phải thừa nhận rằng ý kiến của bạn cũng có phần đúng." },
+      { "direction": "vn_to_en", "source": "Ông ấy cuối cùng đã thừa nhận rằng kế hoạch có sai sót." },
+      { "direction": "vn_to_en", "source": "Ngay cả người ủng hộ cũng thừa nhận rằng chi phí rất cao." },
+      { "direction": "vn_to_en", "source": "Chúng ta phải thừa nhận rằng không có giải pháp nào hoàn hảo." },
+      { "direction": "vn_to_en", "source": "Cô ấy không muốn thừa nhận rằng mình đã sai." },
+      { "direction": "en_to_vn", "source": "I concede that the plan has one serious weakness." },
+      { "direction": "en_to_vn", "source": "Even its critics concede that the museum is impressive." },
+      { "direction": "en_to_vn", "source": "He finally conceded that his rival had won fairly." },
+      { "direction": "en_to_vn", "source": "One must concede that change is sometimes painful." },
+      { "direction": "en_to_vn", "source": "She conceded the point but stood by her conclusion." }
+    ],
+    "scenario": [
+      "In a balanced essay, admit a valid point on the opposing side before rebutting it. (formal, academic)",
+      "In a debate, gracefully acknowledge a strong point from your opponent. (formal, sporting)",
+      "In a meeting, admit a flaw in your own proposal before continuing. (professional, honest)",
+      "Apologising to a friend, admit you were partly wrong. (informal, sincere)",
+      "In a negotiation, acknowledge a fair point to build trust. (professional, diplomatic)",
+      "In a discussion essay, grant a drawback while defending your view. (academic, measured)",
+      "During a class debate, admit the other team scored a good point. (semi-formal, fair)",
+      "In a review, admit one weakness of a book you mostly praise. (neutral, balanced)",
+      "Talking with family, admit that their concern was reasonable. (informal, warm)",
+      "In a public statement, acknowledge a shortcoming honestly. (formal, accountable)"
+    ]
+  },
+  "furthermore": {
+    "cloze": [
+      { "sentence": "The plan is expensive; ____, it may not even work.", "answer": "Furthermore" },
+      { "sentence": "Exercise strengthens the body. ____, it lifts the mood.", "answer": "Furthermore" },
+      { "sentence": "The city needs more housing. ____, it lacks green space.", "answer": "Furthermore" },
+      { "sentence": "The course improves your writing; ____, it builds confidence.", "answer": "furthermore" },
+      { "sentence": "Fast food is unhealthy. ____, it is often surprisingly costly.", "answer": "Furthermore" },
+      { "sentence": "The policy is unfair, and ____, it is hard to enforce.", "answer": "furthermore" },
+      { "sentence": "Reading builds vocabulary. ____, it sharpens critical thinking.", "answer": "Furthermore" },
+      { "sentence": "The bridge is unsafe; ____, repairs would cost millions.", "answer": "furthermore" },
+      { "sentence": "Remote work saves time. ____, it reduces office expenses.", "answer": "Furthermore" },
+      { "sentence": "The app is slow. ____, it drains the battery quickly.", "answer": "Furthermore" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Kế hoạch này tốn kém; hơn nữa, nó khó thực hiện." },
+      { "direction": "vn_to_en", "source": "Tập thể dục tốt cho tim; hơn nữa, nó giúp giảm căng thẳng." },
+      { "direction": "vn_to_en", "source": "Đọc sách mở rộng kiến thức; hơn nữa, nó cải thiện trí nhớ." },
+      { "direction": "vn_to_en", "source": "Thành phố thiếu nhà ở; hơn nữa, giao thông rất tệ." },
+      { "direction": "vn_to_en", "source": "Sản phẩm này đắt; hơn nữa, chất lượng không ổn định." },
+      { "direction": "en_to_vn", "source": "The scheme is costly; furthermore, it benefits very few people." },
+      { "direction": "en_to_vn", "source": "Solar power is clean. Furthermore, it is becoming cheaper." },
+      { "direction": "en_to_vn", "source": "The report is outdated; furthermore, it contains several errors." },
+      { "direction": "en_to_vn", "source": "The job pays well. Furthermore, it offers great training." },
+      { "direction": "en_to_vn", "source": "Smoking harms the smoker; furthermore, it affects those nearby." }
+    ],
+    "scenario": [
+      "In an essay body paragraph, add a second supporting reason formally. (formal, academic)",
+      "In a business report, add an extra advantage to your argument. (professional, formal)",
+      "In a formal complaint letter, add another grievance. (formal, firm)",
+      "In a proposal, stack an additional benefit onto the first. (professional, persuasive)",
+      "In a debate speech, add a further point to strengthen your case. (formal, assertive)",
+      "In an academic review, add another criticism of a study. (academic, precise)",
+      "In a cover letter, add another reason you suit the role. (professional, confident)",
+      "In an editorial, pile on an additional argument for reform. (public, persuasive)",
+      "In a grant application, add a further justification for funding. (formal, structured)",
+      "In an information leaflet, add another benefit of a service. (informative, clear)"
+    ]
+  },
+  "moreover": {
+    "cloze": [
+      { "sentence": "The design is elegant; ____, it is remarkably cheap to build.", "answer": "Moreover" },
+      { "sentence": "Cycling keeps you fit. ____, it helps cut pollution.", "answer": "Moreover" },
+      { "sentence": "The scheme wastes money, and ____, it wastes people's time.", "answer": "moreover" },
+      { "sentence": "Libraries offer free books. ____, they provide a quiet workspace.", "answer": "Moreover" },
+      { "sentence": "The results are impressive; ____, they were achieved on a small budget.", "answer": "moreover" },
+      { "sentence": "Junk food harms health. ____, it is heavily marketed to children.", "answer": "Moreover" },
+      { "sentence": "The new law is unclear; ____, it contradicts existing rules.", "answer": "moreover" },
+      { "sentence": "Volunteering helps others. ____, it builds valuable skills.", "answer": "Moreover" },
+      { "sentence": "The city is polluted. ____, it suffers constant traffic jams.", "answer": "Moreover" },
+      { "sentence": "The software is powerful; ____, it is easy to learn.", "answer": "moreover" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Sản phẩm này bền; hơn nữa, giá lại rất hợp lý." },
+      { "direction": "vn_to_en", "source": "Đi xe đạp giúp khỏe mạnh; hơn nữa, nó thân thiện với môi trường." },
+      { "direction": "vn_to_en", "source": "Thư viện cung cấp sách miễn phí; hơn nữa, đó là nơi học yên tĩnh." },
+      { "direction": "vn_to_en", "source": "Kế hoạch này tốn kém; hơn nữa, nó không thực tế." },
+      { "direction": "vn_to_en", "source": "Học ngoại ngữ mở ra cơ hội; hơn nữa, nó rèn luyện trí não." },
+      { "direction": "en_to_vn", "source": "The city is crowded; moreover, housing is extremely expensive." },
+      { "direction": "en_to_vn", "source": "The course is practical. Moreover, the teachers are excellent." },
+      { "direction": "en_to_vn", "source": "The plan is risky; moreover, it lacks public support." },
+      { "direction": "en_to_vn", "source": "Recycling saves resources. Moreover, it creates new jobs." },
+      { "direction": "en_to_vn", "source": "The phone is fast; moreover, its battery lasts all day." }
+    ],
+    "scenario": [
+      "In a formal essay, add a further supporting idea to your paragraph. (formal, academic)",
+      "In a research summary, add an additional strength of the findings. (academic, precise)",
+      "In a persuasive letter, reinforce your case with another point. (formal, persuasive)",
+      "In a business pitch, add an extra advantage of your product. (professional, confident)",
+      "In a debate, extend your argument with a further reason. (formal, assertive)",
+      "In an op-ed, add another consideration in favour of change. (public, measured)",
+      "In a formal review, add a further merit of the work. (semi-formal, balanced)",
+      "In a report's recommendations, add a supporting justification. (professional, structured)",
+      "In a scholarship essay, add another reason you deserve support. (formal, earnest)",
+      "In an informative article, add a further benefit for readers. (informative, clear)"
+    ]
+  },
+  "in addition": {
+    "cloze": [
+      { "sentence": "The hotel offers free breakfast. ____, guests get free parking.", "answer": "In addition" },
+      { "sentence": "____ to French, she speaks fluent Japanese.", "answer": "In addition" },
+      { "sentence": "The course covers grammar; ____, it includes speaking practice.", "answer": "in addition" },
+      { "sentence": "____, the report highlights several safety concerns.", "answer": "In addition" },
+      { "sentence": "The city built new roads. ____, it expanded the metro.", "answer": "In addition" },
+      { "sentence": "____ to lower costs, the plan reduces waste.", "answer": "In addition" },
+      { "sentence": "The job offers good pay; ____, it provides flexible hours.", "answer": "in addition" },
+      { "sentence": "The gym has modern equipment. ____, it opens 24 hours.", "answer": "In addition" },
+      { "sentence": "____, the study found a link between sleep and memory.", "answer": "In addition" },
+      { "sentence": "The tablet is light. ____, its screen is very clear.", "answer": "In addition" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Khách sạn có bữa sáng miễn phí; thêm vào đó, có cả hồ bơi." },
+      { "direction": "vn_to_en", "source": "Ngoài tiếng Anh, cô ấy còn nói được tiếng Pháp." },
+      { "direction": "vn_to_en", "source": "Khóa học dạy ngữ pháp; thêm vào đó, có luyện nói." },
+      { "direction": "vn_to_en", "source": "Công việc trả lương tốt; thêm vào đó, giờ giấc linh hoạt." },
+      { "direction": "vn_to_en", "source": "Thành phố xây thêm đường; thêm vào đó, mở rộng tàu điện." },
+      { "direction": "en_to_vn", "source": "The plan is cheap; in addition, it is easy to carry out." },
+      { "direction": "en_to_vn", "source": "In addition to sport, the school offers music and art." },
+      { "direction": "en_to_vn", "source": "The app tracks steps; in addition, it monitors sleep." },
+      { "direction": "en_to_vn", "source": "In addition, the survey revealed a rise in remote working." },
+      { "direction": "en_to_vn", "source": "The flat is spacious; in addition, it has a lovely view." }
+    ],
+    "scenario": [
+      "In an essay paragraph, add a supporting point in a formal way. (formal, academic)",
+      "In a CV summary, list an extra qualification you hold. (professional, concise)",
+      "In a product description, add another feature for buyers. (neutral, informative)",
+      "In a formal letter, add a further piece of information. (formal, clear)",
+      "In a proposal, add an additional benefit of your plan. (professional, persuasive)",
+      "In a report, introduce a further finding. (academic, objective)",
+      "In an email to a client, add extra details about a service. (professional, polite)",
+      "In a debate, add another reason to support your position. (semi-formal, clear)",
+      "In an advert, add another selling point for a course. (persuasive, upbeat)",
+      "In a study guide, add a further tip for learners. (informative, friendly)"
+    ]
+  },
+  "however": {
+    "cloze": [
+      { "sentence": "The idea sounds simple; ____, it is hard to put into practice.", "answer": "however" },
+      { "sentence": "Many people want change. Few, ____, are willing to act.", "answer": "however" },
+      { "sentence": "____, not everyone agrees with this conclusion.", "answer": "However" },
+      { "sentence": "The plan has clear benefits. ____, it also carries real risks.", "answer": "However" },
+      { "sentence": "She studied hard; ____, she still failed the exam.", "answer": "however" },
+      { "sentence": "The film was praised by critics. Audiences, ____, disliked it.", "answer": "however" },
+      { "sentence": "Technology brings comfort. ____, it can also isolate us.", "answer": "However" },
+      { "sentence": "The city is beautiful; ____, it is extremely expensive.", "answer": "however" },
+      { "sentence": "____, there is another side to this argument.", "answer": "However" },
+      { "sentence": "The medicine works quickly. ____, it has side effects.", "answer": "However" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Kế hoạch nghe hay; tuy nhiên, nó rất khó thực hiện." },
+      { "direction": "vn_to_en", "source": "Cô ấy học chăm chỉ; tuy nhiên, kết quả vẫn không tốt." },
+      { "direction": "vn_to_en", "source": "Công nghệ mang lại tiện lợi; tuy nhiên, nó cũng có mặt trái." },
+      { "direction": "vn_to_en", "source": "Thành phố rất đẹp; tuy nhiên, chi phí sống rất cao." },
+      { "direction": "vn_to_en", "source": "Nhiều người muốn thay đổi; tuy nhiên, ít ai hành động." },
+      { "direction": "en_to_vn", "source": "The results were promising; however, more research is needed." },
+      { "direction": "en_to_vn", "source": "He is talented. However, he rarely practises." },
+      { "direction": "en_to_vn", "source": "The policy is popular; however, it may be too costly." },
+      { "direction": "en_to_vn", "source": "However, some experts strongly disagree with this view." },
+      { "direction": "en_to_vn", "source": "The car is cheap; however, it uses a lot of fuel." }
+    ],
+    "scenario": [
+      "In an essay, introduce a contrasting idea in a formal way. (formal, academic)",
+      "In a report, note an exception to a positive result. (professional, objective)",
+      "In a discursive paragraph, pivot to the opposing view. (academic, balanced)",
+      "In a polite email, gently raise a problem after good news. (professional, tactful)",
+      "In a debate, counter your opponent's point smoothly. (semi-formal, measured)",
+      "In a review, note a drawback after praising a product. (neutral, balanced)",
+      "In an op-ed, introduce a complicating fact. (public, thoughtful)",
+      "Advising a friend, add a word of caution after encouragement. (informal, caring)",
+      "In a formal proposal, acknowledge a limitation of your plan. (professional, honest)",
+      "In a news report, present a contrasting viewpoint. (neutral, factual)"
+    ]
+  },
+  "nevertheless": {
+    "cloze": [
+      { "sentence": "The task was difficult; ____, the team completed it on time.", "answer": "nevertheless" },
+      { "sentence": "He had little experience. ____, he was given the job.", "answer": "Nevertheless" },
+      { "sentence": "The evidence is limited; ____, the theory remains popular.", "answer": "nevertheless" },
+      { "sentence": "It rained all day. We enjoyed the trip, ____.", "answer": "nevertheless" },
+      { "sentence": "The plan is risky. ____, it may be worth trying.", "answer": "Nevertheless" },
+      { "sentence": "She was exhausted; ____, she finished the marathon.", "answer": "nevertheless" },
+      { "sentence": "The costs are high. ____, the benefits justify them.", "answer": "Nevertheless" },
+      { "sentence": "The book is long and slow; ____, it is deeply rewarding.", "answer": "nevertheless" },
+      { "sentence": "____, some people continue to doubt the findings.", "answer": "Nevertheless" },
+      { "sentence": "The city faces many problems; ____, it keeps attracting tourists.", "answer": "nevertheless" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Công việc rất khó; tuy nhiên, họ vẫn hoàn thành đúng hạn." },
+      { "direction": "vn_to_en", "source": "Anh ấy ít kinh nghiệm; dù vậy, vẫn được nhận vào làm." },
+      { "direction": "vn_to_en", "source": "Trời mưa cả ngày; tuy nhiên, chúng tôi vẫn thấy vui." },
+      { "direction": "vn_to_en", "source": "Chi phí rất cao; dù vậy, lợi ích vẫn xứng đáng." },
+      { "direction": "vn_to_en", "source": "Cô ấy kiệt sức; tuy nhiên, cô vẫn về đích." },
+      { "direction": "en_to_vn", "source": "The evidence is weak; nevertheless, many people believe it." },
+      { "direction": "en_to_vn", "source": "The road was long. Nevertheless, they pressed on." },
+      { "direction": "en_to_vn", "source": "The plan has flaws; nevertheless, it is our best option." },
+      { "direction": "en_to_vn", "source": "Nevertheless, the company decided to expand overseas." },
+      { "direction": "en_to_vn", "source": "The film was slow; nevertheless, the ending was powerful." }
+    ],
+    "scenario": [
+      "In a formal essay, concede a point yet maintain your position. (formal, academic)",
+      "In a report, acknowledge a difficulty but affirm success. (professional, measured)",
+      "In a recommendation, admit a drawback yet still advise going ahead. (professional, balanced)",
+      "In a debate, grant an opposing fact but hold your stance. (semi-formal, firm)",
+      "In a review, note a flaw yet still praise overall. (neutral, fair)",
+      "In an inspiring speech, admit hardship but stress perseverance. (public, uplifting)",
+      "In an academic discussion, accept limited data yet defend a claim. (academic, cautious)",
+      "Encouraging a friend, admit the odds yet urge them on. (informal, supportive)",
+      "In an editorial, acknowledge criticism but restate your view. (public, steady)",
+      "In a cover letter, admit a gap yet emphasise your strengths. (professional, confident)"
+    ]
+  },
+  "on the other hand": {
+    "cloze": [
+      { "sentence": "City life is exciting; ____, it can be stressful and costly.", "answer": "on the other hand" },
+      { "sentence": "Some students prefer exams; others, ____, favour coursework.", "answer": "on the other hand" },
+      { "sentence": "Cars are convenient. ____, they pollute the air.", "answer": "On the other hand" },
+      { "sentence": "____, a smaller town offers peace and lower rent.", "answer": "On the other hand" },
+      { "sentence": "Fast food is cheap; ____, it is often bad for your health.", "answer": "on the other hand" },
+      { "sentence": "Online shopping is easy. ____, it harms local stores.", "answer": "On the other hand" },
+      { "sentence": "Working abroad pays well; ____, it means leaving family behind.", "answer": "on the other hand" },
+      { "sentence": "Some praise the new law. ____, many see it as unfair.", "answer": "On the other hand" },
+      { "sentence": "Tourism brings money; ____, it can damage the environment.", "answer": "on the other hand" },
+      { "sentence": "____, spending more time online can weaken real friendships.", "answer": "On the other hand" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Sống ở thành phố tiện lợi; mặt khác, chi phí lại rất cao." },
+      { "direction": "vn_to_en", "source": "Học trực tuyến linh hoạt; mặt khác, dễ khiến ta mất tập trung." },
+      { "direction": "vn_to_en", "source": "Ô tô nhanh chóng; mặt khác, chúng gây ô nhiễm không khí." },
+      { "direction": "vn_to_en", "source": "Du lịch mang lại thu nhập; mặt khác, nó có thể hại môi trường." },
+      { "direction": "vn_to_en", "source": "Đồ ăn nhanh rẻ; mặt khác, nó không tốt cho sức khỏe." },
+      { "direction": "en_to_vn", "source": "Working from home saves time; on the other hand, it can feel lonely." },
+      { "direction": "en_to_vn", "source": "Solar power is clean. On the other hand, it depends on the weather." },
+      { "direction": "en_to_vn", "source": "Some enjoy big cities; on the other hand, others prefer the countryside." },
+      { "direction": "en_to_vn", "source": "On the other hand, strict rules can discourage creativity." },
+      { "direction": "en_to_vn", "source": "Owning a car is handy; on the other hand, it is very expensive." }
+    ],
+    "scenario": [
+      "In a discussion essay, present the opposing viewpoint after the first. (formal, academic)",
+      "In a pros-and-cons paragraph, introduce the disadvantages. (academic, balanced)",
+      "In a report, contrast a benefit with a matching drawback. (professional, objective)",
+      "Advising a friend on a choice, lay out the other side. (informal, thoughtful)",
+      "In a debate, fairly present the counter-argument. (semi-formal, measured)",
+      "In a product comparison, weigh one option against another. (neutral, informative)",
+      "In an op-ed, balance your point with an opposing consideration. (public, fair)",
+      "In a meeting, weigh a plan's downside against its upside. (professional, balanced)",
+      "In a study of two options, contrast their trade-offs. (academic, analytical)",
+      "In a casual chat weighing two trips, give the alternative view. (informal, relaxed)"
+    ]
+  }
+}

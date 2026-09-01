@@ -1,0 +1,572 @@
+{
+  "it can be argued that": {
+    "cloze": [
+      { "sentence": "____ governments should invest more in public transport rather than building new roads.", "answer": "It can be argued that" },
+      { "sentence": "While technology brings clear benefits, ____ it also erodes our ability to concentrate.", "answer": "it can be argued that" },
+      { "sentence": "____ a shorter working week would actually increase overall productivity.", "answer": "It can be argued that" },
+      { "sentence": "____ tourism does more harm than good to fragile local cultures.", "answer": "It can be argued that" },
+      { "sentence": "From an economic perspective, ____ subsidies distort the free market.", "answer": "it can be argued that" },
+      { "sentence": "____ children learn social skills far more effectively through play than through formal lessons.", "answer": "It can be argued that" },
+      { "sentence": "Nevertheless, ____ strict regulation stifles the very innovation it hopes to encourage.", "answer": "it can be argued that" },
+      { "sentence": "____ the benefits of studying abroad outweigh the considerable costs involved.", "answer": "It can be argued that" },
+      { "sentence": "On the other hand, ____ heavy taxation on unhealthy food unfairly targets the poor.", "answer": "it can be argued that" },
+      { "sentence": "____ museums should remain free so that everyone has equal access to culture.", "answer": "It can be argued that" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Có thể lập luận rằng chính phủ nên chi nhiều hơn cho giáo dục công." },
+      { "direction": "vn_to_en", "source": "Có thể lập luận rằng làm việc từ xa giúp cân bằng cuộc sống tốt hơn." },
+      { "direction": "vn_to_en", "source": "Có thể lập luận rằng mạng xã hội gây hại nhiều hơn lợi cho thanh thiếu niên." },
+      { "direction": "vn_to_en", "source": "Có thể lập luận rằng án tử hình không hề làm giảm tội phạm." },
+      { "direction": "vn_to_en", "source": "Có thể lập luận rằng nghệ thuật cũng quan trọng như khoa học trong trường học." },
+      { "direction": "en_to_vn", "source": "It can be argued that advertising manipulates people into buying things they do not need." },
+      { "direction": "en_to_vn", "source": "It can be argued that free university education would benefit society as a whole." },
+      { "direction": "en_to_vn", "source": "It can be argued that private cars should be banned from city centres." },
+      { "direction": "en_to_vn", "source": "It can be argued that globalisation threatens smaller, traditional industries." },
+      { "direction": "en_to_vn", "source": "It can be argued that reading fiction develops empathy more than any other activity." }
+    ],
+    "scenario": [
+      "You are writing the introduction to an IELTS essay about whether zoos should be banned. Take a balanced, academic tone and open a counter-argument.",
+      "In a university debate, you politely concede that the opposing side has a point before making your own case. Formal register.",
+      "You are drafting a formal report recommending remote work and want to acknowledge a possible objection. Professional tone.",
+      "In an online forum discussing car-free cities, you introduce a reasonable opposing view without sounding aggressive. Measured tone.",
+      "You are writing the body paragraph of an essay on tourism and want to signal that this is a debatable claim. Academic register.",
+      "During a seminar presentation, you introduce a controversial position on genetic engineering. Cautious, hedged tone.",
+      "You are advising a student on essay structure and modelling how to introduce a claim objectively. Instructive tone.",
+      "In a letter to a newspaper about school uniforms, you present a viewpoint as arguable rather than certain. Polite formal tone.",
+      "You are writing a discursive essay on nuclear power and need to open a paragraph that weighs a contested idea. Neutral academic tone.",
+      "In a group project reflection, you raise a point of disagreement diplomatically. Considered, professional tone."
+    ]
+  },
+  "by and large": {
+    "cloze": [
+      { "sentence": "____, the new policy has been well received by both staff and students.", "answer": "By and large" },
+      { "sentence": "The reforms were, ____, a success, though a few details still need work.", "answer": "by and large" },
+      { "sentence": "____, people in the survey preferred flexible working hours.", "answer": "By and large" },
+      { "sentence": "Public opinion is, ____, in favour of stricter environmental laws.", "answer": "by and large" },
+      { "sentence": "____, the two cities share very similar problems with air pollution.", "answer": "By and large" },
+      { "sentence": "The experiment worked, ____, exactly as the researchers had predicted.", "answer": "by and large" },
+      { "sentence": "____, students who read widely tend to write more fluently.", "answer": "By and large" },
+      { "sentence": "The service is, ____, reliable, despite the occasional delay.", "answer": "by and large" },
+      { "sentence": "____, modern medicine has dramatically improved life expectancy.", "answer": "By and large" },
+      { "sentence": "Voters were, ____, satisfied with how the crisis had been handled.", "answer": "by and large" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Nhìn chung, chất lượng cuộc sống ở thành phố đã được cải thiện." },
+      { "direction": "vn_to_en", "source": "Nhìn chung, học sinh thích các bài học có tính tương tác hơn." },
+      { "direction": "vn_to_en", "source": "Đại thể, kế hoạch đã đạt được mục tiêu ban đầu của nó." },
+      { "direction": "vn_to_en", "source": "Nhìn chung, mọi người ủng hộ việc sử dụng năng lượng sạch." },
+      { "direction": "vn_to_en", "source": "Đại thể, các quốc gia giàu có phát thải nhiều carbon hơn." },
+      { "direction": "en_to_vn", "source": "By and large, the benefits of the internet outweigh its drawbacks." },
+      { "direction": "en_to_vn", "source": "By and large, older employees adapted well to the new software." },
+      { "direction": "en_to_vn", "source": "By and large, the campaign succeeded in raising public awareness." },
+      { "direction": "en_to_vn", "source": "By and large, city dwellers walk less than people in the countryside." },
+      { "direction": "en_to_vn", "source": "By and large, the report's conclusions match earlier studies." }
+    ],
+    "scenario": [
+      "You are summarising the overall findings of a survey in an academic essay. Formal, generalising tone.",
+      "In a work review meeting, you give a broad verdict on how the quarter went before noting exceptions. Professional tone.",
+      "You are writing a conclusion to an IELTS essay and want to make a sweeping but fair judgement. Academic register.",
+      "A friend asks how your new city compares overall to your hometown. Casual but thoughtful tone.",
+      "You are drafting a customer feedback summary describing the general trend of responses. Neutral business tone.",
+      "In a book review, you give your overall impression before mentioning one weakness. Balanced, literary tone.",
+      "You are advising a manager on staff morale in general terms. Diplomatic, professional tone.",
+      "In an essay on globalisation, you make a broad generalisation about developing economies. Academic tone.",
+      "You are telling a teacher how the class performed on the whole. Measured, informative tone.",
+      "In a travel article, you sum up the general character of a region for readers. Engaging, descriptive tone."
+    ]
+  },
+  "relatively": {
+    "cloze": [
+      { "sentence": "The course is ____ cheap compared with similar programmes abroad.", "answer": "relatively" },
+      { "sentence": "Crime in the town remains ____ low despite the rising population.", "answer": "relatively" },
+      { "sentence": "Solar panels are now ____ inexpensive to install.", "answer": "relatively" },
+      { "sentence": "The task was ____ simple once we understood the instructions.", "answer": "relatively" },
+      { "sentence": "Only a ____ small number of students failed the exam.", "answer": "relatively" },
+      { "sentence": "Life in the village is ____ quiet and slow-paced.", "answer": "relatively" },
+      { "sentence": "The new phone is ____ light considering its large screen.", "answer": "relatively" },
+      { "sentence": "Unemployment has stayed ____ stable over the past decade.", "answer": "relatively" },
+      { "sentence": "It is ____ easy to learn the basics of coding online.", "answer": "relatively" },
+      { "sentence": "The region enjoys a ____ mild climate throughout the year.", "answer": "relatively" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Giá thuê nhà ở đây tương đối rẻ so với trung tâm thành phố." },
+      { "direction": "vn_to_en", "source": "Số lượng người tham gia tương đối ít so với dự kiến." },
+      { "direction": "vn_to_en", "source": "Công nghệ này vẫn còn tương đối mới ở Việt Nam." },
+      { "direction": "vn_to_en", "source": "Bài kiểm tra tương đối dễ đối với những ai đã ôn tập." },
+      { "direction": "vn_to_en", "source": "Tỷ lệ thất nghiệp ở nước này tương đối thấp." },
+      { "direction": "en_to_vn", "source": "The procedure is relatively safe when performed by an expert." },
+      { "direction": "en_to_vn", "source": "Wages here are relatively high compared to neighbouring countries." },
+      { "direction": "en_to_vn", "source": "The book is relatively short and can be read in an afternoon." },
+      { "direction": "en_to_vn", "source": "Air travel is relatively fast but harmful to the environment." },
+      { "direction": "en_to_vn", "source": "The disease is relatively rare in this part of the world." }
+    ],
+    "scenario": [
+      "You are comparing the cost of two universities in an academic essay. Objective, comparative tone.",
+      "In a research report, you describe a figure as moderate rather than extreme. Neutral scientific tone.",
+      "You are reassuring a nervous friend that a task is not too hard. Casual, encouraging tone.",
+      "In a market analysis, you note that prices are moderate compared with competitors. Business tone.",
+      "You are writing an essay on renewable energy and describing costs in comparative terms. Academic register.",
+      "In a travel guide, you describe a destination as fairly affordable for visitors. Informative tone.",
+      "You are explaining to a colleague that the workload this week is moderate. Professional, reassuring tone.",
+      "In a health leaflet, you describe a treatment as fairly low-risk. Careful, formal tone.",
+      "You are writing a product review comparing size and weight. Balanced consumer tone.",
+      "In a geography essay, you describe a climate in comparative terms. Descriptive academic tone."
+    ]
+  },
+  "significant": {
+    "cloze": [
+      { "sentence": "There has been a ____ increase in the number of electric cars on the road.", "answer": "significant" },
+      { "sentence": "The study revealed a ____ link between diet and mental health.", "answer": "significant" },
+      { "sentence": "Automation could have a ____ impact on employment in the next decade.", "answer": "significant" },
+      { "sentence": "The company reported ____ growth in its overseas markets.", "answer": "significant" },
+      { "sentence": "Education plays a ____ role in reducing poverty.", "answer": "significant" },
+      { "sentence": "The reforms brought about ____ changes to the healthcare system.", "answer": "significant" },
+      { "sentence": "Air pollution poses a ____ threat to public health.", "answer": "significant" },
+      { "sentence": "A ____ proportion of the budget is spent on defence.", "answer": "significant" },
+      { "sentence": "The findings represent a ____ step forward in cancer research.", "answer": "significant" },
+      { "sentence": "There was a ____ drop in crime after the new law was introduced.", "answer": "significant" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Đã có một sự gia tăng đáng kể về nhu cầu năng lượng tái tạo." },
+      { "direction": "vn_to_en", "source": "Giáo dục đóng một vai trò quan trọng trong sự phát triển của trẻ em." },
+      { "direction": "vn_to_en", "source": "Biến đổi khí hậu là một mối đe dọa đáng kể đối với nông nghiệp." },
+      { "direction": "vn_to_en", "source": "Có một sự khác biệt đáng kể giữa hai nhóm." },
+      { "direction": "vn_to_en", "source": "Chính sách mới đã tạo ra những thay đổi quan trọng trong xã hội." },
+      { "direction": "en_to_vn", "source": "The invention of the internet was a significant turning point in history." },
+      { "direction": "en_to_vn", "source": "There has been a significant improvement in air quality since the ban." },
+      { "direction": "en_to_vn", "source": "Technology has had a significant effect on the way we communicate." },
+      { "direction": "en_to_vn", "source": "A significant number of people still lack access to clean water." },
+      { "direction": "en_to_vn", "source": "The discovery could have significant implications for future research." }
+    ],
+    "scenario": [
+      "You are describing a major trend in an IELTS Task 1 report about rising figures. Formal, data-driven tone.",
+      "In an academic essay, you emphasise how important education is for development. Argumentative tone.",
+      "You are presenting research findings that show a strong effect. Scientific, precise tone.",
+      "In a business report, you highlight a notable rise in profits. Professional tone.",
+      "You are warning about a serious environmental threat in an essay. Persuasive academic tone.",
+      "In a news summary, you describe a major change in policy. Informative tone.",
+      "You are writing an essay on technology's important role in society. Balanced academic tone.",
+      "In a proposal, you argue that the benefits are considerable. Persuasive professional tone.",
+      "You are explaining to a class why a historical event mattered greatly. Instructive tone.",
+      "In a grant application, you stress the importance of your project's potential impact. Formal persuasive tone."
+    ]
+  },
+  "widespread": {
+    "cloze": [
+      { "sentence": "There is ____ concern about the effects of social media on young people.", "answer": "widespread" },
+      { "sentence": "The use of smartphones has become ____ across all age groups.", "answer": "widespread" },
+      { "sentence": "The disease caused ____ panic before a cure was found.", "answer": "widespread" },
+      { "sentence": "There is ____ support for the new recycling programme.", "answer": "widespread" },
+      { "sentence": "Corruption remains ____ in some parts of the government.", "answer": "widespread" },
+      { "sentence": "The storm led to ____ damage across the region.", "answer": "widespread" },
+      { "sentence": "There is a ____ belief that hard work guarantees success.", "answer": "widespread" },
+      { "sentence": "Access to the internet is now ____ in urban areas.", "answer": "widespread" },
+      { "sentence": "The protests were ____, spreading to dozens of cities.", "answer": "widespread" },
+      { "sentence": "Poverty is still ____ in many developing countries.", "answer": "widespread" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Có sự lo ngại phổ biến về ô nhiễm không khí ở các thành phố lớn." },
+      { "direction": "vn_to_en", "source": "Việc sử dụng tiếng Anh đã trở nên phổ biến trên toàn thế giới." },
+      { "direction": "vn_to_en", "source": "Nạn thất nghiệp lan rộng đã gây ra nhiều vấn đề xã hội." },
+      { "direction": "vn_to_en", "source": "Có một niềm tin phổ biến rằng tiền bạc mang lại hạnh phúc." },
+      { "direction": "vn_to_en", "source": "Tình trạng thiếu nước sạch vẫn còn phổ biến ở nhiều vùng." },
+      { "direction": "en_to_vn", "source": "There is widespread agreement that action on climate change is urgent." },
+      { "direction": "en_to_vn", "source": "The new technology has gained widespread acceptance among businesses." },
+      { "direction": "en_to_vn", "source": "Widespread deforestation is destroying natural habitats." },
+      { "direction": "en_to_vn", "source": "The rumour caused widespread confusion online." },
+      { "direction": "en_to_vn", "source": "There is widespread criticism of the government's handling of the crisis." }
+    ],
+    "scenario": [
+      "You are describing how common a public concern is in an academic essay. Formal, generalising tone.",
+      "In a report on technology, you note how far a trend has spread. Analytical tone.",
+      "You are writing about a social problem affecting many regions. Persuasive academic tone.",
+      "In a news article, you describe damage affecting a large area. Informative tone.",
+      "You are challenging a common assumption in an essay. Critical academic tone.",
+      "In an environmental essay, you describe a problem occurring everywhere. Argumentative tone.",
+      "You are explaining that a belief is held by many people. Neutral, descriptive tone.",
+      "In a business overview, you note broad acceptance of a product. Professional tone.",
+      "You are describing large-scale protests in a history essay. Factual, formal tone.",
+      "In a public health leaflet, you describe a common condition. Careful, informative tone."
+    ]
+  },
+  "detrimental": {
+    "cloze": [
+      { "sentence": "Too much screen time can be ____ to a child's development.", "answer": "detrimental" },
+      { "sentence": "Smoking has a clearly ____ effect on health.", "answer": "detrimental" },
+      { "sentence": "The policy proved ____ to small businesses.", "answer": "detrimental" },
+      { "sentence": "A lack of sleep is ____ to both mood and memory.", "answer": "detrimental" },
+      { "sentence": "Pollution is deeply ____ to marine life.", "answer": "detrimental" },
+      { "sentence": "Constant comparison on social media can be ____ to self-esteem.", "answer": "detrimental" },
+      { "sentence": "Cutting the education budget would be ____ to future generations.", "answer": "detrimental" },
+      { "sentence": "Excessive stress has a ____ impact on the immune system.", "answer": "detrimental" },
+      { "sentence": "Over-reliance on cars is ____ to public health and the environment.", "answer": "detrimental" },
+      { "sentence": "The drought had a ____ effect on the country's crops.", "answer": "detrimental" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Việc thiếu ngủ có hại cho sức khỏe và khả năng tập trung." },
+      { "direction": "vn_to_en", "source": "Ô nhiễm không khí gây bất lợi cho hệ hô hấp của trẻ em." },
+      { "direction": "vn_to_en", "source": "Áp lực quá mức có thể gây hại cho tinh thần của học sinh." },
+      { "direction": "vn_to_en", "source": "Việc phá rừng có hại cho môi trường tự nhiên." },
+      { "direction": "vn_to_en", "source": "Chế độ ăn nhiều đường có hại cho răng và cân nặng." },
+      { "direction": "en_to_vn", "source": "A sedentary lifestyle is detrimental to long-term health." },
+      { "direction": "en_to_vn", "source": "Noise pollution can be detrimental to concentration and sleep." },
+      { "direction": "en_to_vn", "source": "The chemicals had a detrimental effect on the local water supply." },
+      { "direction": "en_to_vn", "source": "Ignoring feedback can be detrimental to a company's reputation." },
+      { "direction": "en_to_vn", "source": "Excessive gaming may be detrimental to a student's academic performance." }
+    ],
+    "scenario": [
+      "You are arguing that a habit harms health in an IELTS essay. Persuasive academic tone.",
+      "In a public health warning, you explain the harmful effects of a behaviour. Formal, cautionary tone.",
+      "You are writing about how a policy hurts a particular group. Critical, argumentative tone.",
+      "In an environmental essay, you describe harm to ecosystems. Serious academic tone.",
+      "You are advising parents about the harmful effects of too much screen time. Concerned, informative tone.",
+      "In a report, you warn that budget cuts will damage services. Professional, cautionary tone.",
+      "You are explaining to students how stress harms wellbeing. Supportive but serious tone.",
+      "In an essay on transport, you argue that car dependence is harmful. Argumentative tone.",
+      "You are writing a formal complaint about a harmful practice. Firm, formal tone.",
+      "In a science summary, you describe the damaging impact of pollution. Objective tone."
+    ]
+  },
+  "climate change": {
+    "cloze": [
+      { "sentence": "Governments must act now to slow the pace of ____.", "answer": "climate change" },
+      { "sentence": "____ is one of the greatest challenges facing humanity today.", "answer": "Climate change" },
+      { "sentence": "Rising sea levels are a direct consequence of ____.", "answer": "climate change" },
+      { "sentence": "Many scientists warn that ____ is accelerating faster than predicted.", "answer": "climate change" },
+      { "sentence": "Individuals can help fight ____ by reducing their energy use.", "answer": "climate change" },
+      { "sentence": "The conference focused on international efforts to tackle ____.", "answer": "climate change" },
+      { "sentence": "____ threatens food security in many parts of the world.", "answer": "Climate change" },
+      { "sentence": "Education about ____ should begin at an early age.", "answer": "climate change" },
+      { "sentence": "Extreme weather events are becoming more common because of ____.", "answer": "climate change" },
+      { "sentence": "There is now overwhelming evidence that human activity drives ____.", "answer": "climate change" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Biến đổi khí hậu đang ảnh hưởng đến mọi quốc gia trên thế giới." },
+      { "direction": "vn_to_en", "source": "Chúng ta phải hành động ngay để chống lại biến đổi khí hậu." },
+      { "direction": "vn_to_en", "source": "Biến đổi khí hậu là nguyên nhân gây ra nhiều thiên tai." },
+      { "direction": "vn_to_en", "source": "Trồng cây là một cách để làm giảm biến đổi khí hậu." },
+      { "direction": "vn_to_en", "source": "Nhiều người trẻ đang lo lắng về biến đổi khí hậu." },
+      { "direction": "en_to_vn", "source": "Climate change is causing glaciers to melt at an alarming rate." },
+      { "direction": "en_to_vn", "source": "Reducing meat consumption can help combat climate change." },
+      { "direction": "en_to_vn", "source": "Climate change will have a devastating impact on future generations." },
+      { "direction": "en_to_vn", "source": "International cooperation is essential to address climate change." },
+      { "direction": "en_to_vn", "source": "Many species are at risk of extinction due to climate change." }
+    ],
+    "scenario": [
+      "You are opening an IELTS essay about the causes of a major global issue. Formal academic tone.",
+      "In a school speech, you urge classmates to take action on the environment. Persuasive, motivating tone.",
+      "You are writing a report on the effects of global warming on agriculture. Objective tone.",
+      "In a policy proposal, you argue for international cooperation. Formal, persuasive tone.",
+      "You are explaining the issue to younger students in simple terms. Clear, educational tone.",
+      "In an opinion essay, you argue whether individuals or governments are responsible. Argumentative tone.",
+      "You are writing a placard slogan for a climate rally. Punchy, urgent tone.",
+      "In a science article, you describe a consequence of rising temperatures. Informative tone.",
+      "You are drafting a letter to a politician demanding action. Firm, formal tone.",
+      "In a discussion essay, you weigh solutions to a global environmental problem. Balanced academic tone."
+    ]
+  },
+  "carbon footprint": {
+    "cloze": [
+      { "sentence": "Flying less is one way to reduce your ____.", "answer": "carbon footprint" },
+      { "sentence": "The company pledged to cut its ____ by half within five years.", "answer": "carbon footprint" },
+      { "sentence": "Eating locally grown food can lower your ____.", "answer": "carbon footprint" },
+      { "sentence": "Every household should try to minimise its ____.", "answer": "carbon footprint" },
+      { "sentence": "Switching to renewable energy dramatically reduces a factory's ____.", "answer": "carbon footprint" },
+      { "sentence": "Air travel has a much larger ____ than train travel.", "answer": "carbon footprint" },
+      { "sentence": "Consumers are becoming more aware of their personal ____.", "answer": "carbon footprint" },
+      { "sentence": "The report measured the ____ of the entire supply chain.", "answer": "carbon footprint" },
+      { "sentence": "Working from home can significantly reduce a person's ____.", "answer": "carbon footprint" },
+      { "sentence": "Governments are encouraging businesses to shrink their ____.", "answer": "carbon footprint" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Đi xe đạp thay vì lái xe giúp giảm lượng khí thải carbon của bạn." },
+      { "direction": "vn_to_en", "source": "Các công ty lớn cần giảm lượng khí thải carbon của họ." },
+      { "direction": "vn_to_en", "source": "Ăn ít thịt hơn có thể làm giảm dấu chân carbon của một người." },
+      { "direction": "vn_to_en", "source": "Máy bay tạo ra lượng khí thải carbon rất lớn." },
+      { "direction": "vn_to_en", "source": "Mỗi gia đình nên cố gắng giảm lượng khí thải carbon của mình." },
+      { "direction": "en_to_vn", "source": "Using public transport helps reduce your carbon footprint." },
+      { "direction": "en_to_vn", "source": "The airline is investing in cleaner fuel to lower its carbon footprint." },
+      { "direction": "en_to_vn", "source": "Buying second-hand clothes can shrink your carbon footprint." },
+      { "direction": "en_to_vn", "source": "The city aims to reach a zero carbon footprint by 2040." },
+      { "direction": "en_to_vn", "source": "Recycling and composting both help cut your household carbon footprint." }
+    ],
+    "scenario": [
+      "You are writing an essay arguing that individuals should reduce their environmental impact. Persuasive academic tone.",
+      "In a company sustainability report, you set a target for emissions. Formal business tone.",
+      "You are giving practical advice in a magazine on greener living. Friendly, informative tone.",
+      "In an environmental campaign leaflet, you encourage readers to act. Motivating tone.",
+      "You are comparing the emissions of different transport modes in an essay. Analytical academic tone.",
+      "In a school project, you explain the concept to classmates. Clear, educational tone.",
+      "You are writing a proposal for your workplace to go greener. Professional, persuasive tone.",
+      "In a blog post, you share tips for a lower-impact lifestyle. Casual, encouraging tone.",
+      "You are drafting a policy that rewards low-emission companies. Formal, official tone.",
+      "In a discussion essay, you debate whether personal action makes a difference. Balanced academic tone."
+    ]
+  },
+  "renewable energy": {
+    "cloze": [
+      { "sentence": "Many countries are investing heavily in ____ such as wind and solar power.", "answer": "renewable energy" },
+      { "sentence": "____ is essential if we want to reduce our dependence on fossil fuels.", "answer": "Renewable energy" },
+      { "sentence": "The government offers subsidies to households that install ____ systems.", "answer": "renewable energy" },
+      { "sentence": "Unlike coal, ____ does not produce harmful greenhouse gases.", "answer": "renewable energy" },
+      { "sentence": "The cost of ____ has fallen sharply over the past decade.", "answer": "renewable energy" },
+      { "sentence": "Denmark generates much of its electricity from ____.", "answer": "renewable energy" },
+      { "sentence": "Investing in ____ creates thousands of new jobs.", "answer": "renewable energy" },
+      { "sentence": "Schools should teach students about the benefits of ____.", "answer": "renewable energy" },
+      { "sentence": "____ sources include the sun, wind, water and geothermal heat.", "answer": "Renewable energy" },
+      { "sentence": "The transition to ____ is vital for a sustainable future.", "answer": "renewable energy" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Năng lượng tái tạo là giải pháp cho cuộc khủng hoảng khí hậu." },
+      { "direction": "vn_to_en", "source": "Nhiều quốc gia đang chuyển sang sử dụng năng lượng tái tạo." },
+      { "direction": "vn_to_en", "source": "Năng lượng tái tạo sạch hơn nhiều so với than đá." },
+      { "direction": "vn_to_en", "source": "Chính phủ nên đầu tư nhiều hơn vào năng lượng tái tạo." },
+      { "direction": "vn_to_en", "source": "Năng lượng mặt trời là một dạng năng lượng tái tạo phổ biến." },
+      { "direction": "en_to_vn", "source": "Renewable energy is becoming cheaper than fossil fuels in many regions." },
+      { "direction": "en_to_vn", "source": "Wind farms are an important source of renewable energy." },
+      { "direction": "en_to_vn", "source": "The country aims to run entirely on renewable energy by 2050." },
+      { "direction": "en_to_vn", "source": "Renewable energy reduces both pollution and reliance on imports." },
+      { "direction": "en_to_vn", "source": "Investment in renewable energy has grown rapidly worldwide." }
+    ],
+    "scenario": [
+      "You are arguing in an essay that governments should fund clean power. Persuasive academic tone.",
+      "In a policy briefing, you outline the benefits of switching away from fossil fuels. Formal tone.",
+      "You are explaining different clean power sources to a class. Educational tone.",
+      "In an opinion piece, you argue this is the solution to climate change. Argumentative tone.",
+      "You are writing a proposal for solar panels on a school roof. Professional, persuasive tone.",
+      "In a report, you describe how costs have fallen over time. Analytical tone.",
+      "You are drafting a campaign slogan promoting clean power. Punchy, motivating tone.",
+      "In a discussion essay, you weigh the pros and cons of green power. Balanced academic tone.",
+      "You are advising a household on cutting energy bills sustainably. Friendly, practical tone.",
+      "In a job creation argument, you link green power to employment. Persuasive economic tone."
+    ]
+  },
+  "sustainable": {
+    "cloze": [
+      { "sentence": "We need to develop more ____ ways of producing food.", "answer": "sustainable" },
+      { "sentence": "The city has adopted a ____ approach to urban planning.", "answer": "sustainable" },
+      { "sentence": "Rapid economic growth is often not ____ in the long term.", "answer": "sustainable" },
+      { "sentence": "Companies are under pressure to make their practices more ____.", "answer": "sustainable" },
+      { "sentence": "A ____ lifestyle involves reducing waste and consumption.", "answer": "sustainable" },
+      { "sentence": "Farmers are turning to ____ methods that protect the soil.", "answer": "sustainable" },
+      { "sentence": "The project aims to create ____ jobs in rural communities.", "answer": "sustainable" },
+      { "sentence": "Public transport is a more ____ option than private cars.", "answer": "sustainable" },
+      { "sentence": "Tourism must be managed carefully to remain ____.", "answer": "sustainable" },
+      { "sentence": "Governments should promote ____ development that lasts for generations.", "answer": "sustainable" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Chúng ta cần một mô hình phát triển bền vững hơn." },
+      { "direction": "vn_to_en", "source": "Nông nghiệp bền vững giúp bảo vệ đất và nguồn nước." },
+      { "direction": "vn_to_en", "source": "Tăng trưởng kinh tế phải đi đôi với sự bền vững." },
+      { "direction": "vn_to_en", "source": "Một lối sống bền vững đòi hỏi giảm thiểu rác thải." },
+      { "direction": "vn_to_en", "source": "Du lịch bền vững mang lại lợi ích cho cộng đồng địa phương." },
+      { "direction": "en_to_vn", "source": "The company is committed to sustainable manufacturing." },
+      { "direction": "en_to_vn", "source": "A sustainable economy balances growth with environmental care." },
+      { "direction": "en_to_vn", "source": "Sustainable farming avoids damaging chemicals and overuse of land." },
+      { "direction": "en_to_vn", "source": "Cities must build sustainable transport systems for the future." },
+      { "direction": "en_to_vn", "source": "Fast fashion is rarely sustainable or ethical." }
+    ],
+    "scenario": [
+      "You are arguing for long-term environmental thinking in an essay. Persuasive academic tone.",
+      "In an urban planning report, you recommend greener development. Formal professional tone.",
+      "You are explaining to students what a low-impact lifestyle means. Educational tone.",
+      "In a business proposal, you promise environmentally responsible practices. Professional tone.",
+      "You are writing about eco-friendly farming in an essay. Analytical academic tone.",
+      "In a tourism brochure, you highlight responsible travel. Appealing, informative tone.",
+      "You are advising a company on lasting, responsible growth. Consultative tone.",
+      "In a discussion essay, you weigh growth against the environment. Balanced academic tone.",
+      "You are drafting a campaign for greener consumer choices. Motivating tone.",
+      "In a policy document, you define development that lasts. Formal, official tone."
+    ]
+  },
+  "academic pressure": {
+    "cloze": [
+      { "sentence": "Many students suffer from severe ____ during exam season.", "answer": "academic pressure" },
+      { "sentence": "____ can lead to anxiety and even depression among teenagers.", "answer": "Academic pressure" },
+      { "sentence": "Parents sometimes place too much ____ on their children.", "answer": "academic pressure" },
+      { "sentence": "Schools should do more to help students cope with ____.", "answer": "academic pressure" },
+      { "sentence": "The intense ____ in some countries leaves little time for hobbies.", "answer": "academic pressure" },
+      { "sentence": "Excessive ____ may actually harm a child's love of learning.", "answer": "academic pressure" },
+      { "sentence": "Counsellors can help students manage ____ more effectively.", "answer": "academic pressure" },
+      { "sentence": "Some argue that ____ prepares young people for a competitive world.", "answer": "academic pressure" },
+      { "sentence": "Reducing ____ could improve students' mental health.", "answer": "academic pressure" },
+      { "sentence": "The constant ____ made it hard for her to sleep at night.", "answer": "academic pressure" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Áp lực học tập khiến nhiều học sinh cảm thấy căng thẳng." },
+      { "direction": "vn_to_en", "source": "Cha mẹ không nên tạo quá nhiều áp lực học tập cho con cái." },
+      { "direction": "vn_to_en", "source": "Áp lực học tập có thể ảnh hưởng đến sức khỏe tinh thần." },
+      { "direction": "vn_to_en", "source": "Nhà trường nên giúp học sinh đối phó với áp lực học tập." },
+      { "direction": "vn_to_en", "source": "Áp lực học tập quá lớn có thể làm mất đi niềm vui học tập." },
+      { "direction": "en_to_vn", "source": "Academic pressure is a major cause of stress among students." },
+      { "direction": "en_to_vn", "source": "Too much academic pressure can damage a teenager's wellbeing." },
+      { "direction": "en_to_vn", "source": "Some students thrive under academic pressure, while others struggle." },
+      { "direction": "en_to_vn", "source": "Schools are trying to reduce academic pressure through counselling." },
+      { "direction": "en_to_vn", "source": "Academic pressure often peaks in the final year of high school." }
+    ],
+    "scenario": [
+      "You are writing an essay on the causes of student stress. Academic, argumentative tone.",
+      "In a letter to a school, you raise concerns about your child's workload. Polite, formal tone.",
+      "You are advising a stressed classmate as a supportive friend. Warm, casual tone.",
+      "In a report on teenage mental health, you identify a key factor. Objective tone.",
+      "You are arguing whether competition in schools does more harm than good. Balanced academic tone.",
+      "In a counsellor's leaflet, you explain how to cope with exam stress. Supportive, informative tone.",
+      "You are writing a persuasive essay against overly demanding schooling. Argumentative tone.",
+      "In a parenting article, you advise against pushing children too hard. Gentle, informative tone.",
+      "You are proposing wellbeing programmes in a school policy. Formal, professional tone.",
+      "In a personal reflection, you describe how exam stress affected you. Honest, reflective tone."
+    ]
+  },
+  "curriculum": {
+    "cloze": [
+      { "sentence": "The school has introduced coding into its ____.", "answer": "curriculum" },
+      { "sentence": "Many people believe the national ____ is too focused on exams.", "answer": "curriculum" },
+      { "sentence": "Financial literacy should be part of every school ____.", "answer": "curriculum" },
+      { "sentence": "The university is redesigning its ____ to meet the needs of employers.", "answer": "curriculum" },
+      { "sentence": "A well-balanced ____ includes both arts and sciences.", "answer": "curriculum" },
+      { "sentence": "Teachers often have little say in what goes into the ____.", "answer": "curriculum" },
+      { "sentence": "The new ____ places greater emphasis on critical thinking.", "answer": "curriculum" },
+      { "sentence": "Some argue that the ____ should reflect real-world skills.", "answer": "curriculum" },
+      { "sentence": "Physical education remains a core part of the school ____.", "answer": "curriculum" },
+      { "sentence": "Reforming the ____ is a slow and complex process.", "answer": "curriculum" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Chương trình giảng dạy nên bao gồm các kỹ năng sống thực tế." },
+      { "direction": "vn_to_en", "source": "Nhiều người cho rằng chương trình giảng dạy quá nặng về lý thuyết." },
+      { "direction": "vn_to_en", "source": "Nhà trường đã đưa lập trình vào chương trình giảng dạy." },
+      { "direction": "vn_to_en", "source": "Chương trình giảng dạy cần được cập nhật thường xuyên." },
+      { "direction": "vn_to_en", "source": "Giáo dục tài chính nên là một phần của chương trình giảng dạy." },
+      { "direction": "en_to_vn", "source": "The curriculum should prepare students for the modern workplace." },
+      { "direction": "en_to_vn", "source": "Many schools have added digital skills to their curriculum." },
+      { "direction": "en_to_vn", "source": "A rigid curriculum can limit students' creativity." },
+      { "direction": "en_to_vn", "source": "The government is planning major changes to the national curriculum." },
+      { "direction": "en_to_vn", "source": "Foreign languages are a compulsory part of the curriculum." }
+    ],
+    "scenario": [
+      "You are arguing that schools should teach practical skills in an essay. Academic, argumentative tone.",
+      "In a proposal to a school board, you suggest adding a new subject. Formal, persuasive tone.",
+      "You are discussing what schools should teach with a fellow teacher. Professional, collegial tone.",
+      "In an education report, you evaluate a national syllabus. Objective, analytical tone.",
+      "You are writing an essay on whether the arts belong in schools. Balanced academic tone.",
+      "In a letter to a newspaper, you criticise an exam-heavy syllabus. Formal, opinionated tone.",
+      "You are explaining course content to prospective students. Informative, welcoming tone.",
+      "In a policy document, you outline reforms to what is taught. Formal, official tone.",
+      "You are arguing that critical thinking should be taught more. Persuasive academic tone.",
+      "In a staff meeting summary, you note planned changes to subjects. Professional tone."
+    ]
+  },
+  "vocational training": {
+    "cloze": [
+      { "sentence": "Not everyone is suited to university; ____ offers a valuable alternative.", "answer": "vocational training" },
+      { "sentence": "The government is expanding ____ to tackle the skills shortage.", "answer": "vocational training" },
+      { "sentence": "____ prepares young people directly for a trade or profession.", "answer": "Vocational training" },
+      { "sentence": "Many employers prefer candidates who have completed ____.", "answer": "vocational training" },
+      { "sentence": "Countries like Germany invest heavily in ____.", "answer": "vocational training" },
+      { "sentence": "____ can lead to well-paid jobs without a university degree.", "answer": "Vocational training" },
+      { "sentence": "Schools should promote ____ as much as academic study.", "answer": "vocational training" },
+      { "sentence": "After leaving school, she chose ____ in electrical engineering.", "answer": "vocational training" },
+      { "sentence": "Investment in ____ helps reduce youth unemployment.", "answer": "vocational training" },
+      { "sentence": "Practical ____ often includes hands-on work experience.", "answer": "vocational training" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Đào tạo nghề mang lại nhiều cơ hội việc làm thực tế." },
+      { "direction": "vn_to_en", "source": "Chính phủ nên đầu tư nhiều hơn vào đào tạo nghề." },
+      { "direction": "vn_to_en", "source": "Không phải ai cũng cần vào đại học; đào tạo nghề là một lựa chọn tốt." },
+      { "direction": "vn_to_en", "source": "Đào tạo nghề giúp giảm tỷ lệ thất nghiệp ở người trẻ." },
+      { "direction": "vn_to_en", "source": "Nhiều nhà tuyển dụng đánh giá cao những người đã qua đào tạo nghề." },
+      { "direction": "en_to_vn", "source": "Vocational training equips students with practical, job-ready skills." },
+      { "direction": "en_to_vn", "source": "Vocational training is often shorter and cheaper than a degree." },
+      { "direction": "en_to_vn", "source": "The college offers vocational training in nursing and mechanics." },
+      { "direction": "en_to_vn", "source": "Vocational training should be given the same respect as academic study." },
+      { "direction": "en_to_vn", "source": "Good vocational training combines classroom learning with real work experience." }
+    ],
+    "scenario": [
+      "You are arguing that practical training deserves more respect in an essay. Persuasive academic tone.",
+      "In a policy proposal, you recommend expanding skills-based education. Formal tone.",
+      "You are advising a school leaver considering a trade. Supportive, informative tone.",
+      "In a report on unemployment, you suggest skills training as a solution. Analytical tone.",
+      "You are writing an essay comparing university and job-focused study. Balanced academic tone.",
+      "In a careers leaflet, you explain the benefits of learning a trade. Encouraging tone.",
+      "You are drafting a business case for apprenticeships. Professional, persuasive tone.",
+      "In a discussion with parents, you defend a non-university path. Reassuring, respectful tone.",
+      "You are arguing that schools overlook practical skills. Critical academic tone.",
+      "In a government briefing, you link skills training to the economy. Formal, official tone."
+    ]
+  },
+  "digital literacy": {
+    "cloze": [
+      { "sentence": "In the modern workplace, ____ is as important as reading and writing.", "answer": "digital literacy" },
+      { "sentence": "Schools have a duty to improve students' ____.", "answer": "digital literacy" },
+      { "sentence": "Older people often need support to develop their ____.", "answer": "digital literacy" },
+      { "sentence": "Good ____ helps people spot fake news and online scams.", "answer": "digital literacy" },
+      { "sentence": "A lack of ____ can leave people excluded from essential services.", "answer": "digital literacy" },
+      { "sentence": "____ should be taught from the earliest years of school.", "answer": "Digital literacy" },
+      { "sentence": "Employers increasingly expect a high level of ____.", "answer": "digital literacy" },
+      { "sentence": "Governments are running programmes to boost ____ among adults.", "answer": "digital literacy" },
+      { "sentence": "Without basic ____, it is hard to function in today's society.", "answer": "digital literacy" },
+      { "sentence": "The pandemic highlighted the importance of ____ for remote learning.", "answer": "digital literacy" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Năng lực số ngày càng quan trọng trong thế giới hiện đại." },
+      { "direction": "vn_to_en", "source": "Nhà trường nên dạy năng lực số ngay từ khi còn nhỏ." },
+      { "direction": "vn_to_en", "source": "Người lớn tuổi thường cần được hỗ trợ để nâng cao hiểu biết về công nghệ." },
+      { "direction": "vn_to_en", "source": "Năng lực số giúp mọi người nhận biết tin giả trên mạng." },
+      { "direction": "vn_to_en", "source": "Thiếu năng lực số có thể khiến một người bị tụt hậu." },
+      { "direction": "en_to_vn", "source": "Digital literacy is essential for finding a job today." },
+      { "direction": "en_to_vn", "source": "Improving digital literacy can bridge the gap between generations." },
+      { "direction": "en_to_vn", "source": "Digital literacy includes knowing how to protect your privacy online." },
+      { "direction": "en_to_vn", "source": "Many rural areas still lack the resources to build digital literacy." },
+      { "direction": "en_to_vn", "source": "Digital literacy helps citizens participate fully in modern life." }
+    ],
+    "scenario": [
+      "You are arguing that schools must teach technology skills in an essay. Persuasive academic tone.",
+      "In a community programme flyer, you offer to help adults learn tech skills. Welcoming tone.",
+      "You are advising an older relative on why online skills matter. Patient, encouraging tone.",
+      "In a report on the digital divide, you identify a key issue. Analytical tone.",
+      "You are writing an essay on whether technology should be taught in schools. Balanced academic tone.",
+      "In a workplace training proposal, you argue for staff upskilling. Professional tone.",
+      "You are explaining how to spot online misinformation. Clear, instructive tone.",
+      "In a government initiative, you promote tech skills for all citizens. Formal, official tone.",
+      "You are arguing that a lack of tech skills causes inequality. Critical academic tone.",
+      "In a school newsletter, you announce a new tech skills class. Informative, upbeat tone."
+    ]
+  },
+  "surveillance": {
+    "cloze": [
+      { "sentence": "The growing use of ____ cameras raises serious privacy concerns.", "answer": "surveillance" },
+      { "sentence": "Supporters argue that ____ helps reduce crime in public spaces.", "answer": "surveillance" },
+      { "sentence": "Critics warn that mass ____ threatens individual freedom.", "answer": "surveillance" },
+      { "sentence": "The city is under constant ____ by thousands of cameras.", "answer": "surveillance" },
+      { "sentence": "Government ____ of online activity has increased sharply.", "answer": "surveillance" },
+      { "sentence": "Some people accept ____ as the price of greater security.", "answer": "surveillance" },
+      { "sentence": "Workplace ____ can make employees feel distrusted.", "answer": "surveillance" },
+      { "sentence": "There must be limits on the ____ powers of the state.", "answer": "surveillance" },
+      { "sentence": "Digital ____ allows companies to track our every click.", "answer": "surveillance" },
+      { "sentence": "The debate over ____ pits security against personal privacy.", "answer": "surveillance" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Sự giám sát bằng camera đang gây tranh cãi về quyền riêng tư." },
+      { "direction": "vn_to_en", "source": "Nhiều người lo ngại về sự giám sát của chính phủ trên mạng." },
+      { "direction": "vn_to_en", "source": "Sự giám sát có thể giúp giảm tội phạm ở nơi công cộng." },
+      { "direction": "vn_to_en", "source": "Việc theo dõi nhân viên tại nơi làm việc khiến họ khó chịu." },
+      { "direction": "vn_to_en", "source": "Cần có giới hạn cho quyền giám sát của nhà nước." },
+      { "direction": "en_to_vn", "source": "Mass surveillance can easily be abused by those in power." },
+      { "direction": "en_to_vn", "source": "CCTV surveillance has become common in most large cities." },
+      { "direction": "en_to_vn", "source": "Online surveillance allows companies to collect vast amounts of data." },
+      { "direction": "en_to_vn", "source": "Many people are willing to accept surveillance in exchange for safety." },
+      { "direction": "en_to_vn", "source": "Constant surveillance may discourage people from expressing their opinions." }
+    ],
+    "scenario": [
+      "You are arguing whether public cameras are justified in an essay. Balanced academic tone.",
+      "In a debate, you argue that monitoring protects public safety. Persuasive tone.",
+      "You are writing an opinion piece warning against state monitoring. Critical, argumentative tone.",
+      "In a report on privacy, you describe how online tracking works. Objective tone.",
+      "You are raising concerns about workplace monitoring in a formal complaint. Firm, formal tone.",
+      "In a discussion essay, you weigh security against privacy. Balanced academic tone.",
+      "You are explaining the issue to students in a civics class. Clear, educational tone.",
+      "In a letter to a representative, you call for limits on monitoring powers. Formal, persuasive tone.",
+      "You are writing a privacy policy warning that clearly informs users of monitoring. Formal, transparent tone.",
+      "In an essay on technology, you argue that data tracking has gone too far. Critical academic tone."
+    ]
+  }
+}

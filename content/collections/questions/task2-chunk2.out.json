@@ -1,0 +1,572 @@
+{
+  "in contrast": {
+    "cloze": [
+      { "sentence": "Urban residents rely heavily on public transport; ____, people in rural areas often depend on private cars.", "answer": "in contrast" },
+      { "sentence": "The older generation valued job security. ____, many young workers today prioritise flexibility and personal growth.", "answer": "In contrast" },
+      { "sentence": "Some countries invest heavily in renewable energy. ____, others continue to rely on cheap fossil fuels.", "answer": "In contrast" },
+      { "sentence": "Wealthy nations can afford advanced healthcare; ____, developing countries frequently struggle to fund basic clinics.", "answer": "in contrast" },
+      { "sentence": "My sister loves crowded festivals. ____, I prefer a quiet evening at home with a book.", "answer": "In contrast" },
+      { "sentence": "The first study found a strong link between diet and health. The second, ____, reported no clear connection.", "answer": "in contrast" },
+      { "sentence": "Private schools tend to have small classes; ____, state schools often teach thirty students at once.", "answer": "in contrast" },
+      { "sentence": "In the north the summers are short and cool. ____, the southern regions enjoy long, hot seasons.", "answer": "In contrast" },
+      { "sentence": "Cats are usually independent animals. Dogs, ____, thrive on constant human companionship.", "answer": "in contrast" },
+      { "sentence": "Last year's economy grew steadily. This year, ____, growth has almost completely stalled.", "answer": "in contrast" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Các thành phố lớn rất ồn ào; trái lại, vùng nông thôn thường yên tĩnh và thanh bình." },
+      { "direction": "vn_to_en", "source": "Anh trai tôi thích thể thao mạo hiểm, ngược lại tôi lại thích những hoạt động nhẹ nhàng." },
+      { "direction": "vn_to_en", "source": "Một số người ủng hộ học trực tuyến; trái lại, nhiều người vẫn tin vào lớp học truyền thống." },
+      { "direction": "vn_to_en", "source": "Nền kinh tế năm ngoái phát triển tốt; ngược lại, năm nay lại gặp nhiều khó khăn." },
+      { "direction": "vn_to_en", "source": "Người giàu có nhiều lựa chọn về giáo dục; trái lại, người nghèo có rất ít cơ hội." },
+      { "direction": "en_to_vn", "source": "Traditional shops are closing down; in contrast, online stores are expanding rapidly." },
+      { "direction": "en_to_vn", "source": "He speaks four languages fluently. His brother, in contrast, struggles even with English." },
+      { "direction": "en_to_vn", "source": "In contrast to last decade, most families now own at least one smartphone." },
+      { "direction": "en_to_vn", "source": "The government cut spending on the arts. In contrast, it increased the military budget." },
+      { "direction": "en_to_vn", "source": "Northern cities suffer from harsh winters; in contrast, the coast stays mild all year." }
+    ],
+    "scenario": [
+      "In an IELTS Task 2 essay comparing city and country life, write one formal sentence using 'in contrast'.",
+      "You are writing an academic report comparing two survey results. Use 'in contrast' formally to highlight the difference.",
+      "In a class presentation comparing two products, say one neutral sentence using 'in contrast'.",
+      "Write a polite email to a colleague comparing this quarter's sales with last quarter's, using 'in contrast'.",
+      "In a casual chat with a friend about your different music tastes, use 'in contrast' lightly.",
+      "You are writing a paragraph for a geography assignment comparing two climates. Use 'in contrast' academically.",
+      "In a debate summary, compare your team's view with the opposing team's using 'in contrast' formally.",
+      "Write a caption for a comparison chart in a business slide, using 'in contrast' concisely.",
+      "In a reflective journal entry, compare your past self with your present self using 'in contrast'.",
+      "In a formal essay on education, contrast public and private schooling with a sentence using 'in contrast'."
+    ]
+  },
+  "whereas": {
+    "cloze": [
+      { "sentence": "Some people prefer to save every spare coin, ____ others spend money as soon as they earn it.", "answer": "whereas" },
+      { "sentence": "____ the older buildings were made of stone, the newer ones are built almost entirely from glass.", "answer": "Whereas" },
+      { "sentence": "My brother enjoys team sports, ____ I would rather run alone in the early morning.", "answer": "whereas" },
+      { "sentence": "The first candidate had years of experience, ____ the second offered fresh, creative ideas.", "answer": "whereas" },
+      { "sentence": "In some cultures, meals are eaten quickly, ____ in others dining can last for hours.", "answer": "whereas" },
+      { "sentence": "Cities offer countless job opportunities, ____ rural areas often provide a slower, healthier lifestyle.", "answer": "whereas" },
+      { "sentence": "____ men once dominated the workforce, women now hold nearly half of all professional jobs.", "answer": "Whereas" },
+      { "sentence": "The novel focuses on emotion, ____ the film emphasises action and spectacle.", "answer": "whereas" },
+      { "sentence": "Some students learn best by listening, ____ others need to write everything down.", "answer": "whereas" },
+      { "sentence": "Solar power is clean but expensive, ____ coal is cheap but heavily polluting.", "answer": "whereas" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Anh ấy thích làm việc một mình, trong khi tôi lại làm việc nhóm hiệu quả hơn." },
+      { "direction": "vn_to_en", "source": "Người dân thành thị đi lại bằng tàu điện, trong khi người dân nông thôn chủ yếu dùng xe máy." },
+      { "direction": "vn_to_en", "source": "Một số học sinh giỏi môn Toán, trong khi những em khác lại xuất sắc ở môn Văn." },
+      { "direction": "vn_to_en", "source": "Điện thoại thông minh rất tiện lợi, trong khi chúng cũng khiến chúng ta xao nhãng." },
+      { "direction": "vn_to_en", "source": "Bố tôi thích đọc báo giấy, trong khi mẹ tôi chỉ đọc tin tức trên mạng." },
+      { "direction": "en_to_vn", "source": "The north of the country is industrial, whereas the south is mainly agricultural." },
+      { "direction": "en_to_vn", "source": "She remained calm during the crisis, whereas everyone else began to panic." },
+      { "direction": "en_to_vn", "source": "Online courses are flexible, whereas classroom lessons offer more direct interaction." },
+      { "direction": "en_to_vn", "source": "Whereas the first plan was risky, the second was safe but slow." },
+      { "direction": "en_to_vn", "source": "Older workers value stability, whereas younger ones often chase new challenges." }
+    ],
+    "scenario": [
+      "In a formal IELTS essay contrasting two lifestyles, write one sentence using 'whereas'.",
+      "Write an academic sentence for a report contrasting two age groups' habits, using 'whereas'.",
+      "In a comparison paragraph for a history assignment, use 'whereas' to link two eras formally.",
+      "You explain to a classmate how you and your friend study differently. Use 'whereas' in a casual sentence.",
+      "In a business memo comparing two suppliers, write one professional sentence using 'whereas'.",
+      "Write a sentence for an essay contrasting the advantages of two energy sources, using 'whereas'.",
+      "In a job interview, contrast your current role with your desired one using 'whereas' politely.",
+      "In a product review comparing two phones, write a balanced sentence using 'whereas'.",
+      "In a formal debate, contrast your position with your opponent's using 'whereas'.",
+      "In a travel blog contrasting two cities you visited, write one descriptive sentence using 'whereas'."
+    ]
+  },
+  "consequently": {
+    "cloze": [
+      { "sentence": "The factory ignored safety rules; ____, several workers were seriously injured.", "answer": "Consequently" },
+      { "sentence": "He failed to submit the assignment on time and ____ lost twenty percent of his marks.", "answer": "consequently" },
+      { "sentence": "Prices rose sharply last month, and ____ many families cut back on spending.", "answer": "consequently" },
+      { "sentence": "The team practised hard all season; ____, they won the championship with ease.", "answer": "consequently" },
+      { "sentence": "The city banned private cars in the centre, and ____ air quality improved dramatically.", "answer": "consequently" },
+      { "sentence": "She skipped breakfast every day and ____ struggled to concentrate in her morning classes.", "answer": "consequently" },
+      { "sentence": "Demand for the product collapsed; ____, the company was forced to close two factories.", "answer": "consequently" },
+      { "sentence": "The river was heavily polluted, and ____ the local fishing industry disappeared.", "answer": "consequently" },
+      { "sentence": "Interest rates were cut, and ____ more people began to take out loans.", "answer": "consequently" },
+      { "sentence": "He invested without any research; ____, he lost most of his savings.", "answer": "consequently" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Anh ấy làm việc quá sức, do đó sức khỏe của anh ấy ngày càng giảm sút." },
+      { "direction": "vn_to_en", "source": "Chính phủ tăng thuế, kết quả là giá hàng hóa tăng lên đáng kể." },
+      { "direction": "vn_to_en", "source": "Công ty không đổi mới, do đó họ dần mất khách hàng vào tay đối thủ." },
+      { "direction": "vn_to_en", "source": "Cô ấy ôn tập rất chăm chỉ, kết quả là cô ấy đạt điểm cao nhất lớp." },
+      { "direction": "vn_to_en", "source": "Rừng bị chặt phá nghiêm trọng, do đó nhiều loài động vật mất môi trường sống." },
+      { "direction": "en_to_vn", "source": "The new law was poorly explained; consequently, few citizens actually followed it." },
+      { "direction": "en_to_vn", "source": "Sales dropped every month, and consequently the shop went out of business." },
+      { "direction": "en_to_vn", "source": "He ate too much junk food and consequently gained a lot of weight." },
+      { "direction": "en_to_vn", "source": "The bridge was closed for repairs; consequently, traffic doubled on the other routes." },
+      { "direction": "en_to_vn", "source": "The students were not warned about the test and consequently performed badly." }
+    ],
+    "scenario": [
+      "In an IELTS essay on pollution, write one formal sentence using 'consequently' to link a cause and its effect.",
+      "Write an academic sentence for an economics report explaining a result, using 'consequently'.",
+      "In a science lab report, describe the outcome of an experiment using 'consequently' formally.",
+      "You explain to your boss why a deadline was missed. Write one professional sentence using 'consequently'.",
+      "In a news-style paragraph about a policy change, write a formal sentence using 'consequently'.",
+      "In a cause-and-effect essay about screen time, use 'consequently' to state a result.",
+      "Write a sentence for a history essay explaining a consequence of a war, using 'consequently'.",
+      "In a formal complaint email, explain the effect of a delay using 'consequently'.",
+      "In a health article, describe the result of poor sleep using 'consequently'.",
+      "In a business case study, explain a company's downfall using 'consequently'."
+    ]
+  },
+  "therefore": {
+    "cloze": [
+      { "sentence": "The evidence is incomplete; we should ____ be cautious about drawing firm conclusions.", "answer": "therefore" },
+      { "sentence": "Public transport reduces traffic and pollution, and governments should ____ invest more in it.", "answer": "therefore" },
+      { "sentence": "The two figures are almost identical, and it is ____ safe to treat them as equal.", "answer": "therefore" },
+      { "sentence": "Children learn languages quickly; schools should ____ start foreign-language lessons early.", "answer": "therefore" },
+      { "sentence": "The medicine has serious side effects and is ____ not recommended for young children.", "answer": "therefore" },
+      { "sentence": "Fossil fuels are running out; we must ____ develop renewable sources of energy.", "answer": "therefore" },
+      { "sentence": "The bridge is unsafe and will ____ remain closed until further notice.", "answer": "therefore" },
+      { "sentence": "Reading widely improves vocabulary; students are ____ encouraged to read for pleasure.", "answer": "therefore" },
+      { "sentence": "The costs clearly exceed the benefits, and the project should ____ be cancelled.", "answer": "therefore" },
+      { "sentence": "She has the most experience and is ____ the strongest candidate for the position.", "answer": "therefore" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Bằng chứng còn yếu, vì vậy chúng ta không nên vội đưa ra kết luận." },
+      { "direction": "vn_to_en", "source": "Ô nhiễm không khí ngày càng nghiêm trọng, do đó chính phủ cần hành động ngay." },
+      { "direction": "vn_to_en", "source": "Trẻ em học rất nhanh, vì vậy nên bắt đầu dạy ngoại ngữ từ sớm." },
+      { "direction": "vn_to_en", "source": "Chi phí quá cao, do đó dự án nên được xem xét lại." },
+      { "direction": "vn_to_en", "source": "Cô ấy có nhiều kinh nghiệm nhất, vì vậy cô ấy là ứng viên phù hợp nhất." },
+      { "direction": "en_to_vn", "source": "The results are unclear; we should therefore repeat the experiment." },
+      { "direction": "en_to_vn", "source": "Smoking damages the lungs and should therefore be strongly discouraged." },
+      { "direction": "en_to_vn", "source": "The demand is very high; the company should therefore increase production." },
+      { "direction": "en_to_vn", "source": "He broke the rules and must therefore accept the consequences." },
+      { "direction": "en_to_vn", "source": "The plan is too risky and will therefore not be approved." }
+    ],
+    "scenario": [
+      "In an IELTS Task 2 conclusion, write one formal sentence using 'therefore' to draw a logical conclusion.",
+      "Write an academic sentence in a research report that uses 'therefore' to state an inference.",
+      "In a formal recommendation section of a report, use 'therefore' to justify an action.",
+      "You advise your manager on a decision. Write one professional sentence using 'therefore'.",
+      "In a philosophy essay, use 'therefore' to connect a premise to a conclusion formally.",
+      "In a persuasive essay on climate change, use 'therefore' to argue for urgent action.",
+      "Write a sentence for a legal-style document using 'therefore' to state a consequence.",
+      "In a maths or logic explanation, use 'therefore' to reach a result.",
+      "In a formal proposal, use 'therefore' to recommend approving a budget.",
+      "In an argumentative paragraph about exams, use 'therefore' to conclude your point."
+    ]
+  },
+  "as a result": {
+    "cloze": [
+      { "sentence": "The company invested in new technology, and ____ its productivity rose sharply.", "answer": "as a result" },
+      { "sentence": "Heavy rain fell for three days; ____, several roads were completely flooded.", "answer": "As a result" },
+      { "sentence": "She practised every day, and ____ her English improved remarkably.", "answer": "as a result" },
+      { "sentence": "The government reduced taxes, and ____ people had more money to spend.", "answer": "as a result" },
+      { "sentence": "The factory was fined for pollution; ____, it installed cleaner equipment.", "answer": "As a result" },
+      { "sentence": "Many young people move to the cities, and ____ villages are slowly emptying.", "answer": "as a result" },
+      { "sentence": "He ignored the doctor's advice, and ____ his condition grew worse.", "answer": "as a result" },
+      { "sentence": "The bank collapsed, and ____ thousands of customers lost their savings.", "answer": "as a result" },
+      { "sentence": "Fuel prices doubled overnight; ____, transport costs soared across the country.", "answer": "As a result" },
+      { "sentence": "The team communicated poorly, and ____ the whole project was delayed.", "answer": "as a result" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Trời mưa lớn suốt đêm, kết quả là nhiều con đường bị ngập nặng." },
+      { "direction": "vn_to_en", "source": "Công ty cắt giảm chi phí, kết quả là chất lượng sản phẩm giảm sút." },
+      { "direction": "vn_to_en", "source": "Cô ấy học chăm chỉ, kết quả là cô ấy đỗ kỳ thi một cách dễ dàng." },
+      { "direction": "vn_to_en", "source": "Giá xăng tăng cao, kết quả là chi phí vận chuyển cũng tăng theo." },
+      { "direction": "vn_to_en", "source": "Nhiều nhà máy xả thải ra sông, kết quả là nguồn nước bị ô nhiễm nghiêm trọng." },
+      { "direction": "en_to_vn", "source": "The new policy was unpopular, and as a result the minister resigned." },
+      { "direction": "en_to_vn", "source": "The crops failed this year, and as a result food prices increased sharply." },
+      { "direction": "en_to_vn", "source": "He trained for months, and as a result he finished the marathon easily." },
+      { "direction": "en_to_vn", "source": "The bridge was damaged; as a result, drivers had to take a long detour." },
+      { "direction": "en_to_vn", "source": "The company expanded too fast, and as a result it ran into serious debt." }
+    ],
+    "scenario": [
+      "In an IELTS essay about deforestation, write one formal sentence using 'as a result'.",
+      "Write an academic sentence for an economics report explaining an effect, using 'as a result'.",
+      "In a science report, describe what happened after an experiment using 'as a result'.",
+      "You explain to your team the effect of a decision. Write one professional sentence using 'as a result'.",
+      "In a news article about a storm, describe the aftermath using 'as a result'.",
+      "In a cause-and-effect paragraph about pollution, use 'as a result' to show the outcome.",
+      "Write a sentence for a history essay about a revolution using 'as a result'.",
+      "In a personal statement, describe how effort led to success using 'as a result'.",
+      "In a formal report on traffic, explain the effect of a new law using 'as a result'.",
+      "In a health blog, describe the effect of exercise using 'as a result'."
+    ]
+  },
+  "for instance": {
+    "cloze": [
+      { "sentence": "Many everyday habits harm the environment; ____, leaving lights on wastes a great deal of energy.", "answer": "for instance" },
+      { "sentence": "Technology has changed how we communicate. Video calls, ____, let families stay in touch across the world.", "answer": "for instance" },
+      { "sentence": "Some subjects are highly practical; cookery, ____, teaches skills students use for life.", "answer": "for instance" },
+      { "sentence": "There are many ways to stay healthy. You could, ____, walk to work instead of driving.", "answer": "for instance" },
+      { "sentence": "Small changes can save money. Cooking at home, ____, is far cheaper than eating out.", "answer": "for instance" },
+      { "sentence": "Governments can encourage recycling; ____, they might charge a fee for plastic bags.", "answer": "for instance" },
+      { "sentence": "Exercise has many benefits. It reduces stress, ____, and improves sleep quality.", "answer": "for instance" },
+      { "sentence": "Some jobs are becoming automated. Cashiers, ____, are gradually being replaced by machines.", "answer": "for instance" },
+      { "sentence": "Learning a language opens doors. It can, ____, improve your job prospects abroad.", "answer": "for instance" },
+      { "sentence": "Cities face serious problems; traffic congestion, ____, wastes hours of people's time each day.", "answer": "for instance" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Có nhiều cách để tiết kiệm năng lượng; ví dụ, chúng ta có thể tắt các thiết bị khi không dùng." },
+      { "direction": "vn_to_en", "source": "Công nghệ mang lại nhiều lợi ích, ví dụ như giúp học sinh học từ xa dễ dàng hơn." },
+      { "direction": "vn_to_en", "source": "Một số môn học rất thực tế, ví dụ, tin học giúp ích rất nhiều cho công việc." },
+      { "direction": "vn_to_en", "source": "Nhiều thói quen nhỏ gây hại cho sức khỏe, ví dụ như thức khuya thường xuyên." },
+      { "direction": "vn_to_en", "source": "Chính phủ có thể khuyến khích giao thông công cộng, ví dụ bằng cách giảm giá vé xe buýt." },
+      { "direction": "en_to_vn", "source": "Some animals are in danger; the tiger, for instance, is now extremely rare." },
+      { "direction": "en_to_vn", "source": "There are many renewable sources of energy, solar power, for instance." },
+      { "direction": "en_to_vn", "source": "Big cities offer great opportunities; for instance, they have many well-paid jobs." },
+      { "direction": "en_to_vn", "source": "Reading has real benefits; for instance, it helps you build a wider vocabulary." },
+      { "direction": "en_to_vn", "source": "Some hobbies are expensive; skiing, for instance, requires costly equipment and travel." }
+    ],
+    "scenario": [
+      "In an IELTS essay, support a general claim about technology with a specific example using 'for instance'.",
+      "Write an academic sentence that introduces an example in a report, using 'for instance'.",
+      "In a class presentation, give an example to illustrate a point using 'for instance'.",
+      "You explain a work process to a new colleague and give an example using 'for instance'.",
+      "In a formal essay on the environment, illustrate a problem with an example using 'for instance'.",
+      "In a persuasive paragraph about healthy living, give a concrete example using 'for instance'.",
+      "Write a sentence for a tutorial that offers a practical example using 'for instance'.",
+      "In a discussion about job automation, give an example using 'for instance'.",
+      "In an educational blog, illustrate a study tip with an example using 'for instance'.",
+      "In a formal report on city problems, give a specific example using 'for instance'."
+    ]
+  },
+  "despite": {
+    "cloze": [
+      { "sentence": "____ the heavy rain, the outdoor concert went ahead as planned.", "answer": "Despite" },
+      { "sentence": "She passed the exam with a high score ____ having very little time to prepare.", "answer": "despite" },
+      { "sentence": "____ its high cost, the new policy has failed to reduce unemployment.", "answer": "Despite" },
+      { "sentence": "The team lost the final ____ playing brilliantly for most of the match.", "answer": "despite" },
+      { "sentence": "____ all the warnings, many people still ignore the dangers of smoking.", "answer": "Despite" },
+      { "sentence": "He remained calm and polite ____ the customer's rude behaviour.", "answer": "despite" },
+      { "sentence": "____ years of research, scientists have not yet found a cure for the disease.", "answer": "Despite" },
+      { "sentence": "The company continued to grow ____ the difficult economic conditions.", "answer": "despite" },
+      { "sentence": "She kept smiling ____ feeling exhausted after the long journey.", "answer": "despite" },
+      { "sentence": "____ its small size, the phone has an incredibly powerful battery.", "answer": "Despite" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Mặc dù trời mưa to, họ vẫn quyết định đi bộ đường dài." },
+      { "direction": "vn_to_en", "source": "Mặc dù có ít thời gian, cô ấy vẫn hoàn thành bài luận rất tốt." },
+      { "direction": "vn_to_en", "source": "Mặc dù chi phí cao, chính sách này vẫn được nhiều người ủng hộ." },
+      { "direction": "vn_to_en", "source": "Mặc dù đã cố gắng hết sức, đội của chúng tôi vẫn thua trận." },
+      { "direction": "vn_to_en", "source": "Mặc dù còn trẻ, anh ấy đã đạt được rất nhiều thành tựu." },
+      { "direction": "en_to_vn", "source": "Despite the traffic, we arrived at the airport on time." },
+      { "direction": "en_to_vn", "source": "Despite earning a good salary, he never seems to save any money." },
+      { "direction": "en_to_vn", "source": "The plan went ahead despite strong opposition from local residents." },
+      { "direction": "en_to_vn", "source": "Despite her fear of flying, she travelled around the world alone." },
+      { "direction": "en_to_vn", "source": "Despite the many advantages of technology, some problems remain unsolved." }
+    ],
+    "scenario": [
+      "In an IELTS essay, concede a point about technology's problems using 'despite' in a formal sentence.",
+      "Write an academic sentence acknowledging a limitation in a report, using 'despite'.",
+      "In a formal reflection, describe an achievement made under difficult conditions using 'despite'.",
+      "You praise a teammate's effort in a professional message using 'despite'.",
+      "In a persuasive essay, admit a drawback but hold your position using 'despite'.",
+      "Write a sentence for a news report about an event held in bad weather using 'despite'.",
+      "In a job application, highlight success achieved against obstacles using 'despite'.",
+      "In a book or film review, praise a work despite a flaw using 'despite'.",
+      "In a formal complaint, note that a problem persisted despite earlier promises using 'despite'.",
+      "In a motivational speech, encourage others to continue despite hardship using 'despite'."
+    ]
+  },
+  "in order to": {
+    "cloze": [
+      { "sentence": "Governments impose heavy taxes on tobacco ____ discourage people from smoking.", "answer": "in order to" },
+      { "sentence": "She woke up at five every morning ____ have enough time to study.", "answer": "in order to" },
+      { "sentence": "The company lowered its prices ____ attract more customers.", "answer": "in order to" },
+      { "sentence": "Many students study abroad ____ improve their career prospects.", "answer": "in order to" },
+      { "sentence": "We must reduce carbon emissions ____ protect the planet for future generations.", "answer": "in order to" },
+      { "sentence": "He took a second job ____ pay off his student loans more quickly.", "answer": "in order to" },
+      { "sentence": "The city built more cycle lanes ____ encourage people to leave their cars at home.", "answer": "in order to" },
+      { "sentence": "You should read the instructions carefully ____ avoid making silly mistakes.", "answer": "in order to" },
+      { "sentence": "The charity organised the event ____ raise money for the local hospital.", "answer": "in order to" },
+      { "sentence": "Schools introduced stricter rules ____ create a calmer learning environment.", "answer": "in order to" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Chính phủ tăng thuế thuốc lá để giảm số người hút thuốc." },
+      { "direction": "vn_to_en", "source": "Cô ấy dậy sớm mỗi ngày để có thêm thời gian ôn tập." },
+      { "direction": "vn_to_en", "source": "Nhiều người học ngoại ngữ để có cơ hội việc làm tốt hơn." },
+      { "direction": "vn_to_en", "source": "Chúng ta cần bảo vệ rừng để giữ gìn môi trường sống của động vật." },
+      { "direction": "vn_to_en", "source": "Công ty giảm giá sản phẩm để thu hút thêm khách hàng." },
+      { "direction": "en_to_vn", "source": "He saved money for years in order to buy his first house." },
+      { "direction": "en_to_vn", "source": "The government built new roads in order to reduce traffic in the city centre." },
+      { "direction": "en_to_vn", "source": "Students take practice tests in order to prepare for the real exam." },
+      { "direction": "en_to_vn", "source": "The factory installed filters in order to cut down on air pollution." },
+      { "direction": "en_to_vn", "source": "She spoke slowly in order to make sure everyone understood her." }
+    ],
+    "scenario": [
+      "In an IELTS essay on the environment, state the purpose of a policy using 'in order to' formally.",
+      "Write an academic sentence explaining the aim of a study, using 'in order to'.",
+      "In a formal proposal, explain the goal of a project using 'in order to'.",
+      "You explain to your manager why you took a certain action, using 'in order to'.",
+      "In a persuasive essay, justify an action by its purpose using 'in order to'.",
+      "Write a sentence for a set of instructions explaining a step's purpose using 'in order to'.",
+      "In a personal statement, explain why you did something using 'in order to'.",
+      "In a report on public health, explain the aim of a campaign using 'in order to'.",
+      "In a business plan, state a strategy's objective using 'in order to'.",
+      "In a formal letter, explain the reason for a request using 'in order to'."
+    ]
+  },
+  "in conclusion": {
+    "cloze": [
+      { "sentence": "____, while technology brings clear benefits, its risks must not be ignored.", "answer": "In conclusion" },
+      { "sentence": "____, I firmly believe that the advantages of studying abroad outweigh the disadvantages.", "answer": "In conclusion" },
+      { "sentence": "____, governments and individuals must work together to solve this pressing issue.", "answer": "In conclusion" },
+      { "sentence": "____, both sides of the argument have merit, but urgent action is clearly needed.", "answer": "In conclusion" },
+      { "sentence": "____, education remains the most powerful tool for reducing inequality.", "answer": "In conclusion" },
+      { "sentence": "____, although online learning is convenient, it cannot fully replace the classroom.", "answer": "In conclusion" },
+      { "sentence": "____, the evidence strongly suggests that prevention is better than cure.", "answer": "In conclusion" },
+      { "sentence": "____, protecting the environment should be a top priority for every nation.", "answer": "In conclusion" },
+      { "sentence": "____, I would argue that the benefits of exercise far outweigh the effort involved.", "answer": "In conclusion" },
+      { "sentence": "____, a balanced approach is the most sensible way to tackle this problem.", "answer": "In conclusion" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Tóm lại, tôi tin rằng lợi ích của việc học ngoại ngữ vượt xa những khó khăn." },
+      { "direction": "vn_to_en", "source": "Kết luận lại, cả chính phủ và người dân đều cần chung tay giải quyết vấn đề này." },
+      { "direction": "vn_to_en", "source": "Tóm lại, mặc dù công nghệ rất tiện lợi, chúng ta vẫn nên sử dụng nó một cách hợp lý." },
+      { "direction": "vn_to_en", "source": "Kết luận lại, giáo dục là chìa khóa để giảm bớt bất bình đẳng trong xã hội." },
+      { "direction": "vn_to_en", "source": "Tóm lại, bảo vệ môi trường nên là ưu tiên hàng đầu của mỗi quốc gia." },
+      { "direction": "en_to_vn", "source": "In conclusion, the benefits of public transport clearly outweigh its drawbacks." },
+      { "direction": "en_to_vn", "source": "In conclusion, I strongly support the idea that reading should be encouraged from an early age." },
+      { "direction": "en_to_vn", "source": "In conclusion, both governments and citizens share responsibility for tackling climate change." },
+      { "direction": "en_to_vn", "source": "In conclusion, while there are some risks, the advantages are simply too great to ignore." },
+      { "direction": "en_to_vn", "source": "In conclusion, a healthy lifestyle depends on both good food and regular exercise." }
+    ],
+    "scenario": [
+      "In an IELTS Task 2 essay, write the opening sentence of your final paragraph using 'in conclusion'.",
+      "Write the closing line of an academic report summarising your findings, using 'in conclusion'.",
+      "In a formal debate, deliver your closing statement using 'in conclusion'.",
+      "In a class presentation, wrap up your talk with a sentence using 'in conclusion'.",
+      "Write the final sentence of a persuasive essay on health using 'in conclusion'.",
+      "In a formal proposal, summarise your recommendation using 'in conclusion'.",
+      "In an argumentative essay on education, restate your position using 'in conclusion'.",
+      "In a research summary, state your overall finding using 'in conclusion'.",
+      "In a speech at the end of a project, sum up the outcome using 'in conclusion'.",
+      "In an essay on the environment, close with a call to action using 'in conclusion'."
+    ]
+  },
+  "to sum up": {
+    "cloze": [
+      { "sentence": "____, both the government and citizens must act quickly to reduce waste.", "answer": "To sum up" },
+      { "sentence": "____, the advantages of remote work clearly outweigh its few drawbacks.", "answer": "To sum up" },
+      { "sentence": "____, a healthy diet and regular exercise are the keys to a long life.", "answer": "To sum up" },
+      { "sentence": "____, while the plan has some risks, it is well worth pursuing.", "answer": "To sum up" },
+      { "sentence": "____, education is the most effective way to break the cycle of poverty.", "answer": "To sum up" },
+      { "sentence": "____, I believe cities should invest far more in public transport.", "answer": "To sum up" },
+      { "sentence": "____, technology has transformed our lives in both positive and negative ways.", "answer": "To sum up" },
+      { "sentence": "____, the report shows that customer satisfaction has improved this year.", "answer": "To sum up" },
+      { "sentence": "____, protecting wildlife requires cooperation between many different countries.", "answer": "To sum up" },
+      { "sentence": "____, there are strong arguments on both sides, but change is clearly necessary.", "answer": "To sum up" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Tóm lại, cả xã hội cần chung tay để giảm thiểu rác thải nhựa." },
+      { "direction": "vn_to_en", "source": "Tóm lại, làm việc từ xa mang lại nhiều lợi ích hơn là bất lợi." },
+      { "direction": "vn_to_en", "source": "Tóm lại, một chế độ ăn lành mạnh và tập thể dục đều đặn rất quan trọng." },
+      { "direction": "vn_to_en", "source": "Tóm lại, các thành phố nên đầu tư nhiều hơn vào giao thông công cộng." },
+      { "direction": "vn_to_en", "source": "Tóm lại, giáo dục là cách hiệu quả nhất để thay đổi cuộc sống của con người." },
+      { "direction": "en_to_vn", "source": "To sum up, the survey shows that most people prefer flexible working hours." },
+      { "direction": "en_to_vn", "source": "To sum up, there are clear benefits to learning a second language early." },
+      { "direction": "en_to_vn", "source": "To sum up, we must all take responsibility for protecting the environment." },
+      { "direction": "en_to_vn", "source": "To sum up, the project was a success despite a few small problems." },
+      { "direction": "en_to_vn", "source": "To sum up, both diet and exercise play a vital role in good health." }
+    ],
+    "scenario": [
+      "At the end of a class presentation, wrap up your main points using 'to sum up'.",
+      "In a spoken summary during a meeting, briefly conclude using 'to sum up'.",
+      "Write the closing sentence of an informal essay using 'to sum up'.",
+      "In a short speech, summarise your argument for the audience using 'to sum up'.",
+      "In a project debrief with colleagues, sum up the results using 'to sum up'.",
+      "In a discussion post on a forum, conclude your opinion using 'to sum up'.",
+      "In a study-group review, summarise a chapter for your friends using 'to sum up'.",
+      "In a video script, close a tutorial with a recap using 'to sum up'.",
+      "In an argumentative paragraph, restate your view briefly using 'to sum up'.",
+      "In a casual explanation to a friend, wrap up your main point using 'to sum up'."
+    ]
+  },
+  "address": {
+    "cloze": [
+      { "sentence": "The new policy is designed to ____ the growing problem of youth unemployment.", "answer": "address" },
+      { "sentence": "Governments must ____ climate change before it becomes impossible to reverse.", "answer": "address" },
+      { "sentence": "The report fails to ____ the root causes of poverty in the region.", "answer": "address" },
+      { "sentence": "Schools need to ____ bullying more seriously if they want students to feel safe.", "answer": "address" },
+      { "sentence": "It is essential to ____ these safety concerns before the factory reopens.", "answer": "address" },
+      { "sentence": "The committee met to ____ the issue of rising traffic in the city centre.", "answer": "address" },
+      { "sentence": "We cannot ignore these challenges; we must ____ them directly and quickly.", "answer": "address" },
+      { "sentence": "The manager promised to ____ the staff's complaints about long working hours.", "answer": "address" },
+      { "sentence": "Any successful solution must ____ both the economic and social sides of the problem.", "answer": "address" },
+      { "sentence": "The essay clearly ____ the question of whether tourism harms local cultures.", "answer": "addresses" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Chính phủ cần giải quyết vấn đề thất nghiệp ở giới trẻ." },
+      { "direction": "vn_to_en", "source": "Chúng ta phải đối phó với biến đổi khí hậu trước khi quá muộn." },
+      { "direction": "vn_to_en", "source": "Nhà trường cần giải quyết tình trạng bắt nạt một cách nghiêm túc hơn." },
+      { "direction": "vn_to_en", "source": "Bản báo cáo không đề cập đến nguyên nhân gốc rễ của vấn đề." },
+      { "direction": "vn_to_en", "source": "Cần phải giải quyết những lo ngại về an toàn trước khi nhà máy mở cửa lại." },
+      { "direction": "en_to_vn", "source": "The government has promised to address the housing shortage within five years." },
+      { "direction": "en_to_vn", "source": "We need a plan that addresses both the causes and the effects of the crisis." },
+      { "direction": "en_to_vn", "source": "The new law aims to address inequality in the education system." },
+      { "direction": "en_to_vn", "source": "The teacher took time to address every student's concerns before the exam." },
+      { "direction": "en_to_vn", "source": "Companies must address their impact on the environment more responsibly." }
+    ],
+    "scenario": [
+      "In an IELTS essay, argue that a government must tackle a social problem, using 'address' formally.",
+      "Write an academic sentence about how a study tackles a research question, using 'address'.",
+      "In a formal report, state that a plan deals with a specific issue, using 'address'.",
+      "You promise a client that your team will deal with their complaint, using 'address' professionally.",
+      "In a policy proposal, explain how the policy tackles a problem, using 'address'.",
+      "In a persuasive essay on education, argue that schools must tackle an issue, using 'address'.",
+      "Write a sentence for a meeting agenda about dealing with a concern, using 'address'.",
+      "In a formal email to staff, promise to deal with their concerns, using 'address'.",
+      "In an environmental essay, argue that leaders must tackle pollution, using 'address'.",
+      "In a job interview, describe how you handled a difficult problem, using 'address'."
+    ]
+  },
+  "outweigh": {
+    "cloze": [
+      { "sentence": "In my opinion, the benefits of studying abroad clearly ____ the drawbacks.", "answer": "outweigh" },
+      { "sentence": "The long-term advantages of exercise far ____ the short-term discomfort.", "answer": "outweigh" },
+      { "sentence": "For many families, the costs of private school ____ any possible benefits.", "answer": "outweigh" },
+      { "sentence": "The risks of the new drug seem to ____ its limited advantages.", "answer": "outweigh" },
+      { "sentence": "Supporters argue that the gains from tourism ____ the environmental damage it causes.", "answer": "outweigh" },
+      { "sentence": "The convenience of online shopping does not always ____ the pleasure of visiting real shops.", "answer": "outweigh" },
+      { "sentence": "In this case, the disadvantages of the plan clearly ____ its benefits.", "answer": "outweigh" },
+      { "sentence": "The rewards of learning a language ____ the effort it takes to master it.", "answer": "outweigh" },
+      { "sentence": "Whether the pros ____ the cons depends largely on your personal situation.", "answer": "outweigh" },
+      { "sentence": "The advantages of renewable energy ____ its higher initial costs.", "answer": "outweigh" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Theo tôi, lợi ích của việc học đại học vượt trội hơn so với chi phí bỏ ra." },
+      { "direction": "vn_to_en", "source": "Những lợi ích lâu dài của việc tập thể dục quan trọng hơn sự mệt mỏi ban đầu." },
+      { "direction": "vn_to_en", "source": "Nhiều người cho rằng lợi ích của du lịch vượt trội hơn những tác hại của nó." },
+      { "direction": "vn_to_en", "source": "Trong trường hợp này, mặt hại lại lớn hơn mặt lợi của kế hoạch." },
+      { "direction": "vn_to_en", "source": "Lợi ích của năng lượng tái tạo vượt trội hơn chi phí ban đầu khá cao." },
+      { "direction": "en_to_vn", "source": "The benefits of a healthy diet far outweigh the effort of preparing fresh meals." },
+      { "direction": "en_to_vn", "source": "For most people, the advantages of city life outweigh its disadvantages." },
+      { "direction": "en_to_vn", "source": "In this situation, the dangers clearly outweigh any possible rewards." },
+      { "direction": "en_to_vn", "source": "The long-term gains of the project outweigh its short-term costs." },
+      { "direction": "en_to_vn", "source": "She decided that the benefits of the move outweighed the risks involved." }
+    ],
+    "scenario": [
+      "In an IELTS 'advantages and disadvantages' essay, state your view in the conclusion using 'outweigh' formally.",
+      "Write an academic sentence weighing benefits against costs in a report, using 'outweigh'.",
+      "In a formal argument, claim that one side is stronger using 'outweigh'.",
+      "You advise a client that the pros beat the cons of a decision, using 'outweigh' professionally.",
+      "In a persuasive essay on technology, argue that benefits beat drawbacks using 'outweigh'.",
+      "Write a sentence for a cost-benefit analysis using 'outweigh'.",
+      "In a debate, argue that the advantages of a policy beat its disadvantages using 'outweigh'.",
+      "In an essay on tourism, weigh gains against harm using 'outweigh'.",
+      "In a formal recommendation, justify a choice by weighing pros and cons using 'outweigh'.",
+      "In a discussion about renewable energy, argue its benefits beat its costs using 'outweigh'."
+    ]
+  },
+  "arguably": {
+    "cloze": [
+      { "sentence": "The internet is ____ the most important invention of the twentieth century.", "answer": "Arguably" },
+      { "sentence": "Education is ____ the single most powerful tool for reducing poverty.", "answer": "arguably" },
+      { "sentence": "This is ____ the finest novel the author has ever written.", "answer": "arguably" },
+      { "sentence": "Clean water is ____ the most basic human need of all.", "answer": "arguably" },
+      { "sentence": "Public transport is ____ a better solution to congestion than building more roads.", "answer": "arguably" },
+      { "sentence": "She is ____ the most talented musician of her generation.", "answer": "arguably" },
+      { "sentence": "Climate change is ____ the greatest challenge facing humanity today.", "answer": "arguably" },
+      { "sentence": "Reading to children is ____ the best way to prepare them for school.", "answer": "arguably" },
+      { "sentence": "The smartphone has ____ changed daily life more than any other device.", "answer": "arguably" },
+      { "sentence": "Renewable energy is ____ the key to a sustainable future.", "answer": "arguably" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Có thể cho rằng internet là phát minh quan trọng nhất của thế kỷ hai mươi." },
+      { "direction": "vn_to_en", "source": "Có thể nói giáo dục là công cụ mạnh mẽ nhất để giảm nghèo." },
+      { "direction": "vn_to_en", "source": "Có thể cho rằng biến đổi khí hậu là thách thức lớn nhất của nhân loại." },
+      { "direction": "vn_to_en", "source": "Có thể nói đây là cuốn tiểu thuyết hay nhất của tác giả này." },
+      { "direction": "vn_to_en", "source": "Có thể cho rằng nước sạch là nhu cầu cơ bản nhất của con người." },
+      { "direction": "en_to_vn", "source": "He is arguably the best football player the country has ever produced." },
+      { "direction": "en_to_vn", "source": "Solar power is arguably the cleanest source of energy available today." },
+      { "direction": "en_to_vn", "source": "This city is arguably one of the most beautiful places in the world." },
+      { "direction": "en_to_vn", "source": "Free healthcare is arguably a sign of a truly developed society." },
+      { "direction": "en_to_vn", "source": "Learning from failure is arguably more valuable than succeeding at once." }
+    ],
+    "scenario": [
+      "In an IELTS essay, make a strong but cautious claim about technology using 'arguably'.",
+      "Write an academic sentence that puts forward a defensible claim, using 'arguably'.",
+      "In a formal opinion piece, state a bold view carefully using 'arguably'.",
+      "In a discussion with colleagues, offer a strong opinion politely using 'arguably'.",
+      "In a persuasive essay on education, make a confident claim using 'arguably'.",
+      "Write a sentence for a book review praising a work using 'arguably'.",
+      "In a debate opening, put forward your central claim using 'arguably'.",
+      "In an essay on the environment, make a strong claim about a solution using 'arguably'.",
+      "In a formal article, evaluate a historical figure using 'arguably'.",
+      "In a presentation, introduce your key point with a confident claim using 'arguably'."
+    ]
+  },
+  "to some extent": {
+    "cloze": [
+      { "sentence": "I agree with the statement ____, but I think it ignores several important points.", "answer": "to some extent" },
+      { "sentence": "The new rules have solved the problem ____, though much more still needs to be done.", "answer": "to some extent" },
+      { "sentence": "Technology is ____ responsible for the rise in loneliness among young people.", "answer": "to some extent" },
+      { "sentence": "Her success can ____ be explained by luck, but hard work played a bigger role.", "answer": "to some extent" },
+      { "sentence": "The government's policy has ____ reduced pollution in the capital.", "answer": "to some extent" },
+      { "sentence": "I share his concerns ____, but I am far more optimistic about the future.", "answer": "to some extent" },
+      { "sentence": "The plan worked ____, although the results were smaller than we had hoped.", "answer": "to some extent" },
+      { "sentence": "Money can ____ buy happiness, but it certainly cannot buy everything.", "answer": "to some extent" },
+      { "sentence": "The two theories agree ____, yet they differ sharply on the key question.", "answer": "to some extent" },
+      { "sentence": "Exercise can ____ reduce stress, but a good diet matters just as much.", "answer": "to some extent" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Ở một mức độ nào đó, tôi đồng ý với ý kiến này, nhưng vẫn còn nhiều điều cần bàn." },
+      { "direction": "vn_to_en", "source": "Công nghệ ở một mức độ nào đó là nguyên nhân khiến giới trẻ ngày càng cô đơn." },
+      { "direction": "vn_to_en", "source": "Chính sách mới ở một mức độ nào đó đã làm giảm ô nhiễm trong thành phố." },
+      { "direction": "vn_to_en", "source": "Ở một mức độ nào đó, tiền có thể mang lại hạnh phúc, nhưng không phải là tất cả." },
+      { "direction": "vn_to_en", "source": "Tôi chia sẻ mối lo của anh ấy ở một mức độ nào đó, nhưng tôi lạc quan hơn." },
+      { "direction": "en_to_vn", "source": "To some extent, the media is responsible for spreading fear among the public." },
+      { "direction": "en_to_vn", "source": "The new system has, to some extent, improved communication within the company." },
+      { "direction": "en_to_vn", "source": "I agree with this view to some extent, though I have a few reservations." },
+      { "direction": "en_to_vn", "source": "His behaviour can be excused to some extent, given the pressure he was under." },
+      { "direction": "en_to_vn", "source": "Good grades depend to some extent on natural ability, but mostly on effort." }
+    ],
+    "scenario": [
+      "In an IELTS 'to what extent do you agree' essay, give a partial-agreement statement using 'to some extent'.",
+      "Write an academic sentence acknowledging partial truth in a report, using 'to some extent'.",
+      "In a formal discussion, agree with a point but qualify it using 'to some extent'.",
+      "In a polite disagreement with a colleague, concede part of their view using 'to some extent'.",
+      "In a persuasive essay, admit a claim is partly true using 'to some extent'.",
+      "Write a sentence for a balanced argument that hedges a claim using 'to some extent'.",
+      "In a debate, partially accept your opponent's point using 'to some extent'.",
+      "In an essay on technology, give a measured judgement using 'to some extent'.",
+      "In a formal review, offer qualified praise using 'to some extent'.",
+      "In a reflective essay, admit a partial truth about yourself using 'to some extent'."
+    ]
+  },
+  "tend to": {
+    "cloze": [
+      { "sentence": "People who exercise regularly ____ live longer, healthier lives.", "answer": "tend to" },
+      { "sentence": "Young children ____ imitate the behaviour of the adults around them.", "answer": "tend to" },
+      { "sentence": "Prices ____ rise sharply during the holiday season.", "answer": "tend to" },
+      { "sentence": "Students who read widely ____ have larger vocabularies.", "answer": "tend to" },
+      { "sentence": "Big cities ____ offer more job opportunities than small towns.", "answer": "tend to" },
+      { "sentence": "People ____ remember information better when they are genuinely interested in it.", "answer": "tend to" },
+      { "sentence": "Older generations ____ prefer traditional forms of entertainment.", "answer": "tend to" },
+      { "sentence": "Companies that treat their staff well ____ keep their employees longer.", "answer": "tend to" },
+      { "sentence": "Countries with strong education systems ____ have stronger economies.", "answer": "tend to" },
+      { "sentence": "When people are stressed, they ____ make poorer decisions.", "answer": "tend to" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Những người tập thể dục thường xuyên có xu hướng sống lâu và khỏe mạnh hơn." },
+      { "direction": "vn_to_en", "source": "Trẻ nhỏ có xu hướng bắt chước hành vi của người lớn xung quanh chúng." },
+      { "direction": "vn_to_en", "source": "Các thành phố lớn thường có nhiều cơ hội việc làm hơn các thị trấn nhỏ." },
+      { "direction": "vn_to_en", "source": "Học sinh đọc nhiều sách thường có vốn từ vựng phong phú hơn." },
+      { "direction": "vn_to_en", "source": "Khi căng thẳng, con người có xu hướng đưa ra những quyết định kém sáng suốt." },
+      { "direction": "en_to_vn", "source": "Wealthy countries tend to spend more on healthcare and education." },
+      { "direction": "en_to_vn", "source": "People tend to trust information that agrees with what they already believe." },
+      { "direction": "en_to_vn", "source": "Teenagers tend to spend a great deal of time on social media." },
+      { "direction": "en_to_vn", "source": "Prices tend to fall when there is too much of a product on the market." },
+      { "direction": "en_to_vn", "source": "Employees tend to work harder when their efforts are properly recognised." }
+    ],
+    "scenario": [
+      "In an IELTS essay, describe a general trend in society using 'tend to' formally.",
+      "Write an academic sentence stating a common pattern from research, using 'tend to'.",
+      "In a formal report, describe typical customer behaviour using 'tend to'.",
+      "You explain to a colleague what usually happens in a process, using 'tend to'.",
+      "In a persuasive essay on health, state a general tendency using 'tend to'.",
+      "Write a sentence for a psychology summary describing typical behaviour, using 'tend to'.",
+      "In a discussion about generations, describe a common habit using 'tend to'.",
+      "In an essay on economics, describe how prices usually behave using 'tend to'.",
+      "In a formal presentation, describe a general trend in the data using 'tend to'.",
+      "In an article about education, describe what successful students usually do, using 'tend to'."
+    ]
+  }
+}

@@ -1,0 +1,572 @@
+{
+  "on the same page": {
+    "cloze": [
+      { "sentence": "Before we start the project, let's make sure we're all ____.", "answer": "on the same page" },
+      { "sentence": "I thought we agreed on the plan, but clearly we're not ____.", "answer": "on the same page" },
+      { "sentence": "Let me explain it again so everyone is ____.", "answer": "on the same page" },
+      { "sentence": "Good, it sounds like we're finally ____ about the budget.", "answer": "on the same page" },
+      { "sentence": "Can we have a quick chat to get ____ before the meeting?", "answer": "on the same page" },
+      { "sentence": "My boss and I are usually ____, so decisions are easy.", "answer": "on the same page" },
+      { "sentence": "I want us to be ____ so there are no surprises later.", "answer": "on the same page" },
+      { "sentence": "Once we talked it through, we were completely ____.", "answer": "on the same page" },
+      { "sentence": "Are we ____ about who's paying for what tonight?", "answer": "on the same page" },
+      { "sentence": "The two teams weren't ____, and that caused a lot of confusion.", "answer": "on the same page" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Trước khi bắt đầu, hãy chắc chắn là cả nhóm cùng hiểu ý nhau." },
+      { "direction": "vn_to_en", "source": "Tôi muốn hai chúng ta cùng quan điểm về chuyện này." },
+      { "direction": "vn_to_en", "source": "Có vẻ như sếp và tôi không cùng suy nghĩ về kế hoạch." },
+      { "direction": "vn_to_en", "source": "Nói chuyện một lát cho hiểu ý nhau trước khi họp nhé." },
+      { "direction": "vn_to_en", "source": "Cuối cùng thì cả hai bên đã cùng quan điểm rồi." },
+      { "direction": "en_to_vn", "source": "Let's talk first so we're on the same page." },
+      { "direction": "en_to_vn", "source": "I don't think we're on the same page about the deadline." },
+      { "direction": "en_to_vn", "source": "Great, it sounds like we're all on the same page now." },
+      { "direction": "en_to_vn", "source": "My roommate and I are usually on the same page about chores." },
+      { "direction": "en_to_vn", "source": "Once we're on the same page, everything goes smoothly." }
+    ],
+    "scenario": [
+      "Casual: You and a friend are planning a weekend trip. Check that you both agree on the dates.",
+      "Friendly: In a group chat, you want to confirm everyone understands the plan for the party.",
+      "Casual work: Before a small team meeting, tell a coworker you want a quick chat first.",
+      "Relaxed: You just cleared up a misunderstanding with your sibling about money.",
+      "Friendly: You're organizing a study group and want everyone to agree on the topic.",
+      "Casual: You and your partner are deciding on dinner and want to make sure you both want the same thing.",
+      "Friendly: A classmate seems confused about the assignment; reassure them after explaining.",
+      "Casual work: Tell your teammate you two think alike so decisions are easy.",
+      "Relaxed: Two friends are splitting a bill and you confirm you both agree on the amount.",
+      "Friendly: After a long discussion, you're happy everyone finally agrees."
+    ]
+  },
+  "call it a day": {
+    "cloze": [
+      { "sentence": "We've been working for ten hours straight, let's ____.", "answer": "call it a day" },
+      { "sentence": "I'm exhausted, I think I'll ____ and go home.", "answer": "call it a day" },
+      { "sentence": "The light is fading, so we decided to ____.", "answer": "call it a day" },
+      { "sentence": "Once we finish this last box, we can ____.", "answer": "call it a day" },
+      { "sentence": "My eyes hurt from the screen; time to ____.", "answer": "call it a day" },
+      { "sentence": "Boss said we could ____ early because it's Friday.", "answer": "call it a day" },
+      { "sentence": "We got a lot done today, let's just ____.", "answer": "call it a day" },
+      { "sentence": "It's almost midnight, maybe we should ____.", "answer": "call it a day" },
+      { "sentence": "After the third failed attempt, I decided to ____.", "answer": "call it a day" },
+      { "sentence": "Shall we ____ or push through one more hour?", "answer": "call it a day" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Mệt quá rồi, mình nghỉ tay hôm nay thôi." },
+      { "direction": "vn_to_en", "source": "Làm được nhiều rồi, thôi dừng ở đây nhé." },
+      { "direction": "vn_to_en", "source": "Trời tối rồi, tụi mình nghỉ đi." },
+      { "direction": "vn_to_en", "source": "Xong cái này là mình dừng công việc hôm nay." },
+      { "direction": "vn_to_en", "source": "Sếp cho nghỉ sớm vì hôm nay là thứ Sáu." },
+      { "direction": "en_to_vn", "source": "Let's call it a day and grab some dinner." },
+      { "direction": "en_to_vn", "source": "I'm too tired to continue, let's call it a day." },
+      { "direction": "en_to_vn", "source": "We finished early, so we called it a day." },
+      { "direction": "en_to_vn", "source": "It's getting dark, time to call it a day." },
+      { "direction": "en_to_vn", "source": "Should we call it a day or keep going?" }
+    ],
+    "scenario": [
+      "Casual: You and a friend have been moving furniture all afternoon and you're both tired.",
+      "Friendly work: You suggest to a coworker that you both stop for the day.",
+      "Relaxed: You've been studying for hours and want to tell your study partner to stop.",
+      "Casual: A group of you painted a room and you're ready to finish up.",
+      "Friendly: It's late at a hackathon and you tell your teammate to wrap up.",
+      "Casual: You've tried fixing a bike three times with no luck and give up for today.",
+      "Relaxed: Gardening with a family member, the sun is setting and you want to stop.",
+      "Friendly work: Your manager says you can leave early on a Friday.",
+      "Casual: Cleaning the garage with a sibling, you're both worn out.",
+      "Relaxed: You and a friend are hiking and decide to head back before dark."
+    ]
+  },
+  "a rip-off": {
+    "cloze": [
+      { "sentence": "Fifty dollars for a plain t-shirt? That's ____!", "answer": "a rip-off" },
+      { "sentence": "Don't buy water at the airport, it's totally ____.", "answer": "a rip-off" },
+      { "sentence": "The concert tickets were ____ once you added the fees.", "answer": "a rip-off" },
+      { "sentence": "I felt like the whole tour was ____ for the price.", "answer": "a rip-off" },
+      { "sentence": "Ten bucks for parking is ____ if you ask me.", "answer": "a rip-off" },
+      { "sentence": "That so-called 'discount' is actually ____.", "answer": "a rip-off" },
+      { "sentence": "Everyone says the phone repair shop downtown is ____.", "answer": "a rip-off" },
+      { "sentence": "Paying extra for a window seat felt like ____.", "answer": "a rip-off" },
+      { "sentence": "The hotel minibar prices are ____, honestly.", "answer": "a rip-off" },
+      { "sentence": "Careful with that souvenir stall, it's a bit of ____.", "answer": "a rip-off" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Năm mươi đô cho cái áo thun trơn á? Chặt chém quá!" },
+      { "direction": "vn_to_en", "source": "Đừng mua nước ở sân bay, giá cắt cổ đấy." },
+      { "direction": "vn_to_en", "source": "Vé xem hòa nhạc cộng phí là bị chặt chém rồi." },
+      { "direction": "vn_to_en", "source": "Mười đô tiền gửi xe là giá cắt cổ theo tôi thấy." },
+      { "direction": "vn_to_en", "source": "Cái tiệm sửa điện thoại đó nổi tiếng chặt chém lắm." },
+      { "direction": "en_to_vn", "source": "That restaurant is a rip-off, the portions are tiny." },
+      { "direction": "en_to_vn", "source": "Buying popcorn at the cinema is such a rip-off." },
+      { "direction": "en_to_vn", "source": "Twenty dollars for a taxi across town is a rip-off." },
+      { "direction": "en_to_vn", "source": "The souvenir shop near the beach is a total rip-off." },
+      { "direction": "en_to_vn", "source": "I think the extra insurance was a rip-off." }
+    ],
+    "scenario": [
+      "Casual: You're complaining to a friend about the price of drinks at a club.",
+      "Friendly: Warn a traveling friend not to buy snacks at the airport.",
+      "Casual: You just paid too much for parking downtown and vent to a coworker.",
+      "Relaxed: Tell your sibling the phone case they want is overpriced.",
+      "Friendly: React to a menu price at a tourist restaurant.",
+      "Casual: You bought a gadget online that turned out to be poor quality for the price.",
+      "Relaxed: Comment to a friend about expensive hotel minibar snacks.",
+      "Friendly: Warn a classmate about a shop known for overcharging.",
+      "Casual: React when a repair quote seems way too high.",
+      "Relaxed: You and a friend regret paying for a disappointing tour."
+    ]
+  },
+  "hang in there": {
+    "cloze": [
+      { "sentence": "I know exams are stressful, but ____, it's almost over.", "answer": "hang in there" },
+      { "sentence": "____, buddy, the doctor says you'll feel better soon.", "answer": "hang in there" },
+      { "sentence": "Just ____ a little longer, the bus is coming.", "answer": "hang in there" },
+      { "sentence": "Things are tough now, but ____ and it'll get better.", "answer": "hang in there" },
+      { "sentence": "She told me to ____ during the hardest week of training.", "answer": "hang in there" },
+      { "sentence": "____, you've only got two more days until the weekend.", "answer": "hang in there" },
+      { "sentence": "I keep telling myself to ____ until payday.", "answer": "hang in there" },
+      { "sentence": "____, the wifi will come back once the storm passes.", "answer": "hang in there" },
+      { "sentence": "He's going through a lot, so I told him to ____.", "answer": "hang in there" },
+      { "sentence": "Coach kept shouting '____' during the last lap.", "answer": "hang in there" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Cố lên nhé, sắp thi xong rồi." },
+      { "direction": "vn_to_en", "source": "Ráng thêm chút nữa thôi, xe buýt sắp tới rồi." },
+      { "direction": "vn_to_en", "source": "Giờ khó khăn thật, nhưng cứ cố lên rồi sẽ ổn." },
+      { "direction": "vn_to_en", "source": "Cô ấy bảo tôi ráng lên trong tuần tập nặng nhất." },
+      { "direction": "vn_to_en", "source": "Cố lên, chỉ còn hai ngày nữa là tới cuối tuần." },
+      { "direction": "en_to_vn", "source": "Hang in there, the worst part is almost over." },
+      { "direction": "en_to_vn", "source": "I know it's hard, but hang in there." },
+      { "direction": "en_to_vn", "source": "Just hang in there until the doctor arrives." },
+      { "direction": "en_to_vn", "source": "Hang in there, things will get better soon." },
+      { "direction": "en_to_vn", "source": "He told his teammate to hang in there during the final lap." }
+    ],
+    "scenario": [
+      "Friendly: A friend is stressed about final exams; encourage them.",
+      "Casual: Your buddy is sick; send a supportive message.",
+      "Warm: A coworker is having a tough week; cheer them on.",
+      "Casual: You and a friend are waiting a long time for a delayed bus.",
+      "Encouraging: A younger sibling is struggling with homework.",
+      "Friendly: Someone at the gym is close to finishing a hard workout.",
+      "Supportive: A classmate is nervous before a job interview.",
+      "Casual: The power is out during a storm; reassure a family member.",
+      "Warm: A friend is going through a breakup; comfort them.",
+      "Encouraging: Cheer on a runner near the finish line of a race."
+    ]
+  },
+  "get the hang of": {
+    "cloze": [
+      { "sentence": "Don't worry, you'll ____ driving a stick shift soon.", "answer": "get the hang of" },
+      { "sentence": "It took me a week to ____ the new software.", "answer": "get the hang of" },
+      { "sentence": "Once you ____ it, chopsticks are actually easy.", "answer": "get the hang of" },
+      { "sentence": "I'm finally starting to ____ this recipe.", "answer": "get the hang of" },
+      { "sentence": "Give it a few days and you'll ____ the routine.", "answer": "get the hang of" },
+      { "sentence": "She quickly ____ the new phone's settings.", "answer": "got the hang of" },
+      { "sentence": "After a couple of tries, he ____ skateboarding.", "answer": "got the hang of" },
+      { "sentence": "It's confusing at first, but you'll ____ it.", "answer": "get the hang of" },
+      { "sentence": "I still haven't ____ knitting properly.", "answer": "got the hang of" },
+      { "sentence": "You'll ____ the machine after your first shift.", "answer": "get the hang of" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Đừng lo, rồi bạn sẽ quen tay lái xe số sàn thôi." },
+      { "direction": "vn_to_en", "source": "Mất một tuần tôi mới nắm được cách dùng phần mềm mới." },
+      { "direction": "vn_to_en", "source": "Quen tay rồi thì dùng đũa dễ lắm." },
+      { "direction": "vn_to_en", "source": "Cô ấy nhanh chóng nắm được cách chỉnh điện thoại mới." },
+      { "direction": "vn_to_en", "source": "Vài ngày nữa là bạn sẽ quen với công việc thôi." },
+      { "direction": "en_to_vn", "source": "You'll get the hang of it after a few tries." },
+      { "direction": "en_to_vn", "source": "It took her a while to get the hang of the job." },
+      { "direction": "en_to_vn", "source": "I'm slowly getting the hang of cooking Vietnamese food." },
+      { "direction": "en_to_vn", "source": "He got the hang of skateboarding really fast." },
+      { "direction": "en_to_vn", "source": "Once you get the hang of it, it's not so hard." }
+    ],
+    "scenario": [
+      "Encouraging: A friend is learning to drive and feeling frustrated.",
+      "Casual: Reassure a new coworker learning the office software.",
+      "Friendly: Teaching a friend to use chopsticks at a restaurant.",
+      "Relaxed: You're proud you're finally learning a tricky recipe.",
+      "Supportive: A new employee is nervous about the daily routine.",
+      "Casual: Talk about how quickly your sibling learned a video game.",
+      "Friendly: Encourage a classmate struggling with a new app.",
+      "Relaxed: Admit you're still learning a hobby like knitting.",
+      "Casual: Tell a friend they'll master the gym machine after one session.",
+      "Encouraging: Reassure someone learning to ride a skateboard."
+    ]
+  },
+  "couch potato": {
+    "cloze": [
+      { "sentence": "All he does on weekends is be a ____ in front of the TV.", "answer": "couch potato" },
+      { "sentence": "I've been such a ____ lately, I really need to exercise.", "answer": "couch potato" },
+      { "sentence": "Stop being a ____ and come for a walk with me.", "answer": "couch potato" },
+      { "sentence": "My brother is a total ____ during summer break.", "answer": "couch potato" },
+      { "sentence": "After a long week, I just want to be a ____ tonight.", "answer": "couch potato" },
+      { "sentence": "The doctor warned him not to become a ____.", "answer": "couch potato" },
+      { "sentence": "She went from being a ____ to running marathons.", "answer": "couch potato" },
+      { "sentence": "Rainy days turn me into a complete ____.", "answer": "couch potato" },
+      { "sentence": "Don't be a ____ all day, let's go outside.", "answer": "couch potato" },
+      { "sentence": "He's a bit of a ____, but he's trying to get fit.", "answer": "couch potato" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Cuối tuần nào anh ấy cũng chỉ nằm lì xem TV như con lười." },
+      { "direction": "vn_to_en", "source": "Dạo này tôi lười vận động quá, chỉ nằm xem phim." },
+      { "direction": "vn_to_en", "source": "Đừng lười nữa, đi dạo với tôi đi." },
+      { "direction": "vn_to_en", "source": "Em trai tôi nằm lì xem TV suốt kỳ nghỉ hè." },
+      { "direction": "vn_to_en", "source": "Bác sĩ khuyên anh ấy đừng lười vận động nữa." },
+      { "direction": "en_to_vn", "source": "I've been a couch potato all winter." },
+      { "direction": "en_to_vn", "source": "Don't be such a couch potato, let's go for a run." },
+      { "direction": "en_to_vn", "source": "He turned from a couch potato into a gym regular." },
+      { "direction": "en_to_vn", "source": "Rainy weekends make me a lazy couch potato." },
+      { "direction": "en_to_vn", "source": "My roommate is a couch potato who never goes out." }
+    ],
+    "scenario": [
+      "Casual: Tease a friend who spends all weekend watching TV.",
+      "Friendly: Admit to a coworker that you've been lazy lately.",
+      "Playful: Try to get your sibling off the sofa to go outside.",
+      "Relaxed: Confess you just want a lazy TV night after a hard week.",
+      "Casual: Describe a family member who never exercises during holidays.",
+      "Encouraging: A friend who was inactive is now getting fit; describe the change.",
+      "Playful: Complain about how rainy days make you lazy.",
+      "Friendly: Gently nudge a partner to be more active.",
+      "Casual: Joke about your roommate never leaving the couch.",
+      "Relaxed: Talk about your plan to stop being so inactive."
+    ]
+  },
+  "speak of the devil": {
+    "cloze": [
+      { "sentence": "We were just talking about you, ____!", "answer": "speak of the devil" },
+      { "sentence": "____, here comes Tom now, right as we mentioned him.", "answer": "speak of the devil" },
+      { "sentence": "____, I was about to call you and you texted me.", "answer": "speak of the devil" },
+      { "sentence": "Oh, ____, there's the manager we were complaining about.", "answer": "speak of the devil" },
+      { "sentence": "Well, ____, look who just walked in the door.", "answer": "speak of the devil" },
+      { "sentence": "____, we were literally just discussing your idea.", "answer": "speak of the devil" },
+      { "sentence": "Ha, ____, that's her calling right now.", "answer": "speak of the devil" },
+      { "sentence": "____, the pizza guy shows up the second we mention food.", "answer": "speak of the devil" },
+      { "sentence": "You'll never guess who, well, ____, it's Sarah again.", "answer": "speak of the devil" },
+      { "sentence": "And, ____, here's the very person we needed.", "answer": "speak of the devil" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Vừa nhắc tới là tới liền, đúng là nhắc Tào Tháo!" },
+      { "direction": "vn_to_en", "source": "Ơ, vừa nhắc đã tới, kìa anh ấy đến rồi." },
+      { "direction": "vn_to_en", "source": "Đang định gọi thì cậu nhắn, đúng là vừa nhắc đã tới." },
+      { "direction": "vn_to_en", "source": "Ồ, nhắc là có mặt liền, sếp mà tụi mình vừa nói kìa." },
+      { "direction": "vn_to_en", "source": "Vừa nhắc tên là điện thoại reo, cô ấy gọi kìa." },
+      { "direction": "en_to_vn", "source": "Speak of the devil, here he comes now!" },
+      { "direction": "en_to_vn", "source": "Well, speak of the devil, we were just talking about you." },
+      { "direction": "en_to_vn", "source": "Speak of the devil, that's her texting right now." },
+      { "direction": "en_to_vn", "source": "Speak of the devil, the boss just walked in." },
+      { "direction": "en_to_vn", "source": "Ha, speak of the devil, look who showed up." }
+    ],
+    "scenario": [
+      "Casual: You're chatting about a friend and they walk in the door.",
+      "Friendly: You mention a coworker and they appear at your desk.",
+      "Playful: You were about to call someone and they text you first.",
+      "Relaxed: You and friends discuss a classmate who then joins the table.",
+      "Casual: You complain about your manager and they enter the room.",
+      "Playful: You mention wanting pizza and the delivery arrives.",
+      "Friendly: Someone's name comes up and their phone call comes through.",
+      "Casual: At a party, you talk about a friend who suddenly shows up.",
+      "Relaxed: You mention needing a certain person and they appear.",
+      "Playful: You joke about someone always being late, then they arrive."
+    ]
+  },
+  "long story short": {
+    "cloze": [
+      { "sentence": "We got lost, the car broke down, and ____, we missed the show.", "answer": "long story short" },
+      { "sentence": "____, I quit my job and moved to a new city.", "answer": "long story short" },
+      { "sentence": "There was a mix-up at the airport, but ____, we made it.", "answer": "long story short" },
+      { "sentence": "____, we ended up not going to the party.", "answer": "long story short" },
+      { "sentence": "It's a bit complicated, but ____, she got the promotion.", "answer": "long story short" },
+      { "sentence": "____, the deal fell through at the last minute.", "answer": "long story short" },
+      { "sentence": "A lot happened that night, but ____, we're fine now.", "answer": "long story short" },
+      { "sentence": "____, I'm not allowed back at that restaurant.", "answer": "long story short" },
+      { "sentence": "There were so many delays, but ____, the project is done.", "answer": "long story short" },
+      { "sentence": "____, we adopted the dog and never looked back.", "answer": "long story short" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Nói tóm lại, tụi mình bị lỡ buổi diễn." },
+      { "direction": "vn_to_en", "source": "Nói ngắn gọn thì tôi nghỉ việc và chuyển thành phố khác." },
+      { "direction": "vn_to_en", "source": "Chuyện dài lắm, nhưng tóm lại là cô ấy được thăng chức." },
+      { "direction": "vn_to_en", "source": "Nói tóm lại, cuối cùng tụi mình không đi dự tiệc." },
+      { "direction": "vn_to_en", "source": "Nói ngắn gọn thì thương vụ đổ bể vào phút chót." },
+      { "direction": "en_to_vn", "source": "Long story short, we missed the flight." },
+      { "direction": "en_to_vn", "source": "Long story short, I ended up adopting the cat." },
+      { "direction": "en_to_vn", "source": "It was complicated, but long story short, everything worked out." },
+      { "direction": "en_to_vn", "source": "Long story short, she got the job in the end." },
+      { "direction": "en_to_vn", "source": "Long story short, we're not going there again." }
+    ],
+    "scenario": [
+      "Casual: Summarize a chaotic road trip to a friend.",
+      "Friendly: Quickly explain to a coworker why you changed jobs.",
+      "Relaxed: Wrap up a complicated airport story for your family.",
+      "Casual: Tell a friend the short version of why you skipped a party.",
+      "Friendly: Summarize a work drama that ended with a promotion.",
+      "Casual: Explain briefly why a plan didn't work out.",
+      "Relaxed: Give the quick version of a wild night out.",
+      "Playful: Sum up an embarrassing story about a restaurant.",
+      "Friendly: Briefly explain how a delayed project finally finished.",
+      "Warm: Tell the short version of how you got your pet."
+    ]
+  },
+  "keep in touch": {
+    "cloze": [
+      { "sentence": "It was great seeing you, let's ____!", "answer": "keep in touch" },
+      { "sentence": "We promised to ____ after graduation.", "answer": "keep in touch" },
+      { "sentence": "Even though he moved abroad, we still ____.", "answer": "keep in touch" },
+      { "sentence": "Make sure to ____ while you're traveling.", "answer": "keep in touch" },
+      { "sentence": "I try to ____ with my old classmates.", "answer": "keep in touch" },
+      { "sentence": "We said goodbye and agreed to ____ by email.", "answer": "keep in touch" },
+      { "sentence": "Please ____, I'd hate to lose contact with you.", "answer": "keep in touch" },
+      { "sentence": "They didn't ____, and eventually drifted apart.", "answer": "keep in touch" },
+      { "sentence": "Let's ____ once the internship ends.", "answer": "keep in touch" },
+      { "sentence": "Thanks to social media, it's easy to ____ now.", "answer": "keep in touch" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Gặp bạn vui lắm, mình giữ liên lạc nhé!" },
+      { "direction": "vn_to_en", "source": "Tụi mình hứa sẽ giữ liên lạc sau khi ra trường." },
+      { "direction": "vn_to_en", "source": "Dù anh ấy ra nước ngoài, tụi mình vẫn giữ liên lạc." },
+      { "direction": "vn_to_en", "source": "Nhớ giữ liên lạc trong lúc đi du lịch nhé." },
+      { "direction": "vn_to_en", "source": "Tôi cố gắng giữ liên lạc với bạn học cũ." },
+      { "direction": "en_to_vn", "source": "Let's keep in touch after the trip." },
+      { "direction": "en_to_vn", "source": "We keep in touch through video calls every week." },
+      { "direction": "en_to_vn", "source": "Please keep in touch, I'll miss you." },
+      { "direction": "en_to_vn", "source": "They failed to keep in touch and lost contact." },
+      { "direction": "en_to_vn", "source": "It's easy to keep in touch these days with apps." }
+    ],
+    "scenario": [
+      "Warm: You're saying goodbye to a friend who is moving away.",
+      "Friendly: Wrap up a message to a coworker leaving the company.",
+      "Casual: Tell a travel buddy you want to stay connected.",
+      "Relaxed: Reconnecting with an old classmate at a reunion.",
+      "Warm: End a heartfelt note to a friend studying abroad.",
+      "Friendly: Ask a new acquaintance to stay in contact.",
+      "Casual: Say goodbye at the end of an internship.",
+      "Warm: Encourage a family member abroad to stay connected.",
+      "Friendly: Exchange numbers with someone you just met and liked.",
+      "Relaxed: Comment on how social media helps you stay connected."
+    ]
+  },
+  "feel free": {
+    "cloze": [
+      { "sentence": "____ to help yourself to snacks in the kitchen.", "answer": "Feel free" },
+      { "sentence": "If you have any questions, ____ to ask me.", "answer": "feel free" },
+      { "sentence": "____ to stay as long as you like.", "answer": "Feel free" },
+      { "sentence": "You can ____ to use my charger anytime.", "answer": "feel free" },
+      { "sentence": "____ to give me feedback, I don't mind.", "answer": "Feel free" },
+      { "sentence": "____ to call me if you need anything.", "answer": "Feel free" },
+      { "sentence": "Please ____ to take a seat wherever you like.", "answer": "feel free" },
+      { "sentence": "____ to borrow any book from my shelf.", "answer": "Feel free" },
+      { "sentence": "If you're hungry, ____ to grab something from the fridge.", "answer": "feel free" },
+      { "sentence": "____ to bring a friend to the party.", "answer": "Feel free" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Cứ tự nhiên lấy đồ ăn vặt trong bếp nhé." },
+      { "direction": "vn_to_en", "source": "Có thắc mắc gì thì cứ hỏi tôi, đừng ngại." },
+      { "direction": "vn_to_en", "source": "Cứ ở lại chơi bao lâu tùy thích." },
+      { "direction": "vn_to_en", "source": "Cứ tự nhiên gọi tôi nếu cần gì nhé." },
+      { "direction": "vn_to_en", "source": "Cứ thoải mái góp ý, tôi không phiền đâu." },
+      { "direction": "en_to_vn", "source": "Feel free to help yourself to some coffee." },
+      { "direction": "en_to_vn", "source": "Feel free to ask if anything is unclear." },
+      { "direction": "en_to_vn", "source": "Feel free to stay for dinner." },
+      { "direction": "en_to_vn", "source": "Feel free to bring a friend along." },
+      { "direction": "en_to_vn", "source": "Feel free to use my laptop whenever you need." }
+    ],
+    "scenario": [
+      "Friendly: A guest arrives at your home; invite them to relax.",
+      "Casual: Tell a new coworker they can ask you anything.",
+      "Warm: Offer a visiting friend food from your kitchen.",
+      "Relaxed: Let a classmate borrow your charger.",
+      "Friendly: Invite honest feedback from a teammate.",
+      "Casual: Tell a friend they can call you anytime.",
+      "Welcoming: Invite someone to sit anywhere at a casual gathering.",
+      "Friendly: Let a book-loving friend borrow from your shelf.",
+      "Relaxed: Tell a guest to grab a drink from the fridge.",
+      "Casual: Invite a friend to bring a plus-one to your party."
+    ]
+  },
+  "kill time": {
+    "cloze": [
+      { "sentence": "We had two hours before the flight, so we ____ at the mall.", "answer": "killed time" },
+      { "sentence": "I usually ____ by scrolling on my phone.", "answer": "kill time" },
+      { "sentence": "Let's grab a coffee to ____ before the movie starts.", "answer": "kill time" },
+      { "sentence": "He played games on his phone to ____ during the wait.", "answer": "kill time" },
+      { "sentence": "There's nothing to do here, we're just ____.", "answer": "killing time" },
+      { "sentence": "I read a magazine to ____ in the waiting room.", "answer": "kill time" },
+      { "sentence": "We ____ by people-watching in the park.", "answer": "killed time" },
+      { "sentence": "What do you do to ____ on a long train ride?", "answer": "kill time" },
+      { "sentence": "She's just ____ until her class begins.", "answer": "killing time" },
+      { "sentence": "Let's window-shop to ____ before dinner.", "answer": "kill time" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Còn hai tiếng nữa mới bay nên tụi mình ra trung tâm thương mại giết thời gian." },
+      { "direction": "vn_to_en", "source": "Tôi hay lướt điện thoại cho qua giờ." },
+      { "direction": "vn_to_en", "source": "Mình đi uống cà phê giết thời gian trước khi xem phim nhé." },
+      { "direction": "vn_to_en", "source": "Anh ấy chơi game trên điện thoại cho qua thời gian chờ." },
+      { "direction": "vn_to_en", "source": "Chẳng có gì làm, tụi mình chỉ đang giết thời gian thôi." },
+      { "direction": "en_to_vn", "source": "We killed time by walking around the shops." },
+      { "direction": "en_to_vn", "source": "I like to kill time by listening to podcasts." },
+      { "direction": "en_to_vn", "source": "He's just killing time until his appointment." },
+      { "direction": "en_to_vn", "source": "Let's kill time with a game while we wait." },
+      { "direction": "en_to_vn", "source": "She read a book to kill time at the station." }
+    ],
+    "scenario": [
+      "Casual: You and a friend have hours before a flight; suggest something to do.",
+      "Relaxed: Tell a friend how you pass time on your phone.",
+      "Friendly: Propose coffee before a movie to fill the gap.",
+      "Casual: Describe how you waited for a delayed train.",
+      "Relaxed: Admit there's nothing to do and you're just waiting around.",
+      "Casual: Explain how you passed time in a waiting room.",
+      "Friendly: Suggest people-watching in a park while you wait.",
+      "Relaxed: Ask a friend how they pass long journeys.",
+      "Casual: Mention you're waiting for a class to start.",
+      "Friendly: Suggest window-shopping before a dinner reservation."
+    ]
+  },
+  "rain check": {
+    "cloze": [
+      { "sentence": "I can't make dinner tonight, but can I take a ____?", "answer": "rain check" },
+      { "sentence": "Sorry, I'll have to take a ____ on the movie.", "answer": "rain check" },
+      { "sentence": "Let's take a ____ and go hiking next weekend instead.", "answer": "rain check" },
+      { "sentence": "Mind if I take a ____? I'm swamped with work.", "answer": "rain check" },
+      { "sentence": "She asked for a ____ because she wasn't feeling well.", "answer": "rain check" },
+      { "sentence": "Can we do a ____ on lunch? Something came up.", "answer": "rain check" },
+      { "sentence": "I'll take a ____ on the party, maybe next time.", "answer": "rain check" },
+      { "sentence": "He gave me a ____ but promised to reschedule soon.", "answer": "rain check" },
+      { "sentence": "Take a ____ if you're too tired tonight.", "answer": "rain check" },
+      { "sentence": "Let's take a ____ on drinks and meet Friday.", "answer": "rain check" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Tối nay mình không đi ăn được, hẹn dịp khác nhé?" },
+      { "direction": "vn_to_en", "source": "Xin lỗi, vụ xem phim mình phải hẹn lần sau vậy." },
+      { "direction": "vn_to_en", "source": "Thôi để dịp khác, cuối tuần sau mình đi leo núi nhé." },
+      { "direction": "vn_to_en", "source": "Cho mình khất bữa trưa nhé, có việc đột xuất." },
+      { "direction": "vn_to_en", "source": "Cô ấy xin hẹn dịp khác vì không khỏe." },
+      { "direction": "en_to_vn", "source": "Can I take a rain check on tonight?" },
+      { "direction": "en_to_vn", "source": "I'll have to take a rain check, I'm too busy." },
+      { "direction": "en_to_vn", "source": "Let's take a rain check and go next week." },
+      { "direction": "en_to_vn", "source": "She took a rain check because she felt sick." },
+      { "direction": "en_to_vn", "source": "He asked for a rain check but promised to reschedule." }
+    ],
+    "scenario": [
+      "Polite casual: Decline a friend's dinner invite tonight but suggest another time.",
+      "Friendly: Tell a coworker you can't do lunch today but want to reschedule.",
+      "Casual: Postpone a movie plan with a friend to next weekend.",
+      "Relaxed: You're too busy with work to meet; ask to do it later.",
+      "Warm: Politely turn down a party invite for now.",
+      "Friendly: You're not feeling well and want to postpone a hangout.",
+      "Casual: Reschedule drinks with a friend to Friday.",
+      "Polite: Something came up and you must delay a coffee date.",
+      "Relaxed: You're tired tonight and want to move plans to another day.",
+      "Friendly: Suggest a later date for a hiking trip."
+    ]
+  },
+  "out of the blue": {
+    "cloze": [
+      { "sentence": "She called me ____ after ten years of silence.", "answer": "out of the blue" },
+      { "sentence": "The idea just came to me ____ in the shower.", "answer": "out of the blue" },
+      { "sentence": "____, he decided to quit his job and travel.", "answer": "Out of the blue" },
+      { "sentence": "My old friend messaged me ____ last night.", "answer": "out of the blue" },
+      { "sentence": "The storm hit ____ during our picnic.", "answer": "out of the blue" },
+      { "sentence": "____, the company offered me a promotion.", "answer": "Out of the blue" },
+      { "sentence": "He proposed ____, and everyone was shocked.", "answer": "out of the blue" },
+      { "sentence": "The news came ____ and caught us all off guard.", "answer": "out of the blue" },
+      { "sentence": "____, my neighbor gave me a whole box of vegetables.", "answer": "Out of the blue" },
+      { "sentence": "She started crying ____ during the meeting.", "answer": "out of the blue" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Cô ấy gọi cho tôi một cách bất ngờ sau mười năm bặt tin." },
+      { "direction": "vn_to_en", "source": "Ý tưởng đó tự dưng nảy ra trong đầu tôi lúc tắm." },
+      { "direction": "vn_to_en", "source": "Bỗng dưng anh ấy quyết định nghỉ việc và đi du lịch." },
+      { "direction": "vn_to_en", "source": "Bạn cũ nhắn tin cho tôi bất ngờ tối qua." },
+      { "direction": "vn_to_en", "source": "Cơn mưa ập tới bất ngờ giữa buổi dã ngoại." },
+      { "direction": "en_to_vn", "source": "He quit his job out of the blue." },
+      { "direction": "en_to_vn", "source": "The message came out of the blue last night." },
+      { "direction": "en_to_vn", "source": "Out of the blue, she offered to help me." },
+      { "direction": "en_to_vn", "source": "The good news arrived out of the blue." },
+      { "direction": "en_to_vn", "source": "He proposed out of the blue and surprised everyone." }
+    ],
+    "scenario": [
+      "Casual: Tell a friend about an old contact who suddenly called you.",
+      "Relaxed: Describe a random idea that popped into your head.",
+      "Surprised: Explain how a friend suddenly decided to change their life.",
+      "Casual: Mention an unexpected message from an old friend.",
+      "Relaxed: Describe weather that changed suddenly on a trip.",
+      "Excited: Share unexpected good news about a promotion.",
+      "Casual: Recount a surprising proposal that shocked everyone.",
+      "Relaxed: Talk about news that caught your family off guard.",
+      "Friendly: Describe a neighbor's unexpected kind gesture.",
+      "Casual: Mention someone suddenly reacting strongly in a meeting."
+    ]
+  },
+  "hit it off": {
+    "cloze": [
+      { "sentence": "We met at a party and instantly ____.", "answer": "hit it off" },
+      { "sentence": "I think you two will really ____.", "answer": "hit it off" },
+      { "sentence": "They ____ right away and talked for hours.", "answer": "hit it off" },
+      { "sentence": "My mom and my girlfriend ____ immediately.", "answer": "hit it off" },
+      { "sentence": "We didn't ____ at first, but now we're close.", "answer": "hit it off" },
+      { "sentence": "The new coworkers ____ during lunch.", "answer": "hit it off" },
+      { "sentence": "I hoped they'd ____, and luckily they did.", "answer": "hit it off" },
+      { "sentence": "She and her roommate ____ from day one.", "answer": "hit it off" },
+      { "sentence": "We ____ over our shared love of hiking.", "answer": "hit it off" },
+      { "sentence": "The two dogs ____ at the park right away.", "answer": "hit it off" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Tụi mình gặp nhau ở tiệc và hợp nhau ngay." },
+      { "direction": "vn_to_en", "source": "Tôi nghĩ hai người sẽ hợp nhau lắm đấy." },
+      { "direction": "vn_to_en", "source": "Họ thân nhau nhanh và nói chuyện hàng giờ." },
+      { "direction": "vn_to_en", "source": "Mẹ tôi và bạn gái tôi hợp nhau ngay lập tức." },
+      { "direction": "vn_to_en", "source": "Ban đầu tụi mình không hợp, nhưng giờ thân lắm." },
+      { "direction": "en_to_vn", "source": "We hit it off the moment we met." },
+      { "direction": "en_to_vn", "source": "I'm sure you'll hit it off with her." },
+      { "direction": "en_to_vn", "source": "They hit it off over their love of music." },
+      { "direction": "en_to_vn", "source": "The new colleagues hit it off right away." },
+      { "direction": "en_to_vn", "source": "She and her roommate hit it off from the start." }
+    ],
+    "scenario": [
+      "Casual: Tell a friend about clicking with someone new at a party.",
+      "Friendly: Predict that two friends you're introducing will get along.",
+      "Relaxed: Describe how quickly two people became friends.",
+      "Warm: Share that your partner and your mom got along instantly.",
+      "Casual: Explain that a friendship started slow but grew close.",
+      "Friendly: Talk about new coworkers becoming friends fast.",
+      "Relaxed: Mention hoping two people would connect, and they did.",
+      "Casual: Describe how you and a roommate clicked immediately.",
+      "Friendly: Explain how a shared hobby helped you connect with someone.",
+      "Playful: Joke about two dogs becoming instant friends at the park."
+    ]
+  },
+  "ring a bell": {
+    "cloze": [
+      { "sentence": "That name ____, but I can't remember where from.", "answer": "rings a bell" },
+      { "sentence": "Does the title of the song ____ for you?", "answer": "ring a bell" },
+      { "sentence": "Her face ____, though I'm not sure we've met.", "answer": "rings a bell" },
+      { "sentence": "The address doesn't ____ at all.", "answer": "ring a bell" },
+      { "sentence": "Hmm, that story ____ now that you mention it.", "answer": "rings a bell" },
+      { "sentence": "None of these names ____, sorry.", "answer": "ring a bell" },
+      { "sentence": "The word sounds familiar and kind of ____.", "answer": "rings a bell" },
+      { "sentence": "Does this restaurant ____? We went years ago.", "answer": "ring a bell" },
+      { "sentence": "His voice ____, but I can't place it.", "answer": "rings a bell" },
+      { "sentence": "That movie title doesn't ____ for me.", "answer": "ring a bell" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Cái tên đó nghe quen quen, mà tôi không nhớ ở đâu." },
+      { "direction": "vn_to_en", "source": "Tựa bài hát đó có gợi cho bạn nhớ gì không?" },
+      { "direction": "vn_to_en", "source": "Mặt cô ấy nhìn quen quen, dù tôi không chắc đã gặp." },
+      { "direction": "vn_to_en", "source": "Cái địa chỉ đó chẳng gợi cho tôi nhớ gì cả." },
+      { "direction": "vn_to_en", "source": "Ừm, nghe bạn nói thì câu chuyện đó nghe quen quen." },
+      { "direction": "en_to_vn", "source": "That name rings a bell, but I can't recall." },
+      { "direction": "en_to_vn", "source": "Does this photo ring a bell for you?" },
+      { "direction": "en_to_vn", "source": "Her voice rings a bell somehow." },
+      { "direction": "en_to_vn", "source": "None of those titles ring a bell." },
+      { "direction": "en_to_vn", "source": "The place rings a bell, we might have been there." }
+    ],
+    "scenario": [
+      "Casual: A friend mentions a name that sounds vaguely familiar to you.",
+      "Relaxed: Ask a friend if a song title sounds familiar to them.",
+      "Casual: You half-recognize someone's face at a gathering.",
+      "Friendly: Admit an address means nothing to you.",
+      "Relaxed: A story starts to feel familiar as your friend tells it.",
+      "Casual: Apologize that a list of names means nothing to you.",
+      "Friendly: A word sounds familiar but you can't quite place it.",
+      "Relaxed: Ask if a restaurant you both maybe visited sounds familiar.",
+      "Casual: You recognize a voice but can't remember whose it is.",
+      "Friendly: Tell someone a movie title doesn't sound familiar."
+    ]
+  }
+}
