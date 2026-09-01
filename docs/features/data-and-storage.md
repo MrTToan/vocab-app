@@ -21,7 +21,7 @@ with no auth configured (the dev seam). Everything sits in one SQLite file: **`.
 - **llm_usage** — the per-user daily LLM quota counters (also feeds the [admin](admin.md) dashboard).
 
 The [writing module](writing-feedback.md) adds its own tables to the **same** file: **writing_prompts**
-(questions + Task 1 `chart_data`/image), **writing_submissions** (bands + coaching), **writing_corrections**
+(questions + Task 1 `chart_data`/image, with `owner_id`/`visibility` — public bank vs a user's private prompt), **writing_submissions** (bands + coaching), **writing_corrections**
 (inline fixes), and **writing_discussions** (your saved per-card "Discuss with the AI" threads).
 
 Your API keys live separately in **`.env.local`**. Neither file is in version control — they're yours

@@ -67,6 +67,18 @@ you paste the essay prompt and save. For Task 1 you paste the question and the *
 drag-drop, or pick a file); the app reads the chart **once** via the vision LLM, shows the numbers for
 you to confirm/edit, then stores everything (the image is kept inline, no files to manage). Those numbers
 are the ground truth your description is scored against. Self-serve — no Claude, no Google Docs.
+Limits: question text 10–4,000 characters, title up to 120, chart image PNG/JPEG/WebP up to 1 MB
+(Task 1 only).
+
+### Who sees a question
+Prompts have an **owner and a visibility**, exactly like collections:
+- The **site owner's** questions (in-app or ingested) go into the **public bank** everyone practises from
+  (`owner_id = __system__`, `visibility = public`). Questions from before this existed are treated the same.
+- **Anyone else's** question is **private** — only its author can see it, pick it, score against it or
+  delete it (it shows a 🔒 *Private* tag in the question list). The site owner can **Publish** it into the
+  shared bank (and later **Unpublish**); nobody else can. Deleting a question keeps your past feedback on it.
+- Every prompt read is filtered to *public or mine*, so scoring/discussing against someone else's
+  private prompt by id is not possible.
 
 **Bulk / legacy — from Google Docs:** you can instead keep **two Google Docs** — one for Task 1, one for
 Task 2 — with each question **numbered `Question 1`, `Question 2`, …** (Task 1 questions include the chart
@@ -76,5 +88,7 @@ re-running never duplicates); for Task 1 it reads each chart once and asks you t
 A few sample prompts are seeded so you can start immediately.
 
 ---
-*Under the hood: `lib/writing/*`, tables `writing_prompts` / `writing_submissions` / `writing_corrections`,
-API `app/api/writing/*`, UI `components/writing/*`. Design: `docs/WRITING-SPEC.md`.*
+*Under the hood: `lib/writing/*`, tables `writing_prompts` (with `owner_id`/`visibility`) /
+`writing_submissions` / `writing_corrections`, API `app/api/writing/*` — the prompt list omits image bytes
+(`has_image`); the selected chart loads from `GET /api/writing/prompts/:id/image` (browser-cached, private);
+`PATCH`/`DELETE /api/writing/prompts/:id` publish/remove. UI `components/writing/*`. Design: `docs/WRITING-SPEC.md`.*

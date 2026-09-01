@@ -75,18 +75,38 @@ export interface ChartData {
   [k: string]: unknown;
 }
 
+/** Who may see a prompt: `public` = everyone; `private` = only its author. */
+export type PromptVisibility = "public" | "private";
+
 export interface WritingPrompt {
   id: string;
   task_type: WritingTask;
   title: string;
   prompt_text: string;
-  image_path: string | null; // Task 1 chart image (served from /public)
+  /** Task 1 chart image — an inline `data:` URL (self-serve) or a `/public` path
+   *  (legacy ingest). NOT included in list responses; see `WritingPromptSummary`. */
+  image_path: string | null;
   chart_data: ChartData | null; // Task 1 only — ground truth for scoring
   model_answer: string | null;
   source_file: string | null;
   tags: string[];
   created_at: number;
+  /** `__system__` for the site-curated bank, else the author's user id. */
+  owner_id: string;
+  visibility: PromptVisibility;
 }
+
+/** A prompt as returned by list endpoints: the image bytes are replaced by a
+ *  `has_image` flag so the list payload stays small (fetch the image from
+ *  `/api/writing/prompts/:id/image`). */
+export type WritingPromptSummary = Omit<WritingPrompt, "image_path"> & { has_image: boolean };
+
+/** Upload limits for self-serve prompts (enforced server-side, 400 otherwise). */
+export const PROMPT_TEXT_MIN = 10;
+export const PROMPT_TEXT_MAX = 4000;
+export const PROMPT_TITLE_MAX = 120;
+export const PROMPT_IMAGE_MAX_BYTES = 1024 * 1024; // 1 MB decoded
+export const PROMPT_IMAGE_MIMES = ["image/png", "image/jpeg", "image/webp"] as const;
 
 /** A located inline correction (start/end are offsets into the submission text). */
 export interface WritingCorrection {

@@ -11,9 +11,10 @@ import type {
   Visibility,
 } from "./types";
 import { SYSTEM_OWNER, canEdit, ownerIdFor } from "./auth/user";
-// NOTE: writing prompts are a SHARED pool (see lib/writing/store.ts). Vocab data
-// below is split into shared CONTENT (words + questions, keyed by id) and per-user
-// PROGRESS (user_words + user_question_state). See the header comment below.
+// NOTE: writing prompts live in lib/writing/store.ts and follow the same
+// owner_id/visibility model as collections. Vocab data below is split into shared
+// CONTENT (words + questions, keyed by id) and per-user PROGRESS (user_words +
+// user_question_state). See the header comment below.
 
 /*
  * Storage lives behind this one interface. Two backends:

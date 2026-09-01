@@ -2,12 +2,12 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { jsonFetch } from "@/lib/ui";
-import { MIN_WORDS, REC_MINUTES, type WritingPrompt, type WritingSubmission, type WritingTask } from "@/lib/writing/types";
+import { MIN_WORDS, REC_MINUTES, type WritingPromptSummary, type WritingSubmission, type WritingTask } from "@/lib/writing/types";
 import { countWords } from "@/lib/writing/grade";
 import Feedback, { bandColor } from "./Feedback";
 
 type PromptStats = { attempts: number; bestBand: number; lastBand: number; lastAt: number } | null;
-type PromptWithStats = WritingPrompt & { stats: PromptStats };
+type PromptWithStats = WritingPromptSummary & { stats: PromptStats; can_edit: boolean };
 
 /**
  * Writing workspace: pick a question from the left pane (with your past scores),
@@ -25,7 +25,7 @@ export default function WritingPractice({ task }: { task: WritingTask }) {
   const [loadingReview, setLoadingReview] = useState(false);
   const [error, setError] = useState("");
   const [hasLLM, setHasLLM] = useState(true);
-  const [isOwner, setIsOwner] = useState(false); // gates the setup hint (repo doc path)
+  const [isOwner, setIsOwner] = useState(false); // gates the setup hint + publish toggle
 
   const min = MIN_WORDS[task];
   const recMinutes = REC_MINUTES[task];
@@ -107,6 +107,41 @@ export default function WritingPractice({ task }: { task: WritingTask }) {
     setView("write");
   }
 
+  // Site owner: publish/unpublish a prompt into the shared bank.
+  async function setVisibility(id: string, visibility: "public" | "private") {
+    setError("");
+    try {
+      const { prompt } = await jsonFetch<{ prompt: WritingPromptSummary }>(`/api/writing/prompts/${id}`, {
+        method: "PATCH",
+        body: JSON.stringify({ visibility }),
+      });
+      setPrompts((list) => list?.map((p) => (p.id === id ? { ...p, visibility: prompt.visibility } : p)) ?? list);
+    } catch (e) {
+      setError((e as Error)?.message ?? "Couldn't change visibility");
+    }
+  }
+
+  // Author (or site owner): remove a prompt. Past feedback on it is kept.
+  async function remove(id: string) {
+    setError("");
+    try {
+      await jsonFetch(`/api/writing/prompts/${id}`, { method: "DELETE" });
+      setPrompts((list) => {
+        const next = list?.filter((p) => p.id !== id) ?? list;
+        if (selectedId === id) {
+          setSelectedId(next?.[0]?.id ?? null);
+          setText("");
+          setResult(null);
+          setReview(null);
+          setView("write");
+        }
+        return next;
+      });
+    } catch (e) {
+      setError((e as Error)?.message ?? "Couldn't delete the question");
+    }
+  }
+
   if (prompts === null) return <p className="muted">Loading questions…</p>;
 
   if (prompts.length === 0) {
@@ -132,7 +167,14 @@ export default function WritingPractice({ task }: { task: WritingTask }) {
       <div className="print-linear lg:w-[80rem] lg:max-w-[94vw] lg:relative lg:left-1/2 lg:-translate-x-1/2">
       <div className="print-stack grid grid-cols-1 lg:grid-cols-[17rem_minmax(0,1fr)] gap-5 items-start">
         {/* ── question picker ── */}
-        <QuestionList prompts={prompts} selectedId={selectedId} onPick={pick} />
+        <QuestionList
+          prompts={prompts}
+          selectedId={selectedId}
+          onPick={pick}
+          isOwner={isOwner}
+          onSetVisibility={setVisibility}
+          onDelete={remove}
+        />
 
         {/* ── practice / feedback ── */}
         <div className="min-w-0 space-y-4">
@@ -209,11 +251,19 @@ function QuestionList({
   prompts,
   selectedId,
   onPick,
+  isOwner,
+  onSetVisibility,
+  onDelete,
 }: {
   prompts: PromptWithStats[];
   selectedId: string | null;
   onPick: (id: string) => void;
+  isOwner: boolean;
+  onSetVisibility: (id: string, visibility: "public" | "private") => void;
+  onDelete: (id: string) => void;
 }) {
+  // Two-tap delete: the first tap arms, the second confirms (no modal dialogs).
+  const [armed, setArmed] = useState<string | null>(null);
   return (
     <div className="no-print flex lg:flex-col gap-2 overflow-x-auto lg:overflow-x-visible lg:overflow-y-auto lg:max-h-[calc(100vh-8rem)] lg:sticky lg:top-24 pb-1 lg:pb-0 -mx-1 px-1">
       <div className="hidden lg:block text-xs font-bold muted uppercase tracking-wide px-1 pb-1">
@@ -221,32 +271,69 @@ function QuestionList({
       </div>
       {prompts.map((p) => {
         const on = p.id === selectedId;
+        const isPrivate = p.visibility !== "public";
+        const manage = on && (isOwner || p.can_edit);
         return (
-          <button
+          <div
             key={p.id}
-            onClick={() => onPick(p.id)}
-            className="shrink-0 lg:shrink text-left card p-3 min-w-[13rem] lg:min-w-0 lg:w-full transition-colors"
+            className="shrink-0 lg:shrink card min-w-[13rem] lg:min-w-0 lg:w-full transition-colors"
             style={on ? { borderColor: "var(--accent)", background: "var(--accent-soft)" } : undefined}
           >
-            <div className="flex items-start justify-between gap-2">
-              <span className="font-semibold text-sm leading-snug line-clamp-2">{p.title || p.prompt_text.slice(0, 60)}</span>
-              {p.stats ? (
-                <span
-                  className="shrink-0 text-xs font-extrabold px-1.5 py-0.5 rounded-md text-white"
-                  style={{ background: bandColor(p.stats.bestBand) }}
-                >
-                  {p.stats.bestBand.toFixed(1)}
-                </span>
-              ) : (
-                <span className="shrink-0 chip">New</span>
+            <button onClick={() => onPick(p.id)} className="block w-full text-left p-3">
+              <div className="flex items-start justify-between gap-2">
+                <span className="font-semibold text-sm leading-snug line-clamp-2">{p.title || p.prompt_text.slice(0, 60)}</span>
+                {p.stats ? (
+                  <span
+                    className="shrink-0 text-xs font-extrabold px-1.5 py-0.5 rounded-md text-white"
+                    style={{ background: bandColor(p.stats.bestBand) }}
+                  >
+                    {p.stats.bestBand.toFixed(1)}
+                  </span>
+                ) : (
+                  <span className="shrink-0 chip">New</span>
+                )}
+              </div>
+              {(p.stats || isPrivate) && (
+                <div className="text-[11px] muted mt-1 flex flex-wrap gap-x-2">
+                  {p.stats && (
+                    <span>
+                      {p.stats.attempts}× · last {p.stats.lastBand.toFixed(1)}
+                    </span>
+                  )}
+                  {isPrivate && <span title="Only you can see this question">🔒 Private</span>}
+                </div>
               )}
-            </div>
-            {p.stats && (
-              <div className="text-[11px] muted mt-1">
-                {p.stats.attempts}× · last {p.stats.lastBand.toFixed(1)}
+            </button>
+            {manage && (
+              <div className="flex flex-wrap gap-1.5 px-3 pb-3 -mt-1">
+                {isOwner && (
+                  <button
+                    className="btn text-xs !min-h-0 !px-2 !py-1"
+                    onClick={() => onSetVisibility(p.id, isPrivate ? "public" : "private")}
+                    title={isPrivate ? "Make this question visible to everyone" : "Hide this question from other learners"}
+                  >
+                    {isPrivate ? "Publish" : "Unpublish"}
+                  </button>
+                )}
+                {(isOwner || p.can_edit) && (
+                  <button
+                    className="btn text-xs !min-h-0 !px-2 !py-1"
+                    style={armed === p.id ? { borderColor: "var(--bad)", color: "var(--bad)" } : undefined}
+                    onClick={() => {
+                      if (armed === p.id) {
+                        setArmed(null);
+                        onDelete(p.id);
+                      } else setArmed(p.id);
+                    }}
+                    onBlur={() => setArmed((a) => (a === p.id ? null : a))}
+                    title="Delete this question (your past feedback on it is kept)"
+                  >
+                    {armed === p.id ? "Confirm delete" : "Delete"}
+                  </button>
+                )}
               </div>
             )}
-          </button>
+          </div>
         );
       })}
     </div>
@@ -285,10 +372,10 @@ function PromptWriter({
       <div className="card p-5">
         {prompt.title && <div className="font-bold mb-1">{prompt.title}</div>}
         <p className="whitespace-pre-wrap">{prompt.prompt_text}</p>
-        {prompt.image_path && (
+        {prompt.has_image && (
           /* eslint-disable-next-line @next/next/no-img-element */
           <img
-            src={prompt.image_path}
+            src={`/api/writing/prompts/${prompt.id}/image`}
             alt={prompt.title || "chart"}
             className="mt-4 rounded-lg border max-w-full"
             style={{ borderColor: "var(--line)" }}

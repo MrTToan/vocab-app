@@ -11,7 +11,10 @@ import {
   type Criterion,
   type CriterionScore,
   type WritingDiscussionMessage,
+  type WritingPromptSummary,
+  type PromptVisibility,
 } from "./types";
+import { SYSTEM_OWNER, canEdit, isOwner, ownerIdFor } from "../auth/user";
 
 /*
  * Writing storage — its own small libSQL layer over the SAME database file the
@@ -19,19 +22,23 @@ import {
  * separate from lib/store.ts so the writing module is self-contained.
  *
  * MULTI-TENANCY:
- *  - writing_prompts are a SHARED pool — every user practises the same IELTS
- *    questions. Prompt reads are NOT filtered by user; the user_id column on a
- *    prompt is just "who ingested it" (metadata), never a visibility gate.
+ *  - writing_prompts carry `owner_id` + `visibility`, exactly like collections.
+ *    `owner_id = __system__` + `public` is the site-curated bank everyone
+ *    practises from (the site owner's ingest and anything the site owner
+ *    publishes). Anyone else's self-serve prompt is `private` — visible,
+ *    scorable and deletable only by its author until the site owner publishes
+ *    it. Every prompt read is filtered to `public OR owner_id = caller`, so a
+ *    user can never read/score against another user's private prompt by id.
+ *    (`user_id` is the legacy "who ingested it" column; kept, not consulted.)
  *  - writing_submissions + writing_corrections are PER-USER — each student's
  *    essays, bands and stats are private (scoped by user_id).
- * Call sites use writingStore.forUser(userId): shared prompt methods ignore the
- * bound user; submission/stats methods scope to it.
+ * Call sites use writingStore.forUser(userId); every method scopes to it.
  *
  * Tables (all additive): writing_prompts, writing_submissions, writing_corrections.
  */
 
-type NewPrompt = Omit<WritingPrompt, "id" | "created_at" | "tags"> &
-  Partial<Pick<WritingPrompt, "id" | "created_at" | "tags">>;
+type NewPrompt = Omit<WritingPrompt, "id" | "created_at" | "tags" | "owner_id" | "visibility"> &
+  Partial<Pick<WritingPrompt, "id" | "created_at" | "tags" | "owner_id" | "visibility">>;
 
 type NewSubmission = Omit<WritingSubmission, "id" | "created_at"> &
   Partial<Pick<WritingSubmission, "id" | "created_at">>;
@@ -86,6 +93,17 @@ async function connect(): Promise<any> {
       await addColumn(db, "writing_prompts", "user_id TEXT");
       await addColumn(db, "writing_submissions", "user_id TEXT");
       await addColumn(db, "writing_corrections", "user_id TEXT");
+      // ownership + visibility (mirrors collections). Backfill: rows from before
+      // this existed are the owner-curated bank everyone already uses → public.
+      await addColumn(db, "writing_prompts", "owner_id TEXT");
+      await addColumn(db, "writing_prompts", "visibility TEXT DEFAULT 'private'");
+      await db.execute(
+        `UPDATE writing_prompts SET owner_id = '${SYSTEM_OWNER}', visibility = 'public'
+         WHERE owner_id IS NULL OR owner_id = ''`,
+      );
+      await db.execute(
+        `UPDATE writing_prompts SET visibility = 'private' WHERE visibility IS NULL OR visibility = ''`,
+      );
       await db.execute(
         `CREATE TABLE IF NOT EXISTS writing_discussions (
           id TEXT PRIMARY KEY, submission_id TEXT, card_key TEXT,
@@ -119,19 +137,54 @@ function jsonParse<T>(s: unknown, fallback: T): T {
   }
 }
 
-function rowToPrompt(r: any): WritingPrompt {
+/** Thrown when a caller tries to delete/publish a prompt they may not manage. */
+export class PromptForbiddenError extends Error {
+  constructor(message = "forbidden") {
+    super(message);
+    this.name = "PromptForbiddenError";
+  }
+}
+
+type Row = Record<string, unknown>;
+
+function rowToSummary(r: Row): WritingPromptSummary {
   return {
     id: String(r.id),
     task_type: String(r.task_type) as WritingTask,
     title: String(r.title ?? ""),
     prompt_text: String(r.prompt_text ?? ""),
-    image_path: r.image_path ? String(r.image_path) : null,
     chart_data: r.chart_data ? jsonParse(r.chart_data, null) : null,
     model_answer: r.model_answer ? String(r.model_answer) : null,
     source_file: r.source_file ? String(r.source_file) : null,
     tags: jsonParse<string[]>(r.tags, []),
     created_at: Number(r.created_at ?? 0),
+    owner_id: String(r.owner_id || SYSTEM_OWNER),
+    visibility: r.visibility === "public" ? "public" : "private",
+    has_image: !!r.has_image,
   };
+}
+
+function rowToPrompt(r: Row): WritingPrompt {
+  const summary: Partial<WritingPromptSummary> = rowToSummary(r);
+  delete summary.has_image;
+  return { ...(summary as Omit<WritingPromptSummary, "has_image">), image_path: r.image_path ? String(r.image_path) : null };
+}
+
+/** Columns of a prompt row EXCEPT the (potentially multi-MB) image. */
+const SUMMARY_COLS = `id, task_type, title, prompt_text, chart_data, model_answer, source_file,
+  tags, created_at, owner_id, visibility,
+  (image_path IS NOT NULL AND image_path != '') AS has_image`;
+
+/** WHERE fragment: prompts the caller may see — public, or their own. Bind
+ *  `visibleArgs(userId)`: the site owner's "own" content is the `__system__`
+ *  bank (ownerIdFor), so unpublished bank prompts stay visible to them. */
+const VISIBLE = "(visibility = 'public' OR owner_id = ? OR owner_id = ?)";
+const visibleArgs = (userId: string) => [userId, ownerIdFor(userId)];
+
+/** May `userId` delete/manage the prompt owned by `ownerId`? The author, the
+ *  site owner for the shared bank, and the site owner for anything (moderation). */
+function canManage(userId: string, ownerId: string): boolean {
+  return canEdit(userId, ownerId) || isOwner(userId);
 }
 
 const emptyBands = () =>
@@ -174,31 +227,53 @@ function rowToSubmission(r: any, corrections: WritingCorrection[]): WritingSubmi
 /* ─────────────────  raw (userId-first) implementation  ────────────────── */
 
 const raw = {
+  /**
+   * Insert prompts authored by `userId`. Ownership defaults per `ownerIdFor`:
+   * the site owner writes to the shared bank (`__system__`, public); anyone
+   * else gets a private prompt of their own. Re-using an existing id (idempotent
+   * ingest) is allowed only for a prompt the caller may manage.
+   */
   async addPrompts(userId: string, prompts: NewPrompt[]): Promise<WritingPrompt[]> {
     const c = await connect();
     const now = Date.now();
-    const full: WritingPrompt[] = prompts.map((p) => ({
-      id: p.id ?? randomUUID(),
-      task_type: p.task_type,
-      title: p.title,
-      prompt_text: p.prompt_text,
-      image_path: p.image_path ?? null,
-      chart_data: p.chart_data ?? null,
-      model_answer: p.model_answer ?? null,
-      source_file: p.source_file ?? null,
-      tags: p.tags ?? [],
-      created_at: p.created_at ?? now,
-    }));
+    const defaultOwner = ownerIdFor(userId);
+    const full: WritingPrompt[] = prompts.map((p) => {
+      const owner_id = p.owner_id ?? defaultOwner;
+      return {
+        id: p.id ?? randomUUID(),
+        task_type: p.task_type,
+        title: p.title,
+        prompt_text: p.prompt_text,
+        image_path: p.image_path ?? null,
+        chart_data: p.chart_data ?? null,
+        model_answer: p.model_answer ?? null,
+        source_file: p.source_file ?? null,
+        tags: p.tags ?? [],
+        created_at: p.created_at ?? now,
+        owner_id,
+        visibility: p.visibility ?? (owner_id === SYSTEM_OWNER ? "public" : "private"),
+      };
+    });
     if (!full.length) return [];
+    // A caller may only overwrite ids they own (INSERT OR REPLACE below).
+    const existing = await c.execute({
+      sql: `SELECT id, owner_id FROM writing_prompts WHERE id IN (${full.map(() => "?").join(",")})`,
+      args: full.map((p) => p.id),
+    });
+    for (const r of existing.rows as Row[]) {
+      if (!canManage(userId, String(r.owner_id || SYSTEM_OWNER)))
+        throw new PromptForbiddenError("cannot overwrite this prompt");
+    }
     await c.batch(
       full.map((p) => ({
         sql: `INSERT OR REPLACE INTO writing_prompts
-          (id, task_type, title, prompt_text, image_path, chart_data, model_answer, source_file, tags, last_shown, created_at, user_id)
-          VALUES (?,?,?,?,?,?,?,?,?,COALESCE((SELECT last_shown FROM writing_prompts WHERE id=?),0),?,?)`,
+          (id, task_type, title, prompt_text, image_path, chart_data, model_answer, source_file, tags, last_shown, created_at, user_id, owner_id, visibility)
+          VALUES (?,?,?,?,?,?,?,?,?,COALESCE((SELECT last_shown FROM writing_prompts WHERE id=?),0),?,?,?,?)`,
         args: [
           p.id, p.task_type, p.title, p.prompt_text, p.image_path,
           p.chart_data ? JSON.stringify(p.chart_data) : null,
           p.model_answer, p.source_file, JSON.stringify(p.tags), p.id, p.created_at, userId,
+          p.owner_id, p.visibility,
         ],
       })),
       "write",
@@ -206,33 +281,92 @@ const raw = {
     return full;
   },
 
-  // ── SHARED prompt pool (no user filter) ──
-  async listPrompts(task?: WritingTask): Promise<WritingPrompt[]> {
+  // ── prompts the caller may see: public OR their own ──
+  /** List WITHOUT image bytes (see `WritingPromptSummary`). */
+  async listPrompts(userId: string, task?: WritingTask): Promise<WritingPromptSummary[]> {
     const c = await connect();
     const rs = task
-      ? await c.execute({ sql: "SELECT * FROM writing_prompts WHERE task_type=? ORDER BY created_at DESC", args: [task] })
-      : await c.execute("SELECT * FROM writing_prompts ORDER BY created_at DESC");
-    return rs.rows.map(rowToPrompt);
+      ? await c.execute({
+          sql: `SELECT ${SUMMARY_COLS} FROM writing_prompts WHERE task_type=? AND ${VISIBLE} ORDER BY created_at DESC`,
+          args: [task, ...visibleArgs(userId)],
+        })
+      : await c.execute({
+          sql: `SELECT ${SUMMARY_COLS} FROM writing_prompts WHERE ${VISIBLE} ORDER BY created_at DESC`,
+          args: visibleArgs(userId),
+        });
+    return rs.rows.map(rowToSummary);
   },
 
-  async getPrompt(id: string): Promise<WritingPrompt | undefined> {
+  async getPrompt(userId: string, id: string): Promise<WritingPrompt | undefined> {
     const c = await connect();
-    const rs = await c.execute({ sql: "SELECT * FROM writing_prompts WHERE id=? LIMIT 1", args: [id] });
+    const rs = await c.execute({
+      sql: `SELECT * FROM writing_prompts WHERE id=? AND ${VISIBLE} LIMIT 1`,
+      args: [id, ...visibleArgs(userId)],
+    });
     return rs.rows[0] ? rowToPrompt(rs.rows[0]) : undefined;
   },
 
-  /** Remove a prompt from the shared bank (its submissions/corrections are left intact). */
-  async deletePrompt(id: string): Promise<void> {
-    const c = await connect();
-    await c.execute({ sql: "DELETE FROM writing_prompts WHERE id=?", args: [id] });
-  },
-
-  /** Least-recently-shown prompt for a task; marks it shown (global rotation across the shared pool). */
-  async pickPrompt(task: WritingTask): Promise<WritingPrompt | undefined> {
+  /** Just the stored image (data URL or /public path) of a visible prompt, or undefined. */
+  async getPromptImage(userId: string, id: string): Promise<string | undefined> {
     const c = await connect();
     const rs = await c.execute({
-      sql: "SELECT * FROM writing_prompts WHERE task_type=? ORDER BY last_shown ASC, RANDOM() LIMIT 1",
-      args: [task],
+      sql: `SELECT image_path FROM writing_prompts WHERE id=? AND ${VISIBLE} LIMIT 1`,
+      args: [id, ...visibleArgs(userId)],
+    });
+    const v = (rs.rows[0] as Row | undefined)?.image_path;
+    return v ? String(v) : undefined;
+  },
+
+  /**
+   * Delete a prompt (its submissions/corrections are left intact). Only the
+   * author / the site owner may; anyone else gets PromptForbiddenError. Returns
+   * false if no such visible prompt exists.
+   */
+  async deletePrompt(userId: string, id: string): Promise<boolean> {
+    const c = await connect();
+    const rs = await c.execute({
+      sql: `SELECT owner_id FROM writing_prompts WHERE id=? AND ${VISIBLE} LIMIT 1`,
+      args: [id, ...visibleArgs(userId)],
+    });
+    const cur = rs.rows[0] as Row | undefined;
+    if (!cur) return false;
+    if (!canManage(userId, String(cur.owner_id || SYSTEM_OWNER)))
+      throw new PromptForbiddenError("cannot delete this prompt");
+    await c.execute({ sql: "DELETE FROM writing_prompts WHERE id=?", args: [id] });
+    return true;
+  },
+
+  /**
+   * Publish / unpublish. Site-owner-only: only the site owner curates the shared
+   * bank. The site owner may flip ANY prompt by id (that is how a learner's
+   * private prompt gets promoted); everyone else gets PromptForbiddenError for a
+   * prompt they can see and undefined (not found) for one they can't.
+   */
+  async setPromptVisibility(
+    userId: string,
+    id: string,
+    visibility: PromptVisibility,
+  ): Promise<WritingPromptSummary | undefined> {
+    const c = await connect();
+    const rs = isOwner(userId)
+      ? await c.execute({ sql: `SELECT ${SUMMARY_COLS} FROM writing_prompts WHERE id=? LIMIT 1`, args: [id] })
+      : await c.execute({
+          sql: `SELECT ${SUMMARY_COLS} FROM writing_prompts WHERE id=? AND ${VISIBLE} LIMIT 1`,
+          args: [id, ...visibleArgs(userId)],
+        });
+    const cur = rs.rows[0] as Row | undefined;
+    if (!cur) return undefined;
+    if (!isOwner(userId)) throw new PromptForbiddenError("only the site owner can publish prompts");
+    await c.execute({ sql: "UPDATE writing_prompts SET visibility=? WHERE id=?", args: [visibility, id] });
+    return rowToSummary({ ...cur, visibility });
+  },
+
+  /** Least-recently-shown visible prompt for a task; marks it shown. */
+  async pickPrompt(userId: string, task: WritingTask): Promise<WritingPrompt | undefined> {
+    const c = await connect();
+    const rs = await c.execute({
+      sql: `SELECT * FROM writing_prompts WHERE task_type=? AND ${VISIBLE} ORDER BY last_shown ASC, RANDOM() LIMIT 1`,
+      args: [task, ...visibleArgs(userId)],
     });
     if (!rs.rows[0]) return undefined;
     const p = rowToPrompt(rs.rows[0]);
@@ -240,11 +374,11 @@ const raw = {
     return p;
   },
 
-  async promptCount(task?: WritingTask): Promise<number> {
+  async promptCount(userId: string, task?: WritingTask): Promise<number> {
     const c = await connect();
     const rs = task
-      ? await c.execute({ sql: "SELECT COUNT(*) n FROM writing_prompts WHERE task_type=?", args: [task] })
-      : await c.execute("SELECT COUNT(*) n FROM writing_prompts");
+      ? await c.execute({ sql: `SELECT COUNT(*) n FROM writing_prompts WHERE task_type=? AND ${VISIBLE}`, args: [task, ...visibleArgs(userId)] })
+      : await c.execute({ sql: `SELECT COUNT(*) n FROM writing_prompts WHERE ${VISIBLE}`, args: visibleArgs(userId) });
     return Number(rs.rows[0]?.n ?? 0);
   },
 
@@ -359,8 +493,11 @@ const raw = {
 /** A user-scoped view of the writing store. */
 export interface WritingScope {
   addPrompts(prompts: NewPrompt[]): Promise<WritingPrompt[]>;
-  listPrompts(task?: WritingTask): Promise<WritingPrompt[]>;
+  listPrompts(task?: WritingTask): Promise<WritingPromptSummary[]>;
   getPrompt(id: string): Promise<WritingPrompt | undefined>;
+  getPromptImage(id: string): Promise<string | undefined>;
+  deletePrompt(id: string): Promise<boolean>;
+  setPromptVisibility(id: string, visibility: PromptVisibility): Promise<WritingPromptSummary | undefined>;
   pickPrompt(task: WritingTask): Promise<WritingPrompt | undefined>;
   promptCount(task?: WritingTask): Promise<number>;
   addSubmission(sub: NewSubmission): Promise<WritingSubmission>;
@@ -375,12 +512,15 @@ export const writingStore = {
   /** Return a view of the writing store scoped to a single user. */
   forUser(userId: string): WritingScope {
     return {
-      // shared prompt pool — user id is ingest metadata only
+      // prompts: public bank + this user's own private ones
       addPrompts: (prompts) => raw.addPrompts(userId, prompts),
-      listPrompts: (task) => raw.listPrompts(task),
-      getPrompt: (id) => raw.getPrompt(id),
-      pickPrompt: (task) => raw.pickPrompt(task),
-      promptCount: (task) => raw.promptCount(task),
+      listPrompts: (task) => raw.listPrompts(userId, task),
+      getPrompt: (id) => raw.getPrompt(userId, id),
+      getPromptImage: (id) => raw.getPromptImage(userId, id),
+      deletePrompt: (id) => raw.deletePrompt(userId, id),
+      setPromptVisibility: (id, v) => raw.setPromptVisibility(userId, id, v),
+      pickPrompt: (task) => raw.pickPrompt(userId, task),
+      promptCount: (task) => raw.promptCount(userId, task),
       // per-user submissions / scores / stats
       addSubmission: (sub) => raw.addSubmission(userId, sub),
       submissions: (task) => raw.submissions(userId, task),
@@ -397,7 +537,7 @@ export const writingStore = {
    */
   async getSubmission(userId: string, id: string): Promise<WritingSubmission | null> {
     const c = await connect();
-    const rs = await c.execute({ sql: "SELECT * FROM writing_submissions WHERE id=? AND user_id=?", args: [id, userId] });
+    const rs = await c.execute({ sql: "SELECT * FROM writing_submissions WHERE id=? AND user_id=?", args: [id, ...visibleArgs(userId)] });
     const r: any = rs.rows[0];
     if (!r) return null;
     const cr = await c.execute({ sql: "SELECT * FROM writing_corrections WHERE submission_id=?", args: [id] });
