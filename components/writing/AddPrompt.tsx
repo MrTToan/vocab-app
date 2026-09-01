@@ -314,7 +314,7 @@ export default function AddPrompt() {
           </p>
         )}
 
-        <div className="flex items-center justify-between gap-3">
+        <div className="flex flex-wrap items-center justify-between gap-3">
           {savedId ? (
             <span className="text-sm" style={{ color: "var(--accent)" }}>
               Saved ✓ It&apos;s now in{" "}

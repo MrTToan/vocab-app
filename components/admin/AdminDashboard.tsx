@@ -184,9 +184,9 @@ function Tile({ label, value, accent }: { label: string; value: number | string;
 function Section({ title, subtitle, children }: { title: string; subtitle?: string; children: React.ReactNode }) {
   return (
     <section className="card p-5 space-y-3">
-      <div className="flex items-baseline justify-between gap-3">
+      <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-3">
         <h3 className="font-bold">{title}</h3>
-        {subtitle && <span className="muted text-sm text-right">{subtitle}</span>}
+        {subtitle && <span className="muted text-sm sm:text-right">{subtitle}</span>}
       </div>
       {children}
     </section>
@@ -244,14 +244,14 @@ function RankBars({
   return (
     <div className="space-y-1.5">
       {rows.map((r) => (
-        <div key={r.key} className="flex items-center gap-3">
-          <div className="w-40 truncate text-sm font-semibold" title={r.label}>{r.label}</div>
+        <div key={r.key} className="flex items-center gap-2 sm:gap-3">
+          <div className="w-24 sm:w-40 truncate text-sm font-semibold" title={r.label}>{r.label}</div>
           <div className="flex-1 h-2.5 rounded-full overflow-hidden bg-black/5 dark:bg-white/10">
             <div className="h-full rounded-full" style={{ width: `${(r.value / max) * 100}%`, background: color }} />
           </div>
-          <div className="w-24 text-right text-sm muted tabular-nums">
+          <div className="shrink-0 text-right text-sm muted tabular-nums">
             {r.value}
-            {r.note ? <span className="ml-1 text-xs">· {r.note}</span> : ""}
+            {r.note ? <span className="ml-1 text-xs hidden sm:inline">· {r.note}</span> : ""}
           </div>
         </div>
       ))}
