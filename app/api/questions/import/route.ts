@@ -1,13 +1,21 @@
 import { NextResponse } from "next/server";
 import { randomUUID } from "crypto";
 import { getStore } from "@/lib/store";
-import { currentUserId } from "@/lib/auth/user";
+import { currentUserId, isOwner } from "@/lib/auth/user";
 import type { Question } from "@/lib/types";
 
-/** POST { questions: Partial<Question>[] } -> inserts into the question bank. */
+/**
+ * POST { questions: Partial<Question>[] } -> inserts into the SHARED question bank.
+ * Owner-only: the bank is global content every learner practises from, and this
+ * endpoint does INSERT OR REPLACE by id, so it exists solely for the owner's
+ * ingest tooling (`scripts/apply-questions.mjs`, the enrich-questions-bank skill).
+ * Everyone else gets 403 — a learner's own practice feeds the bank only through
+ * the server-generated harvest path (`lib/harvest.ts`).
+ */
 export async function POST(req: Request) {
   const userId = await currentUserId();
   if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+  if (!isOwner(userId)) return NextResponse.json({ error: "forbidden" }, { status: 403 });
   const { questions } = (await req.json()) as { questions: Partial<Question>[] };
   if (!Array.isArray(questions) || questions.length === 0) {
     return NextResponse.json({ error: "questions required" }, { status: 400 });

@@ -45,6 +45,8 @@ async function main() {
     )`,
   );
   try { await db.execute("ALTER TABLE writing_prompts ADD COLUMN user_id TEXT"); } catch {}
+  try { await db.execute("ALTER TABLE writing_prompts ADD COLUMN owner_id TEXT"); } catch {}
+  try { await db.execute("ALTER TABLE writing_prompts ADD COLUMN visibility TEXT DEFAULT 'private'"); } catch {}
   const OWNER_ID = process.env.SEED_USER_ID || "local-user";
   const now = Date.now();
   let n = 0;
@@ -53,9 +55,9 @@ async function main() {
     const id = `seed-task2-${i + 1}`;
     await db.execute({
       sql: `INSERT OR REPLACE INTO writing_prompts
-        (id, task_type, title, prompt_text, image_path, chart_data, model_answer, source_file, tags, last_shown, created_at, user_id)
-        VALUES (?,?,?,?,?,?,?,?,?,COALESCE((SELECT last_shown FROM writing_prompts WHERE id=?),0),?,?)`,
-      args: [id, "task2", p.title, p.prompt_text, null, null, null, "seed", JSON.stringify(["seed"]), id, now, OWNER_ID],
+        (id, task_type, title, prompt_text, image_path, chart_data, model_answer, source_file, tags, last_shown, created_at, user_id, owner_id, visibility)
+        VALUES (?,?,?,?,?,?,?,?,?,COALESCE((SELECT last_shown FROM writing_prompts WHERE id=?),0),?,?,?,?)`,
+      args: [id, "task2", p.title, p.prompt_text, null, null, null, "seed", JSON.stringify(["seed"]), id, now, OWNER_ID, "__system__", "public"],
     });
     n++;
   }
