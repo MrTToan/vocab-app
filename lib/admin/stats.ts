@@ -156,17 +156,19 @@ export async function adminStats(now: number = Date.now()): Promise<AdminStats> 
   );
   // All users ranked by words studied (descending). Returned in full — the
   // dashboard paginates client-side (the user count is small). Still aggregated
-  // in SQL; only counts + a display label leave the DB.
+  // in SQL; only counts + a display label leave the DB. Starts FROM users (not
+  // user_words) so users who haven't studied anything still appear, with 0 —
+  // COUNT(uw.word_id) counts matched rows only, so no-progress users get 0.
   const topUsers = await q(
     c,
-    `SELECT uw.user_id,
-            COUNT(*) studied,
+    `SELECT u.id AS user_id,
+            COUNT(uw.word_id) studied,
             SUM(CASE WHEN uw.stage = 'known' THEN 1 ELSE 0 END) mastered,
             u.name, u.email
-       FROM user_words uw
-       LEFT JOIN users u ON u.id = uw.user_id
-      GROUP BY uw.user_id
-      ORDER BY studied DESC`,
+       FROM users u
+       LEFT JOIN user_words uw ON uw.user_id = u.id
+      GROUP BY u.id
+      ORDER BY studied DESC, u.name, u.created_at`,
     (r) =>
       r.map((x) => ({
         user_id: s(x.user_id),
