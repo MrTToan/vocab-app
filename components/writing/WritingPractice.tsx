@@ -140,7 +140,7 @@ export default function WritingPractice({ task }: { task: WritingTask }) {
             <div className="card p-6 text-center muted">Pick a question from the list to start.</div>
           ) : view === "result" && result ? (
             <>
-              <div className="flex items-center justify-between gap-2">
+              <div className="flex flex-wrap items-center justify-between gap-2">
                 <h2 className="font-bold">{selected.title || "Feedback"}</h2>
                 <div className="flex gap-2 no-print">
                   <button className="btn" onClick={() => window.print()}>⬇ Export PDF</button>
@@ -151,7 +151,7 @@ export default function WritingPractice({ task }: { task: WritingTask }) {
             </>
           ) : view === "review" && review ? (
             <>
-              <div className="flex items-center justify-between gap-2">
+              <div className="flex flex-wrap items-center justify-between gap-2">
                 <div>
                   <h2 className="font-bold">{selected.title || "Your last attempt"}</h2>
                   <p className="muted text-xs">Reviewed from {new Date(review.created_at).toLocaleDateString()} — not a new score.</p>
@@ -441,7 +441,7 @@ function Timer({ minutes }: { minutes: number }) {
   return (
     <div
       ref={boxRef}
-      className="no-print fixed z-40 card shadow-lg flex items-center gap-2 pr-3 py-2"
+      className="no-print fixed z-40 card shadow-lg flex items-center gap-2 pr-3 py-2 max-w-[calc(100vw-1.5rem)]"
       style={{
         ...(pos ? { left: pos.left, top: pos.top } : { right: 16, bottom: 16 }),
         borderColor: over ? "var(--bad)" : low ? "var(--warn)" : "var(--line)",

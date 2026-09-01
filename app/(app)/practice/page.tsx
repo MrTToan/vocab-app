@@ -261,7 +261,7 @@ export default function PracticePage() {
           active={activeCollection}
           onChange={changeCollection}
         />
-        <div className="card p-8 text-center space-y-3">
+        <div className="card p-6 sm:p-8 text-center space-y-3">
           <div className="text-2xl font-extrabold">
             {inCollection
               ? "This collection has no words yet"
@@ -272,7 +272,7 @@ export default function PracticePage() {
               ? "Assign words to it from the Library, or switch back to All words above."
               : "Add a few words, then come back."}
           </p>
-          <div className="flex gap-2 justify-center">
+          <div className="flex flex-wrap gap-2 justify-center">
             {inCollection ? (
               <>
                 <Link href="/library" className="btn btn-primary">Assign words</Link>
@@ -297,9 +297,9 @@ export default function PracticePage() {
         active={activeCollection}
         onChange={changeCollection}
       />
-      <div className="flex items-center justify-between text-sm muted">
+      <div className="flex flex-wrap items-center justify-between gap-2 text-sm muted">
         <span>Session: {stats.done} done · {stats.correct} strong</span>
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           <button
             type="button"
             onClick={toggleExplore}
@@ -320,7 +320,7 @@ export default function PracticePage() {
       {status === "loading" || !cur ? (
         <div className="card p-10 text-center muted">Loading…</div>
       ) : (
-        <div className="card p-6 space-y-5">
+        <div className="card p-5 sm:p-6 space-y-5">
           <Prompt cur={cur} reveal={reveal} />
 
           {/* ── answer inputs ── */}

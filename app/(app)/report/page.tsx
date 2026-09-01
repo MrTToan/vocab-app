@@ -237,8 +237,8 @@ export default function ReportPage() {
               {w.errorFrequency.slice(0, 10).map((e) => {
                 const max = w.errorFrequency[0]?.count || 1;
                 return (
-                  <div key={e.error_type} className="flex items-center gap-3">
-                    <div className="w-40 text-sm truncate">{ERROR_LABEL[e.error_type]}</div>
+                  <div key={e.error_type} className="flex items-center gap-2 sm:gap-3">
+                    <div className="w-28 sm:w-40 text-sm truncate">{ERROR_LABEL[e.error_type]}</div>
                     <div className="flex-1 h-3 rounded-full overflow-hidden bg-black/5 dark:bg-white/10">
                       <div className="h-full rounded-full" style={{ width: `${(e.count / max) * 100}%`, background: "var(--accent)" }} />
                     </div>
@@ -293,9 +293,9 @@ function Tile({ label, value, accent, suffix }: { label: string; value: number |
 function Section({ title, subtitle, children }: { title: string; subtitle?: string; children: React.ReactNode }) {
   return (
     <section className="card p-5 space-y-3">
-      <div className="flex items-baseline justify-between">
+      <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-3">
         <h3 className="font-bold">{title}</h3>
-        {subtitle && <span className="muted text-sm">{subtitle}</span>}
+        {subtitle && <span className="muted text-sm sm:text-right">{subtitle}</span>}
       </div>
       {children}
     </section>
