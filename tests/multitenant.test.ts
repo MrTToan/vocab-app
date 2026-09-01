@@ -4,10 +4,15 @@ import os from "os";
 import path from "path";
 
 /*
- * Integration test for multi-tenant scoping. Points the libSQL store at a fresh
- * temp DB (so it never touches the real .data/lexi.db) and asserts one user can
- * never see or mutate another user's data — the core safety guarantee of the
- * multi-tenant refactor. Also covers the per-user LLM quota.
+ * Integration test for multi-tenant scoping under the content/progress split.
+ * Points the libSQL store at a fresh temp DB (so it never touches the real
+ * .data/lexi.db) and asserts:
+ *   - PROGRESS is per-user: one user's study list / stages / attempts are private
+ *     (via `user_words`), and a personal word is invisible to other users.
+ *   - CONTENT editing is owner-gated: studying a word grants no edit rights.
+ * The shared-content behaviour (a public catalog word is visible to everyone;
+ * the question bank is shared with per-user recency) is covered in
+ * content-split.test.ts. Also covers the per-user LLM quota.
  */
 
 let store: any;
@@ -40,27 +45,24 @@ describe("multi-tenant store scoping", () => {
     expect((await b.findByWord("beta"))?.word).toBe("beta");
   });
 
-  it("cannot get / update / remove another user's word", async () => {
+  it("cannot see, edit, or remove another user's personal word", async () => {
     const a = store.forUser(A);
     const b = store.forUser(B);
     const [alpha] = await a.all();
+    // alpha is A's personal word (owner_id = A) → invisible to B.
     expect(await b.get(alpha.id)).toBeUndefined();
-    expect(await b.update(alpha.id, { vi_meaning: "hacked" })).toBeUndefined();
-    await b.remove(alpha.id); // must be a no-op across users
+    // studying/seeing grants no edit rights: a cross-user edit is forbidden.
+    await expect(b.update(alpha.id, { vi_meaning: "hacked" })).rejects.toThrow(
+      /forbidden|cannot edit/i,
+    );
+    await b.remove(alpha.id); // must be a no-op on A's content
     expect((await a.get(alpha.id))?.vi_meaning).toBe("a"); // untouched
   });
 
-  it("scopes questions and attempts per user", async () => {
+  it("keeps attempts private per user", async () => {
     const a = store.forUser(A);
     const b = store.forUser(B);
     const [alpha] = await a.all();
-    await a.addQuestions([
-      { id: "q1", word_id: alpha.id, type: "cloze", direction: "", payload: "___ test", answer: "alpha" },
-    ]);
-    expect(await a.questionCount()).toBe(1);
-    expect(await b.questionCount()).toBe(0);
-    expect(await b.pickQuestion(alpha.id, "cloze")).toBeUndefined();
-
     await a.logAttempt({ word_id: alpha.id, exercise_type: "cloze", result: "correct", ts: 1 });
     expect((await a.attempts()).length).toBe(1);
     expect((await b.attempts()).length).toBe(0);

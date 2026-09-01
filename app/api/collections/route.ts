@@ -1,10 +1,11 @@
 import { NextResponse } from "next/server";
 import { getStore } from "@/lib/store";
-import { currentUserId } from "@/lib/auth/user";
+import { currentUserId, isOwner } from "@/lib/auth/user";
 
 /**
- * GET  -> { collections, memberships }  (both small; the Library page inverts
- *         memberships to show per-word chips).
+ * GET  -> { collections, memberships, owner }  (collections = the caller's own
+ *         PLUS all public ones; `owner` gates the publish toggle in the UI; the
+ *         Library page inverts memberships to show per-word chips).
  * POST { name, description?, emoji? } -> { collection }
  */
 export async function GET() {
@@ -15,7 +16,7 @@ export async function GET() {
     store.collections(),
     store.memberships(),
   ]);
-  return NextResponse.json({ collections, memberships });
+  return NextResponse.json({ collections, memberships, owner: isOwner(userId) });
 }
 
 export async function POST(req: Request) {

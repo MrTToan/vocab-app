@@ -8,20 +8,25 @@ import { jsonFetch } from "@/lib/ui";
 /**
  * Manage word collections — named, curated study sets. Create / rename / delete
  * and jump straight into practising one (which scopes the picker to its words).
- * Assigning words to a collection happens from the Library and Add pages.
+ * The list also shows PUBLIC collections shared by everyone; you can "add all" a
+ * public pack to your own study rotation. Assigning individual words to a
+ * collection happens from the Library and Add pages.
  */
 export default function CollectionsPage() {
   const [collections, setCollections] = useState<Collection[] | null>(null);
+  const [owner, setOwner] = useState(false);
   const [name, setName] = useState("");
   const [emoji, setEmoji] = useState("");
   const [description, setDescription] = useState("");
   const [busy, setBusy] = useState(false);
 
   async function reload() {
-    const { collections } = await jsonFetch<{ collections: Collection[] }>(
-      "/api/collections",
-    );
+    const { collections, owner } = await jsonFetch<{
+      collections: Collection[];
+      owner: boolean;
+    }>("/api/collections");
     setCollections(collections);
+    setOwner(!!owner);
   }
   useEffect(() => {
     reload();
@@ -43,6 +48,9 @@ export default function CollectionsPage() {
       setBusy(false);
     }
   }
+
+  const mine = (collections ?? []).filter((c) => c.mine);
+  const shared = (collections ?? []).filter((c) => !c.mine);
 
   return (
     <div className="space-y-5">
@@ -91,14 +99,39 @@ export default function CollectionsPage() {
 
       {collections === null ? (
         <p className="muted">Loading…</p>
-      ) : collections.length === 0 ? (
-        <p className="muted">No collections yet — create one above.</p>
       ) : (
-        <div className="space-y-2">
-          {collections.map((c) => (
-            <CollectionRow key={c.id} collection={c} onChanged={reload} />
-          ))}
-        </div>
+        <>
+          {mine.length > 0 && (
+            <div className="space-y-2">
+              {mine.map((c) => (
+                <CollectionRow
+                  key={c.id}
+                  collection={c}
+                  owner={owner}
+                  onChanged={reload}
+                />
+              ))}
+            </div>
+          )}
+          {shared.length > 0 && (
+            <>
+              <h2 className="text-sm font-bold muted mt-4">Public collections</h2>
+              <div className="space-y-2">
+                {shared.map((c) => (
+                  <CollectionRow
+                    key={c.id}
+                    collection={c}
+                    owner={owner}
+                    onChanged={reload}
+                  />
+                ))}
+              </div>
+            </>
+          )}
+          {collections.length === 0 && (
+            <p className="muted">No collections yet — create one above.</p>
+          )}
+        </>
       )}
     </div>
   );
@@ -106,9 +139,11 @@ export default function CollectionsPage() {
 
 function CollectionRow({
   collection,
+  owner,
   onChanged,
 }: {
   collection: Collection;
+  owner: boolean;
   onChanged: () => void;
 }) {
   const [editing, setEditing] = useState(false);
@@ -116,6 +151,7 @@ function CollectionRow({
   const [emoji, setEmoji] = useState(collection.emoji);
   const [description, setDescription] = useState(collection.description);
   const [busy, setBusy] = useState(false);
+  const isPublic = collection.visibility === "public";
 
   async function save() {
     setBusy(true);
@@ -141,6 +177,32 @@ function CollectionRow({
     try {
       await jsonFetch(`/api/collections/${collection.id}`, { method: "DELETE" });
       await onChanged();
+    } finally {
+      setBusy(false);
+    }
+  }
+  async function toggleVisibility() {
+    setBusy(true);
+    try {
+      await jsonFetch(`/api/collections/${collection.id}`, {
+        method: "PATCH",
+        body: JSON.stringify({
+          visibility: isPublic ? "private" : "public",
+        }),
+      });
+      await onChanged();
+    } finally {
+      setBusy(false);
+    }
+  }
+  async function adopt() {
+    setBusy(true);
+    try {
+      const { adopted } = await jsonFetch<{ adopted: number }>(
+        `/api/collections/${collection.id}/adopt`,
+        { method: "POST" },
+      );
+      alert(`Added ${adopted} word${adopted === 1 ? "" : "s"} to your rotation.`);
     } finally {
       setBusy(false);
     }
@@ -184,7 +246,17 @@ function CollectionRow({
             {collection.emoji || "📁"}
           </span>
           <div className="flex-1 min-w-0">
-            <div className="font-bold truncate">{collection.name}</div>
+            <div className="font-bold truncate flex items-center gap-2">
+              {collection.name}
+              {isPublic && (
+                <span
+                  className="chip text-xs"
+                  style={{ color: "var(--accent)", borderColor: "var(--accent)" }}
+                >
+                  Public
+                </span>
+              )}
+            </div>
             <div className="muted text-sm truncate">
               {collection.count ?? 0} word{(collection.count ?? 0) === 1 ? "" : "s"}
               {collection.description ? ` · ${collection.description}` : ""}
@@ -196,17 +268,31 @@ function CollectionRow({
           >
             Study →
           </Link>
-          <button className="btn" onClick={() => setEditing(true)} disabled={busy}>
-            Edit
-          </button>
-          <button
-            className="btn"
-            style={{ color: "var(--bad)", borderColor: "var(--bad)" }}
-            onClick={remove}
-            disabled={busy}
-          >
-            Delete
-          </button>
+          {!collection.mine && (
+            <button className="btn" onClick={adopt} disabled={busy}>
+              Add all
+            </button>
+          )}
+          {collection.mine && owner && (
+            <button className="btn" onClick={toggleVisibility} disabled={busy}>
+              {isPublic ? "Make private" : "Make public"}
+            </button>
+          )}
+          {collection.mine && (
+            <>
+              <button className="btn" onClick={() => setEditing(true)} disabled={busy}>
+                Edit
+              </button>
+              <button
+                className="btn"
+                style={{ color: "var(--bad)", borderColor: "var(--bad)" }}
+                onClick={remove}
+                disabled={busy}
+              >
+                Delete
+              </button>
+            </>
+          )}
         </div>
       )}
     </div>

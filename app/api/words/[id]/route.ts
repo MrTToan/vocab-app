@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getStore } from "@/lib/store";
+import { getStore, ForbiddenError } from "@/lib/store";
 import { currentUserId } from "@/lib/auth/user";
 import type { Word } from "@/lib/types";
 
@@ -10,12 +10,19 @@ export async function PATCH(req: Request, ctx: Ctx) {
   const userId = await currentUserId();
   if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   const patch = (await req.json()) as Partial<Word>;
-  // never let the client rewrite identity
+  // never let the client rewrite identity or ownership
   delete (patch as any).id;
   delete (patch as any).created_at;
-  const updated = await getStore().forUser(userId).update(id, patch);
-  if (!updated) return NextResponse.json({ error: "not found" }, { status: 404 });
-  return NextResponse.json({ word: updated });
+  delete (patch as any).owner_id;
+  try {
+    const updated = await getStore().forUser(userId).update(id, patch);
+    if (!updated) return NextResponse.json({ error: "not found" }, { status: 404 });
+    return NextResponse.json({ word: updated });
+  } catch (e) {
+    if (e instanceof ForbiddenError)
+      return NextResponse.json({ error: "forbidden" }, { status: 403 });
+    throw e;
+  }
 }
 
 export async function DELETE(_req: Request, ctx: Ctx) {

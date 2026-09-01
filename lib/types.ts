@@ -65,7 +65,12 @@ export interface Word {
   personal_note: string;
   tags: string[];
   source: "csv" | "manual";
-  // progress
+  // content ownership — `__system__` for the shared/public catalog, or a user id
+  // for that user's personal word. Gates EDITING only; content is otherwise
+  // global (studying a word grants no edit rights). See lib/auth/user.ts.
+  owner_id: string;
+  // progress (per-user; hydrated from `user_words` at the store/API boundary
+  // before the pure engine ever sees a Word — the engine stays content-agnostic).
   stage: Stage;
   times_seen: number;
   recent_results: Result[]; // most recent last, capped at 5
@@ -73,19 +78,34 @@ export interface Word {
   created_at: number;
 }
 
+/** The per-user progress a Word carries — the fields hydrated from `user_words`. */
+export type Progress = Pick<
+  Word,
+  "stage" | "times_seen" | "recent_results" | "last_seen_at"
+>;
+
 /**
  * A named, curated group of words (many-to-many via a join table). A study
  * "lens", not a separate progress track: picking a collection on /practice
  * scopes the picker to its members, but a word's stage stays global — so
  * drilling a word inside a collection advances it everywhere.
  */
+export type Visibility = "public" | "private";
+
 export interface Collection {
   id: string;
   name: string;
   description: string;
   emoji: string;
   created_at: number;
+  // `owner_id` is the collection's owner (`__system__` for a public/system pack);
+  // `visibility` decides whether other users see and can study it. A public
+  // collection's words are the shared catalog; adopting one creates the studier's
+  // `user_words` progress rows but copies no content.
+  owner_id: string;
+  visibility: Visibility;
   count?: number; // member word count, populated by store.collections()
+  mine?: boolean; // true when the current caller owns/can edit it (populated by store)
 }
 
 /** The enrichable fields the LLM fills. Everything else is app-managed. */

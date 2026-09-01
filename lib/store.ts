@@ -1,9 +1,18 @@
 import { promises as fs } from "fs";
 import path from "path";
 import { randomUUID } from "crypto";
-import type { Word, Attempt, Question, Collection } from "./types";
-// NOTE: writing prompts are a SHARED pool (see lib/writing/store.ts); only the
-// vocab data below is per-user. Writing submissions/scores are per-user there.
+import type {
+  Word,
+  Attempt,
+  Question,
+  Collection,
+  Progress,
+  Visibility,
+} from "./types";
+import { SYSTEM_OWNER, canEdit, ownerIdFor } from "./auth/user";
+// NOTE: writing prompts are a SHARED pool (see lib/writing/store.ts). Vocab data
+// below is split into shared CONTENT (words + questions, keyed by id) and per-user
+// PROGRESS (user_words + user_question_state). See the header comment below.
 
 /*
  * Storage lives behind this one interface. Two backends:
@@ -12,34 +21,66 @@ import type { Word, Attempt, Question, Collection } from "./types";
  *                   This is the default and the multi-tenant (deploy) backend.
  *   - SheetStore  : Google Sheet via a service account — a single-user local
  *                   workflow ("open my words in a spreadsheet"). NOT multi-tenant:
- *                   it ignores the user scope (one sheet = one user).
+ *                   it ignores the user scope (one sheet = one user) and does NOT
+ *                   implement the content/progress split (progress stays inline on
+ *                   the row — equivalent for a single user). See needs-decision note.
  * getStore() picks the backend from env and caches a single instance.
  *
- * MULTI-TENANCY: every row carries a user_id. Call sites never touch the raw
- * store — they go through getStore().forUser(userId), which returns a ScopedStore
- * whose every method is bound to that user. This keeps user scoping impossible to
- * forget at a call site.
+ * CONTENT vs PROGRESS. A word is split into two kinds of facts:
+ *   - CONTENT (shared once): the word text/meaning/examples and its question bank.
+ *     `words.owner_id` gates EDITING only (`__system__` = public catalog; a user id
+ *     = that user's personal word). Content is otherwise global.
+ *   - PROGRESS (per user): `user_words(user_id, word_id, stage, …)` is the only
+ *     per-user vocab progress. "Studying a word" = having a row here; no row means
+ *     stage `new`. Per-user question recency lives in `user_question_state`.
+ * The store JOINs the two and hydrates each Word's `.stage`/progress before the
+ * pure engine (`lib/engine.ts`) ever sees it — the engine stays content-agnostic.
+ *
+ * Every scoped method is bound to one user via getStore().forUser(userId), so
+ * user scoping is impossible to forget at a call site. Editing shared content is
+ * gated separately by owner_id (see `canEdit`) — studying grants no edit rights.
  */
+
+/** Thrown when a caller tries to edit content/collection they do not own. */
+export class ForbiddenError extends Error {
+  constructor(message = "forbidden") {
+    super(message);
+    this.name = "ForbiddenError";
+  }
+}
 
 /** A user-scoped view of the store — every method operates on one user's data. */
 export interface ScopedStore {
+  /** Words this user is STUDYING (has a user_words row for), hydrated with progress. */
   all(): Promise<Word[]>;
+  /** A single visible content word (public catalog or this user's own), hydrated
+   *  with this user's progress (defaults to stage `new` if not yet studied). */
   get(id: string): Promise<Word | undefined>;
   findByWord(word: string): Promise<Word | undefined>;
   add(word: NewWord): Promise<Word>;
   addMany(words: NewWord[]): Promise<Word[]>;
+  /** Edit a word's CONTENT. Throws ForbiddenError unless the caller owns it (the
+   *  owner/admin may edit `__system__` catalog words). Progress fields are ignored. */
   update(id: string, patch: Partial<Word>): Promise<Word | undefined>;
+  /** Upsert this user's PROGRESS on a word (studying it). No edit rights required. */
+  setProgress(wordId: string, progress: Progress): Promise<Word | undefined>;
   remove(id: string): Promise<void>;
   logAttempt(a: Attempt): Promise<void>;
   attempts(): Promise<Attempt[]>;
+  /** Candidates for the practice picker: this user's studied words, or — when a
+   *  collection is given — that collection's shared words hydrated with progress
+   *  (unstudied members appear as stage `new`, so public packs are practisable). */
+  practiceCandidates(collectionId?: string): Promise<Word[]>;
   addQuestions(qs: Question[]): Promise<void>;
-  /** Least-recently-shown question of a type for a word (cycles the bank), marking it shown. */
+  /** Least-recently-shown (for THIS user) question of a type for a word, marking it shown. */
   pickQuestion(wordId: string, type: string): Promise<Question | undefined>;
+  /** Total questions in the shared bank. */
   questionCount(): Promise<number>;
-  /** Distinct word_ids that already have at least one bank question. */
+  /** Distinct word_ids that already have at least one bank question (shared). */
   questionWordIds(): Promise<string[]>;
   // ── collections (many-to-many word grouping) ─────────────────────────
-  /** All collections, each with its member `count`, newest first. */
+  /** The user's own (private) collections PLUS every public one, each with `count`
+   *  and `mine` (whether the caller can edit it), newest first. */
   collections(): Promise<Collection[]>;
   createCollection(input: {
     name: string;
@@ -50,17 +91,25 @@ export interface ScopedStore {
     id: string,
     patch: Partial<Pick<Collection, "name" | "description" | "emoji">>,
   ): Promise<Collection | undefined>;
+  /** Owner/admin-only: mark a collection public (system-owned) or private. */
+  setCollectionVisibility(
+    id: string,
+    visibility: Visibility,
+  ): Promise<Collection | undefined>;
   removeCollection(id: string): Promise<void>;
-  /** Ids of the words in a collection — used to scope the practice picker. */
+  /** Bulk-adopt a collection: insert user_words rows for its members (no content
+   *  is copied). Returns the number of member words. */
+  adoptCollection(id: string): Promise<number>;
+  /** Ids of the words in a (visible) collection — used to scope the practice picker. */
   wordIdsInCollection(collectionId: string): Promise<string[]>;
-  /** Every word↔collection link (small; the Library page inverts it per word). */
+  /** Every word↔collection link in collections visible to the caller. */
   memberships(): Promise<Array<{ word_id: string; collection_id: string }>>;
-  /** Add/remove words in a collection (bulk assign from Library / Collections). */
+  /** Add/remove words in a collection the caller can edit. */
   setCollectionMembers(
     collectionId: string,
     change: { add?: string[]; remove?: string[] },
   ): Promise<void>;
-  /** Replace the full set of collections a single word belongs to (Add page). */
+  /** Replace the set of caller-editable collections a single word belongs to. */
   setWordCollections(wordId: string, collectionIds: string[]): Promise<void>;
   backend(): "sheet" | "sqlite";
 }
@@ -95,6 +144,7 @@ function makeWord(input: NewWord): Word {
     personal_note: input.personal_note ?? "",
     tags: input.tags ?? [],
     source: input.source ?? "manual",
+    owner_id: input.owner_id ?? "",
     stage: input.stage ?? "new",
     times_seen: input.times_seen ?? 0,
     recent_results: input.recent_results ?? [],
@@ -105,6 +155,8 @@ function makeWord(input: NewWord): Word {
 
 /* ─────────────────────  Row (de)serialization  ─────────────────────── */
 
+/** Full-word headers (content + progress). Used by the single-user Sheet backend,
+ *  which keeps progress inline on the row. SQLite uses CONTENT_COLS + user_words. */
 export const HEADERS = [
   "id",
   "word",
@@ -124,6 +176,25 @@ export const HEADERS = [
   "times_seen",
   "recent_results",
   "last_seen_at",
+  "created_at",
+] as const;
+
+/** Shared-content columns of the SQLite `words` table (progress lives elsewhere). */
+const CONTENT_COLS = [
+  "id",
+  "word",
+  "part_of_speech",
+  "ipa",
+  "vi_meaning",
+  "definition_en",
+  "synonyms",
+  "collocations",
+  "example_simple",
+  "example_complex",
+  "false_friend_note",
+  "personal_note",
+  "tags",
+  "source",
   "created_at",
 ] as const;
 
@@ -177,6 +248,7 @@ function fromRow(get: (k: string) => string | undefined): Word {
     personal_note: get("personal_note") || "",
     tags: jsonArr(get("tags")),
     source: (get("source") as Word["source"]) || "manual",
+    owner_id: get("owner_id") || "",
     stage: (get("stage") as Word["stage"]) || "new",
     times_seen: Number(get("times_seen") || 0),
     recent_results: jsonArr(get("recent_results")) as Word["recent_results"],
@@ -187,7 +259,12 @@ function fromRow(get: (k: string) => string | undefined): Word {
 
 /* ───────────────────────────  SQLite / libSQL  ─────────────────────── */
 
-// Loaded lazily so nothing depends on the sheet libs unless the Sheet is used.
+// Explicit "w"-aliased content select + progress columns aliased to avoid name
+// collisions with any legacy progress columns still on a migrated `words` table.
+const W_CONTENT = CONTENT_COLS.map((c) => `w."${c}"`).join(", ") + ", w.owner_id";
+const W_PROGRESS =
+  "uw.stage AS p_stage, uw.times_seen AS p_times, uw.recent_results AS p_recent, uw.last_seen_at AS p_last";
+
 class SqliteStore implements Store {
   private db: any = null;
   private ready: Promise<void> | null = null;
@@ -210,145 +287,272 @@ class SqliteStore implements Store {
         await fs.mkdir(dir, { recursive: true });
         url = `file:${path.join(dir, "lexi.db")}`;
       } else if (url.startsWith("file:")) {
-        // ensure the directory exists for a file: url
         const p = url.slice("file:".length);
         await fs.mkdir(path.dirname(path.resolve(p)), { recursive: true });
       }
       this.db = createClient({
         url,
-        authToken: process.env.DATABASE_AUTH_TOKEN, // for Turso; undefined for file
+        authToken: process.env.DATABASE_AUTH_TOKEN,
       });
-      const cols = HEADERS.map((h) => `"${h}" TEXT`).join(", ");
-      // user_id carried on every table for multi-tenancy.
+
+      // ── shared CONTENT ──────────────────────────────────────────────
+      const contentCols = CONTENT_COLS.map((h) => `"${h}" TEXT`).join(", ");
       await this.db.execute(
-        `CREATE TABLE IF NOT EXISTS words (${cols}, user_id TEXT, PRIMARY KEY ("id"))`,
+        `CREATE TABLE IF NOT EXISTS words (${contentCols}, owner_id TEXT, PRIMARY KEY ("id"))`,
+      );
+      await this.db.execute(
+        `CREATE TABLE IF NOT EXISTS questions (id TEXT PRIMARY KEY, word_id TEXT, type TEXT, direction TEXT, payload TEXT, answer TEXT)`,
+      );
+
+      // ── per-user PROGRESS ───────────────────────────────────────────
+      await this.db.execute(
+        `CREATE TABLE IF NOT EXISTS user_words (
+          user_id TEXT, word_id TEXT, stage TEXT, times_seen INTEGER DEFAULT 0,
+          recent_results TEXT DEFAULT '[]', last_seen_at INTEGER, added_at INTEGER,
+          PRIMARY KEY (user_id, word_id)
+        )`,
+      );
+      await this.db.execute(
+        `CREATE TABLE IF NOT EXISTS user_question_state (
+          user_id TEXT, question_id TEXT, last_shown INTEGER DEFAULT 0,
+          PRIMARY KEY (user_id, question_id)
+        )`,
       );
       await this.db.execute(
         `CREATE TABLE IF NOT EXISTS attempts (ts INTEGER, word_id TEXT, exercise_type TEXT, result TEXT, user_id TEXT)`,
       );
       await this.db.execute(
-        `CREATE TABLE IF NOT EXISTS questions (id TEXT PRIMARY KEY, word_id TEXT, type TEXT, direction TEXT, payload TEXT, answer TEXT, last_shown INTEGER DEFAULT 0, user_id TEXT)`,
-      );
-      await this.db.execute(
         `CREATE TABLE IF NOT EXISTS users (id TEXT PRIMARY KEY, email TEXT, name TEXT, image TEXT, created_at INTEGER)`,
       );
-      // Additive migrations for DBs created before multi-tenancy. Each ALTER is
-      // guarded so a re-run (column already exists) is a no-op.
-      await addColumn(this.db, "words", "user_id TEXT");
-      await addColumn(this.db, "attempts", "user_id TEXT");
-      await addColumn(this.db, "questions", "user_id TEXT");
-      // Collections are per-user too (added on main before multi-tenancy — carry
-      // user_id like every other per-user table). Migrated for pre-existing DBs.
-      await addColumn(this.db, "collections", "user_id TEXT");
-      await addColumn(this.db, "word_collections", "user_id TEXT");
-      // Per-user lookup indexes.
+
+      // ── collections (owner_id + visibility) ─────────────────────────
       await this.db.execute(
-        `CREATE INDEX IF NOT EXISTS idx_word ON words (user_id, word COLLATE NOCASE)`,
+        `CREATE TABLE IF NOT EXISTS collections (id TEXT PRIMARY KEY, name TEXT, description TEXT, emoji TEXT, created_at INTEGER, owner_id TEXT, visibility TEXT DEFAULT 'private')`,
       );
       await this.db.execute(
-        `CREATE INDEX IF NOT EXISTS idx_q ON questions (user_id, word_id, type)`,
+        `CREATE TABLE IF NOT EXISTS word_collections (word_id TEXT, collection_id TEXT, PRIMARY KEY (word_id, collection_id))`,
+      );
+
+      // Additive migrations for DBs created before the content/progress split.
+      // Each ALTER is guarded, so a re-run (column already exists) is a no-op.
+      await addColumn(this.db, "words", "owner_id TEXT");
+      await addColumn(this.db, "collections", "owner_id TEXT");
+      await addColumn(this.db, "collections", "visibility TEXT DEFAULT 'private'");
+
+      // Lookup indexes (content is global; progress/state keyed per user).
+      await this.db.execute(
+        `CREATE INDEX IF NOT EXISTS idx_word ON words (word COLLATE NOCASE)`,
+      );
+      await this.db.execute(
+        `CREATE INDEX IF NOT EXISTS idx_words_owner ON words (owner_id)`,
+      );
+      await this.db.execute(
+        `CREATE INDEX IF NOT EXISTS idx_q ON questions (word_id, type)`,
+      );
+      await this.db.execute(
+        `CREATE INDEX IF NOT EXISTS idx_uw_user ON user_words (user_id)`,
+      );
+      await this.db.execute(
+        `CREATE INDEX IF NOT EXISTS idx_uqs_user ON user_question_state (user_id)`,
       );
       await this.db.execute(
         `CREATE UNIQUE INDEX IF NOT EXISTS idx_users_email ON users (email)`,
       );
       await this.db.execute(
-        `CREATE TABLE IF NOT EXISTS collections (id TEXT PRIMARY KEY, name TEXT, description TEXT, emoji TEXT, created_at INTEGER, user_id TEXT)`,
+        `CREATE INDEX IF NOT EXISTS idx_wc_collection ON word_collections (collection_id)`,
       );
       await this.db.execute(
-        `CREATE TABLE IF NOT EXISTS word_collections (word_id TEXT, collection_id TEXT, user_id TEXT, PRIMARY KEY (word_id, collection_id))`,
+        `CREATE INDEX IF NOT EXISTS idx_wc_word ON word_collections (word_id)`,
       );
       await this.db.execute(
-        `CREATE INDEX IF NOT EXISTS idx_wc_collection ON word_collections (user_id, collection_id)`,
-      );
-      await this.db.execute(
-        `CREATE INDEX IF NOT EXISTS idx_wc_word ON word_collections (user_id, word_id)`,
-      );
-      await this.db.execute(
-        `CREATE INDEX IF NOT EXISTS idx_collections_user ON collections (user_id)`,
+        `CREATE INDEX IF NOT EXISTS idx_collections_owner ON collections (owner_id)`,
       );
     })();
     return this.ready;
   }
 
-  private mapRow(row: any): Word {
-    return fromRow((k) => (row[k] == null ? undefined : String(row[k])));
+  /** Map a content+progress joined row (progress cols aliased p_*) into a Word. */
+  private mapWord(row: any): Word {
+    return makeWord({
+      id: str(row.id),
+      word: str(row.word),
+      part_of_speech: str(row.part_of_speech),
+      ipa: str(row.ipa),
+      vi_meaning: str(row.vi_meaning),
+      definition_en: str(row.definition_en),
+      synonyms: jsonArr(strOrU(row.synonyms)),
+      collocations: jsonArr(strOrU(row.collocations)),
+      example_simple: str(row.example_simple),
+      example_complex: str(row.example_complex),
+      false_friend_note: str(row.false_friend_note),
+      personal_note: str(row.personal_note),
+      tags: jsonArr(strOrU(row.tags)),
+      source: (str(row.source) as Word["source"]) || "manual",
+      owner_id: str(row.owner_id),
+      stage: (row.p_stage != null ? String(row.p_stage) : "new") as Word["stage"],
+      times_seen: row.p_times != null ? Number(row.p_times) : 0,
+      recent_results: jsonArr(strOrU(row.p_recent)) as Word["recent_results"],
+      last_seen_at: row.p_last != null ? Number(row.p_last) : null,
+      created_at: Number(row.created_at || Date.now()),
+    });
   }
 
   async all(userId: string): Promise<Word[]> {
     await this.connect();
     const rs = await this.db.execute({
-      sql: "SELECT * FROM words WHERE user_id = ? ORDER BY created_at DESC",
+      sql: `SELECT ${W_CONTENT}, ${W_PROGRESS}
+              FROM user_words uw JOIN words w ON w.id = uw.word_id
+             WHERE uw.user_id = ?
+             ORDER BY w.created_at DESC`,
       args: [userId],
     });
-    return rs.rows.map((r: any) => this.mapRow(r));
+    return rs.rows.map((r: any) => this.mapWord(r));
   }
+
   async get(userId: string, id: string): Promise<Word | undefined> {
     await this.connect();
     const rs = await this.db.execute({
-      sql: "SELECT * FROM words WHERE user_id = ? AND id = ? LIMIT 1",
-      args: [userId, id],
+      sql: `SELECT ${W_CONTENT}, ${W_PROGRESS}
+              FROM words w
+              LEFT JOIN user_words uw ON uw.word_id = w.id AND uw.user_id = ?
+             WHERE w.id = ? AND (w.owner_id = ? OR w.owner_id = ?)
+             LIMIT 1`,
+      args: [userId, id, SYSTEM_OWNER, userId],
     });
-    return rs.rows[0] ? this.mapRow(rs.rows[0]) : undefined;
+    return rs.rows[0] ? this.mapWord(rs.rows[0]) : undefined;
   }
+
   async findByWord(userId: string, word: string): Promise<Word | undefined> {
     await this.connect();
     const rs = await this.db.execute({
-      sql: "SELECT * FROM words WHERE user_id = ? AND lower(trim(word)) = ? LIMIT 1",
-      args: [userId, normalizeWord(word)],
+      sql: `SELECT ${W_CONTENT}, ${W_PROGRESS}
+              FROM words w
+              LEFT JOIN user_words uw ON uw.word_id = w.id AND uw.user_id = ?
+             WHERE lower(trim(w.word)) = ? AND (w.owner_id = ? OR w.owner_id = ?)
+             LIMIT 1`,
+      args: [userId, normalizeWord(word), SYSTEM_OWNER, userId],
     });
-    return rs.rows[0] ? this.mapRow(rs.rows[0]) : undefined;
+    return rs.rows[0] ? this.mapWord(rs.rows[0]) : undefined;
   }
+
   async add(userId: string, input: NewWord): Promise<Word> {
     await this.connect();
-    const w = makeWord(input);
-    await this.db.execute(insertStmt(w, userId));
+    const w = makeWord({ ...input, owner_id: ownerIdFor(userId) });
+    await this.db.batch([contentInsert(w), userWordInsert(userId, w)], "write");
     return w;
   }
+
   async addMany(userId: string, inputs: NewWord[]): Promise<Word[]> {
     await this.connect();
-    const created = inputs.map(makeWord);
-    if (created.length)
-      await this.db.batch(
-        created.map((w) => insertStmt(w, userId)),
-        "write",
-      );
+    const created = inputs.map((i) => makeWord({ ...i, owner_id: ownerIdFor(userId) }));
+    if (created.length) {
+      const stmts: any[] = [];
+      for (const w of created) {
+        stmts.push(contentInsert(w));
+        stmts.push(userWordInsert(userId, w));
+      }
+      await this.db.batch(stmts, "write");
+    }
     return created;
   }
+
+  /** Content edit — owner-gated. Progress fields in the patch are ignored. */
   async update(
     userId: string,
     id: string,
     patch: Partial<Word>,
   ): Promise<Word | undefined> {
     await this.connect();
+    const owner = await this.ownerOf(id);
+    if (owner === undefined) return undefined;
+    if (!canEdit(userId, owner)) throw new ForbiddenError("cannot edit this word");
     const cur = await this.get(userId, id);
     if (!cur) return undefined;
-    const next = { ...cur, ...patch, id };
+    const next = { ...cur, ...patch, id, owner_id: owner };
     const r = toRow(next);
-    const sets = HEADERS.filter((h) => h !== "id").map((h) => `"${h}" = ?`);
+    const cols = CONTENT_COLS.filter((h) => h !== "id");
     await this.db.execute({
-      sql: `UPDATE words SET ${sets.join(", ")} WHERE id = ? AND user_id = ?`,
+      sql: `UPDATE words SET ${cols.map((h) => `"${h}" = ?`).join(", ")} WHERE id = ?`,
+      args: [...cols.map((h) => r[h]), id],
+    });
+    return this.get(userId, id);
+  }
+
+  /** Upsert this user's progress (studying the word). No edit rights required. */
+  async setProgress(
+    userId: string,
+    wordId: string,
+    progress: Progress,
+  ): Promise<Word | undefined> {
+    await this.connect();
+    await this.db.execute({
+      sql: `INSERT INTO user_words (user_id, word_id, stage, times_seen, recent_results, last_seen_at, added_at)
+            VALUES (?,?,?,?,?,?,?)
+            ON CONFLICT(user_id, word_id) DO UPDATE SET
+              stage = excluded.stage,
+              times_seen = excluded.times_seen,
+              recent_results = excluded.recent_results,
+              last_seen_at = excluded.last_seen_at`,
       args: [
-        ...HEADERS.filter((h) => h !== "id").map((h) => r[h]),
-        id,
         userId,
+        wordId,
+        progress.stage,
+        progress.times_seen,
+        JSON.stringify(progress.recent_results ?? []),
+        progress.last_seen_at,
+        Date.now(),
       ],
     });
-    return next;
+    return this.get(userId, wordId);
   }
+
   async remove(userId: string, id: string): Promise<void> {
     await this.connect();
-    // Delete the word AND its collection memberships — both scoped to the user.
-    await this.db.batch(
-      [
-        { sql: "DELETE FROM words WHERE id = ? AND user_id = ?", args: [id, userId] },
-        {
-          sql: "DELETE FROM word_collections WHERE word_id = ? AND user_id = ?",
-          args: [id, userId],
-        },
-      ],
-      "write",
-    );
+    const owner = await this.ownerOf(id);
+    if (owner === undefined) return;
+    if (canEdit(userId, owner)) {
+      // Delete the shared content and everything hanging off it.
+      await this.db.batch(
+        [
+          { sql: "DELETE FROM words WHERE id = ?", args: [id] },
+          { sql: "DELETE FROM user_words WHERE word_id = ?", args: [id] },
+          { sql: "DELETE FROM word_collections WHERE word_id = ?", args: [id] },
+          {
+            sql: "DELETE FROM user_question_state WHERE question_id IN (SELECT id FROM questions WHERE word_id = ?)",
+            args: [id],
+          },
+          { sql: "DELETE FROM questions WHERE word_id = ?", args: [id] },
+        ],
+        "write",
+      );
+    } else {
+      // Not the owner: "remove from my library" = stop studying + drop the word
+      // from the caller's own collections. Shared content is untouched.
+      await this.db.batch(
+        [
+          {
+            sql: "DELETE FROM user_words WHERE user_id = ? AND word_id = ?",
+            args: [userId, id],
+          },
+          {
+            sql: `DELETE FROM word_collections WHERE word_id = ? AND collection_id IN
+                   (SELECT id FROM collections WHERE owner_id = ?)`,
+            args: [id, userId],
+          },
+        ],
+        "write",
+      );
+    }
   }
+
+  private async ownerOf(id: string): Promise<string | undefined> {
+    const rs = await this.db.execute({
+      sql: "SELECT owner_id FROM words WHERE id = ? LIMIT 1",
+      args: [id],
+    });
+    return rs.rows[0] ? str(rs.rows[0].owner_id) : undefined;
+  }
+
   async logAttempt(userId: string, a: Attempt): Promise<void> {
     await this.connect();
     await this.db.execute({
@@ -356,6 +560,7 @@ class SqliteStore implements Store {
       args: [a.ts, a.word_id, a.exercise_type, a.result, userId],
     });
   }
+
   async attempts(userId: string): Promise<Attempt[]> {
     await this.connect();
     const rs = await this.db.execute({
@@ -369,17 +574,35 @@ class SqliteStore implements Store {
       ts: Number(r.ts ?? 0),
     }));
   }
-  async addQuestions(userId: string, qs: Question[]): Promise<void> {
+
+  async practiceCandidates(userId: string, collectionId?: string): Promise<Word[]> {
+    await this.connect();
+    if (!collectionId) return this.all(userId);
+    if (!(await this.collectionVisibleTo(userId, collectionId))) return [];
+    const rs = await this.db.execute({
+      sql: `SELECT ${W_CONTENT}, ${W_PROGRESS}
+              FROM word_collections wc
+              JOIN words w ON w.id = wc.word_id
+              LEFT JOIN user_words uw ON uw.word_id = w.id AND uw.user_id = ?
+             WHERE wc.collection_id = ?
+             ORDER BY w.created_at DESC`,
+      args: [userId, collectionId],
+    });
+    return rs.rows.map((r: any) => this.mapWord(r));
+  }
+
+  async addQuestions(_userId: string, qs: Question[]): Promise<void> {
     await this.connect();
     if (!qs.length) return;
     await this.db.batch(
       qs.map((q) => ({
-        sql: "INSERT OR REPLACE INTO questions (id, word_id, type, direction, payload, answer, last_shown, user_id) VALUES (?,?,?,?,?,?,0,?)",
-        args: [q.id, q.word_id, q.type, q.direction, q.payload, q.answer, userId],
+        sql: "INSERT OR REPLACE INTO questions (id, word_id, type, direction, payload, answer) VALUES (?,?,?,?,?,?)",
+        args: [q.id, q.word_id, q.type, q.direction, q.payload, q.answer],
       })),
       "write",
     );
   }
+
   async pickQuestion(
     userId: string,
     wordId: string,
@@ -387,14 +610,21 @@ class SqliteStore implements Store {
   ): Promise<Question | undefined> {
     await this.connect();
     const rs = await this.db.execute({
-      sql: "SELECT * FROM questions WHERE user_id=? AND word_id=? AND type=? ORDER BY last_shown ASC, RANDOM() LIMIT 1",
+      sql: `SELECT q.id, q.word_id, q.type, q.direction, q.payload, q.answer,
+                   COALESCE(uqs.last_shown, 0) AS ls
+              FROM questions q
+              LEFT JOIN user_question_state uqs
+                     ON uqs.question_id = q.id AND uqs.user_id = ?
+             WHERE q.word_id = ? AND q.type = ?
+             ORDER BY ls ASC, RANDOM() LIMIT 1`,
       args: [userId, wordId, type],
     });
     const r: any = rs.rows[0];
     if (!r) return undefined;
     await this.db.execute({
-      sql: "UPDATE questions SET last_shown=? WHERE id=? AND user_id=?",
-      args: [Date.now(), String(r.id), userId],
+      sql: `INSERT INTO user_question_state (user_id, question_id, last_shown) VALUES (?,?,?)
+            ON CONFLICT(user_id, question_id) DO UPDATE SET last_shown = excluded.last_shown`,
+      args: [userId, String(r.id), Date.now()],
     });
     return {
       id: String(r.id),
@@ -405,46 +635,59 @@ class SqliteStore implements Store {
       answer: String(r.answer ?? ""),
     };
   }
-  async questionCount(userId: string): Promise<number> {
+
+  async questionCount(_userId: string): Promise<number> {
     await this.connect();
-    const rs = await this.db.execute({
-      sql: "SELECT COUNT(*) c FROM questions WHERE user_id = ?",
-      args: [userId],
-    });
+    const rs = await this.db.execute("SELECT COUNT(*) c FROM questions");
     return Number(rs.rows[0]?.c ?? 0);
   }
-  async questionWordIds(userId: string): Promise<string[]> {
+
+  async questionWordIds(_userId: string): Promise<string[]> {
     await this.connect();
-    const rs = await this.db.execute({
-      sql: "SELECT DISTINCT word_id FROM questions WHERE user_id = ?",
-      args: [userId],
-    });
+    const rs = await this.db.execute("SELECT DISTINCT word_id FROM questions");
     return rs.rows.map((r: any) => String(r.word_id));
   }
 
-  // ── collections (per-user, like every other vocab table) ─────────────
+  // ── collections ──────────────────────────────────────────────────────
+  private async collectionOwner(id: string): Promise<string | undefined> {
+    const rs = await this.db.execute({
+      sql: "SELECT owner_id FROM collections WHERE id = ? LIMIT 1",
+      args: [id],
+    });
+    return rs.rows[0] ? str(rs.rows[0].owner_id) : undefined;
+  }
+
+  private async collectionVisibleTo(
+    userId: string,
+    id: string,
+  ): Promise<boolean> {
+    const rs = await this.db.execute({
+      sql: "SELECT owner_id, visibility FROM collections WHERE id = ? LIMIT 1",
+      args: [id],
+    });
+    const c: any = rs.rows[0];
+    if (!c) return false;
+    return str(c.owner_id) === userId || str(c.visibility) === "public";
+  }
+
   async collections(userId: string): Promise<Collection[]> {
     await this.connect();
     const rs = await this.db.execute({
-      sql: `SELECT c.id, c.name, c.description, c.emoji, c.created_at,
-              COUNT(wc.word_id) AS cnt
-         FROM collections c
-         LEFT JOIN word_collections wc
-                ON wc.collection_id = c.id AND wc.user_id = c.user_id
-        WHERE c.user_id = ?
-        GROUP BY c.id
-        ORDER BY c.created_at DESC`,
+      sql: `SELECT c.id, c.name, c.description, c.emoji, c.created_at, c.owner_id, c.visibility,
+                   COUNT(wc.word_id) AS cnt
+              FROM collections c
+              LEFT JOIN word_collections wc ON wc.collection_id = c.id
+             WHERE c.owner_id = ? OR c.visibility = 'public'
+             GROUP BY c.id
+             ORDER BY c.created_at DESC`,
       args: [userId],
     });
-    return rs.rows.map((r: any) => mapCollection(r, Number(r.cnt ?? 0)));
+    return rs.rows.map((r: any) => mapCollection(r, Number(r.cnt ?? 0), userId));
   }
+
   async createCollection(
     userId: string,
-    input: {
-      name: string;
-      description?: string;
-      emoji?: string;
-    },
+    input: { name: string; description?: string; emoji?: string },
   ): Promise<Collection> {
     await this.connect();
     const c: Collection = {
@@ -453,13 +696,16 @@ class SqliteStore implements Store {
       description: input.description ?? "",
       emoji: input.emoji ?? "",
       created_at: Date.now(),
+      owner_id: userId,
+      visibility: "private",
     };
     await this.db.execute({
-      sql: "INSERT INTO collections (id, name, description, emoji, created_at, user_id) VALUES (?,?,?,?,?,?)",
-      args: [c.id, c.name, c.description, c.emoji, c.created_at, userId],
+      sql: "INSERT INTO collections (id, name, description, emoji, created_at, owner_id, visibility) VALUES (?,?,?,?,?,?,?)",
+      args: [c.id, c.name, c.description, c.emoji, c.created_at, c.owner_id, c.visibility],
     });
-    return { ...c, count: 0 };
+    return { ...c, count: 0, mine: true };
   }
+
   async updateCollection(
     userId: string,
     id: string,
@@ -467,49 +713,118 @@ class SqliteStore implements Store {
   ): Promise<Collection | undefined> {
     await this.connect();
     const rs = await this.db.execute({
-      sql: "SELECT * FROM collections WHERE id = ? AND user_id = ? LIMIT 1",
-      args: [id, userId],
+      sql: "SELECT * FROM collections WHERE id = ? LIMIT 1",
+      args: [id],
     });
     const cur: any = rs.rows[0];
     if (!cur) return undefined;
+    if (!canEdit(userId, str(cur.owner_id)))
+      throw new ForbiddenError("cannot edit this collection");
     const next = {
       name: (patch.name ?? String(cur.name ?? "")).trim(),
       description: patch.description ?? String(cur.description ?? ""),
       emoji: patch.emoji ?? String(cur.emoji ?? ""),
     };
     await this.db.execute({
-      sql: "UPDATE collections SET name = ?, description = ?, emoji = ? WHERE id = ? AND user_id = ?",
-      args: [next.name, next.description, next.emoji, id, userId],
+      sql: "UPDATE collections SET name = ?, description = ?, emoji = ? WHERE id = ?",
+      args: [next.name, next.description, next.emoji, id],
     });
-    return { id, ...next, created_at: Number(cur.created_at ?? 0) };
+    return mapCollection(
+      { ...cur, ...next },
+      await this.collectionCount(id),
+      userId,
+    );
   }
+
+  async setCollectionVisibility(
+    userId: string,
+    id: string,
+    visibility: Visibility,
+  ): Promise<Collection | undefined> {
+    await this.connect();
+    const rs = await this.db.execute({
+      sql: "SELECT * FROM collections WHERE id = ? LIMIT 1",
+      args: [id],
+    });
+    const cur: any = rs.rows[0];
+    if (!cur) return undefined;
+    // Publishing is an owner/admin-only act, and it must keep the "public ⇒
+    // system-owned" invariant. A private collection reverts to the admin owner.
+    if (!canEdit(userId, str(cur.owner_id)))
+      throw new ForbiddenError("cannot change visibility of this collection");
+    const owner_id = visibility === "public" ? SYSTEM_OWNER : userId;
+    await this.db.execute({
+      sql: "UPDATE collections SET visibility = ?, owner_id = ? WHERE id = ?",
+      args: [visibility, owner_id, id],
+    });
+    return mapCollection(
+      { ...cur, visibility, owner_id },
+      await this.collectionCount(id),
+      userId,
+    );
+  }
+
+  private async collectionCount(id: string): Promise<number> {
+    const rs = await this.db.execute({
+      sql: "SELECT COUNT(*) c FROM word_collections WHERE collection_id = ?",
+      args: [id],
+    });
+    return Number(rs.rows[0]?.c ?? 0);
+  }
+
   async removeCollection(userId: string, id: string): Promise<void> {
     await this.connect();
+    const owner = await this.collectionOwner(id);
+    if (owner === undefined) return;
+    if (!canEdit(userId, owner))
+      throw new ForbiddenError("cannot delete this collection");
     await this.db.batch(
       [
-        {
-          sql: "DELETE FROM word_collections WHERE collection_id = ? AND user_id = ?",
-          args: [id, userId],
-        },
-        { sql: "DELETE FROM collections WHERE id = ? AND user_id = ?", args: [id, userId] },
+        { sql: "DELETE FROM word_collections WHERE collection_id = ?", args: [id] },
+        { sql: "DELETE FROM collections WHERE id = ?", args: [id] },
       ],
       "write",
     );
   }
+
+  async adoptCollection(userId: string, id: string): Promise<number> {
+    await this.connect();
+    if (!(await this.collectionVisibleTo(userId, id))) return 0;
+    const members = await this.wordIdsInCollection(userId, id);
+    if (members.length) {
+      const now = Date.now();
+      await this.db.batch(
+        members.map((wid) => ({
+          sql: `INSERT OR IGNORE INTO user_words
+                 (user_id, word_id, stage, times_seen, recent_results, last_seen_at, added_at)
+                 VALUES (?,?, 'new', 0, '[]', NULL, ?)`,
+          args: [userId, wid, now],
+        })),
+        "write",
+      );
+    }
+    return members.length;
+  }
+
   async wordIdsInCollection(userId: string, collectionId: string): Promise<string[]> {
     await this.connect();
+    if (!(await this.collectionVisibleTo(userId, collectionId))) return [];
     const rs = await this.db.execute({
-      sql: "SELECT word_id FROM word_collections WHERE collection_id = ? AND user_id = ?",
-      args: [collectionId, userId],
+      sql: "SELECT word_id FROM word_collections WHERE collection_id = ?",
+      args: [collectionId],
     });
     return rs.rows.map((r: any) => String(r.word_id));
   }
+
   async memberships(
     userId: string,
   ): Promise<Array<{ word_id: string; collection_id: string }>> {
     await this.connect();
     const rs = await this.db.execute({
-      sql: "SELECT word_id, collection_id FROM word_collections WHERE user_id = ?",
+      sql: `SELECT wc.word_id, wc.collection_id
+              FROM word_collections wc
+              JOIN collections c ON c.id = wc.collection_id
+             WHERE c.owner_id = ? OR c.visibility = 'public'`,
       args: [userId],
     });
     return rs.rows.map((r: any) => ({
@@ -517,55 +832,90 @@ class SqliteStore implements Store {
       collection_id: String(r.collection_id),
     }));
   }
+
   async setCollectionMembers(
     userId: string,
     collectionId: string,
     change: { add?: string[]; remove?: string[] },
   ): Promise<void> {
     await this.connect();
+    const owner = await this.collectionOwner(collectionId);
+    if (owner === undefined) return;
+    if (!canEdit(userId, owner))
+      throw new ForbiddenError("cannot modify this collection");
     const stmts: { sql: string; args: any[] }[] = [];
     for (const wid of change.add ?? [])
       stmts.push({
-        sql: "INSERT OR IGNORE INTO word_collections (word_id, collection_id, user_id) VALUES (?,?,?)",
-        args: [wid, collectionId, userId],
+        sql: "INSERT OR IGNORE INTO word_collections (word_id, collection_id) VALUES (?,?)",
+        args: [wid, collectionId],
       });
     for (const wid of change.remove ?? [])
       stmts.push({
-        sql: "DELETE FROM word_collections WHERE word_id = ? AND collection_id = ? AND user_id = ?",
-        args: [wid, collectionId, userId],
+        sql: "DELETE FROM word_collections WHERE word_id = ? AND collection_id = ?",
+        args: [wid, collectionId],
       });
     if (stmts.length) await this.db.batch(stmts, "write");
   }
+
   async setWordCollections(
     userId: string,
     wordId: string,
     collectionIds: string[],
   ): Promise<void> {
     await this.connect();
-    const stmts: { sql: string; args: any[] }[] = [
-      {
-        sql: "DELETE FROM word_collections WHERE word_id = ? AND user_id = ?",
-        args: [wordId, userId],
-      },
-    ];
-    for (const cid of collectionIds)
+    // Only touch collections the caller can edit — never wipe a public pack's
+    // membership because the caller happened to see it. Clear this word from all
+    // caller-editable collections, then re-add the (editable) targets.
+    const editable = [...(await this.editableCollectionIds(userId))];
+    const targets = collectionIds.filter((cid) => editable.includes(cid));
+    const stmts: { sql: string; args: any[] }[] = [];
+    if (editable.length)
       stmts.push({
-        sql: "INSERT OR IGNORE INTO word_collections (word_id, collection_id, user_id) VALUES (?,?,?)",
-        args: [wordId, cid, userId],
+        sql: `DELETE FROM word_collections
+               WHERE word_id = ? AND collection_id IN (${editable.map(() => "?").join(",")})`,
+        args: [wordId, ...editable],
       });
-    await this.db.batch(stmts, "write");
+    for (const cid of targets)
+      stmts.push({
+        sql: "INSERT OR IGNORE INTO word_collections (word_id, collection_id) VALUES (?,?)",
+        args: [wordId, cid],
+      });
+    if (stmts.length) await this.db.batch(stmts, "write");
+  }
+
+  private async editableCollectionIds(userId: string): Promise<Set<string>> {
+    // The caller owns these; the owner/admin additionally owns __system__ packs.
+    const rs = await this.db.execute({
+      sql: "SELECT id, owner_id FROM collections",
+      args: [],
+    });
+    const set = new Set<string>();
+    for (const r of rs.rows as any[])
+      if (canEdit(userId, str(r.owner_id))) set.add(String(r.id));
+    return set;
   }
 }
 
-/** Row → Collection (shared by both backends). */
-function mapCollection(r: any, count: number): Collection {
+function str(v: any): string {
+  return v == null ? "" : String(v);
+}
+function strOrU(v: any): string | undefined {
+  return v == null ? undefined : String(v);
+}
+
+/** Row → Collection (shared by both backends). `viewerId` sets `mine`. */
+function mapCollection(r: any, count: number, viewerId: string): Collection {
+  const owner_id = str(r.owner_id);
   return {
     id: String(r.id),
     name: String(r.name ?? ""),
     description: String(r.description ?? ""),
     emoji: String(r.emoji ?? ""),
     created_at: Number(r.created_at ?? 0),
+    owner_id,
+    visibility: (String(r.visibility ?? "private") as Visibility) || "private",
     count,
+    mine: canEdit(viewerId, owner_id),
   };
 }
 
@@ -578,12 +928,33 @@ async function addColumn(db: any, table: string, colDef: string): Promise<void> 
   }
 }
 
-function insertStmt(w: Word, userId: string) {
+/** INSERT for the shared content of a word. */
+function contentInsert(w: Word) {
   const r = toRow(w);
-  const cols = [...HEADERS, "user_id"];
+  const cols = [...CONTENT_COLS, "owner_id"];
   return {
-    sql: `INSERT INTO words (${cols.map((h) => `"${h}"`).join(", ")}) VALUES (${cols.map(() => "?").join(", ")})`,
-    args: [...HEADERS.map((h) => r[h]), userId],
+    sql: `INSERT INTO words (${cols.map((h) => `"${h}"`).join(", ")}) VALUES (${cols
+      .map(() => "?")
+      .join(", ")})`,
+    args: [...CONTENT_COLS.map((h) => r[h]), w.owner_id],
+  };
+}
+
+/** INSERT for a user's initial progress on a word (studying it). */
+function userWordInsert(userId: string, w: Word) {
+  return {
+    sql: `INSERT OR IGNORE INTO user_words
+           (user_id, word_id, stage, times_seen, recent_results, last_seen_at, added_at)
+           VALUES (?,?,?,?,?,?,?)`,
+    args: [
+      userId,
+      w.id,
+      w.stage,
+      w.times_seen,
+      JSON.stringify(w.recent_results),
+      w.last_seen_at,
+      w.created_at,
+    ],
   };
 }
 
@@ -599,18 +970,22 @@ function makeScoped(raw: any, userId: string): ScopedStore {
     add: (word) => raw.add(userId, word),
     addMany: (words) => raw.addMany(userId, words),
     update: (id, patch) => raw.update(userId, id, patch),
+    setProgress: (wordId, progress) => raw.setProgress(userId, wordId, progress),
     remove: (id) => raw.remove(userId, id),
     logAttempt: (a) => raw.logAttempt(userId, a),
     attempts: () => raw.attempts(userId),
+    practiceCandidates: (cid) => raw.practiceCandidates(userId, cid),
     addQuestions: (qs) => raw.addQuestions(userId, qs),
     pickQuestion: (wordId, type) => raw.pickQuestion(userId, wordId, type),
     questionCount: () => raw.questionCount(userId),
     questionWordIds: () => raw.questionWordIds(userId),
-    // collections — all per-user
+    // collections
     collections: () => raw.collections(userId),
     createCollection: (input) => raw.createCollection(userId, input),
     updateCollection: (id, patch) => raw.updateCollection(userId, id, patch),
+    setCollectionVisibility: (id, v) => raw.setCollectionVisibility(userId, id, v),
     removeCollection: (id) => raw.removeCollection(userId, id),
+    adoptCollection: (id) => raw.adoptCollection(userId, id),
     wordIdsInCollection: (cid) => raw.wordIdsInCollection(userId, cid),
     memberships: () => raw.memberships(userId),
     setCollectionMembers: (cid, change) =>
@@ -632,8 +1007,11 @@ type GRow = {
 
 /*
  * SINGLE-USER backend. One Sheet == one user, so the raw methods accept a userId
- * to satisfy the shared shape but deliberately ignore it. Do not use the Sheet
- * backend for a multi-tenant deploy — use SqliteStore/Turso.
+ * to satisfy the shared shape but deliberately ignore it. It does NOT implement
+ * the content/progress split (progress stays inline on the row — equivalent for
+ * one user) or public collections (all collections are private, owned by the
+ * single user). Do not use the Sheet backend for a multi-tenant deploy — use
+ * SqliteStore/Turso. See the needs-decision note in the PR.
  */
 class SheetStore implements Store {
   private cache: Word[] | null = null;
@@ -659,6 +1037,11 @@ class SheetStore implements Store {
 
   forUser(userId: string): ScopedStore {
     return makeScoped(this, userId);
+  }
+
+  /** Stamp the single user as owner so `canEdit` passes (Sheet owns everything). */
+  private own(w: Word, userId: string): Word {
+    return { ...w, owner_id: userId };
   }
 
   private async connect(): Promise<void> {
@@ -695,36 +1078,52 @@ class SheetStore implements Store {
     await this.connect();
     return this.cache!;
   }
-  async all(_userId: string): Promise<Word[]> {
-    return [...(await this.load())];
+  async all(userId: string): Promise<Word[]> {
+    return (await this.load()).map((w) => this.own(w, userId));
   }
-  async get(_userId: string, id: string): Promise<Word | undefined> {
-    return (await this.load()).find((w) => w.id === id);
+  async get(userId: string, id: string): Promise<Word | undefined> {
+    const w = (await this.load()).find((x) => x.id === id);
+    return w ? this.own(w, userId) : undefined;
   }
-  async findByWord(_userId: string, word: string): Promise<Word | undefined> {
+  async findByWord(userId: string, word: string): Promise<Word | undefined> {
     const n = normalizeWord(word);
-    return (await this.load()).find((w) => normalizeWord(w.word) === n);
+    const w = (await this.load()).find((x) => normalizeWord(x.word) === n);
+    return w ? this.own(w, userId) : undefined;
   }
-  async add(_userId: string, input: NewWord): Promise<Word> {
+  async add(userId: string, input: NewWord): Promise<Word> {
     await this.connect();
-    const w = makeWord(input);
+    const w = makeWord({ ...input, owner_id: userId });
     const row = await this.sheet.addRow(toRow(w));
     this.cache!.push(w);
     this.rows.set(w.id, row as unknown as GRow);
-    return w;
+    return this.own(w, userId);
   }
-  async addMany(_userId: string, inputs: NewWord[]): Promise<Word[]> {
+  async addMany(userId: string, inputs: NewWord[]): Promise<Word[]> {
     await this.connect();
-    const created = inputs.map(makeWord);
+    const created = inputs.map((i) => makeWord({ ...i, owner_id: userId }));
     const rows = await this.sheet.addRows(created.map(toRow));
     created.forEach((w, i) => {
       this.cache!.push(w);
       this.rows.set(w.id, rows[i] as unknown as GRow);
     });
-    return created;
+    return created.map((w) => this.own(w, userId));
   }
   async update(
-    _userId: string,
+    userId: string,
+    id: string,
+    patch: Partial<Word>,
+  ): Promise<Word | undefined> {
+    return this.applyPatch(userId, id, patch);
+  }
+  async setProgress(
+    userId: string,
+    wordId: string,
+    progress: Progress,
+  ): Promise<Word | undefined> {
+    return this.applyPatch(userId, wordId, progress);
+  }
+  private async applyPatch(
+    userId: string,
     id: string,
     patch: Partial<Word>,
   ): Promise<Word | undefined> {
@@ -739,7 +1138,7 @@ class SheetStore implements Store {
       for (const k of HEADERS) row.set(k, r[k]);
       await row.save();
     }
-    return next;
+    return this.own(next, userId);
   }
   async remove(_userId: string, id: string): Promise<void> {
     await this.connect();
@@ -751,6 +1150,13 @@ class SheetStore implements Store {
       this.rows.delete(id);
     }
     if (this.memberCache) await this.removeMemberRows((m) => m.word_id === id);
+  }
+  async practiceCandidates(userId: string, collectionId?: string): Promise<Word[]> {
+    if (!collectionId) return this.all(userId);
+    const memberIds = new Set(await this.wordIdsInCollection(userId, collectionId));
+    return (await this.load())
+      .filter((w) => memberIds.has(w.id))
+      .map((w) => this.own(w, userId));
   }
   private async ensureAttempts(): Promise<void> {
     await this.connect();
@@ -854,6 +1260,8 @@ class SheetStore implements Store {
       description: r.get("description") || "",
       emoji: r.get("emoji") || "",
       created_at: Number(r.get("created_at") || 0),
+      owner_id: "",
+      visibility: "private" as Visibility,
     }));
     this.collectionRows = new Map(
       crows.map((r: any) => [r.get("id") || "", r as GRow]),
@@ -865,22 +1273,23 @@ class SheetStore implements Store {
     }));
     this.memberRows = mrows as unknown as GRow[];
   }
-  async collections(_userId: string): Promise<Collection[]> {
+  async collections(userId: string): Promise<Collection[]> {
     await this.ensureCollections();
     const counts = new Map<string, number>();
     for (const m of this.memberCache!)
       counts.set(m.collection_id, (counts.get(m.collection_id) ?? 0) + 1);
     return [...this.collectionCache!]
       .sort((a, b) => b.created_at - a.created_at)
-      .map((c) => ({ ...c, count: counts.get(c.id) ?? 0 }));
+      .map((c) => ({
+        ...c,
+        owner_id: userId,
+        count: counts.get(c.id) ?? 0,
+        mine: true,
+      }));
   }
   async createCollection(
-    _userId: string,
-    input: {
-      name: string;
-      description?: string;
-      emoji?: string;
-    },
+    userId: string,
+    input: { name: string; description?: string; emoji?: string },
   ): Promise<Collection> {
     await this.ensureCollections();
     const c: Collection = {
@@ -889,17 +1298,22 @@ class SheetStore implements Store {
       description: input.description ?? "",
       emoji: input.emoji ?? "",
       created_at: Date.now(),
+      owner_id: userId,
+      visibility: "private",
     };
     const row = await this.collectionsSheet.addRow({
-      ...c,
+      id: c.id,
+      name: c.name,
+      description: c.description,
+      emoji: c.emoji,
       created_at: String(c.created_at),
     });
     this.collectionCache!.push(c);
     this.collectionRows!.set(c.id, row as unknown as GRow);
-    return { ...c, count: 0 };
+    return { ...c, count: 0, mine: true };
   }
   async updateCollection(
-    _userId: string,
+    userId: string,
     id: string,
     patch: Partial<Pick<Collection, "name" | "description" | "emoji">>,
   ): Promise<Collection | undefined> {
@@ -919,7 +1333,20 @@ class SheetStore implements Store {
       row.set("emoji", next.emoji);
       await row.save();
     }
-    return next;
+    return { ...next, owner_id: userId, mine: true };
+  }
+  async setCollectionVisibility(
+    userId: string,
+    id: string,
+    visibility: Visibility,
+  ): Promise<Collection | undefined> {
+    // Public collections are a multi-tenant concept; the single-user Sheet keeps
+    // the flag in-memory only (there is no other user to share with).
+    await this.ensureCollections();
+    const i = this.collectionCache!.findIndex((c) => c.id === id);
+    if (i === -1) return undefined;
+    this.collectionCache![i] = { ...this.collectionCache![i], visibility };
+    return { ...this.collectionCache![i], owner_id: userId, mine: true };
   }
   async removeCollection(_userId: string, id: string): Promise<void> {
     await this.ensureCollections();
@@ -931,6 +1358,10 @@ class SheetStore implements Store {
       this.collectionRows!.delete(id);
     }
     await this.removeMemberRows((m) => m.collection_id === id);
+  }
+  async adoptCollection(userId: string, id: string): Promise<number> {
+    // Single user already "studies" every word — nothing to adopt.
+    return (await this.wordIdsInCollection(userId, id)).length;
   }
   async wordIdsInCollection(_userId: string, collectionId: string): Promise<string[]> {
     await this.ensureCollections();
