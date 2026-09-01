@@ -22,7 +22,8 @@ export async function POST(req: Request) {
 
   const now = Date.now();
   const progress = applyResult(word, result, now);
-  const updated = await store.update(wordId, progress);
+  // Persist progress into this user's user_words (studying), not the shared word.
+  const updated = await store.setProgress(wordId, progress);
   // best-effort attempt log for the progress page
   store
     .logAttempt({ word_id: wordId, exercise_type: exerciseType ?? "", result, ts: now })

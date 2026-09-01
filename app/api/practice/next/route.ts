@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { getStore } from "@/lib/store";
 import { currentUserId } from "@/lib/auth/user";
-import { exerciseForStage, pickNext, scopeToCollection } from "@/lib/engine";
+import { exerciseForStage, pickNext } from "@/lib/engine";
 import { generateExercise, hasProvider } from "@/lib/llm";
 import { toCloze } from "@/lib/cloze";
 import {
@@ -34,20 +34,17 @@ export async function POST(req: Request) {
   const userId = await currentUserId();
   if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   const store = getStore().forUser(userId);
-  let words = await store.all();
+  // Candidates for the picker: the user's studied words, or — when a collection
+  // is chosen — that collection's shared words hydrated with this user's progress
+  // (unstudied members appear as stage `new`, so public packs are practisable).
+  // The stage ladder / picker then runs over exactly this set. `reason:
+  // "empty-collection"` lets the client show a distinct "this collection has no
+  // words" message vs. an empty library.
+  const words = await store.practiceCandidates(collectionId || undefined);
   if (words.length === 0) {
-    return NextResponse.json({ word: null });
-  }
-
-  // Scope to a chosen collection, if any — the stage ladder / picker then runs
-  // over just its members. `reason: "empty-collection"` lets the client show a
-  // distinct "this collection has no words" message vs. an empty library.
-  if (collectionId) {
-    const memberIds = new Set(await store.wordIdsInCollection(collectionId));
-    words = scopeToCollection(words, memberIds);
-    if (words.length === 0) {
-      return NextResponse.json({ word: null, reason: "empty-collection" });
-    }
+    return NextResponse.json(
+      collectionId ? { word: null, reason: "empty-collection" } : { word: null },
+    );
   }
 
   const word = pickNext(words, Date.now(), new Set(seenIds ?? []), Math.random, {
