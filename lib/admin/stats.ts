@@ -1,6 +1,5 @@
 import { promises as fs } from "fs";
 import path from "path";
-import { STAGES, type Stage } from "../types";
 import { QUOTA_TASKS, type QuotaTask } from "../auth/quota";
 import {
   fillDailySeries,
@@ -101,7 +100,6 @@ export interface AdminStats {
     topUsers: UserWordStat[]; // most-active users by words studied
   };
   progress: {
-    stages: Record<Stage, number>; // distribution across all user_words
     mastered: number; // stage = known, across all users
   };
   activity: {
@@ -156,6 +154,9 @@ export async function adminStats(now: number = Date.now()): Promise<AdminStats> 
     (r) => num(r[0]?.n),
     0,
   );
+  // All users ranked by words studied (descending). Returned in full — the
+  // dashboard paginates client-side (the user count is small). Still aggregated
+  // in SQL; only counts + a display label leave the DB.
   const topUsers = await q(
     c,
     `SELECT uw.user_id,
@@ -165,8 +166,7 @@ export async function adminStats(now: number = Date.now()): Promise<AdminStats> 
        FROM user_words uw
        LEFT JOIN users u ON u.id = uw.user_id
       GROUP BY uw.user_id
-      ORDER BY studied DESC
-      LIMIT 10`,
+      ORDER BY studied DESC`,
     (r) =>
       r.map((x) => ({
         user_id: s(x.user_id),
@@ -177,21 +177,13 @@ export async function adminStats(now: number = Date.now()): Promise<AdminStats> 
     [] as UserWordStat[],
   );
 
-  // ── progress (stage distribution across all users) ──────────────────────
-  const stageRows = await q(
+  // ── progress (mastered count across all users) ──────────────────────────
+  const mastered = await q(
     c,
-    "SELECT stage, COUNT(*) count FROM user_words GROUP BY stage",
-    (r) => r.map((x) => ({ stage: s(x.stage), count: num(x.count) })),
-    [] as { stage: string; count: number }[],
+    "SELECT COUNT(*) n FROM user_words WHERE stage = 'known'",
+    (r) => num(r[0]?.n),
+    0,
   );
-  const stages = Object.fromEntries(STAGES.map((st) => [st, 0])) as Record<
-    Stage,
-    number
-  >;
-  for (const row of stageRows) {
-    if ((STAGES as readonly string[]).includes(row.stage))
-      stages[row.stage as Stage] = row.count;
-  }
 
   // ── activity (attempts + daily-active-users) ────────────────────────────
   const totalAttempts = await q(
@@ -268,7 +260,7 @@ export async function adminStats(now: number = Date.now()): Promise<AdminStats> 
       newInWindow: signups.reduce((a, b) => a + b.count, 0),
     },
     vocab: { catalogWords, studiedInstances, distinctStudied, topUsers },
-    progress: { stages, mastered: stages.known },
+    progress: { mastered },
     activity: { totalAttempts, attempts, activeUsers },
     llm: { total: llmTotal, today: llmToday, byTask, topUsers: llmTopUsers },
   };
