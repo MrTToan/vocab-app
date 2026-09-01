@@ -6,7 +6,7 @@ import type { Word } from "@/lib/types";
 export async function POST(req: Request) {
   if (!hasProvider("enrich")) {
     return NextResponse.json(
-      { error: "No LLM configured for enrichment. See docs/SETUP-LLM-PROVIDERS.md." },
+      { error: "AI enrichment is not available right now." },
       { status: 400 },
     );
   }
