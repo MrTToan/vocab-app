@@ -39,6 +39,25 @@ export default function LibraryPage() {
     reload();
   }, []);
 
+  // Optimistic, in-place membership toggle — no full reload.
+  function applyMembership(wordId: string, collectionId: string, on: boolean) {
+    setMemberships((prev) => {
+      const exists = prev.some(
+        (m) => m.word_id === wordId && m.collection_id === collectionId,
+      );
+      if (on) {
+        return exists
+          ? prev
+          : [...prev, { word_id: wordId, collection_id: collectionId }];
+      }
+      return exists
+        ? prev.filter(
+            (m) => !(m.word_id === wordId && m.collection_id === collectionId),
+          )
+        : prev;
+    });
+  }
+
   // word id -> set of its collection ids (from the flat membership list)
   const memberMap = useMemo(() => {
     const m = new Map<string, Set<string>>();
@@ -131,6 +150,7 @@ export default function LibraryPage() {
               collections={collections}
               memberIds={memberMap.get(w.id) ?? EMPTY_SET}
               onChanged={reload}
+              onToggleMembership={applyMembership}
             />
           ))}
         </div>
@@ -172,27 +192,44 @@ function Row({
   collections,
   memberIds,
   onChanged,
+  onToggleMembership,
 }: {
   word: Word;
   collections: Collection[];
   memberIds: ReadonlySet<string>;
   onChanged: () => void;
+  onToggleMembership: (wordId: string, collectionId: string, on: boolean) => void;
 }) {
   const [open, setOpen] = useState(false);
   const [edit, setEdit] = useState<Word>(word);
   const [busy, setBusy] = useState(false);
+  const [membershipError, setMembershipError] = useState<string | null>(null);
+  // Per-collection in-flight guard so rapid taps on the same chip don't race.
+  const [pending, setPending] = useState<ReadonlySet<string>>(EMPTY_SET);
   const acc = recentAccuracy(word);
 
   async function toggleCollection(collectionId: string, on: boolean) {
-    setBusy(true);
+    if (pending.has(collectionId)) return;
+    setMembershipError(null);
+    // 1. Optimistic: flip the chip immediately.
+    onToggleMembership(word.id, collectionId, on);
+    setPending((prev) => new Set(prev).add(collectionId));
+    // 2. Persist in the background — no full reload.
     try {
       await jsonFetch(`/api/collections/${collectionId}/members`, {
         method: "POST",
         body: JSON.stringify(on ? { add: [word.id] } : { remove: [word.id] }),
       });
-      await onChanged();
+    } catch {
+      // 3. Revert on failure.
+      onToggleMembership(word.id, collectionId, !on);
+      setMembershipError("Couldn't update collection. Try again.");
     } finally {
-      setBusy(false);
+      setPending((prev) => {
+        const next = new Set(prev);
+        next.delete(collectionId);
+        return next;
+      });
     }
   }
 
@@ -308,7 +345,6 @@ function Row({
                     <button
                       key={c.id}
                       type="button"
-                      disabled={busy}
                       onClick={() => toggleCollection(c.id, !on)}
                       className="px-2.5 py-1 rounded-full text-sm font-semibold border transition-colors"
                       style={
@@ -323,6 +359,11 @@ function Row({
                   );
                 })}
               </div>
+            )}
+            {membershipError && (
+              <p className="text-sm mt-1" style={{ color: "var(--bad)" }}>
+                {membershipError}
+              </p>
             )}
           </div>
 
