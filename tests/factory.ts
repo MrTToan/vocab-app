@@ -17,6 +17,7 @@ export function mkWord(over: Partial<Word> = {}): Word {
     personal_note: "",
     tags: [],
     source: "manual",
+    owner_id: "__system__",
     stage: "new" as Stage,
     times_seen: 0,
     recent_results: [] as Result[],

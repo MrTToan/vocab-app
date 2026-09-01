@@ -16,6 +16,32 @@
 export const DEV_USER_ID = "local-user";
 export const OWNER_EMAIL = "vothientoan999@gmail.com";
 
+// The sentinel owner of the shared/public catalog. Words and collections owned
+// by this id are global content: everyone can study/read them, but only the
+// owner/admin may EDIT them. A real user's personal content is owned by their
+// own user id instead. See lib/store.ts for how this gates editing.
+export const SYSTEM_OWNER = "__system__";
+
+/** The owner/admin — the single privileged account (bypasses quota, edits the
+ *  shared catalog). Today that is the pre-auth owner (`local-user`), whose Google
+ *  sign-in reclaims the same id. */
+export function isOwner(userId: string): boolean {
+  return userId === DEV_USER_ID;
+}
+
+/** Which `owner_id` new content authored by this user gets. The owner authors the
+ *  shared catalog (`__system__`); everyone else owns their personal content. */
+export function ownerIdFor(userId: string): string {
+  return isOwner(userId) ? SYSTEM_OWNER : userId;
+}
+
+/** May `userId` EDIT content/collection whose `owner_id` is `ownerId`?
+ *  You can edit what you own; the owner/admin can additionally edit the shared
+ *  catalog. Studying a word grants NO edit rights — this is the only gate. */
+export function canEdit(userId: string, ownerId: string): boolean {
+  return ownerId === userId || (ownerId === SYSTEM_OWNER && isOwner(userId));
+}
+
 /** True once Google/Auth.js credentials are configured (i.e. real auth is on). */
 export function authConfigured(): boolean {
   return !!process.env.AUTH_GOOGLE_ID && !!process.env.AUTH_SECRET;
