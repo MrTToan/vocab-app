@@ -1,8 +1,15 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import type { Collection, Enrichment, Word } from "@/lib/types";
+import useSWR from "swr";
+import type { Enrichment, Word } from "@/lib/types";
 import { jsonFetch } from "@/lib/ui";
+import {
+  fetcher,
+  KEY_CONFIG,
+  useCollections,
+  mutateAfterWordChange,
+} from "@/lib/swr";
 
 type Fields = Enrichment & { personal_note: string; tags: string };
 
@@ -26,7 +33,11 @@ const EMPTY: Fields = {
  * /add page so it can share the combined Add page with the CSV importer.
  */
 export default function AddWord() {
-  const [hasLLM, setHasLLM] = useState(false);
+  // Shared SWR: config + the collections list (deduped with Home/Library).
+  const { data: config } = useSWR<{ hasLLM: boolean }>(KEY_CONFIG, fetcher);
+  const hasLLM = !!config?.hasLLM;
+  const { data: colData } = useCollections();
+  const collections = colData?.collections ?? [];
   const [word, setWord] = useState("");
   const [phase, setPhase] = useState<"input" | "review">("input");
   const [fields, setFields] = useState<Fields>(EMPTY);
@@ -37,18 +48,10 @@ export default function AddWord() {
     null,
   );
   const [suggestion, setSuggestion] = useState(""); // spelling correction from enrichment
-  const [collections, setCollections] = useState<Collection[]>([]);
   const [selectedCollections, setSelectedCollections] = useState<Set<string>>(
     new Set(),
   );
   const wordRef = useRef<HTMLInputElement>(null);
-
-  useEffect(() => {
-    jsonFetch<{ hasLLM: boolean }>("/api/config").then((c) => setHasLLM(c.hasLLM));
-    jsonFetch<{ collections: Collection[] }>("/api/collections")
-      .then((r) => setCollections(r.collections))
-      .catch(() => {});
-  }, []);
 
   // duplicate check (debounced) as the word is typed
   useEffect(() => {
@@ -132,6 +135,9 @@ export default function AddWord() {
         method: "POST",
         body: JSON.stringify(body),
       });
+      // New word (+ any collection assignments) — refresh the Library list,
+      // stats and collection counts so they're correct on the next visit.
+      await mutateAfterWordChange();
       setSavedMsg(`Saved “${word}”.`);
       setWord("");
       setFields(EMPTY);

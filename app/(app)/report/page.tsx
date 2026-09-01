@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { STAGE_ORDER, STAGE_LABEL, STAGE_VAR, stageBarWidth, jsonFetch } from "@/lib/ui";
+import useSWR from "swr";
+import { STAGE_ORDER, STAGE_LABEL, STAGE_VAR, stageBarWidth } from "@/lib/ui";
+import { fetcher, KEY_STATS, KEY_WRITING_STATS } from "@/lib/swr";
 import {
   CRITERIA,
   CRITERION_LABEL,
@@ -60,13 +61,10 @@ const TYPE_LABEL: Record<string, string> = {
 };
 
 export default function ReportPage() {
-  const [s, setS] = useState<VocabStats | null>(null);
-  const [w, setW] = useState<WritingStats | null>(null);
-
-  useEffect(() => {
-    jsonFetch<VocabStats>("/api/stats").then(setS).catch(() => {});
-    jsonFetch<WritingStats>("/api/writing/stats").then(setW).catch(() => {});
-  }, []);
+  // SWR: /api/stats is shared with (deduped against) Home; both payloads cache so
+  // a repeat visit is instant and revalidates in the background.
+  const { data: s = null } = useSWR<VocabStats>(KEY_STATS, fetcher);
+  const { data: w = null } = useSWR<WritingStats>(KEY_WRITING_STATS, fetcher);
 
   const words = s?.words;
   const attempts = s?.attempts;
