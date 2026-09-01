@@ -22,9 +22,11 @@ if (!file) {
 const url = process.env.DATABASE_URL || `file:${path.join(process.cwd(), ".data", "lexi.db")}`;
 const db = createClient({ url, authToken: process.env.DATABASE_AUTH_TOKEN });
 
-// Prompts belong to the owner account (multi-tenancy). Override via env if ever
-// ingesting for another user.
+// Ingested prompts are the owner-curated PUBLIC bank: owner_id `__system__`,
+// visibility `public` (see lib/writing/store.ts). `user_id` is legacy "who
+// ingested it" metadata. Override via env if ever ingesting for another user.
 const OWNER_ID = process.env.SEED_USER_ID || "local-user";
+const SYSTEM_OWNER = "__system__";
 
 async function main() {
   await db.execute(
@@ -35,6 +37,8 @@ async function main() {
     )`,
   );
   try { await db.execute("ALTER TABLE writing_prompts ADD COLUMN user_id TEXT"); } catch {}
+  try { await db.execute("ALTER TABLE writing_prompts ADD COLUMN owner_id TEXT"); } catch {}
+  try { await db.execute("ALTER TABLE writing_prompts ADD COLUMN visibility TEXT DEFAULT 'private'"); } catch {}
 
   const raw = JSON.parse(readFileSync(path.resolve(file), "utf8"));
   const prompts = Array.isArray(raw) ? raw : [raw];
@@ -48,14 +52,14 @@ async function main() {
     const id = p.id ?? randomUUID();
     await db.execute({
       sql: `INSERT OR REPLACE INTO writing_prompts
-        (id, task_type, title, prompt_text, image_path, chart_data, model_answer, source_file, tags, last_shown, created_at, user_id)
-        VALUES (?,?,?,?,?,?,?,?,?,COALESCE((SELECT last_shown FROM writing_prompts WHERE id=?),0),?,?)`,
+        (id, task_type, title, prompt_text, image_path, chart_data, model_answer, source_file, tags, last_shown, created_at, user_id, owner_id, visibility)
+        VALUES (?,?,?,?,?,?,?,?,?,COALESCE((SELECT last_shown FROM writing_prompts WHERE id=?),0),?,?,?,?)`,
       args: [
         id, p.task_type, p.title ?? "", p.prompt_text,
         p.image_path ?? null,
         p.chart_data ? JSON.stringify(p.chart_data) : null,
         p.model_answer ?? null, p.source_file ?? null,
-        JSON.stringify(p.tags ?? []), id, now, OWNER_ID,
+        JSON.stringify(p.tags ?? []), id, now, OWNER_ID, SYSTEM_OWNER, "public",
       ],
     });
     n++;
