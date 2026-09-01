@@ -112,7 +112,7 @@ export default function LibraryPage() {
               </option>
             ))}
           </select>
-          <Link href="/collections" className="muted text-xs underline whitespace-nowrap">
+          <Link href="/vocab#collections" className="muted text-xs underline whitespace-nowrap">
             manage
           </Link>
         </div>
@@ -298,7 +298,7 @@ function Row({
             {collections.length === 0 ? (
               <p className="muted text-sm mt-1">
                 No collections yet —{" "}
-                <a href="/collections" className="underline">create one</a>.
+                <a href="/vocab#collections" className="underline">create one</a>.
               </p>
             ) : (
               <div className="flex flex-wrap gap-1.5 mt-1">
