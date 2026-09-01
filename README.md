@@ -1,143 +1,45 @@
 # Lexi
 
-[![CI](https://github.com/MrTToan/vocab-app/actions/workflows/ci.yml/badge.svg)](https://github.com/MrTToan/vocab-app/actions/workflows/ci.yml)
+**Learn English that actually sticks — vocabulary practice and IELTS Writing feedback like a real examiner.**
 
-A personal English **practice engine** — *not* a flashcard notebook. Two modules behind one landing page:
-**Vocabulary** (words climb a mastery ladder; an active-recall picker decides what you drill) and
-**IELTS Academic Writing** (write Task 1 / Task 2 responses and get band-scored feedback with inline
-corrections and coaching). An LLM enriches words and scores what you write. Built for one learner
-(intermediate B1–B2, L1 Vietnamese).
+Lexi is a personal English-learning app built for real progress, not busywork. It does two things well: it helps you build a vocabulary that *stays* with you, and it gives you honest, examiner-style feedback on your IELTS Writing so you know exactly how to improve. It's made for English learners — especially intermediate learners who want to push toward fluency and a higher band.
 
-> **Scope, honestly:** started as a single-user, local-first tool for my own study, now grown into a
-> **deployed, multi-tenant** app — Google sign-in, a shared public word catalog, per-user progress,
-> and an owner admin portal. It still runs **fully local with no auth** (the dev seam) if you prefer.
-> See [Design decisions](#design-decisions--tradeoffs) and `TECH.md`.
+## Try it live
+
+👉 **[lexi.vnfriends.com](https://lexi.vnfriends.com)** — sign in with Google and start straight away.
+
+New here? The **[How it works guide](https://lexi.vnfriends.com/how-it-works)** walks you through everything in a few minutes.
 
 ## Screenshots
 
 ![Landing page](docs/screenshots/landing.jpg)
 
-| IELTS writing feedback — annotated, Google-Docs-style | "How to raise your band" — AI coaching, not just fixes |
+| IELTS writing feedback | How to raise your band — coaching |
 |---|---|
 | ![Writing feedback](docs/screenshots/writing-feedback.jpg) | ![Writing coaching](docs/screenshots/writing-coaching.jpg) |
 
-**Cross-skill progress report** (hand-built charts, no chart library)
+**Progress report**
 
-![Report](docs/screenshots/report.jpg)
+![Progress report](docs/screenshots/report.jpg)
 
-## What it does
+## What you can do
 
-**Vocabulary:**
-- **Active-recall practice**, not passive review — every exercise makes you *produce* or *recall*, never
-  just multiple-choice recognise. Exercises get harder as a word climbs.
-- **Typed, two-way flashcards** validated against the database (no self-grading), plus cloze,
-  type-the-word, and LLM-scored writing/translation/scenario tasks.
-- **A pre-generated, self-refilling question bank** so questions never repeat.
+**Build vocabulary that sticks**
+- A **mastery ladder** — every word climbs from *new* to *known* as you prove you really remember it.
+- **Six varied practice exercises** so you're genuinely recalling words, not just memorizing which answer to tap.
+- **Paste a list of words** and Lexi fills in the meanings and example sentences for you.
+- **Ready-made word packs** to start right away — IELTS Task 1 & 2, Casual English, and Academic Writing.
 
-**IELTS writing:**
-- **Task 1 (charts) & Task 2 (essays)** scored on the four official criteria with an overall band.
-- **Google-Docs-style feedback** — inline corrections you hover/click to a side note, an error-type
-  breakdown, and a **"How to raise your band"** coaching section (prioritised, essay-specific improvements
-  with a why, a how, and a model sentence).
-- **Pick what to practise** from a question list showing your past scores; **review** a past attempt
-  without redoing it, or **export the report to PDF**.
-- Questions ingested from **your own Google Docs**; Task 1 charts are read once and stored as ground truth
-  (no vision model at runtime).
+**Get real feedback on your writing**
+- **IELTS Writing feedback** scored on the four official criteria, with an estimated band.
+- **Inline corrections** you can read through sentence by sentence.
+- **Coaching** on exactly what to do to raise your band — not just what's wrong, but how to make it better.
+- **Ask the AI "why"** whenever a correction or score isn't clear.
 
-**Across both:**
-- **Multi-provider LLM** with an ordered fallback chain, and full **graceful degradation** — the whole
-  typed-practice loop works with **no API key at all**.
-- A **cross-skill report** (`/report`) with hand-built charts (no chart dependency).
-
-Plain-language, feature-by-feature docs live in **[`docs/features/`](docs/features/)**.
-
-## How it works
-
-```mermaid
-flowchart LR
-  UI["Next.js UI<br/>landing · vocabulary · writing · report"] --> API["API routes<br/>app/api/*"]
-  API --> ENG["Pure logic<br/>lib/engine.ts · lib/writing/grade.ts"]
-  API --> STORE[("Store<br/>SQLite / Google Sheet")]
-  API --> LLM["LLM chain<br/>Gemini → Groq → OpenAI"]
-  API --> GDOC["Google Docs<br/>writing-prompt ingest"]
-  ENG -. "pure & unit-tested" .-> API
-```
-
-The domain logic is deliberately **pure and isolated** so it can be unit-tested without a DB or network:
-the stage ladder, the weighted picker, answer-matching, and question-harvesting all live in `lib/*` as
-side-effect-free functions. Storage and LLM access sit behind small interfaces the app never bypasses.
-
-**The learning model:** words climb **New → Recognition → Recall → Production → Known**. A correct (or
-near-miss) answer moves a word up a rung; a wrong one moves it down. **4 non-incorrect answers in a row**
-masters a word to *Known* and retires it from rotation. A weighted picker keeps ~35 words in active
-rotation, favouring ones you recently got wrong or haven't seen in a while.
-
-## Run it
-
-```bash
-npm install
-npm run dev        # http://localhost:3001  (landing at /, app at /vocab · /writing · /report)
-```
-
-It runs with **no API key** — typed flashcards, cloze, type-the-word and all local grading work fully.
-Add a provider to unlock word enrichment and sentence scoring (see
-[`docs/SETUP-LLM-PROVIDERS.md`](docs/SETUP-LLM-PROVIDERS.md)). Your data lives in a local SQLite file
-(`.data/lexi.db`) and your keys in `.env.local` — both gitignored.
-
-## Tests
-
-```bash
-npm run typecheck  # tsc --noEmit
-npm test           # vitest
-```
-
-Unit tests cover the **pure domain logic** — `engine` (stage ladder, picker, mastery), `grade`
-(local answer matching), `spell`, `cloze`, `harvest`, `ui`, and `writing/grade` (word count, band
-clamping, correction-span location, error aggregation). The rule of the repo: a change isn't done until
-`npm test` is green. *(Honest gap: integration/E2E coverage of the API + practice UI isn't here yet —
-the current suite is deliberately the fast, pure core.)*
-
-## Design decisions & tradeoffs
-
-Where I made a call and why — including what I'd want a reviewer to know:
-
-- **SQLite (libSQL), local-first** — single user, zero-ops, instant. The same client points at hosted
-  **Turso** with no code change if it ever needs to be online.
-- **No spaced-repetition scheduler (no SRS)** — a weighted active-set picker reproduces the *feel* of
-  spacing/interleaving using plain counters, without due-date bookkeeping.
-- **Streak-based mastery over accuracy thresholds** — I tried a "≥85% over last 5 + ≥8 views" gate
-  first; inspecting real data showed it was effectively unreachable, so mastery is now "4 correct in a
-  row." Attainable and intuitive.
-- **A fallback chain, free tiers first** — Gemini → Groq (free) → OpenAI (paid, last resort); a strict
-  3-strike circuit breaker drops to the next provider so a rate-limited free tier never blocks practice.
-- **A self-refilling question bank** — good LLM output (model corrections, live-generated exercises,
-  enrichment examples) is harvested back into the bank instead of paying to regenerate it.
-
-**Known tradeoffs I'm aware of** (fine at this scale, flagged for honesty):
-`pickNext` reads the full word table on each pick (O(n); imperceptible at ~1k words); schema evolution is
-ad-hoc (`CREATE TABLE IF NOT EXISTS` plus try/catch `ALTER TABLE ADD COLUMN`, with one-time
-`scripts/migrate-*.mjs` for the bigger shape changes — no formal migration framework yet); and the
-circuit-breaker state is a module global (correct for one long-lived self-host process, not
-multi-instance safe). The app is now **multi-tenant** — content is shared/global (`owner_id`) and
-per-user progress lives in `user_words`; see `TECH.md`.
-
-## Project layout
-
-| Path | What's there |
-|------|--------------|
-| `lib/` | Pure logic — `engine`, `grade`, `spell`, `cloze`, `harvest` — plus the `store` and LLM `providers` interfaces |
-| `lib/writing/` | The writing module — score schema, pure `grade`, prompt, guidance loader, and its own store |
-| `app/` | Next.js App Router — `(marketing)` landing + `(app)` pages, and `app/api/*` routes |
-| `components/writing/` | The writing workspace + feedback UI |
-| `content/writing/` | Grading guidance, a sample prompt, and the Google-Doc source template |
-| `tests/` | Vitest unit tests for the pure logic |
-| `docs/features/` | Plain-language guide to how each feature behaves |
-| `PRD.md` · `TECH.md` · `docs/WRITING-SPEC.md` | Product intent · architecture · writing-module design |
-
-## Stack
-
-Next.js 16 (App Router, Turbopack) · React 19 · TypeScript · Tailwind v4 · SQLite/libSQL · Zod ·
-Vitest. LLM I/O is structured JSON, Zod-validated.
+**Everywhere you learn**
+- A **progress view** so you can see how far you've come.
+- **Works on your phone** — practice anywhere, in spare moments.
+- **Your progress follows your sign-in** across every device.
 
 ## License
 
