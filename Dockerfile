@@ -28,6 +28,8 @@ RUN npm ci --omit=dev && npm cache clean --force
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/next.config.ts ./next.config.ts
+# Migration/ingest scripts run in-place against the live DB inside the container.
+COPY --from=builder /app/scripts ./scripts
 # The SQLite DB lives here; mounted as a volume at runtime so data persists
 # across container restarts/rebuilds.
 RUN mkdir -p /app/.data
