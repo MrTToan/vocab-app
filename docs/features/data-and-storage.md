@@ -2,11 +2,16 @@
 
 ## Where everything lives
 Lexi is a **single-user, local** app. All your data sits in one SQLite file: **`.data/lexi.db`**. The
-vocabulary module uses three tables:
+vocabulary module separates shared **content** from per-user **progress**:
 
-- **words** — your vocabulary and each word's progress (stage, times seen, recent results).
+- **words** — the shared word content (text, meaning, examples). `owner_id` marks the
+  public catalog (`__system__`) vs. a user's personal word, and gates *editing* only.
+- **questions** — the shared [pre-generated + harvested question bank](question-bank.md),
+  keyed by word.
+- **user_words** — your progress on a word (stage, times seen, recent results). "Studying"
+  a word means having a row here; no row means stage `new`.
+- **user_question_state** — which bank questions you've been shown recently (per user).
 - **attempts** — one row per graded answer, powering [Progress tracking](progress-tracking.md).
-- **questions** — the [pre-generated + harvested question bank](question-bank.md).
 
 The [writing module](writing-feedback.md) adds its own tables to the **same** file: **writing_prompts**
 (questions + Task 1 `chart_data`/image), **writing_submissions** (bands + coaching), **writing_corrections**

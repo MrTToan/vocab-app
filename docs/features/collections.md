@@ -35,10 +35,22 @@ Three ways:
    (the words, collocations, and phrases graders reward) and assign them for you. Ask for one,
    e.g. "build me an IELTS Task 1 collection".
 
+## Public collections
+
+A collection is **private** (only its owner sees it) or **public** (everyone sees it in
+their list and on the Practice switcher). Public collections are the shared catalog packs;
+only the owner/admin can mark a collection public (the `Make public/private` toggle on
+`/collections`). Practising a public pack works even before you've "added" it — its words
+enter the picker as `new`, and answering them creates your own progress. **Add all** (or
+`POST /api/collections/:id/adopt`) bulk-adds the whole pack to your rotation. Either way
+**no content is copied** — the words stay shared; only your `user_words` progress is yours.
+
 ## Under the hood
 
-Two additive SQLite tables — `collections` and a `word_collections` join — created
-automatically at connect; existing tables are untouched. Access is via the `Store` interface
-(`collections()`, `createCollection`, `setCollectionMembers`, `wordIdsInCollection`, …). The
-practice route scopes with the pure `scopeToCollection(words, memberIds)` helper before
-`pickNext`. See `TECH.md` for the code map.
+`collections` (with `owner_id` + `visibility`) and the `word_collections` join are created
+at connect. Access is via the `Store` interface (`collections()` returns your private packs
+plus all public ones; `createCollection`, `setCollectionVisibility`, `adoptCollection`,
+`setCollectionMembers`, `wordIdsInCollection`, …). The practice route asks the store for
+`practiceCandidates(collectionId)` — the pack's shared words hydrated with your progress —
+then runs the unchanged `pickNext`. Membership edits and publishing are owner-gated
+(`ForbiddenError` → 403). See `TECH.md` for the code map.

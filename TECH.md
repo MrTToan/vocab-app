@@ -18,30 +18,68 @@ Rejected Python/FastAPI (two processes). Next.js full-stack is the least moving 
 
 ## 2. Storage (`lib/store.ts`)
 
-One `Store` interface, selected by env:
+One `Store` interface, selected by env.
 
-- **`SqliteStore` (default)** — libSQL. `url = DATABASE_URL` or `file:.data/lexi.db`; `DATABASE_AUTH_TOKEN` for Turso. Tables: `words` (one row/word, arrays stored as JSON text), `attempts` (`ts, word_id, exercise_type, result`), `questions` (the pre-generated + self-harvested practice bank), and the collections pair `collections` + `word_collections` (many-to-many word grouping; see below). Queries the DB per request (no stale in-memory cache — correct on serverless).
-- **`SheetStore` (optional)** — Google Sheet via service account (`google-spreadsheet`). Used when `SHEET_ID` + creds are set. `Words` + `Attempts` + `Questions` + `Collections` + `WordCollections` tabs, with an in-memory cache.
+**Content vs progress (the core split).** A word is two kinds of fact:
+- **CONTENT (shared once):** the word text/meaning/examples/`personal_note`/`tags`
+  and its question bank. Stored once, no per-user duplication. `words.owner_id`
+  is `__system__` for the public catalog or a user id for a user's personal word;
+  it gates **editing only** — content is otherwise global.
+- **PROGRESS (per user):** `user_words(user_id, word_id, stage, times_seen,
+  recent_results, last_seen_at, added_at)` is the *only* per-user vocab progress.
+  "Studying a word" = having a row here; **no row ⇒ stage `new`**. Per-user
+  question recency lives in `user_question_state(user_id, question_id, last_shown)`.
 
-Both implement `all / get / findByWord / add / addMany / update / remove / logAttempt / attempts`, the question-bank methods `addQuestions / pickQuestion / questionCount / questionWordIds`, and the collections methods `collections / createCollection / updateCollection / removeCollection / wordIdsInCollection / memberships / setCollectionMembers / setWordCollections`.
-Swapping backends is env-only; the app never touches storage directly.
+The store JOINs the two and **hydrates each `Word.stage`/progress before the pure
+engine** (`lib/engine.ts`) ever sees it — the engine stays content-agnostic.
 
-**Multi-tenancy.** Call sites never use the raw store — they go through
-`getStore().forUser(userId)` (and `writingStore.forUser(userId)`), which return a
-scoped view, so scoping is impossible to forget. The caller is resolved once per
-request via `currentUserId()` (`lib/auth/user.ts`), the single auth choke point.
-- **Per-user:** vocab `words`/`attempts`/`questions`/`collections`/`word_collections`
-  and writing `writing_submissions`/`writing_corrections` — each carries `user_id`
-  and is filtered by it (your words, your groups, your essays, your bands/stats are private).
-- **Shared:** `writing_prompts` are one pool everyone practises — reads are NOT
-  user-filtered; the prompt's `user_id` is just "who ingested it". Each student's
-  per-prompt stats come from their own submissions.
+- **`SqliteStore` (default)** — libSQL. `url = DATABASE_URL` or `file:.data/lexi.db`;
+  `DATABASE_AUTH_TOKEN` for Turso. Tables: `words` (shared content + `owner_id`),
+  `questions` (shared bank, keyed by `word_id`), `user_words` + `user_question_state`
+  (per-user progress/recency), `attempts` (`ts, word_id, exercise_type, result, user_id`),
+  and the collections pair `collections` (+ `owner_id` + `visibility`) + `word_collections`.
+  Queries the DB per request (no stale cache — correct on serverless).
+- **`SheetStore` (optional)** — Google Sheet via service account. Single-user-local;
+  does **not** implement the content/progress split (progress stays inline on the
+  row — equivalent for one user) or public collections. Not for multi-tenant deploy.
 
-`SqliteStore` is the multi-tenant/deploy backend; `SheetStore` is
-single-user-local and ignores the scope. A per-user daily LLM cap lives in
+Both implement `all / get / findByWord / add / addMany / update / setProgress /
+remove / logAttempt / attempts / practiceCandidates`, the question-bank methods
+`addQuestions / pickQuestion / questionCount / questionWordIds`, and the collections
+methods `collections / createCollection / updateCollection / setCollectionVisibility /
+removeCollection / adoptCollection / wordIdsInCollection / memberships /
+setCollectionMembers / setWordCollections`. Swapping backends is env-only.
+
+**Scoping & authorization.** Call sites never use the raw store — they go through
+`getStore().forUser(userId)` (and `writingStore.forUser(userId)`), so per-user
+scoping is impossible to forget. The caller is resolved once per request via
+`currentUserId()` (`lib/auth/user.ts`), the single auth choke point.
+- **Per-user (progress):** `user_words`, `user_question_state`, `attempts`, and
+  writing `writing_submissions`/`writing_corrections`.
+- **Shared (content):** `words`, `questions`, and `writing_prompts` (one pool).
+- **Edit authorization** is *separate from studying*: `canEdit(userId, ownerId)`
+  (`lib/auth/user.ts`) lets you edit only content you own; the owner/admin
+  (`isOwner` = `DEV_USER_ID`) can additionally edit `__system__` catalog content.
+  Studying a word grants **zero** edit rights; the store throws `ForbiddenError`
+  (→ 403) on an unauthorized content/collection edit. Copy-on-write for personal
+  edits of public words is **deferred**.
+
+`SqliteStore` is the multi-tenant/deploy backend. A per-user daily LLM cap lives in
 `lib/auth/quota.ts` (`llm_usage` table).
 
-**Collections** (`collections`, `word_collections`) are named, curated word groups — a study *lens*, additive over the existing tables. The practice route filters `store.all()` through the pure `scopeToCollection(words, memberIds)` (in `lib/engine.ts`) before `pickNext`, so the whole stage ladder runs over just the chosen collection; a word's `stage` stays global. UI: `/collections` (manage), a switcher on `/practice` (remembered in `localStorage`), assignment from Library + Add. APIs under `/api/collections`. Feature doc: `docs/features/collections.md`. Both tables carry `user_id` and are scoped via `forUser()` (each user has their own collections).
+**Collections** (`collections` + `owner_id` + `visibility`, `word_collections`) are
+named, curated word groups — a study *lens*. `GET /api/collections` returns the
+caller's **private** collections PLUS all **public** ones; the `/practice` switcher
+lists both. The practice route asks the store for `practiceCandidates(collectionId)`
+— the collection's shared words hydrated with the caller's progress (unstudied
+members appear as `new`, so **public packs are practisable**) — then runs the
+unchanged `pickNext` over exactly that set; a word's `stage` stays global. Adopting
+a public pack (`POST /api/collections/:id/adopt`) inserts `user_words` rows for its
+members and **copies no content**. Only the owner/admin marks a collection public
+(system-owned). UI: `/collections` (manage + publish toggle + "Add all"), the
+`/practice` switcher (remembered in `localStorage`), assignment from Library + Add.
+Feature doc: `docs/features/collections.md`. Migration: `scripts/migrate-content-split.mjs`
+(idempotent).
 
 ## 3. LLM strategy (`lib/providers.ts`, `lib/llm.ts`)
 
@@ -71,7 +109,7 @@ Six tasks — **enrich**, **generate** (fresh cloze/translate/scenario), **score
 
 ## 4. Data model (`lib/types.ts`)
 
-- **Word:** `id, word, part_of_speech, ipa, vi_meaning, definition_en, synonyms[], collocations[], example_simple, example_complex, false_friend_note, personal_note, tags[], source` + progress: `stage, times_seen, recent_results[] (last 5), last_seen_at, created_at`.
+- **Word:** content `id, word, part_of_speech, ipa, vi_meaning, definition_en, synonyms[], collocations[], example_simple, example_complex, false_friend_note, personal_note, tags[], source, owner_id, created_at` + per-user progress hydrated from `user_words`: `stage, times_seen, recent_results[] (last 5), last_seen_at`. The `Word` shape still carries progress so the pure engine is unchanged; the store fills those fields from `user_words` (defaults to stage `new` when the caller has no row).
 - **Attempt:** `word_id, exercise_type, result, ts` — logged per graded answer (powers `/progress`).
 - **Question:** `id, word_id, type (cloze|translate|scenario), direction, payload, answer` — the practice bank, pre-generated by the enrich skill and self-harvested from LLM output at runtime (`lib/harvest.ts` + `lib/cloze.ts`).
 - **Stage ladder / picker** live in `lib/engine.ts` (pure, unit-testable): `applyResult`, `exerciseForStage`, weighted `pickNext` (active-working-set: cycles ~35 words; streak-based mastery in `applyResult`), `stageCounts`, `recentAccuracy`.
