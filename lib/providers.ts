@@ -1,18 +1,26 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { promises as fs } from "fs";
 import path from "path";
+import { randomBytes } from "crypto";
 
 /*
  * LLM provider layer with a PRIORITY FALLBACK CHAIN.
  *
  * You define an ordered list of providers (your preference). The app uses the
- * first one. If it fails 3 times IN A ROW, the app permanently drops to the next
- * one (until you restart). One global chain applies to every task.
+ * first one. If it fails 3 times IN A ROW with a *transient* error (network,
+ * timeout, HTTP 408/429/5xx) the default moves to the next one. After a cool-down
+ * (LLM_RECOVER_AFTER_MS, default 5 min) the next call probes the primary again
+ * and, if it succeeds, moves back to it. One global chain applies to every task.
+ * Within a single request, a failure on the active provider falls through the
+ * rest of the chain, so one blip never fails the user's call.
+ *
+ * Every call has a bounded timeout (LLM_TIMEOUT_MS / LLM_TIMEOUT_WRITING_MS).
  *
  * Config (in .env.local) — numbered entries, in priority order:
  *   LLM_1_PROVIDER=openai
  *   LLM_1_BASE_URL=https://generativelanguage.googleapis.com/v1beta/openai/
  *   LLM_1_API_KEY=...            LLM_1_MODEL=gemini-flash-latest
+ *   LLM_1_MODEL_ENRICH=gemini-2.5-flash-lite   # optional per-task override
  *   LLM_2_PROVIDER=openai
  *   LLM_2_BASE_URL=https://api.openai.com/v1
  *   LLM_2_API_KEY=...            LLM_2_MODEL=gpt-4o-mini
@@ -39,7 +47,19 @@ interface TaskConfig {
   baseUrl?: string;
 }
 
+interface CallOpts {
+  system: string;
+  user: string;
+  schema: unknown;
+  maxTokens: number;
+  images?: ImagePart[];
+}
+
 const FAIL_THRESHOLD = 3;
+const ALL_TASKS: Task[] = ["enrich", "generate", "score", "score-writing", "extract-chart", "discuss-writing"];
+
+/** Tasks whose prompts are long / outputs large — they get the longer timeout and full reasoning. */
+const HEAVY_TASKS: ReadonlySet<Task> = new Set<Task>(["score-writing", "extract-chart"]);
 
 const DEFAULT_ANTHROPIC_MODEL: Record<Task, string> = {
   enrich: "claude-haiku-4-5",
@@ -56,6 +76,38 @@ function env(...names: string[]): string | undefined {
     if (v && v.trim()) return v.trim();
   }
   return undefined;
+}
+
+function envInt(name: string, fallback: number): number {
+  const v = env(name);
+  if (!v) return fallback;
+  const n = Number(v);
+  return Number.isFinite(n) && n > 0 ? n : fallback;
+}
+
+/** `score-writing` -> `SCORE_WRITING` (env-var suffix for per-task settings). */
+function taskEnvSuffix(task: Task): string {
+  return task.toUpperCase().replace(/-/g, "_");
+}
+
+/* ─────────────────────  per-task budgets  ─────────────────────── */
+
+/** Timeout (ms) for one provider attempt of this task. */
+export function taskTimeoutMs(task: Task): number {
+  return HEAVY_TASKS.has(task)
+    ? envInt("LLM_TIMEOUT_WRITING_MS", 60_000)
+    : envInt("LLM_TIMEOUT_MS", 25_000);
+}
+
+/**
+ * `reasoning_effort` to send to OpenAI-compatible providers for this task, or
+ * undefined to omit the field. Light tasks run at "low" (faster, cheaper on
+ * thinking models); heavy ones leave the provider default.
+ */
+export function taskReasoningEffort(task: Task): string | undefined {
+  const override = env(`LLM_REASONING_EFFORT_${taskEnvSuffix(task)}`);
+  if (override) return override.toLowerCase() === "none" ? undefined : override;
+  return HEAVY_TASKS.has(task) ? undefined : "low";
 }
 
 /* ─────────────────────  chain resolution  ─────────────────────── */
@@ -93,7 +145,8 @@ function numberedChain(task: Task): TaskConfig[] {
     if (!present) break;
     const entry = makeEntry(
       env(`LLM_${i}_PROVIDER`),
-      env(`LLM_${i}_MODEL`),
+      // LLM_<n>_MODEL_<TASK> overrides LLM_<n>_MODEL for that one task.
+      env(`LLM_${i}_MODEL_${taskEnvSuffix(task)}`, `LLM_${i}_MODEL`),
       env(`LLM_${i}_API_KEY`),
       env(`LLM_${i}_BASE_URL`),
       task,
@@ -131,7 +184,7 @@ export function hasProvider(task: Task): boolean {
   return resolveChain(task).length > 0;
 }
 export function hasAnyLLM(): boolean {
-  return (["enrich", "generate", "score", "score-writing", "extract-chart", "discuss-writing"] as Task[]).some(hasProvider);
+  return ALL_TASKS.some(hasProvider);
 }
 export function mode(): "default" | "custom" | "chain" {
   if (numberedChain("enrich").length) return "chain";
@@ -140,11 +193,17 @@ export function mode(): "default" | "custom" | "chain" {
 }
 
 /* ─────────────────  circuit-breaker state (per process)  ───────── */
-// Strict: advance only after FAIL_THRESHOLD consecutive failures; never auto-recover
-// (resets only on restart), per the chosen behavior.
+// Advance only after FAIL_THRESHOLD consecutive *transient* failures of the active
+// provider. Once advanced, after LLM_RECOVER_AFTER_MS the next call probes the
+// primary (#1) once (half-open); success moves the default back to #1.
 
 let activeIndex = 0;
 let consecutiveFailures = 0;
+let lastAdvanceAt = 0;
+
+function recoverAfterMs(): number {
+  return envInt("LLM_RECOVER_AFTER_MS", 300_000);
+}
 
 export function chainStatus(): {
   active: number;
@@ -165,17 +224,127 @@ export function taskSummary(task: Task): { provider: ProviderName; model: string
   return { provider: c.provider, model: c.model };
 }
 
+/* ─────────────────────  error classification  ─────────────────── */
+
+/**
+ * Internal error carrying enough detail for the `[llm]` log lines, plus a
+ * `transient` flag that decides whether it counts toward the breaker.
+ * Never surfaced to users as-is (see `userFacingError`).
+ */
+class ProviderError extends Error {
+  constructor(
+    message: string,
+    readonly transient: boolean,
+    readonly kind: "timeout" | "http" | "network" | "parse" | "other",
+    readonly status?: number,
+    options?: { cause?: unknown },
+  ) {
+    super(message, options);
+    this.name = "ProviderError";
+  }
+}
+
+function isAbortLike(e: unknown): boolean {
+  if (!e || typeof e !== "object") return false;
+  const name = (e as { name?: string }).name ?? "";
+  return name === "TimeoutError" || name === "AbortError" || name === "APIConnectionTimeoutError";
+}
+
+/** Map anything a provider adapter may throw onto a ProviderError. */
+function classify(e: unknown): ProviderError {
+  if (e instanceof ProviderError) return e;
+  if (isAbortLike(e)) {
+    return new ProviderError("request timed out", true, "timeout", undefined, { cause: e });
+  }
+  if (e instanceof SyntaxError) {
+    return new ProviderError(`invalid JSON from model: ${e.message}`, false, "parse", undefined, { cause: e });
+  }
+  // Anthropic SDK errors carry a numeric `status`; connection errors carry none.
+  const status = (e as { status?: unknown })?.status;
+  if (typeof status === "number") {
+    return new ProviderError(`HTTP ${status}: ${errMsg(e).slice(0, 300)}`, isTransientStatus(status), "http", status, { cause: e });
+  }
+  const msg = errMsg(e);
+  const name = (e as { name?: string })?.name ?? "";
+  // undici/fetch network failures ("fetch failed", ECONNRESET…) and SDK connection errors.
+  if (e instanceof TypeError || name === "APIConnectionError" || /fetch failed|ECONN|ENOTFOUND|EAI_AGAIN|socket/i.test(msg)) {
+    return new ProviderError(`network error: ${msg.slice(0, 300)}`, true, "network", undefined, { cause: e });
+  }
+  return new ProviderError(msg.slice(0, 300), false, "other", undefined, { cause: e });
+}
+
+function isTransientStatus(status: number): boolean {
+  return status === 408 || status === 429 || status >= 500;
+}
+
+function errMsg(e: unknown): string {
+  return e instanceof Error ? e.message : String(e);
+}
+
+/**
+ * The error handed back to route handlers (which relay `err.message` to the
+ * browser). Generic on purpose: no upstream body, vendor or model name. The
+ * detail lives in `cause` and in the server log under a short request id.
+ */
+function userFacingError(task: Task, reqId: string, errors: ProviderError[]): Error {
+  const allTimeouts = errors.length > 0 && errors.every((e) => e.kind === "timeout");
+  const text = allTimeouts
+    ? "The AI service timed out. Please try again."
+    : "The AI service is temporarily unavailable. Please try again.";
+  console.warn(
+    `[llm] ${reqId} all providers failed for "${task}": ` +
+      errors.map((e, i) => `#${i + 1} ${e.message}`).join(" | "),
+  );
+  const err = new Error(`${text} (ref ${reqId})`, { cause: errors[errors.length - 1] });
+  return err;
+}
+
+function newReqId(): string {
+  return randomBytes(3).toString("hex");
+}
+
 /* ─────────────────────────  the call  ─────────────────────────── */
 
-export async function callStructured(
-  task: Task,
-  opts: { system: string; user: string; schema: unknown; maxTokens: number; images?: ImagePart[] },
-): Promise<unknown> {
+async function callProvider(task: Task, cfg: TaskConfig, opts: CallOpts): Promise<unknown> {
+  try {
+    return cfg.provider === "anthropic"
+      ? await anthropicStructured(task, cfg, opts)
+      : await openaiStructured(task, cfg, opts);
+  } catch (e) {
+    throw classify(e);
+  }
+}
+
+export async function callStructured(task: Task, opts: CallOpts): Promise<unknown> {
   const chain = resolveChain(task);
   if (!chain.length) throw new Error(`No LLM configured for "${task}"`);
+  const reqId = newReqId();
+  const errors: ProviderError[] = [];
+
+  // Half-open probe: we're on a fallback and the cool-down has passed — try the
+  // primary once. Success restores it as the default; failure just falls through
+  // to the current active provider below (and resets the cool-down clock).
+  if (activeIndex > 0 && Date.now() - lastAdvanceAt >= recoverAfterMs()) {
+    const primary = chain[0];
+    try {
+      const result = await callProvider(task, primary, opts);
+      console.warn(
+        `[llm] ${reqId} primary #1 (${primary.provider}/${primary.model}) healthy again — default back to #1`,
+      );
+      activeIndex = 0;
+      consecutiveFailures = 0;
+      return result;
+    } catch (err) {
+      const pe = classify(err);
+      errors.push(pe);
+      lastAdvanceAt = Date.now();
+      console.warn(
+        `[llm] ${reqId} primary #1 (${primary.provider}/${primary.model}) still failing for "${task}" (${pe.message}) — staying on #${Math.min(activeIndex, chain.length - 1) + 1}`,
+      );
+    }
+  }
 
   const start = Math.min(activeIndex, chain.length - 1);
-  let lastErr: unknown;
   // Try the active provider, then fall THROUGH the rest of the chain in the SAME
   // request. A transient blip on #1 (e.g. "fetch failed") no longer fails the user's
   // one call — it transparently retries #2/#3. The 3-strike counter still advances
@@ -183,39 +352,34 @@ export async function callStructured(
   for (let i = start; i < chain.length; i++) {
     const cfg = chain[i];
     try {
-      const result =
-        cfg.provider === "anthropic"
-          ? await anthropicStructured(task, cfg, opts)
-          : await openaiStructured(task, cfg, opts);
+      const result = await callProvider(task, cfg, opts);
       if (i === start) consecutiveFailures = 0; // active provider healthy again
       return result;
     } catch (err) {
-      lastErr = err;
-      if (i === start) {
+      const pe = classify(err);
+      errors.push(pe);
+      if (i === start && pe.transient) {
         consecutiveFailures++;
         if (consecutiveFailures >= FAIL_THRESHOLD && activeIndex < chain.length - 1) {
           activeIndex++;
           consecutiveFailures = 0;
+          lastAdvanceAt = Date.now();
           const next = chain[activeIndex];
           console.warn(
-            `[llm] provider #${i + 1} (${cfg.provider}/${cfg.model}) failed ` +
+            `[llm] ${reqId} provider #${i + 1} (${cfg.provider}/${cfg.model}) failed ` +
               `${FAIL_THRESHOLD}x in a row — default now #${activeIndex + 1} ` +
-              `(${next.provider}/${next.model}). Reason: ${errMsg(err)}`,
+              `(${next.provider}/${next.model}) for ${Math.round(recoverAfterMs() / 1000)}s. Reason: ${pe.message}`,
           );
         }
       }
       if (i < chain.length - 1) {
         console.warn(
-          `[llm] ${cfg.provider}/${cfg.model} failed for "${task}" (${errMsg(err)}) — trying next in chain`,
+          `[llm] ${reqId} ${cfg.provider}/${cfg.model} failed for "${task}" (${pe.message}) — trying next in chain`,
         );
       }
     }
   }
-  throw lastErr instanceof Error ? lastErr : new Error(String(lastErr));
-}
-
-function errMsg(e: unknown): string {
-  return e instanceof Error ? e.message : String(e);
+  throw userFacingError(task, reqId, errors);
 }
 
 /**
@@ -226,34 +390,32 @@ function errMsg(e: unknown): string {
  * here never poisons the text chain used for scoring. Meant for occasional,
  * manual ingest — trying an extra provider is fine.
  */
-export async function callVisionStructured(
-  task: Task,
-  opts: { system: string; user: string; schema: unknown; maxTokens: number; images?: ImagePart[] },
-): Promise<unknown> {
+export async function callVisionStructured(task: Task, opts: CallOpts): Promise<unknown> {
   const chain = resolveChain(task);
   if (!chain.length) throw new Error(`No LLM configured for "${task}"`);
-  let lastErr: unknown;
+  const reqId = newReqId();
+  const errors: ProviderError[] = [];
   for (const cfg of chain) {
     try {
-      return cfg.provider === "anthropic"
-        ? await anthropicStructured(task, cfg, opts)
-        : await openaiStructured(task, cfg, opts);
+      return await callProvider(task, cfg, opts);
     } catch (err) {
-      lastErr = err;
-      console.warn(`[llm] vision read on ${cfg.provider}/${cfg.model} failed: ${errMsg(err)} — trying next`);
+      const pe = classify(err);
+      errors.push(pe);
+      console.warn(`[llm] ${reqId} vision read on ${cfg.provider}/${cfg.model} failed: ${pe.message} — trying next`);
     }
   }
-  throw lastErr instanceof Error ? lastErr : new Error(String(lastErr));
+  throw userFacingError(task, reqId, errors);
 }
 
 /* ── Anthropic ── */
 
 const anthropicClients = new Map<string, Anthropic>();
-function anthropicClient(apiKey: string): Anthropic {
-  let c = anthropicClients.get(apiKey);
+function anthropicClient(apiKey: string, timeout: number): Anthropic {
+  const key = `${apiKey}:${timeout}`;
+  let c = anthropicClients.get(key);
   if (!c) {
-    c = new Anthropic({ apiKey });
-    anthropicClients.set(apiKey, c);
+    c = new Anthropic({ apiKey, timeout, maxRetries: 1 });
+    anthropicClients.set(key, c);
   }
   return c;
 }
@@ -261,7 +423,7 @@ function anthropicClient(apiKey: string): Anthropic {
 async function anthropicStructured(
   task: Task,
   cfg: TaskConfig,
-  { system, user, schema, maxTokens, images }: { system: string; user: string; schema: unknown; maxTokens: number; images?: ImagePart[] },
+  { system, user, schema, maxTokens, images }: CallOpts,
 ): Promise<unknown> {
   const content: unknown[] = [{ type: "text", text: user }];
   for (const img of images ?? []) {
@@ -270,30 +432,41 @@ async function anthropicStructured(
       source: { type: "base64", media_type: img.mediaType, data: img.data },
     });
   }
-  const resp = await anthropicClient(cfg.apiKey).messages.create({
+  type AnthropicMessage = {
+    content: { type: string; text?: string }[];
+    usage?: { input_tokens?: number; output_tokens?: number };
+  };
+  const resp = (await anthropicClient(cfg.apiKey, taskTimeoutMs(task)).messages.create({
     model: cfg.model,
     max_tokens: maxTokens,
     system: [{ type: "text", text: system, cache_control: { type: "ephemeral" } }],
     output_config: { format: { type: "json_schema", schema } },
     messages: [{ role: "user", content }],
-  } as any);
+  } as unknown as Parameters<Anthropic["messages"]["create"]>[0])) as unknown as AnthropicMessage;
   logUsage(task, "anthropic", cfg.model, {
-    input: (resp as any).usage?.input_tokens,
-    output: (resp as any).usage?.output_tokens,
+    input: resp.usage?.input_tokens,
+    output: resp.usage?.output_tokens,
   });
-  const textBlock = resp.content.find((b: any) => b.type === "text") as
+  const textBlock = resp.content.find((b) => b.type === "text" && typeof b.text === "string") as
     | { text: string }
     | undefined;
-  if (!textBlock) throw new Error("Anthropic returned no text block");
+  if (!textBlock) throw new ProviderError("model returned no text block", false, "parse");
   return JSON.parse(textBlock.text);
 }
 
 /* ── OpenAI-compatible ── */
 
+/** (baseUrl|model) keys of endpoints that rejected `reasoning_effort` — don't send it again. */
+const noReasoningEffort = new Set<string>();
+
+function reasoningKey(cfg: TaskConfig): string {
+  return `${cfg.baseUrl}|${cfg.model}`;
+}
+
 async function openaiStructured(
   task: Task,
   cfg: TaskConfig,
-  { system, user, schema, maxTokens, images }: { system: string; user: string; schema: unknown; maxTokens: number; images?: ImagePart[] },
+  { system, user, schema, maxTokens, images }: CallOpts,
 ): Promise<unknown> {
   // With images, the user turn becomes multimodal content parts; otherwise a plain string.
   const userContent = images?.length
@@ -305,36 +478,51 @@ async function openaiStructured(
         })),
       ]
     : user;
-  const messages = [
-    {
-      role: "system",
-      content: `${system}\n\nReturn ONLY a single JSON object (no markdown, no prose) matching this JSON schema:\n${JSON.stringify(schema)}`,
-    },
-    { role: "user", content: userContent },
-  ];
+  const userMsg = { role: "user", content: userContent };
 
-  let res = await openaiPost(cfg, messages, maxTokens, {
+  // First attempt: strict json_schema via response_format only (the schema is NOT
+  // duplicated into the prompt). Fallback for providers without json_schema
+  // support: json_object mode with the schema inlined in the system message.
+  let res = await openaiPost(task, cfg, [{ role: "system", content: system }, userMsg], maxTokens, {
     type: "json_schema",
     json_schema: { name: "result", strict: true, schema },
   });
   if (!res.ok && (res.status === 400 || res.status === 422)) {
-    res = await openaiPost(cfg, messages, maxTokens, { type: "json_object" });
+    const inlined = {
+      role: "system",
+      content: `${system}\n\nReturn ONLY a single JSON object (no markdown, no prose) matching this JSON schema:\n${JSON.stringify(schema)}`,
+    };
+    res = await openaiPost(task, cfg, [inlined, userMsg], maxTokens, { type: "json_object" });
   }
   if (!res.ok) {
     const body = await res.text().catch(() => "");
-    throw new Error(`LLM HTTP ${res.status}: ${body.slice(0, 300)}`);
+    throw new ProviderError(
+      `HTTP ${res.status}: ${body.slice(0, 300)}`,
+      isTransientStatus(res.status),
+      "http",
+      res.status,
+    );
   }
-  const data: any = await res.json();
+  const data = (await res.json()) as {
+    usage?: { prompt_tokens?: number; completion_tokens?: number };
+    choices?: { message?: { content?: string } }[];
+  };
   logUsage(task, "openai", cfg.model, {
     input: data.usage?.prompt_tokens,
     output: data.usage?.completion_tokens,
   });
   const content: string = data.choices?.[0]?.message?.content ?? "";
-  if (!content.trim()) throw new Error("LLM returned empty content");
+  if (!content.trim()) throw new ProviderError("model returned empty content", false, "parse");
   return JSON.parse(stripFence(content));
 }
 
-function openaiPost(
+/**
+ * One POST to /chat/completions with a bounded timeout. Sends `reasoning_effort`
+ * for light tasks; if the endpoint rejects the field (400 naming it) retries once
+ * without and remembers not to send it to that (baseUrl, model) again.
+ */
+async function openaiPost(
+  task: Task,
   cfg: TaskConfig,
   messages: unknown,
   maxTokens: number,
@@ -342,16 +530,34 @@ function openaiPost(
 ): Promise<Response> {
   const headers: Record<string, string> = { "Content-Type": "application/json" };
   if (cfg.apiKey) headers["Authorization"] = `Bearer ${cfg.apiKey}`;
-  return fetch(`${cfg.baseUrl!.replace(/\/$/, "")}/chat/completions`, {
-    method: "POST",
-    headers,
-    body: JSON.stringify({
-      model: cfg.model,
-      max_tokens: maxTokens,
-      messages,
-      response_format: responseFormat,
-    }),
-  });
+  const url = `${cfg.baseUrl!.replace(/\/$/, "")}/chat/completions`;
+  const timeout = taskTimeoutMs(task);
+  const effort = noReasoningEffort.has(reasoningKey(cfg)) ? undefined : taskReasoningEffort(task);
+
+  const post = (withEffort: string | undefined) =>
+    fetch(url, {
+      method: "POST",
+      headers,
+      signal: AbortSignal.timeout(timeout),
+      body: JSON.stringify({
+        model: cfg.model,
+        max_tokens: maxTokens,
+        messages,
+        response_format: responseFormat,
+        ...(withEffort ? { reasoning_effort: withEffort } : {}),
+      }),
+    });
+
+  const res = await post(effort);
+  if (effort && res.status === 400) {
+    const body = await res.clone().text().catch(() => "");
+    if (/reasoning[_ ]effort/i.test(body)) {
+      noReasoningEffort.add(reasoningKey(cfg));
+      console.warn(`[llm] ${cfg.model} rejected reasoning_effort — retrying without it (remembered)`);
+      return post(undefined);
+    }
+  }
+  return res;
 }
 
 function stripFence(s: string): string {
