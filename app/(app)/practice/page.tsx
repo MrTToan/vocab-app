@@ -276,12 +276,12 @@ export default function PracticePage() {
             {inCollection ? (
               <>
                 <Link href="/library" className="btn btn-primary">Assign words</Link>
-                <Link href="/collections" className="btn">Manage collections</Link>
+                <Link href="/vocab#collections" className="btn">Manage collections</Link>
               </>
             ) : (
               <>
                 <Link href="/add" className="btn btn-primary">Add a word</Link>
-                <Link href="/import" className="btn">Import CSV</Link>
+                <Link href="/add?tab=import" className="btn">Import CSV</Link>
               </>
             )}
           </div>
@@ -396,7 +396,7 @@ function CollectionBar({
           </option>
         ))}
       </select>
-      <Link href="/collections" className="muted text-xs underline whitespace-nowrap">
+      <Link href="/vocab#collections" className="muted text-xs underline whitespace-nowrap">
         manage
       </Link>
     </div>

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { STAGE_ORDER, STAGE_LABEL, STAGE_VAR, stageBarWidth, jsonFetch } from "@/lib/ui";
+import Collections from "@/components/vocab/Collections";
 
 interface Summary {
   provider: string;
@@ -24,10 +25,19 @@ export default function Home() {
   // payload) instead of downloading the full word list.
   const [stats, setStats] = useState<Stats | null>(null);
   const [config, setConfig] = useState<Config | null>(null);
+  // Carried over from the old /collections?collection=<id> deep-link (via the
+  // redirect) so the folded-in Collections section highlights the right set.
+  const [highlightCollection, setHighlightCollection] = useState<string | undefined>();
 
   useEffect(() => {
     jsonFetch<Stats>("/api/stats").then(setStats);
     jsonFetch<Config>("/api/config").then(setConfig);
+    try {
+      const c = new URLSearchParams(window.location.search).get("collection");
+      if (c) setHighlightCollection(c);
+    } catch {
+      /* ignore */
+    }
   }, []);
 
   const total = stats?.words.total ?? 0;
@@ -132,10 +142,17 @@ export default function Home() {
           <div className="font-bold">＋ Add a word</div>
           <div className="muted text-sm">LLM fills meaning &amp; examples</div>
         </Link>
-        <Link href="/import" className="card p-4 hover:opacity-90">
+        <Link href="/add?tab=import" className="card p-4 hover:opacity-90">
           <div className="font-bold">⇪ Import CSV</div>
           <div className="muted text-sm">Bulk-load your list once</div>
         </Link>
+      </section>
+
+      <section id="collections" className="scroll-mt-28 space-y-4 pt-2">
+        <div className="flex items-center justify-between">
+          <h2 className="text-2xl font-extrabold tracking-tight">Collections</h2>
+        </div>
+        <Collections highlightId={highlightCollection} />
       </section>
     </div>
   );
