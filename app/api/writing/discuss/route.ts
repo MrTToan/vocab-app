@@ -28,7 +28,7 @@ export async function POST(req: Request) {
   if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   if (!hasProvider("discuss-writing")) {
     return NextResponse.json(
-      { error: "No LLM configured. Add a provider to discuss feedback." },
+      { error: "AI discussion is not available right now." },
       { status: 400 },
     );
   }

@@ -14,7 +14,7 @@ import type { ExerciseType, GeneratedExercise } from "@/lib/types";
 export async function POST(req: Request) {
   if (!hasProvider("score")) {
     return NextResponse.json(
-      { error: "No LLM configured for scoring. See docs/SETUP-LLM-PROVIDERS.md." },
+      { error: "AI scoring is not available right now." },
       { status: 400 },
     );
   }

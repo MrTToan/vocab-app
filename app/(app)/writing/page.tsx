@@ -1,8 +1,7 @@
 import Link from "next/link";
 
 // Writing module landing. IELTS Academic — two sub-modules (Task 1 chart
-// description, Task 2 essay). Scaffolded in Step 1; the practice loops land in
-// later steps (see docs/WRITING-SPEC.md).
+// description, Task 2 essay). Feature behaviour: docs/features/writing-feedback.md.
 export default function WritingHome() {
   return (
     <div className="space-y-6">
@@ -36,9 +35,14 @@ export default function WritingHome() {
         </Link>
       </section>
 
-      <p className="muted text-xs">
-        This module is being built — see the design in <code>docs/WRITING-SPEC.md</code>.
-      </p>
+      <section className="card p-5">
+        <div className="font-bold">How it works</div>
+        <ol className="muted text-sm mt-2 space-y-1 list-decimal list-inside">
+          <li>Pick a question — or add your own from a past paper or a chart photo.</li>
+          <li>Write your answer against the exam clock.</li>
+          <li>Get a band score on all four criteria, with inline corrections you can discuss.</li>
+        </ol>
+      </section>
     </div>
   );
 }
