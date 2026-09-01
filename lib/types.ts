@@ -85,6 +85,25 @@ export type Progress = Pick<
 >;
 
 /**
+ * The slim word shape the Library LIST view needs: enough to render a row and
+ * drive search (word/meaning/tags), the stage/weak filters and the accuracy %.
+ * The heavy fields (definition, examples, notes, synonyms, collocations) are
+ * loaded on demand via GET /api/words/[id] only when a row is expanded to edit.
+ */
+export type WordListItem = Pick<
+  Word,
+  | "id"
+  | "word"
+  | "ipa"
+  | "vi_meaning"
+  | "tags"
+  | "stage"
+  | "times_seen"
+  | "recent_results"
+  | "created_at"
+>;
+
+/**
  * A named, curated group of words (many-to-many via a join table). A study
  * "lens", not a separate progress track: picking a collection on /practice
  * scopes the picker to its members, but a word's stage stays global — so

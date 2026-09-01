@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { jsonFetch } from "@/lib/ui";
+import { mutateAfterWordChange } from "@/lib/swr";
 import { parsePasteList, MAX_PASTE_WORDS } from "@/lib/paste";
 import ImportWords from "@/components/vocab/ImportWords";
 
@@ -126,6 +127,10 @@ export default function PasteImport() {
       setResult({ ...acc, failed: acc.failed });
       setError(e instanceof Error ? e.message : String(e));
       setPhase("done");
+    } finally {
+      // Some words may have been imported even on a partial failure — refresh
+      // the Library list, stats and collection counts.
+      if (acc.added.length) void mutateAfterWordChange();
     }
   }
 

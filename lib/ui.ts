@@ -49,7 +49,7 @@ export function recentAccuracy(w: Pick<Word, "recent_results">): number {
   return sum / r.length;
 }
 
-export function isWeak(w: Word): boolean {
+export function isWeak(w: Pick<Word, "recent_results">): boolean {
   return (
     w.recent_results.length > 0 &&
     (recentAccuracy(w) < 0.6 ||
