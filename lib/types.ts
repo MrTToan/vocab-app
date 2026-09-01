@@ -64,7 +64,7 @@ export interface Word {
   false_friend_note: string;
   personal_note: string;
   tags: string[];
-  source: "csv" | "manual";
+  source: "csv" | "manual" | "paste";
   // content ownership — `__system__` for the shared/public catalog, or a user id
   // for that user's personal word. Gates EDITING only; content is otherwise
   // global (studying a word grants no edit rights). See lib/auth/user.ts.
