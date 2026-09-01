@@ -24,12 +24,12 @@ export default function Landing() {
 // -50% translate loops seamlessly.
 function Marquee() {
   const items = [
-    "Vocabulary",
-    "IELTS Writing",
+    "Spaced repetition",
     "Production over recognition",
-    "Inline feedback",
-    "Discuss with the AI",
-    "Your data stays local",
+    "AI-enriched words",
+    "IELTS Writing feedback",
+    "Cloze · Translate · Scenario",
+    "Curated collections",
   ];
   const run = (ariaHidden: boolean) => (
     <span className="inline-flex items-center" aria-hidden={ariaHidden || undefined}>
@@ -93,30 +93,30 @@ function Hero() {
       }}
     >
       <div className="max-w-6xl mx-auto px-5 pt-20 pb-16 text-center">
-        <span className="chip mb-6 fade-up inline-block uppercase tracking-wide">Personal English coach · not a notebook</span>
+        <span className="chip mb-6 fade-up inline-block uppercase tracking-wide">A practice engine · not a vocab notebook</span>
         <h1 className="text-5xl sm:text-7xl lg:text-8xl fade-up" style={{ animationDelay: "0.08s" }}>
-          Stop collecting words.
+          Learn words that
           <br />
-          Start <span className="grad-accent">using</span> them.
+          actually <span className="grad-accent">stick</span>.
         </h1>
         <p
           className="mt-6 text-lg sm:text-xl max-w-2xl mx-auto fade-up"
           style={{ color: "var(--muted)", animationDelay: "0.16s" }}
         >
-          Lexi drills your vocabulary until you can produce it, and scores your IELTS
-          writing against the official criteria with inline, line-by-line feedback.
-          Two skills, one focused practice engine.
+          Most apps just log your words. Lexi drills them — with cloze, translation,
+          write-your-own-sentence and more — until you can produce them from memory,
+          and quietly resurfaces the ones you're about to forget.
         </p>
         <div className="mt-9 flex flex-wrap items-center justify-center gap-3 fade-up" style={{ animationDelay: "0.24s" }}>
           <Link href="/vocab" className="btn btn-primary text-base px-6 py-3">
             Start practicing — free
           </Link>
           <Link href="/writing" className="btn text-base px-6 py-3">
-            Try IELTS writing feedback
+            Score my IELTS writing
           </Link>
         </div>
         <p className="mt-4 text-xs fade-up" style={{ color: "var(--muted)", animationDelay: "0.3s" }}>
-          Runs on your machine · your words never leave your database · no sign-up to start
+          Sign in with Google · start with curated IELTS &amp; everyday-English packs · works on your phone
         </p>
 
         <div className="mt-14">
@@ -187,10 +187,10 @@ function Correction({ color, tag, from, to, delay = 0 }: { color: string; tag: s
 
 function StatStrip() {
   const stats = [
-    ["1,100+", "words in active rotation"],
-    ["33,000+", "non-repeating practice questions"],
+    ["5", "stages on the mastery ladder"],
+    ["6", "exercise types that keep it fresh"],
     ["4", "IELTS criteria scored per essay"],
-    ["100%", "of your data stays local"],
+    ["8,000+", "ready-made practice questions"],
   ];
   return (
     <section className="border-y" style={{ borderColor: "var(--line)" }}>
@@ -211,18 +211,18 @@ function Modules() {
     <section id="modules" className="max-w-6xl mx-auto px-5 py-20">
       <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-center">Two skills, one engine</h2>
       <p className="mt-3 text-center max-w-2xl mx-auto" style={{ color: "var(--muted)" }}>
-        Pick what you need today. Both modules share the same relentless focus on
-        production over recognition.
+        Build the words and write the essays — both modules share the same relentless
+        focus on producing English, not just recognizing it.
       </p>
       <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
         <ModuleCard
           badge="Vocabulary"
           title="Drill words until they're yours"
           points={[
-            "A per-word stage ladder: new → recognition → recall → production",
-            "A smart picker resurfaces weak words and cycles a working set",
-            "Mostly-typed exercises — cloze, translation, scenarios — graded instantly",
-            "Never the same question twice, from a bank of 30+ per word",
+            "A mastery ladder: new → recognition → recall → production → known",
+            "Weak and stale words resurface automatically — mastery is earned, not marked",
+            "Six exercise types, chosen by the word's stage, so you can't just memorize the answer",
+            "Paste a list and AI fills the meanings, examples, synonyms and collocations",
           ]}
           href="/vocab"
           cta="Practice vocabulary"
@@ -231,10 +231,10 @@ function Modules() {
           badge="IELTS Writing"
           title="Feedback like a real examiner"
           points={[
-            "Academic Task 1 (charts) and Task 2 (essays), scored on all four criteria",
+            "Academic Task 1 (charts) and Task 2 (essays), scored on all four official criteria",
             "Inline corrections, better-word suggestions, and a band estimate",
-            "Discuss any piece of feedback with the AI — ask why, or for a rewrite",
-            "Add your own prompts — paste a chart and it reads the data for you",
+            "Prioritized coaching on the real levers to your next band — with model sentences",
+            "Discuss any score or fix with the AI — ask why, or ask for a rewrite",
           ]}
           href="/writing"
           cta="Try writing feedback"
@@ -276,12 +276,12 @@ function ModuleCard({
 
 function Features() {
   const feats = [
-    ["⌨️", "Production, not recognition", "You type answers. Lexi only counts a word learned once you can actually produce it — not just recognize it in a list."],
-    ["🔁", "Spaced & adaptive", "Weak words resurface; mastered ones rest. A streak-based ladder decides what you see, so effort goes where it's needed."],
-    ["✍️", "Real examiner feedback", "Essays scored on all four IELTS criteria with a band estimate, inline fixes, and better-word suggestions — graded by your own teacher's rules, not vague praise."],
-    ["💬", "Ask the AI “why”", "Not sure why you got a band or a correction? Open a thread on any feedback card and ask — the tutor answers from your actual essay, and remembers the conversation."],
-    ["🖼️", "Bring your own prompts", "Add a question in seconds: paste an essay task, or a Task 1 chart image — Lexi reads the figures off the chart once so it can grade your description."],
-    ["🔒", "Private, and yours", "Your words, essays, and progress live in a local database on your machine — nothing is uploaded. Light or dark, your call."],
+    ["🪜", "Mastery you earn, not mark", "Every word climbs new → recognition → recall → production → known. Get it right and it moves up; slip and it drops back. Nothing is “learned” until you can produce it four times running."],
+    ["🎲", "Fresh every single time", "Six exercise types — flashcard, cloze, type-the-word, translate, write-a-sentence, scenario — and the one you get is chosen by the word's stage. You can't game it by memorizing an answer."],
+    ["🧠", "Paste a list, AI does the rest", "Drop in raw words and AI fills the meanings, examples, synonyms and collocations. A resilient multi-provider model chain keeps it running even when one provider is down."],
+    ["✍️", "Feedback like a real examiner", "IELTS essays scored on all four official criteria — Task Achievement, Coherence & Cohesion, Lexical Resource, Grammar — with a band estimate, inline fixes, and the higher-order moves that reach the next band."],
+    ["💬", "Ask the AI “why”", "Not sure about a band or a correction? Open a thread on any score or fix and ask — the tutor answers from your actual essay and remembers the conversation."],
+    ["🚀", "Start with a real head start", "Skip the blank app. Curated public packs — IELTS Task 1 & 2, Casual English, Academic Writing — drop straight into practice, and your progress syncs across every device you sign in on."],
   ];
   return (
     <section id="features" style={{ background: "var(--panel)" }} className="border-y" >
@@ -308,9 +308,9 @@ function Features() {
 
 function HowItWorks() {
   const steps = [
-    ["Add or import", "Bring your word list, or drop in IELTS prompts. Lexi enriches and organizes them."],
-    ["Practice daily", "Type answers to varied exercises, or write a full essay against a real prompt."],
-    ["See what to fix", "Instant grading and a cross-skill report show your weak words and recurring errors."],
+    ["Sign in and pick a pack", "Sign in with Google and start with a curated collection, or paste your own words and let AI enrich them."],
+    ["Practice, and let it adapt", "Type your answers to varied exercises, or write a full essay against a real prompt. The engine decides what you see next."],
+    ["Watch words climb to mastery", "Instant grading, IELTS bands, and a progress dashboard show what's sticking — and quietly bring back what isn't."],
   ];
   return (
     <section id="how" className="max-w-6xl mx-auto px-5 py-20">
@@ -337,9 +337,9 @@ function FinalCta() {
         className="max-w-5xl mx-auto rounded-3xl px-8 py-16 text-center"
         style={{ background: "var(--accent)", color: "var(--accent-ink)" }}
       >
-        <h2 className="text-4xl sm:text-6xl">Ready to practice with intent?</h2>
+        <h2 className="text-4xl sm:text-6xl">Ready to make words stick?</h2>
         <p className="mt-4 text-lg" style={{ opacity: 0.85 }}>
-          Jump into a session now — no setup required to get started.
+          Jump into a curated pack now — sign in with Google and your first session is one tap away.
         </p>
         <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
           <Link
@@ -370,7 +370,7 @@ function Footer() {
           <span className="inline-flex items-center justify-center w-6 h-6 rounded-lg text-white text-xs" style={{ background: "var(--accent)" }}>L</span>
           Lexi
         </div>
-        <p>A personal English practice engine. Built for one focused learner.</p>
+        <p>An English practice engine that makes words stick.</p>
         <div className="flex items-center gap-5">
           <Link href="/vocab" className="hover:opacity-70">Vocabulary</Link>
           <Link href="/writing" className="hover:opacity-70">Writing</Link>
