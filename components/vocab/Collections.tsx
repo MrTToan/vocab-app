@@ -263,16 +263,16 @@ function CollectionRow({
           </div>
         </div>
       ) : (
-        <div className="flex items-center gap-3">
-          <span className="text-xl" aria-hidden>
+        <div className="flex flex-wrap items-center gap-3">
+          <span className="text-xl shrink-0" aria-hidden>
             {collection.emoji || "📁"}
           </span>
           <div className="flex-1 min-w-0">
-            <div className="font-bold truncate flex items-center gap-2">
-              {collection.name}
+            <div className="flex items-center gap-2">
+              <span className="font-bold truncate">{collection.name}</span>
               {isPublic && (
                 <span
-                  className="chip text-xs"
+                  className="chip text-xs shrink-0"
                   style={{ color: "var(--accent)", borderColor: "var(--accent)" }}
                 >
                   Public
@@ -286,27 +286,27 @@ function CollectionRow({
           </div>
           <Link
             href={`/practice?collection=${collection.id}`}
-            className="btn btn-primary"
+            className="btn btn-primary shrink-0"
           >
             Study →
           </Link>
           {!collection.mine && (
-            <button className="btn" onClick={adopt} disabled={busy}>
+            <button className="btn shrink-0" onClick={adopt} disabled={busy}>
               Add all
             </button>
           )}
           {collection.mine && owner && (
-            <button className="btn" onClick={toggleVisibility} disabled={busy}>
+            <button className="btn shrink-0" onClick={toggleVisibility} disabled={busy}>
               {isPublic ? "Make private" : "Make public"}
             </button>
           )}
           {collection.mine && (
             <>
-              <button className="btn" onClick={() => setEditing(true)} disabled={busy}>
+              <button className="btn shrink-0" onClick={() => setEditing(true)} disabled={busy}>
                 Edit
               </button>
               <button
-                className="btn"
+                className="btn shrink-0"
                 style={{ color: "var(--bad)", borderColor: "var(--bad)" }}
                 onClick={remove}
                 disabled={busy}
