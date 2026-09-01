@@ -29,29 +29,8 @@ export default function Collections({ highlightId }: { highlightId?: string }) {
   const { data } = useCollections();
   const collections = data?.collections ?? null;
   const owner = !!data?.owner;
-  const [name, setName] = useState("");
-  const [emoji, setEmoji] = useState("");
-  const [description, setDescription] = useState("");
-  const [busy, setBusy] = useState(false);
 
   const reload = revalidateCollections;
-
-  async function create() {
-    if (!name.trim()) return;
-    setBusy(true);
-    try {
-      await jsonFetch("/api/collections", {
-        method: "POST",
-        body: JSON.stringify({ name, emoji, description }),
-      });
-      setName("");
-      setEmoji("");
-      setDescription("");
-      await reload();
-    } finally {
-      setBusy(false);
-    }
-  }
 
   const mine = (collections ?? []).filter((c) => c.mine);
   const shared = (collections ?? []).filter((c) => !c.mine);
@@ -61,41 +40,12 @@ export default function Collections({ highlightId }: { highlightId?: string }) {
       <p className="muted text-sm">
         Group words into study sets (e.g. “IELTS Task 1”). Pick a collection on
         the Practice page to drill only its words — the stage ladder is unchanged,
-        so a word’s progress still counts everywhere.
+        so a word’s progress still counts everywhere. Create a new one from the{" "}
+        <Link href="/add?tab=collection" className="underline font-semibold">
+          Add tab
+        </Link>
+        .
       </p>
-
-      <section className="card p-4 space-y-3">
-        <div className="font-bold">New collection</div>
-        <div className="flex gap-2">
-          <input
-            className="input w-16 text-center"
-            placeholder="🎯"
-            value={emoji}
-            onChange={(e) => setEmoji(e.target.value)}
-            aria-label="Emoji"
-          />
-          <input
-            className="input flex-1"
-            placeholder="Name (e.g. IELTS Task 1)"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && create()}
-          />
-        </div>
-        <input
-          className="input"
-          placeholder="Description (optional)"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        />
-        <button
-          className="btn btn-primary"
-          onClick={create}
-          disabled={busy || !name.trim()}
-        >
-          Create
-        </button>
-      </section>
 
       {collections === null ? (
         <p className="muted">Loading…</p>
@@ -131,7 +81,13 @@ export default function Collections({ highlightId }: { highlightId?: string }) {
             </>
           )}
           {collections.length === 0 && (
-            <p className="muted">No collections yet — create one above.</p>
+            <p className="muted">
+              No collections yet —{" "}
+              <Link href="/add?tab=collection" className="underline font-semibold">
+                create one on the Add tab
+              </Link>
+              .
+            </p>
           )}
         </>
       )}
