@@ -14,7 +14,9 @@ import path from "path";
 
 import { DEV_USER_ID } from "./user";
 
-export type QuotaTask = "enrich" | "score" | "score-writing";
+/** The quota-tracked LLM tasks, in display order. */
+export const QUOTA_TASKS = ["enrich", "score", "score-writing"] as const;
+export type QuotaTask = (typeof QUOTA_TASKS)[number];
 
 function capFor(task: QuotaTask): number {
   const env = {
@@ -102,8 +104,7 @@ export async function quotaStatus(
   });
   const used: Record<string, number> = {};
   for (const r of rs.rows as any[]) used[String(r.task)] = Number(r.count);
-  const tasks: QuotaTask[] = ["enrich", "score", "score-writing"];
   return Object.fromEntries(
-    tasks.map((t) => [t, { used: used[t] ?? 0, cap: capFor(t) }]),
+    QUOTA_TASKS.map((t) => [t, { used: used[t] ?? 0, cap: capFor(t) }]),
   ) as Record<QuotaTask, { used: number; cap: number }>;
 }
