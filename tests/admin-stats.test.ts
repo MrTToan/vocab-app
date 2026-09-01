@@ -35,11 +35,13 @@ beforeAll(async () => {
     "write",
   );
 
-  // Two users: 'alice' signed up today, 'bob' yesterday.
+  // Three users: 'alice' signed up today, 'bob' yesterday, 'carol' today.
+  // Carol studies nothing — she must still appear in the users list, with 0.
   await db.batch(
     [
       { sql: "INSERT INTO users (id,email,name,created_at) VALUES (?,?,?,?)", args: ["alice", "a@x.com", "Alice", NOW] },
       { sql: "INSERT INTO users (id,email,name,created_at) VALUES (?,?,?,?)", args: ["bob", "b@x.com", "Bob", NOW - DAY] },
+      { sql: "INSERT INTO users (id,email,name,created_at) VALUES (?,?,?,?)", args: ["carol", "c@x.com", "Carol", NOW] },
       // shared catalog words
       { sql: `INSERT INTO words ("id",word,owner_id,created_at) VALUES (?,?,?,?)`, args: ["w1", "alpha", "__system__", "0"] },
       { sql: `INSERT INTO words ("id",word,owner_id,created_at) VALUES (?,?,?,?)`, args: ["w2", "beta", "__system__", "0"] },
@@ -67,10 +69,10 @@ beforeAll(async () => {
 describe("adminStats aggregates", () => {
   it("counts users and buckets signups by UTC day", async () => {
     const s = await adminStats(NOW);
-    expect(s.users.total).toBe(2);
-    expect(s.users.newInWindow).toBe(2);
-    expect(s.users.signups.at(-1)).toMatchObject({ day: "2026-09-01", count: 1 });
-    expect(s.users.cumulative.at(-1)!.count).toBe(2);
+    expect(s.users.total).toBe(3);
+    expect(s.users.newInWindow).toBe(3);
+    expect(s.users.signups.at(-1)).toMatchObject({ day: "2026-09-01", count: 2 });
+    expect(s.users.cumulative.at(-1)!.count).toBe(3);
   });
 
   it("aggregates vocab studied counts and top users", async () => {
@@ -81,6 +83,17 @@ describe("adminStats aggregates", () => {
     expect(s.vocab.topUsers[0]).toMatchObject({ label: "Alice", studied: 3, mastered: 1 });
   });
 
+  it("includes every registered user, even those with 0 studied words", async () => {
+    const s = await adminStats(NOW);
+    // All 3 users appear (matches users.total), not just those with progress.
+    expect(s.vocab.topUsers).toHaveLength(3);
+    expect(s.vocab.topUsers.length).toBe(s.users.total);
+    const carol = s.vocab.topUsers.find((u) => u.label === "Carol");
+    expect(carol).toMatchObject({ studied: 0, mastered: 0 });
+    // Zero-progress user ranks last.
+    expect(s.vocab.topUsers.at(-1)!.label).toBe("Carol");
+  });
+
   it("counts mastered (stage=known) across all users", async () => {
     const s = await adminStats(NOW);
     expect(s.progress.mastered).toBe(2); // alice w1 + bob w1
@@ -88,8 +101,8 @@ describe("adminStats aggregates", () => {
 
   it("ranks all users by words studied (descending), unpaginated", async () => {
     const s = await adminStats(NOW);
-    expect(s.vocab.topUsers.map((u) => u.label)).toEqual(["Alice", "Bob"]);
-    expect(s.vocab.topUsers.map((u) => u.studied)).toEqual([3, 1]);
+    expect(s.vocab.topUsers.map((u) => u.label)).toEqual(["Alice", "Bob", "Carol"]);
+    expect(s.vocab.topUsers.map((u) => u.studied)).toEqual([3, 1, 0]);
   });
 
   it("aggregates activity: attempts and daily active users", async () => {
