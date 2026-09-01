@@ -1,0 +1,2070 @@
+{
+  "collection": {
+    "name": "Academic Writing 100",
+    "emoji": "🎓",
+    "description": "100 words for precise academic writing: reporting verbs, cause/effect and comparison language, nominalizations, formal connectors, and hedging."
+  },
+  "meta": {
+    "note": "Claude-authored (no external LLM). Fields map to lib/types.ts EnrichableFields; ipa intentionally left blank per captain. Packs are strictly disjoint (no word appears in more than one collection). 'category' is metadata for review/tagging.",
+    "target": "100 entries"
+  },
+  "words": [
+    {
+      "word": "argue",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "lập luận, cho rằng",
+      "definition_en": "to present reasons for a position or interpretation",
+      "synonyms": [
+        "contend",
+        "maintain",
+        "assert"
+      ],
+      "collocations": [
+        "scholars argue that",
+        "it can be argued",
+        "argue in favour of"
+      ],
+      "example_simple": "The author argues that reform is needed.",
+      "example_complex": "Several economists argue that austerity measures deepened, rather than resolved, the recession.",
+      "false_friend_note": "In academic English 'argue' means to reason a case, not to quarrel."
+    },
+    {
+      "word": "assert",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "khẳng định (một cách chắc chắn)",
+      "definition_en": "to state firmly that something is true",
+      "synonyms": [
+        "claim",
+        "declare",
+        "maintain"
+      ],
+      "collocations": [
+        "assert that",
+        "boldly assert",
+        "the study asserts"
+      ],
+      "example_simple": "She asserts that the theory is flawed.",
+      "example_complex": "The paper asserts that early intervention yields the greatest long-term benefit.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "contend",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "cho rằng, lập luận rằng",
+      "definition_en": "to argue a point, often against an opposing view",
+      "synonyms": [
+        "argue",
+        "maintain",
+        "assert"
+      ],
+      "collocations": [
+        "critics contend that",
+        "the author contends"
+      ],
+      "example_simple": "Critics contend that the data is unreliable.",
+      "example_complex": "Proponents contend that renewable subsidies accelerate innovation, a claim the evidence broadly supports.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "claim",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "khẳng định, tuyên bố (chưa chứng minh)",
+      "definition_en": "to state something as true without full proof",
+      "synonyms": [
+        "assert",
+        "allege",
+        "maintain"
+      ],
+      "collocations": [
+        "the study claims",
+        "it is claimed that",
+        "claim to show"
+      ],
+      "example_simple": "The report claims a strong link.",
+      "example_complex": "The authors claim a causal relationship, though their design only establishes correlation.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "posit",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "đưa ra giả định, nêu ra (làm cơ sở lập luận)",
+      "definition_en": "to put forward an idea as a basis for argument",
+      "synonyms": [
+        "propose",
+        "postulate",
+        "suggest"
+      ],
+      "collocations": [
+        "posit that",
+        "the theory posits",
+        "posit a mechanism"
+      ],
+      "example_simple": "The model posits three stages.",
+      "example_complex": "The framework posits that behaviour is shaped as much by context as by individual choice.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "propose",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "đề xuất, đưa ra (ý tưởng/giả thuyết)",
+      "definition_en": "to suggest an idea or explanation for consideration",
+      "synonyms": [
+        "suggest",
+        "put forward",
+        "posit"
+      ],
+      "collocations": [
+        "propose a model",
+        "the authors propose",
+        "propose that"
+      ],
+      "example_simple": "They propose a new approach.",
+      "example_complex": "The researchers propose an alternative explanation that accounts for the anomalies in earlier studies.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "suggest",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "gợi ý, cho thấy",
+      "definition_en": "to indicate something as likely without asserting it firmly",
+      "synonyms": [
+        "indicate",
+        "imply",
+        "point to"
+      ],
+      "collocations": [
+        "the findings suggest",
+        "this suggests that",
+        "evidence suggests"
+      ],
+      "example_simple": "The results suggest a pattern.",
+      "example_complex": "The findings suggest, though do not prove, that sleep quality mediates the effect.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "demonstrate",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "chứng minh, cho thấy rõ",
+      "definition_en": "to show clearly with evidence",
+      "synonyms": [
+        "show",
+        "prove",
+        "establish"
+      ],
+      "collocations": [
+        "demonstrate that",
+        "clearly demonstrate",
+        "the experiment demonstrates"
+      ],
+      "example_simple": "The study demonstrates the effect.",
+      "example_complex": "The trial demonstrates a measurable improvement in outcomes among the treated group.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "illustrate",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "minh họa, làm rõ bằng ví dụ",
+      "definition_en": "to make something clear by using examples",
+      "synonyms": [
+        "exemplify",
+        "demonstrate",
+        "show"
+      ],
+      "collocations": [
+        "illustrate the point",
+        "this example illustrates",
+        "as illustrated by"
+      ],
+      "example_simple": "The graph illustrates the trend.",
+      "example_complex": "This case study illustrates how policy and practice can diverge in unexpected ways.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "indicate",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "chỉ ra, cho thấy",
+      "definition_en": "to point to or be a sign of something",
+      "synonyms": [
+        "suggest",
+        "signal",
+        "show"
+      ],
+      "collocations": [
+        "the data indicate",
+        "results indicate that",
+        "indicative of"
+      ],
+      "example_simple": "The figures indicate growth.",
+      "example_complex": "Preliminary results indicate a trend that warrants further, larger-scale investigation.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "imply",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "ngụ ý, hàm ý",
+      "definition_en": "to suggest something indirectly rather than state it",
+      "synonyms": [
+        "suggest",
+        "hint",
+        "insinuate"
+      ],
+      "collocations": [
+        "this implies that",
+        "the results imply",
+        "strongly imply"
+      ],
+      "example_simple": "The findings imply a link.",
+      "example_complex": "Such a correlation implies, but cannot confirm, an underlying causal mechanism.",
+      "false_friend_note": "'Imply' is what a speaker/text does; 'infer' is what a reader does — do not confuse them."
+    },
+    {
+      "word": "highlight",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "nhấn mạnh, làm nổi bật",
+      "definition_en": "to draw attention to something significant",
+      "synonyms": [
+        "emphasise",
+        "underscore",
+        "stress"
+      ],
+      "collocations": [
+        "highlight the need for",
+        "the study highlights",
+        "highlight a gap"
+      ],
+      "example_simple": "The report highlights a key issue.",
+      "example_complex": "The review highlights a persistent gap between theoretical models and empirical evidence.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "emphasise",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "nhấn mạnh",
+      "definition_en": "to give particular importance to something",
+      "synonyms": [
+        "stress",
+        "underscore",
+        "highlight"
+      ],
+      "collocations": [
+        "emphasise the importance of",
+        "it must be emphasised"
+      ],
+      "example_simple": "The author emphasises accuracy.",
+      "example_complex": "The paper emphasises that correlation, however strong, does not establish causation.",
+      "false_friend_note": "British spelling; 'emphasize' in American English."
+    },
+    {
+      "word": "acknowledge",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "thừa nhận, công nhận",
+      "definition_en": "to accept that something is true or valid",
+      "synonyms": [
+        "recognise",
+        "admit",
+        "concede"
+      ],
+      "collocations": [
+        "acknowledge the limitations",
+        "widely acknowledged",
+        "acknowledge that"
+      ],
+      "example_simple": "The authors acknowledge some limits.",
+      "example_complex": "The study acknowledges its small sample size as a constraint on generalisability.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "note",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "lưu ý, chỉ ra (một cách trung tính)",
+      "definition_en": "to mention or remark on something",
+      "synonyms": [
+        "observe",
+        "remark",
+        "point out"
+      ],
+      "collocations": [
+        "it should be noted",
+        "the author notes",
+        "notably"
+      ],
+      "example_simple": "The paper notes an exception.",
+      "example_complex": "It should be noted that these conclusions rest on data from a single region.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "observe",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "quan sát; nhận xét",
+      "definition_en": "to notice or comment on something, or to watch systematically",
+      "synonyms": [
+        "note",
+        "remark",
+        "detect"
+      ],
+      "collocations": [
+        "as the author observes",
+        "observe a pattern",
+        "observe that"
+      ],
+      "example_simple": "Researchers observed a change.",
+      "example_complex": "The authors observe that the effect diminishes markedly once socioeconomic status is controlled for.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "maintain",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "khăng khăng cho rằng, giữ quan điểm",
+      "definition_en": "to state an opinion firmly and continue to hold it",
+      "synonyms": [
+        "contend",
+        "assert",
+        "insist"
+      ],
+      "collocations": [
+        "the author maintains",
+        "maintain that",
+        "consistently maintain"
+      ],
+      "example_simple": "He maintains that the model holds.",
+      "example_complex": "Despite the counter-evidence, the original authors maintain that their interpretation is sound.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "reveal",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "hé lộ, cho thấy (kết quả)",
+      "definition_en": "to make something previously unknown become clear",
+      "synonyms": [
+        "show",
+        "uncover",
+        "disclose"
+      ],
+      "collocations": [
+        "the analysis reveals",
+        "results reveal that",
+        "reveal a trend"
+      ],
+      "example_simple": "The data reveal a gap.",
+      "example_complex": "Closer analysis reveals that the apparent improvement was largely driven by two outlying cases.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "establish",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "xác lập, chứng minh chắc chắn",
+      "definition_en": "to prove or firmly set up something as true",
+      "synonyms": [
+        "prove",
+        "demonstrate",
+        "confirm"
+      ],
+      "collocations": [
+        "establish a link",
+        "firmly established",
+        "establish that"
+      ],
+      "example_simple": "The study establishes a clear trend.",
+      "example_complex": "While the correlation is well established, the direction of causation remains contested.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "examine",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "xem xét, khảo sát kỹ",
+      "definition_en": "to investigate or inspect something in detail",
+      "synonyms": [
+        "investigate",
+        "analyse",
+        "scrutinise"
+      ],
+      "collocations": [
+        "examine the relationship",
+        "this paper examines",
+        "examine closely"
+      ],
+      "example_simple": "The study examines two groups.",
+      "example_complex": "This paper examines whether class size has any measurable effect on academic attainment.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "investigate",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "nghiên cứu, điều tra",
+      "definition_en": "to study something systematically to find out the facts",
+      "synonyms": [
+        "examine",
+        "explore",
+        "study"
+      ],
+      "collocations": [
+        "investigate the causes",
+        "investigate whether",
+        "further investigate"
+      ],
+      "example_simple": "We investigate the main causes.",
+      "example_complex": "The research investigates the extent to which urban design influences residents' physical activity.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "explore",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "khám phá, tìm hiểu",
+      "definition_en": "to examine or consider something in order to learn more",
+      "synonyms": [
+        "examine",
+        "investigate",
+        "consider"
+      ],
+      "collocations": [
+        "explore the relationship",
+        "this study explores",
+        "explore possibilities"
+      ],
+      "example_simple": "The essay explores the theme of loss.",
+      "example_complex": "This section explores how digital platforms reshape the way citizens engage with politics.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "evaluate",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "đánh giá",
+      "definition_en": "to judge the value or quality of something",
+      "synonyms": [
+        "assess",
+        "appraise",
+        "judge"
+      ],
+      "collocations": [
+        "evaluate the effectiveness",
+        "critically evaluate",
+        "evaluate evidence"
+      ],
+      "example_simple": "We evaluate three methods.",
+      "example_complex": "The paper evaluates the effectiveness of the policy against its stated objectives.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "assess",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "đánh giá, thẩm định",
+      "definition_en": "to estimate or judge the nature or extent of something",
+      "synonyms": [
+        "evaluate",
+        "gauge",
+        "appraise"
+      ],
+      "collocations": [
+        "assess the impact",
+        "assess the extent to which",
+        "difficult to assess"
+      ],
+      "example_simple": "The study assesses the risk.",
+      "example_complex": "It remains difficult to assess the long-term impact given the limited follow-up period.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "point out",
+      "category": "reporting-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "chỉ ra, nêu ra",
+      "definition_en": "to draw attention to a fact",
+      "synonyms": [
+        "note",
+        "observe",
+        "highlight"
+      ],
+      "collocations": [
+        "it is worth pointing out",
+        "critics point out",
+        "point out that"
+      ],
+      "example_simple": "She points out a flaw.",
+      "example_complex": "Critics point out that the sample excluded precisely the groups most affected by the policy.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "conclude",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "kết luận",
+      "definition_en": "to reach a decision or judgement after reasoning",
+      "synonyms": [
+        "deduce",
+        "infer",
+        "determine"
+      ],
+      "collocations": [
+        "the authors conclude",
+        "conclude that",
+        "it can be concluded"
+      ],
+      "example_simple": "The report concludes with a warning.",
+      "example_complex": "The authors conclude that policy, rather than technology, is the principal barrier to adoption.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "thus",
+      "category": "cause-effect",
+      "part_of_speech": "adverb",
+      "ipa": "",
+      "vi_meaning": "do đó, như vậy",
+      "definition_en": "as a result; in this way (formal)",
+      "synonyms": [
+        "therefore",
+        "hence",
+        "consequently"
+      ],
+      "collocations": [
+        "thus, the findings",
+        "thus far"
+      ],
+      "example_simple": "The samples differ; thus comparison is limited.",
+      "example_complex": "The instrument was recalibrated between trials, thus introducing a potential source of error.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "hence",
+      "category": "cause-effect",
+      "part_of_speech": "adverb",
+      "ipa": "",
+      "vi_meaning": "do đó, vì thế",
+      "definition_en": "for this reason (formal)",
+      "synonyms": [
+        "therefore",
+        "thus",
+        "consequently"
+      ],
+      "collocations": [
+        "hence the need for",
+        "hence, it follows"
+      ],
+      "example_simple": "Resources are scarce; hence the trade-offs.",
+      "example_complex": "The metric conflates two distinct phenomena; hence its predictive value is limited.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "thereby",
+      "category": "cause-effect",
+      "part_of_speech": "adverb",
+      "ipa": "",
+      "vi_meaning": "qua đó, bằng cách đó",
+      "definition_en": "by that means; with the result that",
+      "synonyms": [
+        "in that way",
+        "as a result"
+      ],
+      "collocations": [
+        "thereby reducing",
+        "thereby enabling",
+        "thereby creating"
+      ],
+      "example_simple": "It cuts costs, thereby raising profit.",
+      "example_complex": "Automation standardises the process, thereby reducing variation between operators.",
+      "false_friend_note": "Followed by an -ing clause, not a full sentence."
+    },
+    {
+      "word": "lead to",
+      "category": "cause-effect",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "dẫn đến",
+      "definition_en": "to cause a particular result",
+      "synonyms": [
+        "result in",
+        "bring about",
+        "cause"
+      ],
+      "collocations": [
+        "lead to an increase",
+        "can lead to",
+        "lead to problems"
+      ],
+      "example_simple": "Stress can lead to illness.",
+      "example_complex": "Prolonged exposure to pollutants can lead to a measurable decline in respiratory function.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "result in",
+      "category": "cause-effect",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "dẫn đến, gây ra (kết quả)",
+      "definition_en": "to cause something to happen as an outcome",
+      "synonyms": [
+        "lead to",
+        "produce",
+        "cause"
+      ],
+      "collocations": [
+        "result in a decline",
+        "may result in",
+        "resulting in"
+      ],
+      "example_simple": "The cuts resulted in delays.",
+      "example_complex": "The intervention resulted in a modest but statistically significant reduction in relapse rates.",
+      "false_friend_note": "'Result in' takes an effect; 'result from' takes a cause."
+    },
+    {
+      "word": "give rise to",
+      "category": "cause-effect",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "làm nảy sinh, gây ra",
+      "definition_en": "to cause something to begin or exist",
+      "synonyms": [
+        "produce",
+        "generate",
+        "bring about"
+      ],
+      "collocations": [
+        "give rise to concerns",
+        "gave rise to a debate"
+      ],
+      "example_simple": "The policy gave rise to protests.",
+      "example_complex": "Rapid technological change has given rise to new ethical questions that regulation has yet to address.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "stem from",
+      "category": "cause-effect",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "bắt nguồn từ, xuất phát từ",
+      "definition_en": "to originate or develop as a result of something",
+      "synonyms": [
+        "arise from",
+        "originate from",
+        "result from"
+      ],
+      "collocations": [
+        "stem from a lack of",
+        "problems stem from",
+        "largely stem from"
+      ],
+      "example_simple": "The error stems from bad data.",
+      "example_complex": "Much of the disagreement stems from differing definitions of the key terms.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "attribute to",
+      "category": "cause-effect",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "quy cho, cho là do",
+      "definition_en": "to regard something as caused by a particular thing",
+      "synonyms": [
+        "ascribe to",
+        "credit to"
+      ],
+      "collocations": [
+        "attribute the change to",
+        "commonly attributed to",
+        "be attributed to"
+      ],
+      "example_simple": "They attribute the rise to demand.",
+      "example_complex": "The authors attribute the discrepancy to differences in measurement rather than to any real effect.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "owing to",
+      "category": "cause-effect",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "do, bởi vì",
+      "definition_en": "because of (formal)",
+      "synonyms": [
+        "due to",
+        "because of",
+        "on account of"
+      ],
+      "collocations": [
+        "owing to the fact that",
+        "owing to a lack of"
+      ],
+      "example_simple": "The delay was owing to weather.",
+      "example_complex": "Owing to incomplete records, the earliest period could not be reliably reconstructed.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "due to",
+      "category": "cause-effect",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "do, vì",
+      "definition_en": "caused by; because of",
+      "synonyms": [
+        "owing to",
+        "because of",
+        "as a result of"
+      ],
+      "collocations": [
+        "due to the fact that",
+        "largely due to",
+        "due to a combination of"
+      ],
+      "example_simple": "The gap is due to funding.",
+      "example_complex": "The observed decline is due, at least in part, to changes in how the data were collected.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "contribute to",
+      "category": "cause-effect",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "góp phần vào",
+      "definition_en": "to be one of several causes of something",
+      "synonyms": [
+        "add to",
+        "play a part in"
+      ],
+      "collocations": [
+        "contribute to the problem",
+        "significantly contribute to",
+        "factors contributing to"
+      ],
+      "example_simple": "Diet contributes to health.",
+      "example_complex": "Several factors, including poor infrastructure, contribute to the region's persistent inequality.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "bring about",
+      "category": "cause-effect",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "mang lại, gây ra (thay đổi)",
+      "definition_en": "to cause something, especially change, to happen",
+      "synonyms": [
+        "cause",
+        "produce",
+        "trigger"
+      ],
+      "collocations": [
+        "bring about change",
+        "bring about reform",
+        "bring about a shift"
+      ],
+      "example_simple": "The law brought about real change.",
+      "example_complex": "The digital revolution brought about a fundamental shift in how information is produced and shared.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "similarly",
+      "category": "comparison",
+      "part_of_speech": "adverb",
+      "ipa": "",
+      "vi_meaning": "tương tự, cũng như vậy",
+      "definition_en": "in a like manner; used to draw a parallel",
+      "synonyms": [
+        "likewise",
+        "in the same way"
+      ],
+      "collocations": [
+        "similarly, the data",
+        "a similarly high"
+      ],
+      "example_simple": "Similarly, sales fell in the north.",
+      "example_complex": "Urban centres saw sharp growth; similarly, but to a lesser degree, mid-sized towns expanded.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "likewise",
+      "category": "comparison",
+      "part_of_speech": "adverb",
+      "ipa": "",
+      "vi_meaning": "cũng vậy, tương tự",
+      "definition_en": "in the same way; also",
+      "synonyms": [
+        "similarly",
+        "correspondingly"
+      ],
+      "collocations": [
+        "likewise, the study",
+        "and likewise"
+      ],
+      "example_simple": "Prices rose; wages, likewise.",
+      "example_complex": "The control group showed no change; likewise, the placebo condition remained stable throughout.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "conversely",
+      "category": "comparison",
+      "part_of_speech": "adverb",
+      "ipa": "",
+      "vi_meaning": "ngược lại",
+      "definition_en": "introducing an opposite situation",
+      "synonyms": [
+        "in contrast",
+        "on the other hand"
+      ],
+      "collocations": [
+        "conversely, the poorer regions",
+        "conversely, however"
+      ],
+      "example_simple": "Conversely, rural areas grew.",
+      "example_complex": "High earners benefited from the reform; conversely, those on low incomes saw their position worsen.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "notwithstanding",
+      "category": "comparison",
+      "part_of_speech": "preposition / adverb",
+      "ipa": "",
+      "vi_meaning": "mặc dù, bất chấp",
+      "definition_en": "despite; in spite of (formal)",
+      "synonyms": [
+        "despite",
+        "in spite of",
+        "nevertheless"
+      ],
+      "collocations": [
+        "notwithstanding these limitations",
+        "this notwithstanding"
+      ],
+      "example_simple": "Notwithstanding the cost, they proceeded.",
+      "example_complex": "Notwithstanding its methodological limitations, the study offers valuable preliminary insight.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "albeit",
+      "category": "comparison",
+      "part_of_speech": "conjunction",
+      "ipa": "",
+      "vi_meaning": "mặc dù, dẫu rằng",
+      "definition_en": "although; even if (formal)",
+      "synonyms": [
+        "although",
+        "even though"
+      ],
+      "collocations": [
+        "albeit modest",
+        "albeit with caution",
+        "improved, albeit slowly"
+      ],
+      "example_simple": "It works, albeit slowly.",
+      "example_complex": "The intervention produced gains, albeit smaller than the authors had anticipated.",
+      "false_friend_note": "Usually followed by an adjective or phrase, not a full clause."
+    },
+    {
+      "word": "differ from",
+      "category": "comparison",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "khác với",
+      "definition_en": "to be unlike something else",
+      "synonyms": [
+        "diverge from",
+        "contrast with"
+      ],
+      "collocations": [
+        "differ markedly from",
+        "differ significantly from"
+      ],
+      "example_simple": "These results differ from earlier ones.",
+      "example_complex": "The present findings differ substantially from those reported in comparable settings a decade ago.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "correspond to",
+      "category": "comparison",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "tương ứng với, khớp với",
+      "definition_en": "to match or be equivalent to something",
+      "synonyms": [
+        "match",
+        "align with",
+        "equate to"
+      ],
+      "collocations": [
+        "correspond closely to",
+        "correspond to the prediction"
+      ],
+      "example_simple": "The peaks correspond to weekends.",
+      "example_complex": "The observed values correspond closely to those predicted by the theoretical model.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "by comparison",
+      "category": "comparison",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "so với đó, xét về mặt so sánh",
+      "definition_en": "when compared with something else",
+      "synonyms": [
+        "in comparison",
+        "relatively"
+      ],
+      "collocations": [
+        "small by comparison",
+        "by comparison with"
+      ],
+      "example_simple": "The second figure is tiny by comparison.",
+      "example_complex": "By comparison with its neighbours, the country invests remarkably little in higher education.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "implementation",
+      "category": "nominalization",
+      "part_of_speech": "noun",
+      "ipa": "",
+      "vi_meaning": "sự triển khai, thực thi",
+      "definition_en": "the act of putting a plan or policy into effect",
+      "synonyms": [
+        "execution",
+        "enactment"
+      ],
+      "collocations": [
+        "the implementation of",
+        "effective implementation",
+        "policy implementation"
+      ],
+      "example_simple": "Implementation took two years.",
+      "example_complex": "The gap between design and implementation often determines whether a policy succeeds.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "acquisition",
+      "category": "nominalization",
+      "part_of_speech": "noun",
+      "ipa": "",
+      "vi_meaning": "sự tiếp thu, thu nhận (kiến thức/tài sản)",
+      "definition_en": "the process of gaining a skill, knowledge, or asset",
+      "synonyms": [
+        "attainment",
+        "gaining"
+      ],
+      "collocations": [
+        "language acquisition",
+        "the acquisition of skills",
+        "knowledge acquisition"
+      ],
+      "example_simple": "Language acquisition begins early.",
+      "example_complex": "Second-language acquisition proceeds most rapidly when learners receive comprehensible input.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "assessment",
+      "category": "nominalization",
+      "part_of_speech": "noun",
+      "ipa": "",
+      "vi_meaning": "sự đánh giá, thẩm định",
+      "definition_en": "an evaluation or judgement of something",
+      "synonyms": [
+        "evaluation",
+        "appraisal",
+        "judgement"
+      ],
+      "collocations": [
+        "a thorough assessment",
+        "risk assessment",
+        "assessment of the evidence"
+      ],
+      "example_simple": "The assessment was positive.",
+      "example_complex": "A rigorous assessment of the programme requires comparing it against a suitable control group.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "distinction",
+      "category": "nominalization",
+      "part_of_speech": "noun",
+      "ipa": "",
+      "vi_meaning": "sự phân biệt, khác biệt",
+      "definition_en": "a clear difference between two things",
+      "synonyms": [
+        "difference",
+        "differentiation",
+        "contrast"
+      ],
+      "collocations": [
+        "draw a distinction",
+        "an important distinction",
+        "the distinction between"
+      ],
+      "example_simple": "There's a clear distinction here.",
+      "example_complex": "It is essential to draw a distinction between correlation and causation when interpreting the data.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "emergence",
+      "category": "nominalization",
+      "part_of_speech": "noun",
+      "ipa": "",
+      "vi_meaning": "sự xuất hiện, nổi lên",
+      "definition_en": "the process of coming into existence or prominence",
+      "synonyms": [
+        "appearance",
+        "rise",
+        "advent"
+      ],
+      "collocations": [
+        "the emergence of",
+        "the recent emergence",
+        "emergence of new technologies"
+      ],
+      "example_simple": "The emergence of the internet changed everything.",
+      "example_complex": "The emergence of social media as a news source has transformed public debate.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "correlation",
+      "category": "nominalization",
+      "part_of_speech": "noun",
+      "ipa": "",
+      "vi_meaning": "sự tương quan",
+      "definition_en": "a mutual relationship or connection between variables",
+      "synonyms": [
+        "relationship",
+        "association",
+        "link"
+      ],
+      "collocations": [
+        "a strong correlation",
+        "a positive correlation",
+        "correlation between"
+      ],
+      "example_simple": "There's a correlation between the two.",
+      "example_complex": "A strong correlation between income and health does not, by itself, establish a causal pathway.",
+      "false_friend_note": "Correlation is not causation — a standard caution in academic writing."
+    },
+    {
+      "word": "implication",
+      "category": "nominalization",
+      "part_of_speech": "noun",
+      "ipa": "",
+      "vi_meaning": "hàm ý, hệ quả",
+      "definition_en": "a likely consequence or suggested meaning",
+      "synonyms": [
+        "consequence",
+        "ramification",
+        "inference"
+      ],
+      "collocations": [
+        "the implications of",
+        "far-reaching implications",
+        "policy implications"
+      ],
+      "example_simple": "The findings have big implications.",
+      "example_complex": "The implications of these results extend well beyond the specific context of the study.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "tendency",
+      "category": "nominalization",
+      "part_of_speech": "noun",
+      "ipa": "",
+      "vi_meaning": "xu hướng",
+      "definition_en": "an inclination to behave or develop in a particular way",
+      "synonyms": [
+        "inclination",
+        "propensity",
+        "trend"
+      ],
+      "collocations": [
+        "a tendency to",
+        "a general tendency",
+        "an increasing tendency"
+      ],
+      "example_simple": "There is a tendency to overspend.",
+      "example_complex": "The data reveal a marked tendency for participants to underestimate long-term risks.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "prevalence",
+      "category": "nominalization",
+      "part_of_speech": "noun",
+      "ipa": "",
+      "vi_meaning": "mức độ phổ biến, tỷ lệ hiện mắc",
+      "definition_en": "the extent to which something is widespread",
+      "synonyms": [
+        "frequency",
+        "commonness",
+        "incidence"
+      ],
+      "collocations": [
+        "the prevalence of",
+        "high prevalence",
+        "prevalence rate"
+      ],
+      "example_simple": "The prevalence of the disease rose.",
+      "example_complex": "The rising prevalence of anxiety among adolescents has prompted calls for earlier intervention.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "magnitude",
+      "category": "nominalization",
+      "part_of_speech": "noun",
+      "ipa": "",
+      "vi_meaning": "độ lớn, quy mô",
+      "definition_en": "the great size or extent of something",
+      "synonyms": [
+        "scale",
+        "extent",
+        "size"
+      ],
+      "collocations": [
+        "the magnitude of the effect",
+        "an order of magnitude",
+        "the sheer magnitude"
+      ],
+      "example_simple": "The magnitude of the problem is huge.",
+      "example_complex": "Although the effect is statistically significant, its magnitude is too small to be practically meaningful.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "discrepancy",
+      "category": "nominalization",
+      "part_of_speech": "noun",
+      "ipa": "",
+      "vi_meaning": "sự chênh lệch, khác biệt (không khớp)",
+      "definition_en": "a lack of agreement or consistency between things",
+      "synonyms": [
+        "inconsistency",
+        "disparity",
+        "mismatch"
+      ],
+      "collocations": [
+        "a discrepancy between",
+        "account for the discrepancy",
+        "notable discrepancy"
+      ],
+      "example_simple": "There's a discrepancy in the figures.",
+      "example_complex": "The discrepancy between self-reported and measured behaviour raises questions about the survey's validity.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "framework",
+      "category": "nominalization",
+      "part_of_speech": "noun",
+      "ipa": "",
+      "vi_meaning": "khung lý thuyết, khuôn khổ",
+      "definition_en": "a basic structure of ideas used to analyse something",
+      "synonyms": [
+        "model",
+        "structure",
+        "system"
+      ],
+      "collocations": [
+        "a theoretical framework",
+        "within this framework",
+        "a conceptual framework"
+      ],
+      "example_simple": "We use a simple framework.",
+      "example_complex": "The study adopts a theoretical framework that integrates economic and psychological perspectives.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "phenomenon",
+      "category": "nominalization",
+      "part_of_speech": "noun",
+      "ipa": "",
+      "vi_meaning": "hiện tượng",
+      "definition_en": "a fact or situation that is observed to exist or happen",
+      "synonyms": [
+        "occurrence",
+        "event"
+      ],
+      "collocations": [
+        "a widespread phenomenon",
+        "explain the phenomenon",
+        "a recent phenomenon"
+      ],
+      "example_simple": "This is a common phenomenon.",
+      "example_complex": "Urban heat islands are a well-documented phenomenon with clear implications for city planning.",
+      "false_friend_note": "Plural is 'phenomena'."
+    },
+    {
+      "word": "hypothesis",
+      "category": "nominalization",
+      "part_of_speech": "noun",
+      "ipa": "",
+      "vi_meaning": "giả thuyết",
+      "definition_en": "a proposed explanation to be tested",
+      "synonyms": [
+        "proposition",
+        "theory",
+        "conjecture"
+      ],
+      "collocations": [
+        "test a hypothesis",
+        "the null hypothesis",
+        "support the hypothesis"
+      ],
+      "example_simple": "The hypothesis was confirmed.",
+      "example_complex": "The results are consistent with the hypothesis that stress impairs memory consolidation.",
+      "false_friend_note": "Plural is 'hypotheses'."
+    },
+    {
+      "word": "paradigm",
+      "category": "nominalization",
+      "part_of_speech": "noun",
+      "ipa": "",
+      "vi_meaning": "mô hình, hệ hình (tư duy)",
+      "definition_en": "a typical model or pattern of thought in a field",
+      "synonyms": [
+        "model",
+        "framework",
+        "pattern"
+      ],
+      "collocations": [
+        "a paradigm shift",
+        "the dominant paradigm",
+        "within this paradigm"
+      ],
+      "example_simple": "This marks a new paradigm.",
+      "example_complex": "The discovery prompted a paradigm shift in how the discipline understands memory.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "nonetheless",
+      "category": "connector",
+      "part_of_speech": "adverb",
+      "ipa": "",
+      "vi_meaning": "tuy nhiên, dù vậy",
+      "definition_en": "despite what has just been said",
+      "synonyms": [
+        "nevertheless",
+        "however",
+        "even so"
+      ],
+      "collocations": [
+        "nonetheless, it remains",
+        "important nonetheless"
+      ],
+      "example_simple": "It is imperfect but useful nonetheless.",
+      "example_complex": "The theory has well-known limitations; it remains, nonetheless, the most widely applied in the field.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "accordingly",
+      "category": "connector",
+      "part_of_speech": "adverb",
+      "ipa": "",
+      "vi_meaning": "theo đó, do đó",
+      "definition_en": "in a way appropriate to what has happened; therefore",
+      "synonyms": [
+        "therefore",
+        "consequently",
+        "correspondingly"
+      ],
+      "collocations": [
+        "adjusted accordingly",
+        "accordingly, we",
+        "act accordingly"
+      ],
+      "example_simple": "The rules changed, and we acted accordingly.",
+      "example_complex": "Demand proved higher than forecast, and production was scaled up accordingly.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "subsequently",
+      "category": "connector",
+      "part_of_speech": "adverb",
+      "ipa": "",
+      "vi_meaning": "sau đó, tiếp theo",
+      "definition_en": "afterwards; following in time or order",
+      "synonyms": [
+        "later",
+        "afterwards",
+        "thereafter"
+      ],
+      "collocations": [
+        "subsequently revised",
+        "subsequently, the study",
+        "was subsequently"
+      ],
+      "example_simple": "The law was subsequently repealed.",
+      "example_complex": "The initial findings were subsequently replicated in three independent laboratories.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "hitherto",
+      "category": "connector",
+      "part_of_speech": "adverb",
+      "ipa": "",
+      "vi_meaning": "cho đến nay, từ trước tới giờ",
+      "definition_en": "until now; up to this point (formal)",
+      "synonyms": [
+        "until now",
+        "previously",
+        "so far"
+      ],
+      "collocations": [
+        "hitherto unknown",
+        "hitherto neglected",
+        "hitherto overlooked"
+      ],
+      "example_simple": "This was a hitherto unknown effect.",
+      "example_complex": "The technique reveals structures that were hitherto invisible to conventional imaging.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "notably",
+      "category": "connector",
+      "part_of_speech": "adverb",
+      "ipa": "",
+      "vi_meaning": "đáng chú ý là, đặc biệt",
+      "definition_en": "in particular; used to single out something important",
+      "synonyms": [
+        "particularly",
+        "especially",
+        "in particular"
+      ],
+      "collocations": [
+        "most notably",
+        "notably, the results",
+        "notably absent"
+      ],
+      "example_simple": "Some countries, notably Japan, differ.",
+      "example_complex": "Several variables, most notably parental education, accounted for much of the variance.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "in particular",
+      "category": "connector",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "cụ thể là, đặc biệt là",
+      "definition_en": "used to specify one thing among several",
+      "synonyms": [
+        "specifically",
+        "notably",
+        "especially"
+      ],
+      "collocations": [
+        "in particular, the",
+        "one group in particular"
+      ],
+      "example_simple": "One factor in particular stands out.",
+      "example_complex": "In particular, the youngest cohort responded quite differently from the rest of the sample.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "presumably",
+      "category": "hedging",
+      "part_of_speech": "adverb",
+      "ipa": "",
+      "vi_meaning": "có lẽ, được cho là",
+      "definition_en": "used to say something is likely though not certain",
+      "synonyms": [
+        "probably",
+        "seemingly",
+        "in all likelihood"
+      ],
+      "collocations": [
+        "presumably because",
+        "presumably due to"
+      ],
+      "example_simple": "The gap is presumably due to cost.",
+      "example_complex": "The participants who dropped out did so, presumably, because the task was too demanding.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "ostensibly",
+      "category": "hedging",
+      "part_of_speech": "adverb",
+      "ipa": "",
+      "vi_meaning": "bề ngoài là, có vẻ như (nhưng chưa chắc)",
+      "definition_en": "apparently, but perhaps not really so",
+      "synonyms": [
+        "apparently",
+        "supposedly",
+        "seemingly"
+      ],
+      "collocations": [
+        "ostensibly neutral",
+        "ostensibly designed to"
+      ],
+      "example_simple": "The rule is ostensibly fair.",
+      "example_complex": "The policy, ostensibly aimed at fairness, in practice benefited the already advantaged.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "appear to",
+      "category": "hedging",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "dường như, có vẻ như",
+      "definition_en": "to seem to be the case without certainty",
+      "synonyms": [
+        "seem to",
+        "look as though"
+      ],
+      "collocations": [
+        "appears to suggest",
+        "would appear to",
+        "appear to be"
+      ],
+      "example_simple": "The two appear to be linked.",
+      "example_complex": "The variables appear to interact, though a larger sample is needed to confirm this.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "it is likely that",
+      "category": "hedging",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "có khả năng là",
+      "definition_en": "a cautious way to state a probable claim",
+      "synonyms": [
+        "it is probable that",
+        "in all likelihood"
+      ],
+      "collocations": [
+        "it is likely that",
+        "it seems likely that"
+      ],
+      "example_simple": "It is likely that costs will rise.",
+      "example_complex": "It is likely that multiple mechanisms, rather than a single cause, underlie the observed effect.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "broadly speaking",
+      "category": "hedging",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "nói chung, đại thể",
+      "definition_en": "in general terms, without going into detail",
+      "synonyms": [
+        "generally",
+        "on the whole",
+        "by and large"
+      ],
+      "collocations": [
+        "broadly speaking, the results"
+      ],
+      "example_simple": "Broadly speaking, the two agree.",
+      "example_complex": "Broadly speaking, the literature supports the hypothesis, though important exceptions remain.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "insofar as",
+      "category": "hedging",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "trong chừng mực mà, ở mức độ mà",
+      "definition_en": "to the extent that",
+      "synonyms": [
+        "to the extent that",
+        "inasmuch as"
+      ],
+      "collocations": [
+        "insofar as the data allow",
+        "insofar as it"
+      ],
+      "example_simple": "It helps, insofar as it saves time.",
+      "example_complex": "The theory is useful insofar as it generates testable predictions, but it explains little of the mechanism.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "seemingly",
+      "category": "hedging",
+      "part_of_speech": "adverb",
+      "ipa": "",
+      "vi_meaning": "có vẻ như, dường như",
+      "definition_en": "appearing to be the case",
+      "synonyms": [
+        "apparently",
+        "ostensibly",
+        "on the surface"
+      ],
+      "collocations": [
+        "seemingly unrelated",
+        "a seemingly small",
+        "seemingly contradictory"
+      ],
+      "example_simple": "The two seemingly unrelated facts are linked.",
+      "example_complex": "The seemingly contradictory results can be reconciled once the different timescales are taken into account.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "substantial",
+      "category": "academic-adjective",
+      "part_of_speech": "adjective",
+      "ipa": "",
+      "vi_meaning": "đáng kể, lớn",
+      "definition_en": "large in amount, value, or importance",
+      "synonyms": [
+        "considerable",
+        "significant",
+        "sizeable"
+      ],
+      "collocations": [
+        "a substantial increase",
+        "substantial evidence",
+        "substantial improvement"
+      ],
+      "example_simple": "There was substantial growth.",
+      "example_complex": "The reform required substantial investment before any benefits became apparent.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "prevalent",
+      "category": "academic-adjective",
+      "part_of_speech": "adjective",
+      "ipa": "",
+      "vi_meaning": "phổ biến, thịnh hành",
+      "definition_en": "widespread; common in a particular place or time",
+      "synonyms": [
+        "widespread",
+        "common",
+        "pervasive"
+      ],
+      "collocations": [
+        "increasingly prevalent",
+        "prevalent among",
+        "the most prevalent"
+      ],
+      "example_simple": "The habit is prevalent among teens.",
+      "example_complex": "The belief remains prevalent despite decades of evidence to the contrary.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "robust",
+      "category": "academic-adjective",
+      "part_of_speech": "adjective",
+      "ipa": "",
+      "vi_meaning": "vững chắc, đáng tin cậy (kết quả/phương pháp)",
+      "definition_en": "strong and reliable, holding up under scrutiny",
+      "synonyms": [
+        "strong",
+        "sound",
+        "reliable"
+      ],
+      "collocations": [
+        "robust evidence",
+        "a robust finding",
+        "robust to"
+      ],
+      "example_simple": "The result is robust.",
+      "example_complex": "The effect proved robust across different model specifications and control variables.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "comprehensive",
+      "category": "academic-adjective",
+      "part_of_speech": "adjective",
+      "ipa": "",
+      "vi_meaning": "toàn diện, đầy đủ",
+      "definition_en": "including all or nearly all elements",
+      "synonyms": [
+        "thorough",
+        "exhaustive",
+        "extensive"
+      ],
+      "collocations": [
+        "a comprehensive review",
+        "comprehensive analysis",
+        "comprehensive data"
+      ],
+      "example_simple": "The review was comprehensive.",
+      "example_complex": "A comprehensive analysis would need to incorporate data that were unavailable at the time.",
+      "false_friend_note": "'Comprehensive' means thorough; 'comprehensible' means understandable — do not confuse them."
+    },
+    {
+      "word": "underlying",
+      "category": "academic-adjective",
+      "part_of_speech": "adjective",
+      "ipa": "",
+      "vi_meaning": "nằm bên dưới, cơ bản (ẩn sau)",
+      "definition_en": "forming the hidden basis or cause of something",
+      "synonyms": [
+        "fundamental",
+        "root",
+        "basic"
+      ],
+      "collocations": [
+        "the underlying cause",
+        "underlying assumptions",
+        "underlying mechanism"
+      ],
+      "example_simple": "The underlying cause is unclear.",
+      "example_complex": "Treating symptoms without addressing the underlying cause rarely produces lasting change.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "respective",
+      "category": "academic-adjective",
+      "part_of_speech": "adjective",
+      "ipa": "",
+      "vi_meaning": "tương ứng (của từng người/vật)",
+      "definition_en": "belonging separately to each of the people or things mentioned",
+      "synonyms": [
+        "individual",
+        "particular"
+      ],
+      "collocations": [
+        "their respective roles",
+        "respective fields",
+        "respectively"
+      ],
+      "example_simple": "They returned to their respective homes.",
+      "example_complex": "The two groups improved by 12% and 8% respectively over the study period.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "feasible",
+      "category": "academic-adjective",
+      "part_of_speech": "adjective",
+      "ipa": "",
+      "vi_meaning": "khả thi, có thể thực hiện",
+      "definition_en": "possible and practical to do",
+      "synonyms": [
+        "viable",
+        "practicable",
+        "achievable"
+      ],
+      "collocations": [
+        "technically feasible",
+        "economically feasible",
+        "a feasible solution"
+      ],
+      "example_simple": "The plan is feasible.",
+      "example_complex": "While technically feasible, the approach is unlikely to be economically feasible at scale.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "negligible",
+      "category": "academic-adjective",
+      "part_of_speech": "adjective",
+      "ipa": "",
+      "vi_meaning": "không đáng kể",
+      "definition_en": "so small as to be not worth considering",
+      "synonyms": [
+        "insignificant",
+        "trivial",
+        "minimal"
+      ],
+      "collocations": [
+        "a negligible effect",
+        "negligible difference",
+        "practically negligible"
+      ],
+      "example_simple": "The difference was negligible.",
+      "example_complex": "The additional cost is negligible relative to the substantial gains in reliability.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "with regard to",
+      "category": "connector",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "về, liên quan đến",
+      "definition_en": "concerning; in relation to (formal)",
+      "synonyms": [
+        "regarding",
+        "concerning",
+        "as for"
+      ],
+      "collocations": [
+        "with regard to this",
+        "with regard to the first point"
+      ],
+      "example_simple": "With regard to cost, it is efficient.",
+      "example_complex": "With regard to reliability, the newer instrument clearly outperforms its predecessor.",
+      "false_friend_note": "Note 'regard' (singular); 'with regards to' is a common error."
+    },
+    {
+      "word": "in terms of",
+      "category": "connector",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "về mặt, xét về",
+      "definition_en": "with respect to a particular aspect",
+      "synonyms": [
+        "with respect to",
+        "regarding"
+      ],
+      "collocations": [
+        "in terms of quality",
+        "in terms of impact",
+        "measured in terms of"
+      ],
+      "example_simple": "It's better in terms of speed.",
+      "example_complex": "In terms of long-term outcomes, the two approaches proved almost indistinguishable.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "constitute",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "cấu thành, tạo nên; được coi là",
+      "definition_en": "to be or be equivalent to something; to form a whole",
+      "synonyms": [
+        "form",
+        "make up",
+        "represent"
+      ],
+      "collocations": [
+        "constitute a threat",
+        "constitute evidence",
+        "constitute the majority"
+      ],
+      "example_simple": "These cases constitute the sample.",
+      "example_complex": "Repeated exposure of this kind may constitute a significant risk to public health.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "warrant",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "đáng, biện minh cho (việc gì)",
+      "definition_en": "to justify or require a particular action",
+      "synonyms": [
+        "justify",
+        "merit",
+        "call for"
+      ],
+      "collocations": [
+        "warrant further investigation",
+        "warrant attention",
+        "warrant caution"
+      ],
+      "example_simple": "The results warrant further study.",
+      "example_complex": "The magnitude of the discrepancy warrants a closer examination of the measurement procedure.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "underpin",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "làm nền tảng, củng cố cho",
+      "definition_en": "to support or form the basis of an argument or system",
+      "synonyms": [
+        "underlie",
+        "support",
+        "form the basis of"
+      ],
+      "collocations": [
+        "underpin the argument",
+        "assumptions that underpin",
+        "underpin the theory"
+      ],
+      "example_simple": "Trust underpins the whole system.",
+      "example_complex": "The assumptions that underpin the model rarely hold in real-world conditions.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "corroborate",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "chứng thực, củng cố (bằng bằng chứng)",
+      "definition_en": "to confirm or support a finding with additional evidence",
+      "synonyms": [
+        "confirm",
+        "support",
+        "substantiate"
+      ],
+      "collocations": [
+        "corroborate the findings",
+        "independently corroborate",
+        "evidence to corroborate"
+      ],
+      "example_simple": "Later studies corroborate the result.",
+      "example_complex": "The interview data corroborate the survey findings, lending greater confidence to the overall conclusion.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "refute",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "bác bỏ, phản bác",
+      "definition_en": "to prove that a statement or theory is wrong",
+      "synonyms": [
+        "disprove",
+        "rebut"
+      ],
+      "collocations": [
+        "refute a claim",
+        "refute the hypothesis",
+        "evidence to refute"
+      ],
+      "example_simple": "The study refutes the earlier claim.",
+      "example_complex": "The new data refute the long-standing assumption that the two variables are unrelated.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "substantiate",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "chứng minh (bằng chứng cứ)",
+      "definition_en": "to provide evidence to support a claim",
+      "synonyms": [
+        "support",
+        "corroborate",
+        "back up"
+      ],
+      "collocations": [
+        "substantiate a claim",
+        "fail to substantiate",
+        "substantiate the argument"
+      ],
+      "example_simple": "There is little evidence to substantiate the theory.",
+      "example_complex": "The authors substantiate their argument with data drawn from three independent sources.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "postulate",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "đưa ra giả định (làm tiền đề)",
+      "definition_en": "to suggest or assume something as a basis for reasoning",
+      "synonyms": [
+        "posit",
+        "assume",
+        "hypothesise"
+      ],
+      "collocations": [
+        "postulate that",
+        "the theory postulates",
+        "postulate a mechanism"
+      ],
+      "example_simple": "The model postulates two hidden factors.",
+      "example_complex": "Early theorists postulated an underlying force that later experiments were unable to detect.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "delineate",
+      "category": "reporting-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "phác họa, vạch rõ",
+      "definition_en": "to describe or define something precisely",
+      "synonyms": [
+        "outline",
+        "define",
+        "demarcate"
+      ],
+      "collocations": [
+        "delineate the boundaries",
+        "clearly delineate",
+        "delineate the scope"
+      ],
+      "example_simple": "The paper delineates three stages.",
+      "example_complex": "The introduction carefully delineates the scope of the study and the questions it does not address.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "account for",
+      "category": "cause-effect",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "giải thích cho; chiếm (tỷ lệ)",
+      "definition_en": "to explain the cause of something, or to make up a proportion",
+      "synonyms": [
+        "explain",
+        "make up"
+      ],
+      "collocations": [
+        "account for the difference",
+        "account for a large share",
+        "this may account for"
+      ],
+      "example_simple": "Genetics may account for the difference.",
+      "example_complex": "Together, these three factors account for nearly two-thirds of the observed variation.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "as opposed to",
+      "category": "comparison",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "trái với, khác với",
+      "definition_en": "in contrast with; rather than",
+      "synonyms": [
+        "rather than",
+        "in contrast to"
+      ],
+      "collocations": [
+        "as opposed to",
+        "quality as opposed to quantity"
+      ],
+      "example_simple": "We measured accuracy, as opposed to speed.",
+      "example_complex": "The study focuses on long-term outcomes, as opposed to the short-term gains emphasised elsewhere.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "criterion",
+      "category": "nominalization",
+      "part_of_speech": "noun",
+      "ipa": "",
+      "vi_meaning": "tiêu chí",
+      "definition_en": "a standard used to judge or decide something",
+      "synonyms": [
+        "standard",
+        "benchmark",
+        "measure"
+      ],
+      "collocations": [
+        "meet the criterion",
+        "a key criterion",
+        "selection criteria"
+      ],
+      "example_simple": "Cost is not the only criterion.",
+      "example_complex": "Studies were included only if they met a strict methodological criterion.",
+      "false_friend_note": "Plural is 'criteria'."
+    },
+    {
+      "word": "methodology",
+      "category": "nominalization",
+      "part_of_speech": "noun",
+      "ipa": "",
+      "vi_meaning": "phương pháp luận",
+      "definition_en": "the system of methods used in a study",
+      "synonyms": [
+        "method",
+        "approach",
+        "procedure"
+      ],
+      "collocations": [
+        "research methodology",
+        "a sound methodology",
+        "flawed methodology"
+      ],
+      "example_simple": "The methodology is clearly explained.",
+      "example_complex": "Doubts about the methodology cast some uncertainty on the reliability of the results.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "premise",
+      "category": "nominalization",
+      "part_of_speech": "noun",
+      "ipa": "",
+      "vi_meaning": "tiền đề, luận điểm cơ sở",
+      "definition_en": "a statement assumed to be true as the basis of an argument",
+      "synonyms": [
+        "assumption",
+        "proposition",
+        "basis"
+      ],
+      "collocations": [
+        "the underlying premise",
+        "a false premise",
+        "start from the premise"
+      ],
+      "example_simple": "The argument rests on a flawed premise.",
+      "example_complex": "If the central premise is mistaken, the conclusions that follow cannot be trusted.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "empirical",
+      "category": "academic-adjective",
+      "part_of_speech": "adjective",
+      "ipa": "",
+      "vi_meaning": "thực nghiệm, dựa trên thực chứng",
+      "definition_en": "based on observation or experiment rather than theory",
+      "synonyms": [
+        "observed",
+        "experimental",
+        "evidence-based"
+      ],
+      "collocations": [
+        "empirical evidence",
+        "empirical research",
+        "empirical data"
+      ],
+      "example_simple": "There is little empirical evidence for this.",
+      "example_complex": "The claim is intuitively appealing but has scant empirical support.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "salient",
+      "category": "academic-adjective",
+      "part_of_speech": "adjective",
+      "ipa": "",
+      "vi_meaning": "nổi bật, đáng chú ý nhất",
+      "definition_en": "most noticeable or important",
+      "synonyms": [
+        "prominent",
+        "notable",
+        "key"
+      ],
+      "collocations": [
+        "the most salient feature",
+        "a salient point",
+        "salient findings"
+      ],
+      "example_simple": "The most salient point is cost.",
+      "example_complex": "The most salient finding is that the effect disappears entirely among older participants.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "pertinent",
+      "category": "academic-adjective",
+      "part_of_speech": "adjective",
+      "ipa": "",
+      "vi_meaning": "thích đáng, liên quan trực tiếp",
+      "definition_en": "relevant and applicable to the matter at hand",
+      "synonyms": [
+        "relevant",
+        "applicable",
+        "germane"
+      ],
+      "collocations": [
+        "pertinent to",
+        "a pertinent question",
+        "pertinent information"
+      ],
+      "example_simple": "That is a pertinent question.",
+      "example_complex": "The review omits several studies that are highly pertinent to the central argument.",
+      "false_friend_note": ""
+    }
+  ]
+}

@@ -1,0 +1,2054 @@
+{
+  "collection": {
+    "name": "Casual English 100",
+    "emoji": "💬",
+    "description": "100 everyday words and phrases for natural spoken English: phrasal verbs, idioms, small talk, and common reactions."
+  },
+  "meta": {
+    "note": "Claude-authored (no external LLM). For B1-B2 L1-Vietnamese learners. Fields map to lib/types.ts EnrichableFields; ipa intentionally left blank per captain. Packs are strictly disjoint. 'category' is metadata for review/tagging.",
+    "target": "100 entries"
+  },
+  "words": [
+    {
+      "word": "hang out",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "đi chơi, tụ tập (thư giãn cùng nhau)",
+      "definition_en": "to spend time relaxing with people",
+      "synonyms": [
+        "spend time",
+        "chill"
+      ],
+      "collocations": [
+        "hang out with friends",
+        "hang out at home",
+        "let's hang out"
+      ],
+      "example_simple": "We hang out every weekend.",
+      "example_complex": "Do you want to hang out later, or are you too busy this evening?",
+      "false_friend_note": ""
+    },
+    {
+      "word": "chill out",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "thư giãn, bình tĩnh lại",
+      "definition_en": "to relax and stop worrying",
+      "synonyms": [
+        "relax",
+        "calm down",
+        "unwind"
+      ],
+      "collocations": [
+        "chill out at home",
+        "just chill out",
+        "chill out for a bit"
+      ],
+      "example_simple": "Let's chill out and watch a movie.",
+      "example_complex": "You've been working all day — you should chill out for a while before dinner.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "catch up",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "gặp lại và cập nhật tin tức; theo kịp",
+      "definition_en": "to meet and share recent news, or to reach the same level as others",
+      "synonyms": [
+        "reconnect",
+        "keep up"
+      ],
+      "collocations": [
+        "catch up with an old friend",
+        "catch up over coffee",
+        "catch up on work"
+      ],
+      "example_simple": "Let's catch up soon.",
+      "example_complex": "We hadn't seen each other in years, so we spent hours catching up over coffee.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "show up",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "xuất hiện, đến (nơi hẹn)",
+      "definition_en": "to arrive, especially at an event",
+      "synonyms": [
+        "turn up",
+        "appear",
+        "arrive"
+      ],
+      "collocations": [
+        "show up late",
+        "show up on time",
+        "didn't show up"
+      ],
+      "example_simple": "He didn't show up to the party.",
+      "example_complex": "Half the guests showed up an hour late, so we started without them.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "give up",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "từ bỏ, bỏ cuộc",
+      "definition_en": "to stop trying, or to quit a habit",
+      "synonyms": [
+        "quit",
+        "surrender"
+      ],
+      "collocations": [
+        "give up smoking",
+        "never give up",
+        "give up hope"
+      ],
+      "example_simple": "Don't give up so easily.",
+      "example_complex": "After failing twice, she almost gave up, but her friends convinced her to try once more.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "figure out",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "tìm ra, hiểu ra (cách làm gì đó)",
+      "definition_en": "to understand or solve something after thinking",
+      "synonyms": [
+        "work out",
+        "solve",
+        "understand"
+      ],
+      "collocations": [
+        "figure out how",
+        "figure out a problem",
+        "can't figure out"
+      ],
+      "example_simple": "I can't figure out this puzzle.",
+      "example_complex": "It took me a while to figure out why the app kept crashing.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "run out of",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "hết, cạn (thứ gì đó)",
+      "definition_en": "to have no more of something left",
+      "synonyms": [
+        "use up",
+        "deplete"
+      ],
+      "collocations": [
+        "run out of time",
+        "run out of money",
+        "run out of milk"
+      ],
+      "example_simple": "We ran out of coffee.",
+      "example_complex": "We ran out of time before we could finish the last question on the exam.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "look forward to",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "mong chờ, háo hức",
+      "definition_en": "to feel excited about something that will happen",
+      "synonyms": [
+        "anticipate",
+        "be excited about"
+      ],
+      "collocations": [
+        "look forward to seeing you",
+        "really looking forward to",
+        "look forward to the weekend"
+      ],
+      "example_simple": "I look forward to the holidays.",
+      "example_complex": "I'm really looking forward to seeing you again after all this time.",
+      "false_friend_note": "Followed by a noun or -ing, not the base verb: 'look forward to meeting', not 'to meet'."
+    },
+    {
+      "word": "put off",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "trì hoãn, hoãn lại",
+      "definition_en": "to delay something to a later time",
+      "synonyms": [
+        "postpone",
+        "delay"
+      ],
+      "collocations": [
+        "put off a decision",
+        "put it off",
+        "keep putting off"
+      ],
+      "example_simple": "Don't put off your homework.",
+      "example_complex": "We had to put off the trip because the weather was terrible.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "come across",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "tình cờ gặp/thấy; tạo ấn tượng",
+      "definition_en": "to find something by chance, or to give a certain impression",
+      "synonyms": [
+        "stumble upon",
+        "seem"
+      ],
+      "collocations": [
+        "come across a word",
+        "come across as rude",
+        "happened to come across"
+      ],
+      "example_simple": "I came across an old photo.",
+      "example_complex": "He comes across as shy, but once you know him he's really funny.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "get along with",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "hòa hợp, hợp nhau với ai",
+      "definition_en": "to have a good relationship with someone",
+      "synonyms": [
+        "get on with",
+        "be friendly with"
+      ],
+      "collocations": [
+        "get along well",
+        "get along with colleagues",
+        "don't get along"
+      ],
+      "example_simple": "I get along with my neighbours.",
+      "example_complex": "The two of them get along surprisingly well, despite having very different personalities.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "bring up",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "nhắc đến, đề cập; nuôi dạy",
+      "definition_en": "to mention a topic, or to raise a child",
+      "synonyms": [
+        "mention",
+        "raise",
+        "raise (a child)"
+      ],
+      "collocations": [
+        "bring up a topic",
+        "bring up the subject",
+        "brought up in a small town"
+      ],
+      "example_simple": "Don't bring up that topic.",
+      "example_complex": "She brought up an interesting point that no one had considered before.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "turn up",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "xuất hiện; tăng âm lượng",
+      "definition_en": "to arrive unexpectedly, or to increase volume",
+      "synonyms": [
+        "show up",
+        "appear",
+        "increase"
+      ],
+      "collocations": [
+        "turn up late",
+        "turn up the music",
+        "turn up unannounced"
+      ],
+      "example_simple": "He turned up at my door.",
+      "example_complex": "Can you turn up the volume? I can barely hear the song.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "work out",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "tập thể dục; giải quyết ổn thỏa",
+      "definition_en": "to exercise, or for a situation to end well",
+      "synonyms": [
+        "exercise",
+        "solve",
+        "turn out well"
+      ],
+      "collocations": [
+        "work out at the gym",
+        "work out a plan",
+        "it will work out"
+      ],
+      "example_simple": "I work out three times a week.",
+      "example_complex": "Don't worry too much — I'm sure everything will work out in the end.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "check out",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "xem thử, kiểm tra; trả phòng",
+      "definition_en": "to look at or try something, or to leave a hotel",
+      "synonyms": [
+        "take a look at",
+        "have a look"
+      ],
+      "collocations": [
+        "check out this place",
+        "check out a new cafe",
+        "check out of the hotel"
+      ],
+      "example_simple": "Check out this cool app.",
+      "example_complex": "You should check out that new restaurant — everyone says the food is amazing.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "end up",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "rốt cuộc, cuối cùng lại (ở tình huống nào đó)",
+      "definition_en": "to finally be in a particular place or situation",
+      "synonyms": [
+        "wind up",
+        "finish up"
+      ],
+      "collocations": [
+        "end up alone",
+        "end up doing",
+        "end up somewhere"
+      ],
+      "example_simple": "We ended up staying home.",
+      "example_complex": "We planned to go out, but we ended up ordering pizza and watching films instead.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "pick up",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "đón (ai); nhặt lên; học lỏm",
+      "definition_en": "to collect someone or something, or to learn casually",
+      "synonyms": [
+        "collect",
+        "grab",
+        "learn"
+      ],
+      "collocations": [
+        "pick up the kids",
+        "pick up groceries",
+        "pick up a language"
+      ],
+      "example_simple": "I'll pick you up at eight.",
+      "example_complex": "She picked up a bit of Spanish just from watching TV shows.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "drop off",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "thả xuống, đưa đến (ai/cái gì)",
+      "definition_en": "to take someone or something to a place and leave them there",
+      "synonyms": [
+        "deliver",
+        "take"
+      ],
+      "collocations": [
+        "drop off a package",
+        "drop the kids off",
+        "drop you off"
+      ],
+      "example_simple": "Can you drop me off here?",
+      "example_complex": "I'll drop the documents off at your office on my way home.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "sort out",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "giải quyết, sắp xếp ổn thỏa",
+      "definition_en": "to organise or resolve a problem",
+      "synonyms": [
+        "resolve",
+        "fix",
+        "organise"
+      ],
+      "collocations": [
+        "sort out a problem",
+        "sort things out",
+        "sort out the mess"
+      ],
+      "example_simple": "Let's sort out the details later.",
+      "example_complex": "We need to sit down and sort out who's paying for what.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "take off",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "cất cánh; cởi ra; trở nên phổ biến nhanh",
+      "definition_en": "for a plane to leave the ground, to remove clothing, or to become popular",
+      "synonyms": [
+        "depart",
+        "remove",
+        "succeed"
+      ],
+      "collocations": [
+        "the plane took off",
+        "take off your shoes",
+        "the business took off"
+      ],
+      "example_simple": "The plane takes off at noon.",
+      "example_complex": "Her small online shop really took off after a celebrity shared it.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "get over",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "vượt qua, hồi phục (sau chuyện buồn/ốm)",
+      "definition_en": "to recover from an illness or difficult experience",
+      "synonyms": [
+        "recover from",
+        "overcome"
+      ],
+      "collocations": [
+        "get over a cold",
+        "get over a breakup",
+        "hard to get over"
+      ],
+      "example_simple": "It took him weeks to get over the flu.",
+      "example_complex": "It took her a long time to get over the disappointment of not getting the job.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "break up",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "chia tay; tan rã",
+      "definition_en": "to end a romantic relationship",
+      "synonyms": [
+        "split up",
+        "separate"
+      ],
+      "collocations": [
+        "break up with someone",
+        "they broke up",
+        "a bad break-up"
+      ],
+      "example_simple": "They broke up last month.",
+      "example_complex": "He was devastated when his girlfriend broke up with him over text.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "run into",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "tình cờ gặp (ai đó)",
+      "definition_en": "to meet someone unexpectedly",
+      "synonyms": [
+        "bump into",
+        "come across"
+      ],
+      "collocations": [
+        "run into an old friend",
+        "run into someone at the store"
+      ],
+      "example_simple": "I ran into my teacher at the mall.",
+      "example_complex": "You'll never guess who I ran into at the airport yesterday!",
+      "false_friend_note": ""
+    },
+    {
+      "word": "look after",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "chăm sóc, trông nom",
+      "definition_en": "to take care of someone or something",
+      "synonyms": [
+        "take care of",
+        "care for",
+        "mind"
+      ],
+      "collocations": [
+        "look after the kids",
+        "look after yourself",
+        "look after a pet"
+      ],
+      "example_simple": "Can you look after my dog?",
+      "example_complex": "While I'm away, could you look after the plants and water them twice a week?",
+      "false_friend_note": ""
+    },
+    {
+      "word": "mess up",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "làm hỏng, làm sai",
+      "definition_en": "to make a mistake or ruin something",
+      "synonyms": [
+        "ruin",
+        "botch",
+        "screw up"
+      ],
+      "collocations": [
+        "mess up the plan",
+        "really messed up",
+        "don't mess it up"
+      ],
+      "example_simple": "I messed up the recipe.",
+      "example_complex": "I completely messed up the presentation because I forgot my notes at home.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "calm down",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "bình tĩnh lại",
+      "definition_en": "to become or make someone less angry or upset",
+      "synonyms": [
+        "relax",
+        "cool down",
+        "settle down"
+      ],
+      "collocations": [
+        "calm down a bit",
+        "try to calm down",
+        "calm someone down"
+      ],
+      "example_simple": "Please calm down and tell me what happened.",
+      "example_complex": "It took a few minutes for him to calm down after the argument.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "cheer up",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "vui lên, làm ai vui hơn",
+      "definition_en": "to become or make someone happier",
+      "synonyms": [
+        "lift someone's mood",
+        "brighten up"
+      ],
+      "collocations": [
+        "cheer up a friend",
+        "cheer up!",
+        "that cheered me up"
+      ],
+      "example_simple": "Cheer up! It's not that bad.",
+      "example_complex": "I brought you some flowers to cheer you up after your rough week.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "show off",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "khoe khoang, phô trương",
+      "definition_en": "to behave so as to attract attention to yourself",
+      "synonyms": [
+        "boast",
+        "flaunt"
+      ],
+      "collocations": [
+        "show off a new car",
+        "stop showing off",
+        "just showing off"
+      ],
+      "example_simple": "He likes to show off his skills.",
+      "example_complex": "She wasn't trying to show off; she genuinely enjoys talking about her work.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "hang on",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "chờ một chút; bám chặt",
+      "definition_en": "to wait a moment, or to hold tightly",
+      "synonyms": [
+        "wait",
+        "hold on"
+      ],
+      "collocations": [
+        "hang on a second",
+        "hang on tight",
+        "just hang on"
+      ],
+      "example_simple": "Hang on, I'm almost ready.",
+      "example_complex": "Hang on a minute — I think you've misunderstood what I meant.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "hang up",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "gác máy (điện thoại)",
+      "definition_en": "to end a phone call",
+      "synonyms": [
+        "end the call"
+      ],
+      "collocations": [
+        "hang up the phone",
+        "don't hang up",
+        "hung up on me"
+      ],
+      "example_simple": "She hung up before I could answer.",
+      "example_complex": "He got so angry that he hung up on me in the middle of the conversation.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "find out",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "phát hiện, tìm ra (thông tin)",
+      "definition_en": "to learn or discover a fact",
+      "synonyms": [
+        "discover",
+        "learn"
+      ],
+      "collocations": [
+        "find out the truth",
+        "find out what happened",
+        "just found out"
+      ],
+      "example_simple": "I just found out the news.",
+      "example_complex": "How did you find out that they were planning a surprise party?",
+      "false_friend_note": ""
+    },
+    {
+      "word": "go on",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "tiếp tục; xảy ra",
+      "definition_en": "to continue, or to happen",
+      "synonyms": [
+        "continue",
+        "carry on",
+        "happen"
+      ],
+      "collocations": [
+        "go on talking",
+        "what's going on",
+        "go on for hours"
+      ],
+      "example_simple": "What's going on here?",
+      "example_complex": "The meeting went on for so long that we missed lunch entirely.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "come over",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "ghé qua (nhà ai)",
+      "definition_en": "to visit someone at their home",
+      "synonyms": [
+        "drop by",
+        "visit"
+      ],
+      "collocations": [
+        "come over for dinner",
+        "come over tonight",
+        "come over to my place"
+      ],
+      "example_simple": "Come over whenever you like.",
+      "example_complex": "Why don't you come over this weekend and we'll cook something together?",
+      "false_friend_note": ""
+    },
+    {
+      "word": "drop by",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "ghé qua nhanh (không hẹn trước)",
+      "definition_en": "to visit somewhere briefly and casually",
+      "synonyms": [
+        "stop by",
+        "pop in"
+      ],
+      "collocations": [
+        "drop by later",
+        "drop by the office",
+        "feel free to drop by"
+      ],
+      "example_simple": "Drop by anytime.",
+      "example_complex": "I might drop by your place on the way home if that's okay.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "call off",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "hủy bỏ",
+      "definition_en": "to cancel a planned event",
+      "synonyms": [
+        "cancel",
+        "scrap"
+      ],
+      "collocations": [
+        "call off the wedding",
+        "call off the game",
+        "the trip was called off"
+      ],
+      "example_simple": "They called off the meeting.",
+      "example_complex": "The concert was called off at the last minute because of a storm.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "set up",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "thiết lập, cài đặt, tổ chức",
+      "definition_en": "to arrange, build, or prepare something",
+      "synonyms": [
+        "arrange",
+        "establish",
+        "install"
+      ],
+      "collocations": [
+        "set up an account",
+        "set up a meeting",
+        "set up a business"
+      ],
+      "example_simple": "I need to set up my new phone.",
+      "example_complex": "It only takes a few minutes to set up an account and start using the app.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "put up with",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "chịu đựng, nhẫn nhịn",
+      "definition_en": "to tolerate something unpleasant",
+      "synonyms": [
+        "tolerate",
+        "bear",
+        "stand"
+      ],
+      "collocations": [
+        "put up with noise",
+        "can't put up with",
+        "put up with a lot"
+      ],
+      "example_simple": "I can't put up with this noise.",
+      "example_complex": "I don't know how she puts up with such a long commute every single day.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "eat out",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "đi ăn ngoài (nhà hàng)",
+      "definition_en": "to have a meal at a restaurant rather than at home",
+      "synonyms": [
+        "dine out"
+      ],
+      "collocations": [
+        "eat out tonight",
+        "eat out often",
+        "let's eat out"
+      ],
+      "example_simple": "We eat out on Fridays.",
+      "example_complex": "Since neither of us felt like cooking, we decided to eat out instead.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "grab a bite",
+      "category": "idiom",
+      "part_of_speech": "idiom",
+      "ipa": "",
+      "vi_meaning": "ăn nhẹ, ăn nhanh cái gì đó",
+      "definition_en": "to eat something quickly and casually",
+      "synonyms": [
+        "get a quick meal",
+        "have a snack"
+      ],
+      "collocations": [
+        "grab a bite to eat",
+        "grab a quick bite",
+        "grab a bite before"
+      ],
+      "example_simple": "Let's grab a bite before the movie.",
+      "example_complex": "We only had twenty minutes, so we just grabbed a bite at the corner cafe.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "piece of cake",
+      "category": "idiom",
+      "part_of_speech": "idiom",
+      "ipa": "",
+      "vi_meaning": "chuyện dễ như ăn bánh, quá dễ",
+      "definition_en": "something very easy to do",
+      "synonyms": [
+        "easy",
+        "a breeze"
+      ],
+      "collocations": [
+        "it was a piece of cake",
+        "a real piece of cake"
+      ],
+      "example_simple": "The test was a piece of cake.",
+      "example_complex": "I was nervous about the interview, but honestly it turned out to be a piece of cake.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "hit the sack",
+      "category": "idiom",
+      "part_of_speech": "idiom",
+      "ipa": "",
+      "vi_meaning": "đi ngủ",
+      "definition_en": "to go to bed",
+      "synonyms": [
+        "go to bed",
+        "turn in",
+        "hit the hay"
+      ],
+      "collocations": [
+        "time to hit the sack",
+        "hit the sack early"
+      ],
+      "example_simple": "I'm tired, I'll hit the sack.",
+      "example_complex": "After such a long day, all I wanted to do was hit the sack.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "under the weather",
+      "category": "idiom",
+      "part_of_speech": "idiom",
+      "ipa": "",
+      "vi_meaning": "hơi mệt, không khỏe",
+      "definition_en": "feeling slightly ill",
+      "synonyms": [
+        "unwell",
+        "a bit sick"
+      ],
+      "collocations": [
+        "feel under the weather",
+        "a little under the weather"
+      ],
+      "example_simple": "I'm feeling a bit under the weather.",
+      "example_complex": "She's been under the weather all week, so she took a couple of days off.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "cost an arm and a leg",
+      "category": "idiom",
+      "part_of_speech": "idiom",
+      "ipa": "",
+      "vi_meaning": "đắt cắt cổ, rất đắt",
+      "definition_en": "to be very expensive",
+      "synonyms": [
+        "cost a fortune",
+        "be pricey"
+      ],
+      "collocations": [
+        "it cost an arm and a leg",
+        "don't cost an arm and a leg"
+      ],
+      "example_simple": "That car cost an arm and a leg.",
+      "example_complex": "I'd love to travel more, but flights these days cost an arm and a leg.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "once in a blue moon",
+      "category": "idiom",
+      "part_of_speech": "idiom",
+      "ipa": "",
+      "vi_meaning": "hiếm khi, thỉnh thoảng lắm",
+      "definition_en": "very rarely",
+      "synonyms": [
+        "rarely",
+        "hardly ever"
+      ],
+      "collocations": [
+        "only once in a blue moon",
+        "happens once in a blue moon"
+      ],
+      "example_simple": "We meet once in a blue moon.",
+      "example_complex": "He's so busy that we only get to see him once in a blue moon.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "break the ice",
+      "category": "idiom",
+      "part_of_speech": "idiom",
+      "ipa": "",
+      "vi_meaning": "phá tan sự ngại ngùng, làm quen",
+      "definition_en": "to make people feel more relaxed in a social situation",
+      "synonyms": [
+        "get things started"
+      ],
+      "collocations": [
+        "break the ice with a joke",
+        "help break the ice"
+      ],
+      "example_simple": "A joke can break the ice.",
+      "example_complex": "To break the ice, the host asked everyone to share one surprising fact about themselves.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "on the same page",
+      "category": "idiom",
+      "part_of_speech": "idiom",
+      "ipa": "",
+      "vi_meaning": "cùng quan điểm, hiểu ý nhau",
+      "definition_en": "in agreement or with the same understanding",
+      "synonyms": [
+        "in agreement",
+        "of the same mind"
+      ],
+      "collocations": [
+        "get on the same page",
+        "we're on the same page",
+        "make sure we're on the same page"
+      ],
+      "example_simple": "Are we on the same page?",
+      "example_complex": "Before we start, let's make sure everyone is on the same page about the deadline.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "call it a day",
+      "category": "idiom",
+      "part_of_speech": "idiom",
+      "ipa": "",
+      "vi_meaning": "dừng công việc, nghỉ (hôm nay đủ rồi)",
+      "definition_en": "to stop working for the day",
+      "synonyms": [
+        "stop for now",
+        "wrap up"
+      ],
+      "collocations": [
+        "let's call it a day",
+        "time to call it a day"
+      ],
+      "example_simple": "Let's call it a day.",
+      "example_complex": "We'd been working for ten hours straight, so we decided to call it a day.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "a rip-off",
+      "category": "idiom",
+      "part_of_speech": "noun (informal)",
+      "ipa": "",
+      "vi_meaning": "sự chặt chém, giá cắt cổ, lừa tiền",
+      "definition_en": "something that is too expensive or a scam",
+      "synonyms": [
+        "a scam",
+        "overpriced"
+      ],
+      "collocations": [
+        "what a rip-off",
+        "total rip-off",
+        "it's a rip-off"
+      ],
+      "example_simple": "Ten dollars for water? What a rip-off!",
+      "example_complex": "The souvenirs near the tourist spots are a complete rip-off compared to the local markets.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "hang in there",
+      "category": "idiom",
+      "part_of_speech": "idiom",
+      "ipa": "",
+      "vi_meaning": "ráng lên, đừng bỏ cuộc",
+      "definition_en": "used to encourage someone to stay strong in a hard time",
+      "synonyms": [
+        "stay strong",
+        "keep going"
+      ],
+      "collocations": [
+        "hang in there",
+        "just hang in there"
+      ],
+      "example_simple": "Hang in there, it gets easier.",
+      "example_complex": "I know the exams are stressful, but hang in there — it'll all be over soon.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "get the hang of",
+      "category": "idiom",
+      "part_of_speech": "idiom",
+      "ipa": "",
+      "vi_meaning": "quen tay, nắm được cách làm",
+      "definition_en": "to learn how to do something after some practice",
+      "synonyms": [
+        "get used to",
+        "master"
+      ],
+      "collocations": [
+        "get the hang of it",
+        "getting the hang of things",
+        "once you get the hang of it"
+      ],
+      "example_simple": "You'll get the hang of it soon.",
+      "example_complex": "Driving felt impossible at first, but after a week I started to get the hang of it.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "couch potato",
+      "category": "idiom",
+      "part_of_speech": "noun (informal)",
+      "ipa": "",
+      "vi_meaning": "người lười vận động, chỉ nằm xem TV",
+      "definition_en": "a lazy person who watches a lot of television",
+      "synonyms": [
+        "lazy person"
+      ],
+      "collocations": [
+        "become a couch potato",
+        "a real couch potato"
+      ],
+      "example_simple": "He's a total couch potato.",
+      "example_complex": "Ever since he lost his job, he's turned into a bit of a couch potato.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "speak of the devil",
+      "category": "idiom",
+      "part_of_speech": "idiom",
+      "ipa": "",
+      "vi_meaning": "vừa nhắc đã tới (nói xong thì người đó xuất hiện)",
+      "definition_en": "said when a person you were just talking about appears",
+      "synonyms": [],
+      "collocations": [
+        "well, speak of the devil"
+      ],
+      "example_simple": "Speak of the devil — here she comes!",
+      "example_complex": "We were just talking about you, and — speak of the devil — you walked right in.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "long story short",
+      "category": "idiom",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "nói tóm lại, ngắn gọn là",
+      "definition_en": "used to skip details and give the main point",
+      "synonyms": [
+        "to cut a long story short",
+        "in short"
+      ],
+      "collocations": [
+        "long story short",
+        "to make a long story short"
+      ],
+      "example_simple": "Long story short, we missed the train.",
+      "example_complex": "Long story short, the trip was a disaster, but we still managed to have some fun.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "keep in touch",
+      "category": "idiom",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "giữ liên lạc",
+      "definition_en": "to stay in contact with someone",
+      "synonyms": [
+        "stay in contact"
+      ],
+      "collocations": [
+        "keep in touch",
+        "let's keep in touch",
+        "keep in touch with friends"
+      ],
+      "example_simple": "Let's keep in touch.",
+      "example_complex": "Even after she moved abroad, we managed to keep in touch through video calls.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "feel free",
+      "category": "social",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "cứ tự nhiên, đừng ngại",
+      "definition_en": "used to tell someone they are welcome to do something",
+      "synonyms": [
+        "go ahead",
+        "don't hesitate"
+      ],
+      "collocations": [
+        "feel free to ask",
+        "feel free to help yourself"
+      ],
+      "example_simple": "Feel free to ask questions.",
+      "example_complex": "If you need anything during your stay, feel free to call the front desk at any time.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "kill time",
+      "category": "idiom",
+      "part_of_speech": "idiom",
+      "ipa": "",
+      "vi_meaning": "giết thời gian, làm gì đó cho qua giờ",
+      "definition_en": "to do something to pass time while waiting",
+      "synonyms": [
+        "pass the time"
+      ],
+      "collocations": [
+        "kill time at the airport",
+        "just killing time"
+      ],
+      "example_simple": "I read a book to kill time.",
+      "example_complex": "We had two hours before the flight, so we killed time browsing the shops.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "rain check",
+      "category": "idiom",
+      "part_of_speech": "idiom",
+      "ipa": "",
+      "vi_meaning": "hẹn dịp khác (từ chối lịch sự nhưng để lần sau)",
+      "definition_en": "a polite way to postpone an invitation to another time",
+      "synonyms": [
+        "postpone",
+        "reschedule"
+      ],
+      "collocations": [
+        "take a rain check",
+        "can I take a rain check"
+      ],
+      "example_simple": "Can I take a rain check on dinner?",
+      "example_complex": "I'd love to come, but I'm swamped tonight — can I take a rain check?",
+      "false_friend_note": ""
+    },
+    {
+      "word": "out of the blue",
+      "category": "idiom",
+      "part_of_speech": "idiom",
+      "ipa": "",
+      "vi_meaning": "bất ngờ, đột ngột không báo trước",
+      "definition_en": "happening suddenly and unexpectedly",
+      "synonyms": [
+        "unexpectedly",
+        "all of a sudden"
+      ],
+      "collocations": [
+        "came out of the blue",
+        "out of the blue one day"
+      ],
+      "example_simple": "She called me out of the blue.",
+      "example_complex": "Out of the blue, my old classmate messaged me after nearly ten years of silence.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "hit it off",
+      "category": "idiom",
+      "part_of_speech": "idiom",
+      "ipa": "",
+      "vi_meaning": "hợp nhau ngay, thân nhau nhanh",
+      "definition_en": "to get along well with someone immediately",
+      "synonyms": [
+        "get along right away"
+      ],
+      "collocations": [
+        "hit it off with someone",
+        "really hit it off"
+      ],
+      "example_simple": "We hit it off right away.",
+      "example_complex": "They hit it off the moment they met and have been best friends ever since.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "ring a bell",
+      "category": "idiom",
+      "part_of_speech": "idiom",
+      "ipa": "",
+      "vi_meaning": "nghe quen quen, gợi nhớ mơ hồ",
+      "definition_en": "to sound familiar",
+      "synonyms": [
+        "sound familiar"
+      ],
+      "collocations": [
+        "that name rings a bell",
+        "doesn't ring a bell"
+      ],
+      "example_simple": "The name rings a bell.",
+      "example_complex": "Her face rings a bell, but I honestly can't remember where we met.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "up in the air",
+      "category": "idiom",
+      "part_of_speech": "idiom",
+      "ipa": "",
+      "vi_meaning": "chưa chắc chắn, còn bỏ ngỏ",
+      "definition_en": "not yet decided or certain",
+      "synonyms": [
+        "undecided",
+        "uncertain"
+      ],
+      "collocations": [
+        "still up in the air",
+        "plans are up in the air"
+      ],
+      "example_simple": "Our plans are still up in the air.",
+      "example_complex": "The wedding date is still up in the air because they can't agree on a venue.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "no worries",
+      "category": "reaction",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "không sao đâu, đừng lo",
+      "definition_en": "a casual way to say 'that's fine' or 'you're welcome'",
+      "synonyms": [
+        "no problem",
+        "it's fine"
+      ],
+      "collocations": [
+        "no worries at all",
+        "no worries, mate"
+      ],
+      "example_simple": "No worries, take your time.",
+      "example_complex": "\"Sorry I'm late!\" \"No worries, we've only just sat down.\"",
+      "false_friend_note": ""
+    },
+    {
+      "word": "no problem",
+      "category": "reaction",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "không thành vấn đề, không có chi",
+      "definition_en": "used to agree easily or respond to thanks",
+      "synonyms": [
+        "no worries",
+        "sure"
+      ],
+      "collocations": [
+        "no problem at all"
+      ],
+      "example_simple": "\"Thanks!\" \"No problem.\"",
+      "example_complex": "\"Could you help me move this weekend?\" \"No problem, just tell me when.\"",
+      "false_friend_note": ""
+    },
+    {
+      "word": "fair enough",
+      "category": "reaction",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "cũng hợp lý, thôi được",
+      "definition_en": "used to accept that something is reasonable",
+      "synonyms": [
+        "that's reasonable",
+        "okay then"
+      ],
+      "collocations": [
+        "fair enough"
+      ],
+      "example_simple": "\"I'd rather stay home.\" \"Fair enough.\"",
+      "example_complex": "\"I can't make it tonight, I'm exhausted.\" \"Fair enough, let's do it another time.\"",
+      "false_friend_note": ""
+    },
+    {
+      "word": "you bet",
+      "category": "reaction",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "chắc chắn rồi, tất nhiên",
+      "definition_en": "an enthusiastic way to say yes",
+      "synonyms": [
+        "definitely",
+        "of course"
+      ],
+      "collocations": [
+        "you bet!"
+      ],
+      "example_simple": "\"Are you coming?\" \"You bet!\"",
+      "example_complex": "\"Would you recommend that restaurant?\" \"You bet — the food there is fantastic.\"",
+      "false_friend_note": ""
+    },
+    {
+      "word": "for sure",
+      "category": "reaction",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "chắc chắn, đồng ý",
+      "definition_en": "used to agree strongly",
+      "synonyms": [
+        "definitely",
+        "absolutely"
+      ],
+      "collocations": [
+        "for sure",
+        "yeah, for sure"
+      ],
+      "example_simple": "\"See you tomorrow?\" \"For sure.\"",
+      "example_complex": "\"Do you think we'll finish on time?\" \"For sure, we're almost done.\"",
+      "false_friend_note": ""
+    },
+    {
+      "word": "sounds good",
+      "category": "reaction",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "nghe hay đấy, được đó",
+      "definition_en": "used to agree to a suggestion",
+      "synonyms": [
+        "that works",
+        "great"
+      ],
+      "collocations": [
+        "sounds good to me"
+      ],
+      "example_simple": "\"Let's meet at six.\" \"Sounds good.\"",
+      "example_complex": "\"How about we split the bill and grab dessert somewhere else?\" \"Sounds good to me.\"",
+      "false_friend_note": ""
+    },
+    {
+      "word": "my bad",
+      "category": "reaction",
+      "part_of_speech": "phrase (informal)",
+      "ipa": "",
+      "vi_meaning": "lỗi của tôi, xin lỗi (thân mật)",
+      "definition_en": "a casual way to admit a small mistake",
+      "synonyms": [
+        "my mistake",
+        "sorry"
+      ],
+      "collocations": [
+        "oh, my bad"
+      ],
+      "example_simple": "My bad, I took your seat.",
+      "example_complex": "My bad — I completely forgot to reply to your message yesterday.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "never mind",
+      "category": "reaction",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "thôi bỏ đi, không sao đâu",
+      "definition_en": "used to tell someone not to worry about something",
+      "synonyms": [
+        "forget it",
+        "don't worry"
+      ],
+      "collocations": [
+        "never mind that",
+        "oh, never mind"
+      ],
+      "example_simple": "Never mind, it's not important.",
+      "example_complex": "Never mind what I said earlier — I've changed my mind about the whole thing.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "no big deal",
+      "category": "reaction",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "chuyện nhỏ, không đáng lo",
+      "definition_en": "used to say something is not important",
+      "synonyms": [
+        "not a big deal",
+        "it's fine"
+      ],
+      "collocations": [
+        "it's no big deal",
+        "no big deal, really"
+      ],
+      "example_simple": "It's no big deal, don't worry.",
+      "example_complex": "I know I forgot your birthday, but making it up to you is no big deal — let's celebrate this weekend.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "what's up",
+      "category": "reaction",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "chào, dạo này sao rồi / có chuyện gì",
+      "definition_en": "a casual greeting or a way to ask what is happening",
+      "synonyms": [
+        "what's happening",
+        "how's it going"
+      ],
+      "collocations": [
+        "hey, what's up",
+        "what's up with you"
+      ],
+      "example_simple": "Hey, what's up?",
+      "example_complex": "What's up? You seem a little quiet today — is everything okay?",
+      "false_friend_note": ""
+    },
+    {
+      "word": "how's it going",
+      "category": "reaction",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "dạo này thế nào, khỏe không",
+      "definition_en": "a casual way to ask how someone is",
+      "synonyms": [
+        "how are you",
+        "how are things"
+      ],
+      "collocations": [
+        "hey, how's it going"
+      ],
+      "example_simple": "Hi! How's it going?",
+      "example_complex": "How's it going? I haven't seen you around campus in ages.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "take care",
+      "category": "reaction",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "bảo trọng, giữ gìn sức khỏe (khi chào tạm biệt)",
+      "definition_en": "a friendly way to say goodbye",
+      "synonyms": [
+        "look after yourself",
+        "bye"
+      ],
+      "collocations": [
+        "take care of yourself",
+        "take care now"
+      ],
+      "example_simple": "Bye, take care!",
+      "example_complex": "It was great catching up — take care, and let's do this again soon.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "catch you later",
+      "category": "reaction",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "hẹn gặp lại sau",
+      "definition_en": "a casual way to say goodbye",
+      "synonyms": [
+        "see you later",
+        "talk soon"
+      ],
+      "collocations": [
+        "catch you later"
+      ],
+      "example_simple": "Catch you later!",
+      "example_complex": "I've got to run to class now, but catch you later at the cafeteria.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "I'm good",
+      "category": "reaction",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "tôi ổn; tôi không cần đâu (từ chối lịch sự)",
+      "definition_en": "used to say you are fine, or to politely decline",
+      "synonyms": [
+        "I'm fine",
+        "no thanks"
+      ],
+      "collocations": [
+        "no, I'm good",
+        "I'm good, thanks"
+      ],
+      "example_simple": "\"Want more coffee?\" \"I'm good, thanks.\"",
+      "example_complex": "\"Should I order you a dessert too?\" \"I'm good — I'm completely full.\"",
+      "false_friend_note": ""
+    },
+    {
+      "word": "kind of",
+      "category": "reaction",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "đại loại là, hơi hơi",
+      "definition_en": "used to say something is partly true or vague",
+      "synonyms": [
+        "sort of",
+        "somewhat",
+        "kinda"
+      ],
+      "collocations": [
+        "kind of like",
+        "kind of tired",
+        "kind of weird"
+      ],
+      "example_simple": "I'm kind of tired.",
+      "example_complex": "The movie was kind of boring, but the ending kind of made up for it.",
+      "false_friend_note": "Often spoken as 'kinda' in casual speech."
+    },
+    {
+      "word": "awesome",
+      "category": "reaction",
+      "part_of_speech": "adjective (informal)",
+      "ipa": "",
+      "vi_meaning": "tuyệt vời, hết sảy",
+      "definition_en": "extremely good; used to show enthusiasm",
+      "synonyms": [
+        "great",
+        "fantastic",
+        "amazing"
+      ],
+      "collocations": [
+        "that's awesome",
+        "awesome idea",
+        "looks awesome"
+      ],
+      "example_simple": "That's awesome!",
+      "example_complex": "You got the job? That's absolutely awesome — congratulations!",
+      "false_friend_note": ""
+    },
+    {
+      "word": "gotcha",
+      "category": "reaction",
+      "part_of_speech": "phrase (informal)",
+      "ipa": "",
+      "vi_meaning": "hiểu rồi, nắm rồi (thân mật)",
+      "definition_en": "an informal way to say 'I understand'",
+      "synonyms": [
+        "got it",
+        "understood"
+      ],
+      "collocations": [
+        "ah, gotcha"
+      ],
+      "example_simple": "\"Turn left at the corner.\" \"Gotcha.\"",
+      "example_complex": "\"So we meet at nine, not ten.\" \"Gotcha, I'll set an alarm.\"",
+      "false_friend_note": "Casual only; use 'I understand' or 'got it' in formal settings."
+    },
+    {
+      "word": "take it easy",
+      "category": "reaction",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "thư giãn đi, đừng căng thẳng; tạm biệt nhẹ nhàng",
+      "definition_en": "used to tell someone to relax, or as a friendly goodbye",
+      "synonyms": [
+        "relax",
+        "chill"
+      ],
+      "collocations": [
+        "take it easy today",
+        "just take it easy"
+      ],
+      "example_simple": "Take it easy this weekend.",
+      "example_complex": "You've been so stressed lately — take it easy for a few days and get some rest.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "good for you",
+      "category": "reaction",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "chúc mừng, tốt cho bạn quá",
+      "definition_en": "used to show approval of someone's good news",
+      "synonyms": [
+        "well done",
+        "nice"
+      ],
+      "collocations": [
+        "good for you!"
+      ],
+      "example_simple": "You quit smoking? Good for you!",
+      "example_complex": "You finally stood up for yourself at work? Good for you — that took real courage.",
+      "false_friend_note": "Tone matters: said warmly it's genuine praise; said flatly it can sound sarcastic."
+    },
+    {
+      "word": "I mean",
+      "category": "discourse",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "ý tôi là (để giải thích/sửa lại)",
+      "definition_en": "used to explain or correct what you just said",
+      "synonyms": [
+        "that is",
+        "what I'm saying is"
+      ],
+      "collocations": [
+        "I mean, it's fine",
+        "well, I mean"
+      ],
+      "example_simple": "I mean, it's not that bad.",
+      "example_complex": "I mean, I like the idea in theory, but I'm not sure we can afford it right now.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "to be honest",
+      "category": "discourse",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "thành thật mà nói",
+      "definition_en": "used before giving your true opinion",
+      "synonyms": [
+        "honestly",
+        "frankly",
+        "to be fair"
+      ],
+      "collocations": [
+        "to be honest with you",
+        "to be honest, I think"
+      ],
+      "example_simple": "To be honest, I didn't like it.",
+      "example_complex": "To be honest, I wasn't expecting much, but the show turned out to be brilliant.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "come on",
+      "category": "reaction",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "thôi nào, đi mà (giục hoặc khích lệ/ngờ vực)",
+      "definition_en": "used to encourage, hurry, or express disbelief",
+      "synonyms": [
+        "let's go",
+        "seriously"
+      ],
+      "collocations": [
+        "come on, hurry up",
+        "oh come on",
+        "come on, you can do it"
+      ],
+      "example_simple": "Come on, we're late!",
+      "example_complex": "Come on, you don't really believe that story, do you?",
+      "false_friend_note": ""
+    },
+    {
+      "word": "guess what",
+      "category": "discourse",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "đố biết chuyện gì, này biết gì không (dẫn tin)",
+      "definition_en": "used to introduce exciting news",
+      "synonyms": [
+        "you'll never believe"
+      ],
+      "collocations": [
+        "hey, guess what",
+        "guess what happened"
+      ],
+      "example_simple": "Guess what! I passed the test.",
+      "example_complex": "Guess what — I ran into your brother today and he says hi!",
+      "false_friend_note": ""
+    },
+    {
+      "word": "you know what",
+      "category": "discourse",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "bạn biết gì không, à mà (dẫn ý mới)",
+      "definition_en": "used to introduce a thought or a change of mind",
+      "synonyms": [
+        "actually",
+        "here's the thing"
+      ],
+      "collocations": [
+        "you know what, let's",
+        "you know what I mean"
+      ],
+      "example_simple": "You know what, let's just go.",
+      "example_complex": "You know what, on second thought, maybe we should stay in tonight instead.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "whatever",
+      "category": "reaction",
+      "part_of_speech": "phrase (informal)",
+      "ipa": "",
+      "vi_meaning": "sao cũng được; mặc kệ (đôi khi bất cần)",
+      "definition_en": "used to show you don't mind, or that you don't care",
+      "synonyms": [
+        "anything",
+        "I don't mind"
+      ],
+      "collocations": [
+        "whatever you want",
+        "whatever, it's fine"
+      ],
+      "example_simple": "\"Pizza or noodles?\" \"Whatever, you choose.\"",
+      "example_complex": "\"You could at least apologise.\" \"Whatever.\" — said flatly, it sounds dismissive and rude.",
+      "false_friend_note": "As a one-word reply it often sounds dismissive or rude; use 'either is fine' to sound polite."
+    },
+    {
+      "word": "actually",
+      "category": "discourse",
+      "part_of_speech": "adverb",
+      "ipa": "",
+      "vi_meaning": "thực ra, thật ra là",
+      "definition_en": "used to correct, clarify, or add a surprising fact",
+      "synonyms": [
+        "in fact",
+        "really"
+      ],
+      "collocations": [
+        "actually, I think",
+        "no, actually"
+      ],
+      "example_simple": "Actually, I changed my mind.",
+      "example_complex": "I thought I'd hate the class, but actually it's become my favourite.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "basically",
+      "category": "discourse",
+      "part_of_speech": "adverb",
+      "ipa": "",
+      "vi_meaning": "về cơ bản, nói đơn giản là",
+      "definition_en": "used to summarise or simplify something",
+      "synonyms": [
+        "essentially",
+        "in short"
+      ],
+      "collocations": [
+        "basically, it means",
+        "so basically"
+      ],
+      "example_simple": "Basically, we're out of money.",
+      "example_complex": "Basically, the plan is to save up this year and then travel around Asia next summer.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "honestly",
+      "category": "discourse",
+      "part_of_speech": "adverb",
+      "ipa": "",
+      "vi_meaning": "thật lòng mà nói, thật ra",
+      "definition_en": "used to emphasise that you are being truthful",
+      "synonyms": [
+        "truthfully",
+        "frankly",
+        "to be honest"
+      ],
+      "collocations": [
+        "honestly, I don't know",
+        "honestly speaking"
+      ],
+      "example_simple": "Honestly, I forgot.",
+      "example_complex": "Honestly, I have no idea how they finished the whole project in a single night.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "literally",
+      "category": "discourse",
+      "part_of_speech": "adverb",
+      "ipa": "",
+      "vi_meaning": "đúng nghĩa đen; (đôi khi dùng để nhấn mạnh)",
+      "definition_en": "in the exact sense; also used casually for emphasis",
+      "synonyms": [
+        "actually",
+        "really"
+      ],
+      "collocations": [
+        "literally everyone",
+        "literally just",
+        "literally can't"
+      ],
+      "example_simple": "I literally just got home.",
+      "example_complex": "Everyone was there — and I mean literally the entire class showed up.",
+      "false_friend_note": "In casual speech it's often used for emphasis, not its strict 'exactly true' meaning."
+    },
+    {
+      "word": "anyway",
+      "category": "discourse",
+      "part_of_speech": "adverb",
+      "ipa": "",
+      "vi_meaning": "dù sao thì; thôi (đổi chủ đề)",
+      "definition_en": "used to change the subject or return to a main point",
+      "synonyms": [
+        "anyhow",
+        "in any case"
+      ],
+      "collocations": [
+        "anyway, as I was saying",
+        "anyway, let's move on"
+      ],
+      "example_simple": "Anyway, let's get started.",
+      "example_complex": "It's a long story and not very interesting — anyway, how have you been lately?",
+      "false_friend_note": ""
+    },
+    {
+      "word": "by the way",
+      "category": "discourse",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "à mà, nhân tiện",
+      "definition_en": "used to add a related comment or new topic",
+      "synonyms": [
+        "incidentally",
+        "on a side note"
+      ],
+      "collocations": [
+        "by the way, did you",
+        "oh, by the way"
+      ],
+      "example_simple": "By the way, happy birthday!",
+      "example_complex": "By the way, I meant to ask — did you ever hear back about that job application?",
+      "false_friend_note": ""
+    },
+    {
+      "word": "I guess",
+      "category": "discourse",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "chắc là, tôi đoán vậy (không chắc lắm)",
+      "definition_en": "used to show mild agreement or uncertainty",
+      "synonyms": [
+        "I suppose",
+        "maybe"
+      ],
+      "collocations": [
+        "I guess so",
+        "I guess you're right"
+      ],
+      "example_simple": "I guess you're right.",
+      "example_complex": "I guess we could try the new place, though I'm not really in the mood for spicy food.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "you know",
+      "category": "discourse",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "bạn biết đấy (từ đệm khi nói)",
+      "definition_en": "a filler used to check the listener follows or to pause",
+      "synonyms": [
+        "like",
+        "you see"
+      ],
+      "collocations": [
+        "you know what I mean",
+        "it's like, you know"
+      ],
+      "example_simple": "It was, you know, kind of awkward.",
+      "example_complex": "I just needed some time alone, you know, to figure out what I actually wanted.",
+      "false_friend_note": "A filler; overusing it can sound hesitant, so use it sparingly."
+    },
+    {
+      "word": "sort of",
+      "category": "discourse",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "đại khái, kiểu kiểu, hơi hơi",
+      "definition_en": "used to make a statement less exact",
+      "synonyms": [
+        "kind of",
+        "somewhat"
+      ],
+      "collocations": [
+        "sort of like",
+        "sort of works"
+      ],
+      "example_simple": "It's sort of complicated.",
+      "example_complex": "The plan sort of worked, but we had to change a lot of things along the way.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "pretty much",
+      "category": "discourse",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "gần như, hầu như",
+      "definition_en": "almost completely; nearly",
+      "synonyms": [
+        "almost",
+        "more or less"
+      ],
+      "collocations": [
+        "pretty much done",
+        "pretty much everyone",
+        "pretty much the same"
+      ],
+      "example_simple": "I'm pretty much finished.",
+      "example_complex": "We've pretty much decided on the destination; we just need to book the tickets.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "no way",
+      "category": "reaction",
+      "part_of_speech": "phrase (informal)",
+      "ipa": "",
+      "vi_meaning": "không thể nào; còn lâu (ngạc nhiên hoặc từ chối)",
+      "definition_en": "used to show surprise or strong refusal",
+      "synonyms": [
+        "you're kidding",
+        "absolutely not"
+      ],
+      "collocations": [
+        "no way!",
+        "there's no way"
+      ],
+      "example_simple": "No way, that's amazing!",
+      "example_complex": "No way am I waking up at 4 a.m. just to beat the traffic.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "big deal",
+      "category": "reaction",
+      "part_of_speech": "phrase (informal)",
+      "ipa": "",
+      "vi_meaning": "chuyện lớn, quan trọng (thường dùng phủ định/mỉa mai)",
+      "definition_en": "something important; often used to say it is not important",
+      "synonyms": [
+        "a big thing"
+      ],
+      "collocations": [
+        "it's not a big deal",
+        "what's the big deal",
+        "such a big deal"
+      ],
+      "example_simple": "It's not a big deal.",
+      "example_complex": "I don't see what the big deal is — it was only a small mistake.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "give someone a hand",
+      "category": "idiom",
+      "part_of_speech": "idiom",
+      "ipa": "",
+      "vi_meaning": "giúp ai một tay",
+      "definition_en": "to help someone",
+      "synonyms": [
+        "help out",
+        "lend a hand"
+      ],
+      "collocations": [
+        "give me a hand",
+        "give you a hand with"
+      ],
+      "example_simple": "Can you give me a hand?",
+      "example_complex": "Would you mind giving me a hand carrying these boxes upstairs?",
+      "false_friend_note": ""
+    },
+    {
+      "word": "make it",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "đến được, tham dự được; thành công",
+      "definition_en": "to manage to attend or arrive, or to succeed",
+      "synonyms": [
+        "attend",
+        "show up",
+        "succeed"
+      ],
+      "collocations": [
+        "can't make it",
+        "make it on time",
+        "make it to the party"
+      ],
+      "example_simple": "Sorry, I can't make it tonight.",
+      "example_complex": "I wasn't sure I'd make it, but the traffic cleared up just in time.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "hang out with",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "chơi/đi chơi cùng ai",
+      "definition_en": "to spend casual time with a particular person",
+      "synonyms": [
+        "spend time with"
+      ],
+      "collocations": [
+        "hang out with friends",
+        "who do you hang out with"
+      ],
+      "example_simple": "I hang out with them a lot.",
+      "example_complex": "She mostly hangs out with people from her old school, even now.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "wrap up",
+      "category": "phrasal-verb",
+      "part_of_speech": "phrasal verb",
+      "ipa": "",
+      "vi_meaning": "kết thúc, hoàn tất (việc gì)",
+      "definition_en": "to finish or bring something to an end",
+      "synonyms": [
+        "finish",
+        "conclude",
+        "finalise"
+      ],
+      "collocations": [
+        "wrap up a meeting",
+        "let's wrap this up",
+        "wrap up the project"
+      ],
+      "example_simple": "Let's wrap up for today.",
+      "example_complex": "We managed to wrap up the whole report before the deadline, which was a relief.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "count me in",
+      "category": "reaction",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "cho tôi tham gia với",
+      "definition_en": "used to say you want to join an activity",
+      "synonyms": [
+        "I'm in",
+        "I'll join"
+      ],
+      "collocations": [
+        "count me in!"
+      ],
+      "example_simple": "A road trip? Count me in!",
+      "example_complex": "If you're organising a football match this weekend, count me in — I've been wanting to play.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "give it a go",
+      "category": "idiom",
+      "part_of_speech": "idiom",
+      "ipa": "",
+      "vi_meaning": "thử một lần xem sao",
+      "definition_en": "to try something",
+      "synonyms": [
+        "give it a try",
+        "have a go"
+      ],
+      "collocations": [
+        "give it a go",
+        "why not give it a go"
+      ],
+      "example_simple": "Just give it a go!",
+      "example_complex": "I'd never cooked Thai food before, but I decided to give it a go anyway.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "same here",
+      "category": "reaction",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "tôi cũng vậy",
+      "definition_en": "used to say you feel or think the same",
+      "synonyms": [
+        "me too",
+        "likewise"
+      ],
+      "collocations": [
+        "same here"
+      ],
+      "example_simple": "\"I love spicy food.\" \"Same here!\"",
+      "example_complex": "\"I'm exhausted after this week.\" \"Same here — I can't wait for the weekend.\"",
+      "false_friend_note": ""
+    }
+  ]
+}

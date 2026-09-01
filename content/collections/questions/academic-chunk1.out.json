@@ -1,0 +1,572 @@
+{
+  "argue": {
+    "cloze": [
+      { "sentence": "In this essay, I will ____ that social media has changed how young people read.", "answer": "argue" },
+      { "sentence": "Some economists ____ that raising the minimum wage reduces employment.", "answer": "argue" },
+      { "sentence": "The author ____ convincingly that the policy failed for structural reasons.", "answer": "argues" },
+      { "sentence": "Critics have ____ that the study ignored several important variables.", "answer": "argued" },
+      { "sentence": "She ____ persuasively for a wider definition of literacy in her thesis.", "answer": "argues" },
+      { "sentence": "One could ____ that the results reflect the sample rather than the population.", "answer": "argue" },
+      { "sentence": "Throughout the chapter, the researchers ____ for a more cautious interpretation.", "answer": "argue" },
+      { "sentence": "It has been ____ that early intervention produces the strongest long-term gains.", "answer": "argued" },
+      { "sentence": "The paper ____ against the assumption that all learners progress at the same rate.", "answer": "argues" },
+      { "sentence": "Historians continue to ____ over the true causes of the collapse.", "answer": "argue" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Trong bài luận này, tôi sẽ lập luận rằng giáo dục trực tuyến có nhiều hạn chế." },
+      { "direction": "vn_to_en", "source": "Nhiều nhà nghiên cứu cho rằng nguyên nhân chính là sự bất bình đẳng thu nhập." },
+      { "direction": "vn_to_en", "source": "Tác giả lập luận rằng chính sách này đã thất bại vì thiếu nguồn lực." },
+      { "direction": "vn_to_en", "source": "Người ta có thể lập luận rằng kết quả này chỉ phản ánh mẫu nghiên cứu." },
+      { "direction": "vn_to_en", "source": "Bài báo lập luận phản đối giả định rằng mọi học sinh đều tiến bộ như nhau." },
+      { "direction": "en_to_vn", "source": "The author argues that economic growth alone cannot reduce poverty." },
+      { "direction": "en_to_vn", "source": "Some scholars argue that the data have been misinterpreted." },
+      { "direction": "en_to_vn", "source": "In this section, I argue for a new approach to language teaching." },
+      { "direction": "en_to_vn", "source": "It has been argued that the model oversimplifies human behaviour." },
+      { "direction": "en_to_vn", "source": "Researchers continue to argue about the reliability of the survey." }
+    ],
+    "scenario": [
+      "You are writing the introduction of an academic essay. State the main position you will take, using a formal thesis statement.",
+      "In a literature-review paragraph, summarise the position that a group of economists takes on inflation, in a neutral academic register.",
+      "During a seminar discussion, you politely present your reasoned position on a controversial policy. Write one formal sentence.",
+      "In the conclusion of a research paper, restate the central position you have defended throughout, in formal English.",
+      "You are peer-reviewing a classmate's essay and want to describe what the writer is claiming. Write a formal comment.",
+      "Writing a debate motion summary for a student journal, describe the stance one side takes, in a formal register.",
+      "In a critical response, you disagree with a study's assumption. Write a formal sentence presenting your counter-position.",
+      "You are drafting an abstract for a conference paper. In one formal sentence, state what your paper contends.",
+      "In a philosophy tutorial handout, describe two thinkers who take opposing reasoned positions on free will, formally.",
+      "You are writing a reflective academic blog post for university students; explain a reasoned position you hold about exam culture, in a semi-formal register."
+    ]
+  },
+  "assert": {
+    "cloze": [
+      { "sentence": "The author ____ that the findings apply to all age groups, though the evidence is limited.", "answer": "asserts" },
+      { "sentence": "In her thesis she ____ confidently that the theory is universally valid.", "answer": "asserts" },
+      { "sentence": "Politicians often ____ that tax cuts will benefit everyone.", "answer": "assert" },
+      { "sentence": "The report ____ without qualification that the programme was a success.", "answer": "asserts" },
+      { "sentence": "It would be unwise to ____ such a strong conclusion from a single experiment.", "answer": "assert" },
+      { "sentence": "The lawyer ____ that her client had acted lawfully throughout.", "answer": "asserted" },
+      { "sentence": "Many textbooks ____ this claim as though it were beyond dispute.", "answer": "assert" },
+      { "sentence": "He ____ his position firmly, refusing to accept any counter-evidence.", "answer": "asserted" },
+      { "sentence": "The committee ____ its authority to review all future proposals.", "answer": "asserted" },
+      { "sentence": "One should not ____ causation when the data show only correlation.", "answer": "assert" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Tác giả khẳng định rằng kết quả này đúng với mọi nhóm tuổi." },
+      { "direction": "vn_to_en", "source": "Bà ấy khẳng định một cách chắc chắn rằng lý thuyết này luôn đúng." },
+      { "direction": "vn_to_en", "source": "Không nên khẳng định một kết luận mạnh như vậy từ một thí nghiệm duy nhất." },
+      { "direction": "vn_to_en", "source": "Báo cáo khẳng định rằng chương trình đã thành công mà không kèm điều kiện nào." },
+      { "direction": "vn_to_en", "source": "Ủy ban khẳng định quyền xem xét mọi đề xuất trong tương lai." },
+      { "direction": "en_to_vn", "source": "The author asserts that the method is reliable in every context." },
+      { "direction": "en_to_vn", "source": "We should not assert causation on the basis of correlation alone." },
+      { "direction": "en_to_vn", "source": "The scientist boldly asserted that the disease could be eradicated." },
+      { "direction": "en_to_vn", "source": "The paper asserts, rather than proves, that the trend is permanent." },
+      { "direction": "en_to_vn", "source": "She asserted her right to publish the findings independently." }
+    ],
+    "scenario": [
+      "You are critiquing a paper that states a strong claim without evidence. Write a formal sentence describing what the author firmly states.",
+      "In an academic essay, you make a confident, definitive claim about your central finding. Write one formal sentence.",
+      "Writing a legal-studies summary, describe how a lawyer firmly stated a client's innocence, in a formal register.",
+      "In a methodology critique, warn a peer against stating a conclusion too confidently. Write a formal sentence.",
+      "You are drafting minutes for a university committee. Record that the committee firmly stated its authority, formally.",
+      "In a debate feedback form, note that a speaker stated a claim strongly but did not support it. Formal tone.",
+      "Writing a science communication piece, describe a researcher's bold, confident claim about a cure, in a semi-formal register.",
+      "In a philosophy paper, describe a thinker who confidently declares a principle to be self-evident. Formal register.",
+      "You are advising a student on hedging. Explain when it is appropriate to state something firmly in academic writing, formally.",
+      "In a policy brief, state your organisation's firm position on data privacy, in a formal, authoritative register."
+    ]
+  },
+  "contend": {
+    "cloze": [
+      { "sentence": "The researchers ____ that the current model overlooks cultural differences.", "answer": "contend" },
+      { "sentence": "In his book, the sociologist ____ that inequality is largely inherited.", "answer": "contends" },
+      { "sentence": "Some critics ____ that the reforms did more harm than good.", "answer": "contend" },
+      { "sentence": "She ____ that the traditional method remains the most effective.", "answer": "contends" },
+      { "sentence": "The authors ____ that previous studies used flawed measurements.", "answer": "contend" },
+      { "sentence": "It has long been ____ that language shapes the way we think.", "answer": "contended" },
+      { "sentence": "The paper ____ that economic factors alone cannot explain the change.", "answer": "contends" },
+      { "sentence": "Opponents of the theory ____ that it rests on weak assumptions.", "answer": "contend" },
+      { "sentence": "He ____ throughout the article that the evidence has been misread.", "answer": "contends" },
+      { "sentence": "Several scholars have ____ that the concept is too vaguely defined.", "answer": "contended" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Các nhà nghiên cứu cho rằng mô hình hiện tại bỏ qua khác biệt văn hóa." },
+      { "direction": "vn_to_en", "source": "Nhà xã hội học lập luận rằng bất bình đẳng phần lớn là do thừa kế." },
+      { "direction": "vn_to_en", "source": "Bà ấy cho rằng phương pháp truyền thống vẫn là hiệu quả nhất." },
+      { "direction": "vn_to_en", "source": "Nhiều học giả đã lập luận rằng khái niệm này được định nghĩa quá mơ hồ." },
+      { "direction": "vn_to_en", "source": "Bài báo lập luận rằng chỉ riêng yếu tố kinh tế không thể giải thích sự thay đổi." },
+      { "direction": "en_to_vn", "source": "The authors contend that earlier research relied on flawed data." },
+      { "direction": "en_to_vn", "source": "Critics contend that the policy widened the gap between rich and poor." },
+      { "direction": "en_to_vn", "source": "She contends that motivation matters more than aptitude." },
+      { "direction": "en_to_vn", "source": "It has been contended that the theory cannot be tested empirically." },
+      { "direction": "en_to_vn", "source": "Opponents contend that the plan is financially unrealistic." }
+    ],
+    "scenario": [
+      "In a literature review, describe the reasoned claim a scholar makes against the mainstream view. Use a formal register.",
+      "You are writing a critical essay and want to present your own arguable claim. Write one formal sentence.",
+      "In a research abstract, state what your study argues in opposition to earlier work, formally.",
+      "Writing a debate briefing, summarise the position opponents argue, in a neutral academic tone.",
+      "In a book review for an academic journal, describe the central claim the author advances, formally.",
+      "You are drafting a discussion section; present a claim you defend against likely objections, in formal English.",
+      "In a sociology seminar handout, describe two scholars who advance competing claims about class. Formal register.",
+      "Writing a grant proposal, state the arguable position that justifies your research, formally.",
+      "In a critical response paper, describe how a group of critics maintains a claim about a reform. Formal tone.",
+      "You are mentoring a student on argumentation; explain how to signal that an author is advancing a debatable claim, formally."
+    ]
+  },
+  "claim": {
+    "cloze": [
+      { "sentence": "The advertisement ____ that the product cures all skin problems.", "answer": "claims" },
+      { "sentence": "The company ____ its methods are environmentally friendly, but offers no proof.", "answer": "claims" },
+      { "sentence": "Some studies ____ a strong link, yet the evidence remains inconclusive.", "answer": "claim" },
+      { "sentence": "The author ____ that his theory explains every case, an assertion others reject.", "answer": "claims" },
+      { "sentence": "It is often ____ that technology makes us less social.", "answer": "claimed" },
+      { "sentence": "The politician ____ credit for the fall in unemployment.", "answer": "claimed" },
+      { "sentence": "Several websites ____ to offer scientific proof, though none can be verified.", "answer": "claim" },
+      { "sentence": "The report ____ a success rate that later research could not confirm.", "answer": "claimed" },
+      { "sentence": "He ____ to have solved the problem, but the results were never replicated.", "answer": "claims" },
+      { "sentence": "The brochure ____ that the course guarantees fluency in three months.", "answer": "claims" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Công ty tuyên bố rằng phương pháp của họ thân thiện với môi trường, nhưng không đưa ra bằng chứng." },
+      { "direction": "vn_to_en", "source": "Tác giả khẳng định rằng lý thuyết của ông giải thích được mọi trường hợp." },
+      { "direction": "vn_to_en", "source": "Người ta thường tuyên bố rằng công nghệ khiến chúng ta ít giao tiếp hơn." },
+      { "direction": "vn_to_en", "source": "Quảng cáo tuyên bố rằng sản phẩm chữa được mọi vấn đề về da." },
+      { "direction": "vn_to_en", "source": "Ông ấy tuyên bố đã giải được bài toán, nhưng kết quả chưa được kiểm chứng lại." },
+      { "direction": "en_to_vn", "source": "The study claims a strong effect, but the sample was very small." },
+      { "direction": "en_to_vn", "source": "The company claims that its data are completely secure." },
+      { "direction": "en_to_vn", "source": "Critics doubt the claim that the drug has no side effects." },
+      { "direction": "en_to_vn", "source": "He claims to have discovered a faster method, though it is unverified." },
+      { "direction": "en_to_vn", "source": "The report claims progress that later figures failed to support." }
+    ],
+    "scenario": [
+      "You are analysing an advertisement in a media-studies essay. Describe an unproven statement it makes, in a formal register.",
+      "In a critical essay, report an author's unsupported statement while signalling scepticism. Write one formal sentence.",
+      "Writing a science-literacy article, describe a product's unverified statement, in a semi-formal register.",
+      "In a research critique, note that a paper states a success rate it does not prove. Formal tone.",
+      "You are drafting a fact-check summary; describe a politician's unverified statement neutrally and formally.",
+      "In an essay on pseudoscience, describe a website's unproven statement, using a formal academic register.",
+      "Writing a consumer-rights report, describe a company's unsupported statement about safety, formally.",
+      "In a discussion section, report a rival study's statement while stressing that it lacks evidence, formally.",
+      "You are teaching source evaluation; explain to students how to flag an unproven statement in a text, formally.",
+      "In a formal complaint letter to a regulator, describe the misleading statement a firm has made about its product."
+    ]
+  },
+  "posit": {
+    "cloze": [
+      { "sentence": "The researchers ____ that motivation is the key driver of second-language success.", "answer": "posit" },
+      { "sentence": "In her model, she ____ a direct relationship between sleep and memory.", "answer": "posits" },
+      { "sentence": "The theory ____ the existence of an underlying, unobservable variable.", "answer": "posits" },
+      { "sentence": "Economists ____ that consumers act rationally, though reality is more complex.", "answer": "posit" },
+      { "sentence": "The paper ____ three factors that may explain the observed pattern.", "answer": "posits" },
+      { "sentence": "Let us ____ that all other conditions remain equal for the sake of argument.", "answer": "posit" },
+      { "sentence": "Early psychologists ____ that behaviour could be reduced to simple reflexes.", "answer": "posited" },
+      { "sentence": "The author ____ a mechanism to account for the unexpected results.", "answer": "posits" },
+      { "sentence": "The framework ____ that culture and cognition develop together.", "answer": "posits" },
+      { "sentence": "The study ____ a hypothesis that later experiments were designed to test.", "answer": "posited" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Các nhà nghiên cứu đưa ra giả định rằng động lực là yếu tố quyết định thành công." },
+      { "direction": "vn_to_en", "source": "Trong mô hình của mình, bà nêu ra mối quan hệ trực tiếp giữa giấc ngủ và trí nhớ." },
+      { "direction": "vn_to_en", "source": "Lý thuyết này giả định sự tồn tại của một biến số ẩn không quan sát được." },
+      { "direction": "vn_to_en", "source": "Hãy giả định rằng mọi điều kiện khác được giữ nguyên để dễ lập luận." },
+      { "direction": "vn_to_en", "source": "Bài báo đưa ra ba yếu tố có thể giải thích cho quy luật quan sát được." },
+      { "direction": "en_to_vn", "source": "The author posits a link between diet and concentration." },
+      { "direction": "en_to_vn", "source": "The model posits that markets always return to equilibrium." },
+      { "direction": "en_to_vn", "source": "Let us posit, for argument's sake, that the sample is representative." },
+      { "direction": "en_to_vn", "source": "Early theorists posited an innate capacity for language." },
+      { "direction": "en_to_vn", "source": "The study posits a mechanism that future research must verify." }
+    ],
+    "scenario": [
+      "In a theoretical framework section, put forward an assumption that grounds your study. Write one formal sentence.",
+      "You are describing a scientific model in an essay. State the assumption the model puts forward, formally.",
+      "In a hypothesis section, propose a tentative relationship between two variables, using a formal register.",
+      "Writing a philosophy paper, ask the reader to assume a premise for the sake of argument, formally.",
+      "In a literature review, describe the assumption an earlier theory advanced, in a neutral academic tone.",
+      "You are drafting a psychology report; put forward a mechanism that could explain your findings, formally.",
+      "In a research proposal, state the underlying assumption that justifies your method, formally.",
+      "Writing an economics essay, describe the rational-actor assumption the standard model puts forward, formally.",
+      "In a seminar handout, explain how a foundational theory posits an unobservable construct, formally.",
+      "You are advising a student on academic verbs; give a formal example sentence that puts forward a premise as a basis for argument."
+    ]
+  },
+  "propose": {
+    "cloze": [
+      { "sentence": "The authors ____ a new framework for measuring student engagement.", "answer": "propose" },
+      { "sentence": "In this paper, we ____ an alternative explanation for the anomaly.", "answer": "propose" },
+      { "sentence": "The committee ____ several changes to the current examination system.", "answer": "proposed" },
+      { "sentence": "She ____ that further research should focus on rural communities.", "answer": "proposes" },
+      { "sentence": "The study ____ a model that integrates both economic and social factors.", "answer": "proposes" },
+      { "sentence": "Scientists have ____ a mechanism to explain the sudden change in climate.", "answer": "proposed" },
+      { "sentence": "The report ____ a series of measures to reduce urban pollution.", "answer": "proposes" },
+      { "sentence": "We ____ to test this hypothesis using a larger and more diverse sample.", "answer": "propose" },
+      { "sentence": "The article ____ that policymakers adopt a more gradual approach.", "answer": "proposes" },
+      { "sentence": "The researchers ____ dividing the process into three distinct stages.", "answer": "propose" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Các tác giả đề xuất một khung mới để đo lường mức độ tham gia của học sinh." },
+      { "direction": "vn_to_en", "source": "Trong bài báo này, chúng tôi đưa ra một cách giải thích khác cho hiện tượng bất thường." },
+      { "direction": "vn_to_en", "source": "Bà ấy đề xuất rằng nghiên cứu tiếp theo nên tập trung vào vùng nông thôn." },
+      { "direction": "vn_to_en", "source": "Báo cáo đề xuất một loạt biện pháp nhằm giảm ô nhiễm đô thị." },
+      { "direction": "vn_to_en", "source": "Chúng tôi đề xuất kiểm tra giả thuyết này bằng một mẫu lớn hơn và đa dạng hơn." },
+      { "direction": "en_to_vn", "source": "The authors propose a new method for analysing the data." },
+      { "direction": "en_to_vn", "source": "She proposes that schools reduce the number of standardised tests." },
+      { "direction": "en_to_vn", "source": "The paper proposes an alternative to the traditional model." },
+      { "direction": "en_to_vn", "source": "Researchers proposed a mechanism to explain the results." },
+      { "direction": "en_to_vn", "source": "We propose to extend the study to a wider population." }
+    ],
+    "scenario": [
+      "In the introduction of a research paper, put forward the new framework your study offers. Write one formal sentence.",
+      "In a recommendations section, put forward a specific change to policy, using a formal register.",
+      "Writing a research proposal, state the method you put forward to test your hypothesis, formally.",
+      "In a discussion section, suggest a direction for future research, in a formal academic tone.",
+      "You are drafting a committee report; put forward a set of reforms to the exam system, formally.",
+      "In an essay conclusion, offer an alternative approach for policymakers to consider, formally.",
+      "Writing an abstract, state concisely the model your paper puts forward, in formal English.",
+      "In a grant application, describe the study you are putting forward to a funding body, formally.",
+      "You are advising a student on structuring proposals; give a formal example that puts forward a solution.",
+      "In a formal meeting agenda for a research group, put forward a plan to divide the project into stages."
+    ]
+  },
+  "suggest": {
+    "cloze": [
+      { "sentence": "The results ____ that regular practice improves retention.", "answer": "suggest" },
+      { "sentence": "The data ____ a link between exercise and academic performance.", "answer": "suggest" },
+      { "sentence": "The author ____ that further investigation is needed before drawing firm conclusions.", "answer": "suggests" },
+      { "sentence": "These findings ____ that the effect may be smaller than previously thought.", "answer": "suggest" },
+      { "sentence": "The evidence ____ caution rather than a definitive claim.", "answer": "suggests" },
+      { "sentence": "Recent studies ____ that early bilingualism has cognitive benefits.", "answer": "suggest" },
+      { "sentence": "The pattern of errors ____ a common underlying cause.", "answer": "suggests" },
+      { "sentence": "The report ____ that a longer trial period would be beneficial.", "answer": "suggests" },
+      { "sentence": "It has been ____ that motivation plays a larger role than ability.", "answer": "suggested" },
+      { "sentence": "The graph ____ a steady decline over the past decade.", "answer": "suggests" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Kết quả cho thấy rằng việc luyện tập thường xuyên cải thiện khả năng ghi nhớ." },
+      { "direction": "vn_to_en", "source": "Dữ liệu gợi ý một mối liên hệ giữa tập thể dục và kết quả học tập." },
+      { "direction": "vn_to_en", "source": "Tác giả cho rằng cần nghiên cứu thêm trước khi đưa ra kết luận chắc chắn." },
+      { "direction": "vn_to_en", "source": "Những phát hiện này cho thấy hiệu ứng có thể nhỏ hơn so với suy nghĩ trước đây." },
+      { "direction": "vn_to_en", "source": "Người ta đã gợi ý rằng động lực đóng vai trò lớn hơn năng lực." },
+      { "direction": "en_to_vn", "source": "The findings suggest that stress affects memory in older adults." },
+      { "direction": "en_to_vn", "source": "The data suggest a modest but consistent improvement." },
+      { "direction": "en_to_vn", "source": "The author suggests that the method could be applied more widely." },
+      { "direction": "en_to_vn", "source": "This evidence suggests caution when interpreting the results." },
+      { "direction": "en_to_vn", "source": "Recent research suggests that sleep improves problem-solving." }
+    ],
+    "scenario": [
+      "In a results section, cautiously report what your data indicate without overstating. Write one formal, hedged sentence.",
+      "In a discussion, softly recommend that more research is needed, using a formal register.",
+      "Writing about a graph in an essay, describe the trend the data indicate, in a formal academic tone.",
+      "In a literature review, report what earlier studies indicate, while remaining tentative and formal.",
+      "You are drafting a report; gently recommend a longer trial period, in formal English.",
+      "In an abstract, state cautiously what your findings point to, formally.",
+      "Writing a science article for students, describe what evidence hints at without claiming certainty, semi-formally.",
+      "In a peer review, advise a colleague to hedge a strong claim as a mere indication, formally.",
+      "In a conclusion, point tentatively to a possible cause of the observed pattern, formally.",
+      "You are coaching a student on hedging language; give a formal example that reports a finding tentatively."
+    ]
+  },
+  "demonstrate": {
+    "cloze": [
+      { "sentence": "The experiment clearly ____ that temperature affects the reaction rate.", "answer": "demonstrates" },
+      { "sentence": "This case study ____ how the theory works in practice.", "answer": "demonstrates" },
+      { "sentence": "The results ____ a significant improvement in reading comprehension.", "answer": "demonstrate" },
+      { "sentence": "The authors ____ their argument with detailed statistical evidence.", "answer": "demonstrate" },
+      { "sentence": "Her research ____ that the method is both reliable and efficient.", "answer": "demonstrates" },
+      { "sentence": "The data convincingly ____ the link between diet and health.", "answer": "demonstrate" },
+      { "sentence": "The study ____ beyond doubt that the treatment reduces symptoms.", "answer": "demonstrates" },
+      { "sentence": "These findings ____ the importance of early intervention.", "answer": "demonstrate" },
+      { "sentence": "The chapter ____ how small changes can produce large effects.", "answer": "demonstrates" },
+      { "sentence": "The trial ____ that the drug is safe for long-term use.", "answer": "demonstrated" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Thí nghiệm chứng minh rõ ràng rằng nhiệt độ ảnh hưởng đến tốc độ phản ứng." },
+      { "direction": "vn_to_en", "source": "Nghiên cứu điển hình này cho thấy lý thuyết vận hành như thế nào trong thực tế." },
+      { "direction": "vn_to_en", "source": "Kết quả chứng minh sự cải thiện đáng kể về khả năng đọc hiểu." },
+      { "direction": "vn_to_en", "source": "Nghiên cứu của bà chứng minh rằng phương pháp này vừa đáng tin vừa hiệu quả." },
+      { "direction": "vn_to_en", "source": "Những phát hiện này cho thấy rõ tầm quan trọng của can thiệp sớm." },
+      { "direction": "en_to_vn", "source": "The experiment demonstrates that pressure changes the outcome." },
+      { "direction": "en_to_vn", "source": "The results clearly demonstrate a strong correlation." },
+      { "direction": "en_to_vn", "source": "The authors demonstrate their point with convincing data." },
+      { "direction": "en_to_vn", "source": "The trial demonstrated that the vaccine is effective." },
+      { "direction": "en_to_vn", "source": "This case study demonstrates how the model applies in real life." }
+    ],
+    "scenario": [
+      "In a results section, state what your experiment proves with evidence. Write one formal sentence.",
+      "In an essay, describe how a case study proves a theoretical point, using a formal register.",
+      "Writing a lab report, report what the data conclusively show, in formal English.",
+      "In a discussion, emphasise what your findings prove about early intervention, formally.",
+      "You are summarising a clinical trial; state what it proved about a drug's safety, formally.",
+      "In an abstract, state concisely what your study establishes with evidence, formally.",
+      "Writing a critique, praise a paper for how well it proves its argument, in a formal academic tone.",
+      "In a conclusion, restate what your evidence has clearly established, formally.",
+      "You are teaching essay skills; give a formal example that shows an author proving a claim with data.",
+      "In a formal recommendation, cite research that proves the value of a method to a decision-maker."
+    ]
+  },
+  "illustrate": {
+    "cloze": [
+      { "sentence": "This example ____ how cultural context shapes meaning.", "answer": "illustrates" },
+      { "sentence": "The graph ____ the sharp rise in temperatures since 1990.", "answer": "illustrates" },
+      { "sentence": "The author uses a case study to ____ the main argument.", "answer": "illustrate" },
+      { "sentence": "These figures ____ the scale of the problem clearly.", "answer": "illustrate" },
+      { "sentence": "To ____ this point, consider the following experiment.", "answer": "illustrate" },
+      { "sentence": "The story ____ the dangers of relying on a single source.", "answer": "illustrates" },
+      { "sentence": "The diagram ____ how the different stages connect.", "answer": "illustrates" },
+      { "sentence": "The findings are ____ by the table on the next page.", "answer": "illustrated" },
+      { "sentence": "A simple analogy can ____ a complex idea effectively.", "answer": "illustrate" },
+      { "sentence": "The chapter ____ its claims with numerous real-world examples.", "answer": "illustrates" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Ví dụ này minh họa cách ngữ cảnh văn hóa định hình ý nghĩa." },
+      { "direction": "vn_to_en", "source": "Biểu đồ minh họa sự gia tăng mạnh của nhiệt độ kể từ năm 1990." },
+      { "direction": "vn_to_en", "source": "Tác giả dùng một nghiên cứu điển hình để minh họa cho lập luận chính." },
+      { "direction": "vn_to_en", "source": "Để minh họa điểm này, hãy xem xét thí nghiệm sau đây." },
+      { "direction": "vn_to_en", "source": "Một phép so sánh đơn giản có thể minh họa hiệu quả một ý tưởng phức tạp." },
+      { "direction": "en_to_vn", "source": "This example illustrates how small errors can accumulate." },
+      { "direction": "en_to_vn", "source": "The chart illustrates the decline in reading habits." },
+      { "direction": "en_to_vn", "source": "To illustrate the point, the author gives a personal anecdote." },
+      { "direction": "en_to_vn", "source": "The diagram illustrates the flow of information in the system." },
+      { "direction": "en_to_vn", "source": "These cases illustrate the limits of the theory." }
+    ],
+    "scenario": [
+      "In a body paragraph, introduce an example that clarifies your point. Write one formal sentence.",
+      "Describing a figure in an essay, state what the graph makes clear, using a formal register.",
+      "In a methods explanation, use an analogy to make a complex idea clearer, formally.",
+      "Writing a discussion, note how a case study clarifies your argument, in formal English.",
+      "In a textbook-style passage, introduce an example that shows a concept in action, formally.",
+      "You are drafting a report; point the reader to a table that makes the data clearer, formally.",
+      "In an essay, use a short anecdote to make an abstract point concrete, in a semi-formal register.",
+      "Writing a critique, praise an author for using examples that clarify difficult ideas, formally.",
+      "In a lecture handout, introduce a diagram that clarifies how stages connect, formally.",
+      "You are teaching exemplification; give a formal example sentence that introduces a clarifying case."
+    ]
+  },
+  "indicate": {
+    "cloze": [
+      { "sentence": "The results ____ a clear preference for the new design.", "answer": "indicate" },
+      { "sentence": "The survey ____ that most students want more feedback.", "answer": "indicates" },
+      { "sentence": "A rise in the index ____ growing economic confidence.", "answer": "indicates" },
+      { "sentence": "The data ____ that the problem is more widespread than expected.", "answer": "indicate" },
+      { "sentence": "These symptoms ____ an underlying deficiency in the diet.", "answer": "indicate" },
+      { "sentence": "The arrows in the diagram ____ the direction of the flow.", "answer": "indicate" },
+      { "sentence": "The findings ____ a need for further investigation.", "answer": "indicate" },
+      { "sentence": "The graph ____ a gradual decline over three years.", "answer": "indicates" },
+      { "sentence": "Preliminary results ____ that the treatment may be effective.", "answer": "indicate" },
+      { "sentence": "The report ____ several areas that require improvement.", "answer": "indicates" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Kết quả chỉ ra một sự ưa thích rõ ràng đối với thiết kế mới." },
+      { "direction": "vn_to_en", "source": "Khảo sát cho thấy phần lớn học sinh muốn nhận được nhiều phản hồi hơn." },
+      { "direction": "vn_to_en", "source": "Dữ liệu chỉ ra rằng vấn đề phổ biến hơn so với dự kiến." },
+      { "direction": "vn_to_en", "source": "Những phát hiện này cho thấy cần phải nghiên cứu thêm." },
+      { "direction": "vn_to_en", "source": "Kết quả sơ bộ chỉ ra rằng phương pháp điều trị có thể hiệu quả." },
+      { "direction": "en_to_vn", "source": "The data indicate a steady increase in demand." },
+      { "direction": "en_to_vn", "source": "The survey indicates that opinions are sharply divided." },
+      { "direction": "en_to_vn", "source": "These results indicate a need for caution." },
+      { "direction": "en_to_vn", "source": "The chart indicates a decline in participation." },
+      { "direction": "en_to_vn", "source": "Early findings indicate that the approach is promising." }
+    ],
+    "scenario": [
+      "In a results section, neutrally report what the data show. Write one formal sentence.",
+      "Describing a survey in a report, state what the responses point to, using a formal register.",
+      "In a discussion, note what preliminary findings point to, while remaining cautious and formal.",
+      "Writing about a graph, describe the trend the figures point to, in formal English.",
+      "In an abstract, state concisely what your data reveal, formally.",
+      "You are drafting a medical case note; report what the symptoms point to, in a formal register.",
+      "In a report, point out the areas the findings show need improvement, formally.",
+      "Writing a methods figure caption, explain what the arrows show, formally.",
+      "In a conclusion, state what the evidence points to without overstating, formally.",
+      "You are teaching neutral reporting verbs; give a formal example that states what data reveal."
+    ]
+  },
+  "imply": {
+    "cloze": [
+      { "sentence": "The author's tone ____ a degree of scepticism about the findings.", "answer": "implies" },
+      { "sentence": "These results ____ that the relationship is more complex than assumed.", "answer": "imply" },
+      { "sentence": "The policy ____ a shift away from traditional funding models.", "answer": "implies" },
+      { "sentence": "Such a statement ____ that the writer disagrees with the consensus.", "answer": "implies" },
+      { "sentence": "The data do not directly prove causation, but they ____ a strong link.", "answer": "imply" },
+      { "sentence": "His silence on the issue seemed to ____ disapproval.", "answer": "imply" },
+      { "sentence": "The findings ____ that current methods may be inadequate.", "answer": "imply" },
+      { "sentence": "To say the reform 'largely' worked ____ that parts of it did not.", "answer": "implies" },
+      { "sentence": "The wording of the question ____ a preferred answer.", "answer": "implies" },
+      { "sentence": "These observations ____ a need to rethink the existing framework.", "answer": "imply" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Giọng điệu của tác giả ngụ ý một mức độ hoài nghi về kết quả." },
+      { "direction": "vn_to_en", "source": "Những kết quả này hàm ý rằng mối quan hệ phức tạp hơn ta tưởng." },
+      { "direction": "vn_to_en", "source": "Dữ liệu không chứng minh trực tiếp quan hệ nhân quả, nhưng hàm ý một mối liên hệ mạnh." },
+      { "direction": "vn_to_en", "source": "Cách diễn đạt của câu hỏi ngụ ý một câu trả lời được mong đợi." },
+      { "direction": "vn_to_en", "source": "Những phát hiện này hàm ý rằng các phương pháp hiện tại có thể chưa đủ." },
+      { "direction": "en_to_vn", "source": "The results imply that the theory needs revision." },
+      { "direction": "en_to_vn", "source": "The author's choice of words implies a critical stance." },
+      { "direction": "en_to_vn", "source": "This does not prove the claim, but it strongly implies it." },
+      { "direction": "en_to_vn", "source": "The policy implies a major change in priorities." },
+      { "direction": "en_to_vn", "source": "Her comment implied that the study was incomplete." }
+    ],
+    "scenario": [
+      "In a critical essay, describe what an author's tone hints at without stating directly. Write one formal sentence.",
+      "In a discussion, note what your results hint at regarding causation, while being cautious and formal.",
+      "Writing an analysis, explain what a policy's wording suggests indirectly, in a formal register.",
+      "In a text analysis, describe the unstated meaning behind a writer's word choice, formally.",
+      "You are critiquing survey design; explain how a question's wording hints at a preferred answer, formally.",
+      "In a conclusion, state what the findings hint at for existing methods, formally.",
+      "Writing a rhetoric essay, describe how silence on an issue can convey disapproval, in a semi-formal register.",
+      "In a discussion, distinguish between what the data prove and what they merely hint at, formally.",
+      "You are teaching inference; give a formal example showing how a statement suggests an unstated meaning.",
+      "In a formal review, note that a hedge word like 'largely' hints that part of a reform failed."
+    ]
+  },
+  "highlight": {
+    "cloze": [
+      { "sentence": "This study ____ the importance of teacher feedback in language learning.", "answer": "highlights" },
+      { "sentence": "The report ____ several weaknesses in the current system.", "answer": "highlights" },
+      { "sentence": "The author ____ the gap between policy and practice.", "answer": "highlights" },
+      { "sentence": "These findings ____ the need for more inclusive research methods.", "answer": "highlight" },
+      { "sentence": "The chapter ____ how quickly the situation has changed.", "answer": "highlights" },
+      { "sentence": "Recent events have ____ the fragility of the global supply chain.", "answer": "highlighted" },
+      { "sentence": "The data ____ a striking difference between the two groups.", "answer": "highlight" },
+      { "sentence": "It is worth ____ that the sample was relatively small.", "answer": "highlighting" },
+      { "sentence": "The review ____ the main contributions of the earlier work.", "answer": "highlights" },
+      { "sentence": "The graph ____ the sudden drop in enrolment after 2010.", "answer": "highlights" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Nghiên cứu này nhấn mạnh tầm quan trọng của phản hồi từ giáo viên." },
+      { "direction": "vn_to_en", "source": "Báo cáo làm nổi bật một số điểm yếu trong hệ thống hiện tại." },
+      { "direction": "vn_to_en", "source": "Tác giả nhấn mạnh khoảng cách giữa chính sách và thực tiễn." },
+      { "direction": "vn_to_en", "source": "Những phát hiện này làm nổi bật nhu cầu về các phương pháp nghiên cứu bao trùm hơn." },
+      { "direction": "vn_to_en", "source": "Cần lưu ý nhấn mạnh rằng mẫu nghiên cứu tương đối nhỏ." },
+      { "direction": "en_to_vn", "source": "The study highlights the role of motivation in learning." },
+      { "direction": "en_to_vn", "source": "The report highlights the risks of relying on a single supplier." },
+      { "direction": "en_to_vn", "source": "These results highlight a clear difference between the groups." },
+      { "direction": "en_to_vn", "source": "The author highlights the limitations of previous research." },
+      { "direction": "en_to_vn", "source": "The chart highlights the sharp fall in attendance." }
+    ],
+    "scenario": [
+      "In an introduction, stress why your topic matters. Write one formal sentence that draws attention to its importance.",
+      "In a discussion, draw attention to a weakness your study revealed, using a formal register.",
+      "Writing a literature review, draw attention to a gap in previous research, formally.",
+      "In a report, draw attention to a striking difference in the data, in formal English.",
+      "You are summarising a paper; point to its main contributions, formally.",
+      "In a conclusion, stress the need for a change based on your findings, formally.",
+      "Writing about a graph, draw the reader's attention to a sudden drop, formally.",
+      "In a limitations paragraph, draw attention to the small sample size, formally.",
+      "You are teaching emphasis verbs; give a formal example that draws attention to a key point.",
+      "In a formal briefing to managers, stress a risk your analysis has brought to light."
+    ]
+  },
+  "emphasise": {
+    "cloze": [
+      { "sentence": "The author ____ the need for careful interpretation of the results.", "answer": "emphasises" },
+      { "sentence": "Throughout the book, she ____ the role of context in communication.", "answer": "emphasises" },
+      { "sentence": "The report ____ that reform must be gradual to succeed.", "answer": "emphasises" },
+      { "sentence": "It is important to ____ that correlation is not causation.", "answer": "emphasise" },
+      { "sentence": "The findings ____ the value of long-term monitoring.", "answer": "emphasise" },
+      { "sentence": "The teacher ____ the importance of revising regularly.", "answer": "emphasised" },
+      { "sentence": "The study ____ the difference between the two approaches.", "answer": "emphasises" },
+      { "sentence": "The author repeatedly ____ that the sample was limited.", "answer": "emphasises" },
+      { "sentence": "We must ____ the ethical dimension of this research.", "answer": "emphasise" },
+      { "sentence": "The lecture ____ how small habits shape long-term outcomes.", "answer": "emphasised" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Tác giả nhấn mạnh sự cần thiết phải diễn giải kết quả một cách thận trọng." },
+      { "direction": "vn_to_en", "source": "Trong suốt cuốn sách, bà nhấn mạnh vai trò của ngữ cảnh trong giao tiếp." },
+      { "direction": "vn_to_en", "source": "Cần nhấn mạnh rằng tương quan không có nghĩa là quan hệ nhân quả." },
+      { "direction": "vn_to_en", "source": "Những phát hiện này nhấn mạnh giá trị của việc theo dõi lâu dài." },
+      { "direction": "vn_to_en", "source": "Chúng ta phải nhấn mạnh khía cạnh đạo đức của nghiên cứu này." },
+      { "direction": "en_to_vn", "source": "The author emphasises the importance of clear definitions." },
+      { "direction": "en_to_vn", "source": "The report emphasises that change must be gradual." },
+      { "direction": "en_to_vn", "source": "She emphasises the role of practice in language learning." },
+      { "direction": "en_to_vn", "source": "The study emphasises the difference between the two methods." },
+      { "direction": "en_to_vn", "source": "It is worth emphasising that the results are preliminary." }
+    ],
+    "scenario": [
+      "In a discussion, stress a caution readers should keep in mind. Write one formal sentence.",
+      "In an essay, repeatedly stress the importance of context, using a formal register.",
+      "Writing a report, stress that reform must be gradual, in formal English.",
+      "In a methods note, stress the difference between correlation and causation, formally.",
+      "You are drafting a conclusion; stress the ethical dimension of your research, formally.",
+      "In a limitations paragraph, stress that the sample was small, formally.",
+      "Writing lecture notes, stress how small habits shape long-term outcomes, in a semi-formal register.",
+      "In an abstract, stress the main value of your findings, formally.",
+      "You are teaching emphasis verbs; give a formal example that stresses a key caution.",
+      "In a formal memo to staff, stress the importance of following the new procedure carefully."
+    ]
+  },
+  "acknowledge": {
+    "cloze": [
+      { "sentence": "The authors ____ that their sample was too small to be conclusive.", "answer": "acknowledge" },
+      { "sentence": "She ____ the limitations of her study in the final section.", "answer": "acknowledges" },
+      { "sentence": "The report ____ that some data were missing from the earlier survey.", "answer": "acknowledges" },
+      { "sentence": "It must be ____ that the theory does not explain every case.", "answer": "acknowledged" },
+      { "sentence": "The paper ____ the contributions of several earlier researchers.", "answer": "acknowledges" },
+      { "sentence": "While the author ____ the criticism, she does not fully accept it.", "answer": "acknowledges" },
+      { "sentence": "The committee ____ that the process had taken longer than planned.", "answer": "acknowledged" },
+      { "sentence": "The study ____ a possible bias in the way participants were selected.", "answer": "acknowledges" },
+      { "sentence": "We ____ that further work is needed to confirm these results.", "answer": "acknowledge" },
+      { "sentence": "The researchers openly ____ the weaknesses of their method.", "answer": "acknowledge" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Các tác giả thừa nhận rằng mẫu nghiên cứu của họ quá nhỏ để đưa ra kết luận." },
+      { "direction": "vn_to_en", "source": "Bà thừa nhận những hạn chế trong nghiên cứu của mình ở phần cuối." },
+      { "direction": "vn_to_en", "source": "Phải thừa nhận rằng lý thuyết này không giải thích được mọi trường hợp." },
+      { "direction": "vn_to_en", "source": "Bài báo ghi nhận đóng góp của một số nhà nghiên cứu trước đó." },
+      { "direction": "vn_to_en", "source": "Chúng tôi thừa nhận rằng cần thêm nghiên cứu để xác nhận những kết quả này." },
+      { "direction": "en_to_vn", "source": "The authors acknowledge that their method has clear limitations." },
+      { "direction": "en_to_vn", "source": "The report acknowledges that some figures may be inaccurate." },
+      { "direction": "en_to_vn", "source": "While she acknowledges the objection, she does not accept it fully." },
+      { "direction": "en_to_vn", "source": "It must be acknowledged that the evidence is incomplete." },
+      { "direction": "en_to_vn", "source": "The paper acknowledges the work of earlier scholars." }
+    ],
+    "scenario": [
+      "In a limitations section, honestly admit a weakness in your study. Write one formal sentence.",
+      "In a discussion, concede a valid point raised by a critic before responding, using a formal register.",
+      "Writing acknowledgements, recognise the contribution of earlier researchers, formally.",
+      "In a conclusion, admit that more research is needed to confirm your findings, in formal English.",
+      "You are drafting a methods critique; admit a possible bias in participant selection, formally.",
+      "In a rebuttal, concede a partial truth in an opponent's argument before disagreeing, formally.",
+      "Writing a committee report, admit that the process took longer than planned, formally.",
+      "In an abstract, briefly concede a limitation of your approach, formally.",
+      "You are teaching concession language; give a formal example that admits a study's weakness.",
+      "In a formal apology email to collaborators, admit that an error in the data was your responsibility."
+    ]
+  },
+  "note": {
+    "cloze": [
+      { "sentence": "It is important to ____ that the sample was drawn from one region only.", "answer": "note" },
+      { "sentence": "The author ____ that the results were consistent across all trials.", "answer": "notes" },
+      { "sentence": "As several scholars have ____, the definition remains contested.", "answer": "noted" },
+      { "sentence": "The report ____ a small but steady rise in participation.", "answer": "notes" },
+      { "sentence": "We should ____ that these figures are provisional.", "answer": "note" },
+      { "sentence": "The reviewer ____ that the argument was clear but the evidence thin.", "answer": "noted" },
+      { "sentence": "It is worth ____ that the two studies used different measures.", "answer": "noting" },
+      { "sentence": "The author ____, in passing, that the topic deserves further study.", "answer": "notes" },
+      { "sentence": "Researchers have ____ a similar pattern in other populations.", "answer": "noted" },
+      { "sentence": "One must ____ the limitations before applying these conclusions.", "answer": "note" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Cần lưu ý rằng mẫu chỉ được lấy từ một khu vực duy nhất." },
+      { "direction": "vn_to_en", "source": "Tác giả chỉ ra rằng kết quả nhất quán qua tất cả các lần thử nghiệm." },
+      { "direction": "vn_to_en", "source": "Như nhiều học giả đã lưu ý, định nghĩa này vẫn còn gây tranh cãi." },
+      { "direction": "vn_to_en", "source": "Chúng ta nên lưu ý rằng những con số này chỉ là tạm thời." },
+      { "direction": "vn_to_en", "source": "Cần lưu ý rằng hai nghiên cứu đã sử dụng các thước đo khác nhau." },
+      { "direction": "en_to_vn", "source": "It should be noted that the data are incomplete." },
+      { "direction": "en_to_vn", "source": "The author notes that the effect was small but consistent." },
+      { "direction": "en_to_vn", "source": "As previous studies have noted, the trend is not new." },
+      { "direction": "en_to_vn", "source": "It is worth noting that the two groups differed at the start." },
+      { "direction": "en_to_vn", "source": "The reviewer noted several minor errors in the text." }
+    ],
+    "scenario": [
+      "In a limitations paragraph, neutrally point out a constraint of your study. Write one formal sentence.",
+      "In a discussion, calmly point out a consistency in your results, using a formal register.",
+      "Writing a literature review, refer neutrally to a point that scholars have observed, formally.",
+      "In a report, point out that the figures are provisional, in formal English.",
+      "You are peer-reviewing; neutrally point out that two studies used different measures, formally.",
+      "In a conclusion, quietly point out that the findings need cautious application, formally.",
+      "Writing an abstract, neutrally point out a key feature of the data, formally.",
+      "In a footnote-style remark, mention in passing that a topic deserves further study, formally.",
+      "You are teaching neutral reporting; give a formal example that calmly points out a fact.",
+      "In a formal email to a research team, neutrally point out that the deadline figures are still estimates."
+    ]
+  }
+}

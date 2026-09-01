@@ -1,0 +1,1335 @@
+{
+  "collection": {
+    "name": "IELTS Task 2",
+    "emoji": "📝",
+    "description": "Essay language for IELTS Writing Task 2: stance phrases, linkers, academic verbs, hedging, and high-frequency topic vocabulary."
+  },
+  "meta": {
+    "note": "Claude-authored (no external LLM). Fields map to lib/types.ts EnrichableFields; ipa intentionally left blank per captain. Packs are strictly disjoint (no word appears in more than one collection). 'category' is metadata for review/tagging.",
+    "target": "60-80 entries"
+  },
+  "words": [
+    {
+      "word": "in my opinion",
+      "category": "opinion-stance",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "theo ý kiến của tôi",
+      "definition_en": "used to introduce a personal viewpoint",
+      "synonyms": [
+        "in my view",
+        "to my mind",
+        "as I see it"
+      ],
+      "collocations": [
+        "in my opinion, this is",
+        "in my honest opinion"
+      ],
+      "example_simple": "In my opinion, public transport should be free.",
+      "example_complex": "In my opinion, the benefits of remote working clearly outweigh its drawbacks for most employees.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "from my perspective",
+      "category": "opinion-stance",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "theo quan điểm của tôi",
+      "definition_en": "used to signal that what follows is one's own standpoint",
+      "synonyms": [
+        "from my point of view",
+        "in my view"
+      ],
+      "collocations": [
+        "from my perspective, however",
+        "from my personal perspective"
+      ],
+      "example_simple": "From my perspective, both sides have valid points.",
+      "example_complex": "From my perspective, governments should prioritise prevention over punishment when tackling youth crime.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "I firmly believe that",
+      "category": "opinion-stance",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "tôi tin chắc rằng",
+      "definition_en": "a strong way to state a personal conviction",
+      "synonyms": [
+        "I am convinced that",
+        "I strongly believe that"
+      ],
+      "collocations": [
+        "I firmly believe that this",
+        "I firmly believe governments should"
+      ],
+      "example_simple": "I firmly believe that education should be free.",
+      "example_complex": "I firmly believe that investing in renewable energy is the most effective response to climate change.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "it seems to me that",
+      "category": "opinion-stance",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "đối với tôi có vẻ như",
+      "definition_en": "a softer way to introduce an opinion",
+      "synonyms": [
+        "it appears that",
+        "to my mind"
+      ],
+      "collocations": [
+        "it seems to me that",
+        "it seems clear that"
+      ],
+      "example_simple": "It seems to me that both options have risks.",
+      "example_complex": "It seems to me that stricter regulation, rather than an outright ban, would strike a better balance.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "there is no doubt that",
+      "category": "opinion-stance",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "không còn nghi ngờ gì rằng",
+      "definition_en": "used to present something as certain or undeniable",
+      "synonyms": [
+        "undoubtedly",
+        "it is undeniable that"
+      ],
+      "collocations": [
+        "there is no doubt that technology",
+        "there is little doubt that"
+      ],
+      "example_simple": "There is no doubt that exercise improves health.",
+      "example_complex": "There is no doubt that globalisation has reshaped local economies, though its effects are unevenly distributed.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "advocate",
+      "category": "opinion-stance",
+      "part_of_speech": "verb / noun",
+      "ipa": "",
+      "vi_meaning": "ủng hộ, người ủng hộ",
+      "definition_en": "to publicly support an idea or policy; a person who does so",
+      "synonyms": [
+        "support",
+        "champion",
+        "promote"
+      ],
+      "collocations": [
+        "advocate for reform",
+        "a strong advocate of",
+        "advocate banning"
+      ],
+      "example_simple": "Many people advocate free healthcare.",
+      "example_complex": "Those who advocate stricter gun laws argue that they reduce violent crime.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "be in favour of",
+      "category": "opinion-stance",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "ủng hộ, tán thành",
+      "definition_en": "to support a particular idea or proposal",
+      "synonyms": [
+        "support",
+        "back",
+        "endorse"
+      ],
+      "collocations": [
+        "strongly in favour of",
+        "be in favour of the policy"
+      ],
+      "example_simple": "I am in favour of longer school holidays.",
+      "example_complex": "While some are in favour of nuclear power, others regard the risks as unacceptable.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "be opposed to",
+      "category": "opinion-stance",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "phản đối",
+      "definition_en": "to disagree with or resist an idea",
+      "synonyms": [
+        "object to",
+        "be against"
+      ],
+      "collocations": [
+        "strongly opposed to",
+        "be opposed to the plan"
+      ],
+      "example_simple": "Many residents are opposed to the new road.",
+      "example_complex": "Critics who are opposed to zoos contend that no enclosure can replicate an animal's natural habitat.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "concede",
+      "category": "opinion-stance",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "thừa nhận (điều bất lợi cho lập luận)",
+      "definition_en": "to admit that an opposing point is partly true",
+      "synonyms": [
+        "acknowledge",
+        "admit",
+        "grant"
+      ],
+      "collocations": [
+        "one must concede that",
+        "concede a point",
+        "readily concede"
+      ],
+      "example_simple": "I concede that cars are convenient.",
+      "example_complex": "Although one must concede that social media has downsides, its capacity to connect people is undeniable.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "furthermore",
+      "category": "linker",
+      "part_of_speech": "adverb",
+      "ipa": "",
+      "vi_meaning": "hơn nữa, ngoài ra",
+      "definition_en": "used to add a further supporting point",
+      "synonyms": [
+        "moreover",
+        "in addition",
+        "besides"
+      ],
+      "collocations": [
+        "furthermore, this means",
+        "furthermore, research shows"
+      ],
+      "example_simple": "Furthermore, it saves money.",
+      "example_complex": "Furthermore, remote learning gives students in rural areas access to resources they would otherwise lack.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "moreover",
+      "category": "linker",
+      "part_of_speech": "adverb",
+      "ipa": "",
+      "vi_meaning": "hơn nữa, thêm vào đó",
+      "definition_en": "used to introduce an additional and often stronger point",
+      "synonyms": [
+        "furthermore",
+        "in addition",
+        "what is more"
+      ],
+      "collocations": [
+        "moreover, it is clear",
+        "moreover, studies suggest"
+      ],
+      "example_simple": "Moreover, it is good for the environment.",
+      "example_complex": "Moreover, a shorter working week could improve productivity as well as employees' wellbeing.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "in addition",
+      "category": "linker",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "thêm vào đó",
+      "definition_en": "used to add another point",
+      "synonyms": [
+        "additionally",
+        "furthermore",
+        "as well as this"
+      ],
+      "collocations": [
+        "in addition to this",
+        "in addition, governments"
+      ],
+      "example_simple": "In addition, it creates jobs.",
+      "example_complex": "In addition to reducing traffic, cycling infrastructure encourages a healthier lifestyle.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "however",
+      "category": "linker",
+      "part_of_speech": "adverb",
+      "ipa": "",
+      "vi_meaning": "tuy nhiên",
+      "definition_en": "used to introduce a contrasting idea",
+      "synonyms": [
+        "nevertheless",
+        "nonetheless",
+        "yet"
+      ],
+      "collocations": [
+        "however, critics argue",
+        "this, however, ignores"
+      ],
+      "example_simple": "However, there are some problems.",
+      "example_complex": "This approach is efficient; however, it overlooks the needs of low-income families.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "nevertheless",
+      "category": "linker",
+      "part_of_speech": "adverb",
+      "ipa": "",
+      "vi_meaning": "tuy nhiên, dù vậy",
+      "definition_en": "in spite of what has just been said",
+      "synonyms": [
+        "nonetheless",
+        "however",
+        "even so"
+      ],
+      "collocations": [
+        "nevertheless, the benefits",
+        "it is difficult; nevertheless"
+      ],
+      "example_simple": "It is expensive. Nevertheless, it is worth it.",
+      "example_complex": "The policy is controversial; nevertheless, its long-term benefits justify the initial cost.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "on the other hand",
+      "category": "linker",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "mặt khác",
+      "definition_en": "used to introduce the opposing side of an argument",
+      "synonyms": [
+        "conversely",
+        "by contrast",
+        "in contrast"
+      ],
+      "collocations": [
+        "on the one hand ... on the other hand",
+        "on the other hand, however"
+      ],
+      "example_simple": "On the other hand, some people disagree.",
+      "example_complex": "On the other hand, opponents claim that such subsidies distort the market and burden taxpayers.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "in contrast",
+      "category": "linker",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "trái lại, ngược lại",
+      "definition_en": "used to show a clear difference between two things",
+      "synonyms": [
+        "by contrast",
+        "conversely",
+        "on the contrary"
+      ],
+      "collocations": [
+        "in contrast to",
+        "in contrast, developing nations"
+      ],
+      "example_simple": "In contrast, cities are crowded.",
+      "example_complex": "In contrast to previous generations, today's students face intense pressure to specialise early.",
+      "false_friend_note": "Not the same as 'on the contrary', which corrects a false statement rather than comparing two things."
+    },
+    {
+      "word": "whereas",
+      "category": "linker",
+      "part_of_speech": "conjunction",
+      "ipa": "",
+      "vi_meaning": "trong khi (đó)",
+      "definition_en": "used to compare or contrast two facts",
+      "synonyms": [
+        "while",
+        "although"
+      ],
+      "collocations": [
+        "whereas others believe",
+        "some ... whereas others"
+      ],
+      "example_simple": "Some like the city, whereas others prefer the countryside.",
+      "example_complex": "Wealthy nations can fund green technology, whereas poorer ones often struggle to meet basic needs.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "consequently",
+      "category": "linker",
+      "part_of_speech": "adverb",
+      "ipa": "",
+      "vi_meaning": "do đó, kết quả là",
+      "definition_en": "used to introduce a result or effect",
+      "synonyms": [
+        "as a result",
+        "therefore",
+        "thus"
+      ],
+      "collocations": [
+        "consequently, prices rise",
+        "consequently, many people"
+      ],
+      "example_simple": "It rained, and consequently the match was cancelled.",
+      "example_complex": "Fossil fuels are being depleted; consequently, the shift to renewable sources has become urgent.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "therefore",
+      "category": "linker",
+      "part_of_speech": "adverb",
+      "ipa": "",
+      "vi_meaning": "vì vậy, do đó",
+      "definition_en": "for that reason; as a logical result",
+      "synonyms": [
+        "thus",
+        "hence",
+        "as a result"
+      ],
+      "collocations": [
+        "therefore, it is essential",
+        "therefore, governments should"
+      ],
+      "example_simple": "The plan failed; therefore we need a new one.",
+      "example_complex": "Traffic congestion harms both health and the economy; governments should therefore invest in public transport.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "as a result",
+      "category": "linker",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "kết quả là",
+      "definition_en": "because of this; as a consequence",
+      "synonyms": [
+        "consequently",
+        "as a consequence",
+        "therefore"
+      ],
+      "collocations": [
+        "as a result of",
+        "as a result, unemployment"
+      ],
+      "example_simple": "Sales fell, and as a result the shop closed.",
+      "example_complex": "Automation is replacing routine jobs, and as a result many workers must retrain to stay employable.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "for instance",
+      "category": "linker",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "ví dụ",
+      "definition_en": "used to introduce an example",
+      "synonyms": [
+        "for example",
+        "such as",
+        "to illustrate"
+      ],
+      "collocations": [
+        "for instance, in Japan",
+        "take, for instance"
+      ],
+      "example_simple": "Many sports, for instance football, build teamwork.",
+      "example_complex": "Some cities, for instance Amsterdam, have shown that prioritising cyclists can transform urban life.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "despite",
+      "category": "linker",
+      "part_of_speech": "preposition",
+      "ipa": "",
+      "vi_meaning": "mặc dù",
+      "definition_en": "without being affected by something",
+      "synonyms": [
+        "in spite of",
+        "notwithstanding",
+        "regardless of"
+      ],
+      "collocations": [
+        "despite the fact that",
+        "despite these concerns"
+      ],
+      "example_simple": "Despite the rain, they kept playing.",
+      "example_complex": "Despite significant investment, the initiative failed to reduce poverty in the region.",
+      "false_friend_note": "Followed by a noun or -ing, not a full clause: 'despite being tired', not 'despite he was tired'."
+    },
+    {
+      "word": "in order to",
+      "category": "linker",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "để, nhằm",
+      "definition_en": "used to express purpose",
+      "synonyms": [
+        "so as to",
+        "with the aim of",
+        "so that"
+      ],
+      "collocations": [
+        "in order to achieve",
+        "in order to reduce"
+      ],
+      "example_simple": "We save money in order to travel.",
+      "example_complex": "In order to curb obesity, some governments have introduced a tax on sugary drinks.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "in conclusion",
+      "category": "linker",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "tóm lại, kết luận",
+      "definition_en": "used to introduce the final summary of an essay",
+      "synonyms": [
+        "to conclude",
+        "to sum up",
+        "in summary"
+      ],
+      "collocations": [
+        "in conclusion, I believe",
+        "in conclusion, although"
+      ],
+      "example_simple": "In conclusion, I support the idea.",
+      "example_complex": "In conclusion, while both approaches have merit, education is a more sustainable solution than punishment.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "to sum up",
+      "category": "linker",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "tóm lại",
+      "definition_en": "used to summarise the main points",
+      "synonyms": [
+        "in summary",
+        "in conclusion",
+        "overall"
+      ],
+      "collocations": [
+        "to sum up, the evidence",
+        "to sum up, therefore"
+      ],
+      "example_simple": "To sum up, the plan has clear benefits.",
+      "example_complex": "To sum up, the evidence suggests that prevention is both cheaper and more humane than punishment.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "address",
+      "category": "academic-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "giải quyết, đối phó với (vấn đề)",
+      "definition_en": "to deal with or tackle a problem",
+      "synonyms": [
+        "tackle",
+        "deal with",
+        "handle"
+      ],
+      "collocations": [
+        "address the issue",
+        "address the problem of",
+        "address concerns"
+      ],
+      "example_simple": "The city must address pollution.",
+      "example_complex": "To address rising inequality, governments need policies that go beyond short-term relief.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "outweigh",
+      "category": "academic-verb",
+      "part_of_speech": "verb",
+      "ipa": "",
+      "vi_meaning": "vượt trội hơn, quan trọng hơn",
+      "definition_en": "to be greater in value or importance than something else",
+      "synonyms": [
+        "exceed",
+        "surpass"
+      ],
+      "collocations": [
+        "the benefits outweigh the drawbacks",
+        "advantages outweigh disadvantages"
+      ],
+      "example_simple": "The benefits outweigh the costs.",
+      "example_complex": "For most families, the advantages of relocating clearly outweigh the disruption it causes.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "arguably",
+      "category": "hedging",
+      "part_of_speech": "adverb",
+      "ipa": "",
+      "vi_meaning": "có thể cho rằng, được cho là",
+      "definition_en": "used to say something can reasonably be argued",
+      "synonyms": [
+        "possibly",
+        "conceivably"
+      ],
+      "collocations": [
+        "arguably the most",
+        "this is arguably"
+      ],
+      "example_simple": "It is arguably the best solution.",
+      "example_complex": "Education is arguably the single most effective tool for lifting communities out of poverty.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "to some extent",
+      "category": "hedging",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "ở một mức độ nào đó",
+      "definition_en": "partly but not completely",
+      "synonyms": [
+        "to a degree",
+        "partly",
+        "in part"
+      ],
+      "collocations": [
+        "true to some extent",
+        "to a certain extent"
+      ],
+      "example_simple": "This is true to some extent.",
+      "example_complex": "While automation threatens jobs to some extent, it also creates new roles that did not exist before.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "tend to",
+      "category": "hedging",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "có xu hướng",
+      "definition_en": "to be likely to behave in a particular way, generally",
+      "synonyms": [
+        "be inclined to",
+        "be likely to"
+      ],
+      "collocations": [
+        "people tend to",
+        "tend to believe",
+        "tends to increase"
+      ],
+      "example_simple": "Prices tend to rise in summer.",
+      "example_complex": "Students who receive early feedback tend to perform better in their final assessments.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "it can be argued that",
+      "category": "hedging",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "có thể lập luận rằng",
+      "definition_en": "a cautious way to introduce a debatable claim",
+      "synonyms": [
+        "one could argue that",
+        "it might be said that"
+      ],
+      "collocations": [
+        "it can be argued that",
+        "it could be argued that"
+      ],
+      "example_simple": "It can be argued that both are important.",
+      "example_complex": "It can be argued that access to the internet has become as essential as access to clean water.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "by and large",
+      "category": "hedging",
+      "part_of_speech": "phrase",
+      "ipa": "",
+      "vi_meaning": "nhìn chung, đại thể",
+      "definition_en": "generally speaking; on the whole",
+      "synonyms": [
+        "on the whole",
+        "generally",
+        "broadly speaking"
+      ],
+      "collocations": [
+        "by and large, people",
+        "by and large successful"
+      ],
+      "example_simple": "By and large, the plan worked well.",
+      "example_complex": "By and large, the policy has succeeded, though a minority of residents remain dissatisfied.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "relatively",
+      "category": "hedging",
+      "part_of_speech": "adverb",
+      "ipa": "",
+      "vi_meaning": "tương đối",
+      "definition_en": "to a moderate degree, in comparison with something else",
+      "synonyms": [
+        "fairly",
+        "comparatively",
+        "reasonably"
+      ],
+      "collocations": [
+        "relatively small",
+        "relatively few",
+        "relatively cheap"
+      ],
+      "example_simple": "The cost is relatively low.",
+      "example_complex": "Although relatively expensive at first, solar panels become cost-effective within a decade.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "significant",
+      "category": "hedging",
+      "part_of_speech": "adjective",
+      "ipa": "",
+      "vi_meaning": "đáng kể, quan trọng",
+      "definition_en": "large or important enough to have an effect",
+      "synonyms": [
+        "considerable",
+        "substantial",
+        "notable"
+      ],
+      "collocations": [
+        "a significant impact",
+        "significant increase",
+        "significant role"
+      ],
+      "example_simple": "There was a significant change.",
+      "example_complex": "Immigration has had a significant impact on the country's cultural and economic landscape.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "widespread",
+      "category": "hedging",
+      "part_of_speech": "adjective",
+      "ipa": "",
+      "vi_meaning": "phổ biến, lan rộng",
+      "definition_en": "existing or happening over a large area or among many people",
+      "synonyms": [
+        "prevalent",
+        "pervasive",
+        "common"
+      ],
+      "collocations": [
+        "widespread use of",
+        "widespread concern",
+        "become widespread"
+      ],
+      "example_simple": "Smartphone use is widespread.",
+      "example_complex": "There is widespread agreement that current levels of consumption are environmentally unsustainable.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "detrimental",
+      "category": "hedging",
+      "part_of_speech": "adjective",
+      "ipa": "",
+      "vi_meaning": "có hại, bất lợi",
+      "definition_en": "causing harm or damage",
+      "synonyms": [
+        "harmful",
+        "damaging",
+        "adverse"
+      ],
+      "collocations": [
+        "detrimental to health",
+        "have a detrimental effect"
+      ],
+      "example_simple": "Too much sugar is detrimental to health.",
+      "example_complex": "Excessive screen time can be detrimental to children's sleep and concentration.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "climate change",
+      "category": "topic-environment",
+      "part_of_speech": "noun phrase",
+      "ipa": "",
+      "vi_meaning": "biến đổi khí hậu",
+      "definition_en": "long-term shifts in temperature and weather patterns, largely human-caused",
+      "synonyms": [
+        "global warming"
+      ],
+      "collocations": [
+        "combat climate change",
+        "the effects of climate change",
+        "tackle climate change"
+      ],
+      "example_simple": "Climate change affects everyone.",
+      "example_complex": "Tackling climate change requires coordinated action from governments, businesses and individuals alike.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "carbon footprint",
+      "category": "topic-environment",
+      "part_of_speech": "noun phrase",
+      "ipa": "",
+      "vi_meaning": "lượng khí thải carbon (dấu chân carbon)",
+      "definition_en": "the amount of carbon dioxide a person or activity produces",
+      "synonyms": [
+        "carbon emissions"
+      ],
+      "collocations": [
+        "reduce your carbon footprint",
+        "a large carbon footprint"
+      ],
+      "example_simple": "Flying increases your carbon footprint.",
+      "example_complex": "Consumers can lower their carbon footprint by eating less meat and choosing local produce.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "renewable energy",
+      "category": "topic-environment",
+      "part_of_speech": "noun phrase",
+      "ipa": "",
+      "vi_meaning": "năng lượng tái tạo",
+      "definition_en": "energy from sources that are not depleted, such as sun and wind",
+      "synonyms": [
+        "clean energy",
+        "green energy"
+      ],
+      "collocations": [
+        "invest in renewable energy",
+        "renewable energy sources"
+      ],
+      "example_simple": "Renewable energy is becoming cheaper.",
+      "example_complex": "Shifting to renewable energy would reduce both pollution and dependence on imported fuel.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "sustainable",
+      "category": "topic-environment",
+      "part_of_speech": "adjective",
+      "ipa": "",
+      "vi_meaning": "bền vững",
+      "definition_en": "able to continue without harming the environment or resources",
+      "synonyms": [
+        "viable",
+        "environmentally friendly"
+      ],
+      "collocations": [
+        "sustainable development",
+        "sustainable growth",
+        "environmentally sustainable"
+      ],
+      "example_simple": "We need sustainable farming.",
+      "example_complex": "Sustainable development seeks to meet present needs without compromising future generations.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "academic pressure",
+      "category": "topic-education",
+      "part_of_speech": "noun phrase",
+      "ipa": "",
+      "vi_meaning": "áp lực học tập",
+      "definition_en": "stress caused by demands to perform well in study",
+      "synonyms": [
+        "study stress",
+        "academic stress"
+      ],
+      "collocations": [
+        "under academic pressure",
+        "cope with academic pressure"
+      ],
+      "example_simple": "Students face academic pressure.",
+      "example_complex": "Intense academic pressure can undermine the very creativity that education is meant to nurture.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "curriculum",
+      "category": "topic-education",
+      "part_of_speech": "noun",
+      "ipa": "",
+      "vi_meaning": "chương trình giảng dạy",
+      "definition_en": "the subjects and content taught in a school or course",
+      "synonyms": [
+        "syllabus",
+        "course of study"
+      ],
+      "collocations": [
+        "the school curriculum",
+        "reform the curriculum",
+        "part of the curriculum"
+      ],
+      "example_simple": "The curriculum includes science and art.",
+      "example_complex": "Many argue that the national curriculum should include practical skills such as budgeting and cooking.",
+      "false_friend_note": "Plural is 'curricula' or 'curriculums'."
+    },
+    {
+      "word": "vocational training",
+      "category": "topic-education",
+      "part_of_speech": "noun phrase",
+      "ipa": "",
+      "vi_meaning": "đào tạo nghề",
+      "definition_en": "education that teaches practical skills for a specific job",
+      "synonyms": [
+        "job training",
+        "technical training"
+      ],
+      "collocations": [
+        "offer vocational training",
+        "vocational courses"
+      ],
+      "example_simple": "Vocational training leads to real jobs.",
+      "example_complex": "Expanding vocational training could reduce youth unemployment more quickly than pushing everyone towards university.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "digital literacy",
+      "category": "topic-technology",
+      "part_of_speech": "noun phrase",
+      "ipa": "",
+      "vi_meaning": "năng lực số, hiểu biết về công nghệ",
+      "definition_en": "the ability to use digital technology effectively and safely",
+      "synonyms": [
+        "digital skills",
+        "computer literacy"
+      ],
+      "collocations": [
+        "improve digital literacy",
+        "a lack of digital literacy"
+      ],
+      "example_simple": "Digital literacy is now essential.",
+      "example_complex": "Without adequate digital literacy, older citizens risk being excluded from essential online services.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "surveillance",
+      "category": "topic-technology",
+      "part_of_speech": "noun",
+      "ipa": "",
+      "vi_meaning": "sự giám sát, theo dõi",
+      "definition_en": "close watching of people, often by authorities or cameras",
+      "synonyms": [
+        "monitoring",
+        "observation"
+      ],
+      "collocations": [
+        "mass surveillance",
+        "under surveillance",
+        "surveillance cameras"
+      ],
+      "example_simple": "The city uses surveillance cameras.",
+      "example_complex": "Widespread surveillance may deter crime, but it also raises serious concerns about personal privacy.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "automation",
+      "category": "topic-technology",
+      "part_of_speech": "noun",
+      "ipa": "",
+      "vi_meaning": "tự động hóa",
+      "definition_en": "the use of machines and technology to do work instead of people",
+      "synonyms": [
+        "mechanisation"
+      ],
+      "collocations": [
+        "the rise of automation",
+        "automation replaces jobs"
+      ],
+      "example_simple": "Automation is changing factories.",
+      "example_complex": "As automation spreads, workers will increasingly need to develop skills that machines cannot easily replicate.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "deterrent",
+      "category": "topic-crime",
+      "part_of_speech": "noun",
+      "ipa": "",
+      "vi_meaning": "biện pháp răn đe",
+      "definition_en": "something that discourages people from doing something wrong",
+      "synonyms": [
+        "disincentive",
+        "discouragement"
+      ],
+      "collocations": [
+        "act as a deterrent",
+        "an effective deterrent",
+        "a strong deterrent"
+      ],
+      "example_simple": "Fines act as a deterrent.",
+      "example_complex": "Supporters of harsh sentencing claim it serves as a deterrent, though the evidence is far from conclusive.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "rehabilitation",
+      "category": "topic-crime",
+      "part_of_speech": "noun",
+      "ipa": "",
+      "vi_meaning": "sự cải tạo, phục hồi (tội phạm)",
+      "definition_en": "the process of helping offenders return to normal life",
+      "synonyms": [
+        "reform",
+        "reintegration"
+      ],
+      "collocations": [
+        "focus on rehabilitation",
+        "rehabilitation programme"
+      ],
+      "example_simple": "Prisons should focus on rehabilitation.",
+      "example_complex": "A justice system built around rehabilitation rather than punishment tends to lower reoffending rates.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "crime rate",
+      "category": "topic-crime",
+      "part_of_speech": "noun phrase",
+      "ipa": "",
+      "vi_meaning": "tỷ lệ tội phạm",
+      "definition_en": "the number of crimes committed in a place over a period",
+      "synonyms": [
+        "level of crime"
+      ],
+      "collocations": [
+        "a high crime rate",
+        "reduce the crime rate",
+        "the crime rate rose"
+      ],
+      "example_simple": "The crime rate fell last year.",
+      "example_complex": "Cities that invest in youth programmes often see a marked drop in the crime rate over time.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "obesity",
+      "category": "topic-health",
+      "part_of_speech": "noun",
+      "ipa": "",
+      "vi_meaning": "béo phì",
+      "definition_en": "the condition of being severely overweight",
+      "synonyms": [
+        "excess weight"
+      ],
+      "collocations": [
+        "childhood obesity",
+        "tackle obesity",
+        "obesity rates"
+      ],
+      "example_simple": "Obesity is a growing problem.",
+      "example_complex": "Rising obesity places an enormous strain on healthcare systems already stretched to their limits.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "sedentary lifestyle",
+      "category": "topic-health",
+      "part_of_speech": "noun phrase",
+      "ipa": "",
+      "vi_meaning": "lối sống ít vận động",
+      "definition_en": "a way of living with little physical activity",
+      "synonyms": [
+        "inactive lifestyle"
+      ],
+      "collocations": [
+        "lead a sedentary lifestyle",
+        "a sedentary job"
+      ],
+      "example_simple": "A sedentary lifestyle harms health.",
+      "example_complex": "The shift towards a sedentary lifestyle, driven by desk jobs and screens, has fuelled a range of chronic illnesses.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "public healthcare",
+      "category": "topic-health",
+      "part_of_speech": "noun phrase",
+      "ipa": "",
+      "vi_meaning": "y tế công cộng",
+      "definition_en": "medical services provided or funded by the government",
+      "synonyms": [
+        "public health system",
+        "state healthcare"
+      ],
+      "collocations": [
+        "free public healthcare",
+        "invest in public healthcare"
+      ],
+      "example_simple": "Public healthcare should be free.",
+      "example_complex": "Well-funded public healthcare ensures that treatment depends on need rather than the ability to pay.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "standard of living",
+      "category": "topic-society",
+      "part_of_speech": "noun phrase",
+      "ipa": "",
+      "vi_meaning": "mức sống",
+      "definition_en": "the level of comfort and wealth a person or group has",
+      "synonyms": [
+        "quality of life",
+        "living standards"
+      ],
+      "collocations": [
+        "a high standard of living",
+        "raise the standard of living"
+      ],
+      "example_simple": "Their standard of living improved.",
+      "example_complex": "Economic growth has raised the standard of living for many, yet the gains remain unevenly shared.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "income inequality",
+      "category": "topic-society",
+      "part_of_speech": "noun phrase",
+      "ipa": "",
+      "vi_meaning": "bất bình đẳng thu nhập",
+      "definition_en": "the unequal distribution of income across a society",
+      "synonyms": [
+        "wealth gap",
+        "economic inequality"
+      ],
+      "collocations": [
+        "widening income inequality",
+        "reduce income inequality"
+      ],
+      "example_simple": "Income inequality is rising.",
+      "example_complex": "Growing income inequality can erode social cohesion and fuel political instability.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "globalisation",
+      "category": "topic-society",
+      "part_of_speech": "noun",
+      "ipa": "",
+      "vi_meaning": "toàn cầu hóa",
+      "definition_en": "the process by which economies and cultures become interconnected worldwide",
+      "synonyms": [
+        "global integration"
+      ],
+      "collocations": [
+        "the effects of globalisation",
+        "globalisation has led to"
+      ],
+      "example_simple": "Globalisation connects markets.",
+      "example_complex": "Globalisation has lifted millions out of poverty while also threatening local traditions and industries.",
+      "false_friend_note": "British spelling; 'globalization' in American English."
+    },
+    {
+      "word": "urbanisation",
+      "category": "topic-society",
+      "part_of_speech": "noun",
+      "ipa": "",
+      "vi_meaning": "đô thị hóa",
+      "definition_en": "the growth of towns and cities as people move from the countryside",
+      "synonyms": [
+        "urban growth"
+      ],
+      "collocations": [
+        "rapid urbanisation",
+        "the pace of urbanisation"
+      ],
+      "example_simple": "Urbanisation is speeding up.",
+      "example_complex": "Rapid urbanisation has outpaced infrastructure, leaving many cities struggling with congestion and housing shortages.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "infrastructure",
+      "category": "topic-society",
+      "part_of_speech": "noun",
+      "ipa": "",
+      "vi_meaning": "cơ sở hạ tầng",
+      "definition_en": "the basic systems and services a society needs, such as roads and power",
+      "synonyms": [
+        "facilities",
+        "public works"
+      ],
+      "collocations": [
+        "invest in infrastructure",
+        "transport infrastructure",
+        "poor infrastructure"
+      ],
+      "example_simple": "The city needs better infrastructure.",
+      "example_complex": "Reliable infrastructure is a precondition for economic growth, yet many developing nations lack the funds to build it.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "work-life balance",
+      "category": "topic-society",
+      "part_of_speech": "noun phrase",
+      "ipa": "",
+      "vi_meaning": "cân bằng công việc và cuộc sống",
+      "definition_en": "a healthy division between time spent working and on personal life",
+      "synonyms": [
+        "life balance"
+      ],
+      "collocations": [
+        "a good work-life balance",
+        "maintain work-life balance"
+      ],
+      "example_simple": "A good work-life balance reduces stress.",
+      "example_complex": "Flexible hours and remote options can help employees achieve a healthier work-life balance.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "quota",
+      "category": "topic-society",
+      "part_of_speech": "noun",
+      "ipa": "",
+      "vi_meaning": "hạn ngạch, chỉ tiêu",
+      "definition_en": "a fixed limit or share that is officially allowed or required",
+      "synonyms": [
+        "limit",
+        "allocation"
+      ],
+      "collocations": [
+        "a gender quota",
+        "impose a quota",
+        "meet a quota"
+      ],
+      "example_simple": "The country set an import quota.",
+      "example_complex": "Some argue that hiring quotas promote fairness, while others believe they undermine merit.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "subsidy",
+      "category": "topic-society",
+      "part_of_speech": "noun",
+      "ipa": "",
+      "vi_meaning": "khoản trợ cấp",
+      "definition_en": "money paid by a government to support an industry or lower a price",
+      "synonyms": [
+        "grant",
+        "financial support"
+      ],
+      "collocations": [
+        "government subsidy",
+        "provide subsidies",
+        "cut subsidies"
+      ],
+      "example_simple": "Farmers receive a subsidy.",
+      "example_complex": "Fuel subsidies keep prices low for consumers but can discourage the switch to cleaner energy.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "pollution",
+      "category": "topic-environment",
+      "part_of_speech": "noun",
+      "ipa": "",
+      "vi_meaning": "sự ô nhiễm",
+      "definition_en": "the presence of harmful substances in the environment",
+      "synonyms": [
+        "contamination"
+      ],
+      "collocations": [
+        "air pollution",
+        "reduce pollution",
+        "environmental pollution"
+      ],
+      "example_simple": "Air pollution is a serious problem in big cities.",
+      "example_complex": "Traffic is a major source of pollution, which in turn harms public health and the climate.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "deforestation",
+      "category": "topic-environment",
+      "part_of_speech": "noun",
+      "ipa": "",
+      "vi_meaning": "nạn phá rừng",
+      "definition_en": "the clearing of forests on a large scale",
+      "synonyms": [
+        "forest clearance"
+      ],
+      "collocations": [
+        "large-scale deforestation",
+        "cause deforestation",
+        "combat deforestation"
+      ],
+      "example_simple": "Deforestation destroys animal habitats.",
+      "example_complex": "Widespread deforestation not only threatens biodiversity but also accelerates climate change.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "unemployment",
+      "category": "topic-society",
+      "part_of_speech": "noun",
+      "ipa": "",
+      "vi_meaning": "tình trạng thất nghiệp",
+      "definition_en": "the state of not having a job",
+      "synonyms": [
+        "joblessness"
+      ],
+      "collocations": [
+        "high unemployment",
+        "rising unemployment",
+        "youth unemployment"
+      ],
+      "example_simple": "Unemployment rose during the crisis.",
+      "example_complex": "Rising youth unemployment can lead to social unrest if it is left unaddressed.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "welfare state",
+      "category": "topic-society",
+      "part_of_speech": "noun phrase",
+      "ipa": "",
+      "vi_meaning": "nhà nước phúc lợi",
+      "definition_en": "a system in which the government provides social and financial support",
+      "synonyms": [
+        "social safety net"
+      ],
+      "collocations": [
+        "a generous welfare state",
+        "fund the welfare state"
+      ],
+      "example_simple": "The welfare state supports those in need.",
+      "example_complex": "Supporters argue that a strong welfare state reduces poverty, while critics claim it discourages work.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "mental health",
+      "category": "topic-health",
+      "part_of_speech": "noun phrase",
+      "ipa": "",
+      "vi_meaning": "sức khỏe tinh thần",
+      "definition_en": "a person's emotional and psychological well-being",
+      "synonyms": [
+        "psychological well-being"
+      ],
+      "collocations": [
+        "mental health issues",
+        "improve mental health",
+        "mental health support"
+      ],
+      "example_simple": "Exercise is good for mental health.",
+      "example_complex": "Growing awareness of mental health has encouraged more people to seek professional help.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "critical thinking",
+      "category": "topic-education",
+      "part_of_speech": "noun phrase",
+      "ipa": "",
+      "vi_meaning": "tư duy phản biện",
+      "definition_en": "the ability to analyse information and form reasoned judgements",
+      "synonyms": [
+        "analytical thinking"
+      ],
+      "collocations": [
+        "develop critical thinking",
+        "critical thinking skills"
+      ],
+      "example_simple": "Schools should teach critical thinking.",
+      "example_complex": "Rather than memorising facts, students benefit far more from developing critical thinking skills.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "artificial intelligence",
+      "category": "topic-technology",
+      "part_of_speech": "noun phrase",
+      "ipa": "",
+      "vi_meaning": "trí tuệ nhân tạo",
+      "definition_en": "computer systems able to perform tasks that normally require human intelligence",
+      "synonyms": [
+        "AI"
+      ],
+      "collocations": [
+        "advances in artificial intelligence",
+        "artificial intelligence is transforming"
+      ],
+      "example_simple": "Artificial intelligence is changing many jobs.",
+      "example_complex": "While artificial intelligence boosts efficiency, it also raises concerns about job losses and privacy.",
+      "false_friend_note": ""
+    },
+    {
+      "word": "raise awareness",
+      "category": "essay-phrase",
+      "part_of_speech": "phrase (verb)",
+      "ipa": "",
+      "vi_meaning": "nâng cao nhận thức",
+      "definition_en": "to make people more informed about an issue",
+      "synonyms": [
+        "increase awareness"
+      ],
+      "collocations": [
+        "raise awareness of",
+        "campaigns to raise awareness"
+      ],
+      "example_simple": "The campaign raised awareness of recycling.",
+      "example_complex": "Governments can raise public awareness of environmental issues through education and the media.",
+      "false_friend_note": ""
+    }
+  ]
+}

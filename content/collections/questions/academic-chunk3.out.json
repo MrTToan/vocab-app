@@ -1,0 +1,572 @@
+{
+  "result in": {
+    "cloze": [
+      { "sentence": "The researchers found that prolonged exposure to noise can ____ measurable declines in concentration.", "answer": "result in" },
+      { "sentence": "Poor planning at the design stage often ____ significant cost overruns later in the project.", "answer": "results in" },
+      { "sentence": "The policy change ____ a sharp increase in the number of applications the following year.", "answer": "resulted in" },
+      { "sentence": "Reducing the sample size may ____ conclusions that are difficult to generalise.", "answer": "result in" },
+      { "sentence": "Their failure to standardise the procedure ____ inconsistent measurements across the trials.", "answer": "resulted in" },
+      { "sentence": "The study demonstrates how urban expansion is ____ the loss of agricultural land.", "answer": "resulting in" },
+      { "sentence": "A small change in temperature can ____ a large shift in the reaction rate.", "answer": "result in" },
+      { "sentence": "The new teaching method ____ higher retention rates among first-year students.", "answer": "resulted in" },
+      { "sentence": "Ignoring these variables typically ____ a biased estimate of the true effect.", "answer": "results in" },
+      { "sentence": "Each additional restriction on trade ____ a corresponding drop in overall output.", "answer": "results in" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Việc thiếu ngủ kéo dài có thể dẫn đến suy giảm trí nhớ nghiêm trọng." },
+      { "direction": "vn_to_en", "source": "Chính sách mới đã dẫn đến sự gia tăng đáng kể về số lượng người thất nghiệp." },
+      { "direction": "vn_to_en", "source": "Việc thu thập dữ liệu không cẩn thận có thể dẫn đến những kết luận sai lệch." },
+      { "direction": "vn_to_en", "source": "Sự nóng lên toàn cầu đang dẫn đến mực nước biển dâng cao ở nhiều khu vực." },
+      { "direction": "vn_to_en", "source": "Việc cắt giảm ngân sách đã dẫn đến sự sụt giảm chất lượng dịch vụ công." },
+      { "direction": "en_to_vn", "source": "Continued deforestation is likely to result in the extinction of several native species." },
+      { "direction": "en_to_vn", "source": "The experiment resulted in a clear correlation between the two variables." },
+      { "direction": "en_to_vn", "source": "Overuse of antibiotics can result in resistant strains of bacteria." },
+      { "direction": "en_to_vn", "source": "Their negligence resulted in a serious breach of the safety regulations." },
+      { "direction": "en_to_vn", "source": "Higher tuition fees may result in fewer students enrolling in postgraduate courses." }
+    ],
+    "scenario": [
+      "In a formal research abstract, state that your intervention led to a reduction in patient recovery time. Use 'result in'.",
+      "Writing an academic essay on climate change, describe a consequence of rising emissions in a formal register using 'result in'.",
+      "In a lab report's discussion section, explain the outcome of increasing the concentration of a reagent. Use 'result in'.",
+      "Drafting a formal policy brief, describe what happened after a regulation was introduced, using 'result in'.",
+      "In a university seminar presentation, explain the effect of poor time management on grades using a formal phrasing with 'result in'.",
+      "Writing a cause-and-effect paragraph for an IELTS Task 2 essay, link industrialisation to pollution using 'result in'.",
+      "In a formal business report, describe how a supply-chain delay affected quarterly sales using 'result in'.",
+      "Writing the conclusion of a dissertation chapter, summarise how a variable affected the outcome using 'result in'.",
+      "In an academic email to a supervisor, explain what a change in methodology might produce, using 'result in'.",
+      "Drafting a formal literature review, note what a cited study found followed from a certain condition, using 'result in'."
+    ]
+  },
+  "give rise to": {
+    "cloze": [
+      { "sentence": "Rapid industrialisation in the region has ____ serious environmental concerns.", "answer": "given rise to" },
+      { "sentence": "Such ambiguous wording in the contract can ____ numerous legal disputes.", "answer": "give rise to" },
+      { "sentence": "The economic downturn ____ widespread public dissatisfaction with the government.", "answer": "gave rise to" },
+      { "sentence": "These findings ____ a number of important questions about the theory's validity.", "answer": "give rise to" },
+      { "sentence": "The invention of the printing press ____ an unprecedented spread of ideas.", "answer": "gave rise to" },
+      { "sentence": "Unequal access to education continues to ____ deep social divisions.", "answer": "give rise to" },
+      { "sentence": "The new evidence is ____ fresh debate among historians.", "answer": "giving rise to" },
+      { "sentence": "Overcrowding in cities can ____ a range of public-health problems.", "answer": "give rise to" },
+      { "sentence": "Their conflicting testimonies ____ considerable uncertainty about what actually happened.", "answer": "gave rise to" },
+      { "sentence": "Ambiguities in the data may ____ competing interpretations among scholars.", "answer": "give rise to" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Sự bất bình đẳng thu nhập đã làm nảy sinh nhiều căng thẳng xã hội." },
+      { "direction": "vn_to_en", "source": "Cuộc cách mạng công nghiệp đã làm nảy sinh một tầng lớp lao động mới." },
+      { "direction": "vn_to_en", "source": "Những phát hiện này làm nảy sinh nhiều câu hỏi mới về nguồn gốc của vũ trụ." },
+      { "direction": "vn_to_en", "source": "Việc thiếu quy định rõ ràng có thể làm nảy sinh tình trạng lạm dụng quyền lực." },
+      { "direction": "vn_to_en", "source": "Đô thị hóa nhanh chóng đã làm nảy sinh nhiều vấn đề về nhà ở." },
+      { "direction": "en_to_vn", "source": "The policy gave rise to a heated debate among economists." },
+      { "direction": "en_to_vn", "source": "New technologies often give rise to unforeseen ethical dilemmas." },
+      { "direction": "en_to_vn", "source": "The merger gave rise to concerns about reduced competition in the market." },
+      { "direction": "en_to_vn", "source": "Globalisation has given rise to a more interconnected but unequal world." },
+      { "direction": "en_to_vn", "source": "The ambiguity of the law gives rise to inconsistent court rulings." }
+    ],
+    "scenario": [
+      "In a formal history essay, explain what social changes a major invention produced. Use 'give rise to'.",
+      "Writing an academic paper's introduction, note the questions your data prompted, using 'give rise to'.",
+      "In a formal debate, argue that a policy created new problems using 'give rise to'.",
+      "Drafting a sociology essay, describe how inequality produces tension, using 'give rise to'.",
+      "In a research discussion, mention the debate your results have sparked using 'give rise to'.",
+      "Writing a formal report on technology, describe an unexpected ethical issue that emerged, using 'give rise to'.",
+      "In an academic lecture summary, explain how one movement produced another, using 'give rise to'.",
+      "Drafting an economics essay, describe consequences of a market change formally with 'give rise to'.",
+      "In a legal analysis, note how vague wording creates disputes, using 'give rise to'.",
+      "Writing a formal literature review, note the controversy a study prompted, using 'give rise to'."
+    ]
+  },
+  "stem from": {
+    "cloze": [
+      { "sentence": "Many of the students' difficulties ____ a lack of foundational reading skills.", "answer": "stem from" },
+      { "sentence": "The conflict, the author argues, ____ centuries of unresolved territorial disputes.", "answer": "stems from" },
+      { "sentence": "Much of the confusion ____ the ambiguous wording of the original text.", "answer": "stems from" },
+      { "sentence": "These economic problems largely ____ years of underinvestment in infrastructure.", "answer": "stem from" },
+      { "sentence": "Her interest in the subject ____ an experience she had as a child.", "answer": "stemmed from" },
+      { "sentence": "The disagreement appears to ____ differing interpretations of the same evidence.", "answer": "stem from" },
+      { "sentence": "Public distrust of the institution ____ a series of well-publicised scandals.", "answer": "stems from" },
+      { "sentence": "Many misconceptions about the disease ____ outdated medical literature.", "answer": "stem from" },
+      { "sentence": "The errors in the calculation ____ a flawed assumption in the model.", "answer": "stemmed from" },
+      { "sentence": "The theory suggests that such behaviour may ____ early childhood experiences.", "answer": "stem from" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Nhiều vấn đề kinh tế bắt nguồn từ chính sách quản lý yếu kém." },
+      { "direction": "vn_to_en", "source": "Sự hiểu lầm này bắt nguồn từ cách diễn đạt không rõ ràng của tác giả." },
+      { "direction": "vn_to_en", "source": "Xung đột giữa hai nước bắt nguồn từ những tranh chấp lịch sử lâu đời." },
+      { "direction": "vn_to_en", "source": "Nỗi sợ hãi của cô ấy bắt nguồn từ một trải nghiệm thời thơ ấu." },
+      { "direction": "vn_to_en", "source": "Phần lớn thành kiến bắt nguồn từ sự thiếu hiểu biết về văn hóa khác." },
+      { "direction": "en_to_vn", "source": "The author's argument stems from a careful analysis of primary sources." },
+      { "direction": "en_to_vn", "source": "Many social problems stem from persistent economic inequality." },
+      { "direction": "en_to_vn", "source": "The controversy stems from a misunderstanding of the original findings." },
+      { "direction": "en_to_vn", "source": "His scepticism stemmed from years of contradictory research results." },
+      { "direction": "en_to_vn", "source": "These environmental issues stem from decades of unregulated industrial activity." }
+    ],
+    "scenario": [
+      "In a formal essay, trace a modern problem back to its historical roots. Use 'stem from'.",
+      "Writing an academic discussion section, explain the source of an unexpected error, using 'stem from'.",
+      "In a psychology paper, describe the origin of a behaviour formally with 'stem from'.",
+      "Drafting a political-science essay, explain where a conflict originates using 'stem from'.",
+      "In a formal report, identify the root cause of a recurring failure using 'stem from'.",
+      "Writing a literature review, note where a common misconception comes from, using 'stem from'.",
+      "In an academic email, explain to your tutor the origin of your research interest using 'stem from'.",
+      "Drafting a sociology essay, connect present inequality to its historical origin with 'stem from'.",
+      "In a formal analysis, argue that a disagreement arises from differing assumptions, using 'stem from'.",
+      "Writing an economics essay, attribute current difficulties to past decisions using 'stem from'."
+    ]
+  },
+  "attribute to": {
+    "cloze": [
+      { "sentence": "The researchers ____ the improvement to the newly introduced training programme.", "answer": "attribute" },
+      { "sentence": "Historians commonly ____ the empire's decline ____ economic mismanagement.", "answer": "attribute … to" },
+      { "sentence": "It would be misleading to ____ the entire effect ____ a single variable.", "answer": "attribute … to" },
+      { "sentence": "The rise in sales can largely be ____ the successful marketing campaign.", "answer": "attributed to" },
+      { "sentence": "Scholars have long ____ this poem ____ an anonymous medieval writer.", "answer": "attributed … to" },
+      { "sentence": "The committee ____ the delay ____ unforeseen technical difficulties.", "answer": "attributed … to" },
+      { "sentence": "Much of the team's success can be ____ careful preparation.", "answer": "attributed to" },
+      { "sentence": "We should not ____ every failure ____ a lack of effort.", "answer": "attribute … to" },
+      { "sentence": "The improvement in health outcomes was ____ better access to clean water.", "answer": "attributed to" },
+      { "sentence": "Analysts ____ the market's recovery ____ renewed consumer confidence.", "answer": "attribute … to" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Các nhà khoa học quy sự cải thiện này cho phương pháp giảng dạy mới." },
+      { "direction": "vn_to_en", "source": "Chúng ta không nên quy mọi thất bại cho sự lười biếng." },
+      { "direction": "vn_to_en", "source": "Sự suy giảm doanh số được quy cho tình hình kinh tế khó khăn." },
+      { "direction": "vn_to_en", "source": "Các nhà sử học quy tác phẩm này cho một tác giả vô danh." },
+      { "direction": "vn_to_en", "source": "Sự thành công của dự án được quy cho sự chuẩn bị kỹ lưỡng." },
+      { "direction": "en_to_vn", "source": "The scientists attribute the temperature rise to human activity." },
+      { "direction": "en_to_vn", "source": "It is unwise to attribute complex outcomes to a single cause." },
+      { "direction": "en_to_vn", "source": "The decline in birth rates has been attributed to economic pressures." },
+      { "direction": "en_to_vn", "source": "Critics attribute the novel's popularity to its relatable characters." },
+      { "direction": "en_to_vn", "source": "The improvement in scores was attributed to smaller class sizes." }
+    ],
+    "scenario": [
+      "In a formal research paper, explain what factor you credit for a positive outcome. Use 'attribute to'.",
+      "Writing a history essay, assign the cause of an empire's fall formally with 'attribute to'.",
+      "In an academic discussion, caution against assigning an effect to one cause, using 'attribute to'.",
+      "Drafting a scientific report, credit an observed change to a specific variable using 'attribute to'.",
+      "In a literature essay, note who scholars credit a text to, using 'attribute to'.",
+      "Writing a formal explanation, account for a delay by naming its cause, using 'attribute to'.",
+      "In an economics essay, explain the reason analysts give for a recovery using 'attribute to'.",
+      "Drafting a health-policy report, credit an improvement to a specific intervention using 'attribute to'.",
+      "In a formal review, ascribe a study's popularity to a particular feature using 'attribute to'.",
+      "Writing an academic email, explain to a colleague what you credit your results to, using 'attribute to'."
+    ]
+  },
+  "owing to": {
+    "cloze": [
+      { "sentence": "____ a shortage of funding, the research project was postponed indefinitely.", "answer": "Owing to" },
+      { "sentence": "The experiment failed, ____ a fault in the measuring equipment.", "answer": "owing to" },
+      { "sentence": "____ the poor weather conditions, the field study had to be rescheduled.", "answer": "Owing to" },
+      { "sentence": "Attendance was low, ____ the transport strike that morning.", "answer": "owing to" },
+      { "sentence": "____ its remote location, the region remains largely unexplored by scientists.", "answer": "Owing to" },
+      { "sentence": "The company reported losses ____ a sharp fall in global demand.", "answer": "owing to" },
+      { "sentence": "____ recent advances in technology, such analyses are now far more accurate.", "answer": "Owing to" },
+      { "sentence": "The deadline was extended, ____ the unexpected complexity of the task.", "answer": "owing to" },
+      { "sentence": "____ limited data, the authors were cautious in drawing conclusions.", "answer": "Owing to" },
+      { "sentence": "Many rural schools struggle ____ a chronic lack of resources.", "answer": "owing to" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Do thiếu kinh phí, dự án nghiên cứu đã bị hoãn lại." },
+      { "direction": "vn_to_en", "source": "Do thời tiết xấu, chuyến khảo sát thực địa phải dời lại." },
+      { "direction": "vn_to_en", "source": "Do vị trí xa xôi, khu vực này ít được các nhà khoa học nghiên cứu." },
+      { "direction": "vn_to_en", "source": "Do nhu cầu giảm mạnh, công ty đã báo cáo thua lỗ." },
+      { "direction": "vn_to_en", "source": "Do dữ liệu hạn chế, các tác giả rất thận trọng khi đưa ra kết luận." },
+      { "direction": "en_to_vn", "source": "Owing to budget cuts, several departments were forced to merge." },
+      { "direction": "en_to_vn", "source": "The flight was delayed owing to severe weather conditions." },
+      { "direction": "en_to_vn", "source": "Owing to its high cost, the treatment is not widely available." },
+      { "direction": "en_to_vn", "source": "Progress was slow owing to a lack of skilled personnel." },
+      { "direction": "en_to_vn", "source": "Owing to recent reforms, the education system has improved considerably." }
+    ],
+    "scenario": [
+      "In a formal report, explain the reason a project was delayed, beginning the sentence with 'owing to'.",
+      "Writing an academic essay, give a formal cause for a region being understudied using 'owing to'.",
+      "In a formal apology email to a professor, explain your absence using 'owing to'.",
+      "Drafting a business report, attribute a financial loss to a market cause, using 'owing to'.",
+      "In a research limitations section, explain caution in your conclusions using 'owing to'.",
+      "Writing a formal notice, announce a rescheduled event and its cause using 'owing to'.",
+      "In an academic essay, explain why analyses have become more accurate using 'owing to'.",
+      "Drafting a formal letter, justify an extended deadline using 'owing to'.",
+      "In a policy essay, explain a struggle faced by rural schools using 'owing to'.",
+      "Writing a formal introduction, note why fieldwork was postponed using 'owing to'."
+    ]
+  },
+  "due to": {
+    "cloze": [
+      { "sentence": "The decline in enrolment was largely ____ rising tuition fees.", "answer": "due to" },
+      { "sentence": "____ a technical error, the results of the first trial were discarded.", "answer": "Due to" },
+      { "sentence": "The delay in publication was ____ an extended peer-review process.", "answer": "due to" },
+      { "sentence": "Crop yields fell sharply, ____ an unusually dry growing season.", "answer": "due to" },
+      { "sentence": "The improvement in air quality is ____ stricter emissions regulations.", "answer": "due to" },
+      { "sentence": "____ the sensitivity of the data, participant names were kept confidential.", "answer": "Due to" },
+      { "sentence": "Much of the confusion was ____ inconsistent labelling of the samples.", "answer": "due to" },
+      { "sentence": "The bridge was closed ____ structural concerns identified during inspection.", "answer": "due to" },
+      { "sentence": "____ limited space, only a summary of the findings is presented here.", "answer": "Due to" },
+      { "sentence": "The variation in outcomes may be ____ differences in the participants' age.", "answer": "due to" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Sự sụt giảm số lượng sinh viên chủ yếu là do học phí tăng cao." },
+      { "direction": "vn_to_en", "source": "Do một lỗi kỹ thuật, kết quả của thí nghiệm đầu tiên đã bị loại bỏ." },
+      { "direction": "vn_to_en", "source": "Sản lượng cây trồng giảm mạnh do một mùa khô hạn bất thường." },
+      { "direction": "vn_to_en", "source": "Do tính nhạy cảm của dữ liệu, tên người tham gia được giữ bí mật." },
+      { "direction": "vn_to_en", "source": "Sự cải thiện chất lượng không khí là nhờ các quy định khí thải nghiêm ngặt hơn." },
+      { "direction": "en_to_vn", "source": "The project was cancelled due to insufficient funding." },
+      { "direction": "en_to_vn", "source": "Due to a lack of evidence, the hypothesis was rejected." },
+      { "direction": "en_to_vn", "source": "The rise in sea levels is largely due to global warming." },
+      { "direction": "en_to_vn", "source": "The meeting was postponed due to unforeseen circumstances." },
+      { "direction": "en_to_vn", "source": "Differences in the results may be due to measurement errors." }
+    ],
+    "scenario": [
+      "In a formal report, explain the cause of a drop in a figure using 'due to'.",
+      "Writing an academic limitations paragraph, note why some data was excluded, using 'due to'.",
+      "In a formal notice, announce a closure and its reason using 'due to'.",
+      "Drafting a scientific discussion, attribute variation in results to a factor using 'due to'.",
+      "In a formal email, explain a postponement to colleagues using 'due to'.",
+      "Writing an environmental essay, link an effect to its cause using 'due to'.",
+      "In a research methods section, justify keeping data confidential using 'due to'.",
+      "Drafting a formal proposal, explain why a project was cancelled using 'due to'.",
+      "In an academic essay, explain an improvement by naming its cause using 'due to'.",
+      "Writing a formal abstract, note why only a summary is given, using 'due to'."
+    ]
+  },
+  "contribute to": {
+    "cloze": [
+      { "sentence": "A balanced diet and regular exercise both ____ long-term health.", "answer": "contribute to" },
+      { "sentence": "Several factors ____ the region's rapid economic growth over the decade.", "answer": "contributed to" },
+      { "sentence": "The study examines how social media use may ____ feelings of anxiety.", "answer": "contribute to" },
+      { "sentence": "Deforestation ____ climate change by releasing stored carbon into the atmosphere.", "answer": "contributes to" },
+      { "sentence": "Each member of the team ____ the final report in a meaningful way.", "answer": "contributed to" },
+      { "sentence": "Poor sanitation is known to ____ the spread of infectious diseases.", "answer": "contribute to" },
+      { "sentence": "These reforms have significantly ____ improved literacy rates nationwide.", "answer": "contributed to" },
+      { "sentence": "The research aims to ____ a better understanding of adolescent behaviour.", "answer": "contribute to" },
+      { "sentence": "Excessive screen time may ____ poorer sleep quality in teenagers.", "answer": "contribute to" },
+      { "sentence": "Volunteering can ____ a stronger sense of community among residents.", "answer": "contribute to" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Chế độ ăn uống lành mạnh góp phần vào sức khỏe lâu dài." },
+      { "direction": "vn_to_en", "source": "Nạn phá rừng góp phần vào biến đổi khí hậu." },
+      { "direction": "vn_to_en", "source": "Nhiều yếu tố đã góp phần vào sự tăng trưởng kinh tế nhanh chóng của khu vực." },
+      { "direction": "vn_to_en", "source": "Nghiên cứu này nhằm góp phần vào sự hiểu biết tốt hơn về hành vi thanh thiếu niên." },
+      { "direction": "vn_to_en", "source": "Việc sử dụng mạng xã hội quá mức có thể góp phần gây ra lo âu." },
+      { "direction": "en_to_vn", "source": "Regular exercise contributes to both physical and mental well-being." },
+      { "direction": "en_to_vn", "source": "Air pollution contributes to a range of respiratory illnesses." },
+      { "direction": "en_to_vn", "source": "This paper contributes to the ongoing debate on educational reform." },
+      { "direction": "en_to_vn", "source": "Poverty and poor housing both contribute to health inequalities." },
+      { "direction": "en_to_vn", "source": "Every small effort contributes to the wider goal of sustainability." }
+    ],
+    "scenario": [
+      "In a formal essay, explain how one factor adds to a larger problem. Use 'contribute to'.",
+      "Writing a research introduction, state how your study adds to the field, using 'contribute to'.",
+      "In an academic health essay, describe a factor adding to disease spread, using 'contribute to'.",
+      "Drafting an environmental essay, explain how an activity worsens climate change using 'contribute to'.",
+      "In a formal acknowledgement, credit team members' input using 'contribute to'.",
+      "Writing a persuasive essay, argue that a habit adds to a health problem, using 'contribute to'.",
+      "In a formal proposal, describe how a reform adds to a national goal using 'contribute to'.",
+      "Drafting a sociology essay, link volunteering to community strength using 'contribute to'.",
+      "In an academic discussion, note factors that added to economic growth using 'contribute to'.",
+      "Writing a formal statement of purpose, say how you hope to add to your discipline using 'contribute to'."
+    ]
+  },
+  "bring about": {
+    "cloze": [
+      { "sentence": "The reforms were designed to ____ lasting change in the education system.", "answer": "bring about" },
+      { "sentence": "The invention of the internet ____ a fundamental shift in how we communicate.", "answer": "brought about" },
+      { "sentence": "Only sustained pressure from citizens can ____ meaningful political reform.", "answer": "bring about" },
+      { "sentence": "The new leadership hopes to ____ a period of economic stability.", "answer": "bring about" },
+      { "sentence": "The discovery of penicillin ____ a revolution in modern medicine.", "answer": "brought about" },
+      { "sentence": "Technological progress is ____ profound changes in the labour market.", "answer": "bringing about" },
+      { "sentence": "These measures are intended to ____ a reduction in carbon emissions.", "answer": "bring about" },
+      { "sentence": "The war ____ enormous social and economic upheaval across the continent.", "answer": "brought about" },
+      { "sentence": "Education alone cannot ____ the changes society urgently needs.", "answer": "bring about" },
+      { "sentence": "The scandal eventually ____ the collapse of the entire administration.", "answer": "brought about" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Những cải cách này nhằm mang lại sự thay đổi lâu dài." },
+      { "direction": "vn_to_en", "source": "Việc phát minh ra internet đã mang lại một sự thay đổi căn bản trong giao tiếp." },
+      { "direction": "vn_to_en", "source": "Chỉ có áp lực bền bỉ mới có thể mang lại cải cách chính trị thực sự." },
+      { "direction": "vn_to_en", "source": "Tiến bộ công nghệ đang mang lại những thay đổi sâu sắc cho thị trường lao động." },
+      { "direction": "vn_to_en", "source": "Cuộc chiến đã gây ra sự biến động lớn về kinh tế và xã hội." },
+      { "direction": "en_to_vn", "source": "The revolution brought about sweeping changes in society." },
+      { "direction": "en_to_vn", "source": "These policies aim to bring about greater equality of opportunity." },
+      { "direction": "en_to_vn", "source": "Digital technology has brought about a transformation in education." },
+      { "direction": "en_to_vn", "source": "It takes strong leadership to bring about genuine reform." },
+      { "direction": "en_to_vn", "source": "The crisis brought about a rethinking of national economic policy." }
+    ],
+    "scenario": [
+      "In a formal history essay, describe the change a major event produced. Use 'bring about'.",
+      "Writing a persuasive academic essay, argue what is needed to produce reform using 'bring about'.",
+      "In a formal proposal, state the change your measures aim to produce using 'bring about'.",
+      "Drafting a technology essay, describe the transformation an innovation caused using 'bring about'.",
+      "In an academic discussion, explain how a discovery caused a revolution using 'bring about'.",
+      "Writing a formal opinion essay, argue that education alone cannot cause change, using 'bring about'.",
+      "In an environmental report, state the reduction your policy intends to cause using 'bring about'.",
+      "Drafting a political essay, describe upheaval caused by a war using 'bring about'.",
+      "In a formal editorial, argue what could produce political reform using 'bring about'.",
+      "Writing a formal analysis, explain how a scandal caused a collapse using 'bring about'."
+    ]
+  },
+  "similarly": {
+    "cloze": [
+      { "sentence": "The first group showed marked improvement; ____, the second group performed far better than expected.", "answer": "Similarly" },
+      { "sentence": "Coal reserves are being depleted; ____, supplies of natural gas are running low.", "answer": "similarly" },
+      { "sentence": "The northern region relies heavily on tourism; the southern coast is ____ dependent on it.", "answer": "similarly" },
+      { "sentence": "Older employees valued job security; younger workers, ____, ranked it highly.", "answer": "similarly" },
+      { "sentence": "Reading widely improves vocabulary; ____, regular writing sharpens grammatical accuracy.", "answer": "Similarly" },
+      { "sentence": "In France, the reform was welcomed; ____, in Germany it received strong support.", "answer": "similarly" },
+      { "sentence": "The control group's scores remained stable; the test group, ____, showed little change.", "answer": "similarly" },
+      { "sentence": "Cats are territorial animals; ____, many dogs defend their space.", "answer": "similarly" },
+      { "sentence": "The first experiment produced no significant effect; ____, the replication found none.", "answer": "similarly" },
+      { "sentence": "Urban air pollution harms the lungs; ____, it can damage the cardiovascular system.", "answer": "similarly" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Nhóm thứ nhất tiến bộ rõ rệt; tương tự, nhóm thứ hai cũng cải thiện đáng kể." },
+      { "direction": "vn_to_en", "source": "Việc đọc nhiều giúp mở rộng vốn từ; tương tự, việc viết thường xuyên cải thiện ngữ pháp." },
+      { "direction": "vn_to_en", "source": "Ở Pháp, cải cách được hoan nghênh; tương tự, ở Đức nó cũng được ủng hộ mạnh mẽ." },
+      { "direction": "vn_to_en", "source": "Ô nhiễm không khí gây hại cho phổi; tương tự, nó cũng ảnh hưởng đến tim mạch." },
+      { "direction": "vn_to_en", "source": "Trữ lượng than đang cạn kiệt; tương tự, nguồn khí đốt cũng đang giảm dần." },
+      { "direction": "en_to_vn", "source": "The first study found no effect; similarly, later research reported none." },
+      { "direction": "en_to_vn", "source": "Exercise benefits the body; similarly, it improves mental health." },
+      { "direction": "en_to_vn", "source": "Many teachers oppose the change; similarly, most parents remain unconvinced." },
+      { "direction": "en_to_vn", "source": "Sales fell in the north; similarly, they declined across the southern branches." },
+      { "direction": "en_to_vn", "source": "Plants need sunlight to grow; similarly, they depend on adequate water." }
+    ],
+    "scenario": [
+      "In an academic essay, draw a parallel between two studies with the same finding. Use 'similarly'.",
+      "Writing a comparison paragraph, link two habits with similar benefits using 'similarly'.",
+      "In a formal report, note that a second region behaves like the first using 'similarly'.",
+      "Drafting a science essay, connect two comparable effects using 'similarly'.",
+      "In a formal discussion, show that a replication matched the original using 'similarly'.",
+      "Writing an IELTS essay, add a second supporting example that mirrors the first using 'similarly'.",
+      "In an academic argument, note that two groups responded alike using 'similarly'.",
+      "Drafting an environmental essay, link two depleting resources using 'similarly'.",
+      "In a formal comparison, note that two countries reacted alike using 'similarly'.",
+      "Writing a health essay, connect two comparable harms of pollution using 'similarly'."
+    ]
+  },
+  "likewise": {
+    "cloze": [
+      { "sentence": "The manager praised the new policy, and the staff responded ____.", "answer": "likewise" },
+      { "sentence": "Senior scholars endorsed the theory; ____, most graduate students accepted it.", "answer": "likewise" },
+      { "sentence": "The first author revised her chapter thoroughly; her co-author did ____.", "answer": "likewise" },
+      { "sentence": "Fossil fuels pollute the air; ____, they contribute heavily to global warming.", "answer": "likewise" },
+      { "sentence": "The government cut spending on defence; ____, it reduced the health budget.", "answer": "likewise" },
+      { "sentence": "Students who read regularly tend to write well; ____, those who write often read more.", "answer": "likewise" },
+      { "sentence": "The eastern provinces suffered from drought; ____, the western districts faced water shortages.", "answer": "likewise" },
+      { "sentence": "One reviewer recommended acceptance, and the other did ____.", "answer": "likewise" },
+      { "sentence": "The theory explains human memory well; ____, it accounts for certain learning patterns.", "answer": "likewise" },
+      { "sentence": "Coastal cities are vulnerable to flooding; ____, low-lying islands face serious risk.", "answer": "likewise" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Các học giả kỳ cựu ủng hộ lý thuyết này; tương tự, hầu hết nghiên cứu sinh cũng chấp nhận nó." },
+      { "direction": "vn_to_en", "source": "Nhiên liệu hóa thạch gây ô nhiễm không khí; tương tự, chúng góp phần lớn vào nóng lên toàn cầu." },
+      { "direction": "vn_to_en", "source": "Chính phủ cắt giảm chi tiêu quốc phòng; tương tự, họ cũng giảm ngân sách y tế." },
+      { "direction": "vn_to_en", "source": "Các thành phố ven biển dễ bị ngập lụt; tương tự, các đảo thấp cũng đối mặt rủi ro nghiêm trọng." },
+      { "direction": "vn_to_en", "source": "Một người phản biện đề nghị chấp nhận, và người kia cũng làm như vậy." },
+      { "direction": "en_to_vn", "source": "The first team met the deadline; the second team did likewise." },
+      { "direction": "en_to_vn", "source": "Good sleep improves memory; likewise, it enhances concentration." },
+      { "direction": "en_to_vn", "source": "He supported the proposal, and his colleagues responded likewise." },
+      { "direction": "en_to_vn", "source": "The report criticised the delay; likewise, it questioned the budget." },
+      { "direction": "en_to_vn", "source": "Older methods proved unreliable; likewise, the newer approach had flaws." }
+    ],
+    "scenario": [
+      "In an academic essay, state that a second group acted the same way as the first. Use 'likewise'.",
+      "Writing a formal report, note that two departments made parallel cuts using 'likewise'.",
+      "In a comparison paragraph, add a parallel point about a second region using 'likewise'.",
+      "Drafting a science essay, note a second matching effect of a substance using 'likewise'.",
+      "In a formal review, note that both reviewers agreed using 'likewise'.",
+      "Writing a discussion, add that a theory also explains a second phenomenon using 'likewise'.",
+      "In a formal essay, say that a colleague responded the same way using 'likewise'.",
+      "Drafting an environmental essay, add a parallel risk faced by islands using 'likewise'.",
+      "In an academic paragraph, note that two approaches shared the same flaw using 'likewise'.",
+      "Writing a formal comparison, link two comparable benefits of sleep using 'likewise'."
+    ]
+  },
+  "conversely": {
+    "cloze": [
+      { "sentence": "Some students thrive under pressure; ____, others perform poorly when stressed.", "answer": "conversely" },
+      { "sentence": "In wealthy nations obesity is common; ____, in poorer regions malnutrition prevails.", "answer": "conversely" },
+      { "sentence": "Higher prices tend to reduce demand; ____, lower prices usually increase it.", "answer": "conversely" },
+      { "sentence": "The urban population is growing rapidly; ____, rural areas are steadily emptying.", "answer": "Conversely" },
+      { "sentence": "Some argue technology isolates us; ____, others claim it brings people closer.", "answer": "conversely" },
+      { "sentence": "When interest rates rise, borrowing falls; ____, when they drop, borrowing increases.", "answer": "conversely" },
+      { "sentence": "The first treatment reduced symptoms; ____, the second appeared to worsen them.", "answer": "conversely" },
+      { "sentence": "Extroverts gain energy from company; ____, introverts often feel drained by it.", "answer": "conversely" },
+      { "sentence": "Strict regulation can protect consumers; ____, it may stifle innovation.", "answer": "Conversely" },
+      { "sentence": "Early adopters embraced the change; ____, long-term staff resisted it strongly.", "answer": "conversely" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Một số học sinh học tốt dưới áp lực; ngược lại, số khác lại làm bài kém khi căng thẳng." },
+      { "direction": "vn_to_en", "source": "Ở các nước giàu, béo phì phổ biến; ngược lại, ở các vùng nghèo, suy dinh dưỡng chiếm ưu thế." },
+      { "direction": "vn_to_en", "source": "Giá cao thường làm giảm nhu cầu; ngược lại, giá thấp thường làm tăng nhu cầu." },
+      { "direction": "vn_to_en", "source": "Dân số đô thị đang tăng nhanh; ngược lại, các vùng nông thôn đang dần vắng người." },
+      { "direction": "vn_to_en", "source": "Quy định chặt chẽ có thể bảo vệ người tiêu dùng; ngược lại, nó có thể kìm hãm sự đổi mới." },
+      { "direction": "en_to_vn", "source": "The first policy raised revenue; conversely, the second reduced it." },
+      { "direction": "en_to_vn", "source": "Some cultures value directness; conversely, others prize subtlety." },
+      { "direction": "en_to_vn", "source": "In summer the reservoir overflows; conversely, in winter it nearly dries up." },
+      { "direction": "en_to_vn", "source": "Optimists tend to see opportunities; conversely, pessimists focus on risks." },
+      { "direction": "en_to_vn", "source": "Urban wages are higher; conversely, the cost of living is far greater." }
+    ],
+    "scenario": [
+      "In an academic essay, introduce an opposite trend to the one just described. Use 'conversely'.",
+      "Writing a formal comparison, contrast rich and poor regions using 'conversely'.",
+      "In an economics essay, present the opposite effect of a price change using 'conversely'.",
+      "Drafting a discussion, contrast two opposite treatment outcomes using 'conversely'.",
+      "In a formal argument, present the counter-effect of a policy using 'conversely'.",
+      "Writing a psychology essay, contrast extroverts and introverts using 'conversely'.",
+      "In an IELTS essay, introduce an opposing viewpoint using 'conversely'.",
+      "Drafting a formal report, contrast urban and rural population trends using 'conversely'.",
+      "In a science essay, note an opposite reaction under different conditions using 'conversely'.",
+      "Writing a formal analysis, contrast early adopters with resistant staff using 'conversely'."
+    ]
+  },
+  "notwithstanding": {
+    "cloze": [
+      { "sentence": "____ the many objections raised, the committee approved the proposal.", "answer": "Notwithstanding" },
+      { "sentence": "The project succeeded, ____ the numerous obstacles the team encountered.", "answer": "notwithstanding" },
+      { "sentence": "____ its limitations, the study offers valuable insights into the problem.", "answer": "Notwithstanding" },
+      { "sentence": "The economy continued to grow, ____ the political uncertainty of the period.", "answer": "notwithstanding" },
+      { "sentence": "____ considerable criticism, the theory remains widely taught today.", "answer": "Notwithstanding" },
+      { "sentence": "The expedition went ahead, ____ the severe weather warnings.", "answer": "notwithstanding" },
+      { "sentence": "____ the risks involved, the researchers proceeded with the experiment.", "answer": "Notwithstanding" },
+      { "sentence": "The findings, ____ their small sample size, are broadly consistent with earlier work.", "answer": "notwithstanding" },
+      { "sentence": "____ several setbacks, the reform was eventually implemented in full.", "answer": "Notwithstanding" },
+      { "sentence": "The author's argument, ____ its complexity, is ultimately persuasive.", "answer": "notwithstanding" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Mặc dù có nhiều phản đối, ủy ban vẫn thông qua đề xuất." },
+      { "direction": "vn_to_en", "source": "Mặc dù có những hạn chế, nghiên cứu vẫn mang lại những hiểu biết giá trị." },
+      { "direction": "vn_to_en", "source": "Mặc dù bị chỉ trích đáng kể, lý thuyết này vẫn được giảng dạy rộng rãi." },
+      { "direction": "vn_to_en", "source": "Mặc dù có nhiều trở ngại, dự án vẫn thành công." },
+      { "direction": "vn_to_en", "source": "Mặc dù thời tiết khắc nghiệt, chuyến thám hiểm vẫn tiếp tục." },
+      { "direction": "en_to_vn", "source": "Notwithstanding its high cost, the treatment proved highly effective." },
+      { "direction": "en_to_vn", "source": "The plan went ahead, notwithstanding strong public opposition." },
+      { "direction": "en_to_vn", "source": "Notwithstanding these concerns, the results are worth reporting." },
+      { "direction": "en_to_vn", "source": "The company remained profitable, notwithstanding the economic downturn." },
+      { "direction": "en_to_vn", "source": "Notwithstanding a few errors, the paper is well argued and clear." }
+    ],
+    "scenario": [
+      "In a formal academic essay, concede objections but state a decision was made anyway. Use 'notwithstanding'.",
+      "Writing a research limitations paragraph, acknowledge a weakness yet affirm the study's value using 'notwithstanding'.",
+      "In a formal report, note that progress continued despite obstacles using 'notwithstanding'.",
+      "Drafting a formal argument, admit criticism but defend a theory using 'notwithstanding'.",
+      "In an academic review, acknowledge a small flaw yet praise the paper using 'notwithstanding'.",
+      "Writing a formal proposal, concede risks but justify proceeding using 'notwithstanding'.",
+      "In a history essay, note growth despite political uncertainty using 'notwithstanding'.",
+      "Drafting a formal statement, acknowledge opposition yet confirm a plan went ahead using 'notwithstanding'.",
+      "In an academic essay, admit a small sample yet defend consistency of findings using 'notwithstanding'.",
+      "Writing a formal conclusion, concede complexity but affirm persuasiveness using 'notwithstanding'."
+    ]
+  },
+  "albeit": {
+    "cloze": [
+      { "sentence": "The treatment was effective, ____ at a considerable financial cost.", "answer": "albeit" },
+      { "sentence": "The reform brought improvement, ____ a gradual and uneven one.", "answer": "albeit" },
+      { "sentence": "She agreed to the proposal, ____ with some reluctance.", "answer": "albeit" },
+      { "sentence": "The results were positive, ____ based on a relatively small sample.", "answer": "albeit" },
+      { "sentence": "The economy recovered, ____ more slowly than analysts had predicted.", "answer": "albeit" },
+      { "sentence": "His explanation was convincing, ____ somewhat oversimplified.", "answer": "albeit" },
+      { "sentence": "The method produced accurate data, ____ only under controlled conditions.", "answer": "albeit" },
+      { "sentence": "The policy achieved its aim, ____ with several unintended consequences.", "answer": "albeit" },
+      { "sentence": "The novel was influential, ____ largely forgotten today.", "answer": "albeit" },
+      { "sentence": "The two theories are similar, ____ they differ in several key respects.", "answer": "albeit" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Phương pháp điều trị có hiệu quả, dẫu rằng với chi phí khá cao." },
+      { "direction": "vn_to_en", "source": "Nền kinh tế đã phục hồi, dẫu rằng chậm hơn dự đoán." },
+      { "direction": "vn_to_en", "source": "Cô ấy đồng ý với đề xuất, dẫu rằng có phần miễn cưỡng." },
+      { "direction": "vn_to_en", "source": "Kết quả là tích cực, dẫu rằng dựa trên một mẫu tương đối nhỏ." },
+      { "direction": "vn_to_en", "source": "Cải cách đã mang lại cải thiện, dẫu rằng chậm và không đồng đều." },
+      { "direction": "en_to_vn", "source": "The plan was successful, albeit more expensive than expected." },
+      { "direction": "en_to_vn", "source": "He gave a clear answer, albeit a rather cautious one." },
+      { "direction": "en_to_vn", "source": "The data support the hypothesis, albeit only partially." },
+      { "direction": "en_to_vn", "source": "The city has grown, albeit at a slower pace in recent years." },
+      { "direction": "en_to_vn", "source": "Her argument is persuasive, albeit not entirely original." }
+    ],
+    "scenario": [
+      "In a formal essay, concede a limitation immediately after a positive claim. Use 'albeit'.",
+      "Writing a research discussion, note a positive result while qualifying it briefly using 'albeit'.",
+      "In a formal review, praise an argument while adding a short reservation using 'albeit'.",
+      "Drafting an economics essay, note a recovery that came with a qualification using 'albeit'.",
+      "In an academic paragraph, describe an effective method with one condition attached using 'albeit'.",
+      "Writing a formal report, note that a policy worked while flagging a caveat using 'albeit'.",
+      "In a literature essay, describe an influential yet neglected work using 'albeit'.",
+      "Drafting a formal analysis, note improvement with a short qualifier using 'albeit'.",
+      "In an academic essay, agree to a point while adding a brief reservation using 'albeit'.",
+      "Writing a comparison, note two theories are alike with a qualification using 'albeit'."
+    ]
+  },
+  "differ from": {
+    "cloze": [
+      { "sentence": "The results of this study ____ those reported in earlier research.", "answer": "differ from" },
+      { "sentence": "In several key respects, his approach ____ the traditional method.", "answer": "differs from" },
+      { "sentence": "British spelling ____ American spelling in a number of common words.", "answer": "differs from" },
+      { "sentence": "The way children learn a language ____ the way adults acquire one.", "answer": "differs from" },
+      { "sentence": "Our findings ____ previous estimates by a considerable margin.", "answer": "differ from" },
+      { "sentence": "The revised model ____ the original in both scope and assumptions.", "answer": "differs from" },
+      { "sentence": "How does this theory ____ the one proposed by earlier scholars?", "answer": "differ from" },
+      { "sentence": "The northern dialect ____ the southern one in pronunciation and vocabulary.", "answer": "differs from" },
+      { "sentence": "The experimental group's behaviour did not significantly ____ the control group's.", "answer": "differ from" },
+      { "sentence": "Modern interpretations ____ classical ones in several important ways.", "answer": "differ from" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Kết quả của nghiên cứu này khác với những gì được báo cáo trước đây." },
+      { "direction": "vn_to_en", "source": "Cách trẻ em học ngôn ngữ khác với cách người lớn tiếp thu nó." },
+      { "direction": "vn_to_en", "source": "Chính tả Anh khác với chính tả Mỹ ở một số từ thông dụng." },
+      { "direction": "vn_to_en", "source": "Phương pháp của ông ấy khác với phương pháp truyền thống ở nhiều điểm." },
+      { "direction": "vn_to_en", "source": "Những phát hiện của chúng tôi khác với các ước tính trước đó khá nhiều." },
+      { "direction": "en_to_vn", "source": "Human memory differs from computer memory in fundamental ways." },
+      { "direction": "en_to_vn", "source": "This species differs from its close relatives in size and colour." },
+      { "direction": "en_to_vn", "source": "The author's conclusion differs sharply from the accepted view." },
+      { "direction": "en_to_vn", "source": "The new policy differs from the previous one in scope and intent." },
+      { "direction": "en_to_vn", "source": "Their interpretation differs from ours on several important points." }
+    ],
+    "scenario": [
+      "In an academic essay, state how your findings are unlike earlier research. Use 'differ from'.",
+      "Writing a formal comparison, explain how one method is unlike another using 'differ from'.",
+      "In a linguistics essay, contrast child and adult language learning using 'differ from'.",
+      "Drafting a discussion, note how your estimates are unlike previous ones using 'differ from'.",
+      "In a formal report, explain how a revised model is unlike the original using 'differ from'.",
+      "Writing an academic question, ask how one theory is unlike another using 'differ from'.",
+      "In a language essay, contrast two dialects using 'differ from'.",
+      "Drafting a science discussion, note whether two groups behaved differently using 'differ from'.",
+      "In a formal analysis, contrast modern and classical interpretations using 'differ from'.",
+      "Writing a biology essay, distinguish one species from its relatives using 'differ from'."
+    ]
+  },
+  "correspond to": {
+    "cloze": [
+      { "sentence": "Each number in the table ____ a specific category in the survey.", "answer": "corresponds to" },
+      { "sentence": "The peaks in the graph ____ periods of unusually high demand.", "answer": "correspond to" },
+      { "sentence": "The symbols on the map ____ the different types of terrain.", "answer": "correspond to" },
+      { "sentence": "These figures closely ____ the estimates given in the earlier report.", "answer": "correspond to" },
+      { "sentence": "In the model, higher values ____ greater levels of risk.", "answer": "correspond to" },
+      { "sentence": "The colours in the chart ____ the four regions under study.", "answer": "correspond to" },
+      { "sentence": "The results ____ what the theory would predict under these conditions.", "answer": "correspond to" },
+      { "sentence": "Each letter in the code ____ a single digit in the final sequence.", "answer": "corresponds to" },
+      { "sentence": "The dates on the timeline ____ major turning points in the war.", "answer": "correspond to" },
+      { "sentence": "The measured values did not ____ the predictions of the model.", "answer": "correspond to" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Mỗi con số trong bảng tương ứng với một danh mục cụ thể trong khảo sát." },
+      { "direction": "vn_to_en", "source": "Các đỉnh trên đồ thị tương ứng với những giai đoạn nhu cầu cao bất thường." },
+      { "direction": "vn_to_en", "source": "Các ký hiệu trên bản đồ tương ứng với các loại địa hình khác nhau." },
+      { "direction": "vn_to_en", "source": "Những số liệu này khớp chặt chẽ với các ước tính trong báo cáo trước." },
+      { "direction": "vn_to_en", "source": "Trong mô hình, các giá trị cao hơn tương ứng với mức độ rủi ro lớn hơn." },
+      { "direction": "en_to_vn", "source": "The results correspond closely to the predictions of the theory." },
+      { "direction": "en_to_vn", "source": "Each column in the table corresponds to a year of data." },
+      { "direction": "en_to_vn", "source": "The observed patterns correspond to those described in the literature." },
+      { "direction": "en_to_vn", "source": "The high scores correspond to students who studied consistently." },
+      { "direction": "en_to_vn", "source": "The measured temperatures did not correspond to the model's forecast." }
+    ],
+    "scenario": [
+      "In a formal report, explain a table by stating what each figure matches. Use 'correspond to'.",
+      "Writing a results section, note that your data matches the theory's prediction using 'correspond to'.",
+      "In an academic caption, explain what the colours in a chart match using 'correspond to'.",
+      "Drafting a methods section, describe how symbols map onto categories using 'correspond to'.",
+      "In a formal discussion, note that figures match an earlier report using 'correspond to'.",
+      "Writing a data analysis, explain what graph peaks match using 'correspond to'.",
+      "In a formal essay, note that observed patterns match those in the literature using 'correspond to'.",
+      "Drafting a model description, state that higher values match greater risk using 'correspond to'.",
+      "In a history essay, explain that timeline dates match key events using 'correspond to'.",
+      "Writing a formal discussion, note where measurements failed to match predictions using 'correspond to'."
+    ]
+  }
+}

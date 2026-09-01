@@ -1,0 +1,572 @@
+{
+  "observe": {
+    "cloze": [
+      { "sentence": "The researchers ____ that participants who slept more performed better on memory tasks.", "answer": "observed" },
+      { "sentence": "In the second experiment, we ____ a marked decline in reaction times after midnight.", "answer": "observed" },
+      { "sentence": "Field biologists spend months ____ the animals in their natural habitat before drawing conclusions.", "answer": "observing" },
+      { "sentence": "As several scholars have ____, the two variables tend to rise together.", "answer": "observed" },
+      { "sentence": "The study aimed to ____ how children acquire vocabulary without formal instruction.", "answer": "observe" },
+      { "sentence": "It is important to ____ the sample under controlled conditions to avoid bias.", "answer": "observe" },
+      { "sentence": "During the trial, clinicians carefully ____ each patient for adverse reactions.", "answer": "observed" },
+      { "sentence": "The pattern we ____ in the data is consistent with earlier findings.", "answer": "observed" },
+      { "sentence": "Astronomers have long ____ that the galaxy is expanding in every direction.", "answer": "observed" },
+      { "sentence": "By ____ the market over ten years, the analysts identified a clear cycle.", "answer": "observing" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Các nhà nghiên cứu quan sát thấy rằng nhóm học sinh đọc sách nhiều đạt điểm cao hơn." },
+      { "direction": "vn_to_en", "source": "Chúng tôi đã quan sát một sự thay đổi đáng kể trong hành vi của người tham gia." },
+      { "direction": "vn_to_en", "source": "Nhà khoa học cần quan sát mẫu vật trong điều kiện được kiểm soát." },
+      { "direction": "vn_to_en", "source": "Như nhiều học giả đã nhận xét, hai yếu tố này có liên hệ chặt chẽ." },
+      { "direction": "vn_to_en", "source": "Nhóm nghiên cứu quan sát các em nhỏ trong suốt một năm học." },
+      { "direction": "en_to_vn", "source": "The team observed a significant increase in productivity after the reform." },
+      { "direction": "en_to_vn", "source": "Researchers observed that the effect disappeared when the room was quiet." },
+      { "direction": "en_to_vn", "source": "We observed the reaction closely and recorded the temperature every minute." },
+      { "direction": "en_to_vn", "source": "As the author observes, the policy had unintended consequences." },
+      { "direction": "en_to_vn", "source": "Scientists have observed similar behaviour in a wide range of species." }
+    ],
+    "scenario": [
+      "In a formal lab report, describe what your group noticed happening to the plants under low light. Use 'observe'.",
+      "Writing the results section of a research paper, state neutrally what your data showed. Use 'observe'.",
+      "In an academic seminar, politely note a pattern a classmate's presentation revealed. Use 'observe'.",
+      "Draft a sentence for a literature review summarising what a well-known scholar noticed. Use 'observe'.",
+      "In a formal field-study journal, record what you saw the birds doing at dawn. Use 'observe'.",
+      "Writing a discussion section, comment on a trend that appeared across all your experiments. Use 'observe'.",
+      "In a clinical case report, describe, in formal register, what the medical team monitored in the patient. Use 'observe'.",
+      "Preparing a conference abstract, state concisely the phenomenon your study noticed. Use 'observe'.",
+      "In an essay on animal behaviour, explain what naturalists have long noticed about migration. Use 'observe'.",
+      "Writing feedback on a methodology, remind the author to watch the sample under set conditions. Use 'observe'."
+    ]
+  },
+  "maintain": {
+    "cloze": [
+      { "sentence": "The author ____ that economic growth alone cannot reduce inequality.", "answer": "maintains" },
+      { "sentence": "Critics of the theory ____ that the evidence remains inconclusive.", "answer": "maintain" },
+      { "sentence": "Throughout the debate, she ____ that the original data had been misread.", "answer": "maintained" },
+      { "sentence": "Some historians ____ that the war could have been avoided entirely.", "answer": "maintain" },
+      { "sentence": "The company ____ that its products meet all safety standards.", "answer": "maintains" },
+      { "sentence": "Despite the criticism, the researchers ____ their central claim.", "answer": "maintained" },
+      { "sentence": "Proponents of the model ____ that it explains the anomaly convincingly.", "answer": "maintain" },
+      { "sentence": "He firmly ____ that his conclusions followed logically from the premises.", "answer": "maintained" },
+      { "sentence": "Many economists ____ that free trade benefits developing nations in the long run.", "answer": "maintain" },
+      { "sentence": "The government continues to ____ that the policy has been a success.", "answer": "maintain" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Tác giả khăng khăng cho rằng tăng trưởng kinh tế không tự động làm giảm bất bình đẳng." },
+      { "direction": "vn_to_en", "source": "Một số nhà sử học giữ quan điểm rằng cuộc chiến hoàn toàn có thể tránh được." },
+      { "direction": "vn_to_en", "source": "Bất chấp chỉ trích, nhóm nghiên cứu vẫn giữ vững luận điểm chính của mình." },
+      { "direction": "vn_to_en", "source": "Nhiều nhà kinh tế cho rằng thương mại tự do có lợi về lâu dài." },
+      { "direction": "vn_to_en", "source": "Bà kiên quyết cho rằng dữ liệu gốc đã bị đọc sai." },
+      { "direction": "en_to_vn", "source": "The author maintains that culture shapes language more than geography does." },
+      { "direction": "en_to_vn", "source": "Supporters of the plan maintain that it will create thousands of jobs." },
+      { "direction": "en_to_vn", "source": "The scientist maintained her position even when new data appeared." },
+      { "direction": "en_to_vn", "source": "Some scholars maintain that the manuscript is a later forgery." },
+      { "direction": "en_to_vn", "source": "He maintains that the two events are entirely unrelated." }
+    ],
+    "scenario": [
+      "In a persuasive academic essay, state firmly your position that homework improves learning. Use 'maintain'.",
+      "Writing a rebuttal in a formal debate paper, insist on your original claim despite objections. Use 'maintain'.",
+      "In a literature review, report a scholar's firmly held view on climate policy. Use 'maintain'.",
+      "Drafting a formal letter of complaint, state firmly that the fault was not yours. Use 'maintain'.",
+      "In a research discussion, defend your interpretation of an unexpected result. Use 'maintain'.",
+      "Writing an opinion column in an academic register, assert your stance on public transport funding. Use 'maintain'.",
+      "In a formal report, present the company's official position that safety rules were followed. Use 'maintain'.",
+      "Preparing an argumentative essay, express the view that traditional exams are still necessary. Use 'maintain'.",
+      "In a scholarly footnote, note that a rival theorist continues to hold an opposing view. Use 'maintain'.",
+      "Writing a philosophy essay, state the position you will defend throughout the paper. Use 'maintain'."
+    ]
+  },
+  "reveal": {
+    "cloze": [
+      { "sentence": "The survey ____ that most students underestimate how much they study.", "answer": "revealed" },
+      { "sentence": "Closer analysis of the figures ____ a surprising seasonal pattern.", "answer": "revealed" },
+      { "sentence": "The experiment was designed to ____ any hidden bias in the sample.", "answer": "reveal" },
+      { "sentence": "These results ____ a strong correlation between diet and concentration.", "answer": "reveal" },
+      { "sentence": "The interviews ____ that many workers feel undervalued by management.", "answer": "revealed" },
+      { "sentence": "Further testing may ____ weaknesses in the current model.", "answer": "reveal" },
+      { "sentence": "The data ____ no significant difference between the two groups.", "answer": "revealed" },
+      { "sentence": "Genetic analysis has ____ links between the two species that were previously unknown.", "answer": "revealed" },
+      { "sentence": "The report ____ serious gaps in the country's health infrastructure.", "answer": "revealed" },
+      { "sentence": "A detailed review of the archives ____ several unpublished letters.", "answer": "revealed" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Cuộc khảo sát cho thấy phần lớn học sinh đánh giá thấp thời gian học của mình." },
+      { "direction": "vn_to_en", "source": "Phân tích kỹ hơn các con số hé lộ một quy luật theo mùa đáng ngạc nhiên." },
+      { "direction": "vn_to_en", "source": "Kết quả cho thấy mối liên hệ chặt chẽ giữa chế độ ăn và khả năng tập trung." },
+      { "direction": "vn_to_en", "source": "Các cuộc phỏng vấn cho thấy nhiều công nhân cảm thấy không được coi trọng." },
+      { "direction": "vn_to_en", "source": "Việc kiểm tra thêm có thể hé lộ những điểm yếu của mô hình hiện tại." },
+      { "direction": "en_to_vn", "source": "The study revealed that pollution levels were higher than reported." },
+      { "direction": "en_to_vn", "source": "Careful reading of the text reveals a subtle irony." },
+      { "direction": "en_to_vn", "source": "The data revealed no clear link between the two factors." },
+      { "direction": "en_to_vn", "source": "Recent excavations have revealed the remains of an ancient city." },
+      { "direction": "en_to_vn", "source": "The audit revealed several errors in the financial records." }
+    ],
+    "scenario": [
+      "In the results section of a lab report, state what your survey uncovered about sleep habits. Use 'reveal'.",
+      "Writing a formal research summary, describe what a deeper look at the numbers exposed. Use 'reveal'.",
+      "In an academic essay, explain what interviews uncovered about employee morale. Use 'reveal'.",
+      "Drafting a discussion section, note what your analysis showed for the first time. Use 'reveal'.",
+      "In a formal review of a novel, point out a hidden meaning the text exposes. Use 'reveal'.",
+      "Writing a report on public health, present what an audit exposed about hospital funding. Use 'reveal'.",
+      "In a scientific abstract, state concisely what genetic testing uncovered. Use 'reveal'.",
+      "Preparing a history essay, describe what newly found documents brought to light. Use 'reveal'.",
+      "In a formal briefing, report neutrally that the investigation found no wrongdoing. Use 'reveal'.",
+      "Writing a methodology note, explain how the design is meant to expose hidden bias. Use 'reveal'."
+    ]
+  },
+  "establish": {
+    "cloze": [
+      { "sentence": "The study aimed to ____ whether the two variables are causally linked.", "answer": "establish" },
+      { "sentence": "Earlier research has firmly ____ that smoking increases the risk of cancer.", "answer": "established" },
+      { "sentence": "It is difficult to ____ the exact cause of the decline from this data alone.", "answer": "establish" },
+      { "sentence": "The experiment ____ a clear relationship between temperature and growth rate.", "answer": "established" },
+      { "sentence": "Before proceeding, we must ____ a reliable baseline for comparison.", "answer": "establish" },
+      { "sentence": "These findings help to ____ the credibility of the proposed model.", "answer": "establish" },
+      { "sentence": "The committee was set up to ____ the facts surrounding the incident.", "answer": "establish" },
+      { "sentence": "The author seeks to ____ a link between literacy and civic participation.", "answer": "establish" },
+      { "sentence": "It has now been ____ beyond doubt that the vaccine is safe.", "answer": "established" },
+      { "sentence": "The trial was unable to ____ any significant benefit of the treatment.", "answer": "establish" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Nghiên cứu nhằm xác lập liệu hai biến số có mối quan hệ nhân quả hay không." },
+      { "direction": "vn_to_en", "source": "Các nghiên cứu trước đây đã chứng minh chắc chắn tác hại của thuốc lá." },
+      { "direction": "vn_to_en", "source": "Thí nghiệm đã xác lập mối quan hệ rõ ràng giữa nhiệt độ và tốc độ tăng trưởng." },
+      { "direction": "vn_to_en", "source": "Trước khi tiếp tục, chúng ta cần xác lập một mốc chuẩn đáng tin cậy." },
+      { "direction": "vn_to_en", "source": "Tác giả cố gắng chứng minh mối liên hệ giữa khả năng đọc viết và sự tham gia cộng đồng." },
+      { "direction": "en_to_vn", "source": "The research established a clear connection between exercise and mood." },
+      { "direction": "en_to_vn", "source": "It is now well established that the earth's climate is warming." },
+      { "direction": "en_to_vn", "source": "The study failed to establish any causal relationship." },
+      { "direction": "en_to_vn", "source": "We first need to establish what the data actually mean." },
+      { "direction": "en_to_vn", "source": "These results establish a solid foundation for future research." }
+    ],
+    "scenario": [
+      "In a research proposal, state the causal link your study aims to prove. Use 'establish'.",
+      "Writing a literature review, note that prior work has firmly proven a certain fact. Use 'establish'.",
+      "In a methodology section, explain the need to set a reliable baseline before testing. Use 'establish'.",
+      "Drafting a discussion, admit that your data could not prove a causal relationship. Use 'establish'.",
+      "In a formal report, describe the committee's goal of determining the facts of a case. Use 'establish'.",
+      "Writing an argumentative essay, state the connection you intend to prove between two ideas. Use 'establish'.",
+      "In a scientific abstract, summarise what your experiment definitively demonstrated. Use 'establish'.",
+      "Preparing a grant application, explain how your project will build a firm foundation for later work. Use 'establish'.",
+      "In a formal history essay, note what has been proven beyond doubt about an event. Use 'establish'.",
+      "Writing peer-review feedback, ask the authors to firmly prove their central claim. Use 'establish'."
+    ]
+  },
+  "examine": {
+    "cloze": [
+      { "sentence": "This paper ____ the impact of social media on academic performance.", "answer": "examines" },
+      { "sentence": "The researchers carefully ____ each sample under a microscope.", "answer": "examined" },
+      { "sentence": "We will ____ the evidence in detail before drawing any conclusions.", "answer": "examine" },
+      { "sentence": "The next chapter ____ how urban planning affects community health.", "answer": "examines" },
+      { "sentence": "The committee was asked to ____ the causes of the recent failure.", "answer": "examine" },
+      { "sentence": "Having ____ the data closely, the team found several inconsistencies.", "answer": "examined" },
+      { "sentence": "It is worth ____ whether these results apply to other populations.", "answer": "examining" },
+      { "sentence": "The study ____ the relationship between income and educational attainment.", "answer": "examines" },
+      { "sentence": "Scholars have ____ this question from many different angles.", "answer": "examined" },
+      { "sentence": "To ____ the hypothesis properly, we designed a controlled experiment.", "answer": "examine" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Bài viết này xem xét tác động của mạng xã hội đối với kết quả học tập." },
+      { "direction": "vn_to_en", "source": "Các nhà nghiên cứu đã khảo sát kỹ từng mẫu vật dưới kính hiển vi." },
+      { "direction": "vn_to_en", "source": "Chúng ta sẽ xem xét bằng chứng một cách chi tiết trước khi kết luận." },
+      { "direction": "vn_to_en", "source": "Chương tiếp theo khảo sát cách quy hoạch đô thị ảnh hưởng đến sức khỏe cộng đồng." },
+      { "direction": "vn_to_en", "source": "Cần xem xét liệu kết quả này có áp dụng cho các nhóm dân cư khác không." },
+      { "direction": "en_to_vn", "source": "This essay examines the causes of the industrial revolution." },
+      { "direction": "en_to_vn", "source": "The doctors examined the patient thoroughly before deciding on treatment." },
+      { "direction": "en_to_vn", "source": "We must examine both sides of the argument carefully." },
+      { "direction": "en_to_vn", "source": "The report examines how technology is changing the workplace." },
+      { "direction": "en_to_vn", "source": "Researchers examined thousands of records to detect the trend." }
+    ],
+    "scenario": [
+      "In an essay introduction, state that your paper will investigate a particular issue in detail. Use 'examine'.",
+      "Writing a methodology, describe how you inspected each sample under the microscope. Use 'examine'.",
+      "In a formal review, explain that a chapter looks closely at urban health. Use 'examine'.",
+      "Drafting a discussion section, say you looked carefully at the data and found inconsistencies. Use 'examine'.",
+      "In a research abstract, summarise the relationship your study inspects. Use 'examine'.",
+      "Preparing an argumentative essay, note that you will weigh both sides of the debate. Use 'examine'.",
+      "In a formal report, describe the committee's task of scrutinising a recent failure. Use 'examine'.",
+      "Writing a literature review, comment that scholars have studied the question from many angles. Use 'examine'.",
+      "In a science project plan, explain how you intend to test the hypothesis. Use 'examine'.",
+      "Writing peer feedback, suggest the author look more closely at whether results generalise. Use 'examine'."
+    ]
+  },
+  "investigate": {
+    "cloze": [
+      { "sentence": "This dissertation ____ the factors that influence second-language acquisition.", "answer": "investigates" },
+      { "sentence": "The team was funded to ____ the long-term effects of the medication.", "answer": "investigate" },
+      { "sentence": "Researchers are ____ why the two regions developed so differently.", "answer": "investigating" },
+      { "sentence": "The study ____ whether class size affects student outcomes.", "answer": "investigates" },
+      { "sentence": "Authorities were called in to ____ the cause of the collapse.", "answer": "investigate" },
+      { "sentence": "Having ____ the phenomenon for years, she published a landmark paper.", "answer": "investigated" },
+      { "sentence": "Future work should ____ how these findings hold across cultures.", "answer": "investigate" },
+      { "sentence": "The project aims to ____ the link between poverty and school dropout rates.", "answer": "investigate" },
+      { "sentence": "Scientists have ____ the properties of the material extensively.", "answer": "investigated" },
+      { "sentence": "It is essential to ____ alternative explanations before accepting the theory.", "answer": "investigate" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Luận văn này nghiên cứu các yếu tố ảnh hưởng đến việc học ngôn ngữ thứ hai." },
+      { "direction": "vn_to_en", "source": "Nhóm nghiên cứu được tài trợ để điều tra tác dụng lâu dài của loại thuốc này." },
+      { "direction": "vn_to_en", "source": "Các nhà khoa học đang tìm hiểu vì sao hai vùng phát triển khác nhau đến vậy." },
+      { "direction": "vn_to_en", "source": "Nghiên cứu điều tra liệu sĩ số lớp học có ảnh hưởng đến kết quả của học sinh không." },
+      { "direction": "vn_to_en", "source": "Các nghiên cứu tương lai nên điều tra xem kết quả này có đúng ở các nền văn hóa khác không." },
+      { "direction": "en_to_vn", "source": "The paper investigates how sleep affects memory in young adults." },
+      { "direction": "en_to_vn", "source": "Scientists are investigating the causes of the sudden decline." },
+      { "direction": "en_to_vn", "source": "The commission was set up to investigate the accident." },
+      { "direction": "en_to_vn", "source": "This chapter investigates the origins of the modern city." },
+      { "direction": "en_to_vn", "source": "We need to investigate whether the effect is real or an artefact." }
+    ],
+    "scenario": [
+      "In a thesis introduction, state the factors your study will research in depth. Use 'investigate'.",
+      "Writing a grant proposal, describe the long-term effects your team will study. Use 'investigate'.",
+      "In a formal report, explain that officials will look into the cause of an accident. Use 'investigate'.",
+      "Drafting a discussion, recommend that future research look into cross-cultural validity. Use 'investigate'.",
+      "In a research abstract, summarise the question your project explores. Use 'investigate'.",
+      "Preparing a science plan, explain how you will study the material's properties. Use 'investigate'.",
+      "In an essay, note that scholars have studied a phenomenon for many years. Use 'investigate'.",
+      "Writing a methodology, stress the need to look into alternative explanations. Use 'investigate'.",
+      "In a formal policy brief, describe a task force set up to study poverty. Use 'investigate'.",
+      "Writing peer feedback, suggest the authors research a confounding variable further. Use 'investigate'."
+    ]
+  },
+  "explore": {
+    "cloze": [
+      { "sentence": "This paper ____ the relationship between language and identity.", "answer": "explores" },
+      { "sentence": "The next section ____ several possible explanations for the trend.", "answer": "explores" },
+      { "sentence": "Future studies could ____ how the model performs in other settings.", "answer": "explore" },
+      { "sentence": "The researchers set out to ____ new approaches to teaching writing.", "answer": "explore" },
+      { "sentence": "Her thesis ____ the role of memory in shaping national history.", "answer": "explores" },
+      { "sentence": "We will ____ each of these hypotheses in turn.", "answer": "explore" },
+      { "sentence": "The workshop ____ ways of making science more accessible to the public.", "answer": "explored" },
+      { "sentence": "Having ____ the topic broadly, the author narrows the focus in chapter three.", "answer": "explored" },
+      { "sentence": "It is useful to ____ alternative viewpoints before forming a judgement.", "answer": "explore" },
+      { "sentence": "The study ____ how digital tools change the way students read.", "answer": "explores" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Bài viết này khám phá mối quan hệ giữa ngôn ngữ và bản sắc." },
+      { "direction": "vn_to_en", "source": "Phần tiếp theo tìm hiểu một số cách giải thích khả dĩ cho xu hướng này." },
+      { "direction": "vn_to_en", "source": "Các nghiên cứu sau này có thể tìm hiểu mô hình hoạt động ra sao trong bối cảnh khác." },
+      { "direction": "vn_to_en", "source": "Nhóm nghiên cứu đặt mục tiêu khám phá những phương pháp mới để dạy viết." },
+      { "direction": "vn_to_en", "source": "Nên tìm hiểu các quan điểm khác nhau trước khi đưa ra phán đoán." },
+      { "direction": "en_to_vn", "source": "This essay explores the causes of urban migration." },
+      { "direction": "en_to_vn", "source": "The book explores how technology reshapes human relationships." },
+      { "direction": "en_to_vn", "source": "We will explore several theories in the following chapters." },
+      { "direction": "en_to_vn", "source": "The study explores the link between music and emotion." },
+      { "direction": "en_to_vn", "source": "Researchers are exploring new ways to treat the disease." }
+    ],
+    "scenario": [
+      "In an essay introduction, state the relationship your paper will investigate openly. Use 'explore'.",
+      "Writing a thesis abstract, describe the broad question your work looks into. Use 'explore'.",
+      "In a discussion section, suggest a direction future research could investigate. Use 'explore'.",
+      "Drafting a research plan, say you will consider several hypotheses in turn. Use 'explore'.",
+      "In a formal review, note that a chapter looks into different explanations. Use 'explore'.",
+      "Preparing an argumentative essay, mention that you will consider alternative viewpoints. Use 'explore'.",
+      "In a workshop report, describe how the session looked into public science communication. Use 'explore'.",
+      "Writing a literature review, comment that few studies have looked into this angle. Use 'explore'.",
+      "In a grant proposal, explain the new teaching methods your team will look into. Use 'explore'.",
+      "Writing peer feedback, encourage the author to look into a promising side question. Use 'explore'."
+    ]
+  },
+  "evaluate": {
+    "cloze": [
+      { "sentence": "This study ____ the effectiveness of online learning during the pandemic.", "answer": "evaluates" },
+      { "sentence": "It is difficult to ____ the long-term impact of the policy so soon.", "answer": "evaluate" },
+      { "sentence": "The teachers were asked to ____ each student's progress objectively.", "answer": "evaluate" },
+      { "sentence": "Having ____ the results, the committee approved the new method.", "answer": "evaluated" },
+      { "sentence": "We need reliable criteria to ____ the quality of these programmes.", "answer": "evaluate" },
+      { "sentence": "The report ____ three competing strategies for reducing emissions.", "answer": "evaluates" },
+      { "sentence": "Researchers ____ the drug's safety before recommending wider use.", "answer": "evaluated" },
+      { "sentence": "Students learn to critically ____ the sources they cite.", "answer": "evaluate" },
+      { "sentence": "The final chapter ____ the strengths and weaknesses of the theory.", "answer": "evaluates" },
+      { "sentence": "It is essential to ____ the evidence before reaching a verdict.", "answer": "evaluate" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Nghiên cứu này đánh giá hiệu quả của việc học trực tuyến trong đại dịch." },
+      { "direction": "vn_to_en", "source": "Rất khó để đánh giá tác động lâu dài của chính sách này quá sớm." },
+      { "direction": "vn_to_en", "source": "Giáo viên được yêu cầu đánh giá tiến bộ của từng học sinh một cách khách quan." },
+      { "direction": "vn_to_en", "source": "Chúng ta cần tiêu chí đáng tin cậy để đánh giá chất lượng các chương trình này." },
+      { "direction": "vn_to_en", "source": "Học sinh cần học cách đánh giá phê phán các nguồn mà mình trích dẫn." },
+      { "direction": "en_to_vn", "source": "The report evaluates the costs and benefits of the proposal." },
+      { "direction": "en_to_vn", "source": "We must evaluate each option before making a decision." },
+      { "direction": "en_to_vn", "source": "The study evaluated how well the model predicts real outcomes." },
+      { "direction": "en_to_vn", "source": "It is important to evaluate the evidence critically." },
+      { "direction": "en_to_vn", "source": "Experts were asked to evaluate the safety of the new bridge." }
+    ],
+    "scenario": [
+      "In a research abstract, state that your study judges the effectiveness of a programme. Use 'evaluate'.",
+      "Writing a discussion, admit it is too early to judge the policy's long-term impact. Use 'evaluate'.",
+      "In a formal report, describe how you will judge three competing strategies. Use 'evaluate'.",
+      "Drafting a rubric, explain the criteria used to judge each student's work. Use 'evaluate'.",
+      "In an essay, stress the need to weigh evidence before reaching a conclusion. Use 'evaluate'.",
+      "Preparing a review, note that the final chapter weighs the theory's strengths and weaknesses. Use 'evaluate'.",
+      "In a science paper, describe how researchers judged the drug's safety. Use 'evaluate'.",
+      "Writing a study-skills guide, advise students to critically judge their sources. Use 'evaluate'.",
+      "In a grant report, explain how outcomes will be judged against clear standards. Use 'evaluate'.",
+      "Writing peer feedback, ask the author to more carefully weigh the counter-evidence. Use 'evaluate'."
+    ]
+  },
+  "assess": {
+    "cloze": [
+      { "sentence": "The study aims to ____ the risk of flooding in coastal cities.", "answer": "assess" },
+      { "sentence": "Researchers ____ the participants' anxiety levels using a standard questionnaire.", "answer": "assessed" },
+      { "sentence": "It is hard to ____ the full economic cost of the disruption.", "answer": "assess" },
+      { "sentence": "The report ____ the environmental impact of the proposed dam.", "answer": "assesses" },
+      { "sentence": "Teachers use several methods to ____ how well students understand the material.", "answer": "assess" },
+      { "sentence": "Having ____ the damage, engineers recommended immediate repairs.", "answer": "assessed" },
+      { "sentence": "We need better tools to ____ the reliability of online information.", "answer": "assess" },
+      { "sentence": "The committee will ____ each application against the same criteria.", "answer": "assess" },
+      { "sentence": "The paper ____ the extent to which the reform achieved its goals.", "answer": "assesses" },
+      { "sentence": "Analysts were asked to ____ the likely effects of the tax change.", "answer": "assess" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Nghiên cứu nhằm đánh giá nguy cơ ngập lụt ở các thành phố ven biển." },
+      { "direction": "vn_to_en", "source": "Các nhà nghiên cứu thẩm định mức độ lo âu của người tham gia bằng bảng hỏi chuẩn." },
+      { "direction": "vn_to_en", "source": "Rất khó để đánh giá toàn bộ chi phí kinh tế của sự gián đoạn này." },
+      { "direction": "vn_to_en", "source": "Bản báo cáo đánh giá tác động môi trường của con đập được đề xuất." },
+      { "direction": "vn_to_en", "source": "Giáo viên dùng nhiều cách để đánh giá mức độ hiểu bài của học sinh." },
+      { "direction": "en_to_vn", "source": "The doctor assessed the patient's condition before prescribing treatment." },
+      { "direction": "en_to_vn", "source": "It is difficult to assess the true value of the data." },
+      { "direction": "en_to_vn", "source": "The study assesses whether the intervention reduced stress." },
+      { "direction": "en_to_vn", "source": "Experts were called in to assess the structural damage." },
+      { "direction": "en_to_vn", "source": "We must assess the risks carefully before proceeding." }
+    ],
+    "scenario": [
+      "In a research abstract, state that your study evaluates flood risk in coastal areas. Use 'assess'.",
+      "Writing a methodology, describe the questionnaire used to gauge participants' anxiety. Use 'assess'.",
+      "In a formal report, explain how the panel will judge each application fairly. Use 'assess'.",
+      "Drafting a discussion, admit the full economic cost is hard to gauge. Use 'assess'.",
+      "In an environmental impact statement, describe judging the effects of a proposed dam. Use 'assess'.",
+      "Preparing a teaching plan, explain the methods you use to gauge student understanding. Use 'assess'.",
+      "In a formal briefing, describe engineers judging the damage after a storm. Use 'assess'.",
+      "Writing a digital-literacy guide, advise readers to judge the reliability of sources. Use 'assess'.",
+      "In a policy paper, state that analysts will gauge the likely effects of a tax change. Use 'assess'.",
+      "Writing peer feedback, suggest the authors gauge the reform's success more rigorously. Use 'assess'."
+    ]
+  },
+  "point out": {
+    "cloze": [
+      { "sentence": "The author is careful to ____ that correlation does not imply causation.", "answer": "point out" },
+      { "sentence": "Several critics have ____ flaws in the original methodology.", "answer": "pointed out" },
+      { "sentence": "It is worth ____ that the sample size was relatively small.", "answer": "pointing out" },
+      { "sentence": "As the reviewer ____, the argument rests on a questionable assumption.", "answer": "pointed out" },
+      { "sentence": "The report goes on to ____ the limitations of the current approach.", "answer": "point out" },
+      { "sentence": "She was the first to ____ the inconsistency in the data.", "answer": "point out" },
+      { "sentence": "Here I wish to ____ an important exception to this rule.", "answer": "point out" },
+      { "sentence": "The teacher ____ that many students had misread the question.", "answer": "pointed out" },
+      { "sentence": "One should ____ that these results apply only to adults.", "answer": "point out" },
+      { "sentence": "Commentators have ____ that the policy may have unintended effects.", "answer": "pointed out" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Tác giả cẩn thận chỉ ra rằng tương quan không đồng nghĩa với nhân quả." },
+      { "direction": "vn_to_en", "source": "Một số nhà phê bình đã chỉ ra những thiếu sót trong phương pháp ban đầu." },
+      { "direction": "vn_to_en", "source": "Cần nêu ra rằng cỡ mẫu ở đây tương đối nhỏ." },
+      { "direction": "vn_to_en", "source": "Như người phản biện đã chỉ ra, lập luận dựa trên một giả định đáng ngờ." },
+      { "direction": "vn_to_en", "source": "Bà là người đầu tiên chỉ ra sự thiếu nhất quán trong dữ liệu." },
+      { "direction": "en_to_vn", "source": "The author points out that the theory has several weaknesses." },
+      { "direction": "en_to_vn", "source": "It is worth pointing out that the study was conducted in one country only." },
+      { "direction": "en_to_vn", "source": "Critics have pointed out that the plan is too expensive." },
+      { "direction": "en_to_vn", "source": "She pointed out an error that everyone else had missed." },
+      { "direction": "en_to_vn", "source": "The report points out the risks of ignoring the problem." }
+    ],
+    "scenario": [
+      "In an academic essay, note carefully that correlation is not causation. Use 'point out'.",
+      "Writing a peer review, mention flaws you noticed in the methodology. Use 'point out'.",
+      "In a discussion section, draw attention to the study's small sample size. Use 'point out'.",
+      "Drafting a literature review, report that a reviewer highlighted a weak assumption. Use 'point out'.",
+      "In a formal report, draw attention to the limitations of the current approach. Use 'point out'.",
+      "Writing a critique, note an important exception to a general rule. Use 'point out'.",
+      "In feedback to students, mention gently that many misread the exam question. Use 'point out'.",
+      "In a policy commentary, highlight that a plan may have unintended effects. Use 'point out'.",
+      "Writing an abstract, stress that the findings apply only to adults. Use 'point out'.",
+      "In a seminar handout, draw attention to an inconsistency in a data set. Use 'point out'."
+    ]
+  },
+  "conclude": {
+    "cloze": [
+      { "sentence": "The researchers ____ that the treatment had no measurable effect.", "answer": "concluded" },
+      { "sentence": "From these results, we can ____ that the hypothesis is supported.", "answer": "conclude" },
+      { "sentence": "The paper ____ with a call for further research.", "answer": "concludes" },
+      { "sentence": "It would be premature to ____ that the trend will continue.", "answer": "conclude" },
+      { "sentence": "Having weighed the evidence, the committee ____ that reform was necessary.", "answer": "concluded" },
+      { "sentence": "The author ____ that language shapes the way we perceive the world.", "answer": "concludes" },
+      { "sentence": "We cannot ____ anything definite from such a limited data set.", "answer": "conclude" },
+      { "sentence": "The study ____ that early intervention improves outcomes significantly.", "answer": "concludes" },
+      { "sentence": "In her final chapter, she ____ by summarising the main arguments.", "answer": "concludes" },
+      { "sentence": "The panel ____ that the current guidelines needed revision.", "answer": "concluded" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Các nhà nghiên cứu kết luận rằng phương pháp điều trị không có tác dụng đáng kể." },
+      { "direction": "vn_to_en", "source": "Từ những kết quả này, chúng ta có thể kết luận rằng giả thuyết được ủng hộ." },
+      { "direction": "vn_to_en", "source": "Sẽ là quá vội vàng nếu kết luận rằng xu hướng này sẽ tiếp diễn." },
+      { "direction": "vn_to_en", "source": "Sau khi cân nhắc bằng chứng, hội đồng kết luận rằng cần cải cách." },
+      { "direction": "vn_to_en", "source": "Bài viết kết luận bằng lời kêu gọi nghiên cứu thêm." },
+      { "direction": "en_to_vn", "source": "The study concludes that diet has a strong effect on health." },
+      { "direction": "en_to_vn", "source": "We cannot conclude much from a single experiment." },
+      { "direction": "en_to_vn", "source": "The author concludes that the reform was largely successful." },
+      { "direction": "en_to_vn", "source": "The report concludes with several recommendations." },
+      { "direction": "en_to_vn", "source": "The committee concluded that more funding was needed." }
+    ],
+    "scenario": [
+      "In the final paragraph of a lab report, state the finding your data supports. Use 'conclude'.",
+      "Writing a discussion, caution that it is too early to draw a firm conclusion. Use 'conclude'.",
+      "In an essay ending, sum up your main argument formally. Use 'conclude'.",
+      "Drafting a research summary, state what the committee decided after weighing the evidence. Use 'conclude'.",
+      "In an abstract, report the main finding your study arrives at. Use 'conclude'.",
+      "Writing a literature review, note what an author decided about language and perception. Use 'conclude'.",
+      "In a methodology critique, warn that little can be decided from limited data. Use 'conclude'.",
+      "In a policy paper, state the panel's decision that guidelines need revising. Use 'conclude'.",
+      "Writing a thesis final chapter, close by summing up the main arguments. Use 'conclude'.",
+      "In peer feedback, note that the authors draw a stronger conclusion than the data allow. Use 'conclude'."
+    ]
+  },
+  "thus": {
+    "cloze": [
+      { "sentence": "The sample was small; ____, the results should be treated with caution.", "answer": "thus" },
+      { "sentence": "The two groups were treated identically and ____ any difference must be due to the drug.", "answer": "thus" },
+      { "sentence": "Prices rose sharply, ____ reducing consumer demand.", "answer": "thus" },
+      { "sentence": "The evidence is inconclusive; ____, further research is required.", "answer": "thus" },
+      { "sentence": "The variables are closely linked and cannot ____ be studied in isolation.", "answer": "thus" },
+      { "sentence": "Funding was cut, ____ limiting the scope of the project.", "answer": "thus" },
+      { "sentence": "The theory explains the data well and is ____ widely accepted.", "answer": "thus" },
+      { "sentence": "Each factor was controlled, ____ ensuring a fair comparison.", "answer": "thus" },
+      { "sentence": "The method is simple and ____ easy to replicate.", "answer": "thus" },
+      { "sentence": "Demand exceeded supply; ____, prices continued to climb.", "answer": "thus" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Cỡ mẫu nhỏ; do đó, cần thận trọng khi diễn giải kết quả." },
+      { "direction": "vn_to_en", "source": "Giá tăng mạnh, do đó làm giảm nhu cầu tiêu dùng." },
+      { "direction": "vn_to_en", "source": "Bằng chứng chưa rõ ràng; như vậy, cần nghiên cứu thêm." },
+      { "direction": "vn_to_en", "source": "Phương pháp này đơn giản và do đó dễ tái lặp." },
+      { "direction": "vn_to_en", "source": "Kinh phí bị cắt giảm, do đó thu hẹp phạm vi của dự án." },
+      { "direction": "en_to_vn", "source": "The data were incomplete; thus, the conclusion remains tentative." },
+      { "direction": "en_to_vn", "source": "The two samples were identical and thus directly comparable." },
+      { "direction": "en_to_vn", "source": "Costs increased, thus reducing the project's overall benefit." },
+      { "direction": "en_to_vn", "source": "The theory fits the evidence and is thus widely supported." },
+      { "direction": "en_to_vn", "source": "The experiment was carefully controlled, thus ensuring reliable results." }
+    ],
+    "scenario": [
+      "In a discussion section, link a small sample to a cautious reading of results. Use 'thus'.",
+      "Writing a formal argument, connect a rise in prices to falling demand. Use 'thus'.",
+      "In a conclusion, connect inconclusive evidence to a call for more research. Use 'thus'.",
+      "Drafting a methodology, link identical treatment of groups to a valid comparison. Use 'thus'.",
+      "In an essay, connect a simple method to its ease of replication. Use 'thus'.",
+      "Writing a report, link a funding cut to a narrower project scope. Use 'thus'.",
+      "In an academic paragraph, connect strong explanatory power to wide acceptance. Use 'thus'.",
+      "Drafting a results section, link careful controls to a fair comparison. Use 'thus'.",
+      "In an economics essay, connect excess demand to rising prices. Use 'thus'.",
+      "Writing formally, link the interdependence of variables to the need to study them together. Use 'thus'."
+    ]
+  },
+  "hence": {
+    "cloze": [
+      { "sentence": "The data are limited; ____, our conclusions remain provisional.", "answer": "hence" },
+      { "sentence": "The city grew rapidly, ____ the sudden demand for housing.", "answer": "hence" },
+      { "sentence": "The method is inexpensive and ____ suitable for large-scale studies.", "answer": "hence" },
+      { "sentence": "Few records survive from that period; ____ the difficulty of dating the events.", "answer": "hence" },
+      { "sentence": "The results were consistent across trials and ____ highly reliable.", "answer": "hence" },
+      { "sentence": "Resources were scarce, ____ the need for careful planning.", "answer": "hence" },
+      { "sentence": "The two terms are often confused; ____, we define them clearly below.", "answer": "hence" },
+      { "sentence": "The signal was weak, ____ the frequent errors in transmission.", "answer": "hence" },
+      { "sentence": "Demand for the course was high, ____ the decision to add extra classes.", "answer": "hence" },
+      { "sentence": "The soil is poor here; ____ the low agricultural yield.", "answer": "hence" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Dữ liệu còn hạn chế; vì thế, kết luận của chúng tôi vẫn chỉ là tạm thời." },
+      { "direction": "vn_to_en", "source": "Thành phố phát triển nhanh, do đó nhu cầu nhà ở tăng đột ngột." },
+      { "direction": "vn_to_en", "source": "Phương pháp này rẻ và vì thế phù hợp cho các nghiên cứu quy mô lớn." },
+      { "direction": "vn_to_en", "source": "Rất ít tư liệu còn sót lại từ thời kỳ đó; do đó việc xác định niên đại rất khó." },
+      { "direction": "vn_to_en", "source": "Tài nguyên khan hiếm, vì thế cần lập kế hoạch cẩn thận." },
+      { "direction": "en_to_vn", "source": "The evidence is weak; hence, the theory remains controversial." },
+      { "direction": "en_to_vn", "source": "The material is light and hence easy to transport." },
+      { "direction": "en_to_vn", "source": "Few sources exist, hence the uncertainty about the dates." },
+      { "direction": "en_to_vn", "source": "Demand was high, hence the long waiting list." },
+      { "direction": "en_to_vn", "source": "The results were stable across tests and hence trustworthy." }
+    ],
+    "scenario": [
+      "In a formal conclusion, link limited data to provisional findings. Use 'hence'.",
+      "Writing a history essay, connect scarce records to the difficulty of dating events. Use 'hence'.",
+      "In an academic sentence, link a cheap method to its suitability for large studies. Use 'hence'.",
+      "Drafting a report, connect scarce resources to the need for careful planning. Use 'hence'.",
+      "In a definitions paragraph, explain that two terms are confused, hence your clarification. Use 'hence'.",
+      "Writing an economics note, link rapid city growth to a housing shortage. Use 'hence'.",
+      "In a results section, connect consistent trials to high reliability. Use 'hence'.",
+      "Drafting an explanation, link a weak signal to frequent transmission errors. Use 'hence'.",
+      "In an administrative note, connect high demand to a decision to add classes. Use 'hence'.",
+      "In a geography essay, link poor soil to low crop yields. Use 'hence'."
+    ]
+  },
+  "thereby": {
+    "cloze": [
+      { "sentence": "The new filter removes impurities, ____ improving the water quality.", "answer": "thereby" },
+      { "sentence": "Automation reduced errors, ____ increasing overall efficiency.", "answer": "thereby" },
+      { "sentence": "The reform simplified the tax code, ____ making compliance easier.", "answer": "thereby" },
+      { "sentence": "Vaccination lowers infection rates, ____ protecting the wider community.", "answer": "thereby" },
+      { "sentence": "The bridge shortened the route, ____ cutting travel time in half.", "answer": "thereby" },
+      { "sentence": "Standardising the procedure removed variation, ____ ensuring consistent results.", "answer": "thereby" },
+      { "sentence": "The policy raised wages, ____ reducing poverty in the region.", "answer": "thereby" },
+      { "sentence": "Recycling waste conserves resources, ____ lowering production costs.", "answer": "thereby" },
+      { "sentence": "The software encrypts each file, ____ preventing unauthorised access.", "answer": "thereby" },
+      { "sentence": "The study controlled for age, ____ isolating the effect of the treatment.", "answer": "thereby" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Bộ lọc mới loại bỏ tạp chất, qua đó cải thiện chất lượng nước." },
+      { "direction": "vn_to_en", "source": "Tự động hóa giảm sai sót, qua đó nâng cao hiệu quả tổng thể." },
+      { "direction": "vn_to_en", "source": "Cải cách đã đơn giản hóa hệ thống thuế, qua đó giúp việc tuân thủ dễ dàng hơn." },
+      { "direction": "vn_to_en", "source": "Tiêm chủng làm giảm tỷ lệ lây nhiễm, qua đó bảo vệ cả cộng đồng." },
+      { "direction": "vn_to_en", "source": "Nghiên cứu kiểm soát yếu tố tuổi tác, qua đó tách riêng tác động của phương pháp điều trị." },
+      { "direction": "en_to_vn", "source": "The bridge cut the distance, thereby saving fuel and time." },
+      { "direction": "en_to_vn", "source": "The reform simplified the rules, thereby reducing confusion." },
+      { "direction": "en_to_vn", "source": "The system encrypts data, thereby protecting user privacy." },
+      { "direction": "en_to_vn", "source": "Wages rose, thereby lifting many families out of poverty." },
+      { "direction": "en_to_vn", "source": "Standardising the test removed bias, thereby making the results comparable." }
+    ],
+    "scenario": [
+      "In a technical report, link a new filter to improved water quality. Use 'thereby'.",
+      "Writing about automation, connect fewer errors to greater efficiency. Use 'thereby'.",
+      "In a policy essay, link tax simplification to easier compliance. Use 'thereby'.",
+      "Drafting a public-health note, connect vaccination to community protection. Use 'thereby'.",
+      "In a methodology, link controlling for age to isolating the treatment effect. Use 'thereby'.",
+      "Writing an engineering summary, connect a new bridge to shorter travel time. Use 'thereby'.",
+      "In a report, link standardising a procedure to consistent results. Use 'thereby'.",
+      "Drafting an economics paragraph, connect higher wages to reduced poverty. Use 'thereby'.",
+      "In a sustainability essay, link recycling to lower production costs. Use 'thereby'.",
+      "Writing about security software, connect encryption to blocking unauthorised access. Use 'thereby'."
+    ]
+  },
+  "lead to": {
+    "cloze": [
+      { "sentence": "Prolonged stress can ____ a range of serious health problems.", "answer": "lead to" },
+      { "sentence": "The decision ____ a sharp increase in unemployment.", "answer": "led to" },
+      { "sentence": "Poor communication often ____ misunderstandings between departments.", "answer": "leads to" },
+      { "sentence": "The researchers explored what factors ____ language loss in migrant communities.", "answer": "lead to" },
+      { "sentence": "A small error in the calculation ____ a completely wrong conclusion.", "answer": "led to" },
+      { "sentence": "Rising temperatures may ____ more frequent extreme weather events.", "answer": "lead to" },
+      { "sentence": "The reforms are expected to ____ significant improvements in productivity.", "answer": "lead to" },
+      { "sentence": "Excessive screen time can ____ poor sleep in adolescents.", "answer": "lead to" },
+      { "sentence": "The discovery ____ a complete rethinking of the theory.", "answer": "led to" },
+      { "sentence": "Ignoring early warning signs can ____ far greater damage later on.", "answer": "lead to" }
+    ],
+    "translate": [
+      { "direction": "vn_to_en", "source": "Căng thẳng kéo dài có thể dẫn đến nhiều vấn đề sức khỏe nghiêm trọng." },
+      { "direction": "vn_to_en", "source": "Quyết định đó đã dẫn đến sự gia tăng mạnh về tỷ lệ thất nghiệp." },
+      { "direction": "vn_to_en", "source": "Giao tiếp kém thường dẫn đến hiểu lầm giữa các phòng ban." },
+      { "direction": "vn_to_en", "source": "Nhiệt độ tăng có thể dẫn đến các hiện tượng thời tiết cực đoan thường xuyên hơn." },
+      { "direction": "vn_to_en", "source": "Một sai sót nhỏ trong tính toán đã dẫn đến một kết luận hoàn toàn sai." },
+      { "direction": "en_to_vn", "source": "Lack of sleep can lead to poor concentration and memory." },
+      { "direction": "en_to_vn", "source": "The policy led to a dramatic fall in crime rates." },
+      { "direction": "en_to_vn", "source": "Deforestation can lead to soil erosion and flooding." },
+      { "direction": "en_to_vn", "source": "The discovery led to major advances in medicine." },
+      { "direction": "en_to_vn", "source": "Poor planning often leads to wasted resources." }
+    ],
+    "scenario": [
+      "In a health essay, explain how long-term stress causes serious problems. Use 'lead to'.",
+      "Writing an economics report, describe how a decision caused rising unemployment. Use 'lead to'.",
+      "In a workplace analysis, explain how weak communication causes misunderstandings. Use 'lead to'.",
+      "Drafting a climate essay, describe how higher temperatures cause extreme weather. Use 'lead to'.",
+      "In a methodology note, warn how a small error causes a wrong conclusion. Use 'lead to'.",
+      "Writing a policy brief, state the improvements the reforms are expected to cause. Use 'lead to'.",
+      "In a study on adolescents, explain how excessive screen time causes poor sleep. Use 'lead to'.",
+      "Drafting a history of science, describe how a discovery caused a rethinking of theory. Use 'lead to'.",
+      "In an environmental essay, connect deforestation to erosion and flooding. Use 'lead to'.",
+      "Writing a risk assessment, warn how ignoring early signs causes greater damage later. Use 'lead to'."
+    ]
+  }
+}
