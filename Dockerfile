@@ -30,6 +30,8 @@ COPY --from=builder /app/public ./public
 COPY --from=builder /app/next.config.ts ./next.config.ts
 # Migration/ingest scripts run in-place against the live DB inside the container.
 COPY --from=builder /app/scripts ./scripts
+# Seed content (collections + questions) read by the public-collections ingest.
+COPY --from=builder /app/content ./content
 # The SQLite DB lives here; mounted as a volume at runtime so data persists
 # across container restarts/rebuilds.
 RUN mkdir -p /app/.data
