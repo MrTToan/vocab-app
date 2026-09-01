@@ -3,6 +3,7 @@ import { getStore } from "@/lib/store";
 import { currentUserId } from "@/lib/auth/user";
 import { exerciseForStage, pickNext } from "@/lib/engine";
 import { generateExercise, hasProvider } from "@/lib/llm";
+import { reserveQuota } from "@/lib/auth/quota";
 import { toCloze } from "@/lib/cloze";
 import {
   clozeRaw,
@@ -73,11 +74,17 @@ export async function POST(req: Request) {
     }
   }
 
-  // 2) No bank question -> live generation / local fallback.
+  // 2) No bank question -> live generation / local fallback. Generation is
+  // metered (QUOTA_GENERATE, no burst window); over-cap throws into the catch
+  // below and degrades to the same local paths as a provider failure.
+  const generate: typeof generateExercise = async (...args) => {
+    await reserveQuota(userId, "generate", { burst: false });
+    return generateExercise(...args);
+  };
   try {
     if (type === "cloze") {
       if (hasProvider("generate")) {
-        generated = await generateExercise(word, "cloze");
+        generated = await generate(word, "cloze");
       } else {
         const local = localCloze(word);
         if (local) generated = { cloze_sentence: local };
@@ -85,9 +92,9 @@ export async function POST(req: Request) {
       }
     } else if (type === "translate") {
       const direction = Math.random() < 0.5 ? "vn_to_en" : "en_to_vn";
-      generated = await generateExercise(word, "translate", direction);
+      generated = await generate(word, "translate", direction);
     } else if (type === "scenario") {
-      generated = await generateExercise(word, "scenario");
+      generated = await generate(word, "scenario");
     }
   } catch {
     // generation failed -> safest usable fallback

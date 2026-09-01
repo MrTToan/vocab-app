@@ -22,8 +22,10 @@ window for time series is the last **30 days**.
   studied), the list **paginated 10 per page**.
 - **Activity** — Attempts per day and Daily active users (distinct users with ≥1 attempt) — the
   v1 traffic signal, a free proxy with no page-view tracking.
-- **LLM usage** — all-time units, today's units (UTC), usage by task, and the heaviest consumers.
-  Fed by the per-user daily quota log (`llm_usage`, `lib/auth/quota.ts`).
+- **LLM usage** — all-time units, today's units (UTC), usage by task (enrich, score, score-writing,
+  extract-chart, discuss-writing, generate), and the heaviest consumers. Fed by the per-user daily
+  quota log (`llm_usage`, `lib/auth/quota.ts`); every model-calling route requires sign-in and
+  reserves a unit there, with caps set by the `QUOTA_*` env vars (see `.env.example`).
 
 > There is no standalone "Progress" chart — mastery appears only as the *Mastered* overview tile.
 
