@@ -8,9 +8,10 @@ A personal English **practice engine** — *not* a flashcard notebook. Two modul
 corrections and coaching). An LLM enriches words and scores what you write. Built for one learner
 (intermediate B1–B2, L1 Vietnamese).
 
-> **Scope, honestly:** a single-user, local-first tool I built for my own study. It's **not deployed**
-> and has **no auth by design** — a deliberate choice for a personal app, not an oversight. See
-> [Design decisions](#design-decisions--tradeoffs).
+> **Scope, honestly:** started as a single-user, local-first tool for my own study, now grown into a
+> **deployed, multi-tenant** app — Google sign-in, a shared public word catalog, per-user progress,
+> and an owner admin portal. It still runs **fully local with no auth** (the dev seam) if you prefer.
+> See [Design decisions](#design-decisions--tradeoffs) and `TECH.md`.
 
 ## Screenshots
 
@@ -114,9 +115,11 @@ Where I made a call and why — including what I'd want a reviewer to know:
 
 **Known tradeoffs I'm aware of** (fine at this scale, flagged for honesty):
 `pickNext` reads the full word table on each pick (O(n); imperceptible at ~1k words); schema evolution is
-ad-hoc (`CREATE TABLE IF NOT EXISTS` plus try/catch `ALTER TABLE ADD COLUMN` in the writing store — no
-formal migration framework yet); the circuit-breaker state is a module global (correct for one local
-process, not multi-instance safe); and everything assumes a **single user** (no `user_id` on records).
+ad-hoc (`CREATE TABLE IF NOT EXISTS` plus try/catch `ALTER TABLE ADD COLUMN`, with one-time
+`scripts/migrate-*.mjs` for the bigger shape changes — no formal migration framework yet); and the
+circuit-breaker state is a module global (correct for one long-lived self-host process, not
+multi-instance safe). The app is now **multi-tenant** — content is shared/global (`owner_id`) and
+per-user progress lives in `user_words`; see `TECH.md`.
 
 ## Project layout
 

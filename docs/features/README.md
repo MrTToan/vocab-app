@@ -14,8 +14,8 @@ cross-skill Report. A SaaS-style landing page sits at `/`.
 2. [Exercise types](exercise-types.md) — the exercises and how each is graded
 3. [Explore mode](explore-mode.md) — the 🔀 "new words" toggle
 4. [Question bank](question-bank.md) — pre-generated + self-refilling questions
-5. [Adding words](adding-words.md) — enrichment, duplicate & spelling checks, manual entry, CSV import
-6. [Collections](collections.md) — curated word groups + scoped practice
+5. [Adding words](adding-words.md) — enrichment, duplicate & spelling checks, single add, paste-a-list import (CSV as advanced)
+6. [Collections](collections.md) — curated word groups (private + public packs) + scoped practice
 
 ## Writing
 7. [IELTS writing feedback](writing-feedback.md) — Task 1 & Task 2, band scoring, inline corrections
@@ -24,3 +24,4 @@ cross-skill Report. A SaaS-style landing page sits at `/`.
 8. [Progress tracking](progress-tracking.md) — the cross-skill `/report` (vocab + writing charts; `/progress` redirects here)
 9. [AI providers](ai-providers.md) — the fallback chain & running with no key
 10. [Data & storage](data-and-storage.md) — what's stored, where, and backups
+11. [Admin portal](admin.md) — the owner-only usage dashboard at `/admin`
