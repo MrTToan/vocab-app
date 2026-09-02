@@ -4,8 +4,31 @@ import useSWR, { mutate, type SWRConfiguration } from "swr";
 import useSWRInfinite, {
   type SWRInfiniteConfiguration,
 } from "swr/infinite";
-import type { Collection, Word, WordListItem } from "./types";
+import type { Word, WordListItem } from "./types";
 import { jsonFetch } from "./ui";
+import {
+  WORDS_LIST_BASE,
+  WORDS_PAGE_SIZE,
+  wordsPageKey,
+  wordsPageGetKey,
+  markStudyingInPages,
+  membershipReducer,
+  type WordsFilter,
+  type WordsPage,
+  type Membership,
+  type CollectionsData,
+} from "./swr-cache";
+
+// Re-export the hook-free cache core so existing `@/lib/swr` importers keep
+// working; the pure pieces themselves live in (and are unit-tested from)
+// `lib/swr-cache.ts`.
+export {
+  WORDS_LIST_BASE,
+  WORDS_PAGE_SIZE,
+  wordsPageKey,
+  markStudyingInPages,
+};
+export type { WordsFilter, WordsPage, Membership, CollectionsData };
 
 /**
  * Shared SWR layer — one typed fetcher + one cache key per endpoint so every page
@@ -18,9 +41,6 @@ import { jsonFetch } from "./ui";
 /** Typed GET fetcher used by every hook. Errors bubble as thrown Errors. */
 export const fetcher = <T>(url: string): Promise<T> => jsonFetch<T>(url);
 
-/** Prefix shared by every Library list page key. `revalidateWords()` matches on
- *  it so ONE call refreshes every cached filter/offset page after a write. */
-export const WORDS_LIST_BASE = "/api/words?fields=list";
 /** @deprecated superseded by the paginated `useWordsPage`; kept for the prefix. */
 export const KEY_WORDS_LIST = WORDS_LIST_BASE;
 export const KEY_COLLECTIONS = "/api/collections";
@@ -44,44 +64,10 @@ export type ConfigData = {
   chain?: Array<{ provider: string; model: string }>;
 };
 
-export type Membership = { word_id: string; collection_id: string };
-export type CollectionsData = {
-  collections: Collection[];
-  memberships: Membership[];
-  owner: boolean;
-};
-
 /* ─────────────────────────────  Hooks  ───────────────────────────── */
 
 export function useWordsList(config?: SWRConfiguration) {
   return useSWR<{ words: WordListItem[] }>(KEY_WORDS_LIST, fetcher, config);
-}
-
-/** How the Library list is filtered — mirrors the store's ListPageOpts (server-side). */
-export type WordsFilter = { q?: string; stage?: string; collection?: string };
-/** One server page (rows). Matches the store's ListPage + the echoed paging. */
-export type WordsPage = {
-  words: WordListItem[];
-  total: number;
-  limit: number;
-  offset: number;
-};
-/** Rows per page; the "Show more" button loads one more of these. */
-export const WORDS_PAGE_SIZE = 20;
-
-/** Build the list key for one filter + offset. `q`/`stage:"all"`/empty
- *  collection are omitted so their keys stay stable. */
-export function wordsPageKey(filter: WordsFilter, offset: number): string {
-  const p = new URLSearchParams({
-    fields: "list",
-    limit: String(WORDS_PAGE_SIZE),
-    offset: String(offset),
-  });
-  const q = filter.q?.trim();
-  if (q) p.set("q", q);
-  if (filter.stage && filter.stage !== "all") p.set("stage", filter.stage);
-  if (filter.collection) p.set("collection", filter.collection);
-  return `/api/words?${p.toString()}`;
 }
 
 /**
@@ -96,12 +82,7 @@ export function useWordsPage(
   config?: SWRInfiniteConfiguration,
 ) {
   return useSWRInfinite<WordsPage>(
-    (index, prev) => {
-      // Stop when the last page was short, or we've already covered the total.
-      if (prev && prev.words.length < WORDS_PAGE_SIZE) return null;
-      if (prev && index * WORDS_PAGE_SIZE >= prev.total) return null;
-      return wordsPageKey(filter, index * WORDS_PAGE_SIZE);
-    },
+    (index, prev) => wordsPageGetKey(filter, index, prev),
     fetcher,
     config,
   );
@@ -176,34 +157,11 @@ export function mutateAfterWordChange() {
 }
 
 /**
- * One or more not-yet-studied members were adopted from the collection filter —
- * flip their `studying` flag to true across the LOADED list pages WITHOUT a
- * refetch (so each row stays put, now studied, and its "+ Add" disappears).
- *
- * This is a pure pages-updater for the BOUND `mutate` returned by
- * `useWordsPage` (useSWRInfinite). A global `mutate` matcher over the child page
- * keys does NOT reliably re-render the infinite hook, so the optimistic flip
- * was lost and the button reappeared — the bound mutate is the correct lever.
- * Pair the call with `revalidateStats()` (studied/stage counts changed).
- */
-export function markStudyingInPages(
-  pages: WordsPage[] | undefined,
-  ids: ReadonlySet<string>,
-): WordsPage[] | undefined {
-  if (!pages || ids.size === 0) return pages;
-  return pages.map((page) => ({
-    ...page,
-    words: page.words.map((w) =>
-      ids.has(w.id) ? { ...w, studying: true } : w,
-    ),
-  }));
-}
-
-/**
  * Optimistically flip one word↔collection membership in the collections cache
  * (and keep the collection's `count` chip honest) WITHOUT a refetch — this is
  * what makes the Library chip toggle feel instant (composes with PR #11). Call
- * again with `!on` to revert if the persist fails.
+ * again with `!on` to revert if the persist fails. The pure transform lives in
+ * `membershipReducer` (`lib/swr-cache.ts`) so it can be unit-tested.
  */
 export function applyMembershipToCache(
   wordId: string,
@@ -212,24 +170,7 @@ export function applyMembershipToCache(
 ) {
   return mutate<CollectionsData>(
     KEY_COLLECTIONS,
-    (prev) => {
-      if (!prev) return prev;
-      const exists = prev.memberships.some(
-        (m) => m.word_id === wordId && m.collection_id === collectionId,
-      );
-      if (on === exists) return prev; // already in the desired state
-      const memberships = on
-        ? [...prev.memberships, { word_id: wordId, collection_id: collectionId }]
-        : prev.memberships.filter(
-            (m) => !(m.word_id === wordId && m.collection_id === collectionId),
-          );
-      const collections = prev.collections.map((c) =>
-        c.id === collectionId
-          ? { ...c, count: Math.max(0, (c.count ?? 0) + (on ? 1 : -1)) }
-          : c,
-      );
-      return { ...prev, memberships, collections };
-    },
+    (prev) => membershipReducer(prev, wordId, collectionId, on),
     { revalidate: false },
   );
 }
