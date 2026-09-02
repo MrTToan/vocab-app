@@ -176,25 +176,27 @@ export function mutateAfterWordChange() {
 }
 
 /**
- * A not-yet-studied word was adopted from the collection filter — flip its
- * `studying` flag to true across every cached list page WITHOUT a refetch (so
- * the row stays put, now studied). Pair with `revalidateStats()` because the
- * user's studied/stage counts changed. Composes with `revalidateWords()`.
+ * One or more not-yet-studied members were adopted from the collection filter —
+ * flip their `studying` flag to true across the LOADED list pages WITHOUT a
+ * refetch (so each row stays put, now studied, and its "+ Add" disappears).
+ *
+ * This is a pure pages-updater for the BOUND `mutate` returned by
+ * `useWordsPage` (useSWRInfinite). A global `mutate` matcher over the child page
+ * keys does NOT reliably re-render the infinite hook, so the optimistic flip
+ * was lost and the button reappeared — the bound mutate is the correct lever.
+ * Pair the call with `revalidateStats()` (studied/stage counts changed).
  */
-export function applyWordAdoptedToCache(wordId: string) {
-  return mutate<WordsPage>(
-    (key) => typeof key === "string" && key.startsWith(WORDS_LIST_BASE),
-    (page) =>
-      page
-        ? {
-            ...page,
-            words: page.words.map((w) =>
-              w.id === wordId ? { ...w, studying: true } : w,
-            ),
-          }
-        : page,
-    { revalidate: false },
-  );
+export function markStudyingInPages(
+  pages: WordsPage[] | undefined,
+  ids: ReadonlySet<string>,
+): WordsPage[] | undefined {
+  if (!pages || ids.size === 0) return pages;
+  return pages.map((page) => ({
+    ...page,
+    words: page.words.map((w) =>
+      ids.has(w.id) ? { ...w, studying: true } : w,
+    ),
+  }));
 }
 
 /**

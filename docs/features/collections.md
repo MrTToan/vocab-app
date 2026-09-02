@@ -35,7 +35,11 @@ Three ways:
    **all** of the pack's words — the ones you already study *and* the ones you don't
    yet — so the list always matches the dropdown's count. Words you don't study yet
    carry an **Add** button that starts studying just that one word
-   (`POST /api/words/:id/adopt`), the per-word twin of **Add all**.
+   (`POST /api/words/:id/adopt`), the per-word twin of **Add all**. While a
+   collection is selected, an **+ Add all** button next to the filter note adopts
+   every not-yet-studied member of that pack in one tap
+   (`POST /api/collections/:id/adopt`); it hides itself once the whole loaded set is
+   studied. So a learner can add word-by-word or the whole collection at once.
 2. **On the Add page** — pick one or more collections before saving a new word (the selection
    is kept between saves, so you can add several words to the same set in a row).
 3. **Claude-curated starter packs** *(on request)* — Claude can author a themed collection
