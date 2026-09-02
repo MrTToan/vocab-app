@@ -1,5 +1,3 @@
-import { promises as fs } from "fs";
-import path from "path";
 import { randomUUID } from "crypto";
 
 /*
@@ -10,32 +8,12 @@ import { randomUUID } from "crypto";
  * a new email gets a fresh uuid.
  */
 
-let db: any = null;
-let ready: Promise<void> | null = null;
+import { getDb } from "../db";
 
-async function connect(): Promise<any> {
-  if (!ready) {
-    ready = (async () => {
-      const { createClient } = await import("@libsql/client");
-      let url = process.env.DATABASE_URL;
-      if (!url) {
-        const dir = path.join(process.cwd(), ".data");
-        await fs.mkdir(dir, { recursive: true });
-        url = `file:${path.join(dir, "lexi.db")}`;
-      } else if (url.startsWith("file:")) {
-        await fs.mkdir(path.dirname(path.resolve(url.slice(5))), { recursive: true });
-      }
-      db = createClient({ url, authToken: process.env.DATABASE_AUTH_TOKEN });
-      await db.execute(
-        `CREATE TABLE IF NOT EXISTS users (id TEXT PRIMARY KEY, email TEXT, name TEXT, image TEXT, created_at INTEGER)`,
-      );
-      await db.execute(
-        `CREATE UNIQUE INDEX IF NOT EXISTS idx_users_email ON users (email)`,
-      );
-    })();
-  }
-  await ready;
-  return db;
+async function connect() {
+  // Shared process-wide client; the `users` table + unique email index are
+  // created by migrate() in lib/db.ts before this resolves.
+  return getDb();
 }
 
 export interface UserRow {

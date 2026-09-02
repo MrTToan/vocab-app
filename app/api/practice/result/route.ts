@@ -22,12 +22,15 @@ export async function POST(req: Request) {
 
   const now = Date.now();
   const progress = applyResult(word, result, now);
-  // Persist progress into this user's user_words (studying), not the shared word.
-  const updated = await store.setProgress(wordId, progress);
-  // best-effort attempt log for the progress page
-  store
-    .logAttempt({ word_id: wordId, exercise_type: exerciseType ?? "", result, ts: now })
-    .catch(() => {});
+  // Persist progress into this user's user_words (studying) AND log the attempt
+  // atomically — one write batch, so the progress page can never miss an attempt
+  // a stage change was based on.
+  const updated = await store.recordResult(wordId, progress, {
+    word_id: wordId,
+    exercise_type: exerciseType ?? "",
+    result,
+    ts: now,
+  });
   return NextResponse.json({
     word: updated,
     stage: progress.stage,

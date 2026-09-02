@@ -1,5 +1,3 @@
-import { promises as fs } from "fs";
-import path from "path";
 import { randomUUID } from "crypto";
 import {
   CRITERIA,
@@ -43,89 +41,12 @@ type NewPrompt = Omit<WritingPrompt, "id" | "created_at" | "tags" | "owner_id" |
 type NewSubmission = Omit<WritingSubmission, "id" | "created_at"> &
   Partial<Pick<WritingSubmission, "id" | "created_at">>;
 
-let db: any = null;
-let ready: Promise<void> | null = null;
-
-async function addColumn(d: any, table: string, colDef: string): Promise<void> {
-  try {
-    await d.execute(`ALTER TABLE ${table} ADD COLUMN ${colDef}`);
-  } catch {
-    /* column already exists */
-  }
-}
+import { getDb } from "../db";
 
 async function connect(): Promise<any> {
-  if (!ready) {
-    ready = (async () => {
-      const { createClient } = await import("@libsql/client");
-      let url = process.env.DATABASE_URL;
-      if (!url) {
-        const dir = path.join(process.cwd(), ".data");
-        await fs.mkdir(dir, { recursive: true });
-        url = `file:${path.join(dir, "lexi.db")}`;
-      } else if (url.startsWith("file:")) {
-        await fs.mkdir(path.dirname(path.resolve(url.slice(5))), { recursive: true });
-      }
-      db = createClient({ url, authToken: process.env.DATABASE_AUTH_TOKEN });
-      await db.execute(
-        `CREATE TABLE IF NOT EXISTS writing_prompts (
-          id TEXT PRIMARY KEY, task_type TEXT, title TEXT, prompt_text TEXT,
-          image_path TEXT, chart_data TEXT, model_answer TEXT, source_file TEXT,
-          tags TEXT, last_shown INTEGER DEFAULT 0, created_at INTEGER, user_id TEXT
-        )`,
-      );
-      await db.execute(
-        `CREATE TABLE IF NOT EXISTS writing_submissions (
-          id TEXT PRIMARY KEY, prompt_id TEXT, task_type TEXT, text TEXT,
-          word_count INTEGER, overall_band REAL, bands TEXT, strengths TEXT,
-          general_feedback TEXT, priorities TEXT, created_at INTEGER, user_id TEXT
-        )`,
-      );
-      await db.execute(
-        `CREATE TABLE IF NOT EXISTS writing_corrections (
-          id TEXT PRIMARY KEY, submission_id TEXT, original TEXT, suggestion TEXT,
-          error_type TEXT, criterion TEXT, explanation TEXT, start INTEGER, "end" INTEGER,
-          user_id TEXT
-        )`,
-      );
-      // migrations for DBs created before these columns existed
-      await addColumn(db, "writing_submissions", "priorities TEXT");
-      await addColumn(db, "writing_prompts", "user_id TEXT");
-      await addColumn(db, "writing_submissions", "user_id TEXT");
-      await addColumn(db, "writing_corrections", "user_id TEXT");
-      // ownership + visibility (mirrors collections). Backfill: rows from before
-      // this existed are the owner-curated bank everyone already uses → public.
-      await addColumn(db, "writing_prompts", "owner_id TEXT");
-      await addColumn(db, "writing_prompts", "visibility TEXT DEFAULT 'private'");
-      await db.execute(
-        `UPDATE writing_prompts SET owner_id = '${SYSTEM_OWNER}', visibility = 'public'
-         WHERE owner_id IS NULL OR owner_id = ''`,
-      );
-      await db.execute(
-        `UPDATE writing_prompts SET visibility = 'private' WHERE visibility IS NULL OR visibility = ''`,
-      );
-      await db.execute(
-        `CREATE TABLE IF NOT EXISTS writing_discussions (
-          id TEXT PRIMARY KEY, submission_id TEXT, card_key TEXT,
-          role TEXT, content TEXT, seq INTEGER, created_at INTEGER
-        )`,
-      );
-      await db.execute(
-        `CREATE INDEX IF NOT EXISTS idx_wp_task ON writing_prompts (task_type)`,
-      );
-      await db.execute(
-        `CREATE INDEX IF NOT EXISTS idx_ws_user ON writing_submissions (user_id, prompt_id)`,
-      );
-      await db.execute(
-        `CREATE INDEX IF NOT EXISTS idx_wc_sub ON writing_corrections (submission_id)`,
-      );
-      await db.execute(
-        `CREATE INDEX IF NOT EXISTS idx_wd_sub ON writing_discussions (submission_id, card_key, seq)`,
-      );
-    })();
-  }
-  await ready;
-  return db;
+  // Shared process-wide client; all writing_* tables, guarded ADD COLUMNs and
+  // the owner/visibility backfill now live in migrate() in lib/db.ts.
+  return getDb();
 }
 
 function jsonParse<T>(s: unknown, fallback: T): T {
