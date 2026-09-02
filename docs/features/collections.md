@@ -38,6 +38,10 @@ Three ways:
    (`POST /api/words/:id/adopt`), the per-word twin of **Add all**.
 2. **On the Add page** — pick one or more collections before saving a new word (the selection
    is kept between saves, so you can add several words to the same set in a row).
+   The **Paste a list** importer can also file a whole pasted list into a collection (existing or a
+   new one created inline): new words are added and tagged, and words you already have are tagged in
+   rather than duplicated — deduped by **lemma** so inflections don't double up. See
+   [adding-words](adding-words.md).
 3. **Claude-curated starter packs** *(on request)* — Claude can author a themed collection
    (the words, collocations, and phrases graders reward) and assign them for you. Ask for one,
    e.g. "build me an IELTS Task 1 collection".

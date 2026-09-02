@@ -93,6 +93,21 @@ export const importPasteSchema = z.strictObject({
     .array(z.string().max(100), "words is required")
     .min(1, "words is required")
     .max(250),
+  // Optional collection to tag every imported word into (created new words AND
+  // any paste entry that turns out to already exist). Owner-checked server-side.
+  collectionId: idSchema.optional(),
+});
+
+/**
+ * POST /api/words/import-plan — cheap, read-only preview for the paste importer.
+ * Lemma-dedupes the pasted list within itself AND against the user's existing
+ * words: new words to enrich, existing words to tag, and repeats to skip.
+ */
+export const importPlanSchema = z.strictObject({
+  words: z
+    .array(z.string().max(100), "words is required")
+    .min(1, "words is required")
+    .max(250),
 });
 
 /* ── CSV import ────────────────────────────────────────────────────── */
