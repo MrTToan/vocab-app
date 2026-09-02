@@ -1,31 +1,11 @@
 import type { Metadata } from "next";
-import { Fraunces, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
-// Type system — an academic-but-warm pairing, deliberately not the system-font default:
-//  · Fraunces  → literary display serif for headings/hero (words, language, reading)
-//  · IBM Plex Sans → precise, legible body/UI
-//  · IBM Plex Mono → data, timers, word counts ("the graded numbers")
-const display = Fraunces({
-  subsets: ["latin"],
-  variable: "--font-display",
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
-  display: "swap",
-});
-const body = IBM_Plex_Sans({
-  subsets: ["latin"],
-  variable: "--font-body",
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-});
-const mono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  weight: ["400", "500", "600"],
-  display: "swap",
-});
+// PERF: no fonts here. The app's Fraunces/IBM Plex load from app/fonts.ts via
+// the (app) layout (and the legal pages), and the marketing pages bring their
+// own Cormorant/Inter — so the landing page doesn't download app fonts and
+// vice versa.
 
 export const metadata: Metadata = {
   title: "Lexi — learn English by doing",
@@ -40,11 +20,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={`h-full ${display.variable} ${body.variable} ${mono.variable}`}
-    >
+    <html lang="en" suppressHydrationWarning className="h-full">
       <body className="min-h-full flex flex-col">
         {/* Set the saved theme before paint (no flash). Absent = follow the OS. */}
         <Script id="lexi-theme-init" strategy="beforeInteractive">

@@ -82,6 +82,9 @@ function buildUser(
   question: string,
 ): string {
   const parts: string[] = [];
+  // ORDER MATTERS for provider prompt caching: within one discussion thread the
+  // task and essay (then the card, then the append-only history) are a stable
+  // prefix across turns; only the new question changes. Keep it that way.
   parts.push(`# The writing task (${s.task_type === "task1" ? "IELTS Task 1" : "IELTS Task 2"})\n${prompt.prompt_text}`);
   parts.push(`# The student's essay (${s.word_count} words)\n${s.text}`);
   parts.push(`# The feedback card being discussed\n${card.label}\n${card.detail}`);
