@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { withUser } from "@/lib/api";
+import { withOwner, withUser } from "@/lib/api";
 import { createPromptSchema, writingPromptsQuerySchema } from "@/lib/api-schemas";
 import { writingStore } from "@/lib/writing/store";
 import { canEdit } from "@/lib/auth/user";
@@ -55,17 +55,21 @@ export const GET = withUser(
 );
 
 /**
- * POST -> create one prompt (self-serve "Add a question" flow).
- * Body: { task_type, prompt_text, title?, image?, chart_data? }
+ * POST -> create one writing question. ADMIN-ONLY (withOwner): regular users can
+ * no longer create writing questions — the admin curates the shared bank from
+ * the admin "Writing Questions" subtab, and this route is the server-level gate
+ * (403 for non-admins).
+ * Body: { task_type, prompt_text, title?, image?, chart_data?, model_answer?, visibility? }
  *   - image: a base64 data URL (Task 1 chart), stored inline as image_path.
  *   - chart_data: the confirmed/edited transcription (Task 1 only).
+ *   - visibility: publish state (defaults to public — an admin-created question
+ *     is published; pass "private" to keep it as a draft).
  *
- * Ownership: the site owner's prompt joins the public bank; anyone else's is
- * PRIVATE to them until the site owner publishes it (PATCH /prompts/:id).
+ * Ownership: the admin's prompt joins the shared bank (`owner_id = __system__`).
  * Limits (400 otherwise): text 10..4,000 chars, title <= 120 chars, image only
  * for Task 1, png/jpeg/webp, <= 1 MB decoded.
  */
-export const POST = withUser(
+export const POST = withOwner(
   createPromptSchema,
   async ({ userId, input }) => {
     const task_type = input.task_type as WritingTask;
@@ -105,7 +109,7 @@ export const POST = withUser(
       prompt_text.split("\n")[0].split(/\s+/).slice(0, 9).join(" ").replace(/[.:,]$/, "") ||
       "Untitled prompt";
 
-    // owner_id / visibility are derived from the caller inside addPrompts.
+    // owner_id defaults to the shared bank for an admin (inside addPrompts).
     const [saved] = await writingStore.forUser(userId).addPrompts([
       {
         task_type,
@@ -113,9 +117,10 @@ export const POST = withUser(
         prompt_text,
         image_path: image,
         chart_data: task_type === "task1" ? (input.chart_data as ChartData | null) ?? null : null,
-        model_answer: null,
-        source_file: "self-serve (in-app)",
+        model_answer: input.model_answer ?? null,
+        source_file: "admin (in-app)",
         tags: [],
+        visibility: input.visibility,
       },
     ]);
 
