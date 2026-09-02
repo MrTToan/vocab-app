@@ -3,6 +3,7 @@ import { display, body, mono } from "@/app/fonts";
 import Nav from "@/components/Nav";
 import AuthStatus from "@/components/AuthStatus";
 import AdminLink from "./AdminLink";
+import FeedbackLauncher from "./FeedbackLauncher";
 
 // The in-app chrome: shared nav + a centered content column. Wraps every route
 // except the marketing landing page.
@@ -37,6 +38,11 @@ export default function AppLayout({
         }
       />
       <main className="flex-1 w-full max-w-3xl mx-auto px-4 py-8">{children}</main>
+      {/* Floating feedback widget — signed-in app pages only (its own auth gate,
+          Suspense-wrapped so it never blocks the shell paint). */}
+      <Suspense fallback={null}>
+        <FeedbackLauncher />
+      </Suspense>
     </div>
   );
 }
