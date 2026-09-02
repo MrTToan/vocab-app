@@ -11,6 +11,7 @@ import type {
   Visibility,
 } from "./types";
 import { SYSTEM_OWNER, canEdit, ownerIdFor } from "./auth/user";
+import { getDb, CONTENT_COLS } from "./db";
 // NOTE: writing prompts live in lib/writing/store.ts and follow the same
 // owner_id/visibility model as collections. Vocab data below is split into shared
 // CONTENT (words + questions, keyed by id) and per-user PROGRESS (user_words +
@@ -69,6 +70,8 @@ export interface ScopedStore {
   update(id: string, patch: Partial<Word>): Promise<Word | undefined>;
   /** Upsert this user's PROGRESS on a word (studying it). No edit rights required. */
   setProgress(wordId: string, progress: Progress): Promise<Word | undefined>;
+  /** Atomically upsert progress AND log the attempt (one write batch on SQLite). */
+  recordResult(wordId: string, progress: Progress, attempt: Attempt): Promise<Word | undefined>;
   remove(id: string): Promise<void>;
   logAttempt(a: Attempt): Promise<void>;
   attempts(): Promise<Attempt[]>;
@@ -184,24 +187,8 @@ export const HEADERS = [
   "created_at",
 ] as const;
 
-/** Shared-content columns of the SQLite `words` table (progress lives elsewhere). */
-const CONTENT_COLS = [
-  "id",
-  "word",
-  "part_of_speech",
-  "ipa",
-  "vi_meaning",
-  "definition_en",
-  "synonyms",
-  "collocations",
-  "example_simple",
-  "example_complex",
-  "false_friend_note",
-  "personal_note",
-  "tags",
-  "source",
-  "created_at",
-] as const;
+// Shared-content columns of the `words` table: CONTENT_COLS, imported from lib/db.ts
+// (the schema owner) so the DDL and the queries can never drift apart.
 
 function toRow(w: Word): Record<string, string> {
   return {
@@ -283,97 +270,9 @@ class SqliteStore implements Store {
   }
 
   private async connect(): Promise<void> {
-    if (this.ready) return this.ready;
-    this.ready = (async () => {
-      const { createClient } = await import("@libsql/client");
-      let url = process.env.DATABASE_URL;
-      if (!url) {
-        const dir = path.join(process.cwd(), ".data");
-        await fs.mkdir(dir, { recursive: true });
-        url = `file:${path.join(dir, "lexi.db")}`;
-      } else if (url.startsWith("file:")) {
-        const p = url.slice("file:".length);
-        await fs.mkdir(path.dirname(path.resolve(p)), { recursive: true });
-      }
-      this.db = createClient({
-        url,
-        authToken: process.env.DATABASE_AUTH_TOKEN,
-      });
-
-      // ── shared CONTENT ──────────────────────────────────────────────
-      const contentCols = CONTENT_COLS.map((h) => `"${h}" TEXT`).join(", ");
-      await this.db.execute(
-        `CREATE TABLE IF NOT EXISTS words (${contentCols}, owner_id TEXT, PRIMARY KEY ("id"))`,
-      );
-      await this.db.execute(
-        `CREATE TABLE IF NOT EXISTS questions (id TEXT PRIMARY KEY, word_id TEXT, type TEXT, direction TEXT, payload TEXT, answer TEXT)`,
-      );
-
-      // ── per-user PROGRESS ───────────────────────────────────────────
-      await this.db.execute(
-        `CREATE TABLE IF NOT EXISTS user_words (
-          user_id TEXT, word_id TEXT, stage TEXT, times_seen INTEGER DEFAULT 0,
-          recent_results TEXT DEFAULT '[]', last_seen_at INTEGER, added_at INTEGER,
-          PRIMARY KEY (user_id, word_id)
-        )`,
-      );
-      await this.db.execute(
-        `CREATE TABLE IF NOT EXISTS user_question_state (
-          user_id TEXT, question_id TEXT, last_shown INTEGER DEFAULT 0,
-          PRIMARY KEY (user_id, question_id)
-        )`,
-      );
-      await this.db.execute(
-        `CREATE TABLE IF NOT EXISTS attempts (ts INTEGER, word_id TEXT, exercise_type TEXT, result TEXT, user_id TEXT)`,
-      );
-      await this.db.execute(
-        `CREATE TABLE IF NOT EXISTS users (id TEXT PRIMARY KEY, email TEXT, name TEXT, image TEXT, created_at INTEGER)`,
-      );
-
-      // ── collections (owner_id + visibility) ─────────────────────────
-      await this.db.execute(
-        `CREATE TABLE IF NOT EXISTS collections (id TEXT PRIMARY KEY, name TEXT, description TEXT, emoji TEXT, created_at INTEGER, owner_id TEXT, visibility TEXT DEFAULT 'private')`,
-      );
-      await this.db.execute(
-        `CREATE TABLE IF NOT EXISTS word_collections (word_id TEXT, collection_id TEXT, PRIMARY KEY (word_id, collection_id))`,
-      );
-
-      // Additive migrations for DBs created before the content/progress split.
-      // Each ALTER is guarded, so a re-run (column already exists) is a no-op.
-      await addColumn(this.db, "words", "owner_id TEXT");
-      await addColumn(this.db, "collections", "owner_id TEXT");
-      await addColumn(this.db, "collections", "visibility TEXT DEFAULT 'private'");
-
-      // Lookup indexes (content is global; progress/state keyed per user).
-      await this.db.execute(
-        `CREATE INDEX IF NOT EXISTS idx_word ON words (word COLLATE NOCASE)`,
-      );
-      await this.db.execute(
-        `CREATE INDEX IF NOT EXISTS idx_words_owner ON words (owner_id)`,
-      );
-      await this.db.execute(
-        `CREATE INDEX IF NOT EXISTS idx_q ON questions (word_id, type)`,
-      );
-      await this.db.execute(
-        `CREATE INDEX IF NOT EXISTS idx_uw_user ON user_words (user_id)`,
-      );
-      await this.db.execute(
-        `CREATE INDEX IF NOT EXISTS idx_uqs_user ON user_question_state (user_id)`,
-      );
-      await this.db.execute(
-        `CREATE UNIQUE INDEX IF NOT EXISTS idx_users_email ON users (email)`,
-      );
-      await this.db.execute(
-        `CREATE INDEX IF NOT EXISTS idx_wc_collection ON word_collections (collection_id)`,
-      );
-      await this.db.execute(
-        `CREATE INDEX IF NOT EXISTS idx_wc_word ON word_collections (word_id)`,
-      );
-      await this.db.execute(
-        `CREATE INDEX IF NOT EXISTS idx_collections_owner ON collections (owner_id)`,
-      );
-    })();
-    return this.ready;
+    // One shared client per process (lib/db.ts); schema is migrated before it
+    // resolves, so no DDL runs here.
+    if (!this.db) this.db = await getDb();
   }
 
   /** Map a content+progress joined row (progress cols aliased p_*) into a Word. */
@@ -534,6 +433,48 @@ class SqliteStore implements Store {
         Date.now(),
       ],
     });
+    return this.get(userId, wordId);
+  }
+
+  /**
+   * Upsert progress AND log the attempt in ONE write batch, so a practice
+   * result can never persist the stage change but lose the attempt row (or
+   * pay two lock acquisitions). Same statements as setProgress + logAttempt.
+   */
+  async recordResult(
+    userId: string,
+    wordId: string,
+    progress: Progress,
+    attempt: Attempt,
+  ): Promise<Word | undefined> {
+    await this.connect();
+    await this.db.batch(
+      [
+        {
+          sql: `INSERT INTO user_words (user_id, word_id, stage, times_seen, recent_results, last_seen_at, added_at)
+                VALUES (?,?,?,?,?,?,?)
+                ON CONFLICT(user_id, word_id) DO UPDATE SET
+                  stage = excluded.stage,
+                  times_seen = excluded.times_seen,
+                  recent_results = excluded.recent_results,
+                  last_seen_at = excluded.last_seen_at`,
+          args: [
+            userId,
+            wordId,
+            progress.stage,
+            progress.times_seen,
+            JSON.stringify(progress.recent_results ?? []),
+            progress.last_seen_at,
+            Date.now(),
+          ],
+        },
+        {
+          sql: "INSERT INTO attempts (ts, word_id, exercise_type, result, user_id) VALUES (?,?,?,?,?)",
+          args: [attempt.ts, attempt.word_id, attempt.exercise_type, attempt.result, userId],
+        },
+      ],
+      "write",
+    );
     return this.get(userId, wordId);
   }
 
@@ -1003,6 +944,8 @@ function makeScoped(raw: any, userId: string): ScopedStore {
     addMany: (words) => raw.addMany(userId, words),
     update: (id, patch) => raw.update(userId, id, patch),
     setProgress: (wordId, progress) => raw.setProgress(userId, wordId, progress),
+    recordResult: (wordId, progress, attempt) =>
+      raw.recordResult(userId, wordId, progress, attempt),
     remove: (id) => raw.remove(userId, id),
     logAttempt: (a) => raw.logAttempt(userId, a),
     attempts: () => raw.attempts(userId),
@@ -1167,6 +1110,17 @@ class SheetStore implements Store {
     progress: Progress,
   ): Promise<Word | undefined> {
     return this.applyPatch(userId, wordId, progress);
+  }
+  /** Sheets has no batch write; sequential is the best atomicity available. */
+  async recordResult(
+    userId: string,
+    wordId: string,
+    progress: Progress,
+    attempt: Attempt,
+  ): Promise<Word | undefined> {
+    const w = await this.applyPatch(userId, wordId, progress);
+    await this.logAttempt(userId, attempt);
+    return w;
   }
   private async applyPatch(
     userId: string,
