@@ -174,6 +174,21 @@ export async function migrate(db: Client): Promise<void> {
   await addColumn(db, "collections", "owner_id TEXT");
   await addColumn(db, "collections", "visibility TEXT DEFAULT 'private'");
 
+  // Backfill legacy `words.owner_id`: rows created before the column existed
+  // (the single-tenant era) have owner_id NULL, but every read gates on it —
+  // `store.get()` fetches only `owner_id = __system__ OR owner_id = <you>`,
+  // so a NULL-owner word is invisible to EVERYONE. That silently breaks the
+  // practice loop: `/api/practice/next` serves such a word (it scopes by
+  // user_words membership, not owner_id), but `/api/practice/score` and
+  // `/result` then 404 on it — so "Check my answer" (LLM-scored) shows no
+  // result, while locally-graded cards still show client-side feedback.
+  // These pre-split rows are the owner-curated seed catalogue everyone already
+  // studies (the public packs point at them), so they become `__system__` —
+  // exactly the treatment the writing-prompt bank gets just below.
+  await db.execute(
+    `UPDATE words SET owner_id = '${SYSTEM_OWNER}' WHERE owner_id IS NULL OR owner_id = ''`,
+  );
+
   // Vocab lookup indexes (content is global; progress/state keyed per user).
   await db.execute(`CREATE INDEX IF NOT EXISTS idx_word ON words (word COLLATE NOCASE)`);
   await db.execute(`CREATE INDEX IF NOT EXISTS idx_words_owner ON words (owner_id)`);
