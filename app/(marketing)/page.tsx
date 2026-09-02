@@ -75,13 +75,6 @@ const TOOLKIT = [
   },
 ];
 
-const STATS = [
-  { num: "5", cap: "stages on the mastery ladder — new to known" },
-  { num: "6", cap: "exercise types, chosen by the word's stage" },
-  { num: "4", cap: "official IELTS criteria scored per essay" },
-  { num: "8,000+", cap: "ready-made practice questions to drill" },
-];
-
 export default function Landing() {
   return (
     <div className={`mntn ${cormorant.variable} ${inter.variable}`}>
@@ -93,7 +86,7 @@ export default function Landing() {
           Lexi
         </Link>
         <div className="navc">
-          <Link href="/vocab">Practice</Link>
+          <Link href="/vocab">Vocab</Link>
           <Link href="/writing">Writing</Link>
           <Link href="/how-it-works">How it works</Link>
         </div>
@@ -128,21 +121,6 @@ export default function Landing() {
         </div>
         <div className="hero-shade" />
 
-        <Link className="hero-cta r d2" href="/vocab" aria-label="Start practicing">
-          <span className="txt">Start here</span>
-          <span className="disc">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path
-                d="M7 17L17 7M10 7H17V14"
-                stroke="currentColor"
-                strokeWidth="1.9"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </span>
-        </Link>
-
         <div className="hero-in">
           <h1 className="r d1">
             Master The Words.
@@ -168,7 +146,7 @@ export default function Landing() {
             />
           </div>
           <div className="copy">
-            <p className="kick r">The summit is production</p>
+            <p className="kick r">Recognition isn&rsquo;t mastery</p>
             <h2 className="lead-h r d1">
               A word isn&rsquo;t learned when you <i>recognise</i> it — only when
               you can <i>produce</i> it.
@@ -186,18 +164,6 @@ export default function Landing() {
               See how it works →
             </a>
           </div>
-        </div>
-      </section>
-
-      {/* STAT STRIP */}
-      <section className="stats" data-reveal>
-        <div className="wrap stats-in">
-          {STATS.map((s) => (
-            <div className="stat r d1" key={s.cap}>
-              <div className="num">{s.num}</div>
-              <p className="cap">{s.cap}</p>
-            </div>
-          ))}
         </div>
       </section>
 
@@ -298,14 +264,13 @@ export default function Landing() {
             </Link>
           </div>
           <p className="cnote r d2">
-            Free to start · sign in with Google · works on your phone
+            Free to start · one tap with Google · your climb fits in your pocket
           </p>
         </div>
       </section>
 
       <footer className="foot">
         <span className="logo">Lexi</span>
-        <span>Climb to fluency — vocabulary &amp; IELTS writing.</span>
         <div className="foot-links">
           <Link href="/vocab">Vocabulary</Link>
           <Link href="/writing">Writing</Link>
