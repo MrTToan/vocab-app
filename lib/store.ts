@@ -12,6 +12,17 @@ import type {
 } from "./types";
 import { SYSTEM_OWNER, canEdit, ownerIdFor } from "./auth/user";
 import { getDb, CONTENT_COLS } from "./db";
+import {
+  computeAttemptStats,
+  computeWordStats,
+  emptyStageCounts,
+  isWeakRecent,
+  lastNDays,
+  normResult,
+  streakFrom,
+  type AttemptStats,
+  type WordStats,
+} from "./stats";
 // NOTE: writing prompts live in lib/writing/store.ts and follow the same
 // owner_id/visibility model as collections. Vocab data below is split into shared
 // CONTENT (words + questions, keyed by id) and per-user PROGRESS (user_words +
@@ -52,6 +63,16 @@ export class ForbiddenError extends Error {
   }
 }
 
+/**
+ * The lean row the practice picker consumes: id/word + this user's progress.
+ * The heavy content columns (definitions, examples, notes…) are fetched for the
+ * PICKED word only, via `practiceWord()`.
+ */
+export type PracticeCandidate = Pick<
+  Word,
+  "id" | "word" | "stage" | "times_seen" | "recent_results" | "last_seen_at"
+>;
+
 /** A user-scoped view of the store — every method operates on one user's data. */
 export interface ScopedStore {
   /** Words this user is STUDYING (has a user_words row for), hydrated with progress. */
@@ -79,6 +100,20 @@ export interface ScopedStore {
    *  collection is given — that collection's shared words hydrated with progress
    *  (unstudied members appear as stage `new`, so public packs are practisable). */
   practiceCandidates(collectionId?: string): Promise<Word[]>;
+  /** Like `practiceCandidates()` but lean rows only (see PracticeCandidate) —
+   *  the picker never reads the heavy content columns. */
+  practiceCandidatesLite(collectionId?: string): Promise<PracticeCandidate[]>;
+  /** Hydrate a picked candidate to a full Word, under the SAME visibility rule
+   *  as the candidate query (studied words, or the collection's members). */
+  practiceWord(id: string, collectionId?: string): Promise<Word | undefined>;
+  /** Which of `words` this user already studies, as a Set of normalized
+   *  (lower/trim) strings — dedup checks without loading the library. */
+  existingWords(words: string[]): Promise<Set<string>>;
+  /** Word-side aggregates for /api/stats, computed close to the data. */
+  wordStats(): Promise<WordStats>;
+  /** Attempt-side aggregates for /api/stats. Day buckets/streak use the local
+   *  calendar day of `now` (matches the previous in-JS semantics). */
+  attemptStats(now: number): Promise<AttemptStats>;
   addQuestions(qs: Question[]): Promise<void>;
   /** Least-recently-shown (for THIS user) question of a type for a word, marking it shown. */
   pickQuestion(wordId: string, type: string): Promise<Question | undefined>;
@@ -563,6 +598,209 @@ class SqliteStore implements Store {
     return rs.rows.map((r: any) => this.mapWord(r));
   }
 
+  async practiceCandidatesLite(
+    userId: string,
+    collectionId?: string,
+  ): Promise<PracticeCandidate[]> {
+    await this.connect();
+    let rs;
+    if (!collectionId) {
+      rs = await this.db.execute({
+        sql: `SELECT w."id", w."word", ${W_PROGRESS}
+                FROM user_words uw JOIN words w ON w.id = uw.word_id
+               WHERE uw.user_id = ?
+               ORDER BY w.created_at DESC`,
+        args: [userId],
+      });
+    } else {
+      if (!(await this.collectionVisibleTo(userId, collectionId))) return [];
+      rs = await this.db.execute({
+        sql: `SELECT w."id", w."word", ${W_PROGRESS}
+                FROM word_collections wc
+                JOIN words w ON w.id = wc.word_id
+                LEFT JOIN user_words uw ON uw.word_id = w.id AND uw.user_id = ?
+               WHERE wc.collection_id = ?
+               ORDER BY w.created_at DESC`,
+        args: [userId, collectionId],
+      });
+    }
+    return rs.rows.map((r: Record<string, unknown>) => ({
+      id: str(r.id),
+      word: str(r.word),
+      stage: (r.p_stage != null ? String(r.p_stage) : "new") as Word["stage"],
+      times_seen: r.p_times != null ? Number(r.p_times) : 0,
+      recent_results: jsonArr(strOrU(r.p_recent)) as Word["recent_results"],
+      last_seen_at: r.p_last != null ? Number(r.p_last) : null,
+    }));
+  }
+
+  async practiceWord(
+    userId: string,
+    id: string,
+    collectionId?: string,
+  ): Promise<Word | undefined> {
+    await this.connect();
+    let rs;
+    if (collectionId) {
+      if (!(await this.collectionVisibleTo(userId, collectionId))) return undefined;
+      rs = await this.db.execute({
+        sql: `SELECT ${W_CONTENT}, ${W_PROGRESS}
+                FROM word_collections wc
+                JOIN words w ON w.id = wc.word_id
+                LEFT JOIN user_words uw ON uw.word_id = w.id AND uw.user_id = ?
+               WHERE wc.collection_id = ? AND w.id = ? LIMIT 1`,
+        args: [userId, collectionId, id],
+      });
+    } else {
+      rs = await this.db.execute({
+        sql: `SELECT ${W_CONTENT}, ${W_PROGRESS}
+                FROM user_words uw JOIN words w ON w.id = uw.word_id
+               WHERE uw.user_id = ? AND w.id = ? LIMIT 1`,
+        args: [userId, id],
+      });
+    }
+    return rs.rows[0] ? this.mapWord(rs.rows[0]) : undefined;
+  }
+
+  async existingWords(userId: string, words: string[]): Promise<Set<string>> {
+    await this.connect();
+    const norm = [...new Set(words.map((w) => normalizeWord(w ?? "")).filter(Boolean))];
+    const found = new Set<string>();
+    // Chunked IN (...) over the user's studied words — never load the library.
+    for (let i = 0; i < norm.length; i += 500) {
+      const chunk = norm.slice(i, i + 500);
+      const rs = await this.db.execute({
+        sql: `SELECT DISTINCT lower(trim(w.word)) AS n
+                FROM user_words uw JOIN words w ON w.id = uw.word_id
+               WHERE uw.user_id = ? AND lower(trim(w.word)) IN (${chunk
+                 .map(() => "?")
+                 .join(",")})`,
+        args: [userId, ...chunk],
+      });
+      for (const r of rs.rows) found.add(String(r.n));
+    }
+    return found;
+  }
+
+  async wordStats(userId: string): Promise<WordStats> {
+    await this.connect();
+    const [stagesRs, weakRs, topRs] = await Promise.all([
+      this.db.execute({
+        sql: `SELECT stage, COUNT(*) AS c,
+                     SUM(CASE WHEN times_seen > 0 THEN 1 ELSE 0 END) AS practiced
+                FROM user_words WHERE user_id = ? GROUP BY stage`,
+        args: [userId],
+      }),
+      // "weak" needs the recent_results JSON — pull ONLY that column, only for
+      // rows that have results at all, and finish the check in JS.
+      this.db.execute({
+        sql: `SELECT recent_results FROM user_words
+               WHERE user_id = ? AND recent_results IS NOT NULL AND recent_results != '[]'`,
+        args: [userId],
+      }),
+      this.db.execute({
+        sql: `SELECT w.word, uw.times_seen
+                FROM user_words uw JOIN words w ON w.id = uw.word_id
+               WHERE uw.user_id = ? AND uw.times_seen > 0
+               ORDER BY uw.times_seen DESC, w.created_at DESC
+               LIMIT 10`,
+        args: [userId],
+      }),
+    ]);
+
+    const stageCounts = emptyStageCounts();
+    let total = 0;
+    let practiced = 0;
+    let mastered = 0;
+    for (const r of stagesRs.rows) {
+      const stage = (str(r.stage) || "new") as Word["stage"];
+      const c = Number(r.c ?? 0);
+      if (stage in stageCounts) stageCounts[stage] += c;
+      total += c;
+      practiced += Number(r.practiced ?? 0);
+      if (stage === "known") mastered += c;
+    }
+    const weak = weakRs.rows.filter((r: Record<string, unknown>) =>
+      isWeakRecent(jsonArr(strOrU(r.recent_results)) as Word["recent_results"]),
+    ).length;
+    return {
+      total,
+      practiced,
+      mastered,
+      weak,
+      stageCounts,
+      topSeen: topRs.rows.map((r: Record<string, unknown>) => ({
+        word: str(r.word),
+        times_seen: Number(r.times_seen ?? 0),
+      })),
+    };
+  }
+
+  async attemptStats(userId: string, now: number): Promise<AttemptStats> {
+    await this.connect();
+    const [dayRs, typeRs] = await Promise.all([
+      // Per-local-day counts (all days — the distinct-day list also feeds the
+      // streak). 'localtime' matches the previous JS setHours(0,0,0,0) buckets.
+      this.db.execute({
+        sql: `SELECT date(ts/1000,'unixepoch','localtime') AS day, result, COUNT(*) AS c
+                FROM attempts WHERE user_id = ? GROUP BY day, result`,
+        args: [userId],
+      }),
+      this.db.execute({
+        sql: `SELECT exercise_type, result, COUNT(*) AS c, MIN(ts) AS first_ts
+                FROM attempts WHERE user_id = ? GROUP BY exercise_type, result`,
+        args: [userId],
+      }),
+    ]);
+
+    const days = lastNDays(now);
+    const byDay = days.map(({ label }) => ({
+      label,
+      total: 0,
+      correct: 0,
+      partial: 0,
+      incorrect: 0,
+    }));
+    const dayIndex = new Map(days.map((d, i) => [d.key, i]));
+    const activeDays = new Set<string>();
+    for (const r of dayRs.rows) {
+      const key = str(r.day);
+      activeDays.add(key);
+      const i = dayIndex.get(key);
+      if (i === undefined) continue;
+      const c = Number(r.c ?? 0);
+      byDay[i].total += c;
+      byDay[i][normResult(str(r.result))] += c;
+    }
+
+    let total = 0;
+    const overall = { correct: 0, partial: 0, incorrect: 0 };
+    const byTypeMap = new Map<
+      string,
+      { type: string; total: number; correct: number; partial: number; incorrect: number; first: number }
+    >();
+    for (const r of typeRs.rows) {
+      const c = Number(r.c ?? 0);
+      total += c;
+      overall[normResult(str(r.result))] += c;
+      const type = str(r.exercise_type) || "other";
+      const t =
+        byTypeMap.get(type) ??
+        { type, total: 0, correct: 0, partial: 0, incorrect: 0, first: Infinity };
+      t.total += c;
+      t[normResult(str(r.result))] += c;
+      t.first = Math.min(t.first, Number(r.first_ts ?? 0));
+      byTypeMap.set(type, t);
+    }
+    // Sort by volume; break ties by first appearance — the order the old
+    // insertion-ordered Map + stable sort produced.
+    const byType = [...byTypeMap.values()]
+      .sort((a, b) => b.total - a.total || a.first - b.first)
+      .map(({ first: _first, ...rest }) => rest);
+
+    return { total, overall, byDay, byType, streak: streakFrom(activeDays, now) };
+  }
+
   async addQuestions(_userId: string, qs: Question[]): Promise<void> {
     await this.connect();
     if (!qs.length) return;
@@ -950,6 +1188,11 @@ function makeScoped(raw: any, userId: string): ScopedStore {
     logAttempt: (a) => raw.logAttempt(userId, a),
     attempts: () => raw.attempts(userId),
     practiceCandidates: (cid) => raw.practiceCandidates(userId, cid),
+    practiceCandidatesLite: (cid) => raw.practiceCandidatesLite(userId, cid),
+    practiceWord: (id, cid) => raw.practiceWord(userId, id, cid),
+    existingWords: (words) => raw.existingWords(userId, words),
+    wordStats: () => raw.wordStats(userId),
+    attemptStats: (now) => raw.attemptStats(userId, now),
     addQuestions: (qs) => raw.addQuestions(userId, qs),
     pickQuestion: (wordId, type) => raw.pickQuestion(userId, wordId, type),
     questionCount: () => raw.questionCount(userId),
@@ -1157,6 +1400,45 @@ class SheetStore implements Store {
     return (await this.load())
       .filter((w) => memberIds.has(w.id))
       .map((w) => this.own(w, userId));
+  }
+  async practiceCandidatesLite(
+    userId: string,
+    collectionId?: string,
+  ): Promise<PracticeCandidate[]> {
+    return (await this.practiceCandidates(userId, collectionId)).map((w) => ({
+      id: w.id,
+      word: w.word,
+      stage: w.stage,
+      times_seen: w.times_seen,
+      recent_results: w.recent_results,
+      last_seen_at: w.last_seen_at,
+    }));
+  }
+  async practiceWord(
+    userId: string,
+    id: string,
+    collectionId?: string,
+  ): Promise<Word | undefined> {
+    return (await this.practiceCandidates(userId, collectionId)).find(
+      (w) => w.id === id,
+    );
+  }
+  async existingWords(userId: string, words: string[]): Promise<Set<string>> {
+    void userId;
+    const have = new Set((await this.load()).map((w) => normalizeWord(w.word)));
+    const found = new Set<string>();
+    for (const w of words) {
+      const n = normalizeWord(w ?? "");
+      if (n && have.has(n)) found.add(n);
+    }
+    return found;
+  }
+  // Single-user in-memory backend: the pure JS reference computation is fine.
+  async wordStats(userId: string): Promise<WordStats> {
+    return computeWordStats(await this.all(userId));
+  }
+  async attemptStats(userId: string, now: number): Promise<AttemptStats> {
+    return computeAttemptStats(await this.attempts(userId), now);
   }
   private async ensureAttempts(): Promise<void> {
     await this.connect();

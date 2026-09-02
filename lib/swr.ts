@@ -24,6 +24,19 @@ export const KEY_WRITING_STATS = "/api/writing/stats";
 /** Per-word full-detail key (lazy editor load after the slim list). */
 export const wordKey = (id: string) => `/api/words/${id}`;
 
+/** Writing question list for one task tab (task1 | task2). */
+export const writingPromptsKey = (task: string) => `/api/writing/prompts?task=${task}`;
+
+/** What /api/config returns. Diagnostic fields are owner-only (may be absent). */
+export type ConfigData = {
+  hasLLM: boolean;
+  owner: boolean;
+  backend?: string;
+  mode?: string;
+  active?: number;
+  chain?: Array<{ provider: string; model: string }>;
+};
+
 export type Membership = { word_id: string; collection_id: string };
 export type CollectionsData = {
   collections: Collection[];
@@ -46,6 +59,19 @@ export function useWord(id: string | null | undefined) {
   return useSWR<{ word: Word }>(id ? wordKey(id) : null, fetcher);
 }
 
+/** Runtime config (hasLLM / owner) — fetched once and deduped across pages. */
+export function useConfig(config?: SWRConfiguration) {
+  return useSWR<ConfigData>(KEY_CONFIG, fetcher, config);
+}
+
+/**
+ * Writing question list for a task, cached per task key. `P` is the caller's
+ * prompt row shape (the writing components decorate summaries with stats).
+ */
+export function useWritingPrompts<P>(task: string, config?: SWRConfiguration) {
+  return useSWR<{ prompts: P[] }>(writingPromptsKey(task), fetcher, config);
+}
+
 /* ───────────────────────────  Mutations  ─────────────────────────── */
 
 export function revalidateWords() {
@@ -56,6 +82,23 @@ export function revalidateCollections() {
 }
 export function revalidateStats() {
   return mutate(KEY_STATS);
+}
+/** A writing prompt was added or a submission scored — refetch that task's list. */
+export function revalidateWritingPrompts(task: string) {
+  return mutate(writingPromptsKey(task));
+}
+
+/**
+ * Patch one task's cached writing-prompt list in place WITHOUT a refetch — for
+ * server-confirmed local changes (visibility toggled, prompt deleted), same
+ * pattern as `applyMembershipToCache`.
+ */
+export function patchWritingPromptsCache<P>(task: string, patch: (prompts: P[]) => P[]) {
+  return mutate<{ prompts: P[] }>(
+    writingPromptsKey(task),
+    (prev) => (prev ? { prompts: patch(prev.prompts) } : prev),
+    { revalidate: false },
+  );
 }
 
 /**

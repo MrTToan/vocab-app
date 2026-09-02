@@ -39,7 +39,8 @@ export async function POST(req: Request) {
   }
 
   const store = getStore().forUser(userId);
-  const have = new Set((await store.all()).map((w) => normalizeWord(w.word)));
+  // Membership check in SQL over just the pasted words — no library load.
+  const have = await store.existingWords(words);
 
   const added: { word: string; corrected?: string }[] = [];
   const skipped: string[] = [];
@@ -67,7 +68,12 @@ export async function POST(req: Request) {
       // the intended word (misspellings are rare, so the extra call is cheap).
       const fix = first.spellingSuggestion;
       if (fix && normalizeWord(fix) !== normalizeWord(term)) {
-        if (have.has(normalizeWord(fix))) {
+        // `have` only covers the pasted words — the corrected spelling needs
+        // its own (single-word) library check.
+        if (
+          have.has(normalizeWord(fix)) ||
+          (await store.existingWords([fix])).size > 0
+        ) {
           // The corrected word is already in the library — nothing to add.
           skipped.push(term);
           continue;

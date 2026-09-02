@@ -1,7 +1,13 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { jsonFetch } from "@/lib/ui";
+import {
+  patchWritingPromptsCache,
+  revalidateWritingPrompts,
+  useConfig,
+  useWritingPrompts,
+} from "@/lib/swr";
 import { MIN_WORDS, REC_MINUTES, type WritingPromptSummary, type WritingSubmission, type WritingTask } from "@/lib/writing/types";
 import { countWords } from "@/lib/writing/grade";
 import Feedback, { bandColor } from "./Feedback";
@@ -15,7 +21,11 @@ type PromptWithStats = WritingPromptSummary & { stats: PromptStats; can_edit: bo
  * attempt without redoing it. Deliberate practice — no random surprise prompts.
  */
 export default function WritingPractice({ task }: { task: WritingTask }) {
-  const [prompts, setPrompts] = useState<PromptWithStats[] | null>(null);
+  // Shared SWR layer: the question list and /api/config are cached + deduped
+  // (previously refetched imperatively on every mount).
+  const { data: promptsData, error: promptsError } =
+    useWritingPrompts<PromptWithStats>(task);
+  const { data: config } = useConfig();
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [text, setText] = useState("");
   const [submitting, setSubmitting] = useState(false);
@@ -24,34 +34,21 @@ export default function WritingPractice({ task }: { task: WritingTask }) {
   const [view, setView] = useState<"write" | "result" | "review">("write");
   const [loadingReview, setLoadingReview] = useState(false);
   const [error, setError] = useState("");
-  const [hasLLM, setHasLLM] = useState(true);
-  const [isOwner, setIsOwner] = useState(false); // gates the setup hint + publish toggle
+  const hasLLM = config ? !!config.hasLLM : true;
+  const isOwner = !!config?.owner; // gates the setup hint + publish toggle
+  // null = still loading (matches the old imperative-load states).
+  const prompts: PromptWithStats[] | null =
+    promptsData?.prompts ?? (promptsError ? [] : null);
 
   const min = MIN_WORDS[task];
   const recMinutes = REC_MINUTES[task];
   const words = countWords(text);
   const selected = prompts?.find((p) => p.id === selectedId) ?? null;
 
-  const loadList = useCallback(async () => {
-    try {
-      const { prompts } = await jsonFetch<{ prompts: PromptWithStats[] }>(`/api/writing/prompts?task=${task}`);
-      setPrompts(prompts);
-      setSelectedId((prev) => prev ?? prompts[0]?.id ?? null);
-    } catch (e: any) {
-      setError(e?.message ?? "Failed to load questions");
-      setPrompts([]);
-    }
-  }, [task]);
-
+  // Default the selection to the first question once the list arrives.
   useEffect(() => {
-    jsonFetch<{ hasLLM: boolean; owner?: boolean }>("/api/config")
-      .then((c) => {
-        setHasLLM(!!c.hasLLM);
-        setIsOwner(!!c.owner);
-      })
-      .catch(() => {});
-    loadList();
-  }, [loadList]);
+    setSelectedId((prev) => prev ?? promptsData?.prompts[0]?.id ?? null);
+  }, [promptsData]);
 
   function pick(id: string) {
     setSelectedId(id);
@@ -73,7 +70,7 @@ export default function WritingPractice({ task }: { task: WritingTask }) {
       });
       setResult(submission);
       setView("result");
-      loadList(); // refresh scores in the pane
+      revalidateWritingPrompts(task); // refresh scores in the pane
     } catch (e: any) {
       setError(e?.message ?? "Scoring failed");
     } finally {
@@ -115,7 +112,9 @@ export default function WritingPractice({ task }: { task: WritingTask }) {
         method: "PATCH",
         body: JSON.stringify({ visibility }),
       });
-      setPrompts((list) => list?.map((p) => (p.id === id ? { ...p, visibility: prompt.visibility } : p)) ?? list);
+      patchWritingPromptsCache<PromptWithStats>(task, (list) =>
+        list.map((p) => (p.id === id ? { ...p, visibility: prompt.visibility } : p)),
+      );
     } catch (e) {
       setError((e as Error)?.message ?? "Couldn't change visibility");
     }
@@ -126,17 +125,17 @@ export default function WritingPractice({ task }: { task: WritingTask }) {
     setError("");
     try {
       await jsonFetch(`/api/writing/prompts/${id}`, { method: "DELETE" });
-      setPrompts((list) => {
-        const next = list?.filter((p) => p.id !== id) ?? list;
-        if (selectedId === id) {
-          setSelectedId(next?.[0]?.id ?? null);
-          setText("");
-          setResult(null);
-          setReview(null);
-          setView("write");
-        }
-        return next;
-      });
+      const next = (prompts ?? []).filter((p) => p.id !== id);
+      patchWritingPromptsCache<PromptWithStats>(task, (list) =>
+        list.filter((p) => p.id !== id),
+      );
+      if (selectedId === id) {
+        setSelectedId(next[0]?.id ?? null);
+        setText("");
+        setResult(null);
+        setReview(null);
+        setView("write");
+      }
     } catch (e) {
       setError((e as Error)?.message ?? "Couldn't delete the question");
     }
