@@ -120,7 +120,7 @@ async function addColumn(db: Client, table: string, colDef: string): Promise<voi
  * — that keeps a DB created by an older build, or by `scripts/*.mjs`, converging
  * to the full schema.
  */
-export const SCHEMA_VERSION = 1;
+export const SCHEMA_VERSION = 2;
 
 /**
  * All DDL, in the order the per-module connects used to run it:
@@ -233,6 +233,22 @@ export async function migrate(db: Client): Promise<void> {
   await db.execute(
     `UPDATE writing_prompts SET visibility = 'private' WHERE visibility IS NULL OR visibility = ''`,
   );
+  // One-time adoption (v2): writing questions are now an ADMIN-managed bank —
+  // only the owner/admin may create/edit/delete them. Prompts that regular
+  // users created before this (owner_id = a real user id, i.e. not the shared
+  // bank) are ADOPTED into the admin bank so admins can curate them: their
+  // owner_id becomes `__system__` and their visibility is forced to `private`
+  // (a DRAFT — never auto-published), so an admin publishes each deliberately
+  // after review. No row is deleted and `user_id` (who originally created it) is
+  // preserved, so the original author is still traceable. Gated on the schema
+  // version so it runs exactly once (regular users can no longer create prompts,
+  // so no legitimate user-owned prompt appears after this point).
+  if (fromVersion < 2) {
+    await db.execute(
+      `UPDATE writing_prompts SET owner_id = '${SYSTEM_OWNER}', visibility = 'private'
+       WHERE owner_id IS NOT NULL AND owner_id != '' AND owner_id != '${SYSTEM_OWNER}'`,
+    );
+  }
   await db.execute(
     `CREATE TABLE IF NOT EXISTS writing_discussions (
       id TEXT PRIMARY KEY, submission_id TEXT, card_key TEXT,

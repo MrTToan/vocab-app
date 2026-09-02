@@ -5,17 +5,12 @@ import Link from "next/link";
 export default function WritingHome() {
   return (
     <div className="space-y-6">
-      <section className="flex flex-wrap items-start justify-between gap-3">
-        <div>
-          <h1 className="text-3xl font-extrabold tracking-tight">Writing — IELTS Academic</h1>
-          <p className="muted mt-1">
-            Write an answer, get feedback graded against the four IELTS criteria with inline
-            corrections. One-shot feedback, no repeats.
-          </p>
-        </div>
-        <Link href="/writing/add" className="btn btn-primary whitespace-nowrap">
-          ＋ Add a question
-        </Link>
+      <section>
+        <h1 className="text-3xl font-extrabold tracking-tight">Writing — IELTS Academic</h1>
+        <p className="muted mt-1">
+          Write an answer, get feedback graded against the four IELTS criteria with inline
+          corrections. One-shot feedback, no repeats.
+        </p>
       </section>
 
       <section className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -38,7 +33,7 @@ export default function WritingHome() {
       <section className="card p-5">
         <div className="font-bold">How it works</div>
         <ol className="muted text-sm mt-2 space-y-1 list-decimal list-inside">
-          <li>Pick a question — or add your own from a past paper or a chart photo.</li>
+          <li>Pick a question from the curated Task 1 or Task 2 bank.</li>
           <li>Write your answer against the exam clock.</li>
           <li>Get a band score on all four criteria, with inline corrections you can discuss.</li>
         </ol>

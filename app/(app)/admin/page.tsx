@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { currentUserId, resolveIsOwner } from "@/lib/auth/user";
-import AdminDashboard from "@/components/admin/AdminDashboard";
+import AdminPortal from "@/components/admin/AdminPortal";
 
 // Resolve the owner gate per request (never prerender a static owner view that
 // could ship to non-owners once auth is configured).
@@ -15,7 +15,7 @@ export const dynamic = "force-dynamic";
 export default async function AdminPage() {
   const userId = await currentUserId();
   if (!userId || !(await resolveIsOwner(userId))) return <Forbidden />;
-  return <AdminDashboard />;
+  return <AdminPortal />;
 }
 
 function Forbidden() {

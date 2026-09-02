@@ -202,6 +202,69 @@ const raw = {
     return full;
   },
 
+  /**
+   * ADMIN view — every prompt in the bank (both tasks), WITHOUT image bytes,
+   * ignoring the per-caller visibility filter. Owner-only: the caller MUST be an
+   * admin (isOwner); anyone else gets PromptForbiddenError. Powers the admin
+   * "Writing Questions" management subtab, which lists drafts + published side by
+   * side. Filtering/searching is done client-side over this full list.
+   */
+  async listAllPromptsAdmin(userId: string, task?: WritingTask): Promise<WritingPromptSummary[]> {
+    if (!isOwner(userId)) throw new PromptForbiddenError("admin only");
+    const c = await connect();
+    const rs = task
+      ? await c.execute({
+          sql: `SELECT ${SUMMARY_COLS} FROM writing_prompts WHERE task_type=? ORDER BY created_at DESC`,
+          args: [task],
+        })
+      : await c.execute({
+          sql: `SELECT ${SUMMARY_COLS} FROM writing_prompts ORDER BY created_at DESC`,
+          args: [],
+        });
+    return rs.rows.map(rowToSummary);
+  },
+
+  /**
+   * ADMIN content edit — update a prompt's editable fields (title, prompt_text,
+   * task_type, image, chart_data, model_answer, tags, visibility). Owner-only;
+   * anyone else gets PromptForbiddenError, and a missing id returns undefined.
+   * Only the fields present in `patch` are written (undefined = leave as is).
+   */
+  async updatePromptAdmin(
+    userId: string,
+    id: string,
+    patch: Partial<
+      Pick<
+        WritingPrompt,
+        "title" | "prompt_text" | "task_type" | "image_path" | "chart_data" | "model_answer" | "tags" | "visibility"
+      >
+    >,
+  ): Promise<WritingPromptSummary | undefined> {
+    if (!isOwner(userId)) throw new PromptForbiddenError("admin only");
+    const c = await connect();
+    const exists = await c.execute({ sql: `SELECT ${SUMMARY_COLS} FROM writing_prompts WHERE id=? LIMIT 1`, args: [id] });
+    const cur = exists.rows[0] as Row | undefined;
+    if (!cur) return undefined;
+
+    const sets: string[] = [];
+    const args: unknown[] = [];
+    const put = (col: string, val: unknown) => { sets.push(`${col}=?`); args.push(val); };
+    if (patch.title !== undefined) put("title", patch.title);
+    if (patch.prompt_text !== undefined) put("prompt_text", patch.prompt_text);
+    if (patch.task_type !== undefined) put("task_type", patch.task_type);
+    if (patch.image_path !== undefined) put("image_path", patch.image_path);
+    if (patch.chart_data !== undefined) put("chart_data", patch.chart_data ? JSON.stringify(patch.chart_data) : null);
+    if (patch.model_answer !== undefined) put("model_answer", patch.model_answer);
+    if (patch.tags !== undefined) put("tags", JSON.stringify(patch.tags));
+    if (patch.visibility !== undefined) put("visibility", patch.visibility);
+    if (!sets.length) return rowToSummary(cur);
+
+    args.push(id);
+    await c.execute({ sql: `UPDATE writing_prompts SET ${sets.join(", ")} WHERE id=?`, args });
+    const rs = await c.execute({ sql: `SELECT ${SUMMARY_COLS} FROM writing_prompts WHERE id=? LIMIT 1`, args: [id] });
+    return rs.rows[0] ? rowToSummary(rs.rows[0]) : undefined;
+  },
+
   // ── prompts the caller may see: public OR their own ──
   /** List WITHOUT image bytes (see `WritingPromptSummary`). */
   async listPrompts(userId: string, task?: WritingTask): Promise<WritingPromptSummary[]> {
@@ -414,6 +477,18 @@ const raw = {
 /** A user-scoped view of the writing store. */
 export interface WritingScope {
   addPrompts(prompts: NewPrompt[]): Promise<WritingPrompt[]>;
+  /** Admin-only: the whole bank (drafts + published) for the management subtab. */
+  listAllPromptsAdmin(task?: WritingTask): Promise<WritingPromptSummary[]>;
+  /** Admin-only: edit a prompt's content/visibility. */
+  updatePromptAdmin(
+    id: string,
+    patch: Partial<
+      Pick<
+        WritingPrompt,
+        "title" | "prompt_text" | "task_type" | "image_path" | "chart_data" | "model_answer" | "tags" | "visibility"
+      >
+    >,
+  ): Promise<WritingPromptSummary | undefined>;
   listPrompts(task?: WritingTask): Promise<WritingPromptSummary[]>;
   getPrompt(id: string): Promise<WritingPrompt | undefined>;
   getPromptImage(id: string): Promise<string | undefined>;
@@ -435,6 +510,8 @@ export const writingStore = {
     return {
       // prompts: public bank + this user's own private ones
       addPrompts: (prompts) => raw.addPrompts(userId, prompts),
+      listAllPromptsAdmin: (task) => raw.listAllPromptsAdmin(userId, task),
+      updatePromptAdmin: (id, patch) => raw.updatePromptAdmin(userId, id, patch),
       listPrompts: (task) => raw.listPrompts(userId, task),
       getPrompt: (id) => raw.getPrompt(userId, id),
       getPromptImage: (id) => raw.getPromptImage(userId, id),

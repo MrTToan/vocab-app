@@ -196,6 +196,12 @@ export const writingPromptsQuerySchema = z.strictObject({
   pick: z.string().max(10).optional(),
 });
 
+/** GET /api/admin/writing-prompts — optional task filter (search/visibility are
+ *  applied client-side over the full admin list). */
+export const adminWritingPromptsQuerySchema = z.strictObject({
+  task: z.string().max(20).optional(),
+});
+
 export const createPromptSchema = z.strictObject({
   task_type: z.string().max(20),
   prompt_text: z
@@ -208,11 +214,36 @@ export const createPromptSchema = z.strictObject({
   // base64 data URL, <= 1 MB decoded (route re-checks mime/decoded size)
   image: z.string().max(2_000_000).nullable().optional(),
   chart_data: z.record(z.string(), z.unknown()).nullable().optional(),
+  // Admin-authored extras: an optional model/sample answer and the publish state
+  // (defaults to public — a newly created admin question is published).
+  model_answer: z.string().max(PROMPT_TEXT_MAX).nullable().optional(),
+  visibility: z.enum(["public", "private"]).optional(),
 });
 
-export const patchPromptSchema = z.strictObject({
-  visibility: z.enum(["public", "private"], "visibility must be public or private"),
-});
+/**
+ * PATCH /api/writing/prompts/:id — owner-only. Accepts a publish/visibility flip
+ * AND/OR admin content edits (title, prompt_text, task_type, model_answer, and a
+ * Task 1 chart image + its transcription). Every field is optional; unknown keys
+ * are rejected (strict). The route re-checks image mime/size like create.
+ */
+export const patchPromptSchema = z
+  .strictObject({
+    visibility: z.enum(["public", "private"], "visibility must be public or private").optional(),
+    task_type: z.string().max(20).optional(),
+    title: z
+      .string()
+      .max(PROMPT_TITLE_MAX, `Title is too long (max ${PROMPT_TITLE_MAX} characters).`)
+      .optional(),
+    prompt_text: z
+      .string()
+      .max(PROMPT_TEXT_MAX, `The question text is too long (max ${PROMPT_TEXT_MAX.toLocaleString()} characters).`)
+      .optional(),
+    model_answer: z.string().max(PROMPT_TEXT_MAX).nullable().optional(),
+    // base64 data URL (Task 1 chart), or null to clear it. Route re-checks mime/size.
+    image: z.string().max(2_000_000).nullable().optional(),
+    chart_data: z.record(z.string(), z.unknown()).nullable().optional(),
+  })
+  .refine((o) => Object.keys(o).length > 0, { message: "no fields to update" });
 
 export const discussQuerySchema = z.strictObject({
   submissionId: z.string().min(1, "submissionId required").max(64),
