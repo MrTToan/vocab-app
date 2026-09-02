@@ -160,9 +160,9 @@ export default function Landing() {
               collocations, with a multi-provider fallback chain so it keeps
               working even when one provider is down.
             </p>
-            <a className="arrowlink r d2" href="#toolkit">
+            <Link className="arrowlink r d2" href="/how-it-works">
               See how it works →
-            </a>
+            </Link>
           </div>
         </div>
       </section>
