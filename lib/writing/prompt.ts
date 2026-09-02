@@ -43,7 +43,25 @@ export function writingScoreUser(
   const min = MIN_WORDS[task];
   const parts: string[] = [];
 
+  // ORDER MATTERS for provider prompt caching (Gemini's implicit prefix cache,
+  // Anthropic's cache_control): the STABLE sections come first — task type,
+  // teacher guidance, length rules — so consecutive submissions share the
+  // longest possible identical prefix; the per-submission material (prompt
+  // text, chart data, the candidate's response) comes last.
   parts.push(`# Task type\nIELTS Academic Writing ${task === "task1" ? "Task 1 (describe the chart/graph/diagram)" : "Task 2 (essay)"}`);
+
+  if (guidance.trim()) {
+    parts.push(
+      `# Additional grading guidance from the teacher (apply these rules)\n${guidance.trim()}`,
+    );
+  }
+
+  parts.push(
+    `# Length\nMinimum expected: ${min} words. Candidate wrote: ${wordCount} words.${
+      wordCount < min ? " This is UNDER the minimum — penalise task_achievement accordingly." : ""
+    }`,
+  );
+
   parts.push(`# Prompt\n${prompt.prompt_text}`);
 
   if (task === "task1" && prompt.chart_data) {
@@ -57,18 +75,6 @@ export function writingScoreUser(
       )}`,
     );
   }
-
-  if (guidance.trim()) {
-    parts.push(
-      `# Additional grading guidance from the teacher (apply these rules)\n${guidance.trim()}`,
-    );
-  }
-
-  parts.push(
-    `# Length\nMinimum expected: ${min} words. Candidate wrote: ${wordCount} words.${
-      wordCount < min ? " This is UNDER the minimum — penalise task_achievement accordingly." : ""
-    }`,
-  );
 
   parts.push(`# Candidate's response\n"""\n${text}\n"""`);
 

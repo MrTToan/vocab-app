@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { body } from "@/app/fonts";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,7 +13,11 @@ const LAST_UPDATED = "September 1, 2026";
 // sign-in, alongside the privacy policy — both required for OAuth publishing.
 export default function TermsOfService() {
   return (
-    <div className="agency" style={{ background: "var(--bg)", color: "var(--ink)", minHeight: "100vh" }}>
+    // Same font wiring as the privacy page — see the comment there.
+    <div
+      className={`agency app-fonts ${body.variable}`}
+      style={{ background: "var(--bg)", color: "var(--ink)", minHeight: "100vh" }}
+    >
       <LegalHeader />
       <main className="max-w-3xl mx-auto px-5 py-16">
         <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">Terms of Service</h1>

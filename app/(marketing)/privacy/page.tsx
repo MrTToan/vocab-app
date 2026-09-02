@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { body } from "@/app/fonts";
 
 export const metadata: Metadata = {
   title: "Privacy Policy · Lexi",
@@ -13,7 +14,13 @@ const LAST_UPDATED = "September 1, 2026";
 // OAuth consent screen.
 export default function PrivacyPolicy() {
   return (
-    <div className="agency" style={{ background: "var(--bg)", color: "var(--ink)", minHeight: "100vh" }}>
+    // `.agency` sets everything (headings included) in the body face, so this
+    // page only needs IBM Plex Sans; `app-fonts` re-applies the family here
+    // since the root layout no longer loads fonts (see app/fonts.ts).
+    <div
+      className={`agency app-fonts ${body.variable}`}
+      style={{ background: "var(--bg)", color: "var(--ink)", minHeight: "100vh" }}
+    >
       <LegalHeader />
       <main className="max-w-3xl mx-auto px-5 py-16">
         <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">Privacy Policy</h1>

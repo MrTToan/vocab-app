@@ -1,7 +1,9 @@
+import { Suspense } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import MarketingMotion from "./MarketingMotion";
+import SignInNote from "./SignInNote";
 import "./marketing.css";
 
 // MNTN landing — an approved editorial redesign (cinematic photo hero, serif
@@ -14,17 +16,17 @@ import "./marketing.css";
 
 // Fonts are scoped to marketing via variables applied on the wrapper below —
 // they are never attached to <html>, so the app's Fraunces/IBM Plex stay in place.
+// Both are VARIABLE Google fonts (no `weight` needed — see next/font docs), so
+// the landing page ships 3 font files: Cormorant normal + italic, Inter.
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   variable: "--font-cormorant",
-  weight: ["400", "500", "600"],
   style: ["normal", "italic"],
   display: "swap",
 });
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-  weight: ["400", "500", "600"],
   display: "swap",
 });
 
@@ -96,6 +98,11 @@ export default function Landing() {
           <Link href="/how-it-works">How it works</Link>
         </div>
         <div className="navr">
+          {/* "Please sign in to continue" — rendered only when the sign-in
+              proxy bounced a signed-out visitor here (?signin=1). */}
+          <Suspense fallback={null}>
+            <SignInNote />
+          </Suspense>
           <Link href="/vocab" className="acct">
             Open app →
           </Link>
