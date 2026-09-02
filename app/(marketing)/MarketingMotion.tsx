@@ -5,7 +5,6 @@ import { useEffect } from "react";
 /*
  * Client motion island for the MNTN landing page. Reproduces the prototype's
  * choreography on the server-rendered markup:
- *   · nav turns from transparent/white to paper/ink after the first 40px
  *   · the left rail flips dark once the hero has scrolled past
  *   · the hero content fades/rises in shortly after mount
  *   · each [data-reveal] section fades/rises its .r children in on first view
@@ -18,13 +17,11 @@ export default function MarketingMotion() {
       typeof matchMedia === "function" &&
       matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    const nav = document.getElementById("mntn-nav");
     const rail = document.getElementById("mntn-rail");
     const hero = document.getElementById("top");
 
     const onScroll = () => {
       const past = window.scrollY > window.innerHeight - 90;
-      nav?.classList.toggle("scrolled", window.scrollY > 40);
       rail?.classList.toggle("dark", past);
     };
     onScroll();

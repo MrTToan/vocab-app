@@ -60,8 +60,10 @@
 }
 
 /* ---------- NAV ---------- */
+/* Overlaid on the hero and scrolls away with the page (not a floating/sticky
+   bar): absolute, not fixed. White text reads on the dark hero photo. */
 .mntn .nav {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -71,15 +73,6 @@
   justify-content: space-between;
   padding: 22px clamp(20px, 4vw, 54px);
   color: #fff;
-  transition: background 0.4s var(--ease), color 0.4s, border-color 0.4s, padding 0.4s;
-  border-bottom: 1px solid transparent;
-}
-.mntn .nav.scrolled {
-  background: var(--paper);
-  color: var(--ink);
-  border-bottom-color: var(--m-line);
-  padding-top: 15px;
-  padding-bottom: 15px;
 }
 .mntn .logo {
   font-family: var(--display);
@@ -271,80 +264,6 @@
     transform: translateY(5px);
   }
 }
-/* Hero CTA — editorial label + circular arrow disc. */
-.mntn .hero-cta {
-  position: absolute;
-  z-index: 6;
-  right: clamp(20px, 5vw, 56px);
-  bottom: clamp(26px, 5vh, 44px);
-  display: inline-flex;
-  align-items: center;
-  gap: 18px;
-  color: #fff;
-}
-.mntn .hero-cta .txt {
-  position: relative;
-  padding-bottom: 5px;
-  white-space: nowrap;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.5);
-}
-.mntn .hero-cta .txt::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 1px;
-  width: 0;
-  background: currentColor;
-  transition: width 0.4s var(--ease);
-}
-.mntn .hero-cta:hover .txt::after {
-  width: 100%;
-}
-.mntn .hero-cta .disc {
-  flex: none;
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: var(--paper);
-  color: var(--pine-deep);
-  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.4);
-  transition: transform 0.4s var(--ease), background 0.25s;
-}
-.mntn .hero-cta:hover .disc {
-  transform: scale(1.07);
-  background: #fff;
-}
-.mntn .hero-cta .disc svg {
-  width: 22px;
-  height: 22px;
-  transition: transform 0.4s var(--ease);
-}
-.mntn .hero-cta:hover .disc svg {
-  transform: translate(3px, -3px);
-}
-@media (max-width: 620px) {
-  .mntn .hero-cta {
-    gap: 13px;
-    bottom: 24px;
-    right: 18px;
-  }
-  .mntn .hero-cta .disc {
-    width: 54px;
-    height: 54px;
-  }
-  .mntn .hero-cta .disc svg {
-    width: 19px;
-    height: 19px;
-  }
-}
-
 /* ---------- SECTION SHELL ---------- */
 .mntn .wrap {
   max-width: 1180px;
@@ -413,39 +332,6 @@
 }
 .mntn .arrowlink:hover {
   gap: 16px;
-}
-
-/* stat strip */
-.mntn .stats {
-  background: var(--pine-deep);
-  color: #eef3ef;
-}
-.mntn .stats-in {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: clamp(20px, 3vw, 40px);
-  padding: clamp(48px, 6vw, 72px) 0;
-}
-@media (max-width: 640px) {
-  .mntn .stats-in {
-    grid-template-columns: 1fr 1fr;
-    gap: 34px 20px;
-  }
-}
-.mntn .stat .num {
-  font-family: var(--display);
-  font-weight: 500;
-  font-size: clamp(44px, 6vw, 68px);
-  line-height: 1;
-  color: var(--gold-bright);
-  font-variant-numeric: tabular-nums;
-}
-.mntn .stat .cap {
-  margin: 12px 0 0;
-  font-size: 13px;
-  line-height: 1.5;
-  color: rgba(238, 243, 239, 0.72);
-  max-width: 22ch;
 }
 
 /* toolkit grid */
@@ -532,10 +418,19 @@
   border-right: none;
 }
 @media (max-width: 760px) {
+  .mntn .steps {
+    margin-top: 28px;
+  }
+  /* Tighten the vertical rhythm on mobile so the step numbers don't float with
+     an awkward gap under the divider (stacked single-column layout). */
   .mntn .st-item {
     border-right: none;
     border-bottom: 1px solid var(--m-line);
-    padding-right: 0;
+    padding: 24px 0;
+  }
+  .mntn .st-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
   }
 }
 .mntn .st-item .no {
