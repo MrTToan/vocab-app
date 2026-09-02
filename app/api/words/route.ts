@@ -1,48 +1,37 @@
 import { NextResponse } from "next/server";
+import { withUser } from "@/lib/api";
+import { createWordSchema, wordsQuerySchema } from "@/lib/api-schemas";
 import { getStore, type NewWord } from "@/lib/store";
-import { currentUserId } from "@/lib/auth/user";
 import { reserveQuota, QuotaError } from "@/lib/auth/quota";
 import { enrichWord, hasProvider } from "@/lib/llm";
 import { clozeFromSentence, saveHarvest } from "@/lib/harvest";
 
-export async function GET(req: Request) {
-  const userId = await currentUserId();
-  if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+export const GET = withUser(wordsQuerySchema, async ({ userId, input }) => {
   const store = getStore().forUser(userId);
   // ?fields=list -> slim rows for the Library list view (no heavy text columns).
   // The full word (definition/examples/notes) is fetched per-id on demand.
-  if (new URL(req.url).searchParams.get("fields") === "list") {
+  if (input.fields === "list") {
     const words = await store.listLite();
     words.sort((a, b) => b.created_at - a.created_at);
-    return NextResponse.json({ words });
+    return { words };
   }
   const words = await store.all();
   // newest first
   words.sort((a, b) => b.created_at - a.created_at);
-  return NextResponse.json({ words });
-}
+  return { words };
+});
 
 /**
  * POST { word, enrich?: boolean, ...knownFields }
  * Adds one word. If enrich is true and a key is set, fills fields via the LLM.
+ * The schema is strict: a client can never supply id/created_at/stage/owner_id.
  */
-export async function POST(req: Request) {
-  const body = (await req.json()) as NewWord & {
-    enrich?: boolean;
-    allow_duplicate?: boolean;
-    collectionIds?: string[];
-  };
-  if (!body.word || !body.word.trim()) {
-    return NextResponse.json({ error: "word is required" }, { status: 400 });
-  }
-
-  const userId = await currentUserId();
-  if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+export const POST = withUser(createWordSchema, async ({ userId, input }) => {
   const store = getStore().forUser(userId);
 
   // duplicate guard — reject unless the caller explicitly allows it
-  if (!body.allow_duplicate) {
-    const existing = await store.findByWord(body.word);
+  if (!input.allow_duplicate) {
+    const existing = await store.findByWord(input.word);
     if (existing) {
       return NextResponse.json(
         {
@@ -58,31 +47,30 @@ export async function POST(req: Request) {
     }
   }
 
-  const collectionIds = Array.isArray(body.collectionIds)
-    ? body.collectionIds
-    : [];
-  let fields: Partial<NewWord> = { ...body };
-  delete (fields as any).enrich;
-  delete (fields as any).allow_duplicate;
-  delete (fields as any).collectionIds;
+  const collectionIds = input.collectionIds ?? [];
+  const rest: Partial<typeof input> = { ...input };
+  delete rest.enrich;
+  delete rest.allow_duplicate;
+  delete rest.collectionIds;
+  let fields: Partial<NewWord> = rest;
 
-  if (body.enrich && hasProvider("enrich")) {
+  if (input.enrich && hasProvider("enrich")) {
     try {
       await reserveQuota(userId, "enrich");
-      const { enrichment: e } = await enrichWord(body.word, body);
-      fields = { ...e, ...stripEmpty(body) }; // keep any learner-supplied values
-    } catch (err: any) {
+      const { enrichment: e } = await enrichWord(input.word, rest);
+      fields = { ...e, ...stripEmpty(rest) }; // keep any learner-supplied values
+    } catch (err: unknown) {
       if (err instanceof QuotaError) {
         return NextResponse.json({ error: err.message }, { status: 429 });
       }
       return NextResponse.json(
-        { error: `Enrichment failed: ${err?.message ?? err}` },
+        { error: `Enrichment failed: ${err instanceof Error ? err.message : String(err)}` },
         { status: 502 },
       );
     }
   }
 
-  const created = await store.add({ ...fields, word: body.word });
+  const created = await store.add({ ...fields, word: input.word });
   if (collectionIds.length)
     await store.setWordCollections(created.id, collectionIds);
   // Seed cloze(s) from the word's example sentences so a newly-added word has a
@@ -92,11 +80,11 @@ export async function POST(req: Request) {
     clozeFromSentence(created.id, created.word, created.example_complex),
   ]);
   return NextResponse.json({ word: created });
-}
+});
 
 /** Keep only the non-empty learner-supplied fields so they override enrichment. */
-function stripEmpty(obj: Record<string, any>): Record<string, any> {
-  const keep: Record<string, any> = {};
+function stripEmpty(obj: Record<string, unknown>): Record<string, unknown> {
+  const keep: Record<string, unknown> = {};
   for (const k of [
     "part_of_speech",
     "vi_meaning",

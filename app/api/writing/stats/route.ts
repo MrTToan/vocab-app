@@ -1,13 +1,11 @@
-import { NextResponse } from "next/server";
+import { withUser } from "@/lib/api";
+import { emptySchema } from "@/lib/api-schemas";
 import { writingStore } from "@/lib/writing/store";
-import { currentUserId } from "@/lib/auth/user";
 import { aggregateErrors } from "@/lib/writing/grade";
 import { CRITERIA, type Criterion } from "@/lib/writing/types";
 
 /** Aggregates for the writing side of the cross-skill report. */
-export async function GET() {
-  const userId = await currentUserId();
-  if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+export const GET = withUser(emptySchema, async ({ userId }) => {
   const store = writingStore.forUser(userId);
   const [subs, corrections] = await Promise.all([
     store.submissions(),
@@ -22,7 +20,7 @@ export async function GET() {
   const avgBands = {} as Record<Criterion, number | null>;
   for (const c of CRITERIA) avgBands[c] = avg(subs.map((s) => s.bands[c]?.band ?? 0));
 
-  return NextResponse.json({
+  return {
     submissions: n,
     byTask: {
       task1: subs.filter((s) => s.task_type === "task1").length,
@@ -47,5 +45,5 @@ export async function GET() {
         word_count: s.word_count,
         created_at: s.created_at,
       })),
-  });
-}
+  };
+});

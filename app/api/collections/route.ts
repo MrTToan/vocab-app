@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
+import { withUser } from "@/lib/api";
+import { createCollectionSchema, emptySchema } from "@/lib/api-schemas";
 import { getStore } from "@/lib/store";
-import { currentUserId, isOwner } from "@/lib/auth/user";
 
 /**
  * GET  -> { collections, memberships, owner }  (collections = the caller's own
@@ -8,38 +9,25 @@ import { currentUserId, isOwner } from "@/lib/auth/user";
  *         Library page inverts memberships to show per-word chips).
  * POST { name, description?, emoji? } -> { collection }
  */
-export async function GET() {
-  const userId = await currentUserId();
-  if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+export const GET = withUser(emptySchema, async ({ userId, owner }) => {
   const store = getStore().forUser(userId);
   const [collections, memberships] = await Promise.all([
     store.collections(),
     store.memberships(),
   ]);
   return NextResponse.json(
-    { collections, memberships, owner: isOwner(userId) },
+    { collections, memberships, owner },
     // Read-mostly JSON: browser-only micro-cache (`private` ⇒ Cloudflare never
     // caches it). Mutations show up within 30s; SWR revalidation still applies.
     { headers: { "Cache-Control": "private, max-age=30, stale-while-revalidate=300" } },
   );
-}
+});
 
-export async function POST(req: Request) {
-  const userId = await currentUserId();
-  if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
-  const body = (await req.json()) as {
-    name?: string;
-    description?: string;
-    emoji?: string;
-  };
-  const name = (body.name ?? "").trim();
-  if (!name) {
-    return NextResponse.json({ error: "name is required" }, { status: 400 });
-  }
+export const POST = withUser(createCollectionSchema, async ({ userId, input }) => {
   const collection = await getStore().forUser(userId).createCollection({
-    name,
-    description: body.description,
-    emoji: body.emoji,
+    name: input.name,
+    description: input.description,
+    emoji: input.emoji,
   });
-  return NextResponse.json({ collection });
-}
+  return { collection };
+});

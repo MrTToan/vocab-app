@@ -1,21 +1,15 @@
 import { NextResponse } from "next/server";
+import { withUser } from "@/lib/api";
+import { practiceResultSchema } from "@/lib/api-schemas";
 import { getStore } from "@/lib/store";
-import { currentUserId } from "@/lib/auth/user";
 import { applyResult } from "@/lib/engine";
-import type { Result } from "@/lib/types";
 
 /**
  * POST { wordId, result } -> records the attempt and advances/demotes the
  * word's stage. The single source of truth for progress mutation.
  */
-export async function POST(req: Request) {
-  const { wordId, result, exerciseType } = (await req.json()) as {
-    wordId: string;
-    result: Result;
-    exerciseType?: string;
-  };
-  const userId = await currentUserId();
-  if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+export const POST = withUser(practiceResultSchema, async ({ userId, input }) => {
+  const { wordId, result, exerciseType } = input;
   const store = getStore().forUser(userId);
   const word = await store.get(wordId);
   if (!word) return NextResponse.json({ error: "word not found" }, { status: 404 });
@@ -36,4 +30,4 @@ export async function POST(req: Request) {
     stage: progress.stage,
     from: word.stage,
   });
-}
+});

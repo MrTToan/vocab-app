@@ -1,29 +1,23 @@
 import { NextResponse } from "next/server";
+import { withUser } from "@/lib/api";
+import { enrichSchema } from "@/lib/api-schemas";
 import { enrichWord, hasProvider } from "@/lib/llm";
-import { currentUserId } from "@/lib/auth/user";
 import { reserveQuota, isRateLimitError } from "@/lib/auth/quota";
-import type { Word } from "@/lib/types";
 
 /** POST { word, known? } -> enrichment preview (does NOT save). Signed-in + metered. */
-export async function POST(req: Request) {
-  const userId = await currentUserId();
-  if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+export const POST = withUser(enrichSchema, async ({ userId, input }) => {
   if (!hasProvider("enrich")) {
     return NextResponse.json(
       { error: "AI enrichment is not available right now." },
       { status: 400 },
     );
   }
-  const { word, known } = (await req.json()) as {
-    word: string;
-    known?: Partial<Word>;
-  };
-  if (!word?.trim()) {
-    return NextResponse.json({ error: "word is required" }, { status: 400 });
-  }
   try {
     await reserveQuota(userId, "enrich");
-    const { enrichment, spellingSuggestion } = await enrichWord(word, known ?? {});
+    const { enrichment, spellingSuggestion } = await enrichWord(
+      input.word,
+      input.known ?? {},
+    );
     return NextResponse.json({ enrichment, spellingSuggestion });
   } catch (err: unknown) {
     if (isRateLimitError(err)) {
@@ -34,4 +28,4 @@ export async function POST(req: Request) {
       { status: 502 },
     );
   }
-}
+});

@@ -1,16 +1,18 @@
 import { NextResponse } from "next/server";
+import { withUser } from "@/lib/api";
+import { writingSubmitSchema } from "@/lib/api-schemas";
 import { hasProvider } from "@/lib/providers";
 import { writingStore } from "@/lib/writing/store";
-import { currentUserId } from "@/lib/auth/user";
 import { reserveQuota, isRateLimitError } from "@/lib/auth/quota";
 import { scoreWriting } from "@/lib/writing/score";
 
 /**
  * POST { promptId, text } -> the stored submission with structured feedback:
  * overall band, four criteria bands, located inline corrections, strengths,
- * general feedback. Scored by the LLM, then persisted.
+ * general feedback. Scored by the LLM, then persisted. Essays are capped at
+ * 8,000 characters by the schema.
  */
-export async function POST(req: Request) {
+export const POST = withUser(writingSubmitSchema, async ({ userId, input }) => {
   if (!hasProvider("score-writing")) {
     return NextResponse.json(
       { error: "AI scoring is not available right now." },
@@ -18,18 +20,13 @@ export async function POST(req: Request) {
     );
   }
 
-  const userId = await currentUserId();
-  if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   const store = writingStore.forUser(userId);
-
-  const { promptId, text } = (await req.json()) as { promptId?: string; text?: string };
-  const essay = (text ?? "").trim();
-  if (!promptId) return NextResponse.json({ error: "promptId required" }, { status: 400 });
+  const essay = (input.text ?? "").trim();
   if (essay.length < 20) {
     return NextResponse.json({ error: "Please write a full response before submitting." }, { status: 400 });
   }
 
-  const prompt = await store.getPrompt(promptId);
+  const prompt = await store.getPrompt(input.promptId);
   if (!prompt) return NextResponse.json({ error: "prompt not found" }, { status: 404 });
 
   try {
@@ -48,13 +45,13 @@ export async function POST(req: Request) {
       corrections: scored.corrections,
     });
     return NextResponse.json({ submission });
-  } catch (err: any) {
+  } catch (err: unknown) {
     if (isRateLimitError(err)) {
       return NextResponse.json({ error: err.message }, { status: 429 });
     }
     return NextResponse.json(
-      { error: `Scoring failed: ${err?.message ?? err}` },
+      { error: `Scoring failed: ${err instanceof Error ? err.message : String(err)}` },
       { status: 502 },
     );
   }
-}
+});

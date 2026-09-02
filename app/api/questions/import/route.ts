@@ -1,35 +1,32 @@
-import { NextResponse } from "next/server";
 import { randomUUID } from "crypto";
+import { withOwner } from "@/lib/api";
+import { questionsImportSchema } from "@/lib/api-schemas";
 import { getStore } from "@/lib/store";
-import { currentUserId, isOwner } from "@/lib/auth/user";
 import type { Question } from "@/lib/types";
 
 /**
- * POST { questions: Partial<Question>[] } -> inserts into the SHARED question bank.
- * Owner-only: the bank is global content every learner practises from, and this
- * endpoint does INSERT OR REPLACE by id, so it exists solely for the owner's
- * ingest tooling (`scripts/apply-questions.mjs`, the enrich-questions-bank skill).
- * Everyone else gets 403 — a learner's own practice feeds the bank only through
- * the server-generated harvest path (`lib/harvest.ts`).
+ * POST { questions: Question[] } -> inserts into the SHARED question bank.
+ * Owner-only (withOwner): the bank is global content every learner practises
+ * from, and this endpoint does INSERT OR REPLACE by id, so it exists solely for
+ * the owner's ingest tooling (`scripts/apply-questions.mjs`, the
+ * enrich-questions-bank skill). Everyone else gets 403 — a learner's own
+ * practice feeds the bank only through the server-generated harvest path
+ * (`lib/harvest.ts`).
  */
-export async function POST(req: Request) {
-  const userId = await currentUserId();
-  if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
-  if (!isOwner(userId)) return NextResponse.json({ error: "forbidden" }, { status: 403 });
-  const { questions } = (await req.json()) as { questions: Partial<Question>[] };
-  if (!Array.isArray(questions) || questions.length === 0) {
-    return NextResponse.json({ error: "questions required" }, { status: 400 });
-  }
-  const rows: Question[] = questions
-    .filter((q) => q.word_id && q.type && q.payload)
-    .map((q) => ({
+export const POST = withOwner(
+  questionsImportSchema,
+  async ({ userId, input }) => {
+    const rows: Question[] = input.questions.map((q) => ({
       id: q.id || randomUUID(),
-      word_id: q.word_id!,
-      type: q.type as Question["type"],
+      word_id: q.word_id,
+      type: q.type,
       direction: q.direction || "",
-      payload: q.payload!,
+      payload: q.payload,
       answer: q.answer || "",
     }));
-  await getStore().forUser(userId).addQuestions(rows);
-  return NextResponse.json({ added: rows.length });
-}
+    await getStore().forUser(userId).addQuestions(rows);
+    return { added: rows.length };
+  },
+  // Owner tooling batches up to 500 rows -> allow a larger JSON body.
+  { maxBytes: 2 * 1024 * 1024 },
+);

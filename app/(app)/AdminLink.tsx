@@ -1,4 +1,4 @@
-import { currentUserId, isOwner } from "@/lib/auth/user";
+import { currentUserId, resolveIsOwner } from "@/lib/auth/user";
 import AdminNavLink from "@/components/AdminNavLink";
 
 // Owner gate for the nav's Admin link. This is the ONLY auth-dependent bit of
@@ -11,6 +11,6 @@ import AdminNavLink from "@/components/AdminNavLink";
 // cached getSession() (see lib/auth/user.ts).
 export default async function AdminLink() {
   const userId = await currentUserId();
-  if (!userId || !isOwner(userId)) return null;
+  if (!userId || !(await resolveIsOwner(userId))) return null;
   return <AdminNavLink />;
 }

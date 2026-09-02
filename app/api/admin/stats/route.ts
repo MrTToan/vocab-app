@@ -1,18 +1,11 @@
-import { NextResponse } from "next/server";
-import { currentUserId, isOwner } from "@/lib/auth/user";
+import { withOwner } from "@/lib/api";
+import { emptySchema } from "@/lib/api-schemas";
 import { adminStats } from "@/lib/admin/stats";
 
 /*
- * Owner-only admin metrics. Reuses the app's single identity choke point
- * (currentUserId) and the existing owner check (isOwner) — no new auth scheme.
- * A non-owner (or unauthenticated caller) gets a flat 403 with no data, so the
- * endpoint can never leak another user's activity to a normal account.
+ * Owner-only admin metrics. withOwner reuses the app's single identity choke
+ * point (currentUserId + the owner check) — no new auth scheme. A signed-in
+ * non-owner gets a flat 403 with no data, so the endpoint can never leak
+ * another user's activity to a normal account.
  */
-export async function GET() {
-  const userId = await currentUserId();
-  if (!userId || !isOwner(userId)) {
-    return NextResponse.json({ error: "forbidden" }, { status: 403 });
-  }
-  const stats = await adminStats();
-  return NextResponse.json(stats);
-}
+export const GET = withOwner(emptySchema, async () => adminStats());

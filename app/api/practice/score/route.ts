@@ -1,31 +1,24 @@
 import { NextResponse } from "next/server";
+import { withUser } from "@/lib/api";
+import { practiceScoreSchema } from "@/lib/api-schemas";
 import { getStore } from "@/lib/store";
-import { currentUserId } from "@/lib/auth/user";
 import { reserveQuota, isRateLimitError } from "@/lib/auth/quota";
 import { scoreAnswer, hasProvider } from "@/lib/llm";
 import { clozeFromSentence, saveHarvest } from "@/lib/harvest";
-import type { ExerciseType, GeneratedExercise } from "@/lib/types";
 
 /**
  * POST { wordId, exerciseType, generated, answer } -> a Score.
  * Grading only — it does NOT change progress. The client calls
  * /api/practice/result afterward with the mapped result.
  */
-export async function POST(req: Request) {
+export const POST = withUser(practiceScoreSchema, async ({ userId, input }) => {
   if (!hasProvider("score")) {
     return NextResponse.json(
       { error: "AI scoring is not available right now." },
       { status: 400 },
     );
   }
-  const { wordId, exerciseType, generated, answer } = (await req.json()) as {
-    wordId: string;
-    exerciseType: ExerciseType;
-    generated: GeneratedExercise;
-    answer: string;
-  };
-  const userId = await currentUserId();
-  if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+  const { wordId, exerciseType, generated, answer } = input;
   const store = getStore().forUser(userId);
   const word = await store.get(wordId);
   if (!word) return NextResponse.json({ error: "word not found" }, { status: 404 });
@@ -50,13 +43,13 @@ export async function POST(req: Request) {
     }
 
     return NextResponse.json({ score });
-  } catch (err: any) {
+  } catch (err: unknown) {
     if (isRateLimitError(err)) {
       return NextResponse.json({ error: err.message }, { status: 429 });
     }
     return NextResponse.json(
-      { error: `Scoring failed: ${err?.message ?? err}` },
+      { error: `Scoring failed: ${err instanceof Error ? err.message : String(err)}` },
       { status: 502 },
     );
   }
-}
+});

@@ -14,12 +14,15 @@ import { upsertUser } from "@/lib/auth/store";
  */
 export const { handlers, auth, signIn, signOut } = NextAuth({
   providers: [Google],
-  session: { strategy: "jwt" },
+  // JWT sessions capped at 7 days (re-issued at most daily while active).
+  session: { strategy: "jwt", maxAge: 7 * 24 * 3600, updateAge: 24 * 3600 },
   callbacks: {
     // On sign-in map the Google identity to our stable DB user id and stash it
     // on the token so every request can resolve it without a DB session lookup.
+    // Google must assert the email is VERIFIED — otherwise the token gets no
+    // uid and the session stays unauthenticated for every route.
     async jwt({ token, profile }) {
-      if (profile?.email) {
+      if (profile?.email && profile.email_verified === true) {
         token.uid = await upsertUser({
           email: profile.email,
           name: (profile.name as string) ?? null,
