@@ -648,6 +648,7 @@ export default function HowItWorks() {
           <span className="logo">Lexi</span>
           <div className="flinks">
             <Link href="/">Home</Link>
+            <Link href="/about">About</Link>
             <Link href="/vocab">Practice</Link>
             <Link href="/writing">Writing</Link>
             <Link href="/privacy">Privacy</Link>

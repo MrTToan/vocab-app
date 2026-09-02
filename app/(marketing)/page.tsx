@@ -89,6 +89,7 @@ export default function Landing() {
           <Link href="/vocab">Vocab</Link>
           <Link href="/writing">Writing</Link>
           <Link href="/how-it-works">How it works</Link>
+          <Link href="/about">About</Link>
         </div>
         <div className="navr">
           {/* "Please sign in to continue" — rendered only when the sign-in
@@ -272,6 +273,7 @@ export default function Landing() {
       <footer className="foot">
         <span className="logo">Lexi</span>
         <div className="foot-links">
+          <Link href="/about">About</Link>
           <Link href="/vocab">Vocabulary</Link>
           <Link href="/writing">Writing</Link>
           <Link href="/privacy">Privacy</Link>

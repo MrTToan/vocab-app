@@ -1,0 +1,208 @@
+/* ─────────────────────────────────────────────────────────────
+   About page — Lexi's editorial "climb" design system.
+   EVERY rule is prefixed with `.lexi-about` so this file is fully
+   scoped to /about: it reuses the SAME green/serif tokens as the
+   landing and the how-it-works guide (kept in step by hand), and
+   never touches the global `--accent`/`--bg` variables the
+   signed-in app relies on (app/globals.css).
+   Fonts (Cormorant Garamond + Inter) arrive via next/font as
+   --font-cormorant / --font-inter, applied on the wrapper.
+
+   The one deliberate departure from the guide: this page opens on
+   the cream ground with a quiet typographic hero (no photo, no
+   dark band), so the nav starts ink-on-cream rather than white
+   over a picture. Everything else matches the guide so the two
+   pages read as obvious siblings.
+   ───────────────────────────────────────────────────────────── */
+
+.lexi-about {
+  /* palette — shared with app/(marketing)/how-it-works/guide.css */
+  --paper: #eef1e8;
+  --paper-2: #e4ebdb;
+  --ink: #16231b;
+  --ink-soft: #33463a;
+  --moss: #5e7263;
+  --moss-2: #82957f;
+  --pine: #1c3b2b;
+  --pine-deep: #12271b;
+  --gold: #2f7d4e;
+  --gold-bright: #57c586;
+  --line: #d8d1c1;
+  --line-2: #c9c1af;
+  --display: var(--font-cormorant), Georgia, "Times New Roman", serif;
+  --sans: var(--font-inter), system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.lexi-about * { box-sizing: border-box; }
+.lexi-about a { color: inherit; text-decoration: none; }
+
+/* ---------- NAV ---------- */
+.lexi-about .nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px clamp(16px, 4vw, 54px); color: var(--ink);
+  transition: background 0.4s var(--ease), border-color 0.4s, padding 0.4s, box-shadow 0.4s;
+  border-bottom: 1px solid transparent;
+}
+.lexi-about .nav.scrolled {
+  background: rgba(238, 241, 232, 0.9);
+  -webkit-backdrop-filter: saturate(1.4) blur(8px);
+  backdrop-filter: saturate(1.4) blur(8px);
+  border-bottom-color: var(--line);
+  padding-top: 12px; padding-bottom: 12px;
+  box-shadow: 0 8px 24px rgba(18, 39, 27, 0.05);
+}
+.lexi-about .logo {
+  font-family: var(--display); font-weight: 600; font-size: 26px; letter-spacing: 0.04em;
+}
+.lexi-about .navc { display: flex; gap: 30px; align-items: center; }
+.lexi-about .navc a {
+  font-size: 12px; font-weight: 500; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--ink-soft); opacity: 0.85; transition: opacity 0.2s;
+}
+.lexi-about .navc a:hover { opacity: 1; }
+.lexi-about .nav-cta {
+  border: 1px solid var(--ink); border-radius: 999px;
+  padding: 8px 16px; opacity: 1 !important; color: var(--ink);
+}
+.lexi-about .nav-cta:hover { background: var(--ink); color: var(--paper); }
+@media (max-width: 720px) {
+  .lexi-about .navc a:not(.nav-cta) { display: none; }
+}
+
+/* ---------- HERO (the belief, as quiet type on cream) ---------- */
+.lexi-about .hero {
+  max-width: 1120px; margin: 0 auto;
+  padding: clamp(140px, 22vh, 220px) clamp(24px, 6vw, 80px) clamp(56px, 9vw, 104px);
+}
+.lexi-about .hero .belief {
+  font-family: var(--display); font-weight: 500;
+  font-size: clamp(38px, 6.4vw, 82px); line-height: 1.04; letter-spacing: -0.01em;
+  margin: 0; max-width: 20ch; text-wrap: balance; color: var(--ink);
+}
+.lexi-about .hero .belief .turn {
+  display: block; margin-top: 0.42em;
+  font-size: clamp(26px, 4vw, 50px); line-height: 1.12;
+  color: var(--ink-soft); max-width: 26ch;
+}
+.lexi-about .hero .belief .turn i { font-style: italic; color: var(--gold); }
+.lexi-about .hero .sig {
+  margin: clamp(34px, 5vw, 52px) 0 0; display: flex; align-items: center; gap: 14px;
+  font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--moss);
+}
+.lexi-about .hero .sig::before {
+  content: ""; width: 40px; height: 1px; background: var(--line-2);
+}
+
+/* ---------- SECTION SHELL (shared with the guide) ---------- */
+.lexi-about .wrap { max-width: 1120px; margin: 0 auto; padding: 0 clamp(24px, 6vw, 80px); }
+.lexi-about .sec { padding: clamp(64px, 10vw, 120px) 0; border-top: 1px solid var(--line); }
+.lexi-about .sec.tint { background: var(--paper-2); }
+.lexi-about .kick { color: var(--gold); font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; font-size: 12px; margin: 0; }
+.lexi-about .lead-h {
+  font-family: var(--display); font-weight: 500;
+  font-size: clamp(30px, 5vw, 58px); line-height: 1.04; letter-spacing: -0.005em;
+  margin: 16px 0 0; text-wrap: balance; max-width: 20ch;
+}
+.lexi-about .lead-h i { font-style: italic; color: var(--gold); }
+
+/* ---------- STORY / PROSE ---------- */
+.lexi-about .story { max-width: 60ch; margin-top: clamp(28px, 4vw, 44px); }
+.lexi-about .story p { color: var(--ink-soft); font-size: clamp(16px, 1.5vw, 18px); line-height: 1.8; margin: 0 0 1.25em; }
+.lexi-about .story p:last-of-type { margin-bottom: 0; }
+.lexi-about .story .drop::first-letter {
+  font-family: var(--display); font-weight: 600;
+  float: left; font-size: 3.3em; line-height: 0.82; padding: 0.06em 0.12em 0 0; color: var(--gold);
+}
+.lexi-about .byline {
+  margin-top: clamp(28px, 4vw, 40px);
+  font-family: var(--display); font-style: italic; font-size: clamp(19px, 2.2vw, 24px); color: var(--ink);
+}
+
+/* ---------- LADDER (reused from the guide) ---------- */
+.lexi-about .method-intro { color: var(--moss); font-size: clamp(15px, 1.6vw, 18px); line-height: 1.75; margin: 20px 0 0; max-width: 60ch; }
+.lexi-about .ladder { margin-top: clamp(30px, 4vw, 44px); display: flex; flex-direction: column; gap: 10px; max-width: 760px; }
+.lexi-about .rung { display: flex; align-items: center; gap: 16px; padding: 16px 20px; border: 1px solid var(--line); border-radius: 6px; background: #fff; }
+.lexi-about .rung .dot { flex: none; width: 12px; height: 12px; border-radius: 50%; }
+.lexi-about .rung:nth-child(1) .dot { background: #c9c1af; }
+.lexi-about .rung:nth-child(2) .dot { background: #9ec9ad; }
+.lexi-about .rung:nth-child(3) .dot { background: #6fbf8c; }
+.lexi-about .rung:nth-child(4) .dot { background: #3f9a63; }
+.lexi-about .rung:nth-child(5) .dot { background: var(--gold); }
+.lexi-about .rung .rk { font-family: var(--display); font-size: 21px; font-weight: 500; min-width: 8.5rem; }
+.lexi-about .rung .rd { color: var(--moss); font-size: 14.5px; line-height: 1.5; }
+@media (max-width: 560px) { .lexi-about .rung { flex-wrap: wrap; gap: 6px 16px; } .lexi-about .rung .rk { min-width: 0; } }
+.lexi-about .method-note { color: var(--ink-soft); font-size: 16px; line-height: 1.8; margin: clamp(26px, 3.5vw, 40px) 0 0; max-width: 62ch; }
+.lexi-about .method-note strong { color: var(--ink); font-weight: 600; }
+
+/* ---------- TRUST (hairline-divided statements, not cards) ---------- */
+.lexi-about .trust { margin-top: clamp(30px, 4vw, 48px); border-top: 1px solid var(--line-2); max-width: 900px; }
+.lexi-about .trust .row {
+  display: grid; grid-template-columns: 15rem 1fr; gap: clamp(10px, 3vw, 44px);
+  padding: clamp(24px, 3vw, 34px) 0; border-bottom: 1px solid var(--line-2);
+}
+@media (max-width: 680px) { .lexi-about .trust .row { grid-template-columns: 1fr; gap: 10px; } }
+.lexi-about .trust h3 { font-family: var(--display); font-weight: 500; font-size: clamp(22px, 2.6vw, 30px); letter-spacing: -0.005em; margin: 0; line-height: 1.12; }
+.lexi-about .trust p { color: var(--ink-soft); font-size: 16px; line-height: 1.75; margin: 0; }
+.lexi-about .trust p strong { color: var(--ink); font-weight: 600; }
+.lexi-about .trust a { color: var(--gold); border-bottom: 1px solid var(--gold); transition: opacity 0.2s; }
+.lexi-about .trust a:hover { opacity: 0.7; }
+
+/* ---------- QUIET CLOSE + CTA ---------- */
+.lexi-about .close { border-top: 1px solid var(--line); padding: clamp(80px, 12vw, 140px) 0; text-align: left; }
+.lexi-about .close .in { max-width: 1120px; margin: 0 auto; padding: 0 clamp(24px, 6vw, 80px); }
+.lexi-about .close h2 {
+  font-family: var(--display); font-weight: 500;
+  font-size: clamp(34px, 5.6vw, 68px); line-height: 1.04; letter-spacing: -0.01em; margin: 0; text-wrap: balance; max-width: 16ch;
+}
+.lexi-about .close h2 i { font-style: italic; color: var(--gold); }
+.lexi-about .close p { color: var(--moss); font-size: clamp(15px, 1.6vw, 18px); line-height: 1.7; margin: 20px 0 0; max-width: 52ch; }
+.lexi-about .close .cta-row { margin-top: clamp(30px, 4vw, 40px); display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+.lexi-about .btn-solid {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 15px 30px; border-radius: 999px; background: var(--ink); color: var(--paper);
+  font-weight: 600; font-size: 15px; letter-spacing: 0.01em;
+  transition: transform 0.2s var(--ease), box-shadow 0.25s, background 0.2s;
+}
+.lexi-about .btn-solid:hover { transform: translateY(-3px); background: var(--pine); box-shadow: 0 16px 40px rgba(18, 39, 27, 0.22); }
+.lexi-about .cnote { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--moss-2); }
+
+/* ---------- FOOTER (shared with the guide) ---------- */
+.lexi-about .foot { background: var(--pine-deep); color: #9fb1a7; padding: 44px clamp(24px, 6vw, 80px); }
+.lexi-about .foot .frow { max-width: 1120px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; align-items: center; }
+.lexi-about .foot .logo { color: #eef3ef; font-family: var(--display); font-size: 22px; }
+.lexi-about .foot .flinks { display: flex; flex-wrap: wrap; gap: 22px; font-size: 13px; }
+.lexi-about .foot .flinks a { transition: color 0.2s; }
+.lexi-about .foot .flinks a:hover { color: #eef3ef; }
+.lexi-about .foot .fnote { font-size: 12.5px; opacity: 0.8; width: 100%; }
+
+/* ---------- FOCUS (keyboard accessibility) ---------- */
+.lexi-about a:focus-visible {
+  outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 3px;
+}
+
+/* ---------- ONE ORCHESTRATED HERO REVEAL ----------
+   Pure CSS so it works with JS disabled and never leaves the hero
+   hidden. A single load entrance — no per-section scroll fade-ups. */
+@keyframes lexi-about-rise {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: none; }
+}
+.lexi-about .hero .r { animation: lexi-about-rise 0.9s var(--ease) both; }
+.lexi-about .hero .r.d1 { animation-delay: 0.12s; }
+.lexi-about .hero .r.d2 { animation-delay: 0.26s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .lexi-about * { animation: none !important; }
+  .lexi-about .hero .r { opacity: 1 !important; transform: none !important; }
+  .lexi-about .btn-solid:hover { transform: none; }
+}
