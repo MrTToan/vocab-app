@@ -115,11 +115,17 @@ The skill (`/ingest-writing-prompts` or similar) handles **both** tasks:
 4. Store the chart image **inline** as a `data:` URL in the `writing_prompts.image_path` column,
    together with `chart_data`. Pass the extracted image to `scripts/add-writing-prompt.mjs` via an
    `image_file` (or relative `image_path`) field and it embeds the bytes for you.
-   **Do NOT copy the image to `public/writing/task1/`** and store a `/…` path: only committed files
-   under `public/` survive a deploy — the runtime `public/` is rebuilt from the repo on every
-   redeploy, so a runtime-written chart is wiped while its DB row keeps a dangling path (broken
-   `<img>`). Durable state lives only in the `.data` DB volume. The image route serves the inline
-   bytes from the DB; the legacy `/public` redirect branch remains only for the committed sample.
+   **A stored `image_path` is ALWAYS an inline `data:` URL, never a `/…` path.** Two reasons a
+   `/public` path breaks: (a) runtime-written `public/` is rebuilt from the repo on every redeploy, so
+   a runtime-written chart is wiped while its DB row keeps a dangling path; and (b) even a *committed*
+   `public/` file isn't reliably served in the deployed build — Next lets the request fall through to
+   the app HTML shell, so the `<img>` receives `text/html` and breaks. Durable, servable state lives
+   only in the `.data` DB volume, and the image route serves the inline bytes. `add-writing-prompt.mjs`
+   therefore **embeds even a committed `/public` reference inline** (it reads the file under `public/`
+   and stores its bytes) — including the sample (`content/writing/task1/prompts/sample-entertainment.json`
+   → `public/writing/task1/sample-entertainment.svg`). The **admin** upload path
+   (`components/admin/WritingQuestionsAdmin.tsx`) downscales and encodes the chart as **JPEG** (`q0.85`,
+   white-flattened) client-side before storing — a chart is ~5–8× lighter than PNG with text still crisp.
 
 The vision read lives in the ingest skill (which Claude runs) → **zero app-runtime vision cost** and the
 provider chain (Gemini→Groq→OpenAI, all text) is unchanged. A fully self-serve, no-Claude ingest would add a
