@@ -120,6 +120,10 @@ export interface ScopedStore {
   /** Which of `words` this user already studies, as a Set of normalized
    *  (lower/trim) strings — dedup checks without loading the library. */
   existingWords(words: string[]): Promise<Set<string>>;
+  /** Lean id+word for every word this user studies. Feeds lemma-based dedup in
+   *  the paste importer, which must map an inflected paste back to the existing
+   *  word's id to TAG it (rather than duplicate it). */
+  studiedRefs(): Promise<Array<{ id: string; word: string }>>;
   /** Word-side aggregates for /api/stats, computed close to the data. */
   wordStats(): Promise<WordStats>;
   /** Attempt-side aggregates for /api/stats. Day buckets/streak use the local
@@ -820,6 +824,17 @@ class SqliteStore implements Store {
     return found;
   }
 
+  async studiedRefs(userId: string): Promise<Array<{ id: string; word: string }>> {
+    await this.connect();
+    const rs = await this.db.execute({
+      sql: `SELECT w.id AS id, w.word AS word
+              FROM user_words uw JOIN words w ON w.id = uw.word_id
+             WHERE uw.user_id = ?`,
+      args: [userId],
+    });
+    return rs.rows.map((r: any) => ({ id: String(r.id), word: String(r.word ?? "") }));
+  }
+
   async wordStats(userId: string): Promise<WordStats> {
     await this.connect();
     const [stagesRs, weakRs, topRs] = await Promise.all([
@@ -1331,6 +1346,7 @@ function makeScoped(raw: any, userId: string): ScopedStore {
     practiceCandidatesLite: (cid) => raw.practiceCandidatesLite(userId, cid),
     practiceWord: (id, cid) => raw.practiceWord(userId, id, cid),
     existingWords: (words) => raw.existingWords(userId, words),
+    studiedRefs: () => raw.studiedRefs(userId),
     wordStats: () => raw.wordStats(userId),
     attemptStats: (now) => raw.attemptStats(userId, now),
     addQuestions: (qs) => raw.addQuestions(userId, qs),
@@ -1602,6 +1618,9 @@ class SheetStore implements Store {
       if (n && have.has(n)) found.add(n);
     }
     return found;
+  }
+  async studiedRefs(userId: string): Promise<Array<{ id: string; word: string }>> {
+    return (await this.all(userId)).map((w) => ({ id: w.id, word: w.word }));
   }
   // Single-user in-memory backend: the pure JS reference computation is fine.
   async wordStats(userId: string): Promise<WordStats> {
