@@ -1,5 +1,3 @@
-import { promises as fs } from "fs";
-import path from "path";
 import { QUOTA_TASKS, type QuotaTask } from "../auth/quota";
 import {
   fillDailySeries,
@@ -21,26 +19,10 @@ import {
 
 const WINDOW_DAYS = 30;
 
-let db: any = null;
-let ready: Promise<void> | null = null;
+import { getDb } from "../db";
 
-async function connect(): Promise<any> {
-  if (!ready) {
-    ready = (async () => {
-      const { createClient } = await import("@libsql/client");
-      let url = process.env.DATABASE_URL;
-      if (!url) {
-        const dir = path.join(process.cwd(), ".data");
-        await fs.mkdir(dir, { recursive: true });
-        url = `file:${path.join(dir, "lexi.db")}`;
-      } else if (url.startsWith("file:")) {
-        await fs.mkdir(path.dirname(path.resolve(url.slice(5))), { recursive: true });
-      }
-      db = createClient({ url, authToken: process.env.DATABASE_AUTH_TOKEN });
-    })();
-  }
-  await ready;
-  return db;
+async function connect() {
+  return getDb(); // shared process-wide client (lib/db.ts)
 }
 
 /**

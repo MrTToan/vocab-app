@@ -1,5 +1,3 @@
-import { promises as fs } from "fs";
-import path from "path";
 
 /*
  * Per-user LLM quota. Public users share the owner's provider keys, so EVERY
@@ -24,6 +22,7 @@ import path from "path";
  */
 
 import type { Client } from "@libsql/client";
+import { getDb } from "../db";
 import { DEV_USER_ID } from "./user";
 
 /** The quota-tracked LLM tasks, in display order. */
@@ -111,33 +110,10 @@ export function resetBurst(): void {
   burst.clear();
 }
 
-let db: Client | null = null;
-let ready: Promise<void> | null = null;
-
 async function connect(): Promise<Client> {
-  if (!ready) {
-    ready = (async () => {
-      const { createClient } = await import("@libsql/client");
-      let url = process.env.DATABASE_URL;
-      if (!url) {
-        const dir = path.join(process.cwd(), ".data");
-        await fs.mkdir(dir, { recursive: true });
-        url = `file:${path.join(dir, "lexi.db")}`;
-      } else if (url.startsWith("file:")) {
-        await fs.mkdir(path.dirname(path.resolve(url.slice(5))), { recursive: true });
-      }
-      const client = createClient({ url, authToken: process.env.DATABASE_AUTH_TOKEN });
-      db = client;
-      await client.execute(
-        `CREATE TABLE IF NOT EXISTS llm_usage (
-          user_id TEXT, day TEXT, task TEXT, count INTEGER DEFAULT 0,
-          PRIMARY KEY (user_id, day, task)
-        )`,
-      );
-    })();
-  }
-  await ready;
-  return db as Client;
+  // Shared process-wide client; the `llm_usage` table is created by migrate()
+  // in lib/db.ts before this resolves.
+  return getDb();
 }
 
 function utcDay(): string {
