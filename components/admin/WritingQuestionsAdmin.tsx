@@ -18,6 +18,7 @@ import { WRITING_TASKS } from "@/lib/writing/types";
  */
 
 const MAX_W = 1200; // downscale wide charts to keep the stored image lean
+const JPEG_QUALITY = 0.85; // charts stay crisp; JPEG is far lighter than PNG
 
 async function fileToDownscaledDataUrl(file: Blob): Promise<string> {
   const bitmap = await createImageBitmap(file);
@@ -28,8 +29,13 @@ async function fileToDownscaledDataUrl(file: Blob): Promise<string> {
   canvas.width = w;
   canvas.height = h;
   const ctx = canvas.getContext("2d")!;
+  // JPEG has no alpha — flatten onto white first so transparent PNGs don't turn
+  // black. Then encode JPEG: a chart stores ~5–8x smaller than PNG at q0.85 with
+  // text/axes still crisp (the inline data URL lives in the DB — keep it lean).
+  ctx.fillStyle = "#ffffff";
+  ctx.fillRect(0, 0, w, h);
   ctx.drawImage(bitmap, 0, 0, w, h);
-  return canvas.toDataURL("image/png");
+  return canvas.toDataURL("image/jpeg", JPEG_QUALITY);
 }
 
 type TaskFilter = "all" | WritingTask;

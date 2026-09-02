@@ -15,7 +15,12 @@
 import { createClient } from "@libsql/client";
 import { readFileSync, existsSync } from "fs";
 import path from "path";
+import { fileURLToPath } from "url";
 import { randomUUID } from "crypto";
+
+// Repo root (this file is scripts/add-writing-prompt.mjs) — used to resolve a
+// leading-slash public image_path (a committed asset under public/) to its file.
+const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
 // Extension → MIME for chart images. Mirrors IMAGE_MIME_BY_EXT in
 // lib/writing/image.ts (this .mjs script can't import the TS module).
@@ -40,22 +45,32 @@ function fileToDataUrl(filePath) {
  *   - `image` / `image_path` already a data: URL  -> kept as-is
  *   - `image_file` or an `image_path` that points at an existing local file
  *     -> embedded inline as a data URL
- *   - a bare "/public" path with no local file (e.g. a committed sample)
- *     -> kept as-is (committed files ARE durable)
+ *   - a leading-slash public path (e.g. the committed sample chart under public/)
+ *     -> its committed file under public/ is embedded inline
+ * A stored value is NEVER a leading-slash public path: Next does not reliably serve those
+ * in the deployed build (the request falls through to the app HTML shell, so the
+ * <img> breaks), and runtime-written public/ is wiped on redeploy. Everything
+ * lives inline in the DB; the image route serves the bytes.
  */
 function resolveImage(p, baseDir) {
   const inline = p.image ?? p.image_path;
   if (typeof inline === "string" && inline.startsWith("data:")) return inline;
 
-  const fileRef = p.image_file ?? (typeof p.image_path === "string" && !p.image_path.startsWith("/") ? p.image_path : null);
-  const candidate = fileRef ? path.resolve(baseDir, fileRef) : null;
+  // A relative image_file/image_path resolves against the JSON's dir; a leading
+  // "/" is a committed public asset, resolved against the repo's public/.
+  const rel = p.image_file ?? (typeof p.image_path === "string" && !p.image_path.startsWith("/") ? p.image_path : null);
+  const pub = typeof p.image_path === "string" && p.image_path.startsWith("/")
+    ? path.join(REPO_ROOT, "public", p.image_path)
+    : null;
+  const candidate = rel ? path.resolve(baseDir, rel) : pub;
   if (candidate && existsSync(candidate)) {
     const dataUrl = fileToDataUrl(candidate);
     if (!dataUrl) throw new Error(`Unsupported image type for ${candidate} (png/jpeg/webp/svg only)`);
     return dataUrl;
   }
-  // Nothing local to embed: keep whatever image_path was given (e.g. a
-  // committed /public sample), or null.
+  if (p.image_path && String(p.image_path).startsWith("/")) {
+    throw new Error(`Chart image not found for "${p.image_path}" (expected a committed file at public${p.image_path}); charts must be stored inline, not as a /public path.`);
+  }
   return p.image_path ?? null;
 }
 
