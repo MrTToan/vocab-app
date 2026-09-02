@@ -18,7 +18,7 @@ import {
   wordKey,
   WORDS_PAGE_SIZE,
   applyMembershipToCache,
-  applyWordAdoptedToCache,
+  markStudyingInPages,
   mutateAfterWordChange,
   revalidateStats,
 } from "@/lib/swr";
@@ -46,11 +46,12 @@ export default function LibraryPage() {
   // compose in SQL and page together (a collection shows ALL its members —
   // studied and not-yet-studied — so the count and the list agree). Each
   // "Show more" loads one more page from the server, never the whole list.
-  const { data, size, setSize, isValidating } = useWordsPage({
-    q: debouncedQ,
-    stage: filter,
-    collection: collectionFilter,
-  });
+  const { data, size, setSize, isValidating, mutate: mutatePages } =
+    useWordsPage({
+      q: debouncedQ,
+      stage: filter,
+      collection: collectionFilter,
+    });
   const pages = data ?? null;
   const words = useMemo(
     () => (pages ? pages.flatMap((p) => p.words) : null),
@@ -73,15 +74,43 @@ export default function LibraryPage() {
   }
 
   // Start studying a not-yet-studied collection member. Optimistic: flip the
-  // row's flag immediately, persist in the background, revert on failure.
+  // row's flag immediately (via the BOUND infinite mutate so the "+ Add" button
+  // actually disappears and stays gone), persist in the background, revert on
+  // failure.
   async function adoptWord(wordId: string) {
-    applyWordAdoptedToCache(wordId);
+    const ids = new Set([wordId]);
+    mutatePages((cur) => markStudyingInPages(cur, ids), {
+      revalidate: false,
+    });
     revalidateStats();
     try {
       await jsonFetch(`/api/words/${wordId}/adopt`, { method: "POST" });
     } catch {
       // The word stays visible (it's a collection member); refetch the truth.
       await mutateAfterWordChange();
+    }
+  }
+
+  // Start studying EVERY not-yet-studied member of the selected collection in
+  // one tap (the per-word "+ Add" writ large). Idempotent server-side, so it's
+  // safe to re-run. Optimistic: flip all loaded members now; any not-yet-loaded
+  // pages hydrate as studied when paged in.
+  const [adoptingAll, setAdoptingAll] = useState(false);
+  async function adoptCollection(collectionId: string) {
+    setAdoptingAll(true);
+    const ids = new Set((words ?? []).filter((w) => !w.studying).map((w) => w.id));
+    mutatePages((cur) => markStudyingInPages(cur, ids), {
+      revalidate: false,
+    });
+    revalidateStats();
+    try {
+      await jsonFetch(`/api/collections/${collectionId}/adopt`, {
+        method: "POST",
+      });
+    } catch {
+      await mutateAfterWordChange();
+    } finally {
+      setAdoptingAll(false);
     }
   }
 
@@ -97,6 +126,9 @@ export default function LibraryPage() {
   }, [memberships]);
 
   const selectedCollection = collections.find((c) => c.id === collectionFilter);
+  // Offer "+ Add all" only while at least one loaded member is not yet studied
+  // — so the control disappears once the whole (loaded) set is adopted.
+  const hasUnstudiedLoaded = (words ?? []).some((w) => !w.studying);
 
   return (
     <div className="space-y-4">
@@ -149,12 +181,32 @@ export default function LibraryPage() {
       )}
 
       {selectedCollection && (
-        <p className="muted text-xs">
-          Showing all words in{" "}
-          <span className="font-semibold">{selectedCollection.name}</span> —
-          words you don’t study yet have an{" "}
-          <span className="font-semibold">Add</span> button.
-        </p>
+        <div className="flex items-start justify-between gap-3">
+          <p className="muted text-xs flex-1 min-w-0">
+            Showing all words in{" "}
+            <span className="font-semibold">{selectedCollection.name}</span> —
+            words you don’t study yet have an{" "}
+            <span className="font-semibold">Add</span> button.
+          </p>
+          {hasUnstudiedLoaded && (
+            // Adopt the whole collection at once — the per-word "+ Add" writ
+            // large, so learners can add word-by-word OR the entire set.
+            <button
+              type="button"
+              onClick={() => adoptCollection(selectedCollection.id)}
+              disabled={adoptingAll}
+              className="px-3 py-1 rounded-full text-sm font-semibold border transition-colors whitespace-nowrap shrink-0"
+              style={{
+                background: "var(--accent)",
+                borderColor: "var(--accent)",
+                color: "#fff",
+                opacity: adoptingAll ? 0.6 : 1,
+              }}
+            >
+              {adoptingAll ? "Adding…" : "+ Add all"}
+            </button>
+          )}
+        </div>
       )}
 
       {words === null ? (
