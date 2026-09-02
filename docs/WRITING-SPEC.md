@@ -95,7 +95,7 @@ watcher, no daemon; nothing happens until the user runs the skill. Batch up file
 content/writing/task1/inbox/     # user drops Task 1 chart-question files (.docx/.pdf)
 content/writing/task2/inbox/     # user drops Task 2 essay-prompt files
 content/writing/{task1,task2}/prompts/   # processed prompts (git-tracked, reviewable)
-public/writing/task1/            # extracted chart images, served to the student
+public/writing/task1/            # committed sample chart(s) only — NOT a runtime store
 ```
 
 The skill (`/ingest-writing-prompts` or similar) handles **both** tasks:
@@ -110,7 +110,14 @@ The skill (`/ingest-writing-prompts` or similar) handles **both** tasks:
    (`chart_type`, `series`, `key_trends`, `overview`).
 3. **User eyeballs it once** (~30s) — it's stored and reused for every future submission, so the facts are
    worth one human glance.
-4. Store `image` + `chart_data` on the `writing_prompts` row; copy the image to `public/writing/task1/`.
+4. Store the chart image **inline** as a `data:` URL in the `writing_prompts.image_path` column,
+   together with `chart_data`. Pass the extracted image to `scripts/add-writing-prompt.mjs` via an
+   `image_file` (or relative `image_path`) field and it embeds the bytes for you.
+   **Do NOT copy the image to `public/writing/task1/`** and store a `/…` path: only committed files
+   under `public/` survive a deploy — the runtime `public/` is rebuilt from the repo on every
+   redeploy, so a runtime-written chart is wiped while its DB row keeps a dangling path (broken
+   `<img>`). Durable state lives only in the `.data` DB volume. The image route serves the inline
+   bytes from the DB; the legacy `/public` redirect branch remains only for the committed sample.
 
 The vision read lives in the ingest skill (which Claude runs) → **zero app-runtime vision cost** and the
 provider chain (Gemini→Groq→OpenAI, all text) is unchanged. A fully self-serve, no-Claude ingest would add a

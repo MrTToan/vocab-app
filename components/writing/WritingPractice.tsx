@@ -10,10 +10,26 @@ import {
 } from "@/lib/swr";
 import { MIN_WORDS, REC_MINUTES, type WritingPromptSummary, type WritingSubmission, type WritingTask } from "@/lib/writing/types";
 import { countWords } from "@/lib/writing/grade";
+import { pickInitialId } from "@/lib/writing/deeplink";
 import Feedback, { bandColor } from "./Feedback";
 
 type PromptStats = { attempts: number; bestBand: number; lastBand: number; lastAt: number } | null;
 type PromptWithStats = WritingPromptSummary & { stats: PromptStats; can_edit: boolean };
+
+/** Current `?q=` value, or null (SSR-safe). */
+function readQ(): string | null {
+  if (typeof window === "undefined") return null;
+  return new URLSearchParams(window.location.search).get("q");
+}
+
+/** Reflect the selected question in the URL (`?q=<id>`) without navigating, so
+ *  the address bar is always a copyable deep link to it. */
+function syncQ(id: string): void {
+  if (typeof window === "undefined") return;
+  const url = new URL(window.location.href);
+  url.searchParams.set("q", id);
+  window.history.replaceState(null, "", url);
+}
 
 /**
  * Writing workspace: pick a question from the left pane (with your past scores),
@@ -45,9 +61,11 @@ export default function WritingPractice({ task }: { task: WritingTask }) {
   const words = countWords(text);
   const selected = prompts?.find((p) => p.id === selectedId) ?? null;
 
-  // Default the selection to the first question once the list arrives.
+  // Default the selection once the list arrives: honour a `?q=<id>` deep link
+  // (a copyable link to a specific question), else fall back to the first.
   useEffect(() => {
-    setSelectedId((prev) => prev ?? promptsData?.prompts[0]?.id ?? null);
+    if (!promptsData) return;
+    setSelectedId((prev) => prev ?? pickInitialId(promptsData.prompts, readQ()));
   }, [promptsData]);
 
   function pick(id: string) {
@@ -57,6 +75,7 @@ export default function WritingPractice({ task }: { task: WritingTask }) {
     setReview(null);
     setView("write");
     setError("");
+    syncQ(id); // keep the address bar a shareable link to this question
   }
 
   async function submit() {
@@ -369,7 +388,10 @@ function PromptWriter({
   return (
     <div className="space-y-4">
       <div className="card p-5">
-        {prompt.title && <div className="font-bold mb-1">{prompt.title}</div>}
+        <div className="flex items-start justify-between gap-2 mb-1">
+          {prompt.title ? <div className="font-bold">{prompt.title}</div> : <span />}
+          <QuestionRef id={prompt.id} />
+        </div>
         <p className="whitespace-pre-wrap">{prompt.prompt_text}</p>
         {prompt.has_image && (
           /* eslint-disable-next-line @next/next/no-img-element */
@@ -416,6 +438,35 @@ function PromptWriter({
           {submitting ? "Scoring…" : done ? "Submit new attempt" : "Submit for feedback"}
         </button>
       </div>
+    </div>
+  );
+}
+
+/* ── the question's id + a one-tap copyable deep link (refer/share a question) ── */
+
+function QuestionRef({ id }: { id: string }) {
+  const [copied, setCopied] = useState(false);
+  async function copyLink() {
+    const link = `${window.location.origin}${window.location.pathname}?q=${encodeURIComponent(id)}`;
+    try {
+      await navigator.clipboard.writeText(link);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    } catch {
+      /* clipboard blocked (insecure context / denied) — the id stays visible to copy by hand */
+    }
+  }
+  return (
+    <div className="no-print flex items-center gap-2 text-[11px] muted shrink-0">
+      <span className="font-mono select-all truncate max-w-[9rem]" title={`Question id: ${id}`}>{id}</span>
+      <button
+        type="button"
+        className="btn !min-h-0 !px-2 !py-1 text-[11px]"
+        onClick={copyLink}
+        title="Copy a shareable link to this question"
+      >
+        {copied ? "Copied ✓" : "🔗 Copy link"}
+      </button>
     </div>
   );
 }
