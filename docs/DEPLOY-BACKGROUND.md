@@ -301,3 +301,10 @@ means — that's where the real learning lives._
   reproducible from git.
 
 The copy-paste server steps live in `deploy/SERVER-CHECKLIST.md`.
+- **Health check — use `/api/health`, not `/api/config`:** the compose
+  healthcheck and the deploy shortcut probe the app with an unauthenticated
+  request. Since `/api/config` became signed-in-only it answers 401, so the
+  container flips to "unhealthy" and every deploy ends with a false warning.
+  `GET /api/health` is public, runs `SELECT 1` against the shared DB connection
+  (2 s timeout) and returns `200 {ok:true}` or `503 {ok:false}`, with
+  `Cache-Control: no-store` and nothing else in the body.
