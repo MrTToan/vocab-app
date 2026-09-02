@@ -24,9 +24,9 @@ Then deploy as usual. Verify after it's up:
 ```sh
 docker compose -f ~/lexi/docker-compose.prod.yml exec -T app id
 # expect: uid=1000(node) gid=1000(node) ...
-curl -fsS http://localhost:3000/api/config >/dev/null && echo app-ok \
+curl -fsS http://localhost:3000/api/health >/dev/null && echo app-ok \
   || docker compose -f ~/lexi/docker-compose.prod.yml exec -T app \
-       node -e "fetch('http://localhost:3000/api/config').then(r=>console.log('app-ok',r.status))"
+       node -e "fetch('http://localhost:3000/api/health').then(r=>console.log('app-ok',r.status))"
 ```
 
 ## (b) Replace the nightly `cp` backup + fix the weekly prune
@@ -110,11 +110,12 @@ In the Cloudflare dashboard for the zone:
 Point a free-tier monitor (UptimeRobot or BetterStack) at:
 
 ```
-https://<your-domain>/api/config
+https://<your-domain>/api/health
 ```
 
 HTTP(S) check, 5-minute interval, alert on non-2xx. That endpoint exercises the
-full stack (Cloudflare → Caddy → Next → config load) without auth.
+full stack (Cloudflare → Caddy → Next → DB `SELECT 1`) without auth; it returns
+503 `{ ok: false }` when the database is unreachable.
 
 ## (f) Deploy hygiene: clean-tree guard
 
