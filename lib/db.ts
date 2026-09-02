@@ -271,6 +271,14 @@ export async function migrate(db: Client): Promise<void> {
   await db.execute(`CREATE INDEX IF NOT EXISTS idx_wc_user ON writing_corrections (user_id)`);
   // user_words: "who studies this word" (delete cascade, admin counts).
   await db.execute(`CREATE INDEX IF NOT EXISTS idx_uw_word ON user_words (word_id)`);
+  // user_question_state: the delete cascade prunes a word's question recency via
+  // `WHERE question_id IN (SELECT id FROM questions WHERE word_id = ?)`. Without
+  // this index that DELETE is a full SCAN of user_question_state (the PK is
+  // (user_id, question_id), useless for a question_id-only lookup), so a single
+  // word deletion scans the whole table — which grows with every question every
+  // user has ever seen. This turns it into an indexed lookup (EXPLAIN: COVERING
+  // INDEX; ~460x on a 600k-row table). Regression guard: tests/db.test.ts.
+  await db.execute(`CREATE INDEX IF NOT EXISTS idx_uqs_question ON user_question_state (question_id)`);
   // writing_prompts: the `public OR owner_id = caller` visibility filter.
   await db.execute(
     `CREATE INDEX IF NOT EXISTS idx_wp_owner_vis ON writing_prompts (owner_id, visibility)`,
