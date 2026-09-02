@@ -273,3 +273,31 @@ makes `main` = production; manual deploys keep you in control until you want tha
 _Read this once end-to-end, then keep it beside `DEPLOY.md`: the runbook says "do X", this says "X is Y, and
 here's why." On your next app, try running the phases yourself and using this to understand what each command
 means — that's where the real learning lives._
+
+---
+
+## Ops hardening — why these changes (backups, non-root, log caps, prune filter)
+
+- **Why `cp` of a live SQLite file is unsafe:** SQLite (in WAL mode) writes to
+  the main file *and* a `-wal` journal; a `cp` mid-write can capture the pair
+  out of sync — a torn backup that may not open. `VACUUM INTO` runs *inside*
+  the database engine as a transaction, so the snapshot is always consistent.
+  That's what `scripts/backup-db.mjs` does.
+- **Why the container shouldn't run as root:** if the app is ever compromised,
+  the attacker holds whatever user the process runs as. As `root` inside the
+  container, a container-escape bug hands them the host. As `node` (uid 1000),
+  they hold an unprivileged account. The catch: files the container writes on a
+  bind mount are owned by that uid, so the host dir must be `chown`ed to 1000.
+- **Why log limits:** Docker's default `json-file` driver keeps *all* output
+  forever; a chatty app slowly eats the disk until the box falls over. The
+  `max-size`/`max-file` options turn it into a rotating 30 MB window.
+- **Why `docker image prune --filter "until=168h"` instead of `system prune`:**
+  `system prune` throws away the *build cache* too, so the next deploy rebuilds
+  everything from scratch (slow, memory-hungry). Filtering to images unused for
+  a week reclaims the real garbage while keeping deploys warm.
+- **Why a clean-tree deploy guard:** the deploy shortcut ships the *working
+  tree*, not a commit. `scripts/deploy-check.sh` refuses to deploy anything
+  that isn't committed and on `origin/main`, so production is always
+  reproducible from git.
+
+The copy-paste server steps live in `deploy/SERVER-CHECKLIST.md`.

@@ -11,6 +11,14 @@ services:
   lexi:
     build: .
     restart: unless-stopped
+    # Cap container logs (3 x 10 MB) — otherwise json-file logs grow unbounded.
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    # The image runs as uid 1000 (`node`); the bind-mounted ./.data dir must be
+    # writable by that uid: `chown -R 1000:1000 .data` (or `chmod -R a+rwX`).
     # Host 3001 -> container 3000. Put a reverse proxy (see deploy/Caddyfile) in
     # front for HTTPS + your domain.
     ports:

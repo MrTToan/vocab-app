@@ -13,3 +13,9 @@ STATUS.md
 CLAUDE.md
 AGENTS.md
 CHEATSHEET.md
+# CI + deploy reference material (not needed in the image)
+.github
+deploy
+docs
+tests
+temp_img
