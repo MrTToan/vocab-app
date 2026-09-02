@@ -1,7 +1,23 @@
+# Production compose for the self-hosted box (reference copy; the server keeps
+# its own at ~/lexi/docker-compose.prod.yml — see deploy/SERVER-CHECKLIST.md).
+#
+#   docker compose -f docker-compose.prod.yml up -d --build   # deploy (on-box build)
+#   docker compose -f docker-compose.prod.yml logs -f app     # watch app logs
+#
+# The image is built ON the server from the rsynced working tree — there is no
+# registry/public image. Data lives in ./data (bind mount), which must be owned
+# by uid 1000 because the image runs as the unprivileged `node` user.
+x-logging: &default-logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "3"
+
 services:
   app:
-    image: ghcr.io/mrttoan/vocab-app:latest
+    build: .
     restart: unless-stopped
+    logging: *default-logging
     env_file: [.env]
     volumes:
       - ./data:/app/.data
@@ -16,6 +32,7 @@ services:
   caddy:
     image: caddy:2
     restart: unless-stopped
+    logging: *default-logging
     ports:
       - "80:80"
       - "443:443"

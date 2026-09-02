@@ -8,6 +8,8 @@ on:
 jobs:
   check:
     runs-on: ubuntu-latest
+    env:
+      NEXT_TELEMETRY_DISABLED: 1
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -15,7 +17,18 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - name: Lint
+        # Non-blocking for now: `npm run lint` is red on main (~116 pre-existing
+        # `no-explicit-any` errors in app/lib/tests). Flip this to blocking once
+        # those are cleaned up — see the follow-up note in PR "Ops: non-root
+        # container, log rotation, consistent DB backups, CI gates".
+        continue-on-error: true
+        run: npm run lint
       - name: Type-check
         run: npm run typecheck
       - name: Unit tests
         run: npm test
+      - name: Build
+        run: npm run build
+      - name: Audit production dependencies
+        run: npm audit --omit=dev --audit-level=high
