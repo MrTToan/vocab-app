@@ -101,7 +101,13 @@ export type WordListItem = Pick<
   | "times_seen"
   | "recent_results"
   | "created_at"
->;
+> & {
+  // Whether THIS user already studies the word (has a `user_words` row). Always
+  // true in the plain library list; a collection-filtered page can include
+  // members the user does not yet study (studying === false) so the Library can
+  // offer an "add to my studying" action. See store.listPage().
+  studying: boolean;
+};
 
 /**
  * A named, curated group of words (many-to-many via a join table). A study

@@ -26,6 +26,7 @@ vi.mock("@/lib/llm", () => ({
 
 let words: typeof import("@/app/api/words/route");
 let wordById: typeof import("@/app/api/words/[id]/route");
+let wordAdopt: typeof import("@/app/api/words/[id]/adopt/route");
 let check: typeof import("@/app/api/words/check/route");
 let checkBulk: typeof import("@/app/api/words/check-bulk/route");
 let importPaste: typeof import("@/app/api/words/import-paste/route");
@@ -42,6 +43,7 @@ beforeAll(async () => {
   delete process.env.AUTH_GOOGLE_ID;
   words = await import("@/app/api/words/route");
   wordById = await import("@/app/api/words/[id]/route");
+  wordAdopt = await import("@/app/api/words/[id]/adopt/route");
   check = await import("@/app/api/words/check/route");
   checkBulk = await import("@/app/api/words/check-bulk/route");
   importPaste = await import("@/app/api/words/import-paste/route");
@@ -67,6 +69,7 @@ describe("signed out -> 401 everywhere", () => {
     ["POST /api/words/import-paste", () => importPaste.POST(post("http://t/api/words/import-paste", { words: ["cat"] }))],
     ["POST /api/import", () => importCsv.POST(post("http://t/api/import", { rows: [{ word: "cat" }] }))],
     ["POST /api/enrich", () => enrich.POST(post("http://t/api/enrich", { word: "cat" }))],
+    ["POST /api/words/[id]/adopt", () => wordAdopt.POST(post("http://t/api/words/x/adopt"), ctx("x"))],
   ])("%s", async (_n, call) => {
     caller.id = null;
     const res = await call();
@@ -84,6 +87,7 @@ describe("cross-origin state changes -> 403", () => {
     ["POST /api/words/import-paste", () => importPaste.POST(crossOrigin("http://t/api/words/import-paste", "POST", { words: ["x"] }))],
     ["POST /api/import", () => importCsv.POST(crossOrigin("http://t/api/import", "POST", { rows: [{ word: "x" }] }))],
     ["POST /api/enrich", () => enrich.POST(crossOrigin("http://t/api/enrich", "POST", { word: "x" }))],
+    ["POST /api/words/[id]/adopt", () => wordAdopt.POST(crossOrigin("http://t/api/words/x/adopt", "POST"), ctx("x"))],
   ])("%s", async (_n, call) => {
     expect((await call()).status).toBe(403);
   });
@@ -111,6 +115,11 @@ describe("invalid input -> 400 {error, issues}", () => {
     ["POST /api/words with a 101-char word", () => words.POST(post("http://t/api/words", { word: "x".repeat(101) }))],
     ["PATCH /api/words/[id] with a non-string field", () => wordById.PATCH(patch("http://t/api/words/x", { vi_meaning: 42 }), ctx("x"))],
     ["GET /api/words/check with a stray param", () => check.GET(get("http://t/api/words/check?word=cat&bogus=1"))],
+    ["GET /api/words with a bad stage", () => words.GET(get("http://t/api/words?fields=list&stage=bogus"))],
+    ["GET /api/words with a non-numeric limit", () => words.GET(get("http://t/api/words?fields=list&limit=abc"))],
+    ["GET /api/words with an over-max limit", () => words.GET(get("http://t/api/words?fields=list&limit=999"))],
+    ["GET /api/words with a stray query param", () => words.GET(get("http://t/api/words?fields=list&bogus=1"))],
+    ["POST /api/words/[id]/adopt with an unexpected body (strict)", () => wordAdopt.POST(post("http://t/api/words/x/adopt", { nope: 1 }), ctx("x"))],
     ["POST /api/words/check-bulk without words", () => checkBulk.POST(post("http://t/api/words/check-bulk", {}))],
     ["POST /api/words/check-bulk with 251 words", () => checkBulk.POST(post("http://t/api/words/check-bulk", { words: Array(251).fill("w") }))],
     ["POST /api/words/import-paste with empty words", () => importPaste.POST(post("http://t/api/words/import-paste", { words: [] }))],
@@ -214,5 +223,58 @@ describe("happy paths (temp SQLite)", () => {
     expect(res.status).toBe(200);
     expect(await res.json()).toEqual({ ok: true });
     expect((await wordById.GET(get(`http://t/api/words/${id}`), ctx(id))).status).toBe(404);
+  });
+});
+
+describe("GET /api/words?fields=list — server pagination + collection filter", () => {
+  // The owner authors a public collection; a fresh learner sees it in the
+  // dropdown but studies none of it → the list must still show every member.
+  let colId: string;
+
+  beforeAll(async () => {
+    const store = await import("@/lib/store");
+    const owner = store.getStore().forUser("local-user"); // DEV_USER_ID = owner
+    const col = await owner.createCollection({ name: "Pack" });
+    colId = col.id;
+    const ids: string[] = [];
+    for (let i = 0; i < 7; i++) {
+      const w = await owner.add({ word: `packword${i}` });
+      ids.push(w.id);
+    }
+    await owner.setCollectionMembers(colId, { add: ids });
+    await owner.setCollectionVisibility(colId, "public");
+  });
+
+  it("returns one server page with total + limit + offset, not the whole list", async () => {
+    caller.id = "learner-x"; // studies nothing
+    const res = await words.GET(get(`http://t/api/words?fields=list&collection=${colId}&limit=3&offset=0`));
+    expect(res.status).toBe(200);
+    const body = await res.json();
+    expect(body.total).toBe(7); // ALL members, not 0
+    expect(body.limit).toBe(3);
+    expect(body.offset).toBe(0);
+    expect(body.words.length).toBe(3); // one page only
+    expect(body.words.every((w: { studying: boolean }) => w.studying === false)).toBe(true);
+  });
+
+  it("a later page offsets correctly and marks studying honestly after adopt", async () => {
+    caller.id = "learner-x";
+    const page2 = await (await words.GET(get(`http://t/api/words?fields=list&collection=${colId}&limit=3&offset=6`))).json();
+    expect(page2.words.length).toBe(1); // 7 total, last page
+
+    // Adopt one member, then it reads back studying:true.
+    const targetId = page2.words[0].id;
+    const adopt = await wordAdopt.POST(post(`http://t/api/words/${targetId}/adopt`), ctx(targetId));
+    expect(adopt.status).toBe(200);
+    expect(await adopt.json()).toEqual({ adopted: true });
+
+    const after = await (await words.GET(get(`http://t/api/words?fields=list&collection=${colId}&limit=10&offset=0`))).json();
+    expect(after.words.find((w: { id: string }) => w.id === targetId).studying).toBe(true);
+  });
+
+  it("adopting an unknown/invisible word -> 404", async () => {
+    caller.id = "learner-x";
+    const res = await wordAdopt.POST(post("http://t/api/words/nope/adopt"), ctx("nope"));
+    expect(res.status).toBe(404);
   });
 });

@@ -9,46 +9,80 @@ import {
   STAGE_LABEL,
   STAGE_VAR,
   recentAccuracy,
-  isWeak,
   jsonFetch,
 } from "@/lib/ui";
 import {
-  useWordsList,
+  useWordsPage,
   useCollections,
   useWord,
   wordKey,
+  WORDS_PAGE_SIZE,
   applyMembershipToCache,
+  applyWordAdoptedToCache,
   mutateAfterWordChange,
+  revalidateStats,
 } from "@/lib/swr";
 
 type Filter = "all" | "weak" | Stage;
 const EMPTY_SET: ReadonlySet<string> = new Set();
 
 export default function LibraryPage() {
-  // SWR: the slim word list + collections/memberships are cached, so a repeat
-  // visit paints instantly and revalidates in the background. Shared keys mean
-  // the collections fetch is deduped with the Home/Add pages.
-  const { data: wordsData } = useWordsList();
   const { data: colData } = useCollections();
-  const words = wordsData?.words ?? null;
   const collections = colData?.collections ?? [];
   const memberships = colData?.memberships ?? [];
 
   const [q, setQ] = useState("");
   const [filter, setFilter] = useState<Filter>("all");
   const [collectionFilter, setCollectionFilter] = useState<string>(""); // "" = any
-  // Render the (possibly ~1,200-row) list in chunks so a phone never builds the
-  // whole DOM at once. Reset the window whenever the visible set changes.
-  const PAGE = 60;
-  const [limit, setLimit] = useState(PAGE);
+
+  // Debounce the search box so each keystroke doesn't fire a server request.
+  const [debouncedQ, setDebouncedQ] = useState("");
   useEffect(() => {
-    setLimit(PAGE);
-  }, [q, filter, collectionFilter]);
+    const t = setTimeout(() => setDebouncedQ(q), 250);
+    return () => clearTimeout(t);
+  }, [q]);
+
+  // Server-side paginated + filtered list: search / stage / collection all
+  // compose in SQL and page together (a collection shows ALL its members —
+  // studied and not-yet-studied — so the count and the list agree). Each
+  // "Show more" loads one more page from the server, never the whole list.
+  const { data, size, setSize, isValidating } = useWordsPage({
+    q: debouncedQ,
+    stage: filter,
+    collection: collectionFilter,
+  });
+  const pages = data ?? null;
+  const words = useMemo(
+    () => (pages ? pages.flatMap((p) => p.words) : null),
+    [pages],
+  );
+  const total = pages?.[0]?.total ?? 0;
+  const hasMore = words != null && words.length < total;
+  const loadingMore = isValidating && (pages?.length ?? 0) < size;
+
+  // A filter change makes the previous pages irrelevant — collapse back to one
+  // page so we don't refetch several pages of the new filter at once.
+  useEffect(() => {
+    setSize(1);
+  }, [debouncedQ, filter, collectionFilter, setSize]);
 
   // Optimistic, in-place membership toggle in the SWR cache — no full reload,
   // no refetch (composes with the instant chip toggle from PR #11).
   function applyMembership(wordId: string, collectionId: string, on: boolean) {
     applyMembershipToCache(wordId, collectionId, on);
+  }
+
+  // Start studying a not-yet-studied collection member. Optimistic: flip the
+  // row's flag immediately, persist in the background, revert on failure.
+  async function adoptWord(wordId: string) {
+    applyWordAdoptedToCache(wordId);
+    revalidateStats();
+    try {
+      await jsonFetch(`/api/words/${wordId}/adopt`, { method: "POST" });
+    } catch {
+      // The word stays visible (it's a collection member); refetch the truth.
+      await mutateAfterWordChange();
+    }
   }
 
   // word id -> set of its collection ids (from the flat membership list)
@@ -62,29 +96,13 @@ export default function LibraryPage() {
     return m;
   }, [memberships]);
 
-  const shown = useMemo(() => {
-    if (!words) return [];
-    const needle = q.trim().toLowerCase();
-    return words.filter((w) => {
-      if (filter === "weak" && !isWeak(w)) return false;
-      if (filter !== "all" && filter !== "weak" && w.stage !== filter)
-        return false;
-      if (collectionFilter && !memberMap.get(w.id)?.has(collectionFilter))
-        return false;
-      if (!needle) return true;
-      return (
-        w.word.toLowerCase().includes(needle) ||
-        w.vi_meaning.toLowerCase().includes(needle) ||
-        w.tags.some((t) => t.toLowerCase().includes(needle))
-      );
-    });
-  }, [words, q, filter, collectionFilter, memberMap]);
+  const selectedCollection = collections.find((c) => c.id === collectionFilter);
 
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-extrabold">Library</h1>
-        <span className="muted text-sm">{words?.length ?? 0} words</span>
+        <span className="muted text-sm">{total} words</span>
       </div>
 
       <input
@@ -130,27 +148,40 @@ export default function LibraryPage() {
         </div>
       )}
 
+      {selectedCollection && (
+        <p className="muted text-xs">
+          Showing all words in{" "}
+          <span className="font-semibold">{selectedCollection.name}</span> —
+          words you don’t study yet have an{" "}
+          <span className="font-semibold">Add</span> button.
+        </p>
+      )}
+
       {words === null ? (
         <p className="muted">Loading…</p>
-      ) : shown.length === 0 ? (
+      ) : words.length === 0 ? (
         <p className="muted">No words match.</p>
       ) : (
         <div className="space-y-2">
-          {shown.slice(0, limit).map((w) => (
+          {words.map((w) => (
             <Row
               key={w.id}
               item={w}
               collections={collections}
               memberIds={memberMap.get(w.id) ?? EMPTY_SET}
               onToggleMembership={applyMembership}
+              onAdopt={adoptWord}
             />
           ))}
-          {shown.length > limit && (
+          {hasMore && (
             <button
               className="btn w-full"
-              onClick={() => setLimit((n) => n + PAGE)}
+              onClick={() => setSize(size + 1)}
+              disabled={loadingMore}
             >
-              Show more ({shown.length - limit} more)
+              {loadingMore
+                ? "Loading…"
+                : `Show more (${total - words.length} more)`}
             </button>
           )}
         </div>
@@ -192,13 +223,16 @@ function Row({
   collections,
   memberIds,
   onToggleMembership,
+  onAdopt,
 }: {
   item: WordListItem;
   collections: Collection[];
   memberIds: ReadonlySet<string>;
   onToggleMembership: (wordId: string, collectionId: string, on: boolean) => void;
+  onAdopt: (wordId: string) => void | Promise<void>;
 }) {
   const [open, setOpen] = useState(false);
+  const [adopting, setAdopting] = useState(false);
   // Full word (definition/examples/notes) is loaded on demand only when the row
   // is expanded — the list itself carries just the slim fields. SWR caches it, so
   // reopening is instant.
@@ -305,37 +339,66 @@ function Row({
 
   return (
     <div className="card overflow-hidden">
-      <button
-        className="w-full text-left p-4 flex items-center gap-3"
-        onClick={() => setOpen(!open)}
-      >
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2">
-            <span className="font-bold truncate">{item.word}</span>
-            {item.ipa && (
-              <span className="muted text-xs truncate">{item.ipa}</span>
-            )}
-          </div>
-          <div className="muted text-sm truncate">
-            {item.vi_meaning || "— no meaning yet —"}
-          </div>
-        </div>
-        <span
-          className="chip"
-          style={{
-            background: "transparent",
-            color: STAGE_VAR[item.stage],
-            borderColor: STAGE_VAR[item.stage],
-          }}
+      {/* Header is a flex row (not one big <button>) so the studying "+ Add"
+          control can be a real sibling <button> — nesting a button inside a
+          button is invalid HTML. The word/meaning area is the expand trigger. */}
+      <div className="p-4 flex items-center gap-3">
+        <button
+          className="flex-1 min-w-0 text-left flex items-center gap-3"
+          onClick={() => setOpen(!open)}
+          aria-expanded={open}
         >
-          {STAGE_LABEL[item.stage]}
-        </span>
-        {item.times_seen > 0 && (
-          <span className="muted text-xs w-10 text-right">
-            {Math.round(acc * 100)}%
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center gap-2">
+              <span className="font-bold truncate">{item.word}</span>
+              {item.ipa && (
+                <span className="muted text-xs truncate">{item.ipa}</span>
+              )}
+            </div>
+            <div className="muted text-sm truncate">
+              {item.vi_meaning || "— no meaning yet —"}
+            </div>
+          </div>
+          <span
+            className="chip"
+            style={{
+              background: "transparent",
+              color: STAGE_VAR[item.stage],
+              borderColor: STAGE_VAR[item.stage],
+            }}
+          >
+            {STAGE_LABEL[item.stage]}
           </span>
+          {item.studying && item.times_seen > 0 && (
+            <span className="muted text-xs w-10 text-right">
+              {Math.round(acc * 100)}%
+            </span>
+          )}
+        </button>
+        {!item.studying && (
+          // A collection member the user does not study yet — offer to add it.
+          <button
+            type="button"
+            aria-label={`Add ${item.word} to my studying`}
+            disabled={adopting}
+            onClick={() => {
+              setAdopting(true);
+              Promise.resolve(onAdopt(item.id)).finally(() =>
+                setAdopting(false),
+              );
+            }}
+            className="px-2.5 py-1 rounded-full text-sm font-semibold border transition-colors whitespace-nowrap"
+            style={{
+              background: "var(--accent)",
+              borderColor: "var(--accent)",
+              color: "#fff",
+              opacity: adopting ? 0.6 : 1,
+            }}
+          >
+            {adopting ? "Adding…" : "+ Add"}
+          </button>
         )}
-      </button>
+      </div>
 
       {open && (
         <div className="px-4 pb-4 space-y-3 border-t pt-3" style={{ borderColor: "var(--line)" }}>

@@ -8,12 +8,22 @@ import { clozeFromSentence, saveHarvest } from "@/lib/harvest";
 
 export const GET = withUser(wordsQuerySchema, async ({ userId, input }) => {
   const store = getStore().forUser(userId);
-  // ?fields=list -> slim rows for the Library list view (no heavy text columns).
-  // The full word (definition/examples/notes) is fetched per-id on demand.
+  // ?fields=list -> one slim, server-filtered, server-paginated page for the
+  // Library list (no heavy text columns; the full word is fetched per-id on
+  // demand). Search (q), stage/weak filter and a collection filter all compose
+  // in SQL and page together, so a collection shows ALL its members — studied
+  // and not-yet-studied — never a short list that contradicts its count.
   if (input.fields === "list") {
-    const words = await store.listLite();
-    words.sort((a, b) => b.created_at - a.created_at);
-    return { words };
+    const limit = input.limit ?? 60;
+    const offset = input.offset ?? 0;
+    const { words, total } = await store.listPage({
+      q: input.q,
+      stage: input.stage,
+      collection: input.collection,
+      limit,
+      offset,
+    });
+    return { words, total, limit, offset };
   }
   const words = await store.all();
   // newest first

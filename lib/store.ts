@@ -80,6 +80,17 @@ export interface ScopedStore {
   /** Like `all()` but returns only the slim fields the Library list view needs
    *  (see WordListItem) — skips the heavy text columns so the payload stays small. */
   listLite(): Promise<WordListItem[]>;
+  /** Server-side paginated + filtered slice for the Library list. Composes a
+   *  search term, a stage/weak filter and a collection filter, applies them in
+   *  SQL, and returns one page plus the total row count for that filter. When a
+   *  collection is selected the page includes members the user does NOT yet
+   *  study (studying=false, stage `new`) so the count and the list agree. */
+  listPage(opts: ListPageOpts): Promise<ListPage>;
+  /** Start studying one visible word (public catalog or the caller's own) —
+   *  creates its `user_words` row (stage `new`) if absent. Copies no content.
+   *  Idempotent; returns false when the word is missing or not visible (never
+   *  leaks another user's private word). Per-word twin of adoptCollection(). */
+  adoptWord(wordId: string): Promise<boolean>;
   /** A single visible content word (public catalog or this user's own), hydrated
    *  with this user's progress (defaults to stage `new` if not yet studied). */
   get(id: string): Promise<Word | undefined>;
@@ -165,6 +176,24 @@ export interface Store {
 
 export type NewWord = Partial<Word> &
   Pick<Word, "word"> & { source?: Word["source"] };
+
+/** The Library list filter, as the store consumes it (route validates it first). */
+export interface ListPageOpts {
+  /** Free-text needle matched against word / vi_meaning / tags (case-insensitive). */
+  q?: string;
+  /** "all" (default), "weak" (recent-accuracy heuristic), or a specific Stage. */
+  stage?: "all" | "weak" | Word["stage"];
+  /** Restrict to one visible collection's members (studied + not-yet-studied). */
+  collection?: string;
+  limit: number; // page size (rows)
+  offset: number; // rows to skip
+}
+
+/** One filtered page plus the total count for the whole filter. */
+export interface ListPage {
+  words: WordListItem[];
+  total: number;
+}
 
 export function normalizeWord(w: string): string {
   return w.trim().toLowerCase();
@@ -292,6 +321,21 @@ const W_CONTENT = CONTENT_COLS.map((c) => `w."${c}"`).join(", ") + ", w.owner_id
 const W_PROGRESS =
   "uw.stage AS p_stage, uw.times_seen AS p_times, uw.recent_results AS p_recent, uw.last_seen_at AS p_last";
 
+// SQL mirror of isWeak() in lib/ui.ts: a studied word is "weak" when it has at
+// least one recent result AND (its recent accuracy < 0.6 OR its last result was
+// incorrect). NULL-safe: an unstudied collection member (no user_words row) has
+// recent_results NULL → never weak. Keep this in lockstep with lib/ui isWeak;
+// tests/library-list.test.ts cross-checks the two.
+const WEAK_SQL = `(
+  uw.recent_results IS NOT NULL
+  AND json_array_length(uw.recent_results) > 0
+  AND (
+    (SELECT AVG(CASE value WHEN 'correct' THEN 1.0 WHEN 'partial' THEN 0.5 ELSE 0 END)
+       FROM json_each(uw.recent_results)) < 0.6
+    OR json_extract(uw.recent_results, '$[' || (json_array_length(uw.recent_results) - 1) || ']') = 'incorrect'
+  )
+)`;
+
 class SqliteStore implements Store {
   private db: any = null;
   private ready: Promise<void> | null = null;
@@ -371,7 +415,101 @@ class SqliteStore implements Store {
       times_seen: Number(r.p_times || 0),
       recent_results: jsonArr(r.p_recent) as WordListItem["recent_results"],
       created_at: Number(r.created_at || Date.now()),
+      studying: true, // listLite is the user's studied words only
     }));
+  }
+
+  async listPage(userId: string, opts: ListPageOpts): Promise<ListPage> {
+    await this.connect();
+    const limit = Math.max(1, Math.floor(opts.limit));
+    const offset = Math.max(0, Math.floor(opts.offset));
+    const collectionId = opts.collection;
+
+    // A collection filter widens the source to the collection's members (studied
+    // + not-yet-studied), so a public pack shows every word its count promises.
+    // No filter keeps the classic "words I study" list. Same WHERE feeds both the
+    // COUNT and the page so the total and the slice can never disagree.
+    let from: string;
+    const whereArgs: unknown[] = [];
+    if (collectionId) {
+      if (!(await this.collectionVisibleTo(userId, collectionId)))
+        return { words: [], total: 0 };
+      from = `FROM word_collections wc
+                JOIN words w ON w.id = wc.word_id
+                LEFT JOIN user_words uw ON uw.word_id = w.id AND uw.user_id = ?
+               WHERE wc.collection_id = ?`;
+      whereArgs.push(userId, collectionId);
+    } else {
+      from = `FROM user_words uw
+                JOIN words w ON w.id = uw.word_id
+               WHERE uw.user_id = ?`;
+      whereArgs.push(userId);
+    }
+
+    // Stage filter: an unstudied member has no user_words row, so treat a missing
+    // stage as `new` (COALESCE) to match its hydrated value.
+    const stage = opts.stage ?? "all";
+    if (stage === "weak") {
+      from += ` AND ${WEAK_SQL}`;
+    } else if (stage !== "all") {
+      from += ` AND COALESCE(uw.stage, 'new') = ?`;
+      whereArgs.push(stage);
+    }
+
+    // Search: word / meaning / tags (tags is a JSON array string — a LIKE over it
+    // matches any tag containing the needle, mirroring the old client behaviour).
+    const needle = (opts.q ?? "").trim().toLowerCase();
+    if (needle) {
+      from += ` AND (lower(w.word) LIKE ? OR lower(w.vi_meaning) LIKE ? OR lower(w.tags) LIKE ?)`;
+      const like = `%${needle}%`;
+      whereArgs.push(like, like, like);
+    }
+
+    const countRs = await this.db.execute({
+      sql: `SELECT COUNT(*) AS c ${from}`,
+      args: whereArgs,
+    });
+    const total = Number(countRs.rows[0]?.c ?? 0);
+    if (offset >= total) return { words: [], total };
+
+    const rs = await this.db.execute({
+      sql: `SELECT w."id", w."word", w."ipa", w."vi_meaning", w."tags",
+                   w."created_at", ${W_PROGRESS},
+                   (uw.word_id IS NOT NULL) AS studying
+              ${from}
+             ORDER BY w.created_at DESC
+             LIMIT ? OFFSET ?`,
+      args: [...whereArgs, limit, offset],
+    });
+    const words = rs.rows.map((r: Record<string, unknown>) => ({
+      id: str(r.id),
+      word: str(r.word),
+      ipa: str(r.ipa),
+      vi_meaning: str(r.vi_meaning),
+      tags: jsonArr(strOrU(r.tags)),
+      stage: (r.p_stage != null ? String(r.p_stage) : "new") as WordListItem["stage"],
+      times_seen: r.p_times != null ? Number(r.p_times) : 0,
+      recent_results: jsonArr(strOrU(r.p_recent)) as WordListItem["recent_results"],
+      created_at: Number(r.created_at || Date.now()),
+      studying: Number(r.studying) === 1,
+    }));
+    return { words, total };
+  }
+
+  async adoptWord(userId: string, wordId: string): Promise<boolean> {
+    await this.connect();
+    // Visible = public catalog (__system__) or the caller's own word. Never let a
+    // caller create progress on another user's private word by guessing its id.
+    const owner = await this.ownerOf(wordId);
+    if (owner === undefined) return false;
+    if (owner !== SYSTEM_OWNER && owner !== userId) return false;
+    await this.db.execute({
+      sql: `INSERT OR IGNORE INTO user_words
+             (user_id, word_id, stage, times_seen, recent_results, last_seen_at, added_at)
+             VALUES (?,?, 'new', 0, '[]', NULL, ?)`,
+      args: [userId, wordId, Date.now()],
+    });
+    return true;
   }
 
   async get(userId: string, id: string): Promise<Word | undefined> {
@@ -1176,6 +1314,8 @@ function makeScoped(raw: any, userId: string): ScopedStore {
   return {
     all: () => raw.all(userId),
     listLite: () => raw.listLite(userId),
+    listPage: (opts) => raw.listPage(userId, opts),
+    adoptWord: (wordId) => raw.adoptWord(userId, wordId),
     get: (id) => raw.get(userId, id),
     findByWord: (word) => raw.findByWord(userId, word),
     add: (word) => raw.add(userId, word),
@@ -1311,7 +1451,37 @@ class SheetStore implements Store {
       times_seen: w.times_seen,
       recent_results: w.recent_results,
       created_at: w.created_at,
+      studying: true, // single-user backend: every word is studied
     }));
+  }
+  // Single-user backend: filter/sort/slice the in-memory list. Mirrors the SQL
+  // path's semantics so both backends behave the same. All words are "studied".
+  async listPage(userId: string, opts: ListPageOpts): Promise<ListPage> {
+    let items = await this.listLite(userId);
+    if (opts.collection) {
+      const memberIds = new Set(await this.wordIdsInCollection(userId, opts.collection));
+      items = items.filter((w) => memberIds.has(w.id));
+    }
+    const stage = opts.stage ?? "all";
+    if (stage === "weak") items = items.filter((w) => isWeakRecent(w.recent_results));
+    else if (stage !== "all") items = items.filter((w) => w.stage === stage);
+    const needle = (opts.q ?? "").trim().toLowerCase();
+    if (needle)
+      items = items.filter(
+        (w) =>
+          w.word.toLowerCase().includes(needle) ||
+          w.vi_meaning.toLowerCase().includes(needle) ||
+          w.tags.some((t) => t.toLowerCase().includes(needle)),
+      );
+    items.sort((a, b) => b.created_at - a.created_at);
+    const total = items.length;
+    const limit = Math.max(1, Math.floor(opts.limit));
+    const offset = Math.max(0, Math.floor(opts.offset));
+    return { words: items.slice(offset, offset + limit), total };
+  }
+  async adoptWord(userId: string, wordId: string): Promise<boolean> {
+    // Single user already "studies" every word — succeed iff the word exists.
+    return Boolean(await this.get(userId, wordId));
   }
   async get(userId: string, id: string): Promise<Word | undefined> {
     const w = (await this.load()).find((x) => x.id === id);
