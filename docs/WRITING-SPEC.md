@@ -140,6 +140,19 @@ transiently at restore time (a scratch dir with an id→file map). For **product
 shipped by `deploy`, so copy the bytes to the box transiently and run the script **inside the app
 container** against the live DB, then delete the scratch files.
 
+**Even the "committed sample" is best stored inline.** A `/writing/task1/*.svg` `image_path` relies on
+Next serving the file from `public/` — but in the deployed build that route falls through to the app
+HTML shell (the `<img>` receives `text/html`, so it's broken). The `/public` redirect branch in the
+image route is therefore unreliable; store every chart inline (`data:` URL) and let the image route
+serve the bytes. Re-inline the committed sample with
+`node scripts/set-writing-image.mjs sample-task1-entertainment public/writing/task1/sample-entertainment.svg`.
+
+**Shrinking inline images (PNG → JPEG).** Self-serve uploads land as PNG, which is heavy. Convert them
+in place with `node scripts/convert-writing-images-to-jpeg.mjs` — it re-encodes every `data:image/png`
+`image_path` to JPEG (alpha flattened to white, quality 85, 4:4:4), touching only `image_path`. It's
+idempotent (skips non-PNG) and needs `sharp` (ships with Next; present in the app container). Add
+`--dry-run` to preview, `--id`/`--task` to scope.
+
 The vision read lives in the ingest skill (which Claude runs) → **zero app-runtime vision cost** and the
 provider chain (Gemini→Groq→OpenAI, all text) is unchanged. A fully self-serve, no-Claude ingest would add a
 vision API call here later — clean seam, not needed now.
