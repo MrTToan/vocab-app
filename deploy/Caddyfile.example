@@ -9,6 +9,10 @@
 
 lexi.example.com {
     encode zstd gzip
+    # Reject oversized request bodies at the edge (the app's inputs are all small).
+    request_body {
+        max_size 2MB
+    }
     reverse_proxy localhost:3001
 }
 

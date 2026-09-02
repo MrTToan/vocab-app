@@ -35,5 +35,13 @@ COPY --from=builder /app/content ./content
 # The SQLite DB lives here; mounted as a volume at runtime so data persists
 # across container restarts/rebuilds.
 RUN mkdir -p /app/.data
+# Run as the unprivileged `node` user (uid/gid 1000) that the base image ships.
+# Everything under /app (including .data, so the DB + backups are writable even
+# when nothing is mounted) is handed to it. On the host, the bind-mounted data
+# dir must be owned by uid 1000 — see deploy/SERVER-CHECKLIST.md.
+RUN chown -R node:node /app
+USER node
 EXPOSE 3000
-CMD ["npm", "start"]
+# Start Next directly (no `npm` parent process): PID 1 is node itself, so
+# SIGTERM from `docker stop` reaches the server and shutdown is clean.
+CMD ["node", "node_modules/next/dist/bin/next", "start"]

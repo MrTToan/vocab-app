@@ -1,4 +1,8 @@
 lexi.vnfriends.com {
     encode zstd gzip
+    # Reject oversized uploads before they reach the app (paste/import bodies are small).
+    request_body {
+        max_size 2MB
+    }
     reverse_proxy app:3000
 }
