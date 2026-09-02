@@ -51,3 +51,14 @@ export async function upsertUser(input: {
   });
   return id;
 }
+
+/** A user's stored email (lowercased) by id, or null. Used by the owner check. */
+export async function getUserEmail(userId: string): Promise<string | null> {
+  const c = await connect();
+  const rs = await c.execute({
+    sql: "SELECT email FROM users WHERE id = ? LIMIT 1",
+    args: [userId],
+  });
+  const email = rs.rows[0]?.email;
+  return email ? String(email).toLowerCase() : null;
+}

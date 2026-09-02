@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
+import { withUser } from "@/lib/api";
+import { importPasteSchema } from "@/lib/api-schemas";
 import { getStore, normalizeWord, type NewWord } from "@/lib/store";
-import { currentUserId } from "@/lib/auth/user";
 import { reserveQuota, QuotaError } from "@/lib/auth/quota";
 import { enrichWord, hasProvider } from "@/lib/llm";
 import { clozeFromSentence, saveHarvest } from "@/lib/harvest";
@@ -22,15 +23,7 @@ import { clozeFromSentence, saveHarvest } from "@/lib/harvest";
  *     quotaExhausted: boolean           // daily cap hit; client should stop
  *     quotaMessage?: string }
  */
-export async function POST(req: Request) {
-  const { words } = (await req.json()) as { words?: string[] };
-  if (!Array.isArray(words) || words.length === 0) {
-    return NextResponse.json({ error: "words is required" }, { status: 400 });
-  }
-
-  const userId = await currentUserId();
-  if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
-
+export const POST = withUser(importPasteSchema, async ({ userId, input }) => {
   if (!hasProvider("enrich")) {
     return NextResponse.json(
       { error: "Enrichment is unavailable (no API key configured)." },
@@ -40,7 +33,7 @@ export async function POST(req: Request) {
 
   const store = getStore().forUser(userId);
   // Membership check in SQL over just the pasted words — no library load.
-  const have = await store.existingWords(words);
+  const have = await store.existingWords(input.words);
 
   const added: { word: string; corrected?: string }[] = [];
   const skipped: string[] = [];
@@ -48,7 +41,7 @@ export async function POST(req: Request) {
   let quotaExhausted = false;
   let quotaMessage: string | undefined;
 
-  for (const original of words) {
+  for (const original of input.words) {
     const term = (original ?? "").trim();
     if (!term) continue;
     if (have.has(normalizeWord(term))) {
@@ -122,4 +115,4 @@ export async function POST(req: Request) {
   }
 
   return NextResponse.json({ added, skipped, failed, quotaExhausted, quotaMessage });
-}
+});

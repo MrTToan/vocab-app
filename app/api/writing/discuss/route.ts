@@ -1,11 +1,12 @@
 import { NextResponse } from "next/server";
+import { withUser } from "@/lib/api";
+import { discussPostSchema, discussQuerySchema } from "@/lib/api-schemas";
 import { hasProvider } from "@/lib/providers";
 import { writingStore } from "@/lib/writing/store";
 import { discussCard } from "@/lib/writing/discuss";
-import { currentUserId } from "@/lib/auth/user";
 import { reserveQuota, isRateLimitError } from "@/lib/auth/quota";
 
-/** Longest question a student can send in one turn. */
+/** Longest question a student can send in one turn (also capped in the schema). */
 export const MAX_MESSAGE_CHARS = 1000;
 
 /**
@@ -16,21 +17,15 @@ export const MAX_MESSAGE_CHARS = 1000;
  * the stored submission, so the client only sends which card + the question.
  * POST is metered (QUOTA_DISCUSS + burst window) and the message is length-capped.
  */
-export async function GET(req: Request) {
-  const userId = await currentUserId();
-  if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
-  const submissionId = new URL(req.url).searchParams.get("submissionId") ?? "";
-  if (!submissionId) return NextResponse.json({ error: "submissionId required" }, { status: 400 });
+export const GET = withUser(discussQuerySchema, async ({ userId, input }) => {
   // Verify the submission belongs to the caller before exposing its thread.
-  const owned = await writingStore.getSubmission(userId, submissionId);
+  const owned = await writingStore.getSubmission(userId, input.submissionId);
   if (!owned) return NextResponse.json({ error: "submission not found" }, { status: 404 });
-  const messages = await writingStore.listDiscussion(submissionId);
+  const messages = await writingStore.listDiscussion(input.submissionId);
   return NextResponse.json({ messages });
-}
+});
 
-export async function POST(req: Request) {
-  const userId = await currentUserId();
-  if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+export const POST = withUser(discussPostSchema, async ({ userId, input }) => {
   if (!hasProvider("discuss-writing")) {
     return NextResponse.json(
       { error: "AI discussion is not available right now." },
@@ -38,23 +33,10 @@ export async function POST(req: Request) {
     );
   }
 
-  const { submissionId, cardKey, message } = (await req.json()) as {
-    submissionId?: string;
-    cardKey?: string;
-    message?: string;
-  };
-  const question = (message ?? "").trim();
-  if (!submissionId || !cardKey) {
-    return NextResponse.json({ error: "submissionId and cardKey required" }, { status: 400 });
-  }
+  const { submissionId, cardKey } = input;
+  const question = (input.message ?? "").trim();
   if (question.length < 2) {
     return NextResponse.json({ error: "Please type a question." }, { status: 400 });
-  }
-  if (question.length > MAX_MESSAGE_CHARS) {
-    return NextResponse.json(
-      { error: `Please keep your question under ${MAX_MESSAGE_CHARS} characters.` },
-      { status: 400 },
-    );
   }
 
   const submission = await writingStore.getSubmission(userId, submissionId);
@@ -83,4 +65,4 @@ export async function POST(req: Request) {
       { status: 502 },
     );
   }
-}
+});

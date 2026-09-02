@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
+import { withUser } from "@/lib/api";
+import { extractChartSchema } from "@/lib/api-schemas";
 import { hasProvider } from "@/lib/providers";
 import { extractChartData } from "@/lib/writing/extract";
-import { currentUserId } from "@/lib/auth/user";
 import { reserveQuota, isRateLimitError } from "@/lib/auth/quota";
 
 /** Image types the vision providers accept; anything else is rejected up front. */
@@ -38,31 +39,33 @@ export function imageProblem(image: unknown): string | null {
  * (Add-a-question flow) shows the result for the user to confirm/edit before saving.
  * Signed-in + metered (QUOTA_EXTRACT_CHART) + image type/size validated.
  */
-export async function POST(req: Request) {
-  const userId = await currentUserId();
-  if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
-  if (!hasProvider("extract-chart")) {
-    return NextResponse.json(
-      { error: "AI chart reading is not available right now — describe the chart yourself." },
-      { status: 400 },
-    );
-  }
-
-  const { image } = (await req.json()) as { image?: string };
-  const problem = imageProblem(image);
-  if (problem) return NextResponse.json({ error: problem }, { status: 400 });
-
-  try {
-    await reserveQuota(userId, "extract-chart");
-    const chart_data = await extractChartData(image as string);
-    return NextResponse.json({ chart_data });
-  } catch (err: unknown) {
-    if (isRateLimitError(err)) {
-      return NextResponse.json({ error: err.message }, { status: 429 });
+export const POST = withUser(
+  extractChartSchema,
+  async ({ userId, input }) => {
+    if (!hasProvider("extract-chart")) {
+      return NextResponse.json(
+        { error: "AI chart reading is not available right now — describe the chart yourself." },
+        { status: 400 },
+      );
     }
-    return NextResponse.json(
-      { error: `Could not read the chart: ${err instanceof Error ? err.message : String(err)}` },
-      { status: 502 },
-    );
-  }
-}
+
+    const problem = imageProblem(input.image);
+    if (problem) return NextResponse.json({ error: problem }, { status: 400 });
+
+    try {
+      await reserveQuota(userId, "extract-chart");
+      const chart_data = await extractChartData(input.image as string);
+      return NextResponse.json({ chart_data });
+    } catch (err: unknown) {
+      if (isRateLimitError(err)) {
+        return NextResponse.json({ error: err.message }, { status: 429 });
+      }
+      return NextResponse.json(
+        { error: `Could not read the chart: ${err instanceof Error ? err.message : String(err)}` },
+        { status: 502 },
+      );
+    }
+  },
+  // The image is a base64 data URL of up to 2 MB decoded (~2.7 MB encoded).
+  { maxBytes: 4 * 1024 * 1024 },
+);

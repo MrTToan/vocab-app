@@ -25,12 +25,43 @@ export const OWNER_EMAIL = "vothientoan999@gmail.com";
 // own user id instead. See lib/store.ts for how this gates editing.
 export const SYSTEM_OWNER = "__system__";
 
-/** The owner/admin — the single privileged account (bypasses quota, edits the
- *  shared catalog). Today that is the pre-auth owner (`local-user`), whose Google
- *  sign-in reclaims the same id. */
-export function isOwner(userId: string): boolean {
-  return userId === DEV_USER_ID;
+/** The comma-separated owner allow-list (env OWNER_EMAILS, defaulting to the
+ *  legacy single OWNER_EMAIL), normalized to lowercase. */
+export function ownerEmails(): string[] {
+  return (process.env.OWNER_EMAILS ?? OWNER_EMAIL)
+    .split(",")
+    .map((e) => e.trim().toLowerCase())
+    .filter(Boolean);
 }
+
+// User ids we have already resolved (via their users-row email) to be owners.
+// Populated by resolveIsOwner() — the API wrapper calls it once per request
+// BEFORE any handler/store code runs, so the sync isOwner() below stays
+// consistent for stores that only receive a userId.
+const knownOwnerIds = new Set<string>();
+
+/** The owner/admin — the privileged account(s) (bypass quota, edit the shared
+ *  catalog): the pre-auth owner (`local-user`, whose Google sign-in reclaims
+ *  the same id) or any account whose email is in OWNER_EMAILS (once resolved
+ *  through resolveIsOwner for the current request). */
+export function isOwner(userId: string): boolean {
+  return userId === DEV_USER_ID || knownOwnerIds.has(userId);
+}
+
+/**
+ * Is `userId` the site owner? The legacy `local-user` id short-circuits;
+ * otherwise the user's row email is looked up ONCE per request (React cache())
+ * and compared to OWNER_EMAILS. A positive result is memoized process-wide so
+ * the sync isOwner()/ownerIdFor()/canEdit() call sites agree within the request.
+ */
+export const resolveIsOwner = cache(async (userId: string): Promise<boolean> => {
+  if (isOwner(userId)) return true;
+  const { getUserEmail } = await import("./store");
+  const email = await getUserEmail(userId);
+  const owner = !!email && ownerEmails().includes(email);
+  if (owner) knownOwnerIds.add(userId);
+  return owner;
+});
 
 /** Which `owner_id` new content authored by this user gets. The owner authors the
  *  shared catalog (`__system__`); everyone else owns their personal content. */
