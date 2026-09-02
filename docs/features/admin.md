@@ -1,9 +1,10 @@
 # Admin portal (owner-only)
 
-The **site owner**'s portal at `/admin`, a tabbed surface with two subtabs:
-**Overview** (a read-only usage dashboard) and **Writing Questions** (manage the
-IELTS writing-question bank). The metrics view only ever surfaces counts and
-identities, never any user's vocab or writing content.
+The **site owner**'s portal at `/admin`, a tabbed surface with three subtabs:
+**Overview** (a read-only usage dashboard), **Writing Questions** (manage the
+IELTS writing-question bank) and **Feedback** (read submissions from the in-app
+feedback widget). The metrics view only ever surfaces counts and identities,
+never any user's vocab or writing content.
 
 ## Who can see it
 
@@ -56,9 +57,19 @@ drafts + published, no image bytes — each chart loads lazily from
 and visibility work end-to-end, and for the v2 adoption migration that pulled pre-existing
 user-created prompts into the bank as drafts.
 
+### Feedback
+
+A **read-only list** of every submission from the in-app floating feedback widget, **newest
+first**, with a **category filter** (Bug / Idea / Other). Each row shows the category, the 1–5
+star rating (or "—" when unset), the message, and — for triage — who sent it (email/name),
+when, and the page it was sent from. The list comes from the owner-only `GET /api/feedback`
+(`withOwner` → 403 for anyone else). See `docs/features/feedback.md` for the widget, the
+`feedback` table and the submit route.
+
 ---
 *Under the hood: `app/(app)/admin/page.tsx` → `components/admin/AdminPortal.tsx` (tab shell);
 Overview is `app/api/admin/stats/route.ts`, `lib/admin/*` (`stats.ts` computes `AdminStats`,
 `aggregate.ts` shapes daily series, `paginate.ts` pages the users list),
 `components/admin/AdminDashboard.tsx`; Writing Questions is `WritingQuestionsAdmin.tsx` +
-`app/api/admin/writing-prompts/route.ts` and the `withOwner` writing-prompt routes.*
+`app/api/admin/writing-prompts/route.ts` and the `withOwner` writing-prompt routes; Feedback is
+`components/admin/FeedbackAdmin.tsx` + the owner-only `GET /api/feedback`.*
