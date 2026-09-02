@@ -61,34 +61,47 @@ _Each message is one LLM call on your provider chain. Under the hood: `lib/writi
   data stored; scoring then checks your description against that stored data. So if you misread the chart,
   the feedback catches it — and the app never needs to "see" images while you practise.
 
-## Getting prompts in
-**In the app (easiest):** on the Writing home, hit **"＋ Add a question"** (`/writing/add`). For Task 2
-you paste the essay prompt and save. For Task 1 you paste the question and the **chart image** (paste,
-drag-drop, or pick a file); the app reads the chart **once** via the vision LLM, shows the numbers for
-you to confirm/edit, then stores everything (the image is kept inline, no files to manage). Those numbers
-are the ground truth your description is scored against. Self-serve — no Claude, no Google Docs.
-Limits: question text 10–4,000 characters, title up to 120, chart image PNG/JPEG/WebP up to 1 MB
-(Task 1 only).
+## Getting prompts in — admin-managed
+Writing questions are an **admin-managed bank**: only the **site owner/admin** can add, edit,
+delete or publish them, and this is **enforced server-side** (`POST /api/writing/prompts` and
+`PATCH`/`DELETE /api/writing/prompts/:id` are `withOwner`), not just hidden in the UI. Learners
+pick from the bank; they no longer create their own questions (the old self-serve `/writing/add`
+flow is retired and now just redirects).
+
+Admins manage everything from the admin portal's **Writing Questions** subtab (`/admin?tab=writing`):
+one combined Task 1 / Task 2 list with search + task/publish-state filters, and add / edit /
+delete / publish. For Task 1 the admin adds the **chart image** (paste, drag-drop, or pick a file);
+the app reads the chart **once** via the vision LLM, shows the numbers to confirm/edit, then stores
+everything inline (no files to manage). Those numbers are the ground truth descriptions are scored
+against. Limits: question text 10–4,000 characters, title up to 120, chart image PNG/JPEG/WebP up
+to 1 MB (Task 1 only). See `docs/features/admin.md` for the subtab UI.
 
 ### Who sees a question
 Prompts have an **owner and a visibility**, exactly like collections:
-- The **site owner's** questions (in-app or ingested) go into the **public bank** everyone practises from
-  (`owner_id = __system__`, `visibility = public`). Questions from before this existed are treated the same.
-- **Anyone else's** question is **private** — only its author can see it, pick it, score against it or
-  delete it (it shows a 🔒 *Private* tag in the question list). The site owner can **Publish** it into the
-  shared bank (and later **Unpublish**); nobody else can. Deleting a question keeps your past feedback on it.
-- Every prompt read is filtered to *public or mine*, so scoring/discussing against someone else's
-  private prompt by id is not possible.
+- The bank is owned by the shared catalog (`owner_id = __system__`). A **published** question
+  (`visibility = public`) is what every learner practises from; a **draft** (`visibility = private`)
+  is hidden from learners and visible only to the admin, who publishes it deliberately after review.
+- Every learner prompt read is filtered to *public or the admin's own bank*, so scoring/discussing
+  against an unpublished draft by id is not possible for a learner.
+- Deleting a question keeps everyone's past feedback on it.
 
-**Bulk / legacy — from Google Docs:** you can instead keep **two Google Docs** — one for Task 1, one for
-Task 2 — with each question **numbered `Question 1`, `Question 2`, …** (Task 1 questions include the chart
-as a pasted screenshot). The doc links live in `content/writing/sources.json`. Ask Claude to run the
-**`/ingest-writing-prompts`** skill and it reads the docs on request, indexing only the new numbers (so
+**Adoption migration (schema v2):** questions that regular users had created before this became
+admin-only were **adopted into the bank as drafts** — their `owner_id` became `__system__` and
+their `visibility` was forced to `private` (never auto-published), with the original author kept in
+`user_id`. No row was deleted; an admin publishes each after review.
+
+**Bulk / legacy — from Google Docs:** the admin can instead keep **two Google Docs** — one for Task 1,
+one for Task 2 — with each question **numbered `Question 1`, `Question 2`, …** (Task 1 questions include
+the chart as a pasted screenshot). The doc links live in `content/writing/sources.json`. Ask Claude to run
+the **`/ingest-writing-prompts`** skill and it reads the docs on request, indexing only the new numbers (so
 re-running never duplicates); for Task 1 it reads each chart once and asks you to confirm the figures.
 A few sample prompts are seeded so you can start immediately.
 
 ---
 *Under the hood: `lib/writing/*`, tables `writing_prompts` (with `owner_id`/`visibility`) /
 `writing_submissions` / `writing_corrections`, API `app/api/writing/*` — the prompt list omits image bytes
-(`has_image`); the selected chart loads from `GET /api/writing/prompts/:id/image` (browser-cached, private);
-`PATCH`/`DELETE /api/writing/prompts/:id` publish/remove. UI `components/writing/*`. Design: `docs/WRITING-SPEC.md`.*
+(`has_image`); the selected chart loads from `GET /api/writing/prompts/:id/image` (browser-cached, private).
+Admin management: owner-only `GET /api/admin/writing-prompts` (whole bank) + `withOwner`
+`POST /api/writing/prompts` (create) and `PATCH`/`DELETE /api/writing/prompts/:id` (edit content +
+publish / remove); UI `components/admin/WritingQuestionsAdmin.tsx`, learner UI `components/writing/*`.
+Design: `docs/WRITING-SPEC.md`.*

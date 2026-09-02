@@ -1,7 +1,9 @@
 # Admin portal (owner-only)
 
-A read-only usage dashboard for the **site owner** at `/admin`. It's a metrics view, not a data
-browser — it only ever surfaces counts and identities, never any user's vocab or writing content.
+The **site owner**'s portal at `/admin`, a tabbed surface with two subtabs:
+**Overview** (a read-only usage dashboard) and **Writing Questions** (manage the
+IELTS writing-question bank). The metrics view only ever surfaces counts and
+identities, never any user's vocab or writing content.
 
 ## Who can see it
 
@@ -12,6 +14,8 @@ is gated server-side (`force-dynamic`), and `GET /api/admin/stats` re-checks the
 — defence in depth.
 
 ## What it shows
+
+### Overview (metrics)
 
 Everything is aggregated **in SQL** over the same libSQL DB (a private read-only client); the
 window for time series is the last **30 days**.
@@ -29,7 +33,32 @@ window for time series is the last **30 days**.
 
 > There is no standalone "Progress" chart — mastery appears only as the *Mastered* overview tile.
 
+### Writing Questions
+
+The **admin-managed bank** for IELTS Task 1 & Task 2 questions. Managing questions (create,
+edit, delete, publish) is **admin-only and server-enforced** — regular learners can no longer
+add or delete questions; the routes `POST /api/writing/prompts` and
+`PATCH`/`DELETE /api/writing/prompts/:id` are all `withOwner`.
+
+- **One combined list** of both tasks, with **keyword search** (title + question text), a
+  **task filter** (Task 1 / Task 2), and a **publish-state filter** (Published / Draft).
+- **Add** a question — choose Task 1 or Task 2, set the title, question text, optional model/
+  sample answer, publish state, and (Task 1) a chart image whose numbers are read once by the
+  vision LLM for grading ground truth.
+- **Edit** any field of an existing question, including replacing/removing the chart image.
+- **Publish / Unpublish** — reuses the prompt **`visibility`** concept (`public` = learners see
+  it, `private` = a hidden draft). A newly added question defaults to Published.
+- **Delete** — two-tap confirm; past learner submissions against it are kept.
+
+The list comes from the owner-only `GET /api/admin/writing-prompts` (every prompt, both tasks,
+drafts + published, no image bytes — each chart loads lazily from
+`GET /api/writing/prompts/:id/image`). See `docs/features/writing-feedback.md` for how the bank
+and visibility work end-to-end, and for the v2 adoption migration that pulled pre-existing
+user-created prompts into the bank as drafts.
+
 ---
-*Under the hood: `app/(app)/admin/page.tsx`, `app/api/admin/stats/route.ts`, `lib/admin/*`
-(`stats.ts` computes `AdminStats`, `aggregate.ts` shapes daily series, `paginate.ts` pages the
-users list), `components/admin/AdminDashboard.tsx`.*
+*Under the hood: `app/(app)/admin/page.tsx` → `components/admin/AdminPortal.tsx` (tab shell);
+Overview is `app/api/admin/stats/route.ts`, `lib/admin/*` (`stats.ts` computes `AdminStats`,
+`aggregate.ts` shapes daily series, `paginate.ts` pages the users list),
+`components/admin/AdminDashboard.tsx`; Writing Questions is `WritingQuestionsAdmin.tsx` +
+`app/api/admin/writing-prompts/route.ts` and the `withOwner` writing-prompt routes.*

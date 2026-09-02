@@ -111,8 +111,8 @@ describe("wrapper gates", () => {
     ["cross-origin POST extract-chart -> 403", () => chart.POST(crossOrigin("http://t/api/writing/extract-chart")), 403],
     ["oversized POST submit -> 413", () => submit.POST(oversized("http://t/api/writing/submit")), 413],
     ["oversized POST discuss -> 413", () => discuss.POST(oversized("http://t/api/writing/discuss")), 413],
-    ["oversized PATCH prompts/[id] (owner) -> 413", async () => { caller.id = "local-user"; return promptById.PATCH(oversized("http://t/p/x", "PATCH"), ctx("x")); }, 413],
-    ["oversized POST prompts (>2 MB) -> 413", () => prompts.POST(oversized("http://t/api/writing/prompts", "POST", 2 * 1024 * 1024 + 64)), 413],
+    ["oversized PATCH prompts/[id] (owner, >2 MB) -> 413", async () => { caller.id = "local-user"; return promptById.PATCH(oversized("http://t/p/x", "PATCH", 2 * 1024 * 1024 + 64), ctx("x")); }, 413],
+    ["oversized POST prompts (owner, >2 MB) -> 413", async () => { caller.id = "local-user"; return prompts.POST(oversized("http://t/api/writing/prompts", "POST", 2 * 1024 * 1024 + 64)); }, 413],
     ["oversized POST extract-chart (>4 MB) -> 413", () => chart.POST(oversized("http://t/api/writing/extract-chart", "POST", 4 * 1024 * 1024 + 64)), 413],
   ])("%s", async (_n, call, status) => {
     expect((await call()).status).toBe(status);
@@ -120,8 +120,8 @@ describe("wrapper gates", () => {
 
   it.each([
     ["GET prompts with a stray param", () => prompts.GET(get("http://t/api/writing/prompts?evil=1"))],
-    ["POST prompts without prompt_text", () => prompts.POST(post("http://t/api/writing/prompts", { task_type: "task2" }))],
-    ["POST prompts with a 4,001-char text", () => prompts.POST(post("http://t/api/writing/prompts", { task_type: "task2", prompt_text: "x".repeat(4001) }))],
+    ["POST prompts without prompt_text (owner)", async () => { caller.id = "local-user"; return prompts.POST(post("http://t/api/writing/prompts", { task_type: "task2" })); }],
+    ["POST prompts with a 4,001-char text (owner)", async () => { caller.id = "local-user"; return prompts.POST(post("http://t/api/writing/prompts", { task_type: "task2", prompt_text: "x".repeat(4001) })); }],
     ["PATCH prompts/[id] with a bad visibility (owner)", async () => { caller.id = "local-user"; return promptById.PATCH(patch("http://t/p/x", { visibility: "sneaky" }), ctx("x")); }],
     ["GET submission without promptId", () => submission.GET(get("http://t/api/writing/submission"))],
     ["GET discuss without submissionId", () => discuss.GET(get("http://t/api/writing/discuss"))],
@@ -139,6 +139,14 @@ describe("wrapper gates", () => {
     expect(res.status).toBe(403);
     expect(await res.json()).toEqual({ error: "forbidden" });
   });
+
+  it("writing questions are admin-only: a non-admin cannot create or delete", async () => {
+    caller.id = "user-a";
+    const created = await prompts.POST(post("http://t/api/writing/prompts", { task_type: "task2", prompt_text: "Discuss both views." }));
+    expect(created.status).toBe(403);
+    const deleted = await promptById.DELETE(del("http://t/p/x"), ctx("x"));
+    expect(deleted.status).toBe(403);
+  });
 });
 
 describe("happy paths (temp SQLite)", () => {
@@ -146,21 +154,25 @@ describe("happy paths (temp SQLite)", () => {
   let imagePromptId: string;
   let submissionId: string;
 
-  it("POST prompts creates a private prompt for a normal user; GET lists it", async () => {
+  it("the admin creates a published bank prompt; GET lists it", async () => {
+    caller.id = "local-user";
     const res = await prompts.POST(
       post("http://t/api/writing/prompts", { task_type: "task2", prompt_text: "Some people think X. Discuss both views." }),
     );
     expect(res.status).toBe(200);
     const { prompt } = await res.json();
     promptId = prompt.id;
-    expect(prompt.visibility).toBe("private");
-    expect(prompt.owner_id).toBe("user-a");
+    expect(prompt.visibility).toBe("public");
+    expect(prompt.owner_id).toBe("__system__");
 
+    // any signed-in learner sees the published bank prompt
+    caller.id = "user-a";
     const list = await (await prompts.GET(get("http://t/api/writing/prompts?task=task2"))).json();
     expect(list.prompts.map((p: { id: string }) => p.id)).toContain(promptId);
   });
 
-  it("a Task 1 prompt stores its chart; the image route serves the bytes", async () => {
+  it("the admin creates a Task 1 prompt; the image route serves the bytes", async () => {
+    caller.id = "local-user";
     const res = await prompts.POST(
       post("http://t/api/writing/prompts", { task_type: "task1", prompt_text: "Describe the chart below.", image: PNG }),
     );
@@ -174,11 +186,12 @@ describe("happy paths (temp SQLite)", () => {
     expect(img.headers.get("content-type")).toBe("image/png");
   });
 
-  it("the owner publishes the prompt (withOwner PATCH)", async () => {
+  it("the admin edits the prompt content (withOwner PATCH)", async () => {
     caller.id = "local-user";
-    const res = await promptById.PATCH(patch(`http://t/p/${promptId}`, { visibility: "public" }), ctx(promptId));
+    const res = await promptById.PATCH(patch(`http://t/p/${promptId}`, { prompt_text: "An UPDATED essay prompt." }), ctx(promptId));
     expect(res.status).toBe(200);
-    expect((await res.json()).prompt.visibility).toBe("public");
+    const { prompt } = await res.json();
+    expect(prompt.prompt_text).toMatch(/UPDATED/);
   });
 
   it("submit scores the essay and stores the submission", async () => {
@@ -221,8 +234,8 @@ describe("happy paths (temp SQLite)", () => {
     expect((await res.json()).submissions).toBeGreaterThanOrEqual(1);
   });
 
-  it("the author deletes their prompt", async () => {
-    caller.id = "user-a";
+  it("the admin deletes a prompt", async () => {
+    caller.id = "local-user";
     const res = await promptById.DELETE(del(`http://t/p/${imagePromptId}`), ctx(imagePromptId));
     expect(res.status).toBe(200);
     expect(await res.json()).toEqual({ ok: true });

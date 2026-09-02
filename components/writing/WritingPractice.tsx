@@ -290,7 +290,10 @@ function QuestionList({
       {prompts.map((p) => {
         const on = p.id === selectedId;
         const isPrivate = p.visibility !== "public";
-        const manage = on && (isOwner || p.can_edit);
+        // Managing writing questions is admin-only now (create/edit/delete live in
+        // the admin portal's "Writing Questions" subtab); the server routes are
+        // owner-gated too, so this is just hiding controls learners can't use.
+        const manage = on && isOwner;
         return (
           <div
             key={p.id}
@@ -333,7 +336,7 @@ function QuestionList({
                     {isPrivate ? "Publish" : "Unpublish"}
                   </button>
                 )}
-                {(isOwner || p.can_edit) && (
+                {isOwner && (
                   <button
                     className="btn text-xs !min-h-0 !px-2 !py-1"
                     style={armed === p.id ? { borderColor: "var(--bad)", color: "var(--bad)" } : undefined}

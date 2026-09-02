@@ -1,20 +1,14 @@
-import Link from "next/link";
-import AddPrompt from "@/components/writing/AddPrompt";
+import { redirect } from "next/navigation";
+import { currentUserId, resolveIsOwner } from "@/lib/auth/user";
 
-export default function AddWritingPrompt() {
-  return (
-    <div className="space-y-4">
-      <div className="flex items-center justify-between gap-3">
-        <h1 className="text-2xl font-extrabold tracking-tight">Add a writing question</h1>
-        <Link href="/writing" className="btn">
-          ← Back
-        </Link>
-      </div>
-      <p className="muted text-sm">
-        Task 2: paste the essay prompt. Task 1: paste the question and the chart image — the app reads
-        the chart once so you can confirm the numbers, then it&apos;s ready to practise.
-      </p>
-      <AddPrompt />
-    </div>
-  );
+// The self-serve "Add a question" flow has been retired: writing questions are
+// now an ADMIN-managed bank. Admins manage them from the admin portal's
+// "Writing Questions" subtab; everyone else is sent back to the writing home.
+// Kept as a redirect so old bookmarks/links don't 404.
+export const dynamic = "force-dynamic";
+
+export default async function AddWritingPromptRedirect() {
+  const userId = await currentUserId();
+  if (userId && (await resolveIsOwner(userId))) redirect("/admin?tab=writing");
+  redirect("/writing");
 }
