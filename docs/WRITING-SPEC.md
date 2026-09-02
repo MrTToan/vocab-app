@@ -119,6 +119,27 @@ The skill (`/ingest-writing-prompts` or similar) handles **both** tasks:
    `<img>`). Durable state lives only in the `.data` DB volume. The image route serves the inline
    bytes from the DB; the legacy `/public` redirect branch remains only for the committed sample.
 
+**Restoring an existing question's image (in place).** If a row already has the right
+`title`/`prompt_text`/`chart_data` but a broken/missing image (e.g. a legacy `/writing/task1/*.png`
+path wiped by a redeploy), use `scripts/set-writing-image.mjs` — it does a surgical
+`UPDATE image_path` by id and touches nothing else, so it can't clobber the question text or
+`chart_data` the way re-running `add-writing-prompt.mjs` (full `INSERT OR REPLACE`) would. It embeds
+the image inline as a durable `data:` URL and skips any id not present, so it's safe to run against a
+DB that has only a subset of the rows:
+
+```sh
+# single: node scripts/set-writing-image.mjs <id> <image-file>
+# batch:  node scripts/set-writing-image.mjs <mapping.json>   # [{ "id": "...", "image_file": "..." }]
+```
+
+**Do NOT commit the source chart bytes to git.** Durable storage is the DB (the `.data` volume,
+which persists across redeploys and is backed up nightly) — that is the whole point of storing images
+inline, and it is how every self-serve question image is already kept (DB-only, never in the repo).
+Committing binaries would only bloat the repo without adding durability. Supply the source files
+transiently at restore time (a scratch dir with an id→file map). For **production** the DB is not
+shipped by `deploy`, so copy the bytes to the box transiently and run the script **inside the app
+container** against the live DB, then delete the scratch files.
+
 The vision read lives in the ingest skill (which Claude runs) → **zero app-runtime vision cost** and the
 provider chain (Gemini→Groq→OpenAI, all text) is unchanged. A fully self-serve, no-Claude ingest would add a
 vision API call here later — clean seam, not needed now.
