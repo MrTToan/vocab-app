@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import AdminDashboard from "./AdminDashboard";
 import WritingQuestionsAdmin from "./WritingQuestionsAdmin";
+import FeedbackAdmin from "./FeedbackAdmin";
 
 /*
  * Owner-only admin portal shell. Hosts the existing metrics dashboard and the
@@ -16,6 +17,7 @@ import WritingQuestionsAdmin from "./WritingQuestionsAdmin";
 const TABS = [
   { key: "overview", label: "Overview" },
   { key: "writing", label: "Writing Questions" },
+  { key: "feedback", label: "Feedback" },
 ] as const;
 type TabKey = (typeof TABS)[number]["key"];
 
@@ -70,7 +72,9 @@ export default function AdminPortal() {
         })}
       </div>
 
-      {tab === "overview" ? <AdminDashboard /> : <WritingQuestionsAdmin />}
+      {tab === "overview" && <AdminDashboard />}
+      {tab === "writing" && <WritingQuestionsAdmin />}
+      {tab === "feedback" && <FeedbackAdmin />}
     </div>
   );
 }

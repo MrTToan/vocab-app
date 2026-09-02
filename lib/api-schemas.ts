@@ -1,6 +1,7 @@
 import { z } from "zod";
 import { EXERCISE_TYPES, STAGES } from "@/lib/types";
 import { PROMPT_TEXT_MAX, PROMPT_TITLE_MAX } from "@/lib/writing/types";
+import { FEEDBACK_CATEGORIES, FEEDBACK_MESSAGE_MAX, FEEDBACK_PAGE_MAX } from "@/lib/feedback/types";
 
 /*
  * Zod schemas (zod 4) for every API route, consumed via lib/api.ts. Bodies are
@@ -291,4 +292,27 @@ export const writingSubmitSchema = z.strictObject({
 
 export const submissionQuerySchema = z.strictObject({
   promptId: z.string().min(1, "promptId required").max(64),
+});
+
+/* ── feedback ──────────────────────────────────────────────────────── */
+
+/**
+ * POST /api/feedback — the in-app widget. Message is the required long-text
+ * field; category defaults to "other"; rating is optional (least-annoying UX —
+ * a user with only a comment shouldn't be forced to pick stars). `page` is the
+ * in-app path it was sent from (client-supplied, for triage); user-agent is
+ * captured server-side, not here. Strict: unknown keys -> 400.
+ */
+export const createFeedbackSchema = z.strictObject({
+  category: z.enum(FEEDBACK_CATEGORIES).default("other"),
+  rating: z.coerce.number().int().min(1).max(5).nullish(),
+  message: z
+    .string()
+    .trim()
+    .min(1, "Please write a message.")
+    .max(
+      FEEDBACK_MESSAGE_MAX,
+      `Please keep your message under ${FEEDBACK_MESSAGE_MAX.toLocaleString()} characters.`,
+    ),
+  page: z.string().max(FEEDBACK_PAGE_MAX).optional(),
 });

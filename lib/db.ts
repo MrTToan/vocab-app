@@ -210,6 +210,20 @@ export async function migrate(db: Client): Promise<void> {
     )`,
   );
 
+  // ── user feedback (lib/feedback/store.ts) ──────────────────────────────
+  // Submissions from the in-app floating "Feedback" widget. Owner reads them in
+  // the admin "Feedback" subtab. `rating` is nullable (the star rating is
+  // optional); `page`/`user_agent` capture where it was sent from for triage.
+  await db.execute(
+    `CREATE TABLE IF NOT EXISTS feedback (
+      id TEXT PRIMARY KEY, user_id TEXT, category TEXT, rating INTEGER,
+      message TEXT, page TEXT, user_agent TEXT, created_at INTEGER
+    )`,
+  );
+  // Admin list orders newest-first; a per-user index also covers "my feedback".
+  await db.execute(`CREATE INDEX IF NOT EXISTS idx_feedback_created ON feedback (created_at)`);
+  await db.execute(`CREATE INDEX IF NOT EXISTS idx_feedback_user ON feedback (user_id, created_at)`);
+
   // ── writing (lib/writing/store.ts) ─────────────────────────────────────
   await db.execute(
     `CREATE TABLE IF NOT EXISTS writing_prompts (

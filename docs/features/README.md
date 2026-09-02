@@ -31,3 +31,4 @@ session cookie; API routes still return 401 and remain the real enforcement.
 9. [AI providers](ai-providers.md) — the fallback chain & running with no key
 10. [Data & storage](data-and-storage.md) — what's stored, where, and backups
 11. [Admin portal](admin.md) — the owner-only usage dashboard at `/admin`
+12. [Feedback](feedback.md) — the in-app floating feedback widget + the admin Feedback subtab
