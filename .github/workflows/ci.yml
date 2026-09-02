@@ -26,9 +26,40 @@ jobs:
         run: npm run lint
       - name: Type-check
         run: npm run typecheck
-      - name: Unit tests
-        run: npm test
+      - name: Unit tests (+ coverage)
+        # Runs BOTH vitest projects — node (server half) and jsdom (client
+        # component half) — with v8 coverage. The per-directory table makes the
+        # client layer (components/, lib/swr*.ts) a visible signal, not a silent
+        # void. Coverage is printed, not yet gated (see BI2 in the audit).
+        run: npm run test:coverage
       - name: Build
         run: npm run build
       - name: Audit production dependencies
         run: npm audit --omit=dev --audit-level=high
+
+  # Process gate (QW4a): a PR labeled `bug` must ship a failing-first regression
+  # test. The two recent CLIENT bugs (Library "+ Add", practice check-answer)
+  # shipped with NO test because their layer was unreachable — now that the jsdom
+  # harness reaches it, enforce the discipline so the blind spot can't re-open.
+  bug-fix-needs-test:
+    runs-on: ubuntu-latest
+    if: >-
+      github.event_name == 'pull_request' &&
+      contains(github.event.pull_request.labels.*.name, 'bug')
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Require a tests/** change in bug-fix PRs
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          echo "Changed files in this PR:"
+          git diff --name-only "$BASE" "$HEAD"
+          if git diff --name-only "$BASE" "$HEAD" | grep -qE '^tests/'; then
+            echo "✓ PR labeled 'bug' includes a tests/** change (regression test)."
+          else
+            echo "::error::PRs labeled 'bug' must include a failing-first regression test under tests/**. If this genuinely needs no test, remove the 'bug' label."
+            exit 1
+          fi
