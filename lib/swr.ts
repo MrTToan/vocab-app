@@ -1,6 +1,9 @@
 "use client";
 
 import useSWR, { mutate, type SWRConfiguration } from "swr";
+import useSWRInfinite, {
+  type SWRInfiniteConfiguration,
+} from "swr/infinite";
 import type { Collection, Word, WordListItem } from "./types";
 import { jsonFetch } from "./ui";
 
@@ -15,7 +18,11 @@ import { jsonFetch } from "./ui";
 /** Typed GET fetcher used by every hook. Errors bubble as thrown Errors. */
 export const fetcher = <T>(url: string): Promise<T> => jsonFetch<T>(url);
 
-export const KEY_WORDS_LIST = "/api/words?fields=list";
+/** Prefix shared by every Library list page key. `revalidateWords()` matches on
+ *  it so ONE call refreshes every cached filter/offset page after a write. */
+export const WORDS_LIST_BASE = "/api/words?fields=list";
+/** @deprecated superseded by the paginated `useWordsPage`; kept for the prefix. */
+export const KEY_WORDS_LIST = WORDS_LIST_BASE;
 export const KEY_COLLECTIONS = "/api/collections";
 export const KEY_STATS = "/api/stats";
 export const KEY_CONFIG = "/api/config";
@@ -50,6 +57,56 @@ export function useWordsList(config?: SWRConfiguration) {
   return useSWR<{ words: WordListItem[] }>(KEY_WORDS_LIST, fetcher, config);
 }
 
+/** How the Library list is filtered — mirrors the store's ListPageOpts (server-side). */
+export type WordsFilter = { q?: string; stage?: string; collection?: string };
+/** One server page (rows). Matches the store's ListPage + the echoed paging. */
+export type WordsPage = {
+  words: WordListItem[];
+  total: number;
+  limit: number;
+  offset: number;
+};
+/** Rows per page; the "Show more" button loads one more of these. */
+export const WORDS_PAGE_SIZE = 60;
+
+/** Build the list key for one filter + offset. `q`/`stage:"all"`/empty
+ *  collection are omitted so their keys stay stable. */
+export function wordsPageKey(filter: WordsFilter, offset: number): string {
+  const p = new URLSearchParams({
+    fields: "list",
+    limit: String(WORDS_PAGE_SIZE),
+    offset: String(offset),
+  });
+  const q = filter.q?.trim();
+  if (q) p.set("q", q);
+  if (filter.stage && filter.stage !== "all") p.set("stage", filter.stage);
+  if (filter.collection) p.set("collection", filter.collection);
+  return `/api/words?${p.toString()}`;
+}
+
+/**
+ * Paginated Library list. Each page is fetched from the server (a page is a
+ * page — never the whole ~1,200-row list); `setSize` loads one more. Filtering
+ * (search / stage / collection) is server-side so pages compose and page
+ * correctly. Reads `data` as an array of pages: flatten `.words`, and take
+ * `total` from the first page.
+ */
+export function useWordsPage(
+  filter: WordsFilter,
+  config?: SWRInfiniteConfiguration,
+) {
+  return useSWRInfinite<WordsPage>(
+    (index, prev) => {
+      // Stop when the last page was short, or we've already covered the total.
+      if (prev && prev.words.length < WORDS_PAGE_SIZE) return null;
+      if (prev && index * WORDS_PAGE_SIZE >= prev.total) return null;
+      return wordsPageKey(filter, index * WORDS_PAGE_SIZE);
+    },
+    fetcher,
+    config,
+  );
+}
+
 export function useCollections(config?: SWRConfiguration) {
   return useSWR<CollectionsData>(KEY_COLLECTIONS, fetcher, config);
 }
@@ -75,7 +132,11 @@ export function useWritingPrompts<P>(task: string, config?: SWRConfiguration) {
 /* ───────────────────────────  Mutations  ─────────────────────────── */
 
 export function revalidateWords() {
-  return mutate(KEY_WORDS_LIST);
+  // Match every cached list page (all filters/offsets), not just the base key —
+  // the Library now fetches parameterized pages via useWordsPage.
+  return mutate(
+    (key) => typeof key === "string" && key.startsWith(WORDS_LIST_BASE),
+  );
 }
 export function revalidateCollections() {
   return mutate(KEY_COLLECTIONS);
@@ -112,6 +173,28 @@ export function mutateAfterWordChange() {
     revalidateStats(),
     revalidateCollections(),
   ]);
+}
+
+/**
+ * A not-yet-studied word was adopted from the collection filter — flip its
+ * `studying` flag to true across every cached list page WITHOUT a refetch (so
+ * the row stays put, now studied). Pair with `revalidateStats()` because the
+ * user's studied/stage counts changed. Composes with `revalidateWords()`.
+ */
+export function applyWordAdoptedToCache(wordId: string) {
+  return mutate<WordsPage>(
+    (key) => typeof key === "string" && key.startsWith(WORDS_LIST_BASE),
+    (page) =>
+      page
+        ? {
+            ...page,
+            words: page.words.map((w) =>
+              w.id === wordId ? { ...w, studying: true } : w,
+            ),
+          }
+        : page,
+    { revalidate: false },
+  );
 }
 
 /**

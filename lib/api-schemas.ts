@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { EXERCISE_TYPES } from "@/lib/types";
+import { EXERCISE_TYPES, STAGES } from "@/lib/types";
 import { PROMPT_TEXT_MAX, PROMPT_TITLE_MAX } from "@/lib/writing/types";
 
 /*
@@ -43,8 +43,20 @@ export const emptySchema = z.strictObject({});
 
 /* ── words ─────────────────────────────────────────────────────────── */
 
+/**
+ * GET /api/words. `fields=list` returns the slim Library page; the paging +
+ * filter params (q/stage/collection/limit/offset) are applied SERVER-side by
+ * store.listPage so a page is a page (not the whole ~1,200-row list). Query
+ * params arrive as strings, so limit/offset are coerced. `stage` accepts the
+ * pill values: "all", "weak", or a concrete Stage.
+ */
 export const wordsQuerySchema = z.strictObject({
   fields: z.string().max(20).optional(),
+  q: z.string().max(100).optional(),
+  stage: z.enum(["all", "weak", ...STAGES]).optional(),
+  collection: idSchema.optional(),
+  limit: z.coerce.number().int().min(1).max(200).optional(),
+  offset: z.coerce.number().int().min(0).max(1_000_000).optional(),
 });
 
 /** POST /api/words — no client-supplied id/created_at/stage (strict). */

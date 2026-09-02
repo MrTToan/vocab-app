@@ -31,7 +31,11 @@ tap-to-pick icon picker.)
 Three ways:
 
 1. **From the Library** — expand a word and toggle its collection chips; or use the
-   *Collection* filter at the top to review a collection's members.
+   *Collection* filter at the top to review a collection's members. The filter shows
+   **all** of the pack's words — the ones you already study *and* the ones you don't
+   yet — so the list always matches the dropdown's count. Words you don't study yet
+   carry an **Add** button that starts studying just that one word
+   (`POST /api/words/:id/adopt`), the per-word twin of **Add all**.
 2. **On the Add page** — pick one or more collections before saving a new word (the selection
    is kept between saves, so you can add several words to the same set in a row).
 3. **Claude-curated starter packs** *(on request)* — Claude can author a themed collection
@@ -55,7 +59,16 @@ enter the picker as `new`, and answering them creates your own progress. **Add a
 `collections` (with `owner_id` + `visibility`) and the `word_collections` join are created
 at connect. Access is via the `Store` interface (`collections()` returns your private packs
 plus all public ones; `createCollection`, `setCollectionVisibility`, `adoptCollection`,
-`setCollectionMembers`, `wordIdsInCollection`, …). The practice route asks the store for
-`practiceCandidates(collectionId)` — the pack's shared words hydrated with your progress —
-then runs the unchanged `pickNext`. Membership edits and publishing are owner-gated
+`setCollectionMembers`, `wordIdsInCollection`, `adoptWord`, …). The practice route asks the
+store for `practiceCandidates(collectionId)` — the pack's shared words hydrated with your
+progress — then runs the unchanged `pickNext`. Membership edits and publishing are owner-gated
 (`ForbiddenError` → 403). See `TECH.md` for the code map.
+
+The **Library list** is server-paginated and server-filtered: `GET /api/words?fields=list`
+takes `q` / `stage` / `collection` / `limit` / `offset` and the store's `listPage()` applies
+all three filters plus paging in SQL, returning one page (default 60 rows) and the filter's
+`total`. When a `collection` is given the source widens to that pack's members (studied +
+not-yet-studied, via the same `LEFT JOIN user_words` as the practice picker) with a `studying`
+flag per row — which is why the count and the list always agree. `adoptWord(id)` is a
+visibility-checked, idempotent per-word `INSERT OR IGNORE` into `user_words` (copies no content;
+never touches a word you can't see).
