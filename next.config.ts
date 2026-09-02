@@ -4,7 +4,8 @@ import type { NextConfig } from "next";
  * Security headers applied to every response. The CSP is deliberately tight:
  *  - script-src 'unsafe-inline' is needed for Next's inline hydration/bootstrap
  *    scripts and the theme-init <Script strategy="beforeInteractive"> in
- *    app/layout.tsx (no nonce plumbing — the app has no proxy/middleware).
+ *    app/layout.tsx (no nonce plumbing — proxy.ts only does a cookie-presence
+ *    sign-in redirect and touches no headers).
  *  - style-src 'unsafe-inline' for Tailwind/React inline styles + next/font.
  *  - img-src allows Google profile pictures (lh3.googleusercontent.com); next/font
  *    and next/image are self-hosted so 'self' covers them.
@@ -33,6 +34,12 @@ const SECURITY_HEADERS = [
 ];
 
 const nextConfig: NextConfig = {
+  images: {
+    // Serve AVIF (then WebP) to browsers that accept them — the marketing
+    // box/cover JPEGs shrink to a fraction of their size over the long
+    // Vietnam↔Helsinki path. next/image negotiates via the Accept header.
+    formats: ["image/avif", "image/webp"],
+  },
   async headers() {
     return [{ source: "/(.*)", headers: SECURITY_HEADERS }];
   },

@@ -1,8 +1,5 @@
-/* eslint-disable @next/next/no-img-element --
-   Plain <img loading="lazy"> is the codebase convention (no next/image / image
-   optimizer is configured), and these six are small, decorative, lazy-loaded
-   screenshots — the optimizer would add no value here. */
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./guide.css";
@@ -10,17 +7,17 @@ import GuideMotion from "./GuideMotion";
 
 // Fonts for this page only — the MNTN pairing. Exposed as CSS variables and
 // applied on the .lexi-guide wrapper, so they never leak into the app shell.
+// Both are VARIABLE Google fonts (no `weight` needed), so this page ships 3
+// font files: Cormorant normal + italic, Inter.
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   variable: "--font-cormorant",
-  weight: ["400", "500", "600"],
   style: ["normal", "italic"],
   display: "swap",
 });
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -316,7 +313,14 @@ export default function HowItWorks() {
           <div className="kit r d2">
             <div className="item">
               <div className="shot">
-                <img src="/guide/box_flashcard.jpg" alt="Flashcard exercise" loading="lazy" decoding="async" width={800} height={600} />
+                <Image
+                  src="/marketing/box_flashcard.jpg"
+                  alt="Flashcard exercise"
+                  width={800}
+                  height={600}
+                  loading="lazy"
+                  sizes="(max-width: 520px) 100vw, (max-width: 820px) 50vw, 33vw"
+                />
               </div>
               <div className="meta">
                 <h3>Flashcard</h3>
@@ -326,7 +330,14 @@ export default function HowItWorks() {
             </div>
             <div className="item">
               <div className="shot">
-                <img src="/guide/box_cloze.jpg" alt="Cloze (fill the gap) exercise" loading="lazy" decoding="async" width={800} height={600} />
+                <Image
+                  src="/marketing/box_cloze.jpg"
+                  alt="Cloze (fill the gap) exercise"
+                  width={800}
+                  height={600}
+                  loading="lazy"
+                  sizes="(max-width: 520px) 100vw, (max-width: 820px) 50vw, 33vw"
+                />
               </div>
               <div className="meta">
                 <h3>Cloze</h3>
@@ -336,7 +347,14 @@ export default function HowItWorks() {
             </div>
             <div className="item">
               <div className="shot">
-                <img src="/guide/box_recall.jpg" alt="Recall from definition exercise" loading="lazy" decoding="async" width={800} height={600} />
+                <Image
+                  src="/marketing/box_recall.jpg"
+                  alt="Recall from definition exercise"
+                  width={800}
+                  height={600}
+                  loading="lazy"
+                  sizes="(max-width: 520px) 100vw, (max-width: 820px) 50vw, 33vw"
+                />
               </div>
               <div className="meta">
                 <h3>Recall</h3>
@@ -346,7 +364,14 @@ export default function HowItWorks() {
             </div>
             <div className="item">
               <div className="shot">
-                <img src="/guide/box_translation.jpg" alt="Translation exercise" loading="lazy" decoding="async" width={800} height={600} />
+                <Image
+                  src="/marketing/box_translation.jpg"
+                  alt="Translation exercise"
+                  width={800}
+                  height={600}
+                  loading="lazy"
+                  sizes="(max-width: 520px) 100vw, (max-width: 820px) 50vw, 33vw"
+                />
               </div>
               <div className="meta">
                 <h3>Translation</h3>
@@ -356,7 +381,14 @@ export default function HowItWorks() {
             </div>
             <div className="item">
               <div className="shot">
-                <img src="/guide/box_write.jpg" alt="Write a sentence exercise" loading="lazy" decoding="async" width={800} height={600} />
+                <Image
+                  src="/marketing/box_write.jpg"
+                  alt="Write a sentence exercise"
+                  width={800}
+                  height={600}
+                  loading="lazy"
+                  sizes="(max-width: 520px) 100vw, (max-width: 820px) 50vw, 33vw"
+                />
               </div>
               <div className="meta">
                 <h3>Write a sentence</h3>
@@ -366,7 +398,14 @@ export default function HowItWorks() {
             </div>
             <div className="item">
               <div className="shot">
-                <img src="/guide/box_scenario.jpg" alt="Scenario exercise" loading="lazy" decoding="async" width={800} height={600} />
+                <Image
+                  src="/marketing/box_scenario.jpg"
+                  alt="Scenario exercise"
+                  width={800}
+                  height={600}
+                  loading="lazy"
+                  sizes="(max-width: 520px) 100vw, (max-width: 820px) 50vw, 33vw"
+                />
               </div>
               <div className="meta">
                 <h3>Scenario</h3>

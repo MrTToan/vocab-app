@@ -9,6 +9,12 @@ Plain-language docs for **how each part of the app behaves today**. One file per
 The app has **two modules** — Vocabulary and IELTS Writing — reachable from the top nav, with a
 cross-skill Report. A SaaS-style landing page sits at `/`.
 
+**Signing in:** when Google auth is configured, a signed-out visitor who opens any app page
+(`/vocab`, `/practice`, `/writing`, …) is redirected to the landing page with a
+"Please sign in to continue" note (`/?signin=1`) instead of seeing a shell full of
+unauthorized errors. The redirect lives in `proxy.ts` and checks only for the presence of the
+session cookie; API routes still return 401 and remain the real enforcement.
+
 ## Vocabulary
 1. [Word progression](word-progression.md) — the stage ladder & how Lexi picks what you study
 2. [Exercise types](exercise-types.md) — the exercises and how each is graded

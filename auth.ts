@@ -3,10 +3,11 @@ import Google from "next-auth/providers/google";
 import { upsertUser } from "@/lib/auth/store";
 
 /*
- * NextAuth v5 config. Google-only, JWT sessions (no DB session table). We do NOT
- * use a middleware/proxy for enforcement (this Next 16 deprecated that
- * convention) — access is gated in route handlers via currentUserId() in
- * lib/auth/user.ts, the pattern the Next 16 auth guide recommends.
+ * NextAuth v5 config. Google-only, JWT sessions (no DB session table).
+ * ENFORCEMENT lives in route handlers via currentUserId() in lib/auth/user.ts,
+ * the pattern the Next 16 auth guide recommends. proxy.ts additionally does a
+ * cookie-PRESENCE redirect for signed-out visitors on app pages — pure UX, no
+ * JWT decode, and no substitute for the route-handler gate.
  *
  * Provider credentials are read from env by NextAuth automatically:
  *   AUTH_GOOGLE_ID, AUTH_GOOGLE_SECRET, AUTH_SECRET, AUTH_URL.

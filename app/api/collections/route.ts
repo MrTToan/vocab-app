@@ -16,7 +16,12 @@ export async function GET() {
     store.collections(),
     store.memberships(),
   ]);
-  return NextResponse.json({ collections, memberships, owner: isOwner(userId) });
+  return NextResponse.json(
+    { collections, memberships, owner: isOwner(userId) },
+    // Read-mostly JSON: browser-only micro-cache (`private` ⇒ Cloudflare never
+    // caches it). Mutations show up within 30s; SWR revalidation still applies.
+    { headers: { "Cache-Control": "private, max-age=30, stale-while-revalidate=300" } },
+  );
 }
 
 export async function POST(req: Request) {

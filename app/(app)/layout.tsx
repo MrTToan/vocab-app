@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import { display, body, mono } from "@/app/fonts";
 import Nav from "@/components/Nav";
 import AuthStatus from "@/components/AuthStatus";
 import AdminLink from "./AdminLink";
@@ -17,8 +18,12 @@ import AdminLink from "./AdminLink";
 export default function AppLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  // The font `.variable` classes + `app-fonts` (globals.css) live on this
+  // wrapper — not on <html> — so only app routes download Fraunces/Plex.
   return (
-    <>
+    <div
+      className={`app-fonts flex-1 flex flex-col ${display.variable} ${body.variable} ${mono.variable}`}
+    >
       <Nav
         authSlot={
           <Suspense fallback={null}>
@@ -32,6 +37,6 @@ export default function AppLayout({
         }
       />
       <main className="flex-1 w-full max-w-3xl mx-auto px-4 py-8">{children}</main>
-    </>
+    </div>
   );
 }
