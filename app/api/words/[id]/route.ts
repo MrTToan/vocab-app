@@ -1,45 +1,37 @@
 import { NextResponse } from "next/server";
-import { getStore, ForbiddenError } from "@/lib/store";
-import { currentUserId } from "@/lib/auth/user";
-import type { Word } from "@/lib/types";
+import { withUser } from "@/lib/api";
+import { emptySchema, patchWordSchema } from "@/lib/api-schemas";
+import { getStore } from "@/lib/store";
 
-type Ctx = { params: Promise<{ id: string }> };
+type P = { id: string };
 
 /** Full word (all fields) — used to lazily load a word's editor detail after the
  *  Library list is fetched slim via GET /api/words?fields=list. */
-export async function GET(_req: Request, ctx: Ctx) {
-  const { id } = await ctx.params;
-  const userId = await currentUserId();
-  if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
-  const word = await getStore().forUser(userId).get(id);
-  if (!word) return NextResponse.json({ error: "not found" }, { status: 404 });
-  return NextResponse.json({ word });
-}
+export const GET = withUser<typeof emptySchema, P>(
+  emptySchema,
+  async ({ userId, params }) => {
+    const word = await getStore().forUser(userId).get(params.id);
+    if (!word) return NextResponse.json({ error: "not found" }, { status: 404 });
+    return NextResponse.json({ word });
+  },
+);
 
-export async function PATCH(req: Request, ctx: Ctx) {
-  const { id } = await ctx.params;
-  const userId = await currentUserId();
-  if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
-  const patch = (await req.json()) as Partial<Word>;
-  // never let the client rewrite identity or ownership
-  delete (patch as any).id;
-  delete (patch as any).created_at;
-  delete (patch as any).owner_id;
-  try {
-    const updated = await getStore().forUser(userId).update(id, patch);
+/** PATCH — editable CONTENT fields only. The schema strips identity/ownership/
+ *  progress keys, so the client can never rewrite them (403 via the wrapper's
+ *  ForbiddenError mapping when the caller doesn't own the word). */
+export const PATCH = withUser<typeof patchWordSchema, P>(
+  patchWordSchema,
+  async ({ userId, input, params }) => {
+    const updated = await getStore().forUser(userId).update(params.id, input);
     if (!updated) return NextResponse.json({ error: "not found" }, { status: 404 });
     return NextResponse.json({ word: updated });
-  } catch (e) {
-    if (e instanceof ForbiddenError)
-      return NextResponse.json({ error: "forbidden" }, { status: 403 });
-    throw e;
-  }
-}
+  },
+);
 
-export async function DELETE(_req: Request, ctx: Ctx) {
-  const { id } = await ctx.params;
-  const userId = await currentUserId();
-  if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
-  await getStore().forUser(userId).remove(id);
-  return NextResponse.json({ ok: true });
-}
+export const DELETE = withUser<typeof emptySchema, P>(
+  emptySchema,
+  async ({ userId, params }) => {
+    await getStore().forUser(userId).remove(params.id);
+    return NextResponse.json({ ok: true });
+  },
+);

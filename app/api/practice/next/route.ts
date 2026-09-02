@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
+import { withUser } from "@/lib/api";
+import { practiceNextSchema } from "@/lib/api-schemas";
 import { getStore } from "@/lib/store";
-import { currentUserId } from "@/lib/auth/user";
 import { exerciseForStage, pickNext } from "@/lib/engine";
 import { generateExercise, hasProvider } from "@/lib/llm";
 import { reserveQuota } from "@/lib/auth/quota";
@@ -26,14 +27,8 @@ import {
  * Degrades gracefully with no API key: cloze is built locally from a stored
  * example; LLM-scored exercises fall back to type-from-definition.
  */
-export async function POST(req: Request) {
-  const { seenIds, explore, collectionId } = (await req.json()) as {
-    seenIds?: string[];
-    explore?: boolean;
-    collectionId?: string;
-  };
-  const userId = await currentUserId();
-  if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+export const POST = withUser(practiceNextSchema, async ({ userId, input }) => {
+  const { seenIds, explore, collectionId } = input;
   const store = getStore().forUser(userId);
   // Candidates for the picker: the user's studied words, or — when a collection
   // is chosen — that collection's shared words hydrated with this user's progress
@@ -136,7 +131,7 @@ export async function POST(req: Request) {
   saveHarvest(store, harvested);
 
   return NextResponse.json({ word, exerciseType: type, generated });
-}
+});
 
 /** Build a cloze locally by blanking the target word in a stored example. */
 function localCloze(word: Word): string | null {

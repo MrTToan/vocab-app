@@ -1,6 +1,6 @@
-import { NextResponse } from "next/server";
+import { withUser } from "@/lib/api";
+import { emptySchema } from "@/lib/api-schemas";
 import { getStore } from "@/lib/store";
-import { currentUserId } from "@/lib/auth/user";
 
 /**
  * GET /api/stats — the learner's aggregate numbers for Home + the report page.
@@ -9,15 +9,13 @@ import { currentUserId } from "@/lib/auth/user";
  * lib/stats.ts), so this route never loads every word and attempt into JS.
  * The response shape is byte-compatible with the old in-route computation.
  */
-export async function GET() {
-  const userId = await currentUserId();
-  if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+export const GET = withUser(emptySchema, async ({ userId }) => {
   const store = getStore().forUser(userId);
   const [w, attempts] = await Promise.all([
     store.wordStats(),
     store.attemptStats(Date.now()),
   ]);
-  return NextResponse.json({
+  return {
     words: {
       total: w.total,
       practiced: w.practiced,
@@ -27,5 +25,5 @@ export async function GET() {
     },
     attempts,
     topSeen: w.topSeen,
-  });
-}
+  };
+});

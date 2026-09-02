@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { currentUserId, isOwner } from "@/lib/auth/user";
+import { currentUserId, resolveIsOwner } from "@/lib/auth/user";
 import AdminDashboard from "@/components/admin/AdminDashboard";
 
 // Resolve the owner gate per request (never prerender a static owner view that
@@ -14,7 +14,7 @@ export const dynamic = "force-dynamic";
  */
 export default async function AdminPage() {
   const userId = await currentUserId();
-  if (!userId || !isOwner(userId)) return <Forbidden />;
+  if (!userId || !(await resolveIsOwner(userId))) return <Forbidden />;
   return <AdminDashboard />;
 }
 

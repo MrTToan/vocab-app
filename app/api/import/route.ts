@@ -1,6 +1,6 @@
-import { NextResponse } from "next/server";
+import { withUser } from "@/lib/api";
+import { importSchema } from "@/lib/api-schemas";
 import { getStore, normalizeWord, type NewWord } from "@/lib/store";
-import { currentUserId } from "@/lib/auth/user";
 import { reserveQuota, QuotaError } from "@/lib/auth/quota";
 import { enrichWord, hasProvider } from "@/lib/llm";
 
@@ -9,17 +9,8 @@ import { enrichWord, hasProvider } from "@/lib/llm";
  * Skips words already in the library and in-batch duplicates, optionally
  * enriches the rest, then writes them. Returns created + skipped counts.
  */
-export async function POST(req: Request) {
-  const { rows, enrich } = (await req.json()) as {
-    rows: NewWord[];
-    enrich?: boolean;
-  };
-  if (!Array.isArray(rows) || rows.length === 0) {
-    return NextResponse.json({ error: "rows is required" }, { status: 400 });
-  }
-
-  const userId = await currentUserId();
-  if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+export const POST = withUser(importSchema, async ({ userId, input }) => {
+  const { rows, enrich } = input;
   const store = getStore().forUser(userId);
 
   // dedupe: skip words already stored and repeats within this batch (checked
@@ -49,24 +40,29 @@ export async function POST(req: Request) {
       const { enrichment: e } = await enrichWord(row.word, row);
       // enrichment fills gaps; learner-supplied non-empty values win
       return { ...e, ...stripEmpty(row), word: row.word, source: "csv" as const };
-    } catch (err: any) {
-      const msg = err instanceof QuotaError ? err.message : err?.message ?? String(err);
+    } catch (err: unknown) {
+      const msg =
+        err instanceof QuotaError
+          ? err.message
+          : err instanceof Error
+            ? err.message
+            : String(err);
       errors.push({ word: row.word, error: msg });
       return base; // save the raw row anyway (un-enriched)
     }
   });
 
   const created = await store.addMany(prepared);
-  return NextResponse.json({
+  return {
     created: created.length,
     skipped,
     errors,
     words: created,
-  });
-}
+  };
+});
 
-function stripEmpty(obj: Record<string, any>): Record<string, any> {
-  const keep: Record<string, any> = {};
+function stripEmpty(obj: Record<string, unknown>): Record<string, unknown> {
+  const keep: Record<string, unknown> = {};
   for (const k of [
     "part_of_speech",
     "vi_meaning",
