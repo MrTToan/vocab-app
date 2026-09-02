@@ -3,6 +3,7 @@
 import { useState, useCallback, useEffect } from "react";
 import Link from "next/link";
 import type { WritingTask, ChartData } from "@/lib/writing/types";
+import { revalidateWritingPrompts } from "@/lib/swr";
 
 /*
  * Self-serve "Add a question" flow. Task 2 = paste the prompt text, save.
@@ -148,6 +149,7 @@ export default function AddPrompt() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Save failed.");
       setSavedId(data.prompt.id);
+      revalidateWritingPrompts(task); // the practice page's cached list is now stale
       // reset for the next one
       setTitle("");
       setPromptText("");

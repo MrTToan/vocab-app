@@ -20,7 +20,8 @@ export async function POST(req: Request) {
   if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
 
   const store = getStore().forUser(userId);
-  const have = new Set((await store.all()).map((w) => normalizeWord(w.word)));
+  // One indexed IN(...) query over the pasted words — never loads the library.
+  const have = await store.existingWords(words);
 
   const existing = words.filter((w) => w?.trim() && have.has(normalizeWord(w)));
   return NextResponse.json({ existing });

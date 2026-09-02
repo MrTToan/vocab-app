@@ -22,8 +22,9 @@ export async function POST(req: Request) {
   if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   const store = getStore().forUser(userId);
 
-  // dedupe: skip words already stored and repeats within this batch
-  const seen = new Set((await store.all()).map((w) => normalizeWord(w.word)));
+  // dedupe: skip words already stored and repeats within this batch (checked
+  // against the library in SQL — no need to load every word)
+  const seen = await store.existingWords(rows.map((r) => r.word ?? ""));
   const toAdd: NewWord[] = [];
   let skipped = 0;
   for (const row of rows) {

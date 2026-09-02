@@ -49,6 +49,16 @@ interface Progress {
   last_seen_at: number | null;
 }
 
+/**
+ * The slim shape the weighted picker needs — progress + id. A full `Word`
+ * satisfies it, and so does the store's lean practice-candidate row (the picker
+ * never reads the heavy content columns, so the candidate query can skip them).
+ */
+export type PickerWord = Pick<
+  Word,
+  "id" | "stage" | "times_seen" | "recent_results" | "last_seen_at"
+>;
+
 /** Apply a graded result to a word's progress. Pure — returns new progress. */
 export function applyResult(
   w: Progress,
@@ -84,7 +94,7 @@ export function applyResult(
 /* ───────────────────────  Weighted picker  ──────────────────────── */
 
 /** Selection weight for a word. Higher = more likely to be surfaced. */
-export function weightFor(w: Word, now: number): number {
+export function weightFor(w: PickerWord, now: number): number {
   const acc = recentAccuracy(w);
   const last = w.recent_results[w.recent_results.length - 1];
   const staleDays = w.last_seen_at ? (now - w.last_seen_at) / DAY_MS : Infinity;
@@ -107,13 +117,13 @@ export const TARGET_ACTIVE = 35;
  * below target. `recent` is a short sliding window of just-seen ids so the same
  * word isn't shown back-to-back.
  */
-export function pickNext(
-  words: Word[],
+export function pickNext<W extends PickerWord>(
+  words: W[],
   now: number,
   recent: ReadonlySet<string>,
   rand: () => number = Math.random,
   opts: { explore?: boolean } = {},
-): Word | null {
+): W | null {
   if (words.length === 0) return null;
   let eligible = words.filter((w) => !recent.has(w.id));
   if (eligible.length === 0) eligible = words; // all in cooldown -> allow repeats
@@ -129,7 +139,7 @@ export function pickNext(
     return pool[Math.floor(rand() * pool.length)];
   }
 
-  let pool: Word[];
+  let pool: W[];
   if (active.length && (active.length >= TARGET_ACTIVE || fresh.length === 0)) {
     pool = active; // enough in flight (or nothing new left): keep climbing them
   } else if (active.length && fresh.length) {
@@ -155,10 +165,10 @@ export function pickNext(
  * route calls this before `pickNext` so the whole stage ladder / working-set
  * picker runs over just the chosen collection, unchanged.
  */
-export function scopeToCollection(
-  words: Word[],
+export function scopeToCollection<W extends Pick<Word, "id">>(
+  words: W[],
   memberIds: ReadonlySet<string>,
-): Word[] {
+): W[] {
   return words.filter((w) => memberIds.has(w.id));
 }
 
@@ -169,7 +179,7 @@ function pickOne<T>(arr: T[], rand: () => number = Math.random): T {
 }
 
 /** Count words by stage — for the little dashboard. */
-export function stageCounts(words: Word[]): Record<Stage, number> {
+export function stageCounts(words: Pick<Word, "stage">[]): Record<Stage, number> {
   const counts = Object.fromEntries(STAGES.map((s) => [s, 0])) as Record<
     Stage,
     number

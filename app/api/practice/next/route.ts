@@ -41,16 +41,21 @@ export async function POST(req: Request) {
   // The stage ladder / picker then runs over exactly this set. `reason:
   // "empty-collection"` lets the client show a distinct "this collection has no
   // words" message vs. an empty library.
-  const words = await store.practiceCandidates(collectionId || undefined);
-  if (words.length === 0) {
+  // Lean rows only (id/word + progress) — the picker never reads the heavy
+  // content columns, so don't fetch them for every candidate.
+  const candidates = await store.practiceCandidatesLite(collectionId || undefined);
+  if (candidates.length === 0) {
     return NextResponse.json(
       collectionId ? { word: null, reason: "empty-collection" } : { word: null },
     );
   }
 
-  const word = pickNext(words, Date.now(), new Set(seenIds ?? []), Math.random, {
+  const picked = pickNext(candidates, Date.now(), new Set(seenIds ?? []), Math.random, {
     explore,
   });
+  if (!picked) return NextResponse.json({ word: null });
+  // Hydrate ONLY the picked word to its full content row.
+  const word = await store.practiceWord(picked.id, collectionId || undefined);
   if (!word) return NextResponse.json({ word: null });
 
   let type: ExerciseType = exerciseForStage(word.stage);
