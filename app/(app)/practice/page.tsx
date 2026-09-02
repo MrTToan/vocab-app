@@ -12,6 +12,7 @@ import type {
   Word,
 } from "@/lib/types";
 import { STAGE_LABEL, STAGE_ORDER, RESULT_VAR, jsonFetch } from "@/lib/ui";
+import { useCollections } from "@/lib/swr";
 import { gradeEnglishWord, matchesMeaning } from "@/lib/grade";
 
 interface Payload {
@@ -41,12 +42,18 @@ const LABEL: Record<ExerciseType, string> = {
 // so the active working set can cycle and exercises vary.
 const COOLDOWN = 4;
 
+// Stable fallback while /api/collections loads (keeps effect deps quiet).
+const EMPTY_COLLECTIONS: Collection[] = [];
+
 export default function PracticePage() {
   const recent = useRef<string[]>([]);
   const buffer = useRef<Payload | null>(null);
   const explore = useRef(false); // "new words" mode: pick fresh/random words
   const collectionId = useRef<string>(""); // "" = all words; else scope the picker
-  const [collections, setCollections] = useState<Collection[]>([]);
+  const pendingResult = useRef<Promise<void> | null>(null); // in-flight progress write
+  // Shared SWR cache — deduped with every other page that shows collections.
+  const { data: collectionsData } = useCollections();
+  const collections = collectionsData?.collections ?? EMPTY_COLLECTIONS;
   const [activeCollection, setActiveCollection] = useState<string>("");
   const [emptyReason, setEmptyReason] = useState<"none" | "collection">("none");
   const [cur, setCur] = useState<Current | null>(null);
@@ -108,6 +115,10 @@ export default function PracticePage() {
     setStatus("loading");
     setError("");
     try {
+      // Ordering: if the learner advances before the background progress write
+      // returns, wait for it so the next pick sees the updated progress. (The
+      // promise never rejects — failures were already swallowed in record().)
+      if (pendingResult.current) await pendingResult.current;
       if (buffer.current) {
         const b = buffer.current;
         buffer.current = null;
@@ -133,9 +144,6 @@ export default function PracticePage() {
     }
     collectionId.current = initial;
     setActiveCollection(initial);
-    jsonFetch<{ collections: Collection[] }>("/api/collections")
-      .then((r) => setCollections(r.collections))
-      .catch(() => {});
     fetchNext().then(present).catch((e) => {
       setError(e.message);
       setStatus("empty");
@@ -181,27 +189,33 @@ export default function PracticePage() {
     advance();
   }, [advance]);
 
-  /** Record a graded result and show the stage change. */
-  async function record(word: Word, r: Result) {
+  /** Record a graded result. Feedback shows IMMEDIATELY; the progress write
+   * posts in the background and the stage-change badge is patched in when the
+   * response lands (advance() awaits the pending write, so the badge — set
+   * before present() clears it — never leaks onto the next word, and the next
+   * /api/practice/next always sees the updated progress). */
+  function record(word: Word, r: Result) {
     setResult(r);
     setStats((s) => ({ done: s.done + 1, correct: s.correct + (r === "correct" ? 1 : 0) }));
-    try {
-      const res = await jsonFetch<{ from: Stage; stage: Stage }>(
-        "/api/practice/result",
-        {
-          method: "POST",
-          body: JSON.stringify({
-            wordId: word.id,
-            result: r,
-            exerciseType: cur?.exerciseType,
-          }),
-        },
-      );
-      if (res.from !== res.stage) setStageChange({ from: res.from, to: res.stage });
-    } catch {
-      /* non-fatal */
-    }
     setStatus("feedback");
+    const p = jsonFetch<{ from: Stage; stage: Stage }>("/api/practice/result", {
+      method: "POST",
+      body: JSON.stringify({
+        wordId: word.id,
+        result: r,
+        exerciseType: cur?.exerciseType,
+      }),
+    })
+      .then((res) => {
+        if (res.from !== res.stage) setStageChange({ from: res.from, to: res.stage });
+      })
+      .catch(() => {
+        /* non-fatal — same handling as before, just no longer blocking */
+      })
+      .finally(() => {
+        if (pendingResult.current === p) pendingResult.current = null;
+      });
+    pendingResult.current = p;
   }
 
   /** Typed English exercises (cloze, type-from-definition, flashcard VN→EN). */

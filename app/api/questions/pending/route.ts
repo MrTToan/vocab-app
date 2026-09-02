@@ -11,7 +11,9 @@ export async function GET() {
   const userId = await currentUserId();
   if (!userId) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   const store = getStore().forUser(userId);
-  const words = await store.all();
+  // Slim rows only — the response needs id/word/vi_meaning, never the heavy
+  // content columns that `all()` would load.
+  const words = await store.listLite();
   const have = new Set(await store.questionWordIds());
   const pending = words
     .filter((w) => !have.has(w.id))

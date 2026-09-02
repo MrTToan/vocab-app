@@ -29,4 +29,6 @@ modules: your vocabulary progress and your IELTS writing analytics side by side.
 
 ---
 *Under the hood: `app/(app)/report/page.tsx` (+ `/progress` redirect), `app/api/stats` &
-`app/api/writing/stats`, the `attempts` + writing tables.*
+`app/api/writing/stats`, the `attempts` + writing tables. `/api/stats` aggregates in SQL
+(`wordStats`/`attemptStats` in `lib/store.ts`; pure reference + shared types in `lib/stats.ts`)
+instead of loading every word and attempt — same payload, computed close to the data.*
