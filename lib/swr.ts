@@ -67,7 +67,7 @@ export type WordsPage = {
   offset: number;
 };
 /** Rows per page; the "Show more" button loads one more of these. */
-export const WORDS_PAGE_SIZE = 60;
+export const WORDS_PAGE_SIZE = 20;
 
 /** Build the list key for one filter + offset. `q`/`stage:"all"`/empty
  *  collection are omitted so their keys stay stable. */
