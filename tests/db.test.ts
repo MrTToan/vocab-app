@@ -68,9 +68,38 @@ describe("lib/db getDb()", () => {
 
     const idx = await db.execute("SELECT name FROM sqlite_master WHERE type = 'index'");
     const names = idx.rows.map((r) => String(r.name));
-    for (const i of ["idx_attempts_user_ts", "idx_wc_user", "idx_uw_word", "idx_wp_owner_vis"]) {
+    for (const i of [
+      "idx_attempts_user_ts",
+      "idx_wc_user",
+      "idx_uw_word",
+      "idx_wp_owner_vis",
+      "idx_uqs_question",
+    ]) {
       expect(names).toContain(i);
     }
+  });
+
+  it("the word-delete cascade never full-scans user_question_state", async () => {
+    // Regression: deleting a word prunes question recency via
+    // `question_id IN (SELECT id FROM questions WHERE word_id = ?)`. The
+    // (user_id, question_id) PK can't serve a question_id-only lookup, so without
+    // idx_uqs_question this DELETE scans the whole table (slow at scale — the
+    // ~5s /library delete). Assert migrate() gives the planner the index to use,
+    // not a SCAN. Runs on its own throwaway client so the EXPLAIN read snapshot
+    // never touches the shared singleton connection the other tests write on.
+    const { createClient } = await import("@libsql/client");
+    const probe = createClient({ url: ":memory:" });
+    await dbMod.migrate(probe);
+    const plan = await probe.execute({
+      sql:
+        "EXPLAIN QUERY PLAN DELETE FROM user_question_state " +
+        "WHERE question_id IN (SELECT id FROM questions WHERE word_id = ?)",
+      args: ["some-word-id"],
+    });
+    const detail = plan.rows.map((r) => String(r.detail)).join(" | ");
+    expect(detail).toMatch(/user_question_state USING (COVERING )?INDEX idx_uqs_question/);
+    expect(detail).not.toMatch(/SCAN user_question_state/);
+    probe.close();
   });
 
   it("every store module shares the one client", async () => {
