@@ -26,6 +26,7 @@ let joinCode: typeof import("@/app/api/classes/[id]/join-code/route");
 let join: typeof import("@/app/api/classes/join/route");
 let students: typeof import("@/app/api/classes/[id]/students/route");
 let studentById: typeof import("@/app/api/classes/[id]/students/[studentId]/route");
+let studentReport: typeof import("@/app/api/classes/[id]/students/[studentId]/report/route");
 let leave: typeof import("@/app/api/classes/[id]/leave/route");
 
 async function json(res: Response) {
@@ -48,6 +49,7 @@ beforeAll(async () => {
   join = await import("@/app/api/classes/join/route");
   students = await import("@/app/api/classes/[id]/students/route");
   studentById = await import("@/app/api/classes/[id]/students/[studentId]/route");
+  studentReport = await import("@/app/api/classes/[id]/students/[studentId]/report/route");
   leave = await import("@/app/api/classes/[id]/leave/route");
 });
 
@@ -228,3 +230,92 @@ describe("leave + remove revoke membership", () => {
     expect((await join.POST(post("http://t/api/classes/join", { code }))).status).toBe(404);
   });
 });
+
+/*
+ * Route 17 — the trust-critical seam. It is the ONLY place forUser() runs with an
+ * id other than the caller's, so its authorization (teachesStudent, nothing
+ * looser) gets a thorough adversarial test: every unauthorized shape must 404
+ * (never leak existence, never 200), and only the actual teacher-of-this-student
+ * gets the union payload.
+ */
+describe("route 17: teacher reads a student's report (authz seam)", () => {
+  const reportCtx = (id: string, studentId: string) => ({ params: Promise.resolve({ id, studentId }) });
+
+  async function setup() {
+    // teacher-r owns class R; student-r is enrolled in it.
+    caller.id = "teacher-r";
+    const { id, code } = await makeClass("Report class");
+    caller.id = "student-r";
+    await join.POST(post("http://t/api/classes/join", { code }));
+    return { id, code };
+  }
+
+  it("the teacher of THIS class + THAT student -> 200 with the union payload", async () => {
+    const { id } = await setup();
+    caller.id = "teacher-r";
+    const res = await studentReport.GET(get(`http://t/api/classes/${id}/students/student-r/report`), reportCtx(id, "student-r"));
+    expect(res.status).toBe(200);
+    const body = await json(res);
+    // Union of the /api/stats and /api/writing/stats shapes + the student name.
+    expect(typeof body.vocab.words.total).toBe("number");
+    expect(body.vocab.attempts.byDay).toHaveLength(14);
+    expect(typeof body.writing.submissions).toBe("number");
+    expect(body.student).toHaveProperty("name");
+    // Trust-critical GET: never a cacheable response.
+    expect(res.headers.get("cache-control")).toMatch(/no-store/);
+  });
+
+  it("a non-member of the class -> 404 (no existence leak)", async () => {
+    const { id } = await setup();
+    caller.id = "stranger-r";
+    const res = await studentReport.GET(get(`http://t/api/classes/${id}/students/student-r/report`), reportCtx(id, "student-r"));
+    expect(res.status).toBe(404);
+  });
+
+  it("a teacher of a DIFFERENT class -> 404 (teaching *some* class grants nothing)", async () => {
+    const { id } = await setup();
+    // other-teacher teaches their own class, and student-r is NOT in it.
+    caller.id = "other-teacher";
+    await makeClass("Unrelated class");
+    const res = await studentReport.GET(get(`http://t/api/classes/${id}/students/student-r/report`), reportCtx(id, "student-r"));
+    expect(res.status).toBe(404);
+  });
+
+  it("a student (a non-teacher member) -> 404, even reading their own report", async () => {
+    const { id } = await setup();
+    caller.id = "student-r";
+    // The student is a member but not a teacher: no teacher row -> 404.
+    const own = await studentReport.GET(get(`http://t/api/classes/${id}/students/student-r/report`), reportCtx(id, "student-r"));
+    expect(own.status).toBe(404);
+    // And a classmate cannot read a peer either.
+    caller.id = "student-peer";
+    await join.POST(post("http://t/api/classes/join", { code: (await peerCode(id)) }));
+    const peer = await studentReport.GET(get(`http://t/api/classes/${id}/students/student-r/report`), reportCtx(id, "student-r"));
+    expect(peer.status).toBe(404);
+  });
+
+  it("target isn't a student in this class -> 404 (teacher can't name an arbitrary user)", async () => {
+    const { id } = await setup();
+    caller.id = "teacher-r";
+    const res = await studentReport.GET(get(`http://t/api/classes/${id}/students/nobody/report`), reportCtx(id, "nobody"));
+    expect(res.status).toBe(404);
+  });
+
+  it("after the student leaves, the teacher's next report request 404s (live revocation)", async () => {
+    const { id } = await setup();
+    caller.id = "student-r";
+    await leave.POST(post(`http://t/api/classes/${id}/leave`), ctx(id));
+    caller.id = "teacher-r";
+    const res = await studentReport.GET(get(`http://t/api/classes/${id}/students/student-r/report`), reportCtx(id, "student-r"));
+    expect(res.status).toBe(404);
+  });
+});
+
+/** Fetch the active join code of a class the current caller teaches. */
+async function peerCode(id: string): Promise<string> {
+  const prev = caller.id;
+  caller.id = "teacher-r";
+  const detail = await json(await byId.GET(get(`http://t/api/classes/${id}`), ctx(id)));
+  caller.id = prev;
+  return detail.class.join_code as string;
+}
