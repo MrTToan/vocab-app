@@ -32,6 +32,24 @@ import { isRateLimitError } from "@/lib/auth/quota";
 /** Default JSON body ceiling. Routes accepting base64 images override it. */
 export const MAX_JSON_BYTES = 256 * 1024;
 
+/**
+ * The one cache policy for MUTABLE per-user JSON GETs — any endpoint whose data
+ * a button (a mutation) can change: the collections list, runtime config, etc.
+ *
+ * It must never let the browser serve a STALE response to SWR's post-mutation
+ * revalidation. A positive `max-age` did exactly that: after a successful write
+ * the refetch was answered from the browser's HTTP cache with the pre-write body
+ * for up to 30s, so the click "did nothing" (the /vocab make-public/private
+ * toggle, collection rename/delete, the admin LLM toggle — a whole class). Any
+ * `max-age`/`s-maxage`/`stale-while-revalidate` on this kind of data reopens the
+ * class, so keep it `no-store`. `private` also keeps shared proxies (Cloudflare)
+ * from caching per-session data. Reach for this on every mutable-data GET; use a
+ * long `max-age` only for genuinely immutable, content-addressed bytes.
+ */
+export const MUTABLE_JSON_CACHE_HEADERS = {
+  "Cache-Control": "private, no-store",
+} as const;
+
 export interface HandlerCtx<I, P> {
   userId: string;
   /** Site owner (legacy `local-user` or an OWNER_EMAILS account), resolved once per request. */
