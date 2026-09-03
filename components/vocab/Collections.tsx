@@ -9,6 +9,7 @@ import {
   revalidateCollections,
   revalidateWords,
   revalidateStats,
+  collectionReducer,
 } from "@/lib/swr";
 
 /**
@@ -26,11 +27,19 @@ import {
 export default function Collections({ highlightId }: { highlightId?: string }) {
   // Shared SWR cache — the same /api/collections fetch the Library and Add pages
   // use, so it's deduped and every collection write here is reflected there.
-  const { data } = useCollections();
+  const { data, mutate } = useCollections();
   const collections = data?.collections ?? null;
   const owner = !!data?.owner;
 
   const reload = revalidateCollections;
+
+  // Patch a server-confirmed collection row into THIS hook's cache (the bound
+  // mutate, so it works regardless of SWR provider). Used instead of a refetch
+  // for renames and visibility flips, whose `/api/collections` GET is otherwise
+  // served stale from the `max-age=30` browser cache — the toggle-does-nothing
+  // bug. See `collectionReducer`.
+  const patchCollection = (c: Collection) =>
+    mutate((prev) => collectionReducer(prev, c), { revalidate: false });
 
   const mine = (collections ?? []).filter((c) => c.mine);
   const shared = (collections ?? []).filter((c) => !c.mine);
@@ -59,6 +68,7 @@ export default function Collections({ highlightId }: { highlightId?: string }) {
                   collection={c}
                   owner={owner}
                   onChanged={reload}
+                  onPatched={patchCollection}
                   highlight={c.id === highlightId}
                 />
               ))}
@@ -74,6 +84,7 @@ export default function Collections({ highlightId }: { highlightId?: string }) {
                     collection={c}
                     owner={owner}
                     onChanged={reload}
+                    onPatched={patchCollection}
                     highlight={c.id === highlightId}
                   />
                 ))}
@@ -99,11 +110,13 @@ function CollectionRow({
   collection,
   owner,
   onChanged,
+  onPatched,
   highlight,
 }: {
   collection: Collection;
   owner: boolean;
   onChanged: () => void;
+  onPatched: (collection: Collection) => Promise<unknown> | void;
   highlight?: boolean;
 }) {
   const [editing, setEditing] = useState(false);
@@ -125,12 +138,17 @@ function CollectionRow({
   async function save() {
     setBusy(true);
     try {
-      await jsonFetch(`/api/collections/${collection.id}`, {
-        method: "PATCH",
-        body: JSON.stringify({ name, emoji, description }),
-      });
+      // Same story as toggleVisibility: patch the confirmed row in place rather
+      // than a refetch the browser micro-cache can serve stale.
+      const { collection: updated } = await jsonFetch<{ collection: Collection }>(
+        `/api/collections/${collection.id}`,
+        {
+          method: "PATCH",
+          body: JSON.stringify({ name, emoji, description }),
+        },
+      );
       setEditing(false);
-      await onChanged();
+      await onPatched(updated);
     } finally {
       setBusy(false);
     }
@@ -153,13 +171,20 @@ function CollectionRow({
   async function toggleVisibility() {
     setBusy(true);
     try {
-      await jsonFetch(`/api/collections/${collection.id}`, {
-        method: "PATCH",
-        body: JSON.stringify({
-          visibility: isPublic ? "private" : "public",
-        }),
-      });
-      await onChanged();
+      // Patch the server-confirmed row into the SWR cache in place. A plain
+      // `onChanged()` refetch can be served stale from the `/api/collections`
+      // browser micro-cache (`max-age=30`), which made this toggle look like it
+      // did nothing until the cache expired. See `collectionReducer`.
+      const { collection: updated } = await jsonFetch<{ collection: Collection }>(
+        `/api/collections/${collection.id}`,
+        {
+          method: "PATCH",
+          body: JSON.stringify({
+            visibility: isPublic ? "private" : "public",
+          }),
+        },
+      );
+      await onPatched(updated);
     } finally {
       setBusy(false);
     }

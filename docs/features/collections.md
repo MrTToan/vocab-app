@@ -55,7 +55,10 @@ Three ways:
 A collection is **private** (only its owner sees it) or **public** (everyone sees it in
 their list and on the Practice switcher). Public collections are the shared catalog packs;
 only the owner/admin can mark a collection public (the publish toggle on the Home manager, gated
-by the `owner` flag from `GET /api/collections`). The shared catalog packs are IELTS Task 1 &
+by the `owner` flag from `GET /api/collections`). The toggle flips **immediately**: it patches the
+server-confirmed row into the SWR cache in place rather than refetching, so it never depends on the
+`/api/collections` browser cache (which is `no-store` for exactly this reason — see TECH.md §4d).
+The shared catalog packs are IELTS Task 1 &
 Task 2, Casual English 100, and Academic Writing 100. Practising a public pack works even before
 you've "added" it — its words
 enter the picker as `new`, and answering them creates your own progress. **Add all** (or

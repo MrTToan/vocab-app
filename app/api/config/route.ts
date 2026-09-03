@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { withUser } from "@/lib/api";
+import { withUser, MUTABLE_JSON_CACHE_HEADERS } from "@/lib/api";
 import { emptySchema } from "@/lib/api-schemas";
 import { getStore } from "@/lib/store";
 import { hasAnyLLM, mode, chainStatus } from "@/lib/providers";
@@ -10,9 +10,11 @@ import { hasAnyLLM, mode, chainStatus } from "@/lib/providers";
  * chain — is OWNER-ONLY: it names infrastructure and vendors, which end users
  * never need to see. Non-owners receive `owner: false` and none of those fields.
  */
-// Read-mostly JSON: let the BROWSER reuse it briefly across in-app navigations.
-// `private` keeps Cloudflare/CDNs from ever caching it (it varies by session).
-const CACHE_HEADERS = { "Cache-Control": "private, max-age=30, stale-while-revalidate=300" };
+// Mutable per-user data (the owner's admin LLM toggle changes `active`/`chain`,
+// and `owner`/`hasLLM` gate features): `no-store` so a revalidation after such a
+// change is never answered stale from the browser cache. See
+// MUTABLE_JSON_CACHE_HEADERS for the shared policy and why.
+const CACHE_HEADERS = MUTABLE_JSON_CACHE_HEADERS;
 
 export const GET = withUser(emptySchema, async ({ owner }) => {
   const hasLLM = hasAnyLLM();
