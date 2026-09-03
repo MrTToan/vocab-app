@@ -2,6 +2,7 @@ import { z } from "zod";
 import { EXERCISE_TYPES, STAGES } from "@/lib/types";
 import { PROMPT_TEXT_MAX, PROMPT_TITLE_MAX } from "@/lib/writing/types";
 import { FEEDBACK_CATEGORIES, FEEDBACK_MESSAGE_MAX, FEEDBACK_PAGE_MAX } from "@/lib/feedback/types";
+import { CLASS_DESCRIPTION_MAX, CLASS_EMOJI_MAX, CLASS_NAME_MAX } from "@/lib/classes/types";
 
 /*
  * Zod schemas (zod 4) for every API route, consumed via lib/api.ts. Bodies are
@@ -316,3 +317,31 @@ export const createFeedbackSchema = z.strictObject({
     ),
   page: z.string().max(FEEDBACK_PAGE_MAX).optional(),
 });
+
+/* ── classes ───────────────────────────────────────────────────────── */
+
+const className = z.string().trim().min(1, "name is required").max(CLASS_NAME_MAX);
+const classDescription = z.string().max(CLASS_DESCRIPTION_MAX);
+const classEmoji = z.string().max(CLASS_EMOJI_MAX);
+// Codes are entered by hand; allow dashes/spaces the store normalizes away.
+const joinCode = z.string().trim().min(1, "code is required").max(40);
+
+export const createClassSchema = z.strictObject({
+  name: className,
+  description: classDescription.optional(),
+  emoji: classEmoji.optional(),
+});
+
+export const patchClassSchema = z
+  .strictObject({
+    name: className.optional(),
+    description: classDescription.optional(),
+    emoji: classEmoji.optional(),
+  })
+  .refine((o) => Object.keys(o).length > 0, { message: "no fields to update" });
+
+/** GET /api/classes/join?code= — the consent-screen preview (no write). */
+export const joinCodeQuerySchema = z.strictObject({ code: joinCode });
+
+/** POST /api/classes/join — redeem a code (the consent write). */
+export const joinClassSchema = z.strictObject({ code: joinCode });

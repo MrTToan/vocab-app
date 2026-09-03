@@ -224,6 +224,42 @@ export async function migrate(db: Client): Promise<void> {
   await db.execute(`CREATE INDEX IF NOT EXISTS idx_feedback_created ON feedback (created_at)`);
   await db.execute(`CREATE INDEX IF NOT EXISTS idx_feedback_user ON feedback (user_id, created_at)`);
 
+  // ── classes (lib/classes/store.ts) ─────────────────────────────────────
+  // The class entity + the user↔class membership junction. Role is stored PER
+  // MEMBERSHIP (class_members.role), never folded into `classes` — that is the
+  // seam a later assignments phase leans on (design report §2.3). Additive and
+  // idempotent like everything above; no SCHEMA_VERSION bump, no backfill (no
+  // existing row references a class). The `class_invites` table (email invites)
+  // is a later slice — deliberately not created here.
+  await db.execute(
+    `CREATE TABLE IF NOT EXISTS classes (
+      id           TEXT PRIMARY KEY,
+      name         TEXT NOT NULL,
+      description  TEXT DEFAULT '',
+      emoji        TEXT DEFAULT '',
+      created_by   TEXT NOT NULL,
+      join_code    TEXT,
+      created_at   INTEGER,
+      archived_at  INTEGER
+    )`,
+  );
+  // Every real join code is globally unique; SQLite treats NULLs as distinct, so
+  // many classes may have NULL (join-by-code disabled) at once.
+  await db.execute(`CREATE UNIQUE INDEX IF NOT EXISTS idx_classes_join_code ON classes (join_code)`);
+  await db.execute(`CREATE INDEX IF NOT EXISTS idx_classes_created_by ON classes (created_by)`);
+  await db.execute(
+    `CREATE TABLE IF NOT EXISTS class_members (
+      class_id   TEXT NOT NULL,
+      user_id    TEXT NOT NULL,
+      role       TEXT NOT NULL,
+      joined_via TEXT,
+      joined_at  INTEGER,
+      PRIMARY KEY (class_id, user_id)
+    )`,
+  );
+  await db.execute(`CREATE INDEX IF NOT EXISTS idx_cm_user ON class_members (user_id)`);
+  await db.execute(`CREATE INDEX IF NOT EXISTS idx_cm_class_role ON class_members (class_id, role)`);
+
   // ── writing (lib/writing/store.ts) ─────────────────────────────────────
   await db.execute(
     `CREATE TABLE IF NOT EXISTS writing_prompts (
