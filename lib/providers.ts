@@ -53,6 +53,15 @@ interface CallOpts {
   schema: unknown;
   maxTokens: number;
   images?: ImagePart[];
+  /**
+   * Validate/parse the provider's JSON *inside* the chain. It must THROW if the
+   * response is unusable and otherwise return the value to hand back (parsed /
+   * narrowed). A throw is treated like any other provider failure, so the chain
+   * falls through to the next provider — see `callProvider`. Without it the raw
+   * parsed JSON is returned unchecked (back-compat for callers that validate
+   * their own result downstream).
+   */
+  validate?: (raw: unknown) => unknown;
 }
 
 const FAIL_THRESHOLD = 3;
@@ -250,6 +259,15 @@ function isAbortLike(e: unknown): boolean {
   return name === "TimeoutError" || name === "AbortError" || name === "APIConnectionTimeoutError";
 }
 
+/** A schema-validation error (Zod & friends): well-formed JSON that failed to
+ *  match the expected shape. Detected structurally so this module needs no zod
+ *  import. */
+function isSchemaError(e: unknown): boolean {
+  if (!e || typeof e !== "object") return false;
+  const name = (e as { name?: string }).name ?? "";
+  return name === "ZodError" || Array.isArray((e as { issues?: unknown }).issues);
+}
+
 /** Map anything a provider adapter may throw onto a ProviderError. */
 function classify(e: unknown): ProviderError {
   if (e instanceof ProviderError) return e;
@@ -258,6 +276,13 @@ function classify(e: unknown): ProviderError {
   }
   if (e instanceof SyntaxError) {
     return new ProviderError(`invalid JSON from model: ${e.message}`, false, "parse", undefined, { cause: e });
+  }
+  // A schema validation throw (e.g. Zod) — well-formed JSON, wrong shape. Keep
+  // the log line short (the full issue list is preserved as `cause`) and NEVER
+  // let it reach the user verbatim; it counts as a parse failure so the chain
+  // moves on to the next provider.
+  if (isSchemaError(e)) {
+    return new ProviderError("response did not match schema", false, "parse", undefined, { cause: e });
   }
   // Anthropic SDK errors carry a numeric `status`; connection errors carry none.
   const status = (e as { status?: unknown })?.status;
@@ -307,9 +332,18 @@ function newReqId(): string {
 
 async function callProvider(task: Task, cfg: TaskConfig, opts: CallOpts): Promise<unknown> {
   try {
-    return cfg.provider === "anthropic"
-      ? await anthropicStructured(task, cfg, opts)
-      : await openaiStructured(task, cfg, opts);
+    const raw =
+      cfg.provider === "anthropic"
+        ? await anthropicStructured(task, cfg, opts)
+        : await openaiStructured(task, cfg, opts);
+    // Validate the parsed JSON against the caller's schema INSIDE the chain. A
+    // provider that returns well-formed-but-wrong-shaped JSON (common with some
+    // OpenAI-compatible shims that don't actually enforce the json_schema, e.g.
+    // Gemini via its compat endpoint) then counts as a failure and falls through
+    // to the next provider — instead of being handed back as a "success" that
+    // only throws downstream, stranding the healthy fallbacks and blanking the
+    // result for the user.
+    return opts.validate ? opts.validate(raw) : raw;
   } catch (e) {
     throw classify(e);
   }

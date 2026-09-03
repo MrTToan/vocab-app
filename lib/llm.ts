@@ -77,11 +77,17 @@ export async function scoreAnswer(
   gen: GeneratedExercise,
   answer: string,
 ): Promise<Score> {
-  const raw = await callStructured("score", {
+  // Validate INSIDE the chain (via `validate`): if the active provider returns
+  // parseable-but-wrong-shaped JSON, that attempt fails and the chain falls
+  // through to the next provider — so one flaky model can't blank the verdict
+  // while healthy fallbacks sit unused. Parsing here (vs. after callStructured)
+  // is what makes ScoreSchema mismatches trigger the fallback.
+  const score = await callStructured("score", {
     system: SCORE_SYSTEM,
     user: scoreUser(word, type, gen, answer),
     schema: SCORE_SCHEMA,
     maxTokens: 2000,
+    validate: (raw) => ScoreSchema.parse(raw),
   });
-  return ScoreSchema.parse(raw);
+  return score as Score;
 }
