@@ -21,6 +21,14 @@
   --warn-soft: #f6ead2;
   --bad: #b23a30;
   --bad-soft: #f5e1dc;
+  /* Mastery ordinal ramp (/report pipeline only): one emerald hue, monotone
+     lightness = distance to mastery. New is a neutral "not-started" track.
+     Validated (dataviz ordinal checks) light-on-#fffdf7. */
+  --stage-new: #c9c2b3;
+  --stage-recognition: #36ca80;
+  --stage-recall: #12ac62;
+  --stage-production: #218b56;
+  --stage-known: #1b6d3b;
 }
 
 /* dark palette, reused for both "system dark" and "forced dark" */
@@ -43,6 +51,12 @@
     --warn-soft: #2c2410;
     --bad: #ff7a6d;
     --bad-soft: #2c1614;
+    /* mastery ramp — dark: dim→bright emerald = distance to mastery (validated) */
+    --stage-new: #3a4a40;
+    --stage-recognition: #1f5a3e;
+    --stage-recall: #2f8a5c;
+    --stage-production: #37b877;
+    --stage-known: #34e88f;
   }
 }
 :root[data-theme="dark"] {
@@ -63,6 +77,11 @@
   --warn-soft: #2c2410;
   --bad: #ff7a6d;
   --bad-soft: #2c1614;
+  --stage-new: #3a4a40;
+  --stage-recognition: #1f5a3e;
+  --stage-recall: #2f8a5c;
+  --stage-production: #37b877;
+  --stage-known: #34e88f;
 }
 
 html,
