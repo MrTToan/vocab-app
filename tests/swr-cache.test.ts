@@ -6,6 +6,7 @@ import {
   wordsPageGetKey,
   markStudyingInPages,
   membershipReducer,
+  collectionReducer,
   type WordsPage,
   type CollectionsData,
 } from "@/lib/swr-cache";
@@ -160,5 +161,51 @@ describe("membershipReducer", () => {
 
   it("passes through an undefined cache", () => {
     expect(membershipReducer(undefined, "w1", "c1", true)).toBeUndefined();
+  });
+});
+
+describe("collectionReducer", () => {
+  function data(): CollectionsData {
+    return {
+      collections: [
+        {
+          id: "c1",
+          name: "IELTS Task 1",
+          owner_id: "local-user",
+          visibility: "private",
+          count: 3,
+        } as Collection,
+        { id: "c2", name: "Two", owner_id: "local-user", visibility: "private" } as Collection,
+      ],
+      memberships: [],
+      owner: true,
+    };
+  }
+
+  it("replaces the matching row with the server-confirmed collection", () => {
+    // The visibility toggle: c1 flips to public (owner_id → __system__).
+    const confirmed = {
+      id: "c1",
+      name: "IELTS Task 1",
+      owner_id: "__system__",
+      visibility: "public",
+      count: 3,
+      mine: true,
+    } as Collection;
+    const out = collectionReducer(data(), confirmed)!;
+    const row = out.collections.find((c) => c.id === "c1")!;
+    expect(row.visibility).toBe("public");
+    expect(row.owner_id).toBe("__system__");
+    // Other rows are untouched.
+    expect(out.collections.find((c) => c.id === "c2")!.visibility).toBe("private");
+  });
+
+  it("returns prev unchanged when the row isn't cached", () => {
+    const d = data();
+    expect(collectionReducer(d, { id: "nope" } as Collection)).toBe(d);
+  });
+
+  it("passes through an undefined cache", () => {
+    expect(collectionReducer(undefined, { id: "c1" } as Collection)).toBeUndefined();
   });
 });

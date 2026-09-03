@@ -121,3 +121,25 @@ export function membershipReducer(
   );
   return { ...prev, memberships, collections };
 }
+
+/**
+ * Pure reducer for a server-confirmed collection change (rename, emoji, or a
+ * visibility flip): replace the matching row in a `CollectionsData` snapshot
+ * with the row the PATCH returned, WITHOUT a refetch. The component feeds this
+ * to the BOUND `mutate` so the change shows immediately even though the
+ * `/api/collections` GET carries a `max-age=30` browser cache that would serve a
+ * plain revalidation stale. Returns `prev` unchanged when the row isn't present.
+ */
+export function collectionReducer(
+  prev: CollectionsData | undefined,
+  collection: Collection,
+): CollectionsData | undefined {
+  if (!prev) return prev;
+  if (!prev.collections.some((c) => c.id === collection.id)) return prev;
+  return {
+    ...prev,
+    collections: prev.collections.map((c) =>
+      c.id === collection.id ? collection : c,
+    ),
+  };
+}

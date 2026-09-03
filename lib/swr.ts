@@ -13,6 +13,7 @@ import {
   wordsPageGetKey,
   markStudyingInPages,
   membershipReducer,
+  collectionReducer,
   type WordsFilter,
   type WordsPage,
   type Membership,
@@ -27,6 +28,7 @@ export {
   WORDS_PAGE_SIZE,
   wordsPageKey,
   markStudyingInPages,
+  collectionReducer,
 };
 export type { WordsFilter, WordsPage, Membership, CollectionsData };
 

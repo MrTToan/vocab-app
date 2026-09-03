@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { withUser } from "@/lib/api";
+import { withUser, MUTABLE_JSON_CACHE_HEADERS } from "@/lib/api";
 import { createCollectionSchema, emptySchema } from "@/lib/api-schemas";
 import { getStore } from "@/lib/store";
 
@@ -17,9 +17,9 @@ export const GET = withUser(emptySchema, async ({ userId, owner }) => {
   ]);
   return NextResponse.json(
     { collections, memberships, owner },
-    // Read-mostly JSON: browser-only micro-cache (`private` ⇒ Cloudflare never
-    // caches it). Mutations show up within 30s; SWR revalidation still applies.
-    { headers: { "Cache-Control": "private, max-age=30, stale-while-revalidate=300" } },
+    // Mutable per-user data: `no-store` so a post-mutation SWR revalidation is
+    // never answered stale from the browser cache (see MUTABLE_JSON_CACHE_HEADERS).
+    { headers: MUTABLE_JSON_CACHE_HEADERS },
   );
 });
 
