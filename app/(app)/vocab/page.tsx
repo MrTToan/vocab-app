@@ -7,22 +7,12 @@ import { STAGE_ORDER, STAGE_LABEL, STAGE_VAR, stageBarWidth } from "@/lib/ui";
 import { fetcher, KEY_STATS, KEY_CONFIG } from "@/lib/swr";
 import Collections from "@/components/vocab/Collections";
 
-interface Summary {
-  provider: string;
-  model: string;
+// /api/config carries owner-only diagnostic fields (backend, provider chain) too,
+// but this page only needs `hasLLM`/`owner` to decide whether to nudge setup.
+interface Config {
+  hasLLM: boolean;
+  owner: boolean;
 }
-// /api/config only includes the diagnostic fields (backend, provider chain)
-// for the owner; everyone else gets `{ hasLLM, owner: false }`.
-type Config =
-  | { hasLLM: boolean; owner: false }
-  | {
-      hasLLM: boolean;
-      owner: true;
-      backend: "sheet" | "sqlite";
-      mode: "default" | "custom" | "chain";
-      active: number;
-      chain: Summary[];
-    };
 interface Stats {
   words: { total: number; weak: number; stageCounts: Record<string, number> };
 }
@@ -65,46 +55,11 @@ export default function Home() {
         </p>
       </section>
 
-      {/* Owner-only diagnostics: the setup nudge (it points at a repo doc) and the
-          storage/provider strip. End users never see backend or vendor names —
-          if AI is off they just get a plain functional note. */}
+      {/* Owner-only setup nudge (it points at a repo doc). End users just get a
+          plain functional note when AI is off — never backend or vendor names. */}
       {config && config.owner && !config.hasLLM && <SetupBanner />}
 
-      {config && config.owner ? (
-        <div className="flex flex-wrap items-center gap-2 text-xs muted">
-          <span className="chip">
-            storage: {config.backend === "sheet" ? "Google Sheet" : "SQLite"}
-          </span>
-          {config.hasLLM ? (
-            <>
-              <span className="chip">{config.mode} mode</span>
-              {config.chain.map((c, i) => (
-                <span
-                  key={i}
-                  title={
-                    i === config.active
-                      ? "active provider"
-                      : i < config.active
-                        ? "dropped (failed 3× in a row)"
-                        : "fallback"
-                  }
-                  style={{
-                    fontWeight: i === config.active ? 700 : 400,
-                    textDecoration: i < config.active ? "line-through" : "none",
-                    opacity: i < config.active ? 0.5 : 1,
-                  }}
-                >
-                  {i > 0 && "→ "}
-                  {c.provider}/{c.model}
-                  {i === config.active && config.chain.length > 1 && " ✓"}
-                </span>
-              ))}
-            </>
-          ) : (
-            <span>AI off — flashcards, cloze & type-the-word still work</span>
-          )}
-        </div>
-      ) : config && !config.hasLLM ? (
+      {config && !config.owner && !config.hasLLM ? (
         <p className="text-xs muted">
           AI features are off right now — flashcards, cloze &amp; type-the-word still work.
         </p>
