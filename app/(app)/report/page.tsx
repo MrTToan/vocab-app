@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import useSWR from "swr";
-import { STAGE_ORDER, STAGE_LABEL, STAGE_VAR, stageBarWidth } from "@/lib/ui";
+import { STAGE_LABEL } from "@/lib/ui";
 import { fetcher, KEY_STATS, KEY_WRITING_STATS } from "@/lib/swr";
 import {
   CRITERIA,
@@ -12,22 +12,30 @@ import {
   type ErrorType,
 } from "@/lib/writing/types";
 import { bandColor } from "@/components/writing/Feedback";
+import type { Stage } from "@/lib/types";
+import {
+  weightedAccuracyPct,
+  dailyAccuracy,
+  weekOverWeek,
+  rankTypesByAccuracy,
+  masteryPipeline,
+  streakDots,
+  STAGE_RAMP,
+} from "@/lib/report";
+import {
+  Sparkline,
+  AccuracyTrend,
+  ActivityColumns,
+  BandTrend,
+  MasteryPipeline,
+  HBars,
+  StreakStrip,
+  type HBarRow,
+} from "@/components/report/Charts";
 
-/* ── types ── */
-interface DayBar {
-  label: string;
-  total: number;
-  correct: number;
-  partial: number;
-  incorrect: number;
-}
-interface TypeStat {
-  type: string;
-  total: number;
-  correct: number;
-  partial: number;
-  incorrect: number;
-}
+/* ── types (mirror the /api/stats + /api/writing/stats payloads) ── */
+interface DayBar { label: string; total: number; correct: number; partial: number; incorrect: number }
+interface TypeStat { type: string; total: number; correct: number; partial: number; incorrect: number }
 interface VocabStats {
   words: { total: number; practiced: number; mastered: number; weak: number; stageCounts: Record<string, number> };
   attempts: {
@@ -51,6 +59,7 @@ interface WritingStats {
 }
 
 const TYPE_LABEL: Record<string, string> = {
+  multiple_choice: "Multiple choice",
   flashcard: "Flashcard",
   cloze: "Fill-in-the-blank",
   type_from_definition: "Type the word",
@@ -68,10 +77,13 @@ export default function ReportPage() {
 
   const words = s?.words;
   const attempts = s?.attempts;
-  const acc =
-    attempts && attempts.total > 0
-      ? Math.round(((attempts.overall.correct + attempts.overall.partial * 0.5) / attempts.total) * 100)
-      : 0;
+  const hasAttempts = !!attempts && attempts.total > 0;
+  const overallAcc = attempts ? weightedAccuracyPct(attempts.overall) : 0;
+  const daily = attempts ? dailyAccuracy(attempts.byDay) : [];
+  const wow = attempts ? weekOverWeek(attempts.byDay) : { current: null, previous: null, deltaPts: null };
+  const windowTotal = attempts ? attempts.byDay.reduce((a, d) => a + d.total, 0) : 0;
+
+  const pipeline = words ? masteryPipeline(words.stageCounts) : null;
 
   return (
     <div className="space-y-6">
@@ -80,115 +92,148 @@ export default function ReportPage() {
         <p className="muted mt-1">Your progress across every skill in one place.</p>
       </section>
 
-      {/* ── overview tiles (cross-skill) ── */}
-      <div className="grid grid-cols-3 md:grid-cols-4 gap-3">
+      {/* ── HERO: how you're doing (accuracy + trend + overall mix) ── */}
+      <section className="card p-5 space-y-4">
+        <div className="sechead flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+          <h3 className="font-bold">How you&rsquo;re doing</h3>
+          <span className="muted text-sm">Vocabulary · last 14 days</span>
+        </div>
+        {!hasAttempts ? (
+          <p className="muted text-sm">Practise some words and your accuracy trend will appear here.</p>
+        ) : (
+          <>
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
+              <div>
+                <div className="text-5xl font-extrabold leading-none" style={{ color: "var(--accent)" }}>
+                  {overallAcc}<span className="text-2xl muted font-semibold">%</span>
+                </div>
+                <div className="muted text-xs mt-1.5">weighted accuracy · all time</div>
+                {wow.deltaPts != null && wow.deltaPts !== 0 && (
+                  <div className="text-xs font-bold mt-0.5" style={{ color: wow.deltaPts > 0 ? "var(--good)" : "var(--bad)" }}>
+                    {wow.deltaPts > 0 ? "▲" : "▼"} {Math.abs(wow.deltaPts)} pts vs last week
+                  </div>
+                )}
+              </div>
+              <div className="flex-1" style={{ minWidth: 160, maxWidth: 360 }}>
+                <Sparkline values={daily.map((d) => d.pct)} />
+              </div>
+            </div>
+            {/* overall answer breakdown — status trio with 2px gaps + labels (secondary encoding) */}
+            <div>
+              <div className="w-full rounded-full overflow-hidden flex" style={{ height: 14, background: "color-mix(in srgb, var(--ink) 6%, transparent)", gap: 2 }}>
+                {([["correct", "var(--good)"], ["partial", "var(--warn)"], ["incorrect", "var(--bad)"]] as const).map(([k, c]) =>
+                  attempts!.overall[k] > 0 ? (
+                    <div key={k} style={{ width: `${(attempts!.overall[k] / attempts!.total) * 100}%`, background: c }} title={`${attempts!.overall[k]}`} />
+                  ) : null,
+                )}
+              </div>
+              <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-xs muted">
+                <span className="inline-flex items-center gap-1"><span className="inline-block w-2.5 h-2.5 rounded-sm" style={{ background: "var(--good)" }} />Correct {attempts!.overall.correct}</span>
+                <span className="inline-flex items-center gap-1"><span className="inline-block w-2.5 h-2.5 rounded-sm" style={{ background: "var(--warn)" }} />Almost {attempts!.overall.partial}</span>
+                <span className="inline-flex items-center gap-1"><span className="inline-block w-2.5 h-2.5 rounded-sm" style={{ background: "var(--bad)" }} />Missed {attempts!.overall.incorrect}</span>
+              </div>
+            </div>
+          </>
+        )}
+      </section>
+
+      {/* ── KPI row (4) ── */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         <Tile label="Words" value={words?.total ?? 0} />
-        <Tile label="Practiced" value={words?.practiced ?? 0} />
         <Tile label="Mastered" value={words?.mastered ?? 0} accent="var(--good)" />
-        <Tile label="Need work" value={words?.weak ?? 0} accent="var(--warn)" />
-        <Tile label="Attempts" value={attempts?.total ?? 0} />
-        <Tile label="Day streak" value={attempts?.streak ?? 0} accent="var(--accent)" suffix="🔥" />
-        <Tile label="Essays" value={w?.submissions ?? 0} />
-        <Tile
-          label="Avg band"
-          value={w?.avgOverall != null ? w.avgOverall.toFixed(1) : "—"}
-          accent={w?.avgOverall != null ? bandColor(w.avgOverall) : undefined}
-        />
+        <div className="card p-3">
+          <div className="text-2xl font-extrabold" style={{ color: "var(--accent)" }}>
+            {attempts?.streak ?? 0}{(attempts?.streak ?? 0) > 0 ? " 🔥" : ""}
+          </div>
+          <div className="muted text-xs">Day streak</div>
+          {attempts && <StreakStrip dots={streakDots(attempts.byDay)} />}
+        </div>
+        <Tile label="Attempts" value={attempts?.total ?? 0} suffixNote={(words?.weak ?? 0) > 0 ? `${words!.weak} need work` : undefined} />
       </div>
 
       {/* ══════════ VOCABULARY ══════════ */}
       <h2 className="text-xl font-bold pt-2">Vocabulary</h2>
 
-      <Section title="Mastery by stage" subtitle="New is your not-yet-started backlog; the coloured bars compare your started stages to each other.">
-        <div className="space-y-2">
-          {STAGE_ORDER.map((st) => {
-            const n = words?.stageCounts[st] ?? 0;
-            const pct = stageBarWidth(st, words?.stageCounts ?? {});
-            const isNew = st === "new";
-            return (
-              <div key={st} className="flex items-center gap-3">
-                <div className="w-24 text-sm font-semibold">{STAGE_LABEL[st]}</div>
-                <div className="flex-1 h-3 rounded-full overflow-hidden bg-black/5 dark:bg-white/10">
-                  <div
-                    className="h-full rounded-full"
-                    style={{
-                      width: `${pct}%`,
-                      background: STAGE_VAR[st],
-                      opacity: isNew ? 0.35 : 1,
-                    }}
-                  />
-                </div>
-                <div className="w-10 text-right text-sm muted tabular-nums">{n}</div>
-              </div>
-            );
-          })}
-        </div>
-      </Section>
-
-      <Section title="Activity — last 14 days" subtitle={attempts && attempts.total > 0 ? `Overall accuracy ${acc}%` : undefined}>
-        {!attempts || attempts.byDay.every((d) => d.total === 0) ? (
-          <p className="muted text-sm">Practice some words and your activity will show here.</p>
+      {/* MASTERY PIPELINE */}
+      <Section title="Your climb to mastery" subtitle="Every word placed on the path from New to Known. Deeper green is closer to mastery.">
+        {!pipeline || pipeline.total === 0 ? (
+          <p className="muted text-sm">Add words to start your climb.</p>
         ) : (
-          <DailyChart days={attempts.byDay} />
+          <div className="space-y-3">
+            <div className="flex flex-wrap items-center gap-4">
+              <div>
+                <div className="text-4xl font-extrabold leading-none" style={{ color: "var(--stage-known)" }}>
+                  {pipeline.knownPct}<span className="text-xl muted font-semibold">%</span>
+                </div>
+                <div className="muted text-xs mt-1">Known</div>
+              </div>
+              <div className="flex-1" style={{ minWidth: 220 }}>
+                <MasteryPipeline
+                  segments={pipeline.segments}
+                  colorOf={(st: Stage) => STAGE_RAMP[st]}
+                  labelOf={(st: Stage) => STAGE_LABEL[st]}
+                />
+              </div>
+            </div>
+          </div>
         )}
       </Section>
 
-      {attempts && attempts.total > 0 && (
-        <Section title="Answer breakdown">
-          <StackBar
-            parts={[
-              { v: attempts.overall.correct, c: "var(--good)", label: "Correct" },
-              { v: attempts.overall.partial, c: "var(--warn)", label: "Almost" },
-              { v: attempts.overall.incorrect, c: "var(--bad)", label: "Missed" },
-            ]}
-            total={attempts.total}
-          />
-        </Section>
-      )}
-
-      {attempts && attempts.byType.length > 0 && (
-        <Section title="By exercise type">
-          <div className="space-y-3">
-            {attempts.byType.map((t) => {
-              const a = t.total ? Math.round(((t.correct + t.partial * 0.5) / t.total) * 100) : 0;
-              return (
-                <div key={t.type} className="space-y-1">
-                  <div className="flex justify-between text-sm">
-                    <span className="font-semibold">{TYPE_LABEL[t.type] ?? t.type}</span>
-                    <span className="muted">{t.total} · {a}% acc</span>
-                  </div>
-                  <StackBar
-                    parts={[
-                      { v: t.correct, c: "var(--good)", label: "Correct" },
-                      { v: t.partial, c: "var(--warn)", label: "Almost" },
-                      { v: t.incorrect, c: "var(--bad)", label: "Missed" },
-                    ]}
-                    total={t.total}
-                    thin
-                  />
-                </div>
-              );
-            })}
+      {/* ACTIVITY: volume columns + separate accuracy line */}
+      <Section
+        title="Practice activity — last 14 days"
+        subtitle={hasAttempts ? `${windowTotal} attempts` : undefined}
+      >
+        {!hasAttempts || attempts!.byDay.every((d) => d.total === 0) ? (
+          <p className="muted text-sm">Practice some words and your activity will show here.</p>
+        ) : (
+          <div className="space-y-4">
+            <div>
+              <ActivityColumns days={attempts!.byDay} />
+              <div className="flex gap-4 mt-2 text-xs muted">
+                <span className="inline-flex items-center gap-1"><span className="inline-block w-2.5 h-2.5 rounded-sm" style={{ background: "var(--good)" }} />Correct</span>
+                <span className="inline-flex items-center gap-1"><span className="inline-block w-2.5 h-2.5 rounded-sm" style={{ background: "var(--warn)" }} />Almost</span>
+                <span className="inline-flex items-center gap-1"><span className="inline-block w-2.5 h-2.5 rounded-sm" style={{ background: "var(--bad)" }} />Missed</span>
+              </div>
+            </div>
+            <div>
+              <div className="muted text-xs font-bold mb-1">Daily accuracy</div>
+              <AccuracyTrend series={daily} />
+            </div>
           </div>
+        )}
+      </Section>
+
+      {/* WHERE TO FOCUS: accuracy by type, weakest-first */}
+      {attempts && attempts.byType.length > 0 && (
+        <Section title="Where to focus" subtitle="Accuracy by exercise type — weakest first">
+          <HBars rows={rankTypesByAccuracy(attempts.byType).map((t): HBarRow => ({
+            key: t.type,
+            name: TYPE_LABEL[t.type] ?? t.type,
+            widthPct: t.pct,
+            valueLabel: `${t.pct}% · ${t.total}${t.lowSample ? " · low" : ""}`,
+            color: "var(--accent)",
+            muted: true,
+            title: `${TYPE_LABEL[t.type] ?? t.type}: ${t.pct}% accuracy over ${t.total} attempts${t.lowSample ? " (low sample)" : ""}`,
+          }))} />
         </Section>
       )}
 
+      {/* MOST PRACTICED */}
       {s && s.topSeen.length > 0 && (
         <Section title="Most practiced words">
-          <div className="space-y-1.5">
-            {s.topSeen.map((word) => {
-              const max = s.topSeen[0].times_seen || 1;
-              return (
-                <div key={word.word} className="flex items-center gap-3">
-                  <div className="w-32 truncate text-sm font-semibold">{word.word}</div>
-                  <div className="flex-1 h-2.5 rounded-full overflow-hidden bg-black/5 dark:bg-white/10">
-                    <div className="h-full rounded-full" style={{ width: `${(word.times_seen / max) * 100}%`, background: "var(--accent)" }} />
-                  </div>
-                  <div className="w-6 text-right text-sm muted">{word.times_seen}</div>
-                </div>
-              );
-            })}
-          </div>
+          <HBars rows={s.topSeen.map((word): HBarRow => {
+            const max = s.topSeen[0].times_seen || 1;
+            return {
+              key: word.word,
+              name: word.word,
+              widthPct: (word.times_seen / max) * 100,
+              valueLabel: String(word.times_seen),
+              color: "var(--accent)",
+              muted: true,
+              title: `${word.word}: practised ${word.times_seen}×`,
+            };
+          })} />
         </Section>
       )}
 
@@ -204,47 +249,48 @@ export default function ReportPage() {
         </div>
       ) : (
         <div className="space-y-6">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            {CRITERIA.map((c) => {
-              const b = w.avgBands[c];
-              return (
-                <div key={c} className="card p-4 text-center">
-                  <div className="text-2xl font-extrabold" style={{ color: b != null ? bandColor(b) : "var(--muted)" }}>
-                    {b != null ? b.toFixed(1) : "—"}
-                  </div>
-                  <div className="text-xs muted mt-1">{CRITERION_LABEL[c]}</div>
-                </div>
-              );
-            })}
+          {/* writing summary tiles (moved here, in context) */}
+          <div className="grid grid-cols-3 gap-3">
+            <Tile label="Essays" value={w.submissions} />
+            <Tile label="Avg band" value={w.avgOverall != null ? w.avgOverall.toFixed(1) : "—"} accent={w.avgOverall != null ? bandColor(w.avgOverall) : undefined} />
+            <Tile label="Avg words" value={w.avgWordCount != null ? Math.round(w.avgWordCount) : 0} />
           </div>
 
-          <Section title="Overall band over time">
-            <div className="flex items-end gap-2 h-36">
-              {w.bandSeries.map((p, i) => (
-                <div key={i} className="flex-1 flex flex-col items-center justify-end h-full gap-1" title={new Date(p.ts).toLocaleDateString()}>
-                  <div className="text-[10px] font-bold" style={{ color: bandColor(p.overall) }}>{p.overall.toFixed(1)}</div>
-                  <div className="w-full rounded-t" style={{ height: `${(p.overall / 9) * 100}%`, background: bandColor(p.overall), minHeight: 4 }} />
-                  <div className="text-[9px] muted">{p.task_type === "task1" ? "T1" : "T2"}</div>
-                </div>
-              ))}
-            </div>
+          <Section title="Band by criterion" subtitle="Average over your essays · out of 9">
+            <HBars rows={CRITERIA.map((c): HBarRow => {
+              const b = w.avgBands[c];
+              return {
+                key: c,
+                name: CRITERION_LABEL[c],
+                widthPct: b != null ? (b / 9) * 100 : 0,
+                valueLabel: b != null ? b.toFixed(1) : "—",
+                color: b != null ? bandColor(b) : "var(--muted)",
+                title: b != null ? `${CRITERION_LABEL[c]}: band ${b.toFixed(1)}` : `${CRITERION_LABEL[c]}: not scored`,
+              };
+            })} />
           </Section>
 
-          <Section title="Most common mistakes">
-            <div className="space-y-2">
-              {w.errorFrequency.slice(0, 10).map((e) => {
+          <Section title="Band over time" subtitle="By task · band scale 4–9">
+            <WritingTrends bandSeries={w.bandSeries} byTask={w.byTask} />
+          </Section>
+
+          <Section title="Most common mistakes" subtitle="Your focus areas across every essay">
+            {w.errorFrequency.length === 0 ? (
+              <p className="muted text-sm">No mistakes logged yet — keep writing.</p>
+            ) : (
+              <HBars rows={w.errorFrequency.slice(0, 10).map((e): HBarRow => {
                 const max = w.errorFrequency[0]?.count || 1;
-                return (
-                  <div key={e.error_type} className="flex items-center gap-2 sm:gap-3">
-                    <div className="w-28 sm:w-40 text-sm truncate">{ERROR_LABEL[e.error_type]}</div>
-                    <div className="flex-1 h-3 rounded-full overflow-hidden bg-black/5 dark:bg-white/10">
-                      <div className="h-full rounded-full" style={{ width: `${(e.count / max) * 100}%`, background: "var(--accent)" }} />
-                    </div>
-                    <div className="w-6 text-right text-sm muted">{e.count}</div>
-                  </div>
-                );
-              })}
-            </div>
+                return {
+                  key: e.error_type,
+                  name: ERROR_LABEL[e.error_type],
+                  widthPct: (e.count / max) * 100,
+                  valueLabel: String(e.count),
+                  color: "var(--accent)",
+                  muted: true,
+                  title: `${ERROR_LABEL[e.error_type]}: ${e.count}×`,
+                };
+              })} />
+            )}
           </Section>
 
           <Section title="Recent submissions">
@@ -276,14 +322,12 @@ export default function ReportPage() {
 
 /* ── shared pieces ── */
 
-function Tile({ label, value, accent, suffix }: { label: string; value: number | string; accent?: string; suffix?: string }) {
+function Tile({ label, value, accent, suffixNote }: { label: string; value: number | string; accent?: string; suffixNote?: string }) {
   return (
     <div className="card p-3">
-      <div className="text-2xl font-extrabold" style={accent ? { color: accent } : undefined}>
-        {value}
-        {suffix && typeof value === "number" && value > 0 ? ` ${suffix}` : ""}
-      </div>
+      <div className="text-2xl font-extrabold" style={accent ? { color: accent } : undefined}>{value}</div>
       <div className="muted text-xs">{label}</div>
+      {suffixNote && <div className="muted text-xs mt-0.5" style={{ fontWeight: 600 }}>{suffixNote}</div>}
     </div>
   );
 }
@@ -300,84 +344,18 @@ function Section({ title, subtitle, children }: { title: string; subtitle?: stri
   );
 }
 
-function DailyChart({ days }: { days: DayBar[] }) {
-  const max = Math.max(1, ...days.map((d) => d.total));
+/* Writing band trend split into Task 1 / Task 2 small multiples. */
+function WritingTrends({ bandSeries, byTask }: { bandSeries: { overall: number; task_type: string }[]; byTask: { task1: number; task2: number } }) {
+  const t1 = bandSeries.filter((p) => p.task_type === "task1").map((p) => p.overall);
+  const t2 = bandSeries.filter((p) => p.task_type === "task2").map((p) => p.overall);
   return (
-    <div>
-      <div className="flex items-end gap-1.5 h-32">
-        {days.map((d, i) => {
-          const h = (d.total / max) * 100;
-          return (
-            <div
-              key={i}
-              className="flex-1 flex flex-col justify-end h-full"
-              title={`${d.label}: ${d.total} (${d.correct}✓ ${d.partial}~ ${d.incorrect}✗)`}
-            >
-              {d.total === 0 ? (
-                <div className="w-full rounded bg-black/5 dark:bg-white/10" style={{ height: 3 }} />
-              ) : (
-                <div className="w-full rounded overflow-hidden flex flex-col-reverse" style={{ height: `${h}%` }}>
-                  <Seg v={d.correct} t={d.total} c="var(--good)" />
-                  <Seg v={d.partial} t={d.total} c="var(--warn)" />
-                  <Seg v={d.incorrect} t={d.total} c="var(--bad)" />
-                </div>
-              )}
-            </div>
-          );
-        })}
-      </div>
-      <div className="flex gap-1.5 mt-1">
-        {days.map((d, i) => (
-          <div key={i} className="flex-1 text-center muted" style={{ fontSize: 9 }}>
-            {i % 2 === 0 ? d.label : ""}
-          </div>
-        ))}
-      </div>
-      <Legend />
-    </div>
-  );
-}
-
-function Seg({ v, t, c }: { v: number; t: number; c: string }) {
-  if (v <= 0) return null;
-  return <div style={{ height: `${(v / t) * 100}%`, background: c }} />;
-}
-
-function StackBar({ parts, total, thin }: { parts: { v: number; c: string; label: string }[]; total: number; thin?: boolean }) {
-  return (
-    <div>
-      <div className="w-full rounded-full overflow-hidden flex bg-black/5 dark:bg-white/10" style={{ height: thin ? 8 : 14 }}>
-        {parts.map((p, i) =>
-          p.v > 0 ? <div key={i} style={{ width: `${(p.v / total) * 100}%`, background: p.c }} title={`${p.label}: ${p.v}`} /> : null,
-        )}
-      </div>
-      {!thin && (
-        <div className="flex gap-4 mt-2 text-xs muted">
-          {parts.map((p, i) => (
-            <span key={i} className="inline-flex items-center gap-1">
-              <span className="inline-block w-2.5 h-2.5 rounded-sm" style={{ background: p.c }} />
-              {p.label} {p.v}
-            </span>
-          ))}
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {([["Task 1", t1, byTask.task1], ["Task 2", t2, byTask.task2]] as const).map(([label, vals, n]) => (
+        <div key={label}>
+          <div className="text-sm font-semibold">{label}</div>
+          <div className="muted text-xs mb-1">{n} {n === 1 ? "essay" : "essays"}</div>
+          {vals.length > 0 ? <BandTrend values={vals} /> : <p className="muted text-sm py-6">No {label} essays yet.</p>}
         </div>
-      )}
-    </div>
-  );
-}
-
-function Legend() {
-  const items = [
-    { c: "var(--good)", l: "Correct" },
-    { c: "var(--warn)", l: "Almost" },
-    { c: "var(--bad)", l: "Missed" },
-  ];
-  return (
-    <div className="flex gap-4 mt-3 text-xs muted">
-      {items.map((it) => (
-        <span key={it.l} className="inline-flex items-center gap-1">
-          <span className="inline-block w-2.5 h-2.5 rounded-sm" style={{ background: it.c }} />
-          {it.l}
-        </span>
       ))}
     </div>
   );
