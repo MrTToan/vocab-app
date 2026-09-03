@@ -12,9 +12,11 @@ Current order:
 **#1 Google Gemini → #2 Groq (free) → #3 OpenAI (paid, last resort)**
 
 Every call also **falls through the chain within the same request**: if the active provider errors
-(even a one-off network blip), Lexi immediately tries the next one before giving up — so a single hiccup
-no longer fails your click. Every call also has a **bounded timeout** (25 s for enrichment/scoring, 60 s
-for essay scoring and chart reading); a timeout counts as a failure and falls through like any other.
+(even a one-off network blip) — or returns a reply that doesn't match the expected shape, which some
+OpenAI-compatible endpoints do even with a schema attached — Lexi immediately tries the next one before
+giving up, so a single hiccup no longer fails your click. Every call also has a **bounded timeout** (25 s
+for enrichment/scoring, 60 s for essay scoring and chart reading); a timeout counts as a failure and falls
+through like any other.
 On top of that, if a provider fails **3 times in a row** with a *transient* error (network error, timeout,
 HTTP 408/429/5xx — a 400 or a malformed reply does not count), Lexi advances its *default* starting provider.
 It does not stay there for good: after a **5-minute cool-down** (`LLM_RECOVER_AFTER_MS`) the next call probes
