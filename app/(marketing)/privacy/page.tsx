@@ -56,6 +56,19 @@ export default function PrivacyPolicy() {
             </p>
           </Section>
 
+          <Section title="Classes">
+            <p>
+              Lexi has an optional Classes feature. If you choose to join a class — by entering
+              a class code and confirming on an explicit consent screen — the teacher(s) of that
+              class can view your full Lexi report (your vocabulary progress and your writing
+              bands), updated live, for as long as you remain a member. The report they see is the
+              same summary you see; they cannot edit your data or act as you, and they do not see
+              your raw word content. This access exists only while you are in the class: leaving
+              the class, or being removed from it, ends the teacher&rsquo;s access immediately. If
+              you never join a class, none of your data is shared with any other Lexi user.
+            </p>
+          </Section>
+
           <Section title="Third-party AI providers">
             <p>
               To grade written answers and enrich vocabulary words, the text you submit for those
@@ -67,9 +80,10 @@ export default function PrivacyPolicy() {
 
           <Section title="Storage & sharing">
             <p>
-              Your data is stored in a database on the app&rsquo;s own server. It is not sold, and it is
-              not shared with anyone beyond the AI providers listed above, which are used only to
-              deliver the writing-feedback and word-enrichment features.
+              Your data is stored in a database on the app&rsquo;s own server. It is not sold. It is not
+              shared with anyone beyond the AI providers listed above (used only to deliver the
+              writing-feedback and word-enrichment features) and, if you choose to join a class, the
+              teacher(s) of that class as described under &ldquo;Classes&rdquo; above.
             </p>
           </Section>
 

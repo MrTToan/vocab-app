@@ -183,7 +183,11 @@ export default function About() {
                 Lexi is multi-tenant: your words, your progress and your writing
                 live under your account and yours alone. Other people using Lexi
                 can&rsquo;t see any of it. The curated word packs are shared, but
-                your practice history never is.
+                your practice history never is — with one exception you choose:
+                if you join a class, that class&rsquo;s teacher can see your full
+                Lexi report for as long as you&rsquo;re in the class. You agree to
+                it when you join, and leaving the class removes their access
+                immediately.
               </p>
             </div>
             <div className="row">

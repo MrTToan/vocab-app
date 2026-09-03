@@ -156,6 +156,12 @@ function isForbiddenError(err: unknown): boolean {
 
 function mapError(err: unknown): Response {
   if (isRateLimitError(err)) return json(429, { error: err.message });
+  // Class-feature cap (lib/classes/config.ts ClassCapError) → 409, matched by
+  // name so the wrapper needs no hard import of the classes module. The message
+  // is user-facing ("This class is full." etc.), unlike the opaque 403/500.
+  if (err instanceof Error && err.name === "ClassCapError") {
+    return json(409, { error: err.message });
+  }
   if (isForbiddenError(err)) {
     return json(403, { error: "forbidden" });
   }

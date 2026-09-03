@@ -32,3 +32,4 @@ session cookie; API routes still return 401 and remain the real enforcement.
 10. [Data & storage](data-and-storage.md) — what's stored, where, and backups
 11. [Admin portal](admin.md) — the owner-only usage dashboard at `/admin`
 12. [Feedback](feedback.md) — the in-app floating feedback widget + the admin Feedback subtab
+13. [Classes](classes.md) — teachers gather students by join code; consent-gated report sharing
