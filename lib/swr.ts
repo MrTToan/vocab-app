@@ -5,6 +5,7 @@ import useSWRInfinite, {
   type SWRInfiniteConfiguration,
 } from "swr/infinite";
 import type { Word, WordListItem } from "./types";
+import type { ClassDetail, MyClassesData } from "./classes/types";
 import { jsonFetch } from "./ui";
 import {
   WORDS_LIST_BASE,
@@ -49,9 +50,15 @@ export const KEY_COLLECTIONS = "/api/collections";
 export const KEY_STATS = "/api/stats";
 export const KEY_CONFIG = "/api/config";
 export const KEY_WRITING_STATS = "/api/writing/stats";
+/** The classes hub (teaching + enrolled). Every class key lives under this
+ *  prefix so `revalidateClasses()` matches the hub, detail and roster at once. */
+export const KEY_CLASSES = "/api/classes";
 
 /** Per-word full-detail key (lazy editor load after the slim list). */
 export const wordKey = (id: string) => `/api/words/${id}`;
+
+/** One class's detail (teacher roster / student trust view). */
+export const classKey = (id: string) => `/api/classes/${id}`;
 
 /** Writing question list for one task tab (task1 | task2). */
 export const writingPromptsKey = (task: string) => `/api/writing/prompts?task=${task}`;
@@ -104,6 +111,16 @@ export function useConfig(config?: SWRConfiguration) {
   return useSWR<ConfigData>(KEY_CONFIG, fetcher, config);
 }
 
+/** The classes hub — the caller's teaching + enrolled classes. */
+export function useMyClasses(config?: SWRConfiguration) {
+  return useSWR<MyClassesData>(KEY_CLASSES, fetcher, config);
+}
+
+/** One class's detail (pass a falsy id to skip). */
+export function useClass(id: string | null | undefined, config?: SWRConfiguration) {
+  return useSWR<ClassDetail>(id ? classKey(id) : null, fetcher, config);
+}
+
 /**
  * Writing question list for a task, cached per task key. `P` is the caller's
  * prompt row shape (the writing components decorate summaries with stats).
@@ -126,6 +143,15 @@ export function revalidateCollections() {
 }
 export function revalidateStats() {
   return mutate(KEY_STATS);
+}
+/**
+ * A class was created / joined / left / renamed / archived, or its roster or
+ * join code changed. Match every class key by PREFIX (the hub, each detail, each
+ * roster) so nothing is left stale after a write — keep new class keys under
+ * KEY_CLASSES.
+ */
+export function revalidateClasses() {
+  return mutate((key) => typeof key === "string" && key.startsWith(KEY_CLASSES));
 }
 /** A writing prompt was added or a submission scored — refetch that task's list. */
 export function revalidateWritingPrompts(task: string) {

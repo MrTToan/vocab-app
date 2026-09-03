@@ -80,6 +80,21 @@ export default function Nav({ authSlot, adminSlot }: { authSlot?: ReactNode; adm
           >
             📊<span className="hidden sm:inline"> Report</span>
           </Link>
+          {/* Classes is a cross-cutting area (like Report), not a study module —
+              and any signed-in user can create or join one, so it is NOT
+              owner-gated (unlike the Admin link). */}
+          <Link
+            href="/classes"
+            title="Classes"
+            className="px-2.5 sm:px-3 py-1.5 rounded-lg text-sm font-semibold whitespace-nowrap transition-colors"
+            style={
+              path === "/classes" || path.startsWith("/classes/")
+                ? { background: "var(--accent-soft)", color: "var(--accent)" }
+                : { color: "var(--muted)" }
+            }
+          >
+            👥<span className="hidden sm:inline"> Classes</span>
+          </Link>
           {adminSlot}
           <ThemeToggle />
           {authSlot}
