@@ -8,6 +8,7 @@ import { useMyClasses, useMyInvites, revalidateClasses } from "@/lib/swr";
 import type { ClassRow, JoinPreview, PendingInvite } from "@/lib/classes/types";
 import ConsentDialog from "@/components/classes/ConsentDialog";
 import InviteBanner from "@/components/classes/InviteBanner";
+import AssignedToYou from "@/components/assignments/AssignedToYou";
 
 /*
  * The /classes hub — create/teach a class, or join one by code. Any signed-in
@@ -50,6 +51,8 @@ export default function ClassesHubPage() {
       />
 
       <JoinBox onJoined={() => revalidateClasses()} router={router} />
+
+      <AssignedToYou />
 
       <section className="space-y-3">
         <div className="flex items-baseline justify-between">

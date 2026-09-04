@@ -1030,7 +1030,33 @@ class SqliteStore implements Store {
     });
     const c: any = rs.rows[0];
     if (!c) return false;
-    return str(c.owner_id) === userId || str(c.visibility) === "public";
+    if (str(c.owner_id) === userId || str(c.visibility) === "public") return true;
+    // Assignment grant: a student targeted by an ACTIVE vocab-collection
+    // assignment for this collection may practise it, even when it is private —
+    // so `/practice?collection=<id>` works for the assigned deep-link. The grant
+    // is derived LIVE from the target row AND current class membership AND the
+    // assignment/class being un-archived, so removing the student, archiving the
+    // assignment, or archiving the class each revokes it instantly (no cleanup,
+    // mirroring how leaving a class revokes report access). Only runs for a
+    // collection the caller neither owns nor is public, so public/owned packs pay
+    // nothing. See lib/assignments/store.ts.
+    const g = await this.db.execute({
+      sql: `SELECT 1
+              FROM assignment_targets t
+              JOIN assignments a    ON a.id = t.assignment_id
+              JOIN classes cl       ON cl.id = a.class_id
+              JOIN class_members cm ON cm.class_id = a.class_id
+                                   AND cm.user_id = t.user_id
+                                   AND cm.role = 'student'
+             WHERE t.user_id = ?
+               AND a.content_kind = 'vocab_collection'
+               AND a.content_ref = ?
+               AND a.archived_at IS NULL
+               AND cl.archived_at IS NULL
+             LIMIT 1`,
+      args: [userId, id],
+    });
+    return g.rows.length > 0;
   }
 
   async collections(userId: string): Promise<Collection[]> {

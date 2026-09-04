@@ -9,6 +9,12 @@ import {
   INVITE_EMAIL_MAX,
   INVITE_EMAILS_MAX,
 } from "@/lib/classes/types";
+import {
+  ASSIGNMENT_KINDS,
+  ASSIGNMENT_INSTRUCTIONS_MAX,
+  ASSIGNMENT_TARGETS_MAX,
+  ASSIGNMENT_TITLE_MAX,
+} from "@/lib/assignments/types";
 
 /*
  * Zod schemas (zod 4) for every API route, consumed via lib/api.ts. Bodies are
@@ -360,4 +366,41 @@ export const createInvitesSchema = z.strictObject({
     .array(z.string().trim().min(1).max(INVITE_EMAIL_MAX))
     .min(1, "enter at least one email")
     .max(INVITE_EMAILS_MAX, `up to ${INVITE_EMAILS_MAX} emails at a time`),
+});
+
+/* ── assignments ───────────────────────────────────────────────────── */
+
+const assignmentTitle = z.string().max(ASSIGNMENT_TITLE_MAX);
+const assignmentInstructions = z.string().max(ASSIGNMENT_INSTRUCTIONS_MAX);
+// Epoch-ms due date; nullable so a patch can clear it. Non-negative int.
+const dueAt = z.number().int().min(0).nullable();
+
+/** POST /api/classes/[id]/assignments — create an assignment (teacher-only).
+ *  `kind` selects the content adapter; `ref` is the stable content id; `studentIds`
+ *  are the specific students to target (the store keeps only real class students). */
+export const createAssignmentSchema = z.strictObject({
+  kind: z.enum(ASSIGNMENT_KINDS),
+  ref: idSchema,
+  title: assignmentTitle.optional(),
+  instructions: assignmentInstructions.optional(),
+  dueAt: dueAt.optional(),
+  studentIds: z
+    .array(idSchema)
+    .min(1, "select at least one student")
+    .max(ASSIGNMENT_TARGETS_MAX),
+});
+
+/** PATCH /api/assignments/[id] — teacher edits title/instructions/due date. */
+export const patchAssignmentSchema = z
+  .strictObject({
+    title: assignmentTitle.optional(),
+    instructions: assignmentInstructions.optional(),
+    dueAt: dueAt.optional(),
+  })
+  .refine((o) => Object.keys(o).length > 0, { message: "no fields to update" });
+
+/** GET /api/assignments/content?kind=&q= — the teacher's content picker. */
+export const assignmentContentQuerySchema = z.strictObject({
+  kind: z.enum(ASSIGNMENT_KINDS),
+  q: z.string().max(100).optional(),
 });
