@@ -17,8 +17,8 @@
  *   already honours (lib/writing/deeplink.ts, components/writing/WritingPractice.tsx);
  *   no parallel player.
  * - MEASURE: "submitted" — the writing analog of vocab's "practised once": the
- *   student has ≥1 stored submission for the prompt
- *   (writingStore.forUser(studentId).latestSubmission(promptId)).
+ *   student has ≥1 stored submission for the prompt made AT OR AFTER they were
+ *   assigned (an older submission never pre-credits a new assignment).
  */
 
 import { getDb } from "../../db";
@@ -71,22 +71,33 @@ function gradeWriting(p: WritingDone): AssignmentProgress {
 }
 
 /** Best overall band + submission count per student for one prompt, in ONE grouped
- *  query (no N+1 on the teacher's grid). Every requested id is present. */
+ *  query (no N+1 on the teacher's grid). Only submissions made at or after each
+ *  student's own `since` (the moment they were assigned) count — an older
+ *  submission never pre-credits a new assignment. Every requested id is present. */
 async function submittedForMany(
   studentIds: string[],
   promptId: string,
+  since: Record<string, number>,
 ): Promise<Record<string, WritingDone>> {
   const out: Record<string, WritingDone> = {};
   for (const id of studentIds) out[id] = { submitted: false, band: null };
   if (studentIds.length === 0) return out;
   const db = await getDb();
   const placeholders = studentIds.map(() => "?").join(",");
+  // Per-student lower time bound; a missing id falls back to +∞ (counts nothing).
+  const whenClauses = studentIds.map(() => "WHEN ? THEN ?").join(" ");
   const rs = await db.execute({
     sql: `SELECT user_id AS uid, COUNT(*) AS n, MAX(overall_band) AS band
             FROM writing_submissions
            WHERE prompt_id = ? AND user_id IN (${placeholders})
+             AND created_at >= (CASE user_id ${whenClauses} ELSE ? END)
            GROUP BY user_id`,
-    args: [promptId, ...studentIds],
+    args: [
+      promptId,
+      ...studentIds,
+      ...studentIds.flatMap((id) => [id, since[id] ?? Number.MAX_SAFE_INTEGER]),
+      Number.MAX_SAFE_INTEGER,
+    ],
   });
   for (const r of rs.rows as Record<string, unknown>[]) {
     const uid = String(r.uid);
@@ -164,13 +175,16 @@ export const writingPromptKind: AssignableKind = {
     return { rule: "submitted" };
   },
 
-  async progressFor(studentId, ref) {
+  async progressFor(studentId, ref, _criteria, assignedAt) {
+    // The latest submission is the most recent, so it qualifies iff it was made at
+    // or after the student was assigned (any older one is necessarily earlier too).
     const sub = await writingStore.forUser(studentId).latestSubmission(ref);
-    return gradeWriting({ submitted: !!sub, band: sub ? sub.overall_band : null });
+    const done = !!sub && sub.created_at >= assignedAt;
+    return gradeWriting({ submitted: done, band: done ? sub!.overall_band : null });
   },
 
-  async progressForMany(studentIds, ref) {
-    const many = await submittedForMany(studentIds, ref);
+  async progressForMany(studentIds, ref, _criteria, assignedAt) {
+    const many = await submittedForMany(studentIds, ref, assignedAt);
     const out: Record<string, AssignmentProgress> = {};
     for (const id of studentIds) out[id] = gradeWriting(many[id] ?? { submitted: false, band: null });
     return out;
