@@ -532,7 +532,16 @@ function AnswerArea({
           placeholder={placeholder}
           value={answer}
           onChange={(e) => setAnswer(e.target.value)}
-          onKeyDown={(e) => e.key === "Enter" && answer.trim() && submit()}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" && answer.trim()) {
+              // Prevent this keystroke from doing anything beyond submitting:
+              // it flips status → "feedback", and without preventDefault the same
+              // Enter could roll on to the freshly-mounted "Next" button (see the
+              // deferred-focus note in <Feedback>).
+              e.preventDefault();
+              submit();
+            }
+          }}
           autoFocus
         />
       ) : (
@@ -613,6 +622,21 @@ function Feedback({
   stageChange: { from: Stage; to: Stage } | null;
   onNext: () => void;
 }) {
+  const nextRef = useRef<HTMLButtonElement>(null);
+  // Focus "Next" on the NEXT frame, never synchronously on mount. This panel
+  // mounts mid-keystroke: pressing Enter to submit a short answer flips status →
+  // "feedback" while that same physical Enter is still being processed. An
+  // `autoFocus` here would hand focus to this button in time for that keystroke
+  // to activate it (browsers fire a click when Enter lands on a focused button),
+  // so a single Enter would skip the verdict and auto-advance — the bug this
+  // fixes. Deferring focus to the next frame lets the submitting keystroke finish
+  // on nothing; a fresh, deliberate Enter (or a click) then advances, and
+  // keyboard users still land on "Next".
+  useEffect(() => {
+    const id = requestAnimationFrame(() => nextRef.current?.focus());
+    return () => cancelAnimationFrame(id);
+  }, []);
+
   const promoted =
     stageChange && STAGE_ORDER.indexOf(stageChange.to) > STAGE_ORDER.indexOf(stageChange.from);
   const color = result ? RESULT_VAR[result] : "var(--muted)";
@@ -703,7 +727,7 @@ function Feedback({
         )}
       </div>
 
-      <button className="btn btn-primary w-full" onClick={onNext} autoFocus>
+      <button ref={nextRef} className="btn btn-primary w-full" onClick={onNext}>
         Next →
       </button>
     </div>
