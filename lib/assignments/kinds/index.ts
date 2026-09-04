@@ -7,12 +7,13 @@
 import type { AssignmentKind, KindTab } from "../types";
 import type { AssignableKind } from "./kind";
 import { vocabCollectionKind } from "./vocab";
+import { writingPromptKind } from "./writing";
 
 export type { AssignableKind } from "./kind";
 
 export const KINDS: Record<AssignmentKind, AssignableKind> = {
   vocab_collection: vocabCollectionKind,
-  // Slice 2 drops in: writing_prompt: writingPromptKind,
+  writing_prompt: writingPromptKind,
 };
 
 /** The adapter for a kind string, or undefined for an unknown kind. */

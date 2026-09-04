@@ -12,9 +12,11 @@
  * (title/emoji/doHref) and an AssignmentProgress, and the UI just renders those.
  */
 
-/** Registry keys. Slice 1 ships only `vocab_collection`; `writing_prompt` is a
- *  drop-in adapter in Slice 2 (adding the string here + one adapter file). */
-export const ASSIGNMENT_KINDS = ["vocab_collection"] as const;
+/** Registry keys. Each maps to one AssignableKind adapter (lib/assignments/kinds).
+ *  Adding a kind = add its string here + one adapter file + one registry line —
+ *  no schema, route, or shared-UI change. Slice 1: `vocab_collection`; Slice 2
+ *  dropped in `writing_prompt`. */
+export const ASSIGNMENT_KINDS = ["vocab_collection", "writing_prompt"] as const;
 export type AssignmentKind = (typeof ASSIGNMENT_KINDS)[number];
 
 /** Length/size caps (mirror the class caps' spirit). */
