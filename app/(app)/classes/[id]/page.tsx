@@ -77,6 +77,7 @@ function TeacherView({ id, detail }: { id: string; detail: Extract<ClassDetail, 
                   <th className="py-2 font-semibold">Name</th>
                   <th className="py-2 font-semibold">Email</th>
                   <th className="py-2 font-semibold">Joined</th>
+                  <th className="py-2 font-semibold">Report</th>
                   <th className="py-2 font-semibold text-right">Remove</th>
                 </tr>
               </thead>
@@ -111,6 +112,15 @@ function RosterRow({ id, student }: { id: string; student: RosterEntry }) {
       <td className="py-2 muted">
         {new Date(student.joined_at).toLocaleDateString()}
         {student.joined_via ? ` (${student.joined_via})` : ""}
+      </td>
+      <td className="py-2">
+        <Link
+          href={`/classes/${id}/students/${student.user_id}`}
+          className="inline-flex items-center gap-1"
+          style={{ color: "var(--accent)", fontWeight: 600 }}
+        >
+          View →
+        </Link>
       </td>
       <td className="py-2 text-right">
         <button type="button" className="btn" onClick={remove} disabled={busy} aria-label={`Remove ${student.name || student.email}`}>

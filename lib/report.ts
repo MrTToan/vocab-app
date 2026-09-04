@@ -1,6 +1,7 @@
 import type { Stage } from "./types";
 import { STAGE_ORDER } from "./ui";
 import type { DayBucket, TypeBucket } from "./stats";
+import type { Criterion, ErrorType } from "./writing/types";
 
 /*
  * Pure, presentation-free derivations for the /report dashboard.
@@ -10,6 +11,49 @@ import type { DayBucket, TypeBucket } from "./stats";
  * mastery-pipeline logic unit-testable (see tests/report.test.ts). Everything
  * consumes the EXISTING /api/stats shapes (lib/stats.ts) — no new server query.
  */
+
+/*
+ * Report payload shapes — the single source of truth for the /api/stats and
+ * /api/writing/stats response bodies, shared by: the server compute helpers
+ * (lib/report-data.ts), the presentational ReportView (components/report/
+ * ReportView.tsx), and the classes teacher-report page (which receives the same
+ * two objects via route 17). Client-safe: this module has no server imports.
+ */
+export interface DayBar { label: string; total: number; correct: number; partial: number; incorrect: number }
+export interface TypeStat { type: string; total: number; correct: number; partial: number; incorrect: number }
+
+/** The /api/stats body (vocabulary half of the report). */
+export interface VocabStats {
+  words: { total: number; practiced: number; mastered: number; weak: number; stageCounts: Record<string, number> };
+  attempts: {
+    total: number;
+    overall: { correct: number; partial: number; incorrect: number };
+    byDay: DayBar[];
+    byType: TypeStat[];
+    streak: number;
+  };
+  topSeen: { word: string; times_seen: number }[];
+}
+
+/** The /api/writing/stats body (writing half of the report). */
+export interface WritingStats {
+  submissions: number;
+  byTask: { task1: number; task2: number };
+  avgOverall: number | null;
+  avgWordCount: number | null;
+  avgBands: Record<Criterion, number | null>;
+  bandSeries: { ts: number; overall: number; task_type: string }[];
+  errorFrequency: { error_type: ErrorType; count: number }[];
+  recent: { id: string; task_type: string; overall_band: number; word_count: number; created_at: number }[];
+}
+
+/** Route 17 (GET /api/classes/[id]/students/[studentId]/report) — the union a
+ *  teacher reads for one of their students, plus the student's display name. */
+export interface StudentReportPayload {
+  vocab: VocabStats;
+  writing: WritingStats;
+  student: { name: string };
+}
 
 export type ResultBucket = { correct: number; partial: number; incorrect: number };
 
