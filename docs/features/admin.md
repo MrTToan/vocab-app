@@ -19,20 +19,36 @@ is gated server-side (`force-dynamic`), and `GET /api/admin/stats` re-checks the
 ### Overview (metrics)
 
 Everything is aggregated **in SQL** over the same libSQL DB (a private read-only client); the
-window for time series is the last **30 days**.
+window for time series is the last **30 days**. The dashboard is an operator's *"how is Lexi
+doing?"* view — chart **form follows each metric's job** (the `dataviz` skill), rendered as
+hand-authored inline SVG (no chart library) with Lexi's app tokens, so it matches `/report` and
+adapts to light/dark. It reuses the `/report` chart primitives (`components/report/Charts.tsx`:
+`ActivityColumns`, `MasteryPipeline`, `HBars`) plus admin-only **count-scaled** primitives
+(`components/admin/Charts.tsx`: `AreaTrend`, `CountColumns`, `MiniSpark`, `ResultMixBar`).
 
-- **Overview tiles** — Users, New (30d), Words in catalog, Words studied (`user_words` rows),
-  Distinct studied, Mastered (`stage = known`), Attempts, LLM units.
-- **Users** — New signups per day, Cumulative users, and **Most active users** (ranked by words
+- **Pulse row** — four stat cards, each a big number + a mini sparkline + note: Users (+new in
+  window), Active today (peak/day), Attempts (window + all-time), LLM units (window + today, with a
+  week-over-week % change since spend is the metric to watch).
+- **Answer quality** — the learning-health gauge: weighted accuracy across all learners (correct=1,
+  partial=½, incorrect=0) with a week-over-week delta and the correct/almost/missed **status trio**
+  (2px gaps + labelled legend — never colour-alone, matching `/report`).
+- **Growth** — New signups (per-day **columns**) and User growth (cumulative registered users as an
+  **area curve** — the right form for a running total, not bars).
+- **Engagement** — Practice activity as **stacked result-mix columns** (correct/almost/missed per
+  day) with a legend, Daily active users below it, and **Most active learners** (ranked by words
   studied), the list **paginated 10 per page**.
-- **Activity** — Attempts per day and Daily active users (distinct users with ≥1 attempt) — the
-  v1 traffic signal, a free proxy with no page-view tracking.
-- **LLM usage** — all-time units, today's units (UTC), usage by task (enrich, score, score-writing,
-  extract-chart, discuss-writing, generate), and the heaviest consumers. Fed by the per-user daily
+- **Vocabulary** — **Catalog mastery**: every studied word across all learners placed on the
+  New → Known funnel (one part-to-whole bar, the emerald ordinal ramp), with the *Known %* headline.
+- **LLM operations** — units today / window / all-time / tasks-tracked tiles, **Units over time**
+  (area trend — is spend accelerating?), Usage by task (enrich, score, score-writing, extract-chart,
+  discuss-writing, generate — ranked bars), and the heaviest consumers. Fed by the per-user daily
   quota log (`llm_usage`, `lib/auth/quota.ts`); every model-calling route requires sign-in and
   reserves a unit there, with caps set by the `QUOTA_*` env vars (see `.env.example`).
 
-> There is no standalone "Progress" chart — mastery appears only as the *Mastered* overview tile.
+The stats endpoint (`AdminStats`, `lib/admin/stats.ts`) additionally computes the per-day result
+mix + window overall bucket (`activity.byDay`/`activity.overall`), the catalog stage funnel
+(`vocab.stageCounts`), and the daily LLM series + window total (`llm.daily`/`llm.windowTotal`) — all
+cheap SQL aggregations, no raw content leaves the DB.
 
 ### Writing Questions
 
@@ -59,10 +75,11 @@ user-created prompts into the bank as drafts.
 
 ### Feedback
 
-A **read-only list** of every submission from the in-app floating feedback widget, **newest
-first**, with a **category filter** (Bug / Idea / Other). Each row shows the category, the 1–5
-star rating (or "—" when unset), the message, and — for triage — who sent it (email/name),
-when, and the page it was sent from. The list comes from the owner-only `GET /api/feedback`
+A **summary strip** (total submissions, average star rating, Bug and Idea counts — computed from
+the loaded list) above a **read-only list** of every submission from the in-app floating feedback
+widget, **newest first**, with a **category filter** (Bug / Idea / Other). Each row shows the
+category, the 1–5 star rating (or "—" when unset), the message, and — for triage — who sent it
+(email/name), when, and the page it was sent from. The list comes from the owner-only `GET /api/feedback`
 (`withOwner` → 403 for anyone else). See `docs/features/feedback.md` for the widget, the
 `feedback` table and the submit route.
 
@@ -70,6 +87,7 @@ when, and the page it was sent from. The list comes from the owner-only `GET /ap
 *Under the hood: `app/(app)/admin/page.tsx` → `components/admin/AdminPortal.tsx` (tab shell);
 Overview is `app/api/admin/stats/route.ts`, `lib/admin/*` (`stats.ts` computes `AdminStats`,
 `aggregate.ts` shapes daily series, `paginate.ts` pages the users list),
-`components/admin/AdminDashboard.tsx`; Writing Questions is `WritingQuestionsAdmin.tsx` +
+`components/admin/AdminDashboard.tsx` + `components/admin/Charts.tsx` (admin-only SVG charts),
+reusing `components/report/Charts.tsx` + `lib/report.ts` derivations; Writing Questions is `WritingQuestionsAdmin.tsx` +
 `app/api/admin/writing-prompts/route.ts` and the `withOwner` writing-prompt routes; Feedback is
 `components/admin/FeedbackAdmin.tsx` + the owner-only `GET /api/feedback`.*

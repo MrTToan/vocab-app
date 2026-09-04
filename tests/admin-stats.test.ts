@@ -112,6 +112,37 @@ describe("adminStats aggregates", () => {
     expect(s.activity.activeUsers.at(-1)!.count).toBe(2); // alice + bob today
   });
 
+  it("aggregates the per-day result mix and the window overall bucket", async () => {
+    const s = await adminStats(NOW);
+    // today: alice correct + incorrect, bob correct → 2 correct, 1 incorrect
+    expect(s.activity.byDay.at(-1)).toMatchObject({
+      total: 3,
+      correct: 2,
+      partial: 0,
+      incorrect: 1,
+    });
+    // window overall sums the same three attempts
+    expect(s.activity.overall).toEqual({ correct: 2, partial: 0, incorrect: 1, total: 3 });
+    // series length matches the window; a quiet earlier day is zero-filled
+    expect(s.activity.byDay).toHaveLength(s.window_days);
+    expect(s.activity.byDay[0]).toMatchObject({ total: 0, correct: 0, incorrect: 0 });
+  });
+
+  it("buckets studied words by mastery stage (New→Known, zero-filled)", async () => {
+    const s = await adminStats(NOW);
+    // alice: w1 known, w2 recall, w3 new; bob: w1 known
+    expect(s.vocab.stageCounts).toEqual({
+      new: 1,
+      recognition: 0,
+      recall: 1,
+      production: 0,
+      known: 2,
+    });
+    // the funnel sums to the studied-instance count
+    const funnelTotal = Object.values(s.vocab.stageCounts).reduce((a, b) => a + b, 0);
+    expect(funnelTotal).toBe(s.vocab.studiedInstances);
+  });
+
   it("aggregates LLM usage by task, today, and top consumers", async () => {
     const s = await adminStats(NOW);
     expect(s.llm.total).toBe(10); // 5+3+2
@@ -119,6 +150,15 @@ describe("adminStats aggregates", () => {
     expect(s.llm.byTask.enrich).toBe(7);
     expect(s.llm.byTask.score).toBe(3);
     expect(s.llm.topUsers[0]).toMatchObject({ label: "Alice", total: 8 });
+  });
+
+  it("builds the LLM spend trend (per-day units + window total)", async () => {
+    const s = await adminStats(NOW);
+    expect(s.llm.daily).toHaveLength(s.window_days);
+    // alice used 8 units today; bob 2 yesterday — both inside the window
+    expect(s.llm.daily.at(-1)).toMatchObject({ day: "2026-09-01", count: 8 });
+    expect(s.llm.daily.at(-2)).toMatchObject({ day: "2026-08-31", count: 2 });
+    expect(s.llm.windowTotal).toBe(10);
   });
 });
 

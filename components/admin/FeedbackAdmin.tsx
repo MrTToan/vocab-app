@@ -65,6 +65,21 @@ export default function FeedbackAdmin() {
     [items, catFilter],
   );
 
+  const summary = useMemo(() => {
+    const list = items ?? [];
+    const byCat = { bug: 0, idea: 0, other: 0 } as Record<FeedbackCategory, number>;
+    let ratingSum = 0;
+    let ratingN = 0;
+    for (const f of list) {
+      byCat[f.category] = (byCat[f.category] ?? 0) + 1;
+      if (f.rating != null) {
+        ratingSum += f.rating;
+        ratingN += 1;
+      }
+    }
+    return { total: list.length, byCat, avg: ratingN ? ratingSum / ratingN : null };
+  }, [items]);
+
   if (err) {
     return (
       <div className="card p-4 space-y-2">
@@ -84,6 +99,29 @@ export default function FeedbackAdmin() {
 
   return (
     <div className="space-y-4">
+      {/* summary — counts + average rating at a glance (same tiles as /admin) */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div className="card p-3">
+          <div className="text-2xl font-extrabold tabular-nums">{summary.total}</div>
+          <div className="muted text-xs">Total</div>
+        </div>
+        <div className="card p-3">
+          <div className="text-2xl font-extrabold tabular-nums" style={{ color: "var(--accent)" }}>
+            {summary.avg != null ? summary.avg.toFixed(1) : "—"}
+          </div>
+          <div className="muted text-xs">Avg rating</div>
+          {summary.avg != null && <Stars rating={Math.round(summary.avg)} />}
+        </div>
+        <div className="card p-3">
+          <div className="text-2xl font-extrabold tabular-nums">{summary.byCat.bug}</div>
+          <div className="muted text-xs">Bugs</div>
+        </div>
+        <div className="card p-3">
+          <div className="text-2xl font-extrabold tabular-nums">{summary.byCat.idea}</div>
+          <div className="muted text-xs">Ideas</div>
+        </div>
+      </div>
+
       <div className="flex items-center gap-2 flex-wrap">
         <span className="text-sm font-bold">Filter</span>
         {(["all", ...FEEDBACK_CATEGORIES] as CatFilter[]).map((c) => {
