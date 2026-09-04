@@ -15,6 +15,8 @@ import type {
   TeacherInvite,
 } from "@/lib/classes/types";
 import TrustCard from "@/components/classes/TrustCard";
+import TeacherAssignments from "@/components/assignments/TeacherAssignments";
+import StudentClassAssignments from "@/components/assignments/StudentClassAssignments";
 
 /*
  * /classes/[id] — one class. The payload is role-shaped by the server: a teacher
@@ -73,6 +75,8 @@ function TeacherView({ id, detail }: { id: string; detail: Extract<ClassDetail, 
       {!detail.archived && <JoinCodeSection id={id} code={cls.join_code} />}
 
       {!detail.archived && <InviteByEmail id={id} invites={detail.invites} />}
+
+      {!detail.archived && <TeacherAssignments classId={id} students={detail.students} />}
 
       <section className="card p-5 space-y-3">
         <h3 className="font-bold">Roster</h3>
@@ -495,6 +499,8 @@ function StudentView({ id, detail }: { id: string; detail: Extract<ClassDetail, 
         onLeave={detail.archived ? undefined : leave}
         leaving={leaving}
       />
+
+      {!detail.archived && <StudentClassAssignments classId={id} />}
 
       <Link href="/classes" className="btn">
         ← Back to Classes

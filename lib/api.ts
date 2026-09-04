@@ -156,11 +156,16 @@ function isForbiddenError(err: unknown): boolean {
 
 function mapError(err: unknown): Response {
   if (isRateLimitError(err)) return json(429, { error: err.message });
-  // Class-feature cap (lib/classes/config.ts ClassCapError) → 409, matched by
-  // name so the wrapper needs no hard import of the classes module. The message
-  // is user-facing ("This class is full." etc.), unlike the opaque 403/500.
-  if (err instanceof Error && err.name === "ClassCapError") {
+  // Feature caps (lib/classes/config.ts ClassCapError, lib/assignments/config.ts
+  // AssignmentCapError) → 409, matched by name so the wrapper needs no hard import
+  // of those modules. The message is user-facing, unlike the opaque 403/500.
+  if (err instanceof Error && (err.name === "ClassCapError" || err.name === "AssignmentCapError")) {
     return json(409, { error: err.message });
+  }
+  // Assignment create input error (bad content ref / no valid students) → 400
+  // with the user-facing message, matched by name.
+  if (err instanceof Error && err.name === "AssignmentInputError") {
+    return json(400, { error: err.message });
   }
   if (isForbiddenError(err)) {
     return json(403, { error: "forbidden" });

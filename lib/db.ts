@@ -282,6 +282,46 @@ export async function migrate(db: Client): Promise<void> {
   await db.execute(`CREATE UNIQUE INDEX IF NOT EXISTS idx_ci_token ON class_invites (token)`);
   await db.execute(`CREATE INDEX IF NOT EXISTS idx_ci_email ON class_invites (email, status)`);
 
+  // ── assignments (lib/assignments/store.ts) ─────────────────────────────
+  // A teacher assigns EXISTING content to students in a class. Content is named
+  // by (content_kind, content_ref) — a registry key + the stable content id (a
+  // collection id today, a writing-prompt id next) — so a new kind is additive
+  // with NO schema change (a registry adapter, not a column). `criteria` is a
+  // small JSON completion rule ('' ⇒ the kind's default). Additive/idempotent
+  // like the classes tables above; no SCHEMA_VERSION bump, no backfill.
+  await db.execute(
+    `CREATE TABLE IF NOT EXISTS assignments (
+      id            TEXT PRIMARY KEY,
+      class_id      TEXT NOT NULL,
+      content_kind  TEXT NOT NULL,
+      content_ref   TEXT NOT NULL,
+      title         TEXT DEFAULT '',
+      instructions  TEXT DEFAULT '',
+      criteria      TEXT DEFAULT '',
+      due_at        INTEGER,
+      created_by    TEXT NOT NULL,
+      created_at    INTEGER,
+      archived_at   INTEGER
+    )`,
+  );
+  await db.execute(`CREATE INDEX IF NOT EXISTS idx_assignments_class ON assignments (class_id, archived_at)`);
+  await db.execute(`CREATE INDEX IF NOT EXISTS idx_assignments_creator ON assignments (created_by)`);
+  // Targeting reuses the (class_id, user_id) seam: one row per targeted student
+  // (whole-class targeting is a later convenience). The row IS the access grant —
+  // a targeted student may practise the assigned content even when it is a private
+  // collection (see collectionVisibleTo in lib/store.ts). Membership/active-ness is
+  // re-checked live, so removing the student, archiving the assignment, or
+  // archiving the class all revoke access with no cleanup.
+  await db.execute(
+    `CREATE TABLE IF NOT EXISTS assignment_targets (
+      assignment_id TEXT NOT NULL,
+      user_id       TEXT NOT NULL,
+      created_at    INTEGER,
+      PRIMARY KEY (assignment_id, user_id)
+    )`,
+  );
+  await db.execute(`CREATE INDEX IF NOT EXISTS idx_at_user ON assignment_targets (user_id)`);
+
   // ── writing (lib/writing/store.ts) ─────────────────────────────────────
   await db.execute(
     `CREATE TABLE IF NOT EXISTS writing_prompts (

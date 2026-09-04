@@ -33,3 +33,4 @@ session cookie; API routes still return 401 and remain the real enforcement.
 11. [Admin portal](admin.md) — the owner-only usage dashboard at `/admin`
 12. [Feedback](feedback.md) — the in-app floating feedback widget + the admin Feedback subtab
 13. [Classes](classes.md) — teachers gather students by join code; consent-gated report sharing
+14. [Assignments](assignments.md) — a teacher assigns existing content (vocab sets) to students; one extensible kind+ref flow

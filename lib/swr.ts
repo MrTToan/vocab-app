@@ -6,6 +6,13 @@ import useSWRInfinite, {
 } from "swr/infinite";
 import type { Word, WordListItem } from "./types";
 import type { ClassDetail, MyClassesData, PendingInvite } from "./classes/types";
+import type {
+  AssignmentDetail,
+  ClassAssignments,
+  KindTab,
+  PickableContent,
+  StudentAssignment,
+} from "./assignments/types";
 import type { StudentReportPayload } from "./report";
 import { jsonFetch } from "./ui";
 import {
@@ -74,6 +81,19 @@ export const studentReportKey = (classId: string, studentId: string) =>
 
 /** Writing question list for one task tab (task1 | task2). */
 export const writingPromptsKey = (task: string) => `/api/writing/prompts?task=${task}`;
+
+/** The caller's own assignments across every class (the /classes hub roll-up). */
+export const KEY_MY_ASSIGNMENTS = "/api/assignments";
+/** The registry's picker kinds (tab strip). */
+export const KEY_ASSIGNMENT_KINDS = "/api/assignments/kinds";
+/** One class's assignments (teacher list / student list). Lives under KEY_CLASSES
+ *  so a roster change also refreshes it via revalidateClasses(). */
+export const classAssignmentsKey = (classId: string) => `/api/classes/${classId}/assignments`;
+/** One assignment's detail (teacher grid / student card). */
+export const assignmentKey = (id: string) => `/api/assignments/${id}`;
+/** The teacher's content picker for one kind + search. */
+export const assignmentContentKey = (kind: string, q: string) =>
+  `/api/assignments/content?kind=${encodeURIComponent(kind)}&q=${encodeURIComponent(q)}`;
 
 /** What /api/config returns. Diagnostic fields are owner-only (may be absent). */
 export type ConfigData = {
@@ -160,6 +180,39 @@ export function useWritingPrompts<P>(task: string, config?: SWRConfiguration) {
   return useSWR<{ prompts: P[] }>(writingPromptsKey(task), fetcher, config);
 }
 
+/** The caller's own assignments across every class (the hub roll-up). */
+export function useMyAssignments(config?: SWRConfiguration) {
+  return useSWR<{ assignments: StudentAssignment[] }>(KEY_MY_ASSIGNMENTS, fetcher, config);
+}
+
+/** One class's assignments, role-shaped (pass a falsy id to skip). */
+export function useClassAssignments(id: string | null | undefined, config?: SWRConfiguration) {
+  return useSWR<ClassAssignments>(id ? classAssignmentsKey(id) : null, fetcher, config);
+}
+
+/** One assignment's detail, role-shaped (pass a falsy id to skip). */
+export function useAssignment(id: string | null | undefined, config?: SWRConfiguration) {
+  return useSWR<AssignmentDetail>(id ? assignmentKey(id) : null, fetcher, config);
+}
+
+/** The teacher's content picker for one kind + search (skip when kind is falsy). */
+export function useAssignableContent(
+  kind: string | null | undefined,
+  q: string,
+  config?: SWRConfiguration,
+) {
+  return useSWR<{ content: PickableContent[] }>(
+    kind ? assignmentContentKey(kind, q) : null,
+    fetcher,
+    config,
+  );
+}
+
+/** The picker's kind tabs (registry-driven). */
+export function useAssignmentKinds(config?: SWRConfiguration) {
+  return useSWR<{ kinds: KindTab[] }>(KEY_ASSIGNMENT_KINDS, fetcher, config);
+}
+
 /* ───────────────────────────  Mutations  ─────────────────────────── */
 
 export function revalidateWords() {
@@ -188,6 +241,16 @@ export function revalidateClasses() {
 /** A writing prompt was added or a submission scored — refetch that task's list. */
 export function revalidateWritingPrompts(task: string) {
   return mutate(writingPromptsKey(task));
+}
+
+/**
+ * An assignment was created / edited / archived, or its completion may have moved
+ * (a student practised). Matches every assignment key — the hub roll-up
+ * (`/api/assignments…`) AND a class's assignment list (`/api/classes/<id>/assignments`)
+ * AND a detail — by the shared `/assignments` fragment.
+ */
+export function revalidateAssignments() {
+  return mutate((key) => typeof key === "string" && key.includes("/assignments"));
 }
 
 /**
