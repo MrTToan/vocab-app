@@ -71,6 +71,18 @@ function parseCriteria(a: AssignmentRow): Record<string, unknown> {
 const overdue = (dueAt: number | null, complete: boolean, now: number) =>
   dueAt != null && dueAt < now && !complete;
 
+/** The moment each targeted student was assigned — their own target `created_at`,
+ *  falling back to the assignment's `created_at` if a target row somehow lacks one.
+ *  Completion counts only practice/work done at or after this instant. */
+function assignedAtMap(
+  a: AssignmentRow,
+  targets: { user_id: string; created_at: number }[],
+): Record<string, number> {
+  const out: Record<string, number> = {};
+  for (const t of targets) out[t.user_id] = t.created_at || a.created_at;
+  return out;
+}
+
 const raw = {
   /** The caller's role in a class, or null when not a member. */
   async roleOf(classId: string, userId: string): Promise<"teacher" | "student" | null> {
@@ -104,10 +116,10 @@ const raw = {
   async liveTargets(
     assignmentId: string,
     classId: string,
-  ): Promise<{ user_id: string; name: string; email: string }[]> {
+  ): Promise<{ user_id: string; name: string; email: string; created_at: number }[]> {
     const c = await connect();
     const rs = await c.execute({
-      sql: `SELECT t.user_id, u.name, u.email
+      sql: `SELECT t.user_id, t.created_at, u.name, u.email
               FROM assignment_targets t
               JOIN class_members cm ON cm.class_id = ? AND cm.user_id = t.user_id AND cm.role = 'student'
               LEFT JOIN users u ON u.id = t.user_id
@@ -119,6 +131,7 @@ const raw = {
       user_id: String(r.user_id),
       name: String(r.name ?? ""),
       email: String(r.email ?? ""),
+      created_at: Number(r.created_at ?? 0),
     }));
   },
 
@@ -280,6 +293,7 @@ const raw = {
         targets.map((t) => t.user_id),
         a.content_ref,
         parseCriteria(a),
+        assignedAtMap(a, targets),
       );
       completeCount = Object.values(prog).filter((p) => p.state === "complete").length;
     }
@@ -304,7 +318,7 @@ const raw = {
   ): Promise<StudentAssignment[]> {
     const c = await connect();
     const rs = await c.execute({
-      sql: `SELECT a.*, cl.name AS class_name, cl.emoji AS class_emoji
+      sql: `SELECT a.*, t.created_at AS target_created_at, cl.name AS class_name, cl.emoji AS class_emoji
               FROM assignments a
               JOIN assignment_targets t ON t.assignment_id = a.id AND t.user_id = ?
               JOIN classes cl ON cl.id = a.class_id
@@ -317,10 +331,11 @@ const raw = {
     const out: StudentAssignment[] = [];
     for (const r of rs.rows as Record<string, unknown>[]) {
       const a = rowToAssignment(r);
+      const assignedAt = Number(r.target_created_at ?? 0) || a.created_at;
       const adapter = kindFor(a.content_kind);
       const content = adapter ? await adapter.resolveCard(a.content_ref) : unknownCard(a);
       const progress = adapter
-        ? await adapter.progressFor(userId, a.content_ref, parseCriteria(a))
+        ? await adapter.progressFor(userId, a.content_ref, parseCriteria(a), assignedAt)
         : { state: "not_started" as const, pct: 0, detail: "" };
       out.push({
         id: a.id,
@@ -354,7 +369,12 @@ const raw = {
       const className = String((clsRs.rows[0] as Record<string, unknown> | undefined)?.name ?? "");
       const targets = await raw.liveTargets(a.id, a.class_id);
       const prog = adapter
-        ? await adapter.progressForMany(targets.map((t) => t.user_id), a.content_ref, parseCriteria(a))
+        ? await adapter.progressForMany(
+            targets.map((t) => t.user_id),
+            a.content_ref,
+            parseCriteria(a),
+            assignedAtMap(a, targets),
+          )
         : {};
       const students: AssignmentStudentRow[] = targets.map((t) => {
         const progress = prog[t.user_id] ?? { state: "not_started" as const, pct: 0, detail: "" };
@@ -386,17 +406,18 @@ const raw = {
     // student — only if they are a target of this assignment
     const c = await connect();
     const t = await c.execute({
-      sql: "SELECT 1 FROM assignment_targets WHERE assignment_id = ? AND user_id = ? LIMIT 1",
+      sql: "SELECT created_at FROM assignment_targets WHERE assignment_id = ? AND user_id = ? LIMIT 1",
       args: [assignmentId, userId],
     });
     if (t.rows.length === 0) return undefined; // a member, but not a target → 404
+    const assignedAt = Number((t.rows[0] as Record<string, unknown>).created_at ?? 0) || a.created_at;
     const clsRs = await c.execute({
       sql: "SELECT name, emoji FROM classes WHERE id = ? LIMIT 1",
       args: [a.class_id],
     });
     const cls = clsRs.rows[0] as Record<string, unknown> | undefined;
     const progress = adapter
-      ? await adapter.progressFor(userId, a.content_ref, parseCriteria(a))
+      ? await adapter.progressFor(userId, a.content_ref, parseCriteria(a), assignedAt)
       : { state: "not_started" as const, pct: 0, detail: "" };
     return {
       role: "student",

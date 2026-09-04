@@ -110,18 +110,18 @@ describe("writing_prompt adapter", () => {
   });
 
   it("(c) completion = submitted (single + batched)", async () => {
-    // Before any submission: not started.
-    expect((await adapter.progressFor("stu-1", "wp-pub-1", {})).state).toBe("not_started");
+    // Before any submission: not started. (assignedAt=0 ⇒ any submission counts.)
+    expect((await adapter.progressFor("stu-1", "wp-pub-1", {}, 0)).state).toBe("not_started");
 
     await seedSubmission("stu-1", "wp-pub-1", 6.5);
 
-    const single = await adapter.progressFor("stu-1", "wp-pub-1", {});
+    const single = await adapter.progressFor("stu-1", "wp-pub-1", {}, 0);
     expect(single.state).toBe("complete");
     expect(single.pct).toBe(100);
     expect(single.detail).toMatch(/band 6\.5/);
 
     // Batched grid form: submitter complete, non-submitter not started; every id present.
-    const many = await adapter.progressForMany(["stu-1", "stu-2"], "wp-pub-1", {});
+    const many = await adapter.progressForMany(["stu-1", "stu-2"], "wp-pub-1", {}, { "stu-1": 0, "stu-2": 0 });
     expect(many["stu-1"].state).toBe("complete");
     expect(many["stu-2"].state).toBe("not_started");
   });

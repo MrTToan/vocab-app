@@ -40,16 +40,23 @@ export interface AssignableKind {
   resolveCard(ref: string): Promise<ContentCard>;
 
   /** (c) MEASURE — the kind's default completion rule, and a student's progress
-   *  against a ref (single + batched, the batched form avoids N+1 on the grid). */
+   *  against a ref (single + batched, the batched form avoids N+1 on the grid).
+   *  `assignedAt` bounds what counts: ONLY practice/work done at or after the
+   *  moment THAT student was assigned (their `assignment_targets.created_at`,
+   *  falling back to the assignment's `created_at`) may count toward completion —
+   *  prior history never pre-credits a new assignment. The batched form takes a
+   *  per-student map so students assigned at different times grade correctly. */
   defaultCriteria(): Record<string, unknown>;
   progressFor(
     studentId: string,
     ref: string,
     criteria: Record<string, unknown>,
+    assignedAt: number,
   ): Promise<AssignmentProgress>;
   progressForMany(
     studentIds: string[],
     ref: string,
     criteria: Record<string, unknown>,
+    assignedAt: Record<string, number>,
   ): Promise<Record<string, AssignmentProgress>>;
 }
