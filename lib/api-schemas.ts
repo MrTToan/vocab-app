@@ -2,7 +2,13 @@ import { z } from "zod";
 import { EXERCISE_TYPES, STAGES } from "@/lib/types";
 import { PROMPT_TEXT_MAX, PROMPT_TITLE_MAX } from "@/lib/writing/types";
 import { FEEDBACK_CATEGORIES, FEEDBACK_MESSAGE_MAX, FEEDBACK_PAGE_MAX } from "@/lib/feedback/types";
-import { CLASS_DESCRIPTION_MAX, CLASS_EMOJI_MAX, CLASS_NAME_MAX } from "@/lib/classes/types";
+import {
+  CLASS_DESCRIPTION_MAX,
+  CLASS_EMOJI_MAX,
+  CLASS_NAME_MAX,
+  INVITE_EMAIL_MAX,
+  INVITE_EMAILS_MAX,
+} from "@/lib/classes/types";
 
 /*
  * Zod schemas (zod 4) for every API route, consumed via lib/api.ts. Bodies are
@@ -345,3 +351,13 @@ export const joinCodeQuerySchema = z.strictObject({ code: joinCode });
 
 /** POST /api/classes/join — redeem a code (the consent write). */
 export const joinClassSchema = z.strictObject({ code: joinCode });
+
+/** POST /api/classes/[id]/invites — invite by email (Slice 3). The store
+ *  normalizes/validates each address and drops non-email entries, so the schema
+ *  only bounds the batch size and per-entry length; an empty batch is a 400. */
+export const createInvitesSchema = z.strictObject({
+  emails: z
+    .array(z.string().trim().min(1).max(INVITE_EMAIL_MAX))
+    .min(1, "enter at least one email")
+    .max(INVITE_EMAILS_MAX, `up to ${INVITE_EMAILS_MAX} emails at a time`),
+});

@@ -229,8 +229,7 @@ export async function migrate(db: Client): Promise<void> {
   // MEMBERSHIP (class_members.role), never folded into `classes` — that is the
   // seam a later assignments phase leans on (design report §2.3). Additive and
   // idempotent like everything above; no SCHEMA_VERSION bump, no backfill (no
-  // existing row references a class). The `class_invites` table (email invites)
-  // is a later slice — deliberately not created here.
+  // existing row references a class).
   await db.execute(
     `CREATE TABLE IF NOT EXISTS classes (
       id           TEXT PRIMARY KEY,
@@ -259,6 +258,29 @@ export async function migrate(db: Client): Promise<void> {
   );
   await db.execute(`CREATE INDEX IF NOT EXISTS idx_cm_user ON class_members (user_id)`);
   await db.execute(`CREATE INDEX IF NOT EXISTS idx_cm_class_role ON class_members (class_id, role)`);
+
+  // ── class_invites: email invites, pending until accepted (Slice 3) ──────
+  // An invite is keyed by EMAIL; a seat is taken only on accept (§8). Invite-by-
+  // link first: each row carries an opaque `token` the teacher copies into an
+  // accept link and sends through their own channel — real outbound email is a
+  // later enhancement that drops in behind the same routes. Idempotent:
+  // UNIQUE(class_id, email) makes re-inviting the same address update, never
+  // duplicate. Additive/idempotent; no SCHEMA_VERSION bump, no backfill.
+  await db.execute(
+    `CREATE TABLE IF NOT EXISTS class_invites (
+      id           TEXT PRIMARY KEY,
+      class_id     TEXT NOT NULL,
+      email        TEXT NOT NULL,
+      invited_by   TEXT NOT NULL,
+      token        TEXT,
+      status       TEXT NOT NULL DEFAULT 'pending',
+      created_at   INTEGER,
+      responded_at INTEGER
+    )`,
+  );
+  await db.execute(`CREATE UNIQUE INDEX IF NOT EXISTS idx_ci_class_email ON class_invites (class_id, email)`);
+  await db.execute(`CREATE UNIQUE INDEX IF NOT EXISTS idx_ci_token ON class_invites (token)`);
+  await db.execute(`CREATE INDEX IF NOT EXISTS idx_ci_email ON class_invites (email, status)`);
 
   // ── writing (lib/writing/store.ts) ─────────────────────────────────────
   await db.execute(

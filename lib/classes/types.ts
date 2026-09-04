@@ -7,8 +7,8 @@
  *
  * Role is stored PER MEMBERSHIP (class_members.role), never folded into
  * `classes` — that invariant is the seam a later assignments phase leans on
- * (design report §2.3). Slice 1 builds classes + class_members only; the
- * `class_invites` table and email invites are a later slice.
+ * (design report §2.3). Slice 3 adds email invites (`class_invites`): invite-by
+ * -link, keyed by email, a seat taken only on accept.
  */
 
 /** A member's role WITHIN one class. Per-membership, so a user can teach one
@@ -75,12 +75,71 @@ export interface EnrolledClass {
   joined_at: number;
 }
 
-/** The hub payload (GET /api/classes). `invites` is always [] in Slice 1
- *  (email invites are a later slice); the field is kept for forward-compat. */
+/** The hub payload (GET /api/classes). Pending invites for the caller are fed by
+ *  the dedicated GET /api/classes/invites (route 11 → the banner), so this field
+ *  stays [] here — kept for forward-compat and the Slice 1 contract. */
 export interface MyClassesData {
   teaching: TeachingClass[];
   enrolled: EnrolledClass[];
   invites: never[];
+}
+
+/* ── email invites (Slice 3) ──────────────────────────────────────────── */
+
+/** Lifecycle of a `class_invites` row. */
+export const INVITE_STATUSES = ["pending", "accepted", "declined", "revoked"] as const;
+export type InviteStatus = (typeof INVITE_STATUSES)[number];
+
+/** Cap on how many emails one "Invite by email" submission may carry. */
+export const INVITE_EMAILS_MAX = 50;
+/** Cap on a single email's length (matches the DB-stored, normalized value). */
+export const INVITE_EMAIL_MAX = 200;
+
+/** One row of the `class_invites` table. */
+export interface ClassInviteRow {
+  id: string;
+  class_id: string;
+  email: string;
+  invited_by: string;
+  token: string | null;
+  status: InviteStatus;
+  created_at: number;
+  responded_at: number | null;
+}
+
+/** A pending invite as the invited user sees it (GET /api/classes/invites →
+ *  the hub banner). `token` lets the accept-link landing (`?invite=<token>`)
+ *  match the right card. */
+export interface PendingInvite {
+  id: string;
+  token: string | null;
+  class: { id: string; name: string; emoji: string };
+  teacher: { name: string };
+}
+
+/** One invite the teacher created (POST /api/classes/[id]/invites) — carries the
+ *  copyable `acceptLink` the teacher sends through their own channel. */
+export interface CreatedInvite {
+  id: string;
+  email: string;
+  status: InviteStatus;
+  acceptLink: string;
+}
+
+/** The result of an "Invite by email" submission. `warning` is set (non-blocking)
+ *  when pending + students would exceed the class cap — a seat is only taken on
+ *  accept, so the invites are still created. */
+export interface CreateInvitesResult {
+  invites: CreatedInvite[];
+  warning?: string;
+}
+
+/** A pending invite as the teacher sees it in the class detail (revoke target). */
+export interface TeacherInvite {
+  id: string;
+  email: string;
+  status: InviteStatus;
+  created_at: number;
 }
 
 /** One roster row a teacher sees. */
@@ -99,6 +158,8 @@ export type ClassDetail =
       class: ClassRow;
       students: RosterEntry[];
       studentCount: number;
+      /** Pending email invites for this class (revocable). */
+      invites: TeacherInvite[];
       archived: boolean;
     }
   | {

@@ -5,7 +5,7 @@ import useSWRInfinite, {
   type SWRInfiniteConfiguration,
 } from "swr/infinite";
 import type { Word, WordListItem } from "./types";
-import type { ClassDetail, MyClassesData } from "./classes/types";
+import type { ClassDetail, MyClassesData, PendingInvite } from "./classes/types";
 import type { StudentReportPayload } from "./report";
 import { jsonFetch } from "./ui";
 import {
@@ -54,6 +54,11 @@ export const KEY_WRITING_STATS = "/api/writing/stats";
 /** The classes hub (teaching + enrolled). Every class key lives under this
  *  prefix so `revalidateClasses()` matches the hub, detail and roster at once. */
 export const KEY_CLASSES = "/api/classes";
+
+/** Pending email invites addressed to the caller (route 11 → the hub banner).
+ *  Under the KEY_CLASSES prefix so `revalidateClasses()` refreshes it after an
+ *  accept/decline/create/revoke. */
+export const KEY_INVITES = "/api/classes/invites";
 
 /** Per-word full-detail key (lazy editor load after the slim list). */
 export const wordKey = (id: string) => `/api/words/${id}`;
@@ -128,6 +133,11 @@ export function useClass(id: string | null | undefined, config?: SWRConfiguratio
   return useSWR<ClassDetail>(id ? classKey(id) : null, fetcher, config);
 }
 
+/** Pending email invites addressed to the caller (the hub banner). */
+export function useMyInvites(config?: SWRConfiguration) {
+  return useSWR<{ invites: PendingInvite[] }>(KEY_INVITES, fetcher, config);
+}
+
 /** A teacher's read-only report for one student (route 17). Pass falsy ids to
  *  skip. A non-teacher / wrong-teacher fetch 404s (surfaced as an SWR error). */
 export function useStudentReport(
@@ -166,9 +176,10 @@ export function revalidateStats() {
   return mutate(KEY_STATS);
 }
 /**
- * A class was created / joined / left / renamed / archived, or its roster or
- * join code changed. Match every class key by PREFIX (the hub, each detail, each
- * roster) so nothing is left stale after a write — keep new class keys under
+ * A class was created / joined / left / renamed / archived, its roster or join
+ * code changed, or an invite was created / revoked / accepted / declined. Match
+ * every class key by PREFIX (the hub, each detail, each roster, the invite
+ * banner) so nothing is left stale after a write — keep new class keys under
  * KEY_CLASSES.
  */
 export function revalidateClasses() {

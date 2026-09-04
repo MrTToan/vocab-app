@@ -2,11 +2,12 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { jsonFetch } from "@/lib/ui";
-import { useMyClasses, revalidateClasses } from "@/lib/swr";
-import type { ClassRow, JoinPreview } from "@/lib/classes/types";
+import { useMyClasses, useMyInvites, revalidateClasses } from "@/lib/swr";
+import type { ClassRow, JoinPreview, PendingInvite } from "@/lib/classes/types";
 import ConsentDialog from "@/components/classes/ConsentDialog";
+import InviteBanner from "@/components/classes/InviteBanner";
 
 /*
  * The /classes hub — create/teach a class, or join one by code. Any signed-in
@@ -16,6 +17,23 @@ import ConsentDialog from "@/components/classes/ConsentDialog";
 export default function ClassesHubPage() {
   const router = useRouter();
   const { data, isLoading, mutate } = useMyClasses();
+  const { data: inviteData } = useMyInvites();
+  const searchParams = useSearchParams();
+  const inviteToken = searchParams.get("invite");
+
+  async function acceptInvite(invite: PendingInvite) {
+    const { class: cls } = await jsonFetch<{ class: ClassRow; status: string }>(
+      `/api/classes/invites/${invite.id}/accept`,
+      { method: "POST" },
+    );
+    await revalidateClasses();
+    router.push(`/classes/${cls.id}`);
+  }
+
+  async function declineInvite(invite: PendingInvite) {
+    await jsonFetch(`/api/classes/invites/${invite.id}/decline`, { method: "POST" });
+    await revalidateClasses();
+  }
 
   return (
     <div className="space-y-6">
@@ -23,6 +41,13 @@ export default function ClassesHubPage() {
         <h1 className="text-3xl font-extrabold tracking-tight">Classes</h1>
         <p className="muted mt-1">Teach a class, or join one your teacher shared.</p>
       </section>
+
+      <InviteBanner
+        invites={inviteData?.invites ?? []}
+        onAccept={acceptInvite}
+        onDecline={declineInvite}
+        autoOpenToken={inviteToken}
+      />
 
       <JoinBox onJoined={() => revalidateClasses()} router={router} />
 
