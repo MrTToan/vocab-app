@@ -20,6 +20,7 @@ import { randomUUID } from "crypto";
 import type { Client } from "@libsql/client";
 import { getDb } from "../db";
 import { getUserEmail } from "../auth/store";
+import { sendInviteEmail } from "../email/invite";
 import { classCaps, ClassCapError } from "./config";
 import {
   CONSENT_NOTICE,
@@ -549,8 +550,38 @@ const raw = {
         email: String(row.email ?? email),
         status: (row.status === "accepted" ? "accepted" : "pending") as CreatedInvite["status"],
         acceptLink: token ? `${origin}/classes?invite=${encodeURIComponent(token)}` : `${origin}/classes`,
+        emailed: false,
       });
     }
+
+    // Email the accept link to each newly-created / still-pending address
+    // (best-effort, non-blocking). Already-accepted rows are skipped — the
+    // student is a member, so re-inviting must not spam them. Sending never
+    // fails invite creation: a `skipped` outcome (no RESEND_API_KEY, e.g. dev)
+    // quietly leaves the copyable link as the delivery path; an `error` outcome
+    // surfaces a soft warning so the teacher shares the link manually.
+    const toEmail = created.filter((inv) => inv.status === "pending");
+    let emailErrors = 0;
+    if (toEmail.length > 0) {
+      const [cls, teachers] = await Promise.all([raw.getClass(classId), raw.teacherNames(classId)]);
+      const className = cls?.name ?? "your class";
+      const teacherName =
+        teachers.find((t) => t.user_id === userId)?.name ?? teachers[0]?.name ?? "Your teacher";
+      await Promise.all(
+        toEmail.map(async (inv) => {
+          const outcome = await sendInviteEmail({
+            to: inv.email,
+            className,
+            teacherName,
+            acceptLink: inv.acceptLink,
+          });
+          if (outcome.status === "sent") inv.emailed = true;
+          else if (outcome.status === "error") emailErrors += 1;
+          // "skipped": email not configured — leave emailed=false silently.
+        }),
+      );
+    }
+
     // Non-blocking cap warning: a seat is taken only on accept, so we never block
     // creation, but we warn if everyone accepting would overflow the class.
     const caps = classCaps();
@@ -558,10 +589,18 @@ const raw = {
       raw.studentCount(classId),
       raw.pendingInviteCount(classId),
     ]);
-    const warning =
-      students + pending > caps.studentsPerClass
-        ? `Heads up: ${students} student${students === 1 ? "" : "s"} plus ${pending} pending invite${pending === 1 ? "" : "s"} exceeds this class's limit of ${caps.studentsPerClass}. Seats are only taken when someone accepts, so some invites may not fit.`
-        : undefined;
+    const warnings: string[] = [];
+    if (students + pending > caps.studentsPerClass) {
+      warnings.push(
+        `Heads up: ${students} student${students === 1 ? "" : "s"} plus ${pending} pending invite${pending === 1 ? "" : "s"} exceeds this class's limit of ${caps.studentsPerClass}. Seats are only taken when someone accepts, so some invites may not fit.`,
+      );
+    }
+    if (emailErrors > 0) {
+      warnings.push(
+        `Couldn't email ${emailErrors} invite${emailErrors === 1 ? "" : "s"} — copy the accept link${emailErrors === 1 ? "" : "s"} below and share ${emailErrors === 1 ? "it" : "them"} directly.`,
+      );
+    }
+    const warning = warnings.length > 0 ? warnings.join(" ") : undefined;
     return { invites: created, ...(warning ? { warning } : {}) };
   },
 

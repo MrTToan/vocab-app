@@ -124,6 +124,10 @@ export interface CreatedInvite {
   email: string;
   status: InviteStatus;
   acceptLink: string;
+  /** Whether Lexi emailed the accept link to this address. False when email is
+   *  unconfigured (dev), the invite was already accepted, or the send failed —
+   *  in which case the teacher shares the copyable link manually. */
+  emailed: boolean;
 }
 
 /** The result of an "Invite by email" submission. `warning` is set (non-blocking)

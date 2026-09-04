@@ -17,6 +17,25 @@ vi.mock("@/lib/auth/user", async (importOriginal) => {
   return { ...real, currentUserId: async () => caller.id };
 });
 
+// Slice 3.1 — invites are emailed via Resend. Mock the email module so no real
+// send happens; `email.impl` lets a test simulate the send outcome (default:
+// `skipped`, i.e. RESEND_API_KEY unset), and `email.sentTo` records addresses.
+type EmailOutcome = { status: "sent"; id?: string } | { status: "skipped" } | { status: "error"; error: string };
+const email = vi.hoisted(() => ({
+  sentTo: [] as string[],
+  impl: (async () => ({ status: "skipped" })) as (p: { to: string }) => Promise<EmailOutcome>,
+}));
+vi.mock("@/lib/email/invite", async (importOriginal) => {
+  const real = await importOriginal<typeof import("@/lib/email/invite")>();
+  return {
+    ...real,
+    sendInviteEmail: (p: { to: string }) => {
+      email.sentTo.push(p.to);
+      return email.impl(p);
+    },
+  };
+});
+
 // Next 16 route ctx with two params (students/[studentId]).
 const ctx2 = (id: string, studentId: string) => ({ params: Promise.resolve({ id, studentId }) });
 
@@ -79,6 +98,8 @@ beforeAll(async () => {
 
 beforeEach(() => {
   caller.id = "teacher-a";
+  email.sentTo = [];
+  email.impl = async () => ({ status: "skipped" });
 });
 
 /** Create a class as the current caller and return its id + first join code. */
@@ -410,6 +431,81 @@ describe("invites: create is teacher-only + idempotent", () => {
     const body = await json(res);
     expect(body.invites[0].acceptLink).toMatch(/^https:\/\/lexi\.vnfriends\.com\/classes\?invite=/);
     expect(body.invites[0].acceptLink).not.toContain("localhost");
+  });
+});
+
+describe("invites: emailing is best-effort and never fails creation", () => {
+  it("sends one email per newly-created address and marks them emailed", async () => {
+    email.impl = async () => ({ status: "sent", id: "e1" });
+    caller.id = "teacher-em1";
+    const { id } = await makeClass("Emailed class");
+    const res = await invitesRoute.POST(
+      post(`http://t/api/classes/${id}/invites`, { emails: ["one@x.com", "two@x.com"] }),
+      ctx(id),
+    );
+    expect(res.status).toBe(200);
+    const body = await json(res);
+    expect(email.sentTo.sort()).toEqual(["one@x.com", "two@x.com"]);
+    expect(body.invites.every((i: { emailed: boolean }) => i.emailed)).toBe(true);
+    expect(body.warning).toBeUndefined();
+  });
+
+  it("still creates invites + returns links when email is unconfigured (skipped)", async () => {
+    // Default impl is `skipped` (RESEND_API_KEY unset).
+    caller.id = "teacher-em2";
+    const { id } = await makeClass("No-key class");
+    const res = await invitesRoute.POST(
+      post(`http://t/api/classes/${id}/invites`, { emails: ["nokey@x.com"] }),
+      ctx(id),
+    );
+    expect(res.status).toBe(200);
+    const body = await json(res);
+    expect(email.sentTo).toEqual(["nokey@x.com"]);
+    expect(body.invites[0].acceptLink).toMatch(/\/classes\?invite=/);
+    expect(body.invites[0].emailed).toBe(false);
+    expect(body.warning).toBeUndefined(); // no key is not a failure — no warning
+  });
+
+  it("never 500s when a send errors; warns + emailed:false, link still returned", async () => {
+    email.impl = async () => ({ status: "error", error: "domain not verified" });
+    caller.id = "teacher-em3";
+    const { id } = await makeClass("Send-fails class");
+    const res = await invitesRoute.POST(
+      post(`http://t/api/classes/${id}/invites`, { emails: ["fail@x.com"] }),
+      ctx(id),
+    );
+    expect(res.status).toBe(200);
+    const body = await json(res);
+    expect(body.invites[0].emailed).toBe(false);
+    expect(body.invites[0].acceptLink).toMatch(/\/classes\?invite=/);
+    expect(body.warning).toMatch(/couldn't email/i);
+  });
+
+  it("does not re-email an already-accepted invite (no spam on re-invite)", async () => {
+    email.impl = async () => ({ status: "sent" });
+    caller.id = "teacher-em4";
+    const invitee = "accepted-invitee";
+    const inviteeEmail = "accepted@x.com";
+    const { id } = await makeClass("Accepted class");
+    await seedUser(invitee, inviteeEmail);
+    const first = await invitesRoute.POST(
+      post(`http://t/api/classes/${id}/invites`, { emails: [inviteeEmail] }),
+      ctx(id),
+    );
+    const inviteId = (await json(first)).invites[0].id as string;
+    // Student accepts (consent) → membership row.
+    caller.id = invitee;
+    await acceptInvite.POST(post(`http://t/api/classes/invites/${inviteId}/accept`), acceptCtx(inviteId));
+    // Teacher re-invites the same, now-accepted address: must not email again.
+    caller.id = "teacher-em4";
+    email.sentTo = [];
+    const again = await invitesRoute.POST(
+      post(`http://t/api/classes/${id}/invites`, { emails: [inviteeEmail] }),
+      ctx(id),
+    );
+    const body = await json(again);
+    expect(body.invites[0].status).toBe("accepted");
+    expect(email.sentTo).toEqual([]);
   });
 });
 
