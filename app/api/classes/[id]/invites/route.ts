@@ -9,10 +9,12 @@ import { publicOrigin } from "@/lib/origin";
  *
  * { emails:[…] } → upsert idempotent `class_invites` rows (one per normalized,
  * email-shaped address; re-inviting the same address updates, never duplicates)
- * and return { invites:[{id,email,status,acceptLink}], warning? } so the teacher
- * can copy each tokenised accept link and send it through their own channel.
- * NO real email is sent (invite-by-link; captain decision). No seat is taken —
- * that happens only on accept — so an over-cap batch is WARNED, never blocked.
+ * and return { invites:[{id,email,status,acceptLink,emailed}], warning? }. Lexi
+ * emails each newly-created / still-pending accept link automatically (Resend,
+ * best-effort — a send failure never fails the request, it just surfaces a soft
+ * warning + `emailed:false`), and the copyable link is still returned as a
+ * fallback. No seat is taken — that happens only on accept — so an over-cap
+ * batch is WARNED, never blocked.
  * The accept link is built from the canonical public origin (`publicOrigin`),
  * not the raw request origin, so it survives the reverse proxy in prod.
  */

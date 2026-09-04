@@ -53,13 +53,22 @@ response sends `MUTABLE_JSON_CACHE_HEADERS` (`private, no-store`). An adversaria
 
 A teacher can invite **specific people by email**, not just broadcast a join code.
 
-- **No mail infrastructure.** Lexi has no email provider, so this slice ships **invite-by-link**
-  (captain decision, locked): the teacher enters email(s); Lexi creates a `class_invites` row per
-  address, each with an opaque **token**, and returns a **copyable accept link**
-  (`/classes?invite=<token>`) the teacher sends through **their own** channel (email, chat). **No
-  real email is sent, and no mail provider was added.** Real outbound email is a **future
-  enhancement** — it drops in behind these same routes (the token model is already shaped for it)
-  once the captain picks a provider.
+- **Invite-by-link, now emailed automatically.** The teacher enters email(s); Lexi creates a
+  `class_invites` row per address, each with an opaque **token**, builds the **accept link**
+  (`/classes?invite=<token>`), and — the follow-up to the original invite-by-link slice — **emails
+  that link to each newly-invited address automatically** (class name, inviting teacher, the
+  whole-report privacy note, and the accept link as a button + plain-text URL). The **copyable
+  link stays in the UI** as a fallback (chat, or if an email bounces), and each row carries an
+  `emailed` flag.
+- **Provider = Resend, best-effort, non-blocking.** Sending is a tiny direct `fetch` to the Resend
+  API (`lib/email/send.ts` → `sendEmail`; the invite message is built in `lib/email/invite.ts` →
+  `sendInviteEmail`), so **no npm dependency** was added. Config: `RESEND_API_KEY` (unset ⇒ sending
+  is **skipped** — local dev/tests — invites still create and return links) and `EMAIL_FROM`
+  (default `Lexi <invites@lexi.vnfriends.com>`). Email **never fails invite creation**: a send
+  error (Resend down, domain unverified) still creates the invite + returns the link and surfaces a
+  **soft `warning`** (plus `emailed:false`) so the teacher shares the link manually — the route
+  never 500s because of email. Only **newly-created / still-pending** rows are emailed; an
+  already-**accepted** row is not re-emailed (no spam on idempotent re-invite).
 - **The accept link uses the canonical public origin, not the raw request origin.** Behind the
   reverse proxy (Caddy → the Next container on `localhost:3000`) `new URL(req.url).origin` is the
   INTERNAL address, so links came out as `https://localhost:3000/…` (dead for real students). The
