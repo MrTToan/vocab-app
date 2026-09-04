@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import "./globals.css";
 
 // PERF: no fonts here. The app's Fraunces/IBM Plex load from app/fonts.ts via
@@ -20,12 +19,8 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning className="h-full">
+    <html lang="en" className="h-full">
       <body className="min-h-full flex flex-col">
-        {/* Set the saved theme before paint (no flash). Absent = follow the OS. */}
-        <Script id="lexi-theme-init" strategy="beforeInteractive">
-          {`(function(){try{var t=localStorage.getItem('lexi-theme');if(t==='light'||t==='dark'){document.documentElement.dataset.theme=t;}}catch(e){}})();`}
-        </Script>
         {children}
       </body>
     </html>

@@ -372,7 +372,7 @@ function RankBars({
             <div className="w-6 shrink-0 text-right text-sm muted tabular-nums">{r.rank}</div>
           )}
           <div className="w-24 sm:w-40 truncate text-sm font-semibold" title={r.label}>{r.label}</div>
-          <div className="flex-1 h-2.5 rounded-full overflow-hidden bg-black/5 dark:bg-white/10">
+          <div className="flex-1 h-2.5 rounded-full overflow-hidden bg-black/5">
             <div className="h-full rounded-full" style={{ width: `${(r.value / max) * 100}%`, background: color }} />
           </div>
           <div className="shrink-0 text-right text-sm muted tabular-nums">

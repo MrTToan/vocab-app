@@ -88,7 +88,7 @@ export default function Home() {
                 <div className="w-24 text-sm font-semibold">
                   {STAGE_LABEL[stage]}
                 </div>
-                <div className="flex-1 h-2.5 rounded-full overflow-hidden bg-black/5 dark:bg-white/10">
+                <div className="flex-1 h-2.5 rounded-full overflow-hidden bg-black/5">
                   <div
                     className="h-full rounded-full"
                     style={{

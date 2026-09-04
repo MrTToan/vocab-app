@@ -21,8 +21,8 @@ is gated server-side (`force-dynamic`), and `GET /api/admin/stats` re-checks the
 Everything is aggregated **in SQL** over the same libSQL DB (a private read-only client); the
 window for time series is the last **30 days**. The dashboard is an operator's *"how is Lexi
 doing?"* view — chart **form follows each metric's job** (the `dataviz` skill), rendered as
-hand-authored inline SVG (no chart library) with Lexi's app tokens, so it matches `/report` and
-adapts to light/dark. It reuses the `/report` chart primitives (`components/report/Charts.tsx`:
+hand-authored inline SVG (no chart library) with Lexi's app tokens, so it matches `/report`. It
+reuses the `/report` chart primitives (`components/report/Charts.tsx`:
 `ActivityColumns`, `MasteryPipeline`, `HBars`) plus admin-only **count-scaled** primitives
 (`components/admin/Charts.tsx`: `AreaTrend`, `CountColumns`, `MiniSpark`, `ResultMixBar`).
 

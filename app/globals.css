@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
 /* ── Identity: "exam paper & fountain-pen ink" ──
-   Light is the base. Dark applies when the OS is dark (unless the user forced
-   light) OR when the user explicitly picks dark (data-theme="dark"). */
+   Lexi is light-only. The palette below renders on every page regardless of the
+   OS/browser dark-mode setting (color-scheme: light keeps form controls light too). */
 :root {
+  color-scheme: light;
   --bg: #f4f1ea;          /* warm exam paper */
   --panel: #fffdf7;       /* brighter card paper */
   --ink: #211f1a;         /* warm near-black */
@@ -29,59 +30,6 @@
   --stage-recall: #12ac62;
   --stage-production: #218b56;
   --stage-known: #1b6d3b;
-}
-
-/* dark palette, reused for both "system dark" and "forced dark" */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #08100b;          /* black with a faint green cast (agency dark) */
-    --panel: #0f1a13;
-    --ink: #eef4ee;
-    --muted: #8fa295;
-    --line: #1f2c24;
-    --accent: #34e88f;      /* electric green */
-    --accent-ink: #05140b;
-    --accent-soft: #10241a;
-    --highlight: #efc24a;
-    --highlight-ink: #241d06;
-    --highlight-soft: #2f2914;
-    --good: #8be3a8;
-    --good-soft: #10281a;
-    --warn: #f0c05a;
-    --warn-soft: #2c2410;
-    --bad: #ff7a6d;
-    --bad-soft: #2c1614;
-    /* mastery ramp — dark: dim→bright emerald = distance to mastery (validated) */
-    --stage-new: #3a4a40;
-    --stage-recognition: #1f5a3e;
-    --stage-recall: #2f8a5c;
-    --stage-production: #37b877;
-    --stage-known: #34e88f;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #08100b;
-  --panel: #0f1a13;
-  --ink: #eef4ee;
-  --muted: #8fa295;
-  --line: #1f2c24;
-  --accent: #34e88f;
-  --accent-ink: #05140b;
-  --accent-soft: #10241a;
-  --highlight: #efc24a;
-  --highlight-ink: #241d06;
-  --highlight-soft: #2f2914;
-  --good: #8be3a8;
-  --good-soft: #10281a;
-  --warn: #f0c05a;
-  --warn-soft: #2c2410;
-  --bad: #ff7a6d;
-  --bad-soft: #2c1614;
-  --stage-new: #3a4a40;
-  --stage-recognition: #1f5a3e;
-  --stage-recall: #2f8a5c;
-  --stage-production: #37b877;
-  --stage-known: #34e88f;
 }
 
 html,

@@ -32,7 +32,7 @@ history into simple charts (all hand-drawn inline SVG/CSS — no external chart 
 - Charts start filling from your **next real practice** — a fresh database shows empty states, not an error.
 - A "weak" word is one you recently got wrong or whose recent accuracy dropped below 60%; these are the
   words the picker pushes back at you.
-- The charts use only Lexi's design tokens (cream + forest, Fraunces + IBM Plex) and are theme-aware.
+- The charts use only Lexi's design tokens (cream + forest, Fraunces + IBM Plex).
 
 ## Planned next (Slice 2)
 Not in the current page yet, because each needs a new/cheaper server aggregation: a **consistency
