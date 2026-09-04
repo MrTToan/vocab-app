@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
-import ThemeToggle from "./ThemeToggle";
 
 // Two peer modules. The nav shows a module switch (Vocabulary | Writing) plus a
 // context sub-nav for whichever module you're in. Vocab keeps all its original
@@ -96,7 +95,6 @@ export default function Nav({ authSlot, adminSlot }: { authSlot?: ReactNode; adm
             👥<span className="hidden sm:inline"> Classes</span>
           </Link>
           {adminSlot}
-          <ThemeToggle />
           {authSlot}
         </div>
       </div>
