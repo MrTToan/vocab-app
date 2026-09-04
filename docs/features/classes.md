@@ -60,6 +60,13 @@ A teacher can invite **specific people by email**, not just broadcast a join cod
   real email is sent, and no mail provider was added.** Real outbound email is a **future
   enhancement** — it drops in behind these same routes (the token model is already shaped for it)
   once the captain picks a provider.
+- **The accept link uses the canonical public origin, not the raw request origin.** Behind the
+  reverse proxy (Caddy → the Next container on `localhost:3000`) `new URL(req.url).origin` is the
+  INTERNAL address, so links came out as `https://localhost:3000/…` (dead for real students). The
+  origin is now computed by `publicOrigin(req)` (`lib/origin.ts`): the configured `AUTH_URL` /
+  `NEXTAUTH_URL` first, else the proxy's `x-forwarded-host` + `x-forwarded-proto`, else the raw
+  request origin (dev). The link is regenerated on every read, so existing pending invites render
+  the corrected link with no data migration.
 - **Idempotent.** Re-inviting the same address **updates** its row (new token, back to pending),
   never duplicates — enforced by `UNIQUE(class_id, email)`. Emails are trimmed + lowercased;
   non-email entries in a batch are dropped rather than failing it.

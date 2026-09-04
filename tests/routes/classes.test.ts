@@ -394,6 +394,23 @@ describe("invites: create is teacher-only + idempotent", () => {
     const mixedBody = await json(mixed);
     expect(mixedBody.invites.map((i: { email: string }) => i.email)).toEqual(["ok@z.com"]);
   });
+
+  it("builds the accept link from the proxy-forwarded public host, not the internal request origin", async () => {
+    caller.id = "teacher-i3";
+    const { id } = await makeClass("Forwarded-host invites");
+    // Simulate the reverse proxy (Caddy) forwarding the real public host while
+    // the request itself arrives on the internal localhost address.
+    const res = await invitesRoute.POST(
+      post(`http://localhost:3000/api/classes/${id}/invites`, { emails: ["proxy@x.com"] }, {
+        "x-forwarded-host": "lexi.vnfriends.com",
+        "x-forwarded-proto": "https",
+      }),
+      ctx(id),
+    );
+    const body = await json(res);
+    expect(body.invites[0].acceptLink).toMatch(/^https:\/\/lexi\.vnfriends\.com\/classes\?invite=/);
+    expect(body.invites[0].acceptLink).not.toContain("localhost");
+  });
 });
 
 describe("invites: the banner, accept, decline (email-matched)", () => {
