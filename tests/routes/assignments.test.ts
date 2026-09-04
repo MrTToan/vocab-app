@@ -63,6 +63,38 @@ async function seedCollection(
   }
 }
 
+/** Seed a public writing prompt directly (the bank is admin-curated + public). */
+async function seedWritingPrompt(
+  id: string,
+  task: "task1" | "task2",
+  title: string,
+  visibility: "public" | "private" = "public",
+) {
+  const { getDb } = await import("@/lib/db");
+  const db = await getDb();
+  await db.execute({
+    sql: `INSERT OR REPLACE INTO writing_prompts
+            (id, task_type, title, prompt_text, tags, last_shown, created_at, user_id, owner_id, visibility)
+          VALUES (?,?,?,?,?,0,?,?,?,?)`,
+    args: [id, task, title, `Body of ${title}`, "[]", Date.now(), "__system__", "__system__", visibility],
+  });
+}
+
+/** Seed a stored writing submission for a user (drives writing completion). */
+async function seedWritingSubmission(userId: string, promptId: string) {
+  const { getDb } = await import("@/lib/db");
+  const db = await getDb();
+  await db.execute({
+    sql: `INSERT INTO writing_submissions
+            (id, prompt_id, task_type, text, word_count, overall_band, bands, strengths, general_feedback, priorities, created_at, user_id)
+          VALUES (?,?,?,?,?,?,?,?,?,?,?,?)`,
+    args: [
+      `sub-${userId}-${promptId}-${Math.random()}`, promptId, "task2", "essay", 260, 7,
+      "{}", "[]", "", "[]", Date.now(), userId,
+    ],
+  });
+}
+
 /** Log a practice attempt for a user on a word (drives completion). */
 async function logAttempt(userId: string, wordId: string) {
   const { getStore } = await import("@/lib/store");
@@ -99,6 +131,8 @@ beforeAll(async () => {
 
   // A shared public catalog pack (assignable by anyone).
   await seedCollection("pubcol-col-test", "__system__", "public", ["pw1", "pw2", "pw3", "pw4"]);
+  // A shared public writing prompt (Slice 2's writing_prompt kind).
+  await seedWritingPrompt("pub-wp-test", "task2", "Public writing prompt");
 });
 
 beforeEach(() => {
@@ -130,6 +164,24 @@ async function createAssignment(
   return classAssignments.POST(
     post(`http://t/api/classes/${classId}/assignments`, {
       kind: "vocab_collection",
+      ref,
+      studentIds,
+      ...extra,
+    }),
+    cctx(classId),
+  );
+}
+
+/** Create a writing-prompt assignment (as the current caller). */
+async function createWritingAssignment(
+  classId: string,
+  ref: string,
+  studentIds: string[],
+  extra: Record<string, unknown> = {},
+) {
+  return classAssignments.POST(
+    post(`http://t/api/classes/${classId}/assignments`, {
+      kind: "writing_prompt",
       ref,
       studentIds,
       ...extra,
@@ -333,6 +385,68 @@ describe("completion derivation ('practised at least once')", () => {
     caller.id = "comp-s";
     const mine = await json(await myAssignments.GET(get("http://t/api/assignments")));
     expect(mine.assignments[0].progress.state).toBe("complete");
+  });
+});
+
+describe("writing_prompt kind (Slice 2 — same flow, new adapter)", () => {
+  it("kinds registry now includes writing_prompt", async () => {
+    const body = await json(await kindsRoute.GET(get("http://t/api/assignments/kinds")));
+    const kinds = body.kinds.map((k: { kind: string }) => k.kind);
+    expect(kinds).toContain("vocab_collection");
+    expect(kinds).toContain("writing_prompt");
+  });
+
+  it("the content picker lists public writing prompts (not private drafts)", async () => {
+    await seedWritingPrompt("wp-draft", "task2", "A draft", "private");
+    const body = await json(
+      await contentRoute.GET(get("http://t/api/assignments/content?kind=writing_prompt")),
+    );
+    const refs = body.content.map((c: { ref: string }) => c.ref);
+    expect(refs).toContain("pub-wp-test");
+    expect(refs).not.toContain("wp-draft"); // private → not assignable
+  });
+
+  it("a teacher assigns a writing prompt to specific students; completion flips after a submission", async () => {
+    const { id } = await makeClassWith("t-write", ["w-seen", "w-unseen"]);
+    const res = await createWritingAssignment(id, "pub-wp-test", ["w-seen"]);
+    expect(res.status).toBe(200);
+    const { assignment } = await json(res);
+    expect(assignment.content_kind).toBe("writing_prompt");
+
+    // The targeted student sees it, deep-linked into the EXISTING writing flow;
+    // the untargeted classmate does not.
+    caller.id = "w-seen";
+    const mine = await json(await myAssignments.GET(get("http://t/api/assignments")));
+    expect(mine.assignments).toHaveLength(1);
+    expect(mine.assignments[0].content.doHref).toBe("/writing/task2?q=pub-wp-test");
+    expect(mine.assignments[0].progress.state).toBe("not_started");
+
+    caller.id = "w-unseen";
+    expect((await json(await myAssignments.GET(get("http://t/api/assignments")))).assignments).toHaveLength(0);
+
+    // Teacher sees not-yet-complete.
+    caller.id = "t-write";
+    let detail = await json(await assignmentById.GET(get(`http://t/api/assignments/${assignment.id}`), actx(assignment.id)));
+    expect(detail.completeCount).toBe(0);
+    expect(detail.students[0].progress.state).toBe("not_started");
+
+    // The student submits → completion flips to done (both views).
+    await seedWritingSubmission("w-seen", "pub-wp-test");
+    caller.id = "t-write";
+    detail = await json(await assignmentById.GET(get(`http://t/api/assignments/${assignment.id}`), actx(assignment.id)));
+    expect(detail.completeCount).toBe(1);
+    expect(detail.students[0].progress.state).toBe("complete");
+    expect(detail.students[0].progress.detail).toMatch(/Submitted/);
+
+    caller.id = "w-seen";
+    const after = await json(await myAssignments.GET(get("http://t/api/assignments")));
+    expect(after.assignments[0].progress.state).toBe("complete");
+  });
+
+  it("assigning a private writing draft → 400 (student couldn't open it)", async () => {
+    await seedWritingPrompt("wp-draft2", "task2", "Draft two", "private");
+    const { id } = await makeClassWith("t-wdraft", ["w-d"]);
+    expect((await createWritingAssignment(id, "wp-draft2", ["w-d"])).status).toBe(400);
   });
 });
 

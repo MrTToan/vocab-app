@@ -1,9 +1,11 @@
 # Assignments
 
 **Assignments** let a **teacher**, inside a [class](classes.md), give students a specific piece of
-the platform's **existing** content to work on, and see who has done it. Slice 1 ships **vocabulary
-set** assignments; the design is built as **one extensible flow** so future content kinds (writing
-tasks, grammar, listening) drop in as adapters with **no schema or UI change**.
+the platform's **existing** content to work on, and see who has done it. Two content kinds ship
+today — **vocabulary set** (Slice 1) and **writing prompt** (Slice 2) — but the design is **one
+extensible flow**: each kind is a self-contained adapter, so more kinds (grammar, listening) drop in
+with **no schema, route, or shared-UI change**. The writing kind is the proof: it was added as *one
+adapter file + one registry line + one enum string* and nothing else.
 
 ## The spine: `kind + ref` + the AssignableKind adapter
 
@@ -21,7 +23,23 @@ progress verdict, and the pages just render cards, a "Start →" link and a stat
 = implement the adapter + register it in `lib/assignments/kinds/index.ts` + add the string to
 `ASSIGNMENT_KINDS` (`lib/assignments/types.ts`). The picker's tab strip and the completion column are
 registry-driven, so a new kind lights up automatically. The vocab adapter lives in
-`lib/assignments/kinds/vocab.ts`.
+`lib/assignments/kinds/vocab.ts`, the writing adapter in `lib/assignments/kinds/writing.ts`.
+
+### Adding a kind (worked example: `writing_prompt`)
+
+Slice 2 added writing assignments **without touching the schema, the routes, the store, or any
+shared component** — the whole change is:
+
+1. `lib/assignments/kinds/writing.ts` — implement `AssignableKind`: `listPickable` (public writing
+   bank), `resolveCard` → `doHref` `/writing/task{1,2}?q=<promptId>` (the existing writing deep-link),
+   `progressFor`/`progressForMany` → completion = **submitted**.
+2. one line in `lib/assignments/kinds/index.ts` registering it,
+3. `"writing_prompt"` in `ASSIGNMENT_KINDS` (`lib/assignments/types.ts`) — which flows into the zod
+   `z.enum(ASSIGNMENT_KINDS)` create/content schemas for free.
+
+The picker gained a tab, the completion grid gained a column, the student/teacher cards render a
+writing assignment through the **same** components — all automatically. That is the whole point of
+the spine.
 
 ## What Slice 1 ships (vocab-collection assignments)
 
@@ -33,6 +51,25 @@ registry-driven, so a new kind lights up automatically. The vocab adapter lives 
   attempt on any word in the set. Derived **live** from existing attempt data — no new tracking.
 - **See it** — the student sees "Assigned to you" on `/classes` and per-class; the teacher sees a
   per-student completion grid on the assignment page, with **overdue** flagged (past due + not done).
+
+## What Slice 2 adds (writing-prompt assignments)
+
+- **Create** — the same picker now has a **Writing prompt** tab listing the writing bank; a teacher
+  picks a prompt, targets specific students, sets a due date, and assigns — identical flow to vocab.
+- **Do it** — the student's card deep-links into the **existing** writing flow via
+  `/writing/task{1,2}?q=<promptId>` (`lib/writing/deeplink.ts`,
+  `components/writing/WritingPractice.tsx`). No parallel player.
+- **Completion** — "**submitted**": a student is done once they have ≥ 1 stored submission for the
+  prompt (`writingStore.latestSubmission`) — the writing analog of vocab's "practised once", derived
+  **live** from existing submission data.
+- **No visibility grant needed.** Unlike vocab's private sets, the writing bank is **admin-curated
+  and public** (self-serve authoring was retired — `POST /api/writing/prompts` is admin-only and
+  writes the `__system__` public bank). Every assignable prompt is therefore already visible to every
+  student through the normal writing flow, so Slice 1's assign-grants-visibility mechanism is **not
+  extended** for writing. The adapter enforces this by making **only public prompts assignable**
+  (`validateRef` rejects a private draft with 400), guaranteeing a targeted student can always open
+  what they were assigned. (If teacher-owned private writing prompts are ever reintroduced, the vocab
+  grant pattern in `collectionVisibleTo` is the template to follow.)
 
 ## Assign-grants-visibility (private sets)
 
@@ -84,7 +121,7 @@ report access.
 
 - **Schema:** `assignments` + `assignment_targets` in `migrate()` (`lib/db.ts`); the visibility
   grant in `collectionVisibleTo` (`lib/store.ts`).
-- **Spine + adapters:** `lib/assignments/kinds/{kind,vocab,index}.ts`; shared types
+- **Spine + adapters:** `lib/assignments/kinds/{kind,vocab,writing,index}.ts`; shared types
   `lib/assignments/types.ts`; caps/errors `lib/assignments/config.ts`; live completion queries
   `lib/assignments/progress.ts`.
 - **Store:** `lib/assignments/store.ts` — `assignmentsStore.forUser(userId)` (all authz here, like
@@ -104,9 +141,11 @@ report access.
   `useAssignmentKinds` / `revalidateAssignments()` in `lib/swr.ts`.
 - **Tests:** `tests/routes/assignments.test.ts` — teacher-only create, specific-student targeting,
   the private-content grant **and its revocation** (archive / remove / class-archive), completion
-  derivation, live overdue, and the 404 gates.
+  derivation, live overdue, the 404 gates, and the **writing_prompt** route path (registry, picker,
+  assign + completion-on-submit, private-draft rejection). Adapter units for the writing kind
+  (listing, deep-link, completion=submitted) in `tests/assignments-writing-kind.test.ts`.
 
 ## Deferred to later slices
 
-Writing-prompt assignments (a drop-in `writing_prompt` adapter — Slice 2), whole-class targeting,
-teacher-chosen completion criteria, a richer completion dashboard, and notifications.
+Whole-class targeting convenience, teacher-chosen completion criteria (override of the kind default),
+a richer completion dashboard, and overdue notifications.
