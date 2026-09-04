@@ -19,6 +19,7 @@
 import { randomUUID } from "crypto";
 import type { Client } from "@libsql/client";
 import { getDb } from "../db";
+import { getUserEmail } from "../auth/store";
 import { classCaps, ClassCapError } from "./config";
 import {
   CONSENT_NOTICE,
@@ -27,10 +28,14 @@ import {
   type ClassDetail,
   type ClassRole,
   type ClassRow,
+  type CreatedInvite,
+  type CreateInvitesResult,
   type EnrolledClass,
   type JoinPreview,
   type MyClassesData,
+  type PendingInvite,
   type RosterEntry,
+  type TeacherInvite,
   type TeachingClass,
 } from "./types";
 
@@ -71,6 +76,26 @@ function makeJoinCode(): string {
 /** Normalize a user-supplied code: strip spaces/dashes, uppercase. */
 export function normalizeJoinCode(code: string): string {
   return code.replace(/[\s-]/g, "").toUpperCase();
+}
+
+/** Normalize an email the way `users.email` is stored (trim + lowercase). */
+export function normalizeEmail(email: string): string {
+  return email.trim().toLowerCase();
+}
+
+/** A lenient "looks like an email" check — the store drops non-matching entries
+ *  from an invite batch rather than failing the whole request. */
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+export function isEmailish(email: string): boolean {
+  return EMAIL_RE.test(email);
+}
+
+/** An opaque, URL-safe accept-link token (~120 bits). Unique per invite; the
+ *  UNIQUE(token) index is the link-lookup key and the accept authorization
+ *  still re-checks the caller's email, so the token is a pointer, not a bearer
+ *  credential that bypasses consent. */
+function makeInviteToken(): string {
+  return randomUUID().replace(/-/g, "") + randomUUID().replace(/-/g, "").slice(0, 8);
 }
 
 const raw = {
@@ -427,7 +452,8 @@ const raw = {
     const archived = cls.archived_at != null;
     if (role === "teacher") {
       const students = await raw.roster(classId);
-      return { role: "teacher", class: cls, students, studentCount: students.length, archived };
+      const invites = await raw.pendingInvitesForClass(classId);
+      return { role: "teacher", class: cls, students, studentCount: students.length, invites, archived };
     }
     const teachers = await raw.teacherNames(classId);
     const joined = await connect().then((c) =>
@@ -443,6 +469,233 @@ const raw = {
       joined_at: Number(joined.rows[0]?.joined_at ?? 0),
       archived,
     };
+  },
+
+  // ── email invites (Slice 3) ────────────────────────────────────────────
+
+  /** Pending invites for one class (teacher's revoke list). */
+  async pendingInvitesForClass(classId: string): Promise<TeacherInvite[]> {
+    const c = await connect();
+    const rs = await c.execute({
+      sql: `SELECT id, email, status, created_at FROM class_invites
+             WHERE class_id = ? AND status = 'pending'
+             ORDER BY created_at ASC`,
+      args: [classId],
+    });
+    return (rs.rows as Record<string, unknown>[]).map((r) => ({
+      id: String(r.id),
+      email: String(r.email ?? ""),
+      status: "pending",
+      created_at: Number(r.created_at ?? 0),
+    }));
+  },
+
+  /** Count of pending invites for a class (for the non-blocking cap warning). */
+  async pendingInviteCount(classId: string): Promise<number> {
+    const c = await connect();
+    const rs = await c.execute({
+      sql: "SELECT COUNT(*) AS n FROM class_invites WHERE class_id = ? AND status = 'pending'",
+      args: [classId],
+    });
+    return Number(rs.rows[0]?.n ?? 0);
+  },
+
+  /**
+   * Create/refresh invites for a class (teacher-only). Idempotent per email via
+   * UNIQUE(class_id, email): re-inviting the same address updates the existing
+   * row (new token, back to pending) instead of duplicating — UNLESS it was
+   * already accepted, which is preserved (the student is already a member).
+   * `origin` builds the copyable accept link. No seat is taken here.
+   */
+  async createInvites(
+    classId: string,
+    userId: string,
+    emails: string[],
+    origin: string,
+  ): Promise<CreateInvitesResult> {
+    if ((await raw.roleOf(classId, userId)) !== "teacher") throw new ForbiddenError();
+    const c = await connect();
+    const now = Date.now();
+    // Normalize, keep only email-shaped entries, dedupe (last wins).
+    const seen = new Map<string, string>();
+    for (const e of emails) {
+      const norm = normalizeEmail(e);
+      if (isEmailish(norm)) seen.set(norm, norm);
+    }
+    const created: CreatedInvite[] = [];
+    for (const email of seen.keys()) {
+      await c.execute({
+        sql: `INSERT INTO class_invites (id, class_id, email, invited_by, token, status, created_at, responded_at)
+              VALUES (?, ?, ?, ?, ?, 'pending', ?, NULL)
+              ON CONFLICT(class_id, email) DO UPDATE SET
+                invited_by   = excluded.invited_by,
+                token        = CASE WHEN class_invites.status = 'accepted' THEN class_invites.token ELSE excluded.token END,
+                status       = CASE WHEN class_invites.status = 'accepted' THEN 'accepted' ELSE 'pending' END,
+                created_at   = excluded.created_at,
+                responded_at = CASE WHEN class_invites.status = 'accepted' THEN class_invites.responded_at ELSE NULL END`,
+        args: [randomUUID(), classId, email, userId, makeInviteToken(), now],
+      });
+      // Re-read by the unique (class_id,email) key to get the persisted id/token
+      // (the row may have pre-existed, keeping its original id).
+      const rs = await c.execute({
+        sql: "SELECT id, email, token, status FROM class_invites WHERE class_id = ? AND email = ? LIMIT 1",
+        args: [classId, email],
+      });
+      const row = rs.rows[0] as Record<string, unknown> | undefined;
+      if (!row) continue;
+      const token = row.token == null ? null : String(row.token);
+      created.push({
+        id: String(row.id),
+        email: String(row.email ?? email),
+        status: (row.status === "accepted" ? "accepted" : "pending") as CreatedInvite["status"],
+        acceptLink: token ? `${origin}/classes?invite=${encodeURIComponent(token)}` : `${origin}/classes`,
+      });
+    }
+    // Non-blocking cap warning: a seat is taken only on accept, so we never block
+    // creation, but we warn if everyone accepting would overflow the class.
+    const caps = classCaps();
+    const [students, pending] = await Promise.all([
+      raw.studentCount(classId),
+      raw.pendingInviteCount(classId),
+    ]);
+    const warning =
+      students + pending > caps.studentsPerClass
+        ? `Heads up: ${students} student${students === 1 ? "" : "s"} plus ${pending} pending invite${pending === 1 ? "" : "s"} exceeds this class's limit of ${caps.studentsPerClass}. Seats are only taken when someone accepts, so some invites may not fit.`
+        : undefined;
+    return { invites: created, ...(warning ? { warning } : {}) };
+  },
+
+  /** Revoke a pending invite (teacher-only). Idempotent. */
+  async revokeInvite(classId: string, userId: string, inviteId: string): Promise<void> {
+    if ((await raw.roleOf(classId, userId)) !== "teacher") throw new ForbiddenError();
+    const c = await connect();
+    await c.execute({
+      sql: "UPDATE class_invites SET status = 'revoked', responded_at = ? WHERE id = ? AND class_id = ? AND status = 'pending'",
+      args: [Date.now(), inviteId, classId],
+    });
+  },
+
+  /** Pending invites addressed to the caller's email (the hub banner). */
+  async listInvitesForMe(userId: string): Promise<PendingInvite[]> {
+    const email = await getUserEmail(userId);
+    if (!email) return [];
+    const c = await connect();
+    const rs = await c.execute({
+      sql: `SELECT ci.id, ci.token, cl.id AS class_id, cl.name, cl.emoji
+              FROM class_invites ci JOIN classes cl ON cl.id = ci.class_id
+             WHERE ci.email = ? AND ci.status = 'pending' AND cl.archived_at IS NULL
+             ORDER BY ci.created_at DESC`,
+      args: [email],
+    });
+    const out: PendingInvite[] = [];
+    for (const r of rs.rows as Record<string, unknown>[]) {
+      const classId = String(r.class_id);
+      const teachers = await raw.teacherNames(classId);
+      out.push({
+        id: String(r.id),
+        token: r.token == null ? null : String(r.token),
+        class: { id: classId, name: String(r.name ?? ""), emoji: String(r.emoji ?? "") },
+        teacher: { name: teachers[0]?.name ?? "A teacher" },
+      });
+    }
+    return out;
+  },
+
+  /** Load an invite by id, but only if it is addressed to the caller's email.
+   *  Returns undefined otherwise (→ 404, so an invite's existence is not leaked
+   *  to anyone but its intended recipient). */
+  async inviteForCaller(
+    inviteId: string,
+    userId: string,
+  ): Promise<{ id: string; class_id: string; email: string; status: string } | undefined> {
+    const email = await getUserEmail(userId);
+    if (!email) return undefined;
+    const c = await connect();
+    const rs = await c.execute({
+      sql: "SELECT id, class_id, email, status FROM class_invites WHERE id = ? AND email = ? LIMIT 1",
+      args: [inviteId, email],
+    });
+    const row = rs.rows[0] as Record<string, unknown> | undefined;
+    if (!row) return undefined;
+    return {
+      id: String(row.id),
+      class_id: String(row.class_id),
+      email: String(row.email ?? ""),
+      status: String(row.status ?? ""),
+    };
+  },
+
+  /**
+   * Accept an invite (the CONSENT write — the route only reaches here after the
+   * consent screen). The caller's email must match the invite (else undefined →
+   * 404). Seat-guarded student insert (joined_via='invite'), then the invite is
+   * marked accepted. The last-seat race is closed exactly as join-by-code: two
+   * invited students racing for the final seat → one 'joined', the other
+   * ClassCapError (→ 409); the loser's invite stays pending.
+   */
+  async acceptInvite(
+    inviteId: string,
+    userId: string,
+  ): Promise<{ status: "joined" | "already"; class: ClassRow } | undefined> {
+    const invite = await raw.inviteForCaller(inviteId, userId);
+    if (!invite) return undefined; // wrong email / no such invite → 404
+    // A revoked or declined invite is no longer actionable (its link is dead);
+    // treat it as not-found. An 'accepted' invite still flows through the
+    // seat-guard below so a re-accept after leaving is benign.
+    if (invite.status === "revoked" || invite.status === "declined") return undefined;
+    const c = await connect();
+    const caps = classCaps();
+    const now = Date.now();
+    const cls = await raw.getClass(invite.class_id);
+    if (!cls || cls.archived_at != null) return undefined; // class gone → 404
+    const classId = invite.class_id;
+    const rs = await c.execute({
+      sql: `INSERT INTO class_members (class_id, user_id, role, joined_via, joined_at)
+            SELECT ?, ?, 'student', 'invite', ?
+             WHERE (SELECT COUNT(*) FROM class_members WHERE class_id = ? AND role = 'student') < ?
+               AND (SELECT COUNT(*) FROM class_members WHERE user_id = ?) < ?
+               AND NOT EXISTS (SELECT 1 FROM class_members WHERE class_id = ? AND user_id = ?)`,
+      args: [
+        classId,
+        userId,
+        now,
+        classId,
+        caps.studentsPerClass,
+        userId,
+        caps.membershipsPerAccount,
+        classId,
+        userId,
+      ],
+    });
+    if (Number(rs.rowsAffected) === 1) {
+      await raw.markInvite(inviteId, "accepted", now);
+      return { status: "joined", class: (await raw.getClass(classId))! };
+    }
+    // Insert rejected — already a member is benign (still mark the invite done);
+    // otherwise a cap was hit (leave the invite pending so it can be retried).
+    if ((await raw.roleOf(classId, userId)) !== null) {
+      await raw.markInvite(inviteId, "accepted", now);
+      return { status: "already", class: (await raw.getClass(classId))! };
+    }
+    if ((await raw.studentCount(classId)) >= caps.studentsPerClass) throw new ClassCapError("students");
+    throw new ClassCapError("memberships");
+  },
+
+  /** Decline an invite (the invited user). Email-matched (else false → 404).
+   *  Only a still-pending invite is declinable. */
+  async declineInvite(inviteId: string, userId: string): Promise<boolean> {
+    const invite = await raw.inviteForCaller(inviteId, userId);
+    if (!invite || invite.status !== "pending") return false;
+    await raw.markInvite(inviteId, "declined", Date.now());
+    return true;
+  },
+
+  async markInvite(inviteId: string, status: "accepted" | "declined", at: number): Promise<void> {
+    const c = await connect();
+    await c.execute({
+      sql: "UPDATE class_invites SET status = ?, responded_at = ? WHERE id = ?",
+      args: [status, at, inviteId],
+    });
   },
 };
 
@@ -469,6 +722,17 @@ export interface ClassScope {
   teachesStudent(classId: string, studentId: string): Promise<boolean>;
   /** A student's display name in a class (for the report header). */
   studentName(classId: string, studentId: string): Promise<string>;
+  // ── email invites (Slice 3) ──
+  /** Teacher-only: create/refresh idempotent invites; `origin` builds the link. */
+  createInvites(classId: string, emails: string[], origin: string): Promise<CreateInvitesResult>;
+  /** Teacher-only: revoke a pending invite. */
+  revokeInvite(classId: string, inviteId: string): Promise<void>;
+  /** Pending invites addressed to the caller's email (the hub banner). */
+  listInvitesForMe(): Promise<PendingInvite[]>;
+  /** Accept an invite addressed to the caller (the consent write). 404 → undefined. */
+  acceptInvite(inviteId: string): Promise<{ status: "joined" | "already"; class: ClassRow } | undefined>;
+  /** Decline an invite addressed to the caller. False → 404. */
+  declineInvite(inviteId: string): Promise<boolean>;
 }
 
 export const classesStore = {
@@ -493,6 +757,11 @@ export const classesStore = {
       isTeacherOf: async (classId) => (await raw.roleOf(classId, userId)) === "teacher",
       teachesStudent: (classId, studentId) => raw.teachesStudent(classId, userId, studentId),
       studentName: (classId, studentId) => raw.studentName(classId, studentId),
+      createInvites: (classId, emails, origin) => raw.createInvites(classId, userId, emails, origin),
+      revokeInvite: (classId, inviteId) => raw.revokeInvite(classId, userId, inviteId),
+      listInvitesForMe: () => raw.listInvitesForMe(userId),
+      acceptInvite: (inviteId) => raw.acceptInvite(inviteId, userId),
+      declineInvite: (inviteId) => raw.declineInvite(inviteId, userId),
     };
   },
 };

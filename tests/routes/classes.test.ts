@@ -28,9 +28,28 @@ let students: typeof import("@/app/api/classes/[id]/students/route");
 let studentById: typeof import("@/app/api/classes/[id]/students/[studentId]/route");
 let studentReport: typeof import("@/app/api/classes/[id]/students/[studentId]/report/route");
 let leave: typeof import("@/app/api/classes/[id]/leave/route");
+let invitesRoute: typeof import("@/app/api/classes/[id]/invites/route");
+let inviteById: typeof import("@/app/api/classes/[id]/invites/[inviteId]/route");
+let myInvites: typeof import("@/app/api/classes/invites/route");
+let acceptInvite: typeof import("@/app/api/classes/invites/[inviteId]/accept/route");
+let declineInvite: typeof import("@/app/api/classes/invites/[inviteId]/decline/route");
+
+// ctx builders for the invite routes (Slice 3).
+const inviteCtx = (id: string, inviteId: string) => ({ params: Promise.resolve({ id, inviteId }) });
+const acceptCtx = (inviteId: string) => ({ params: Promise.resolve({ inviteId }) });
 
 async function json(res: Response) {
   return res.json();
+}
+
+/** Seed a users row so getUserEmail (the invite email-match authz) resolves. */
+async function seedUser(id: string, email: string) {
+  const { getDb } = await import("@/lib/db");
+  const db = await getDb();
+  await db.execute({
+    sql: "INSERT OR REPLACE INTO users (id, email, name, image, created_at) VALUES (?,?,?,?,?)",
+    args: [id, email.trim().toLowerCase(), email.split("@")[0], null, Date.now()],
+  });
 }
 
 beforeAll(async () => {
@@ -51,6 +70,11 @@ beforeAll(async () => {
   studentById = await import("@/app/api/classes/[id]/students/[studentId]/route");
   studentReport = await import("@/app/api/classes/[id]/students/[studentId]/report/route");
   leave = await import("@/app/api/classes/[id]/leave/route");
+  invitesRoute = await import("@/app/api/classes/[id]/invites/route");
+  inviteById = await import("@/app/api/classes/[id]/invites/[inviteId]/route");
+  myInvites = await import("@/app/api/classes/invites/route");
+  acceptInvite = await import("@/app/api/classes/invites/[inviteId]/accept/route");
+  declineInvite = await import("@/app/api/classes/invites/[inviteId]/decline/route");
 });
 
 beforeEach(() => {
@@ -319,3 +343,192 @@ async function peerCode(id: string): Promise<string> {
   caller.id = prev;
   return detail.class.join_code as string;
 }
+
+/*
+ * Slice 3 — email invites (invite-by-link). Idempotency, the accept seat-guard
+ * (last-seat race → exactly one wins), email-match authorization on accept/
+ * decline (a wrong email never touches an invite), and teacher-only create/
+ * revoke. No real email is sent; the routes only mint tokenised accept links.
+ */
+describe("invites: create is teacher-only + idempotent", () => {
+  it("a non-teacher cannot create or revoke invites (403)", async () => {
+    const { id, code } = await makeClass("Invite class");
+    caller.id = "student-i";
+    await join.POST(post("http://t/api/classes/join", { code }));
+    expect(
+      (await invitesRoute.POST(post(`http://t/api/classes/${id}/invites`, { emails: ["x@y.com"] }), ctx(id))).status,
+    ).toBe(403);
+    expect(
+      (await inviteById.DELETE(del(`http://t/api/classes/${id}/invites/whatever`), inviteCtx(id, "whatever"))).status,
+    ).toBe(403);
+  });
+
+  it("re-inviting the same email updates the row, never duplicates", async () => {
+    caller.id = "teacher-i2";
+    const { id } = await makeClass("Idempotent invites");
+
+    const first = await invitesRoute.POST(post(`http://t/api/classes/${id}/invites`, { emails: ["Dup@X.com"] }), ctx(id));
+    expect(first.status).toBe(200);
+    const firstBody = await json(first);
+    expect(firstBody.invites).toHaveLength(1);
+    // The email is normalized (trim + lowercase) and an accept link is returned.
+    expect(firstBody.invites[0].email).toBe("dup@x.com");
+    expect(firstBody.invites[0].acceptLink).toMatch(/\/classes\?invite=/);
+    const firstId = firstBody.invites[0].id;
+
+    // Re-invite the same address (different case / spacing) — must update, not add.
+    const second = await invitesRoute.POST(post(`http://t/api/classes/${id}/invites`, { emails: ["  dup@x.com "] }), ctx(id));
+    const secondBody = await json(second);
+    expect(secondBody.invites[0].id).toBe(firstId); // same row id
+
+    // Exactly one pending invite on the class detail.
+    const detail = await json(await byId.GET(get(`http://t/api/classes/${id}`), ctx(id)));
+    expect(detail.invites).toHaveLength(1);
+    expect(detail.invites[0].email).toBe("dup@x.com");
+
+    // Non-email entries are dropped rather than failing the batch.
+    const mixed = await invitesRoute.POST(
+      post(`http://t/api/classes/${id}/invites`, { emails: ["not-an-email", "ok@z.com"] }),
+      ctx(id),
+    );
+    const mixedBody = await json(mixed);
+    expect(mixedBody.invites.map((i: { email: string }) => i.email)).toEqual(["ok@z.com"]);
+  });
+});
+
+describe("invites: the banner, accept, decline (email-matched)", () => {
+  // The file shares ONE DB across tests (only caller.id resets), so each test
+  // uses a UNIQUE invitee id+email to stay isolated from the others' invites.
+  let n = 0;
+  async function setup(className = "Banner class") {
+    n += 1;
+    const invitee = `invitee-${n}`;
+    const email = `invitee${n}@school.edu`;
+    caller.id = "teacher-b3";
+    const { id } = await makeClass(className);
+    await seedUser(invitee, email);
+    const res = await invitesRoute.POST(post(`http://t/api/classes/${id}/invites`, { emails: [email] }), ctx(id));
+    const { invites } = await json(res);
+    return { id, invitee, email, inviteId: invites[0].id as string };
+  }
+
+  it("GET /api/classes/invites lists pending invites for the caller's email", async () => {
+    const { id, invitee } = await setup();
+    caller.id = invitee;
+    const res = await myInvites.GET(get("http://t/api/classes/invites"));
+    expect(res.status).toBe(200);
+    expect(res.headers.get("cache-control")).toMatch(/no-store/);
+    const body = await json(res);
+    expect(body.invites).toHaveLength(1);
+    expect(body.invites[0].class.id).toBe(id);
+    expect(body.invites[0].teacher.name).toBeTruthy();
+    // A different account sees none of THIS invitee's invites.
+    caller.id = "someone-else";
+    await seedUser("someone-else", "other-unique@school.edu");
+    expect((await json(await myInvites.GET(get("http://t/api/classes/invites")))).invites).toHaveLength(0);
+  });
+
+  it("accepting seats the student (joined_via='invite') and marks the invite done", async () => {
+    const { id, invitee, inviteId } = await setup("Accept class");
+    caller.id = invitee;
+    const res = await acceptInvite.POST(post(`http://t/api/classes/invites/${inviteId}/accept`), acceptCtx(inviteId));
+    expect(res.status).toBe(200);
+    expect((await json(res)).status).toBe("joined");
+
+    // On the roster, via invite; the invite no longer shows as pending.
+    caller.id = "teacher-b3";
+    const roster = await json(await students.GET(get(`http://t/api/classes/${id}/students`), ctx(id)));
+    expect(roster.students).toHaveLength(1);
+    expect(roster.students[0].user_id).toBe(invitee);
+    expect(roster.students[0].joined_via).toBe("invite");
+    const detail = await json(await byId.GET(get(`http://t/api/classes/${id}`), ctx(id)));
+    expect(detail.invites).toHaveLength(0);
+
+    // The banner is now empty for the invitee.
+    caller.id = invitee;
+    expect((await json(await myInvites.GET(get("http://t/api/classes/invites")))).invites).toHaveLength(0);
+  });
+
+  it("accept/decline require the caller's email to match the invite (else 404)", async () => {
+    const { inviteId } = await setup("Authz class");
+    // A signed-in user with a DIFFERENT email cannot accept or decline it.
+    caller.id = "wrong-person";
+    await seedUser("wrong-person", "wrong@school.edu");
+    expect((await acceptInvite.POST(post(`http://t/api/classes/invites/${inviteId}/accept`), acceptCtx(inviteId))).status).toBe(404);
+    expect((await declineInvite.POST(post(`http://t/api/classes/invites/${inviteId}/decline`), acceptCtx(inviteId))).status).toBe(404);
+    // A user with no users row (no resolvable email) also 404s.
+    caller.id = "emailless";
+    expect((await acceptInvite.POST(post(`http://t/api/classes/invites/${inviteId}/accept`), acceptCtx(inviteId))).status).toBe(404);
+  });
+
+  it("declining marks the invite declined and creates no membership", async () => {
+    const { id, invitee, inviteId } = await setup("Decline class");
+    caller.id = invitee;
+    expect((await declineInvite.POST(post(`http://t/api/classes/invites/${inviteId}/decline`), acceptCtx(inviteId))).status).toBe(200);
+    expect((await json(await myInvites.GET(get("http://t/api/classes/invites")))).invites).toHaveLength(0);
+    caller.id = "teacher-b3";
+    const roster = await json(await students.GET(get(`http://t/api/classes/${id}/students`), ctx(id)));
+    expect(roster.students).toHaveLength(0);
+  });
+
+  it("a revoked invite can no longer be accepted (404)", async () => {
+    const { id, invitee, inviteId } = await setup("Revoke class");
+    caller.id = "teacher-b3";
+    expect((await inviteById.DELETE(del(`http://t/api/classes/${id}/invites/${inviteId}`), inviteCtx(id, inviteId))).status).toBe(200);
+    // Pending list is now empty for the teacher and the invitee.
+    const detail = await json(await byId.GET(get(`http://t/api/classes/${id}`), ctx(id)));
+    expect(detail.invites).toHaveLength(0);
+    caller.id = invitee;
+    expect((await json(await myInvites.GET(get("http://t/api/classes/invites")))).invites).toHaveLength(0);
+    // The revoked invite is no longer actionable: accept 404s even though the
+    // caller's email still matches (a dead link cannot resurrect a seat).
+    const res = await acceptInvite.POST(post(`http://t/api/classes/invites/${inviteId}/accept`), acceptCtx(inviteId));
+    expect(res.status).toBe(404);
+  });
+});
+
+describe("invites: the accept seat-guard (last-seat race)", () => {
+  it("two invited students race for the last seat — one joins, the other 409s", async () => {
+    process.env.CLASS_MAX_STUDENTS = "1";
+    caller.id = "teacher-seat";
+    const { id } = await makeClass("One invite seat");
+    await seedUser("racer-1", "racer1@x.com");
+    await seedUser("racer-2", "racer2@x.com");
+    const res = await invitesRoute.POST(
+      post(`http://t/api/classes/${id}/invites`, { emails: ["racer1@x.com", "racer2@x.com"] }),
+      ctx(id),
+    );
+    const { invites, warning } = await json(res);
+    // Two pending + zero students still fits (1 seat, warned only when > cap).
+    expect(invites).toHaveLength(2);
+    const byEmail = Object.fromEntries(invites.map((i: { email: string; id: string }) => [i.email, i.id]));
+
+    caller.id = "racer-1";
+    expect((await acceptInvite.POST(post(`http://t/api/classes/invites/${byEmail["racer1@x.com"]}/accept`), acceptCtx(byEmail["racer1@x.com"]))).status).toBe(200);
+    caller.id = "racer-2";
+    const full = await acceptInvite.POST(post(`http://t/api/classes/invites/${byEmail["racer2@x.com"]}/accept`), acceptCtx(byEmail["racer2@x.com"]));
+    expect(full.status).toBe(409);
+    expect((await json(full)).error).toMatch(/full/i);
+    // The loser's invite stays pending, so a freed seat lets them retry later.
+    caller.id = "racer-2";
+    expect((await json(await myInvites.GET(get("http://t/api/classes/invites")))).invites).toHaveLength(1);
+
+    void warning;
+    delete process.env.CLASS_MAX_STUDENTS;
+  });
+
+  it("warns (does not block) when pending + students would exceed the cap", async () => {
+    process.env.CLASS_MAX_STUDENTS = "1";
+    caller.id = "teacher-warn";
+    const { id } = await makeClass("Warn class");
+    const res = await invitesRoute.POST(
+      post(`http://t/api/classes/${id}/invites`, { emails: ["a@x.com", "b@x.com"] }),
+      ctx(id),
+    );
+    const body = await json(res);
+    expect(res.status).toBe(200);
+    expect(body.invites).toHaveLength(2); // created despite the cap
+    expect(body.warning).toMatch(/limit/i);
+    delete process.env.CLASS_MAX_STUDENTS;
+  });
+});

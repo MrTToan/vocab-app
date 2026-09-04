@@ -6,7 +6,14 @@ import { useParams, useRouter } from "next/navigation";
 import { jsonFetch } from "@/lib/ui";
 import { useClass, revalidateClasses, classKey } from "@/lib/swr";
 import { mutate } from "swr";
-import type { ClassDetail, ClassRow, RosterEntry } from "@/lib/classes/types";
+import type {
+  ClassDetail,
+  ClassRow,
+  CreatedInvite,
+  CreateInvitesResult,
+  RosterEntry,
+  TeacherInvite,
+} from "@/lib/classes/types";
 import TrustCard from "@/components/classes/TrustCard";
 
 /*
@@ -64,6 +71,8 @@ function TeacherView({ id, detail }: { id: string; detail: Extract<ClassDetail, 
       </section>
 
       {!detail.archived && <JoinCodeSection id={id} code={cls.join_code} />}
+
+      {!detail.archived && <InviteByEmail id={id} invites={detail.invites} />}
 
       <section className="card p-5 space-y-3">
         <h3 className="font-bold">Roster</h3>
@@ -197,6 +206,162 @@ function JoinCodeSection({ id, code }: { id: string; code: string | null }) {
       )}
       <p className="muted text-xs">Students enter this code on their Classes page to join.</p>
     </section>
+  );
+}
+
+/* ── invite by email (invite-by-link; no mail infra) ── */
+
+function InviteByEmail({ id, invites }: { id: string; invites: TeacherInvite[] }) {
+  const [emails, setEmails] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [created, setCreated] = useState<CreatedInvite[]>([]);
+  const [warning, setWarning] = useState<string | null>(null);
+
+  async function invite() {
+    // Split on commas / whitespace / semicolons — however the teacher pasted them.
+    const list = emails
+      .split(/[\s,;]+/)
+      .map((e) => e.trim())
+      .filter(Boolean);
+    if (list.length === 0) return;
+    setBusy(true);
+    setError(null);
+    try {
+      const res = await jsonFetch<CreateInvitesResult>(`/api/classes/${id}/invites`, {
+        method: "POST",
+        body: JSON.stringify({ emails: list }),
+      });
+      setCreated(res.invites);
+      setWarning(res.warning ?? null);
+      setEmails("");
+      await mutate(classKey(id));
+      await revalidateClasses();
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Couldn't create the invites.");
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  return (
+    <section className="card p-5 space-y-3">
+      <div>
+        <h3 className="font-bold">Invite by email</h3>
+        <p className="muted text-xs mt-1">
+          Enter one or more emails. Lexi creates an invite and a private accept link for each — copy
+          it and send it however you like (email, chat). No email is sent for you. A seat is only
+          taken when someone accepts.
+        </p>
+      </div>
+      <form
+        className="flex flex-col sm:flex-row gap-2"
+        onSubmit={(e) => {
+          e.preventDefault();
+          if (emails.trim()) void invite();
+        }}
+      >
+        <input
+          className="input flex-1"
+          placeholder="a@example.com, b@example.com"
+          value={emails}
+          autoComplete="off"
+          onChange={(e) => setEmails(e.target.value)}
+          aria-label="Emails to invite"
+        />
+        <button type="submit" className="btn btn-primary" disabled={busy || !emails.trim()}>
+          {busy ? "Inviting…" : "Invite"}
+        </button>
+      </form>
+
+      {error && (
+        <p role="alert" className="text-sm" style={{ color: "var(--bad)" }}>
+          {error}
+        </p>
+      )}
+      {warning && (
+        <p className="text-sm" style={{ color: "var(--warn)" }}>
+          {warning}
+        </p>
+      )}
+
+      {created.length > 0 && (
+        <div className="space-y-2">
+          <p className="text-sm font-semibold">Accept links — copy and send to each person:</p>
+          {created.map((inv) => (
+            <AcceptLinkRow key={inv.id} invite={inv} />
+          ))}
+        </div>
+      )}
+
+      <div className="space-y-1">
+        <p className="text-sm font-semibold">Pending invites</p>
+        {invites.length === 0 ? (
+          <p className="muted text-sm">No pending invites.</p>
+        ) : (
+          <ul className="space-y-1">
+            {invites.map((inv) => (
+              <PendingInviteRow key={inv.id} id={id} invite={inv} />
+            ))}
+          </ul>
+        )}
+      </div>
+    </section>
+  );
+}
+
+function AcceptLinkRow({ invite }: { invite: CreatedInvite }) {
+  const [copied, setCopied] = useState(false);
+  async function copy() {
+    try {
+      await navigator.clipboard?.writeText(invite.acceptLink);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    } catch {
+      /* clipboard unavailable */
+    }
+  }
+  return (
+    <div className="flex flex-wrap items-center gap-2 text-sm">
+      <span className="font-semibold">{invite.email}</span>
+      <code
+        className="px-2 py-1 rounded font-mono text-xs truncate max-w-full"
+        style={{ background: "var(--accent-soft)", color: "var(--accent)" }}
+      >
+        {invite.acceptLink}
+      </code>
+      <button type="button" className="btn" onClick={copy}>
+        {copied ? "Copied!" : "Copy link"}
+      </button>
+    </div>
+  );
+}
+
+function PendingInviteRow({ id, invite }: { id: string; invite: TeacherInvite }) {
+  const [busy, setBusy] = useState(false);
+  async function revoke() {
+    setBusy(true);
+    try {
+      await jsonFetch(`/api/classes/${id}/invites/${invite.id}`, { method: "DELETE" });
+      await mutate(classKey(id));
+      await revalidateClasses();
+    } catch {
+      setBusy(false);
+    }
+  }
+  return (
+    <li className="flex items-center justify-between gap-2 text-sm">
+      <span className="muted truncate">{invite.email}</span>
+      <button
+        type="button"
+        className="btn"
+        onClick={revoke}
+        disabled={busy}
+        aria-label={`Revoke invite for ${invite.email}`}
+      >
+        Revoke
+      </button>
+    </li>
   );
 }
 
