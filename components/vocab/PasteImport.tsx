@@ -390,7 +390,7 @@ export default function PasteImport() {
           <div className="font-bold">
             Enriching {progress.done}/{progress.total}…
           </div>
-          <div className="h-2.5 rounded-full overflow-hidden bg-black/5 dark:bg-white/10">
+          <div className="h-2.5 rounded-full overflow-hidden bg-black/5">
             <div
               className="h-full rounded-full transition-all"
               style={{

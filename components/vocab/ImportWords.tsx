@@ -189,7 +189,7 @@ export default function ImportWords() {
 
             {progress ? (
               <div className="space-y-2">
-                <div className="h-2 rounded-full overflow-hidden bg-black/5 dark:bg-white/10">
+                <div className="h-2 rounded-full overflow-hidden bg-black/5">
                   <div
                     className="h-full rounded-full transition-all"
                     style={{
