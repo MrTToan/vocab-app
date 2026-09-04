@@ -16,7 +16,8 @@ kind-specific lives behind one server-side adapter interface (`lib/assignments/k
 - **list/pick** the content for the teacher's picker (`listPickable`),
 - **resolve** a ref into a display **ContentCard** with a `doHref` deep-link into the EXISTING
   doing-flow (`resolveCard`),
-- **measure** a student's completion (`progressFor` / `progressForMany`).
+- **measure** a student's completion (`progressFor` / `progressForMany`), bounded by the per-student
+  `assignedAt` timestamp the store threads in so only post-assignment practice/work can count.
 
 The client **never switches on kind** — the server hands it a card (title/emoji/`doHref`) and a
 progress verdict, and the pages just render cards, a "Start →" link and a status pill. Adding a kind
@@ -48,7 +49,11 @@ the spine.
 - **Do it** — the student's assignment routes them into the **existing** practice flow via
   `/practice?collection=<id>` (the same deep-link the "Study →" button uses). No parallel player.
 - **Completion** — "**practised at least once**": a student is done once they have ≥ 1 practice
-  attempt on any word in the set. Derived **live** from existing attempt data — no new tracking.
+  attempt on any word in the set **made at or after the moment that student was assigned** (their
+  `assignment_targets.created_at`, falling back to the assignment's `created_at`). Practice done
+  **before** the assignment existed never counts — a freshly-assigned student starts at "not
+  practised yet" regardless of prior history, and only new practice moves the bar. Derived **live**
+  from existing attempt data (`attempts.ts >= assignedAt`) — no new tracking.
 - **See it** — the student sees "Assigned to you" on `/classes` and per-class; the teacher sees a
   per-student completion grid on the assignment page, with **overdue** flagged (past due + not done).
 
@@ -60,8 +65,9 @@ the spine.
   `/writing/task{1,2}?q=<promptId>` (`lib/writing/deeplink.ts`,
   `components/writing/WritingPractice.tsx`). No parallel player.
 - **Completion** — "**submitted**": a student is done once they have ≥ 1 stored submission for the
-  prompt (`writingStore.latestSubmission`) — the writing analog of vocab's "practised once", derived
-  **live** from existing submission data.
+  prompt **made at or after they were assigned** — the writing analog of vocab's "practised once",
+  and time-bounded the same way (an older submission never pre-credits a new assignment). Derived
+  **live** from existing submission data (`writing_submissions.created_at >= assignedAt`).
 - **No visibility grant needed.** Unlike vocab's private sets, the writing bank is **admin-curated
   and public** (self-serve authoring was retired — `POST /api/writing/prompts` is admin-only and
   writes the `__system__` public bank). Every assignable prompt is therefore already visible to every

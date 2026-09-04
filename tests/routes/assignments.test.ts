@@ -97,10 +97,30 @@ async function seedWritingSubmission(userId: string, promptId: string) {
 
 /** Log a practice attempt for a user on a word (drives completion). */
 async function logAttempt(userId: string, wordId: string) {
+  await logAttemptAt(userId, wordId, Date.now());
+}
+
+/** Log a practice attempt at an explicit time (to place it before/after an assignment). */
+async function logAttemptAt(userId: string, wordId: string, ts: number) {
   const { getStore } = await import("@/lib/store");
   await getStore()
     .forUser(userId)
-    .logAttempt({ ts: Date.now(), word_id: wordId, exercise_type: "cloze", result: "correct" });
+    .logAttempt({ ts, word_id: wordId, exercise_type: "cloze", result: "correct" });
+}
+
+/** Seed a writing submission at an explicit time (before/after an assignment). */
+async function seedWritingSubmissionAt(userId: string, promptId: string, createdAt: number) {
+  const { getDb } = await import("@/lib/db");
+  const db = await getDb();
+  await db.execute({
+    sql: `INSERT INTO writing_submissions
+            (id, prompt_id, task_type, text, word_count, overall_band, bands, strengths, general_feedback, priorities, created_at, user_id)
+          VALUES (?,?,?,?,?,?,?,?,?,?,?,?)`,
+    args: [
+      `sub-${userId}-${promptId}-${Math.random()}`, promptId, "task2", "essay", 260, 7,
+      "{}", "[]", "", "[]", createdAt, userId,
+    ],
+  });
 }
 
 /** How many candidate words a user can practise in a collection (visibility gate). */
@@ -385,6 +405,61 @@ describe("completion derivation ('practised at least once')", () => {
     caller.id = "comp-s";
     const mine = await json(await myAssignments.GET(get("http://t/api/assignments")));
     expect(mine.assignments[0].progress.state).toBe("complete");
+  });
+});
+
+describe("completion only counts practice/work done AFTER the assignment", () => {
+  it("vocab: a word practised BEFORE the assignment does not pre-credit it; a later attempt does", async () => {
+    const { id } = await makeClassWith("t-window", ["win-s"]);
+
+    // The student practised a collection word LONG BEFORE this assignment exists.
+    await logAttemptAt("win-s", "pw1", Date.now() - 100_000);
+
+    // Assignment is created now (target created_at ≈ now > the old attempt's ts).
+    const { assignment } = await json(await createAssignment(id, "pubcol-col-test", ["win-s"]));
+
+    // The pre-assignment practice must NOT count — the student starts fresh.
+    caller.id = "t-window";
+    let detail = await json(await assignmentById.GET(get(`http://t/api/assignments/${assignment.id}`), actx(assignment.id)));
+    expect(detail.completeCount).toBe(0);
+    expect(detail.students[0].progress.state).toBe("not_started");
+    expect(detail.students[0].progress.detail).toMatch(/Not practised yet/);
+    // The student's own view agrees.
+    caller.id = "win-s";
+    const mineBefore = await json(await myAssignments.GET(get("http://t/api/assignments")));
+    expect(mineBefore.assignments[0].progress.state).toBe("not_started");
+
+    // A NEW attempt (after the assignment) flips it to complete.
+    await logAttempt("win-s", "pw2");
+    caller.id = "t-window";
+    detail = await json(await assignmentById.GET(get(`http://t/api/assignments/${assignment.id}`), actx(assignment.id)));
+    expect(detail.completeCount).toBe(1);
+    expect(detail.students[0].progress.state).toBe("complete");
+    caller.id = "win-s";
+    const mineAfter = await json(await myAssignments.GET(get("http://t/api/assignments")));
+    expect(mineAfter.assignments[0].progress.state).toBe("complete");
+  });
+
+  it("writing: a submission BEFORE the assignment does not pre-credit it; a later one does", async () => {
+    const { id } = await makeClassWith("t-wwindow", ["wwin-s"]);
+
+    // The student submitted this prompt BEFORE the assignment exists.
+    await seedWritingSubmissionAt("wwin-s", "pub-wp-test", Date.now() - 100_000);
+
+    const { assignment } = await json(await createWritingAssignment(id, "pub-wp-test", ["wwin-s"]));
+
+    // The pre-assignment submission must NOT count.
+    caller.id = "t-wwindow";
+    let detail = await json(await assignmentById.GET(get(`http://t/api/assignments/${assignment.id}`), actx(assignment.id)));
+    expect(detail.completeCount).toBe(0);
+    expect(detail.students[0].progress.state).toBe("not_started");
+
+    // A NEW submission (after the assignment) flips it to complete.
+    await seedWritingSubmissionAt("wwin-s", "pub-wp-test", Date.now());
+    caller.id = "t-wwindow";
+    detail = await json(await assignmentById.GET(get(`http://t/api/assignments/${assignment.id}`), actx(assignment.id)));
+    expect(detail.completeCount).toBe(1);
+    expect(detail.students[0].progress.state).toBe("complete");
   });
 });
 

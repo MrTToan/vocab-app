@@ -8,8 +8,9 @@
  *   uses (components/vocab/Collections.tsx). A private collection works for a
  *   targeted student because the assignment grant makes it visible in the practice
  *   path (lib/store.ts collectionVisibleTo).
- * - MEASURE: "practiced at least once" — ≥1 attempt on any member word
- *   (lib/assignments/progress.ts). Global progress, no new tracking.
+ * - MEASURE: "practiced at least once" — ≥1 attempt on any member word made AT OR
+ *   AFTER the student was assigned (lib/assignments/progress.ts). Time-bounded, so
+ *   practice done before the assignment existed never counts; no new tracking.
  */
 
 import { getDb } from "../../db";
@@ -118,12 +119,12 @@ export const vocabCollectionKind: AssignableKind = {
     return { rule: "practiced" };
   },
 
-  async progressFor(studentId, ref) {
-    return gradeVocab(await collectionPracticeFor(studentId, ref));
+  async progressFor(studentId, ref, _criteria, assignedAt) {
+    return gradeVocab(await collectionPracticeFor(studentId, ref, assignedAt));
   },
 
-  async progressForMany(studentIds, ref) {
-    const many = await collectionPracticeForMany(studentIds, ref);
+  async progressForMany(studentIds, ref, _criteria, assignedAt) {
+    const many = await collectionPracticeForMany(studentIds, ref, assignedAt);
     const out: Record<string, ReturnType<typeof gradeVocab>> = {};
     for (const id of studentIds) out[id] = gradeVocab(many[id] ?? { total: 0, practiced: 0 });
     return out;
