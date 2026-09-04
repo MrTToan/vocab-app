@@ -124,6 +124,40 @@ const raw = {
     }));
   },
 
+  /**
+   * The trust-critical authorization for route 17 (the teacher report view):
+   * TRUE only when `teacherId` holds a role='teacher' row AND `studentId` holds a
+   * role='student' row, BOTH in `classId`. This is the sole gate on the only
+   * place in the app `forUser()` is called with an id other than the caller's, so
+   * it must be exactly this — nothing looser (teaching *some* class, or the two
+   * merely sharing a class in any role, would leak a student's whole history).
+   */
+  async teachesStudent(classId: string, teacherId: string, studentId: string): Promise<boolean> {
+    const c = await connect();
+    const rs = await c.execute({
+      sql: `SELECT
+              EXISTS(SELECT 1 FROM class_members WHERE class_id = ? AND user_id = ? AND role = 'teacher') AS is_teacher,
+              EXISTS(SELECT 1 FROM class_members WHERE class_id = ? AND user_id = ? AND role = 'student') AS is_student`,
+      args: [classId, teacherId, classId, studentId],
+    });
+    const row = rs.rows[0] as Record<string, unknown> | undefined;
+    return Number(row?.is_teacher ?? 0) === 1 && Number(row?.is_student ?? 0) === 1;
+  },
+
+  /** Display name of a student in a class (from users), for the report header.
+   *  Only names an actual role='student' membership row. */
+  async studentName(classId: string, studentId: string): Promise<string> {
+    const c = await connect();
+    const rs = await c.execute({
+      sql: `SELECT u.name, u.email
+              FROM class_members cm LEFT JOIN users u ON u.id = cm.user_id
+             WHERE cm.class_id = ? AND cm.user_id = ? AND cm.role = 'student' LIMIT 1`,
+      args: [classId, studentId],
+    });
+    const row = rs.rows[0] as Record<string, unknown> | undefined;
+    return String(row?.name ?? row?.email ?? "");
+  },
+
   async roster(classId: string): Promise<RosterEntry[]> {
     const c = await connect();
     const rs = await c.execute({
@@ -430,6 +464,11 @@ export interface ClassScope {
   joinByCode(code: string): Promise<{ status: "joined" | "already"; class: ClassRow } | undefined>;
   /** True when the caller teaches this class (roster/remove authorization). */
   isTeacherOf(classId: string): Promise<boolean>;
+  /** True when the caller teaches `classId` AND `studentId` is a student in it —
+   *  the sole gate for the teacher report view (route 17). */
+  teachesStudent(classId: string, studentId: string): Promise<boolean>;
+  /** A student's display name in a class (for the report header). */
+  studentName(classId: string, studentId: string): Promise<string>;
 }
 
 export const classesStore = {
@@ -452,6 +491,8 @@ export const classesStore = {
       joinPreview: (code) => raw.joinPreview(code),
       joinByCode: (code) => raw.joinByCode(code, userId),
       isTeacherOf: async (classId) => (await raw.roleOf(classId, userId)) === "teacher",
+      teachesStudent: (classId, studentId) => raw.teachesStudent(classId, userId, studentId),
+      studentName: (classId, studentId) => raw.studentName(classId, studentId),
     };
   },
 };

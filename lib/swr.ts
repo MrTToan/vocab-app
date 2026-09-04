@@ -6,6 +6,7 @@ import useSWRInfinite, {
 } from "swr/infinite";
 import type { Word, WordListItem } from "./types";
 import type { ClassDetail, MyClassesData } from "./classes/types";
+import type { StudentReportPayload } from "./report";
 import { jsonFetch } from "./ui";
 import {
   WORDS_LIST_BASE,
@@ -59,6 +60,12 @@ export const wordKey = (id: string) => `/api/words/${id}`;
 
 /** One class's detail (teacher roster / student trust view). */
 export const classKey = (id: string) => `/api/classes/${id}`;
+
+/** A teacher's read-only report for one student (route 17). Under the
+ *  KEY_CLASSES prefix so `revalidateClasses()` clears it when the roster changes
+ *  (e.g. the student is removed → their next report fetch 404s). */
+export const studentReportKey = (classId: string, studentId: string) =>
+  `/api/classes/${classId}/students/${studentId}/report`;
 
 /** Writing question list for one task tab (task1 | task2). */
 export const writingPromptsKey = (task: string) => `/api/writing/prompts?task=${task}`;
@@ -119,6 +126,20 @@ export function useMyClasses(config?: SWRConfiguration) {
 /** One class's detail (pass a falsy id to skip). */
 export function useClass(id: string | null | undefined, config?: SWRConfiguration) {
   return useSWR<ClassDetail>(id ? classKey(id) : null, fetcher, config);
+}
+
+/** A teacher's read-only report for one student (route 17). Pass falsy ids to
+ *  skip. A non-teacher / wrong-teacher fetch 404s (surfaced as an SWR error). */
+export function useStudentReport(
+  classId: string | null | undefined,
+  studentId: string | null | undefined,
+  config?: SWRConfiguration,
+) {
+  return useSWR<StudentReportPayload>(
+    classId && studentId ? studentReportKey(classId, studentId) : null,
+    fetcher,
+    config,
+  );
 }
 
 /**
