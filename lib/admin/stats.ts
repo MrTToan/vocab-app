@@ -1,8 +1,13 @@
 import { QUOTA_TASKS, type QuotaTask } from "../auth/quota";
+import { STAGE_ORDER } from "../ui";
+import type { Stage } from "../types";
+import type { DayBar } from "../report";
 import {
   fillDailySeries,
   cumulative,
   ymdUTC,
+  lastNDaysUTC,
+  shortDayLabel,
   type DayPoint,
 } from "./aggregate";
 
@@ -79,6 +84,7 @@ export interface AdminStats {
     catalogWords: number; // distinct content words in the shared catalog
     studiedInstances: number; // user_words rows (a user studying a word)
     distinctStudied: number; // distinct words studied by anyone
+    stageCounts: Record<Stage, number>; // catalog-wide mastery funnel (all users)
     topUsers: UserWordStat[]; // most-active users by words studied
   };
   progress: {
@@ -88,10 +94,14 @@ export interface AdminStats {
     totalAttempts: number;
     attempts: DayPoint[]; // attempts per day (last WINDOW_DAYS)
     activeUsers: DayPoint[]; // distinct users with ≥1 attempt per day
+    byDay: DayBar[]; // per-day result mix (correct/almost/missed) — stacked columns
+    overall: { correct: number; partial: number; incorrect: number; total: number }; // window result mix
   };
   llm: {
     total: number; // all-time units across every task
     today: number; // units used today (UTC)
+    windowTotal: number; // units in the last WINDOW_DAYS
+    daily: DayPoint[]; // units per day (last WINDOW_DAYS) — the spend trend
     byTask: Record<QuotaTask, number>;
     topUsers: LlmUserStat[]; // heaviest consumers all-time
   };
@@ -136,6 +146,20 @@ export async function adminStats(now: number = Date.now()): Promise<AdminStats> 
     (r) => num(r[0]?.n),
     0,
   );
+  // Catalog-wide mastery funnel: every studied word across all users, bucketed
+  // by stage. Zero-filled over the canonical New→Known order so the pipeline
+  // renders even when a stage is empty.
+  const stageRows = await q(
+    c,
+    "SELECT stage, COUNT(*) n FROM user_words GROUP BY stage",
+    (r) => r.map((x) => ({ stage: s(x.stage), n: num(x.n) })),
+    [] as { stage: string; n: number }[],
+  );
+  const stageCounts = Object.fromEntries(STAGE_ORDER.map((st) => [st, 0])) as Record<Stage, number>;
+  for (const row of stageRows) {
+    if ((STAGE_ORDER as readonly string[]).includes(row.stage))
+      stageCounts[row.stage as Stage] = row.n;
+  }
   // All users ranked by words studied (descending). Returned in full — the
   // dashboard paginates client-side (the user count is small). Still aggregated
   // in SQL; only counts + a display label leave the DB. Starts FROM users (not
@@ -180,18 +204,45 @@ export async function adminStats(now: number = Date.now()): Promise<AdminStats> 
     c,
     `SELECT date(ts/1000, 'unixepoch') day,
             COUNT(*) attempts,
-            COUNT(DISTINCT user_id) users
+            COUNT(DISTINCT user_id) users,
+            SUM(CASE WHEN result = 'correct'   THEN 1 ELSE 0 END) correct,
+            SUM(CASE WHEN result = 'partial'   THEN 1 ELSE 0 END) partial,
+            SUM(CASE WHEN result = 'incorrect' THEN 1 ELSE 0 END) incorrect
        FROM attempts GROUP BY day`,
     (r) =>
       r.map((x) => ({
         day: s(x.day),
         attempts: num(x.attempts),
         users: num(x.users),
+        correct: num(x.correct),
+        partial: num(x.partial),
+        incorrect: num(x.incorrect),
       })),
-    [] as { day: string; attempts: number; users: number }[],
+    [] as { day: string; attempts: number; users: number; correct: number; partial: number; incorrect: number }[],
   );
   const attempts = fillDailySeries(attemptRows, WINDOW_DAYS, now, (r) => r.attempts);
   const activeUsers = fillDailySeries(attemptRows, WINDOW_DAYS, now, (r) => r.users);
+  // Per-day result mix (correct / almost / missed) over the window, zero-filled.
+  const byDayMap = new Map(attemptRows.map((r) => [r.day, r]));
+  const activityByDay: DayBar[] = lastNDaysUTC(WINDOW_DAYS, now).map((day) => {
+    const r = byDayMap.get(day);
+    return {
+      label: shortDayLabel(day),
+      total: r?.attempts ?? 0,
+      correct: r?.correct ?? 0,
+      partial: r?.partial ?? 0,
+      incorrect: r?.incorrect ?? 0,
+    };
+  });
+  const activityOverall = activityByDay.reduce(
+    (a, d) => ({
+      correct: a.correct + d.correct,
+      partial: a.partial + d.partial,
+      incorrect: a.incorrect + d.incorrect,
+      total: a.total + d.total,
+    }),
+    { correct: 0, partial: 0, incorrect: 0, total: 0 },
+  );
 
   // ── LLM usage / quota consumption ────────────────────────────────────────
   const today = ymdUTC(now);
@@ -217,6 +268,16 @@ export async function adminStats(now: number = Date.now()): Promise<AdminStats> 
     0,
     [today],
   );
+  // Units per day over the window — the spend trend (is consumption accelerating?).
+  // llm_usage.day is already a UTC "YYYY-MM-DD" key, so it lines up with the series.
+  const llmDailyRows = await q(
+    c,
+    "SELECT day, SUM(count) count FROM llm_usage GROUP BY day",
+    (r) => r.map((x) => ({ day: s(x.day), count: num(x.count) })),
+    [] as { day: string; count: number }[],
+  );
+  const llmDaily = fillDailySeries(llmDailyRows, WINDOW_DAYS, now);
+  const llmWindowTotal = llmDaily.reduce((a, b) => a + b.count, 0);
   const llmTopUsers = await q(
     c,
     `SELECT lu.user_id, SUM(lu.count) total, u.name, u.email
@@ -243,9 +304,22 @@ export async function adminStats(now: number = Date.now()): Promise<AdminStats> 
       cumulative: cumulative(signups),
       newInWindow: signups.reduce((a, b) => a + b.count, 0),
     },
-    vocab: { catalogWords, studiedInstances, distinctStudied, topUsers },
+    vocab: { catalogWords, studiedInstances, distinctStudied, stageCounts, topUsers },
     progress: { mastered },
-    activity: { totalAttempts, attempts, activeUsers },
-    llm: { total: llmTotal, today: llmToday, byTask, topUsers: llmTopUsers },
+    activity: {
+      totalAttempts,
+      attempts,
+      activeUsers,
+      byDay: activityByDay,
+      overall: activityOverall,
+    },
+    llm: {
+      total: llmTotal,
+      today: llmToday,
+      windowTotal: llmWindowTotal,
+      daily: llmDaily,
+      byTask,
+      topUsers: llmTopUsers,
+    },
   };
 }
