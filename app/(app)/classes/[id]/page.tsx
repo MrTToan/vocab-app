@@ -249,9 +249,9 @@ function InviteByEmail({ id, invites }: { id: string; invites: TeacherInvite[] }
       <div>
         <h3 className="font-bold">Invite by email</h3>
         <p className="muted text-xs mt-1">
-          Enter one or more emails. Lexi creates an invite and a private accept link for each — copy
-          it and send it however you like (email, chat). No email is sent for you. A seat is only
-          taken when someone accepts.
+          Enter one or more emails. Lexi emails each person their private accept link automatically.
+          The copyable link stays here too, so you can share it another way (chat) or if an email
+          bounces. A seat is only taken when someone accepts.
         </p>
       </div>
       <form
@@ -287,7 +287,11 @@ function InviteByEmail({ id, invites }: { id: string; invites: TeacherInvite[] }
 
       {created.length > 0 && (
         <div className="space-y-2">
-          <p className="text-sm font-semibold">Accept links — copy and send to each person:</p>
+          <p className="text-sm font-semibold">
+            {created.every((inv) => inv.emailed)
+              ? "Invites emailed. The links are here too, in case you'd rather share them directly:"
+              : "Accept links — Lexi emails these automatically; share manually if an email didn't send:"}
+          </p>
           {created.map((inv) => (
             <AcceptLinkRow key={inv.id} invite={inv} />
           ))}
@@ -324,6 +328,11 @@ function AcceptLinkRow({ invite }: { invite: CreatedInvite }) {
   return (
     <div className="flex flex-wrap items-center gap-2 text-sm">
       <span className="font-semibold">{invite.email}</span>
+      {invite.emailed && (
+        <span className="text-xs" style={{ color: "var(--accent)" }}>
+          ✓ emailed
+        </span>
+      )}
       <code
         className="px-2 py-1 rounded font-mono text-xs truncate max-w-full"
         style={{ background: "var(--accent-soft)", color: "var(--accent)" }}
