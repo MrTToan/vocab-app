@@ -17,6 +17,12 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useConfig } from "@/lib/swr";
+import {
+  blobToWavDataUrl,
+  getSilentWavUrl,
+  micErrorMessage,
+  pickRecorderMimeType,
+} from "@/lib/speech/client";
 
 interface AssessResult {
   provider: "azure" | "openai";
@@ -89,6 +95,31 @@ export default function PronunciationPractice({
     if (playing) return;
     setNote("");
     setPlaying(true);
+
+    // Reuse ONE persistent element and "unlock" it synchronously inside this tap
+    // gesture. Mobile Chrome/iOS only allow a later programmatic play() on an
+    // element the user has already activated; the TTS fetch below is async, so a
+    // play() after it would have lost the gesture and reject → the old
+    // "Couldn't play that right now." Priming with a tiny silent clip here (the
+    // play() call happens during the gesture) activates the element so the real
+    // play() after the fetch is allowed. Muted so it's inaudible; the gesture,
+    // not the audio, is what grants activation. (Audio has no fullscreen, so no
+    // playsInline is needed — that's a video concern.)
+    const el = audioRef.current ?? new Audio();
+    audioRef.current = el;
+    try {
+      el.muted = true;
+      el.src = getSilentWavUrl();
+      await el.play();
+      el.pause();
+      el.currentTime = 0;
+    } catch {
+      /* priming can fail under very strict configs; the real play() below still
+         runs and reports honestly if it can't play. */
+    } finally {
+      el.muted = false;
+    }
+
     try {
       const res = await fetch("/api/speech/tts", {
         method: "POST",
@@ -105,14 +136,12 @@ export default function PronunciationPractice({
       if (audioUrlRef.current) URL.revokeObjectURL(audioUrlRef.current);
       const url = URL.createObjectURL(blob);
       audioUrlRef.current = url;
-      const el = audioRef.current ?? new Audio();
-      audioRef.current = el;
-      el.src = url;
       el.onended = () => setPlaying(false);
       el.onerror = () => {
         setNote("Couldn't play that right now.");
         setPlaying(false);
       };
+      el.src = url;
       await el.play();
     } catch {
       setNote("Couldn't play that right now.");
@@ -136,26 +165,37 @@ export default function PronunciationPractice({
   const startRecording = useCallback(async () => {
     setNote("");
     setResult(null);
+    // getUserMedia only works on a secure origin; inside some in-app browsers the
+    // page isn't a secure context and the call rejects with a name that used to
+    // be mislabeled "no microphone found". Catch it up front with a truthful line.
+    if (typeof window !== "undefined" && window.isSecureContext === false) {
+      setNote("Recording needs a secure (https) page. Open Lexi directly in your browser and try again.");
+      return;
+    }
     let stream: MediaStream;
     try {
       stream = await navigator.mediaDevices.getUserMedia({ audio: true });
     } catch (err) {
-      const denied = err instanceof Error && /not\s?allowed|denied|permission/i.test(err.name + err.message);
-      setNote(
-        denied
-          ? "Microphone access was blocked. Allow the mic in your browser to try “Say it”."
-          : "No microphone found. Check your device and try again.",
-      );
+      setNote(micErrorMessage(err));
       return;
     }
     const chunks: Blob[] = [];
+    // Pick a container this browser actually supports — desktop and mobile Chrome
+    // differ, and passing an unsupported mimeType throws (was surfaced as "can't
+    // record"). undefined ⇒ let the browser choose its own default.
+    const mimeType = pickRecorderMimeType();
     let rec: MediaRecorder;
     try {
-      rec = new MediaRecorder(stream);
+      rec = mimeType ? new MediaRecorder(stream, { mimeType }) : new MediaRecorder(stream);
     } catch {
-      stream.getTracks().forEach((t) => t.stop());
-      setNote("This browser can't record audio for pronunciation.");
-      return;
+      // Our chosen type was rejected after all — retry with the browser default.
+      try {
+        rec = new MediaRecorder(stream);
+      } catch {
+        stream.getTracks().forEach((t) => t.stop());
+        setNote("This browser can't record audio for pronunciation.");
+        return;
+      }
     }
     recRef.current = rec;
     rec.ondataavailable = (e) => {
@@ -165,7 +205,7 @@ export default function PronunciationPractice({
       stream.getTracks().forEach((t) => t.stop());
       setSayState("checking");
       try {
-        const blob = new Blob(chunks, { type: rec.mimeType || "audio/webm" });
+        const blob = new Blob(chunks, { type: rec.mimeType || mimeType || "audio/webm" });
         const dataUrl = await blobToWavDataUrl(blob);
         const res = await fetch("/api/speech/assess", {
           method: "POST",
@@ -277,71 +317,4 @@ async function errText(res: Response, fallback: string): Promise<string> {
   } catch {
     return fallback;
   }
-}
-
-/**
- * Decode the recorded blob and re-encode it as a 16 kHz mono 16-bit PCM WAV data
- * URL — the format both server providers accept, so the server never transcodes.
- */
-async function blobToWavDataUrl(blob: Blob): Promise<string> {
-  const arrayBuf = await blob.arrayBuffer();
-  const AudioCtx: typeof AudioContext =
-    window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
-  const ctx = new AudioCtx();
-  let decoded: AudioBuffer;
-  try {
-    decoded = await ctx.decodeAudioData(arrayBuf);
-  } finally {
-    ctx.close().catch(() => {});
-  }
-  const targetRate = 16000;
-  const frames = Math.max(1, Math.ceil(decoded.duration * targetRate));
-  const offline = new OfflineAudioContext(1, frames, targetRate);
-  const src = offline.createBufferSource();
-  src.buffer = decoded;
-  src.connect(offline.destination);
-  src.start();
-  const rendered = await offline.startRendering();
-  const wav = encodeWav(rendered.getChannelData(0), targetRate);
-  return `data:audio/wav;base64,${bytesToBase64(new Uint8Array(wav))}`;
-}
-
-/** Float32 [-1,1] PCM → a 16-bit mono WAV ArrayBuffer. */
-function encodeWav(samples: Float32Array, sampleRate: number): ArrayBuffer {
-  const dataLen = samples.length * 2;
-  const buf = new ArrayBuffer(44 + dataLen);
-  const view = new DataView(buf);
-  const writeStr = (off: number, s: string) => {
-    for (let i = 0; i < s.length; i++) view.setUint8(off + i, s.charCodeAt(i));
-  };
-  writeStr(0, "RIFF");
-  view.setUint32(4, 36 + dataLen, true);
-  writeStr(8, "WAVE");
-  writeStr(12, "fmt ");
-  view.setUint32(16, 16, true); // PCM chunk size
-  view.setUint16(20, 1, true); // PCM
-  view.setUint16(22, 1, true); // mono
-  view.setUint32(24, sampleRate, true);
-  view.setUint32(28, sampleRate * 2, true); // byte rate (mono, 16-bit)
-  view.setUint16(32, 2, true); // block align
-  view.setUint16(34, 16, true); // bits per sample
-  writeStr(36, "data");
-  view.setUint32(40, dataLen, true);
-  let off = 44;
-  for (let i = 0; i < samples.length; i++) {
-    const s = Math.max(-1, Math.min(1, samples[i]));
-    view.setInt16(off, s < 0 ? s * 0x8000 : s * 0x7fff, true);
-    off += 2;
-  }
-  return buf;
-}
-
-/** Chunked base64 (avoids a huge apply() spread on big buffers). */
-function bytesToBase64(bytes: Uint8Array): string {
-  let bin = "";
-  const chunk = 0x8000;
-  for (let i = 0; i < bytes.length; i += chunk) {
-    bin += String.fromCharCode(...bytes.subarray(i, i + chunk));
-  }
-  return btoa(bin);
 }

@@ -45,6 +45,7 @@ function makeResponse(result: RouteResult): Response {
     status,
     json: async () => body,
     arrayBuffer: async () => new ArrayBuffer(0),
+    blob: async () => new Blob([]),
     headers: new Headers(),
   } as unknown as Response;
 }
