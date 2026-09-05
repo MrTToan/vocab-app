@@ -11,13 +11,17 @@ import { speechAvailability, synthesizeSpeech, SpeechUnavailableError } from "@/
  * Signed-in + metered (QUOTA_SPEAK). Returns the audio bytes directly so the
  * client can play them straight from an <audio> element; keys never leave the
  * server. When no provider is usable it returns 503 so the UI hides the control.
+ *
+ * We synthesize ONLY the target word — the learner wants to hear the word
+ * pronounced, not the whole example sentence. `example` stays in the schema for
+ * back-compat but is intentionally not spoken.
  */
 export const POST = withUser(speakSchema, async ({ userId, input }) => {
   if (!speechAvailability().tts) {
     return NextResponse.json({ error: "Speech is unavailable right now." }, { status: 503 });
   }
-  // Say the word, then the example sentence if the flow has one.
-  const text = input.example ? `${input.word}. ${input.example}` : input.word;
+  // Speak just the word (never the example sentence).
+  const text = input.word;
   try {
     await reserveQuota(userId, "speak");
     const { audio, mime } = await synthesizeSpeech(text);
