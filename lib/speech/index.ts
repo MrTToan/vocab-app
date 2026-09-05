@@ -100,16 +100,18 @@ export async function assessPronunciation(
 
   if (openAiConfigured()) {
     const transcript = await openaiTranscribe(wav);
-    const { verdict, exact } = wordMatch(transcript, reference);
+    const { verdict, exact, score } = wordMatch(transcript, reference, passScore());
     return {
       provider: "openai",
-      score: null, // word-match has no phoneme score — be honest
+      // An APPROXIMATE closeness score (edit-distance + phonetic), not phoneme
+      // accuracy — the UI labels it as such. Verdict is derived from it.
+      score,
       verdict,
       transcript,
       reference,
       detail: null,
       method: "word-match",
-      feedback: openaiFeedback(verdict, exact, transcript, reference),
+      feedback: openaiFeedback(verdict, exact, transcript, reference, score),
     };
   }
 
@@ -140,16 +142,20 @@ function openaiFeedback(
   exact: boolean,
   transcript: string,
   reference: string,
+  score: number,
 ): string {
+  // `score` is an approximate closeness number (0..100), shown with an "approx."
+  // qualifier so we never overclaim it as clinical per-sound accuracy.
+  const approx = `(~${score}/100 approx.)`;
   if (verdict === "good") {
     return exact
-      ? `Great — that came through clearly as “${reference}”.`
-      : `Good — close enough to “${reference}” to be understood.`;
+      ? `Great — that came through clearly as “${reference}”. ${approx}`
+      : `Good — close enough to “${reference}” to be understood. ${approx}`;
   }
   if (transcript.trim()) {
-    return `That sounded more like “${transcript.trim()}”. Give “${reference}” another go, a little slower.`;
+    return `That sounded more like “${transcript.trim()}”. Give “${reference}” another go, a little slower. ${approx}`;
   }
-  return `I couldn't quite catch that — try saying “${reference}” again, closer to the mic.`;
+  return `I couldn't quite catch that — try saying “${reference}” again, closer to the mic. ${approx}`;
 }
 
 function looksLike(a: string, b: string): boolean {

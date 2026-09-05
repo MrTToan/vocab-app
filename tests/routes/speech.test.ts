@@ -187,21 +187,24 @@ describe("OpenAI-only (no Azure key) — the feature works end to end", () => {
     expect(knobs.calls.openaiTts).toBe(1);
     expect(knobs.calls.azureTts).toBe(0);
   });
-  it("say-it returns a word-match verdict via Whisper", async () => {
+  it("say-it returns a word-match verdict + closeness score via Whisper", async () => {
     const res = await assess.POST(post("http://t/api/speech/assess", { word: "reluctant", audio: wavDataUrl() }));
     expect(res.status).toBe(200);
-    const body = (await res.json()) as { provider: string; method: string; verdict: string; score: number | null };
+    const body = (await res.json()) as { provider: string; method: string; verdict: string; score: number };
     expect(body.provider).toBe("openai");
     expect(body.method).toBe("word-match");
     expect(body.verdict).toBe("good");
-    expect(body.score).toBeNull();
+    // Exact hit → a real 0..100 closeness score, not null.
+    expect(body.score).toBe(100);
     expect(knobs.calls.openaiStt).toBe(1);
     expect(knobs.calls.azureAssess).toBe(0);
   });
-  it("a mis-heard word is needs-work", async () => {
+  it("a mis-heard word is needs-work with a low score", async () => {
     knobs.openaiHeard = "elephant";
     const res = await assess.POST(post("http://t/api/speech/assess", { word: "reluctant", audio: wavDataUrl() }));
-    expect(((await res.json()) as { verdict: string }).verdict).toBe("needs-work");
+    const body = (await res.json()) as { verdict: string; score: number };
+    expect(body.verdict).toBe("needs-work");
+    expect(body.score).toBeLessThan(70);
   });
 });
 

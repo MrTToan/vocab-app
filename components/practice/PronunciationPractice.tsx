@@ -26,7 +26,7 @@ import {
 
 interface AssessResult {
   provider: "azure" | "openai";
-  score: number | null;
+  score: number;
   verdict: "good" | "needs-work";
   transcript: string;
   reference: string;
@@ -124,7 +124,8 @@ export default function PronunciationPractice({
       const res = await fetch("/api/speech/tts", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ word, example }),
+        // Send the word only — "hear it" speaks the target word, not the example.
+        body: JSON.stringify({ word }),
       });
       if (!res.ok) {
         const msg = await errText(res, "Couldn't play that right now.");
@@ -147,7 +148,7 @@ export default function PronunciationPractice({
       setNote("Couldn't play that right now.");
       setPlaying(false);
     }
-  }, [playing, word, example]);
+  }, [playing, word]);
 
   /* ── say it ───────────────────────────────────────────────────────── */
   const stopRecording = useCallback(() => {
@@ -292,7 +293,13 @@ function ResultCard({ result }: { result: AssessResult }) {
     >
       <div className="font-semibold" style={{ color: good ? "var(--ok, #16a34a)" : "var(--warn, #d97706)" }}>
         {good ? "✓ Good" : "○ Needs work"}
-        {typeof result.score === "number" && <span className="muted font-normal"> · {result.score}/100</span>}
+        {typeof result.score === "number" && (
+          <span className="muted font-normal">
+            {" · "}
+            {result.score}/100
+            {result.method === "word-match" && " approx."}
+          </span>
+        )}
       </div>
       <div className="mt-1">{result.feedback}</div>
       {result.detail && (
@@ -302,7 +309,9 @@ function ResultCard({ result }: { result: AssessResult }) {
         </div>
       )}
       {result.method === "word-match" && (
-        <div className="muted text-xs mt-1">Heard as a whole word (not per-sound scoring).</div>
+        <div className="muted text-xs mt-1">
+          Approximate closeness score — heard as a whole word, not per-sound scoring.
+        </div>
       )}
     </div>
   );

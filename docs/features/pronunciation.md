@@ -3,10 +3,11 @@
 Two-way pronunciation lives in the **practice reveal** — the review panel shown after you answer,
 which already displays the word, its IPA, meaning and an example. Two controls sit there:
 
-- **🔊 Hear it** — plays the word spoken aloud in a natural voice (and the example sentence when the
-  word has one), so you know how it should sound.
-- **🎤 Say it** — records you saying the word and tells you how you did: a pronunciation **score**
-  and a clear **Good / Needs work** verdict with one encouraging line.
+- **🔊 Hear it** — plays **just the target word** spoken aloud in a natural voice, so you know how it
+  should sound. (It deliberately does *not* read the example sentence — the learner wants the word.)
+- **🎤 Say it** — records you saying the word and tells you how you did: a 0–100 **score** and a clear
+  **Good / Needs work** verdict with one encouraging line. On the OpenAI path the number is an
+  **approximate closeness score** (labelled as such), not clinical phoneme accuracy — see below.
 
 Both are optional and non-disruptive: they never change the exercise itself, and they hide themselves
 entirely when no speech provider is configured (so a key-less deploy just doesn't show them).
@@ -17,9 +18,17 @@ Speech uses a small provider abstraction (`lib/speech/**`) with **automatic, gra
 
 | | Primary — **Azure Speech** | Fallback — **OpenAI** |
 |---|---|---|
-| Hear it | Azure **Neural TTS** | OpenAI **TTS** |
+| Hear it | Azure **Neural TTS** (word only) | OpenAI **TTS** (word only) |
 | Say it | Azure **Pronunciation Assessment** — real per-syllable **accuracy / fluency / completeness** scores | **Whisper** transcription compared to the target word |
-| Coaching signal | a true 0–100 pronunciation score | a *word-match* check (did you say the right word?) — **not** phoneme scoring, and honest about it |
+| Coaching signal | a true 0–100 phoneme score (method `phoneme`) | a 0–100 **approximate closeness score** (method `word-match`) — did you say the right word, and how close? — **not** phoneme scoring, and labelled "approx." so it never overclaims |
+
+**The word-match closeness score** (`lib/speech/match.ts`, pure + unit-tested): `similarityScore()`
+blends a normalized edit-distance ratio (60%) with a light phonetic-key ratio (40%, a metaphone-ish
+`phoneticKey()`), so an exact hit or the target-as-a-token scores 100, a plural / one-letter mishear
+("pollinations" vs "pollination", "reluctent" vs "reluctant") scores 80+, and an unrelated word lands
+below the pass bar. The **verdict is derived from that score** against the pass threshold
+(`passScore()`, default 70), so the number and the Good/Needs-work label always agree. Azure keeps
+returning its real `phoneme` score unchanged when configured.
 
 Azure is chosen **first** to burn its generous **free F0 tier** (≈ 0.5M TTS chars + ~5 audio-hours of
 assessment per month). Lexi falls back to OpenAI **automatically** when Azure is unconfigured, returns
