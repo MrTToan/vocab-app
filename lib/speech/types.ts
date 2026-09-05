@@ -39,7 +39,12 @@ export interface AssessResult {
    * APPROXIMATE closeness score (method "word-match"). Always a number now.
    */
   score: number;
-  verdict: "good" | "needs-work";
+  /**
+   * "good"/"needs-work" are real graded outcomes; "unclear" means the recognizer
+   * couldn't make out the clip at all (silence, no speech) — NOT a failed attempt,
+   * so the UI must not show it as a 0/100 score.
+   */
+  verdict: "good" | "needs-work" | "unclear";
   /** What the recognizer heard. */
   transcript: string;
   /** The target word we compared against. */

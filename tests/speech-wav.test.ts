@@ -1,6 +1,10 @@
 import { describe, it, expect } from "vitest";
 import { parseWav } from "@/lib/speech/wav";
 import { parseAssessment } from "@/lib/speech/azure";
+// Verbatim responses captured from LIVE Azure (see tests/fixtures/azure/README.md).
+import successReluctant from "./fixtures/azure/success-reluctant.json";
+import mispronouncedLow from "./fixtures/azure/mispronounced-low.json";
+import initialSilenceTimeout from "./fixtures/azure/initial-silence-timeout.json";
 
 /** Build a minimal 16 kHz mono 16-bit PCM WAV with `frames` samples of silence. */
 function makeWav(frames: number, sampleRate = 16000): Uint8Array {
@@ -45,7 +49,30 @@ describe("parseWav", () => {
 });
 
 describe("parseAssessment (Azure response → scores)", () => {
-  it("pulls PronScore + component scores from NBest", () => {
+  // REGRESSION: real Azure puts the pronunciation scores DIRECTLY on NBest[0]
+  // (AccuracyScore/FluencyScore/CompletenessScore/PronScore), NOT nested under a
+  // `PronunciationAssessment` object. Reading only the nested path made a spot-on
+  // clip score 0/100. These fixtures are verbatim LIVE-Azure captures.
+  it("reads the FLAT NBest scores from a real Success response (not 0)", () => {
+    const r = parseAssessment(successReluctant);
+    expect(r.recognized).toBe(true);
+    expect(r.score).toBe(100); // would be 0 under the old nested-only parser
+    expect(r.detail).toEqual({ accuracy: 100, fluency: 100, completeness: 100 });
+    expect(r.transcript).toBe("Reluctant.");
+  });
+  it("keeps a real low attempt low (a genuine miss is not 0, and not inflated)", () => {
+    const r = parseAssessment(mispronouncedLow);
+    expect(r.recognized).toBe(true);
+    expect(r.score).toBe(76);
+    expect(r.detail.accuracy).toBe(60);
+  });
+  it("marks a silence/timeout response unrecognized (honest, not a bogus 0/100)", () => {
+    const r = parseAssessment(initialSilenceTimeout);
+    expect(r.recognized).toBe(false);
+    expect(r.score).toBe(0);
+    expect(r.detail).toEqual({ accuracy: 0, fluency: 0, completeness: 0 });
+  });
+  it("still reads the nested (SDK-shaped) PronunciationAssessment as a fallback", () => {
     const r = parseAssessment({
       RecognitionStatus: "Success",
       DisplayText: "reluctant",
@@ -61,15 +88,15 @@ describe("parseAssessment (Azure response → scores)", () => {
         },
       ],
     });
+    expect(r.recognized).toBe(true);
     expect(r.score).toBe(90);
     expect(r.detail).toEqual({ accuracy: 88, fluency: 92, completeness: 100 });
     expect(r.transcript).toBe("reluctant");
   });
-  it("falls back to accuracy when PronScore is absent, and 0s on NoMatch", () => {
-    expect(
-      parseAssessment({ NBest: [{ PronunciationAssessment: { AccuracyScore: 55 } }] }).score,
-    ).toBe(55);
+  it("falls back to accuracy when PronScore is absent, and is unrecognized on NoMatch", () => {
+    expect(parseAssessment({ NBest: [{ AccuracyScore: 55 }] }).score).toBe(55);
     const none = parseAssessment({ RecognitionStatus: "NoMatch", NBest: [] });
+    expect(none.recognized).toBe(false);
     expect(none.score).toBe(0);
     expect(none.detail).toEqual({ accuracy: 0, fluency: 0, completeness: 0 });
   });

@@ -82,6 +82,20 @@ export async function assessPronunciation(
     try {
       const a = await azureAssess(wav, reference);
       await recordAzureUsage("assess_seconds", seconds);
+      // Azure couldn't make out any speech (silence / babble / NoMatch): be honest
+      // — this is "we didn't catch that", NOT a 0/100 the learner earned.
+      if (!a.recognized) {
+        return {
+          provider: "azure",
+          score: 0,
+          verdict: "unclear",
+          transcript: "",
+          reference,
+          detail: null,
+          method: "phoneme",
+          feedback: `I couldn't quite catch that — check your mic is on, then say “${reference}” again, a little louder and clearer.`,
+        };
+      }
       const verdict = a.score >= passScore() ? "good" : "needs-work";
       return {
         provider: "azure",
