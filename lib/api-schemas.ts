@@ -298,6 +298,21 @@ export const extractChartSchema = z.strictObject({
   image: z.string().max(3_000_000).optional(),
 });
 
+/* ── pronunciation (lib/speech/**) ─────────────────────────────────── */
+
+/** POST /api/speech/tts — "hear it". Speak the word, optionally + an example. */
+export const speakSchema = z.strictObject({
+  word: wordName,
+  example: z.string().max(400).optional(),
+});
+
+/** POST /api/speech/assess — "say it". `audio` is a base64 data URL of a WAV
+ *  clip (16 kHz mono PCM); the route decodes + re-validates the header/size. */
+export const assessSchema = z.strictObject({
+  word: wordName,
+  audio: z.string().max(8_000_000),
+});
+
 export const writingSubmitSchema = z.strictObject({
   promptId: z.string().min(1, "promptId required").max(64),
   text: z.string().max(8000).optional(),

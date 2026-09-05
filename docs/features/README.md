@@ -22,6 +22,7 @@ session cookie; API routes still return 401 and remain the real enforcement.
 4. [Question bank](question-bank.md) — pre-generated + self-refilling questions
 5. [Adding words](adding-words.md) — enrichment, duplicate & spelling checks, single add, paste-a-list import (CSV as advanced)
 6. [Collections](collections.md) — curated word groups (private + public packs) + scoped practice
+6b. [Pronunciation practice](pronunciation.md) — hear a word spoken & get feedback on saying it (Azure-primary, OpenAI-fallback)
 
 ## Writing
 7. [IELTS writing feedback](writing-feedback.md) — Task 1 & Task 2, band scoring, inline corrections

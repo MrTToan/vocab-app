@@ -33,6 +33,8 @@ export const QUOTA_TASKS = [
   "extract-chart",
   "discuss-writing",
   "generate",
+  "speak",
+  "pronounce",
 ] as const;
 export type QuotaTask = (typeof QUOTA_TASKS)[number];
 
@@ -43,6 +45,11 @@ const ENV_VAR: Record<QuotaTask, string> = {
   "extract-chart": "QUOTA_EXTRACT_CHART",
   "discuss-writing": "QUOTA_DISCUSS",
   generate: "QUOTA_GENERATE",
+  // Pronunciation module (lib/speech/**): "speak" = hear-it TTS,
+  // "pronounce" = say-it assessment. Both reach a provider (Azure/OpenAI) on the
+  // owner's keys, so both are metered like every other model-calling route.
+  speak: "QUOTA_SPEAK",
+  pronounce: "QUOTA_PRONOUNCE",
 };
 
 const DEFAULT_CAP: Record<QuotaTask, number> = {
@@ -52,6 +59,8 @@ const DEFAULT_CAP: Record<QuotaTask, number> = {
   "extract-chart": 5,
   "discuss-writing": 30,
   generate: 300,
+  speak: 200,
+  pronounce: 100,
 };
 
 export function capFor(task: QuotaTask): number {

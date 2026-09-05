@@ -3,6 +3,7 @@ import { withUser, MUTABLE_JSON_CACHE_HEADERS } from "@/lib/api";
 import { emptySchema } from "@/lib/api-schemas";
 import { getStore } from "@/lib/store";
 import { hasAnyLLM, mode, chainStatus } from "@/lib/providers";
+import { speechAvailability } from "@/lib/speech";
 
 /**
  * Runtime config for the UI (signed-in only). Everyone gets `hasLLM` (features
@@ -18,12 +19,17 @@ const CACHE_HEADERS = MUTABLE_JSON_CACHE_HEADERS;
 
 export const GET = withUser(emptySchema, async ({ owner }) => {
   const hasLLM = hasAnyLLM();
-  if (!owner) return NextResponse.json({ hasLLM, owner: false }, { headers: CACHE_HEADERS });
+  // Speech (pronunciation) availability is a feature flag, so every signed-in
+  // user gets it — the UI hides the hear-it/say-it controls when it's false. It
+  // names no vendor or key, so it's safe for non-owners.
+  const speech = speechAvailability();
+  if (!owner) return NextResponse.json({ hasLLM, speech, owner: false }, { headers: CACHE_HEADERS });
 
   const { active, chain } = chainStatus();
   return NextResponse.json(
     {
       hasLLM,
+      speech,
       owner: true,
       backend: getStore().backend(), // "sheet" | "sqlite"
       mode: mode(), // "default" | "custom" | "chain"

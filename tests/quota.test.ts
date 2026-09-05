@@ -78,6 +78,7 @@ describe("task caps", () => {
     for (const k of Object.keys(process.env)) if (k.startsWith("QUOTA_")) delete process.env[k];
     expect([...q.QUOTA_TASKS]).toEqual([
       "enrich", "score", "score-writing", "extract-chart", "discuss-writing", "generate",
+      "speak", "pronounce",
     ]);
     expect(q.capFor("enrich")).toBe(150);
     expect(q.capFor("score")).toBe(300);
@@ -85,6 +86,8 @@ describe("task caps", () => {
     expect(q.capFor("extract-chart")).toBe(5);
     expect(q.capFor("discuss-writing")).toBe(30);
     expect(q.capFor("generate")).toBe(300);
+    expect(q.capFor("speak")).toBe(200);
+    expect(q.capFor("pronounce")).toBe(100);
   });
 
   it("honours the env overrides", () => {

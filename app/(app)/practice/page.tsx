@@ -14,6 +14,7 @@ import type {
 import { STAGE_LABEL, STAGE_ORDER, RESULT_VAR, jsonFetch } from "@/lib/ui";
 import { useCollections } from "@/lib/swr";
 import { gradeEnglishWord, matchesMeaning } from "@/lib/grade";
+import PronunciationPractice from "@/components/practice/PronunciationPractice";
 
 interface Payload {
   word: Word | null;
@@ -712,6 +713,13 @@ function Feedback({
         {cur.word.example_complex && (
           <div className="muted italic">“{cur.word.example_complex}”</div>
         )}
+        {/* Two-way pronunciation: hear the word (and its example) spoken, and
+            record yourself to get a pronunciation score / verdict. Hides itself
+            when no speech provider is configured (config.speech). */}
+        <PronunciationPractice
+          word={cur.word.word}
+          example={cur.word.example_complex || cur.word.example_simple || undefined}
+        />
         {cur.word.collocations.length > 0 && (
           <div className="pt-1">
             <span className="muted">Collocations: </span>

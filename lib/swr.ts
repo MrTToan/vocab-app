@@ -98,6 +98,8 @@ export const assignmentContentKey = (kind: string, q: string) =>
 /** What /api/config returns. Diagnostic fields are owner-only (may be absent). */
 export type ConfigData = {
   hasLLM: boolean;
+  /** Pronunciation module availability (hear-it TTS / say-it assessment). */
+  speech?: { tts: boolean; assess: boolean };
   owner: boolean;
   backend?: string;
   mode?: string;
