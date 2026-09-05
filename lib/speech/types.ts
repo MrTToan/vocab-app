@@ -10,8 +10,8 @@
  *   - "phoneme"    → Azure Pronunciation Assessment: real per-syllable accuracy,
  *                    fluency and completeness scores.
  *   - "word-match" → OpenAI Whisper transcription compared to the target word.
- *                    This is a did-you-say-the-right-word check, NOT phoneme
- *                    scoring — there is no accuracy number behind it.
+ *                    This is a did-you-say-the-right-word check with an
+ *                    APPROXIMATE closeness `score`, NOT clinical phoneme scoring.
  */
 
 export type SpeechProvider = "azure" | "openai";
@@ -34,8 +34,11 @@ export interface AssessDetail {
 /** The graded result for "say it". */
 export interface AssessResult {
   provider: SpeechProvider;
-  /** 0..100 pronunciation score (Azure). null on the OpenAI word-match path. */
-  score: number | null;
+  /**
+   * 0..100 score. Azure = real phoneme accuracy (method "phoneme"); OpenAI = an
+   * APPROXIMATE closeness score (method "word-match"). Always a number now.
+   */
+  score: number;
   verdict: "good" | "needs-work";
   /** What the recognizer heard. */
   transcript: string;
