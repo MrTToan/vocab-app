@@ -1,0 +1,109 @@
+{
+  "RecognitionStatus": "Success",
+  "Offset": 2000000,
+  "Duration": 7400000,
+  "DisplayText": "Reluctant.",
+  "SNR": 40.23667,
+  "NBest": [
+    {
+      "Confidence": 0.7793404,
+      "Lexical": "reluctant",
+      "ITN": "reluctant",
+      "MaskedITN": "reluctant",
+      "Display": "Reluctant.",
+      "AccuracyScore": 60,
+      "FluencyScore": 100,
+      "CompletenessScore": 100,
+      "PronScore": 76,
+      "Words": [
+        {
+          "Word": "reluctant",
+          "Offset": 2000000,
+          "Duration": 7400000,
+          "Confidence": 0,
+          "AccuracyScore": 60,
+          "ErrorType": "None",
+          "Syllables": [
+            {
+              "Syllable": "riy",
+              "Grapheme": "re",
+              "Offset": 2000000,
+              "Duration": 700000,
+              "AccuracyScore": 0
+            },
+            {
+              "Syllable": "lahk",
+              "Grapheme": "luc",
+              "Offset": 2800000,
+              "Duration": 1600000,
+              "AccuracyScore": 0
+            },
+            {
+              "Syllable": "taxnt",
+              "Grapheme": "tant",
+              "Offset": 4500000,
+              "Duration": 4900000,
+              "AccuracyScore": 76
+            }
+          ],
+          "Phonemes": [
+            {
+              "Phoneme": "r",
+              "Offset": 2000000,
+              "Duration": 200000,
+              "AccuracyScore": 0
+            },
+            {
+              "Phoneme": "iy",
+              "Offset": 2300000,
+              "Duration": 400000,
+              "AccuracyScore": 0
+            },
+            {
+              "Phoneme": "l",
+              "Offset": 2800000,
+              "Duration": 500000,
+              "AccuracyScore": 0
+            },
+            {
+              "Phoneme": "ah",
+              "Offset": 3400000,
+              "Duration": 400000,
+              "AccuracyScore": 0
+            },
+            {
+              "Phoneme": "k",
+              "Offset": 3900000,
+              "Duration": 500000,
+              "AccuracyScore": 0
+            },
+            {
+              "Phoneme": "t",
+              "Offset": 4500000,
+              "Duration": 400000,
+              "AccuracyScore": 0
+            },
+            {
+              "Phoneme": "ax",
+              "Offset": 5000000,
+              "Duration": 600000,
+              "AccuracyScore": 0
+            },
+            {
+              "Phoneme": "n",
+              "Offset": 5700000,
+              "Duration": 1200000,
+              "AccuracyScore": 100
+            },
+            {
+              "Phoneme": "t",
+              "Offset": 7000000,
+              "Duration": 2400000,
+              "AccuracyScore": 99
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

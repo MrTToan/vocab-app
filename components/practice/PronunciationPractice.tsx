@@ -24,10 +24,10 @@ import {
   pickRecorderMimeType,
 } from "@/lib/speech/client";
 
-interface AssessResult {
+export interface AssessResult {
   provider: "azure" | "openai";
   score: number;
-  verdict: "good" | "needs-work";
+  verdict: "good" | "needs-work" | "unclear";
   transcript: string;
   reference: string;
   feedback: string;
@@ -280,20 +280,29 @@ export default function PronunciationPractice({
   );
 }
 
-function ResultCard({ result }: { result: AssessResult }) {
+// Exported for the jsdom render test — jsdom has no MediaRecorder so the "say it"
+// flow can't be driven end to end there; this lets the "unclear" (no bogus score)
+// and graded states be asserted directly.
+export function ResultCard({ result }: { result: AssessResult }) {
   const good = result.verdict === "good";
+  // "unclear" = the recognizer heard no scorable speech. Show it neutrally with
+  // NO score — a "0/100" here would read as a failed attempt, which it isn't.
+  const unclear = result.verdict === "unclear";
+  const color = good ? "var(--ok, #16a34a)" : unclear ? "var(--muted, #6b7280)" : "var(--warn, #d97706)";
+  const heading = good ? "✓ Good" : unclear ? "🎤 Didn’t catch that" : "○ Needs work";
+  const showScore = !unclear && typeof result.score === "number";
   return (
     <div
       className="text-sm rounded-md px-3 py-2"
       role="status"
       style={{
         background: "var(--surface, rgba(0,0,0,0.03))",
-        border: `1px solid ${good ? "var(--ok, #16a34a)" : "var(--warn, #d97706)"}`,
+        border: `1px solid ${color}`,
       }}
     >
-      <div className="font-semibold" style={{ color: good ? "var(--ok, #16a34a)" : "var(--warn, #d97706)" }}>
-        {good ? "✓ Good" : "○ Needs work"}
-        {typeof result.score === "number" && (
+      <div className="font-semibold" style={{ color }}>
+        {heading}
+        {showScore && (
           <span className="muted font-normal">
             {" · "}
             {result.score}/100

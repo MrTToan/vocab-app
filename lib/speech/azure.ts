@@ -67,6 +67,12 @@ export interface AzureAssessment {
   score: number; // PronScore 0..100
   detail: AssessDetail;
   transcript: string;
+  /**
+   * Whether Azure actually heard scorable speech. `false` for a NoMatch /
+   * silence / babble timeout, where there are NO usable scores — the caller must
+   * surface an honest "couldn't hear you" instead of a bogus 0/100.
+   */
+  recognized: boolean;
 }
 
 /**
@@ -112,17 +118,27 @@ export async function azureAssess(
   return parseAssessment(json);
 }
 
-/* ── response shape (only the fields we read) ─────────────────────────── */
-interface AzurePA {
+/* ── response shape (only the fields we read) ─────────────────────────────
+ *
+ * The pronunciation scores live DIRECTLY on the NBest item in the conversation
+ * STT REST response — `NBest[0].AccuracyScore` / `FluencyScore` /
+ * `CompletenessScore` / `PronScore` — NOT nested under a `PronunciationAssessment`
+ * object (that nested shape is what the Speech SDK surfaces). Reading only the
+ * nested path made every real clip score 0, even a spot-on one (verified against
+ * live Azure). We read the flat fields first and fall back to the nested object
+ * for robustness / SDK-shaped fixtures. A silence/babble/NoMatch response carries
+ * a non-"Success" RecognitionStatus and no NBest at all → `recognized: false`. */
+interface AzureScores {
   AccuracyScore?: number;
   FluencyScore?: number;
   CompletenessScore?: number;
   PronScore?: number;
 }
-interface AzureNBest {
+interface AzureNBest extends AzureScores {
   Display?: string;
   Lexical?: string;
-  PronunciationAssessment?: AzurePA;
+  /** Alternative nesting some Azure surfaces (e.g. the SDK) use. */
+  PronunciationAssessment?: AzureScores;
 }
 interface AzureSttResponse {
   RecognitionStatus?: string;
@@ -134,17 +150,35 @@ interface AzureSttResponse {
  *  for unit testing against captured fixtures. */
 export function parseAssessment(json: AzureSttResponse): AzureAssessment {
   const best = json.NBest?.[0];
-  const pa = best?.PronunciationAssessment ?? {};
-  const num = (v: unknown) => (typeof v === "number" && Number.isFinite(v) ? v : 0);
+  const nested = best?.PronunciationAssessment;
+  // Flat (real REST shape) first, nested (SDK shape) as a fallback.
+  const pick = (flat: number | undefined, deep: number | undefined): number | undefined =>
+    typeof flat === "number" ? flat : typeof deep === "number" ? deep : undefined;
+  const accuracy = pick(best?.AccuracyScore, nested?.AccuracyScore);
+  const fluency = pick(best?.FluencyScore, nested?.FluencyScore);
+  const completeness = pick(best?.CompletenessScore, nested?.CompletenessScore);
+  const pron = pick(best?.PronScore, nested?.PronScore);
+
+  const num = (v: number | undefined) => (typeof v === "number" && Number.isFinite(v) ? v : 0);
   const detail: AssessDetail = {
-    accuracy: num(pa.AccuracyScore),
-    fluency: num(pa.FluencyScore),
-    completeness: num(pa.CompletenessScore),
+    accuracy: num(accuracy),
+    fluency: num(fluency),
+    completeness: num(completeness),
   };
-  // PronScore is the headline; if absent (e.g. NoMatch) fall back to accuracy.
-  const score = typeof pa.PronScore === "number" ? num(pa.PronScore) : detail.accuracy;
+  // PronScore is the headline; if absent fall back to accuracy.
+  const score = pron !== undefined ? num(pron) : detail.accuracy;
   const transcript = best?.Display ?? best?.Lexical ?? json.DisplayText ?? "";
-  return { score, detail, transcript };
+
+  // Did Azure actually score speech? A recognized clip has an NBest item with at
+  // least one score; a silence/babble/NoMatch timeout has a non-"Success" status
+  // and no scorable NBest. Treat "Success" (or an absent status, for lenient
+  // fixtures) with a real score as recognized.
+  const hasScore = accuracy !== undefined || pron !== undefined;
+  const status = json.RecognitionStatus;
+  const statusOk = status === undefined || status === "Success";
+  const recognized = !!best && hasScore && statusOk;
+
+  return { score, detail, transcript, recognized };
 }
 
 async function safeText(res: Response): Promise<string> {
