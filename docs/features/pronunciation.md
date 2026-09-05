@@ -79,6 +79,27 @@ things that desktop doesn't strictly need:
 
 > Note: emulated/desktop-devtools "mobile mode" does **not** faithfully reproduce these gates (it tends to
 > auto-grant the mic and relax autoplay), so these paths are covered by unit tests + real-device testing.
+
+## Required response headers (the production trap)
+
+Neither control works unless the app's **security headers** (`next.config.ts`) permit them, and these
+headers are only sent by the **production** server (`next start` / deploy) — **`next dev` omits them**,
+so the feature can look healthy in local/emulated testing and still be fully broken in prod on *every*
+device. Two headers are load-bearing here (guarded by `tests/security-headers.test.ts`):
+
+- **CSP `media-src 'self' blob: data:`** — "Hear it" plays the TTS audio from a `blob:` object URL and
+  primes a `data:` silent clip. Without an explicit `media-src`, `<audio>` falls back to
+  `default-src 'self'`, which blocks both → the element fires `error` (`MediaError` code 4) → the UI
+  shows *"Couldn't play that right now."*
+- **`Permissions-Policy: microphone=(self)`** — "Say it" calls `getUserMedia({audio:true})` on our own
+  origin. `microphone=()` disables the mic for *every* origin (including self): `getUserMedia` rejects
+  with `NotAllowedError`, **no permission prompt appears**, and the address-bar "allow microphone" toggle
+  **cannot** override it (a Permissions-Policy block sits above the per-site permission). Symptom:
+  *"Microphone access was blocked."* that persists even after the user grants the mic.
+
+Both were confirmed live in a real browser (CSP `media-src` violations for `data`/`blob`;
+`document.featurePolicy.allowsFeature('microphone') === false`). When touching these headers, verify
+against a **production** build, not `next dev`.
 - **Azure free-tier tally.** A per-UTC-month running total of Azure TTS characters and assessment
   seconds is kept in SQLite (`speech_usage`) so the "budget spent → fall back to OpenAI" switch is real.
   It's deliberately approximate — if the tally is ever wrong, Lexi still tries Azure and falls back on
