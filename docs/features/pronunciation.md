@@ -56,8 +56,29 @@ today; the Azure path activates the moment `AZURE_SPEECH_KEY` + `AZURE_SPEECH_RE
   only ever gets audio bytes back or a JSON result.
 - Both routes are **sign-in-gated and metered** like every other model-calling route (`QUOTA_SPEAK`,
   `QUOTA_PRONOUNCE`) — public users spend the owner's keys.
-- **Microphone permission denied / no mic / no MediaRecorder** → a friendly message, never a crash; the
-  say-it control simply isn't offered when the browser can't record.
+- **Microphone permission denied / no mic / no MediaRecorder** → a friendly, *accurate* message, never a
+  crash; the say-it control simply isn't offered when the browser can't record. The message distinguishes
+  a real permission block (and tells you how to unblock it via the address-bar lock/site-info icon) from
+  "no mic", "mic in use by another app", and "this browser can't record here".
+
+## Mobile browsers (Android/iOS Chrome & Safari)
+
+Mobile browsers gate audio more strictly than desktop, so the client (`lib/speech/client.ts`) does two
+things that desktop doesn't strictly need:
+
+- **Hear it** — mobile browsers only let JavaScript play audio on an `<audio>` element the user has
+  already *activated* by a tap. "Hear it" fetches the spoken audio first (a network round-trip), by which
+  point the tap gesture is gone and a naive `play()` would reject with *"Couldn't play that right now."*
+  Lexi keeps one persistent audio element and **primes it with a split-second silent clip during the tap**,
+  so the real playback after the fetch is allowed.
+- **Say it** — mobile Chrome supports **different audio recording formats** than desktop (e.g. no
+  `audio/webm` on some devices). Lexi **feature-detects a recording format the device actually supports**
+  (falling back through webm → mp4 → ogg → the browser default) so recording never fails just because of
+  the container. Recording also needs a secure `https://` page and the microphone permission; opening Lexi
+  *inside another app's in-app browser* can block the mic — open it in Chrome/Safari directly.
+
+> Note: emulated/desktop-devtools "mobile mode" does **not** faithfully reproduce these gates (it tends to
+> auto-grant the mic and relax autoplay), so these paths are covered by unit tests + real-device testing.
 - **Azure free-tier tally.** A per-UTC-month running total of Azure TTS characters and assessment
   seconds is kept in SQLite (`speech_usage`) so the "budget spent → fall back to OpenAI" switch is real.
   It's deliberately approximate — if the tally is ever wrong, Lexi still tries Azure and falls back on
@@ -72,7 +93,7 @@ today; the Azure path activates the moment `AZURE_SPEECH_KEY` + `AZURE_SPEECH_RE
   numeric score on this path — it's a did-you-say-the-right-word check, and the UI says so.
 
 ---
-*Under the hood: `lib/speech/{index,config,azure,openai,usage,wav,match,types}.ts`,
+*Under the hood: `lib/speech/{index,config,azure,openai,usage,wav,match,types,client}.ts`,
 `app/api/speech/{tts,assess}/route.ts`, `components/practice/PronunciationPractice.tsx` (rendered in
 `app/(app)/practice/page.tsx`), `speech_usage` table in `lib/db.ts`, tasks `speak`/`pronounce` in
 `lib/auth/quota.ts`. Availability is surfaced on `GET /api/config` as `speech:{tts,assess}`.*
