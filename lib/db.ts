@@ -210,6 +210,19 @@ export async function migrate(db: Client): Promise<void> {
     )`,
   );
 
+  // ── speech free-tier tally (lib/speech/usage.ts) ───────────────────────
+  // A per-UTC-month running total of the two Azure metrics we spend against the
+  // free F0 tier (`tts_chars`, `assess_seconds`), so the "Azure budget spent →
+  // fall back to OpenAI" switch is real. Not per-user (it's a provider-account
+  // budget); OpenAI is metered separately by the per-user llm_usage ledger.
+  // Additive/idempotent; no SCHEMA_VERSION bump.
+  await db.execute(
+    `CREATE TABLE IF NOT EXISTS speech_usage (
+      month TEXT, metric TEXT, amount INTEGER DEFAULT 0,
+      PRIMARY KEY (month, metric)
+    )`,
+  );
+
   // ── user feedback (lib/feedback/store.ts) ──────────────────────────────
   // Submissions from the in-app floating "Feedback" widget. Owner reads them in
   // the admin "Feedback" subtab. `rating` is nullable (the star rating is
