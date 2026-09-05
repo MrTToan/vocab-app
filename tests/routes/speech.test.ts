@@ -22,6 +22,7 @@ vi.mock("@/lib/auth/user", async (importOriginal) => {
 const knobs = {
   azureTtsFail: false,
   azureAssessFail: false,
+  azureSilence: false, // Azure heard no speech (InitialSilenceTimeout, no NBest)
   azureScore: 90,
   openaiHeard: "reluctant",
   calls: { azureTts: 0, azureAssess: 0, openaiTts: 0, openaiStt: 0 },
@@ -39,6 +40,15 @@ function installFetchStub() {
     if (u.includes("stt.speech.microsoft.com")) {
       knobs.calls.azureAssess++;
       if (knobs.azureAssessFail) return new Response("nope", { status: 500 });
+      // A no-speech clip: real Azure returns a non-Success status and NO NBest.
+      if (knobs.azureSilence) {
+        return new Response(
+          JSON.stringify({ RecognitionStatus: "InitialSilenceTimeout", Offset: 10000000, Duration: 0 }),
+          { status: 200, headers: { "content-type": "application/json" } },
+        );
+      }
+      // REAL response shape: pronunciation scores sit DIRECTLY on the NBest item,
+      // not nested under a `PronunciationAssessment` object.
       return new Response(
         JSON.stringify({
           RecognitionStatus: "Success",
@@ -46,12 +56,10 @@ function installFetchStub() {
           NBest: [
             {
               Display: "reluctant",
-              PronunciationAssessment: {
-                AccuracyScore: knobs.azureScore,
-                FluencyScore: knobs.azureScore,
-                CompletenessScore: 100,
-                PronScore: knobs.azureScore,
-              },
+              AccuracyScore: knobs.azureScore,
+              FluencyScore: knobs.azureScore,
+              CompletenessScore: 100,
+              PronScore: knobs.azureScore,
             },
           ],
         }),
@@ -150,7 +158,7 @@ afterAll(() => {
 beforeEach(() => {
   uid = "local-user";
   quota.resetBurst();
-  knobs.azureTtsFail = knobs.azureAssessFail = false;
+  knobs.azureTtsFail = knobs.azureAssessFail = knobs.azureSilence = false;
   knobs.azureScore = 90;
   knobs.openaiHeard = "reluctant";
   knobs.calls = { azureTts: 0, azureAssess: 0, openaiTts: 0, openaiStt: 0 };
@@ -209,13 +217,36 @@ describe("OpenAI-only (no Azure key) — the feature works end to end", () => {
 });
 
 describe("Azure primary + automatic fallback", () => {
-  it("uses Azure phoneme scoring when configured", async () => {
+  it("uses Azure phoneme scoring when configured (real flat NBest scores)", async () => {
     enableAzure();
     const res = await assess.POST(post("http://t/api/speech/assess", { word: "reluctant", audio: wavDataUrl() }));
-    const body = (await res.json()) as { provider: string; method: string; score: number };
+    const body = (await res.json()) as {
+      provider: string;
+      method: string;
+      score: number;
+      verdict: string;
+      detail: { accuracy: number } | null;
+    };
     expect(body.provider).toBe("azure");
     expect(body.method).toBe("phoneme");
+    // REGRESSION: a good clip must score its real PronScore, not 0.
     expect(body.score).toBe(90);
+    expect(body.verdict).toBe("good");
+    expect(body.detail?.accuracy).toBe(90);
+    expect(knobs.calls.azureAssess).toBe(1);
+    expect(knobs.calls.openaiStt).toBe(0);
+  });
+  it("returns an honest 'unclear' (not a bogus 0/100) when Azure hears no speech", async () => {
+    enableAzure();
+    knobs.azureSilence = true;
+    const res = await assess.POST(post("http://t/api/speech/assess", { word: "reluctant", audio: wavDataUrl() }));
+    expect(res.status).toBe(200);
+    const body = (await res.json()) as { provider: string; verdict: string; score: number; detail: unknown };
+    expect(body.provider).toBe("azure");
+    expect(body.verdict).toBe("unclear");
+    expect(body.score).toBe(0);
+    expect(body.detail).toBeNull();
+    // A silence timeout is not an Azure error → we do NOT fall back to OpenAI.
     expect(knobs.calls.azureAssess).toBe(1);
     expect(knobs.calls.openaiStt).toBe(0);
   });

@@ -1,7 +1,10 @@
 import { describe, it, expect, afterEach, vi } from "vitest";
-import { screen, waitFor, cleanup, fireEvent } from "@testing-library/react";
+import { render, screen, waitFor, cleanup, fireEvent } from "@testing-library/react";
 import { mockFetch, renderWithSWR } from "./harness";
-import PronunciationPractice from "@/components/practice/PronunciationPractice";
+import PronunciationPractice, {
+  ResultCard,
+  type AssessResult,
+} from "@/components/practice/PronunciationPractice";
 
 /*
  * Client-side gating for the pronunciation controls. The mic ("Say it") button
@@ -73,5 +76,40 @@ describe("PronunciationPractice", () => {
     // …the second is the fetched TTS blob URL, after the (now-unlocked) element.
     expect(playedSrcs[1]).toBe("blob:mock");
     playSpy.mockRestore();
+  });
+});
+
+describe("PronunciationPractice — ResultCard verdict rendering", () => {
+  const base: AssessResult = {
+    provider: "azure",
+    score: 0,
+    verdict: "good",
+    transcript: "",
+    reference: "reluctant",
+    feedback: "",
+    method: "phoneme",
+    detail: null,
+  };
+
+  it("shows a real Azure score for a graded attempt (regression: not blank/0)", () => {
+    render(
+      <ResultCard
+        result={{ ...base, verdict: "good", score: 92, feedback: "Excellent!", detail: { accuracy: 92, fluency: 100, completeness: 100 } }}
+      />,
+    );
+    expect(screen.getByText(/92\/100/)).toBeTruthy();
+    expect(screen.getByText(/✓ Good/)).toBeTruthy();
+  });
+
+  it("renders 'unclear' honestly — a neutral 'didn't catch that', with NO 0/100", () => {
+    render(
+      <ResultCard
+        result={{ ...base, verdict: "unclear", score: 0, feedback: "I couldn't quite catch that — check your mic…" }}
+      />,
+    );
+    // The whole point: an unrecognized clip is NOT shown as a failed 0/100.
+    expect(screen.queryByText(/\/100/)).toBeNull();
+    expect(screen.queryByText(/needs work/i)).toBeNull();
+    expect(screen.getByText(/didn’t catch that/i)).toBeTruthy();
   });
 });

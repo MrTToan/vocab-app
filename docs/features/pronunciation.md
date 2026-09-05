@@ -122,6 +122,28 @@ against a **production** build, not `next dev`.
   and accepts an exact hit, the word as a token in a short phrase, or a 1-edit near-miss. There is **no**
   numeric score on this path — it's a did-you-say-the-right-word check, and the UI says so.
 
+### Sharp edge — where the Azure scores actually live (the "always 0/100" bug)
+
+The `conversation/cognitiveservices/v1` STT REST response (with `format=detailed` + the
+`Pronunciation-Assessment` header) returns the pronunciation scores **directly on the `NBest[0]`
+item** — `NBest[0].AccuracyScore` / `FluencyScore` / `CompletenessScore` / `PronScore` — **not** nested
+under a `NBest[0].PronunciationAssessment` object (that nested shape is what the Speech *SDK* surfaces).
+`parseAssessment` (`lib/speech/azure.ts`) reads the **flat** fields first and only falls back to the
+nested object. Reading the nested path alone made **every** clip score `0/100`, even a spot-on one —
+this was the "Say it returns 0 even when almost right" bug, verified against live Azure (a clean
+synthesized "reluctant" clip scores `PronScore: 100` in the raw JSON). Regression fixtures are verbatim
+live-Azure captures in `tests/fixtures/azure/` (`parseAssessment` unit tests + the `stt.speech.microsoft.com`
+stub in `tests/routes/speech.test.ts` both use the **flat** shape now — don't reintroduce the nested-only stub).
+
+### Honest "couldn't hear you" (not a bogus 0/100)
+
+A silent / no-speech / babble clip comes back as `RecognitionStatus: "InitialSilenceTimeout"` (or
+`NoMatch`) with **no `NBest`** — no scores at all. `parseAssessment` reports `recognized: false` for
+that, and `assessPronunciation` returns `verdict: "unclear"` (score omitted, `detail: null`, a
+try-again line) instead of a `0/100`. The UI (`ResultCard`) renders that neutrally as *"Didn't catch
+that"* with **no** `/100`. A silence timeout is **not** an Azure error, so it does **not** fall back to
+OpenAI — it's an honest "say it again", not a provider failure.
+
 ---
 *Under the hood: `lib/speech/{index,config,azure,openai,usage,wav,match,types,client}.ts`,
 `app/api/speech/{tts,assess}/route.ts`, `components/practice/PronunciationPractice.tsx` (rendered in
