@@ -121,3 +121,91 @@ export function wordMatch(
   const score = similarityScore(transcript, reference);
   return { verdict: score >= threshold ? "good" : "needs-work", exact, score };
 }
+
+/* ───────────────────────────  sentence matching  ─────────────────────── */
+
+/*
+ * The OpenAI-fallback matcher for a WHOLE SENTENCE ("say sentence"). A single
+ * word's `wordMatch` is wrong here — any one matching token would score 100. A
+ * sentence needs BOTH: did it sound like the sentence (overall closeness) AND
+ * did they actually say (most of) its words. We blend:
+ *   - a normalized whole-string edit-distance ratio (order-sensitive closeness), with
+ *   - a COMPLETENESS signal: the fraction of the reference's words actually present,
+ *     matched order-tolerantly (each reference word greedily paired with its closest
+ *     unused transcript token, counting a near-miss like a plural).
+ * Still an APPROXIMATE closeness score, NOT per-phoneme accuracy — labelled the
+ * same honest "word-match"/"approx." way the single-word path is.
+ */
+
+/** A reference token is "covered" if some transcript token is this close (0..1). */
+const TOKEN_MATCH_RATIO = 0.8;
+
+/** 0..1 closeness of two tokens, blending spelling + phonetic (as pairScore/100). */
+function tokenCloseness(a: string, b: string): number {
+  return pairScore(a, b) / 100;
+}
+
+/**
+ * Fraction (0..1) of the reference's words that appear in the transcript,
+ * order-tolerant: each reference token is greedily matched to its closest
+ * still-unused transcript token, and counts as covered when that closeness clears
+ * TOKEN_MATCH_RATIO (so "pollinations" covers "pollination"). Repeated reference
+ * words each need their own transcript token.
+ */
+export function sentenceCompleteness(transcript: string, reference: string): number {
+  const refTokens = normalize(reference).split(" ").filter(Boolean);
+  const heardTokens = normalize(transcript).split(" ").filter(Boolean);
+  if (refTokens.length === 0) return 0;
+  const used = new Array(heardTokens.length).fill(false);
+  let covered = 0;
+  for (const r of refTokens) {
+    let bestIdx = -1;
+    let bestScore = 0;
+    for (let i = 0; i < heardTokens.length; i++) {
+      if (used[i]) continue;
+      const c = heardTokens[i] === r ? 1 : tokenCloseness(heardTokens[i], r);
+      if (c > bestScore) {
+        bestScore = c;
+        bestIdx = i;
+      }
+    }
+    if (bestIdx >= 0 && bestScore >= TOKEN_MATCH_RATIO) {
+      used[bestIdx] = true;
+      covered++;
+    }
+  }
+  return covered / refTokens.length;
+}
+
+/**
+ * Approximate 0..100 closeness of a spoken SENTENCE to the reference sentence,
+ * plus the completeness component (0..100) so the UI can surface how much of the
+ * sentence was actually said. Blends whole-string similarity with completeness.
+ */
+export function sentenceSimilarity(
+  transcript: string,
+  reference: string,
+): { score: number; completeness: number } {
+  const ref = normalize(reference);
+  const heard = normalize(transcript);
+  if (!ref) return { score: 0, completeness: 0 };
+  if (!heard) return { score: 0, completeness: 0 };
+  const completeness = sentenceCompleteness(transcript, reference);
+  const similarity = heard === ref ? 1 : levRatio(heard, ref);
+  const blended = 0.5 * similarity + 0.5 * completeness;
+  return { score: Math.round(100 * Math.max(0, Math.min(1, blended))), completeness: Math.round(100 * completeness) };
+}
+
+/**
+ * The sentence-level verdict + approximate score for the OpenAI fallback path.
+ * Verdict is derived from the blended score against `threshold` so the number and
+ * label always agree; `completeness` is surfaced for the learner's feedback.
+ */
+export function sentenceMatch(
+  transcript: string,
+  reference: string,
+  threshold = 70,
+): { verdict: "good" | "needs-work"; score: number; completeness: number } {
+  const { score, completeness } = sentenceSimilarity(transcript, reference);
+  return { verdict: score >= threshold ? "good" : "needs-work", score, completeness };
+}

@@ -20,7 +20,7 @@ import { azureTts, azureAssess } from "./azure";
 import { openaiTts, openaiTranscribe } from "./openai";
 import { azureBudgetExceeded, recordAzureUsage } from "./usage";
 import { parseWav } from "./wav";
-import { wordMatch } from "./match";
+import { wordMatch, sentenceMatch } from "./match";
 import {
   type AssessResult,
   type SpeechAvailability,
@@ -64,23 +64,31 @@ export async function synthesizeSpeech(text: string): Promise<TtsResult> {
 /* ─────────────────────────────  say it  ───────────────────────────── */
 
 /**
- * Assess the learner's WAV recording of `word`. Azure Pronunciation Assessment
- * first (real phoneme scoring), else OpenAI Whisper transcription → word-match.
- * `word` is the target; we compare against it. Throws SpeechUnavailableError
- * when no provider is usable, or a plain Error for a malformed upload.
+ * Assess the learner's WAV recording against `reference`. Azure Pronunciation
+ * Assessment first (real phoneme scoring), else OpenAI Whisper transcription →
+ * an approximate matcher. `mode` selects what we're scoring:
+ *   - "word"     (default): a single target word — word-match on the fallback.
+ *   - "sentence": the whole completed sentence — a sentence-level matcher on the
+ *                 fallback, and the fluency/completeness breakdown surfaced from
+ *                 Azure (these matter for a sentence in a way they don't for a
+ *                 word). Azure's ReferenceText handles a full sentence natively.
+ * Throws SpeechUnavailableError when no provider is usable, or a plain Error for
+ * a malformed upload.
  */
 export async function assessPronunciation(
   wav: Uint8Array,
-  word: string,
+  reference: string,
+  mode: "word" | "sentence" = "word",
 ): Promise<AssessResult> {
   const info = parseWav(wav);
   if (!info) throw new Error("The recording wasn't valid WAV audio.");
   const seconds = Math.max(1, Math.ceil(info.seconds));
-  const reference = word.trim();
+  const ref = reference.trim();
+  const label = mode === "sentence" ? "that sentence" : `“${ref}”`;
 
   if (azureConfigured() && !(await azureBudgetExceeded("assess_seconds", azureAssessSecondsBudget(), seconds))) {
     try {
-      const a = await azureAssess(wav, reference);
+      const a = await azureAssess(wav, ref);
       await recordAzureUsage("assess_seconds", seconds);
       // Azure couldn't make out any speech (silence / babble / NoMatch): be honest
       // — this is "we didn't catch that", NOT a 0/100 the learner earned.
@@ -90,10 +98,10 @@ export async function assessPronunciation(
           score: 0,
           verdict: "unclear",
           transcript: "",
-          reference,
+          reference: ref,
           detail: null,
           method: "phoneme",
-          feedback: `I couldn't quite catch that — check your mic is on, then say “${reference}” again, a little louder and clearer.`,
+          feedback: `I couldn't quite catch that — check your mic is on, then say ${label} again, a little louder and clearer.`,
         };
       }
       const verdict = a.score >= passScore() ? "good" : "needs-work";
@@ -102,10 +110,13 @@ export async function assessPronunciation(
         score: Math.round(a.score),
         verdict,
         transcript: a.transcript,
-        reference,
+        reference: ref,
         detail: a.detail,
         method: "phoneme",
-        feedback: azureFeedback(verdict, a.score, a.transcript, reference),
+        feedback:
+          mode === "sentence"
+            ? azureSentenceFeedback(verdict, a.score, a.detail)
+            : azureFeedback(verdict, a.score, a.transcript, ref),
       };
     } catch (err) {
       logFallback("assess", err);
@@ -114,7 +125,24 @@ export async function assessPronunciation(
 
   if (openAiConfigured()) {
     const transcript = await openaiTranscribe(wav);
-    const { verdict, exact, score } = wordMatch(transcript, reference, passScore());
+    if (mode === "sentence") {
+      const { verdict, score, completeness } = sentenceMatch(transcript, ref, passScore());
+      return {
+        provider: "openai",
+        // An APPROXIMATE closeness score (whole-string similarity blended with
+        // how many of the sentence's words were said) — NOT phoneme accuracy.
+        score,
+        verdict,
+        transcript,
+        reference: ref,
+        // Accuracy/fluency aren't measured on the fallback, so we don't claim a
+        // phoneme detail row; the completeness signal is surfaced in the feedback.
+        detail: null,
+        method: "word-match",
+        feedback: openaiSentenceFeedback(verdict, transcript, score, completeness),
+      };
+    }
+    const { verdict, exact, score } = wordMatch(transcript, ref, passScore());
     return {
       provider: "openai",
       // An APPROXIMATE closeness score (edit-distance + phonetic), not phoneme
@@ -122,10 +150,10 @@ export async function assessPronunciation(
       score,
       verdict,
       transcript,
-      reference,
+      reference: ref,
       detail: null,
       method: "word-match",
-      feedback: openaiFeedback(verdict, exact, transcript, reference, score),
+      feedback: openaiFeedback(verdict, exact, transcript, ref, score),
     };
   }
 
@@ -149,6 +177,50 @@ function azureFeedback(
     return `Almost — that came through more like “${transcript.trim()}”. Try “${reference}” once more, a little slower. (${Math.round(score)}/100)`;
   }
   return `Getting there — say “${reference}” again, a little slower and clearer. (${Math.round(score)}/100)`;
+}
+
+function azureSentenceFeedback(
+  verdict: "good" | "needs-work",
+  score: number,
+  detail: { fluency: number; completeness: number } | null,
+): string {
+  const s = Math.round(score);
+  const bits: string[] = [];
+  if (detail) {
+    bits.push(`fluency ${Math.round(detail.fluency)}`);
+    bits.push(`completeness ${Math.round(detail.completeness)}`);
+  }
+  const breakdown = bits.length ? ` (${bits.join(", ")})` : "";
+  if (verdict === "good") {
+    return score >= 90
+      ? `Excellent — that whole sentence sounded natural and clear!${breakdown} (${s}/100)`
+      : `Nice — the sentence came through clearly.${breakdown} (${s}/100)`;
+  }
+  if (detail && detail.completeness < 70) {
+    return `Getting there — try to say the whole sentence, not just part of it, a little slower.${breakdown} (${s}/100)`;
+  }
+  return `Getting there — read the sentence again, a little slower and more evenly.${breakdown} (${s}/100)`;
+}
+
+function openaiSentenceFeedback(
+  verdict: "good" | "needs-work",
+  transcript: string,
+  score: number,
+  completeness: number,
+): string {
+  // `score` is an approximate closeness number (0..100), shown with an "approx."
+  // qualifier — never overclaimed as clinical per-sound accuracy.
+  const approx = `(~${score}/100 approx., ${completeness}% of the words)`;
+  if (verdict === "good") {
+    return `Good — that read through clearly as the sentence. ${approx}`;
+  }
+  if (completeness < 70) {
+    return `I only caught part of it${transcript.trim() ? ` (“${transcript.trim()}”)` : ""} — try reading the whole sentence, a little slower. ${approx}`;
+  }
+  if (transcript.trim()) {
+    return `That came through as “${transcript.trim()}”. Read the sentence again, a little slower. ${approx}`;
+  }
+  return `I couldn't quite catch that — read the sentence again, closer to the mic. ${approx}`;
 }
 
 function openaiFeedback(

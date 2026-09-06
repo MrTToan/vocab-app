@@ -14,6 +14,7 @@ import type {
 import { STAGE_LABEL, STAGE_ORDER, RESULT_VAR, jsonFetch } from "@/lib/ui";
 import { useCollections } from "@/lib/swr";
 import { gradeEnglishWord, matchesMeaning } from "@/lib/grade";
+import { fillCloze } from "@/lib/cloze";
 import PronunciationPractice from "@/components/practice/PronunciationPractice";
 
 interface Payload {
@@ -719,6 +720,11 @@ function Feedback({
         <PronunciationPractice
           word={cur.word.word}
           example={cur.word.example_complex || cur.word.example_simple || undefined}
+          sentence={
+            cur.exerciseType === "cloze" && cur.generated.cloze_sentence && cur.generated.answer
+              ? fillCloze(cur.generated.cloze_sentence, cur.generated.answer) ?? undefined
+              : undefined
+          }
         />
         {cur.word.collocations.length > 0 && (
           <div className="pt-1">

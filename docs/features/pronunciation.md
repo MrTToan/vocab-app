@@ -8,6 +8,11 @@ which already displays the word, its IPA, meaning and an example. Two controls s
 - **🎤 Say it** — records you saying the word and tells you how you did: a 0–100 **score** and a clear
   **Good / Needs work** verdict with one encouraging line. On the OpenAI path the number is an
   **approximate closeness score** (labelled as such), not clinical phoneme accuracy — see below.
+- **🎤 Say sentence** — shown **only in the fill-in-the-blank (cloze) exercise**, in addition to
+  "Say it". It records you reading the **whole completed sentence** (the cloze sentence with the blank
+  filled by the correct answer) and scores the full sentence, not just the word — Azure adds a
+  **fluency + completeness** breakdown that only becomes meaningful across a sentence. See
+  [Say sentence](#say-sentence--scoring-a-whole-sentence-cloze) below.
 
 Both are optional and non-disruptive: they never change the exercise itself, and they hide themselves
 entirely when no speech provider is configured (so a key-less deploy just doesn't show them).
@@ -29,6 +34,32 @@ blends a normalized edit-distance ratio (60%) with a light phonetic-key ratio (4
 below the pass bar. The **verdict is derived from that score** against the pass threshold
 (`passScore()`, default 70), so the number and the Good/Needs-work label always agree. Azure keeps
 returning its real `phoneme` score unchanged when configured.
+
+## Say sentence — scoring a whole sentence (cloze)
+
+The **cloze exercise** ("fill in the blank") is the one place a full, learner-relevant sentence is
+available: the completed sentence is the cloze prompt with the blank filled by the correct answer
+(`fillCloze()` in `lib/cloze.ts`; the fallback, if that can't be built cleanly, is the word's
+`example_complex`/`example_simple`). The practice reveal passes that as the `sentence` prop to
+`PronunciationPractice`, which then also renders **🎤 Say sentence** (only when a provider is available
+**and** a sentence exists). Recording works exactly like "Say it"; the request just carries
+`mode:"sentence"` + `reference:<the sentence>`.
+
+- **Route/orchestrator** are backward compatible. `POST /api/speech/assess` still accepts the old
+  `{ word, audio }` (defaulting to `mode:"word"`); `assessPronunciation(wav, reference, mode)` in
+  `lib/speech/index.ts` takes the mode. Same gating (sign-in + `reserveQuota("pronounce")` + burst
+  throttle) and the same error-sanitisation — no upstream provider body is ever relayed.
+- **Azure (primary):** the full sentence is passed as `ReferenceText` (Azure Pronunciation Assessment
+  handles a sentence natively), and the returned **fluency + completeness** scores — barely meaningful
+  for one word — are surfaced in the feedback and the detail row. Silence/NoMatch is still an honest
+  **"didn't catch that"**, never a fake 0/100.
+- **OpenAI fallback:** a dedicated **sentence** matcher (`sentenceMatch()` in `lib/speech/match.ts`,
+  pure + unit-tested) — NOT the single-word `wordMatch` (which would score 100 as soon as any one word
+  matched). It blends a normalized whole-string similarity (50%) with an order-tolerant **completeness**
+  signal (50%): the fraction of the reference sentence's words actually present, each matched greedily to
+  its closest unused transcript token (so a near-miss form still counts). A faithful read scores high; a
+  garbled or one-word attempt scores low. Labelled the same honest "word-match"/"approx." way, with the
+  completeness percentage in the feedback line.
 
 Azure is chosen **first** to burn its generous **free F0 tier** (≈ 0.5M TTS chars + ~5 audio-hours of
 assessment per month). Lexi falls back to OpenAI **automatically** when Azure is unconfigured, returns
