@@ -4,9 +4,14 @@
  * Two-way pronunciation practice, shown in the practice reveal for the word the
  * learner just studied.
  *
- *   🔊 Hear it  → POST /api/speech/tts, plays the returned audio.
- *   🎤 Say it   → records the mic, encodes a 16 kHz mono WAV, POSTs it to
- *                 /api/speech/assess, and shows a score / verdict + a line.
+ *   🔊 Hear it       → POST /api/speech/tts, plays the returned audio.
+ *   🎤 Say it        → records the mic, encodes a 16 kHz mono WAV, POSTs it to
+ *                      /api/speech/assess (mode "word"), and shows a score /
+ *                      verdict + a line for the single target word.
+ *   🎤 Say sentence  → same recording path, POSTed with mode "sentence" + the
+ *                      completed fill-in-blank `sentence` as the reference, so the
+ *                      learner is scored on reading the WHOLE sentence. Only shown
+ *                      when a `sentence` is provided (the cloze exercise).
  *
  * Both provider calls are server-side (keys never reach the browser). The whole
  * control hides itself when no speech provider is available (config.speech), and
@@ -36,23 +41,31 @@ export interface AssessResult {
 }
 
 type SayState = "idle" | "recording" | "checking";
+/** Which control is (or was) recording — a single mic session at a time. */
+type SayKind = "word" | "sentence";
 
+// A sentence takes longer to read aloud than one word.
 const MAX_RECORD_MS = 5000;
+const MAX_RECORD_SENTENCE_MS = 10000;
 
 export default function PronunciationPractice({
   word,
   example,
+  sentence,
 }: {
   word: string;
   example?: string;
+  sentence?: string;
 }) {
   const { data: config } = useConfig();
   const speech = config?.speech;
 
   const [playing, setPlaying] = useState(false);
   const [sayState, setSayState] = useState<SayState>("idle");
+  const [sayKind, setSayKind] = useState<SayKind>("word"); // which control is active
   const [result, setResult] = useState<AssessResult | null>(null);
   const [note, setNote] = useState<string>(""); // errors / hints
+  const kindRef = useRef<SayKind>("word"); // stable inside the recorder's onstop closure
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const audioUrlRef = useRef<string | null>(null);
@@ -163,9 +176,11 @@ export default function PronunciationPractice({
     }
   }, []);
 
-  const startRecording = useCallback(async () => {
+  const startRecording = useCallback(async (kind: SayKind = "word") => {
     setNote("");
     setResult(null);
+    kindRef.current = kind;
+    setSayKind(kind);
     // getUserMedia only works on a secure origin; inside some in-app browsers the
     // page isn't a secure context and the call rejects with a name that used to
     // be mislabeled "no microphone found". Catch it up front with a truthful line.
@@ -208,10 +223,14 @@ export default function PronunciationPractice({
       try {
         const blob = new Blob(chunks, { type: rec.mimeType || mimeType || "audio/webm" });
         const dataUrl = await blobToWavDataUrl(blob);
+        const body =
+          kindRef.current === "sentence" && sentence
+            ? { word, audio: dataUrl, mode: "sentence" as const, reference: sentence }
+            : { word, audio: dataUrl };
         const res = await fetch("/api/speech/assess", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ word, audio: dataUrl }),
+          body: JSON.stringify(body),
         });
         if (!res.ok) {
           setNote(await errText(res, "Couldn't check that right now."));
@@ -227,8 +246,11 @@ export default function PronunciationPractice({
     };
     rec.start();
     setSayState("recording");
-    stopTimerRef.current = setTimeout(stopRecording, MAX_RECORD_MS);
-  }, [word, stopRecording]);
+    stopTimerRef.current = setTimeout(
+      stopRecording,
+      kind === "sentence" ? MAX_RECORD_SENTENCE_MS : MAX_RECORD_MS,
+    );
+  }, [word, sentence, stopRecording]);
 
   // Nothing usable → render nothing (graceful hide).
   if (!speech || (!speech.tts && !speech.assess)) return null;
@@ -251,20 +273,44 @@ export default function PronunciationPractice({
           <button
             type="button"
             className="btn"
-            onClick={sayState === "recording" ? stopRecording : startRecording}
-            disabled={sayState === "checking"}
+            onClick={
+              sayState === "recording" && sayKind === "word"
+                ? stopRecording
+                : () => startRecording("word")
+            }
+            // Busy on the OTHER control (recording a sentence / checking) → disabled.
+            disabled={sayState === "checking" || (sayState === "recording" && sayKind !== "word")}
             aria-label={`Record yourself saying ${word}`}
           >
-            {sayState === "recording"
+            {sayState === "recording" && sayKind === "word"
               ? "⏹ Stop"
-              : sayState === "checking"
+              : sayState === "checking" && sayKind === "word"
                 ? "⏳ Checking…"
                 : "🎤 Say it"}
           </button>
         )}
+        {speech.assess && canRecord && sentence && (
+          <button
+            type="button"
+            className="btn"
+            onClick={
+              sayState === "recording" && sayKind === "sentence"
+                ? stopRecording
+                : () => startRecording("sentence")
+            }
+            disabled={sayState === "checking" || (sayState === "recording" && sayKind !== "sentence")}
+            aria-label="Record yourself saying the whole sentence"
+          >
+            {sayState === "recording" && sayKind === "sentence"
+              ? "⏹ Stop"
+              : sayState === "checking" && sayKind === "sentence"
+                ? "⏳ Checking…"
+                : "🎤 Say sentence"}
+          </button>
+        )}
         {sayState === "recording" && (
           <span className="muted text-xs" style={{ color: "var(--warn)" }}>
-            ● Recording — say “{word}”
+            {sayKind === "sentence" ? "● Recording — read the sentence" : `● Recording — say “${word}”`}
           </span>
         )}
       </div>

@@ -1,5 +1,14 @@
 import { describe, it, expect } from "vitest";
-import { normalize, editDistance, wordMatch, similarityScore, phoneticKey } from "@/lib/speech/match";
+import {
+  normalize,
+  editDistance,
+  wordMatch,
+  similarityScore,
+  phoneticKey,
+  sentenceCompleteness,
+  sentenceSimilarity,
+  sentenceMatch,
+} from "@/lib/speech/match";
 
 /*
  * The OpenAI-fallback "say it" verdict is a WORD-MATCH check on the Whisper
@@ -85,5 +94,70 @@ describe("wordMatch", () => {
     expect(lenient.verdict).toBe("good");
     expect(strict.verdict).toBe("needs-work");
     expect(lenient.score).toBe(strict.score); // score is threshold-independent
+  });
+});
+
+/*
+ * The "say sentence" fallback matcher (OpenAI path). Unlike wordMatch, one
+ * matching token must NOT score the whole sentence 100 — a sentence blends overall
+ * closeness with how many of its words were actually said (completeness).
+ */
+const REF = "She was reluctant to leave the party early.";
+
+describe("sentenceCompleteness", () => {
+  it("is 1 when every reference word is present", () => {
+    expect(sentenceCompleteness(REF, REF)).toBe(1);
+  });
+  it("counts near-miss word forms as covered (order-tolerant)", () => {
+    // Word order shuffled + a plural inflection; all words still accounted for.
+    expect(sentenceCompleteness("reluctant she was to leave the parties early", REF)).toBeGreaterThanOrEqual(0.85);
+  });
+  it("drops when most of the sentence is missing", () => {
+    expect(sentenceCompleteness("reluctant", REF)).toBeLessThan(0.3);
+  });
+  it("is 0 for an unrelated sentence", () => {
+    expect(sentenceCompleteness("the dog ran across the road", REF)).toBeLessThan(0.3);
+  });
+});
+
+describe("sentenceSimilarity", () => {
+  it("an exact read scores 100 with full completeness", () => {
+    expect(sentenceSimilarity(REF, REF)).toEqual({ score: 100, completeness: 100 });
+  });
+  it("a full sentence with the target words present scores high", () => {
+    const { score } = sentenceSimilarity("She was reluctant to leave the party early", REF);
+    expect(score).toBeGreaterThanOrEqual(90);
+  });
+  it("saying only ONE matching word does NOT score the sentence high", () => {
+    // Word-level, that one word IS the whole target → 100; but as a SENTENCE read,
+    // saying a single word out of nine is nowhere near complete.
+    expect(similarityScore("reluctant", "reluctant")).toBe(100); // (word-level: full marks…)
+    expect(sentenceSimilarity("reluctant", REF).score).toBeLessThan(60); // …but the sentence isn't.
+  });
+  it("a wrong/garbled sentence scores low", () => {
+    expect(sentenceSimilarity("the dog ran across the road", REF).score).toBeLessThan(45);
+  });
+  it("an empty transcript scores 0", () => {
+    expect(sentenceSimilarity("", REF)).toEqual({ score: 0, completeness: 0 });
+  });
+});
+
+describe("sentenceMatch", () => {
+  it("a faithful read is good", () => {
+    const m = sentenceMatch("She was reluctant to leave the party early", REF);
+    expect(m.verdict).toBe("good");
+    expect(m.score).toBeGreaterThanOrEqual(80);
+    expect(m.completeness).toBeGreaterThanOrEqual(90);
+  });
+  it("a garbled sentence is needs-work with a low score", () => {
+    const m = sentenceMatch("the dog ran across the road", REF);
+    expect(m.verdict).toBe("needs-work");
+    expect(m.score).toBeLessThan(70);
+  });
+  it("verdict tracks the supplied threshold", () => {
+    const heard = "she was reluctant to leave";
+    expect(sentenceMatch(heard, REF, 40).verdict).toBe("good");
+    expect(sentenceMatch(heard, REF, 99).verdict).toBe("needs-work");
+    expect(sentenceMatch(heard, REF, 40).score).toBe(sentenceMatch(heard, REF, 99).score);
   });
 });
