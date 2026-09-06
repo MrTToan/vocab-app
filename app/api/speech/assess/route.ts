@@ -32,11 +32,13 @@ export function decodeAudio(audio: unknown): { bytes: Uint8Array } | { error: st
 }
 
 /**
- * POST { word, audio } -> a pronunciation result ("say it").
+ * POST { word, audio, mode?, reference? } -> a pronunciation result.
  *
- * Azure Pronunciation Assessment (real phoneme scoring) when configured/in-
- * budget, else OpenAI Whisper transcription → word-match verdict (see
- * lib/speech). Signed-in + metered (QUOTA_PRONOUNCE); the audio is decoded and
+ * `mode:"word"` (default) scores the single target `word` ("say it");
+ * `mode:"sentence"` scores the whole `reference` sentence ("say sentence"). Azure
+ * Pronunciation Assessment (real phoneme scoring) when configured/in-budget, else
+ * OpenAI Whisper transcription → an approximate matcher (word- or sentence-level;
+ * see lib/speech). Signed-in + metered (QUOTA_PRONOUNCE); the audio is decoded and
  * WAV-validated before any provider call, and keys never leave the server. When
  * no provider is usable it returns 503 so the UI hides the control.
  */
@@ -50,9 +52,15 @@ export const POST = withUser(
     if ("error" in decoded) {
       return NextResponse.json({ error: decoded.error }, { status: 400 });
     }
+    // "sentence" mode scores the whole completed sentence (`reference`), falling
+    // back to the target word if a caller sends the mode without a sentence.
+    // Default "word" keeps existing `{ word, audio }` callers unchanged.
+    const mode = input.mode ?? "word";
+    const reference =
+      mode === "sentence" ? (input.reference?.trim() || input.word) : input.word;
     try {
       await reserveQuota(userId, "pronounce");
-      const result = await assessPronunciation(decoded.bytes, input.word);
+      const result = await assessPronunciation(decoded.bytes, reference, mode);
       return NextResponse.json(result);
     } catch (err: unknown) {
       if (isRateLimitError(err)) {

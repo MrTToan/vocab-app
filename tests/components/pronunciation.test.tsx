@@ -79,6 +79,92 @@ describe("PronunciationPractice", () => {
   });
 });
 
+/*
+ * "Say sentence" (the cloze exercise). jsdom lacks MediaRecorder/getUserMedia and
+ * the WebAudio WAV encoder, so we install minimal stubs to drive the record→stop→
+ * POST flow and assert the request carries mode:"sentence" + the completed sentence
+ * as the reference. The single-word "Say it" path stays untouched.
+ */
+vi.mock("@/lib/speech/client", async (importOriginal) => {
+  const real = await importOriginal<typeof import("@/lib/speech/client")>();
+  return { ...real, blobToWavDataUrl: async () => "data:audio/wav;base64,AAAA" };
+});
+
+function installMicStubs() {
+  const track = { stop: vi.fn() };
+  vi.stubGlobal("navigator", {
+    ...navigator,
+    mediaDevices: { getUserMedia: vi.fn(async () => ({ getTracks: () => [track] })) },
+  });
+  class FakeMediaRecorder {
+    static isTypeSupported = () => true;
+    ondataavailable: ((e: { data: Blob }) => void) | null = null;
+    onstop: (() => void) | null = null;
+    mimeType = "audio/webm";
+    stream = { getTracks: () => [track] };
+    start() {}
+    stop() {
+      this.ondataavailable?.({ data: new Blob(["x"], { type: "audio/webm" }) });
+      this.onstop?.();
+    }
+  }
+  vi.stubGlobal("MediaRecorder", FakeMediaRecorder as unknown as typeof MediaRecorder);
+}
+
+describe("PronunciationPractice — Say sentence (cloze)", () => {
+  it("does not show Say sentence when no sentence is provided", async () => {
+    installMicStubs();
+    mockFetch({ "GET /api/config": { hasLLM: true, owner: false, speech: { tts: true, assess: true } } });
+    renderWithSWR(<PronunciationPractice word="reluctant" />);
+    await screen.findByRole("button", { name: /record yourself saying reluctant/i });
+    expect(screen.queryByRole("button", { name: /whole sentence/i })).toBeNull();
+  });
+
+  it("shows Say sentence when a sentence is provided", async () => {
+    installMicStubs();
+    mockFetch({ "GET /api/config": { hasLLM: true, owner: false, speech: { tts: true, assess: true } } });
+    renderWithSWR(
+      <PronunciationPractice word="reluctant" sentence="She was reluctant to leave." />,
+    );
+    expect(await screen.findByRole("button", { name: /whole sentence/i })).toBeTruthy();
+  });
+
+  it("Say sentence POSTs mode:sentence with the completed sentence as reference", async () => {
+    installMicStubs();
+    const sentence = "She was reluctant to leave.";
+    const fetchMock = mockFetch({
+      "GET /api/config": { hasLLM: true, owner: false, speech: { tts: true, assess: true } },
+      "POST /api/speech/assess": {
+        provider: "azure",
+        score: 88,
+        verdict: "good",
+        transcript: sentence,
+        reference: sentence,
+        feedback: "Nice.",
+        method: "phoneme",
+        detail: { accuracy: 88, fluency: 90, completeness: 100 },
+      },
+    });
+    renderWithSWR(<PronunciationPractice word="reluctant" sentence={sentence} />);
+    const btn = await screen.findByRole("button", { name: /whole sentence/i });
+    fireEvent.click(btn); // start → our fake recorder is live
+    // The button flips to Stop; clicking it stops → fires onstop → POST.
+    const stop = await screen.findByRole("button", { name: /whole sentence/i });
+    fireEvent.click(stop);
+
+    await waitFor(() => {
+      const call = fetchMock.mock.calls.find(
+        (c) => String(c[0]).includes("/api/speech/assess"),
+      );
+      expect(call).toBeTruthy();
+      const body = JSON.parse((call![1] as RequestInit).body as string);
+      expect(body.mode).toBe("sentence");
+      expect(body.reference).toBe(sentence);
+      expect(body.word).toBe("reluctant");
+    });
+  });
+});
+
 describe("PronunciationPractice — ResultCard verdict rendering", () => {
   const base: AssessResult = {
     provider: "azure",

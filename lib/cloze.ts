@@ -21,3 +21,17 @@ export function toCloze(
   const payload = s.replace(new RegExp(pattern, "gi"), "____");
   return { payload, answer: w };
 }
+
+/**
+ * Fill a cloze sentence's blank(s) back in with `answer`, reconstructing the
+ * completed fill-in-blank sentence the learner just worked on — the natural thing
+ * to read aloud for "say sentence" scoring. Returns null when there's nothing
+ * clean to build (no sentence, no answer, or no blank present), so callers can
+ * skip offering the control rather than score a broken reference.
+ */
+export function fillCloze(clozeSentence: string, answer: string): string | null {
+  const s = (clozeSentence ?? "").trim();
+  const a = (answer ?? "").trim();
+  if (!s || !a || !/_{2,}/.test(s)) return null;
+  return s.replace(/_{2,}/g, a);
+}

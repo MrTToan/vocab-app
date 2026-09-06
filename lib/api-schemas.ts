@@ -306,11 +306,16 @@ export const speakSchema = z.strictObject({
   example: z.string().max(400).optional(),
 });
 
-/** POST /api/speech/assess — "say it". `audio` is a base64 data URL of a WAV
- *  clip (16 kHz mono PCM); the route decodes + re-validates the header/size. */
+/** POST /api/speech/assess — "say it"/"say sentence". `audio` is a base64 data
+ *  URL of a WAV clip (16 kHz mono PCM); the route decodes + re-validates the
+ *  header/size. `mode` defaults to the single-word check (backward compatible with
+ *  `{ word, audio }` callers); `mode:"sentence"` scores the whole `reference`
+ *  sentence (the completed fill-in-blank sentence) instead. */
 export const assessSchema = z.strictObject({
   word: wordName,
   audio: z.string().max(8_000_000),
+  mode: z.enum(["word", "sentence"]).optional(),
+  reference: z.string().max(400).optional(),
 });
 
 export const writingSubmitSchema = z.strictObject({

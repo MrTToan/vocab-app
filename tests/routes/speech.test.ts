@@ -280,6 +280,81 @@ describe("Azure primary + automatic fallback", () => {
   });
 });
 
+describe("say sentence (mode: sentence)", () => {
+  const SENTENCE = "She was reluctant to leave the party early.";
+
+  it("Azure scores the whole sentence and surfaces the fluency/completeness detail", async () => {
+    enableAzure();
+    const res = await assess.POST(
+      post("http://t/api/speech/assess", {
+        word: "reluctant",
+        mode: "sentence",
+        reference: SENTENCE,
+        audio: wavDataUrl(),
+      }),
+    );
+    expect(res.status).toBe(200);
+    const body = (await res.json()) as {
+      provider: string;
+      method: string;
+      score: number;
+      verdict: string;
+      reference: string;
+      detail: { fluency: number; completeness: number } | null;
+    };
+    expect(body.provider).toBe("azure");
+    expect(body.method).toBe("phoneme");
+    expect(body.reference).toBe(SENTENCE); // scored against the FULL sentence
+    expect(body.score).toBe(90);
+    expect(body.verdict).toBe("good");
+    expect(body.detail?.completeness).toBe(100);
+    expect(knobs.calls.azureAssess).toBe(1);
+  });
+
+  it("OpenAI fallback uses the sentence matcher (high for a faithful read)", async () => {
+    knobs.openaiHeard = "She was reluctant to leave the party early";
+    const res = await assess.POST(
+      post("http://t/api/speech/assess", {
+        word: "reluctant",
+        mode: "sentence",
+        reference: SENTENCE,
+        audio: wavDataUrl(),
+      }),
+    );
+    expect(res.status).toBe(200);
+    const body = (await res.json()) as { provider: string; method: string; verdict: string; score: number };
+    expect(body.provider).toBe("openai");
+    expect(body.method).toBe("word-match");
+    expect(body.verdict).toBe("good");
+    expect(body.score).toBeGreaterThanOrEqual(80);
+    expect(knobs.calls.openaiStt).toBe(1);
+  });
+
+  it("OpenAI fallback scores a garbled sentence low (needs-work)", async () => {
+    knobs.openaiHeard = "the dog ran across the road";
+    const res = await assess.POST(
+      post("http://t/api/speech/assess", {
+        word: "reluctant",
+        mode: "sentence",
+        reference: SENTENCE,
+        audio: wavDataUrl(),
+      }),
+    );
+    const body = (await res.json()) as { verdict: string; score: number };
+    expect(body.verdict).toBe("needs-work");
+    expect(body.score).toBeLessThan(70);
+  });
+
+  it("falls back to the target word when mode:sentence arrives without a reference", async () => {
+    const res = await assess.POST(
+      post("http://t/api/speech/assess", { word: "reluctant", mode: "sentence", audio: wavDataUrl() }),
+    );
+    expect(res.status).toBe(200);
+    const body = (await res.json()) as { reference: string };
+    expect(body.reference).toBe("reluctant");
+  });
+});
+
 describe("input validation & metering", () => {
   it("rejects a non-WAV audio MIME → 400", async () => {
     const res = await assess.POST(
