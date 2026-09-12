@@ -1,0 +1,2791 @@
+{
+  "collection": {
+    "name": "IELTS Vocabulary by Band",
+    "emoji": "🎯",
+    "description": "Advanced IELTS vocabulary grouped by target band score (4.0–8.0+). POS + IPA + Vietnamese meaning."
+  },
+  "meta": {
+    "note": "Claude-authored enrichment (no external LLM). difficulty derived from the curated set's own CEFR/IELTS bands. Vietnamese meanings verified/corrected on enriched rows.",
+    "generated_at": 1789186625771,
+    "total": 104,
+    "enriched": 104,
+    "vi_corrections": 1
+  },
+  "words": [
+    {
+      "word": "explicate",
+      "part_of_speech": "verb",
+      "ipa": "ˈeksplɪkeɪt",
+      "vi_meaning": "giải thích chi tiết, làm rõ",
+      "definition_en": "to explain an idea or text in careful, detailed terms",
+      "synonyms": [
+        "clarify",
+        "elucidate",
+        "expound",
+        "interpret"
+      ],
+      "collocations": [
+        "explicate a theory",
+        "explicate the meaning",
+        "carefully explicate"
+      ],
+      "example_simple": "The teacher took time to explicate the difficult poem for us.",
+      "example_complex": "In her lecture, the professor sought to explicate the subtle contradictions embedded within the philosopher's central argument.",
+      "difficulty": "8.0",
+      "band": "8.0",
+      "tags": [
+        "band-8.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "culminate in",
+      "part_of_speech": "verb",
+      "ipa": "ˈkʌlmɪneɪt ɪn",
+      "vi_meaning": "lên đến đỉnh điểm",
+      "definition_en": "to reach a final, climactic point or result after a process",
+      "synonyms": [
+        "end in",
+        "result in",
+        "climax in",
+        "peak in"
+      ],
+      "collocations": [
+        "culminate in success",
+        "culminate in a crisis",
+        "eventually culminate in"
+      ],
+      "example_simple": "Months of hard work culminated in a wonderful graduation ceremony.",
+      "example_complex": "Decades of unchecked emissions may culminate in irreversible ecological consequences that future generations will struggle to reverse.",
+      "difficulty": "8.0",
+      "band": "8.0",
+      "tags": [
+        "band-8.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "metamorphose",
+      "part_of_speech": "verb",
+      "ipa": "ˌmetəˈmɔːrfəʊz",
+      "vi_meaning": "biến đổi",
+      "definition_en": "to change completely into a different form or nature",
+      "synonyms": [
+        "transform",
+        "transmute",
+        "convert",
+        "change"
+      ],
+      "collocations": [
+        "metamorphose into",
+        "gradually metamorphose",
+        "metamorphose over time"
+      ],
+      "example_simple": "The caterpillar will slowly metamorphose into a beautiful butterfly.",
+      "example_complex": "Under sustained economic pressure, the quiet fishing village metamorphosed into a bustling industrial hub within a single generation.",
+      "difficulty": "8.0",
+      "band": "8.0",
+      "tags": [
+        "band-8.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "unequivocally",
+      "part_of_speech": "adverb",
+      "ipa": "ˌʌnɪˈkwɪvəkəli",
+      "vi_meaning": "không mập mờ, rõ ràng",
+      "definition_en": "in a way that leaves no doubt; clearly and absolutely",
+      "synonyms": [
+        "clearly",
+        "definitely",
+        "categorically",
+        "unambiguously"
+      ],
+      "collocations": [
+        "unequivocally state",
+        "unequivocally reject",
+        "unequivocally support"
+      ],
+      "example_simple": "She unequivocally told us that she would not change her mind.",
+      "example_complex": "The committee unequivocally condemned the policy, stressing that no exceptions could justify such a breach of ethics.",
+      "difficulty": "8.0",
+      "band": "8.0",
+      "tags": [
+        "band-8.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "ideology",
+      "part_of_speech": "noun",
+      "ipa": "ˌaɪdiˈɒlədʒi",
+      "vi_meaning": "hệ tư tưởng",
+      "definition_en": "a system of ideas and beliefs guiding a group or movement",
+      "synonyms": [
+        "belief system",
+        "doctrine",
+        "philosophy",
+        "creed"
+      ],
+      "collocations": [
+        "political ideology",
+        "dominant ideology",
+        "share an ideology"
+      ],
+      "example_simple": "Their political ideology shaped how they voted in the election.",
+      "example_complex": "The revolution was driven less by material hardship than by an ideology promising radical social equality.",
+      "difficulty": "8.0",
+      "band": "8.0",
+      "tags": [
+        "band-8.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "ecological balance",
+      "part_of_speech": "noun",
+      "ipa": "ˌiːkəˈlɒdʒɪkl ˈbæləns",
+      "vi_meaning": "cân bằng sinh thái",
+      "definition_en": "a stable equilibrium among species and their natural environment",
+      "synonyms": [
+        "ecosystem stability",
+        "environmental equilibrium",
+        "natural balance"
+      ],
+      "collocations": [
+        "maintain ecological balance",
+        "disrupt ecological balance",
+        "restore ecological balance"
+      ],
+      "example_simple": "Cutting down too many trees can upset the ecological balance of the forest.",
+      "example_complex": "Introducing a non-native predator often shatters the ecological balance that has evolved over millennia.",
+      "difficulty": "8.0",
+      "band": "8.0",
+      "tags": [
+        "band-8.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "environmental degradation",
+      "part_of_speech": "noun",
+      "ipa": "ɪnˌvaɪrənˈmentl ˌdeɡrəˈdeɪʃn",
+      "vi_meaning": "sự suy thoái môi trường",
+      "definition_en": "the deterioration of the natural environment through pollution or overuse",
+      "synonyms": [
+        "environmental decline",
+        "ecological damage",
+        "environmental deterioration"
+      ],
+      "collocations": [
+        "cause environmental degradation",
+        "combat environmental degradation",
+        "severe environmental degradation"
+      ],
+      "example_simple": "Factories that dump waste into rivers add to environmental degradation.",
+      "example_complex": "Rampant deforestation and industrial runoff have accelerated environmental degradation across the once-fertile delta.",
+      "difficulty": "8.0",
+      "band": "8.0",
+      "tags": [
+        "band-8.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "pristine",
+      "part_of_speech": "adjective",
+      "ipa": "ˈprɪstiːn",
+      "vi_meaning": "nguyên sơ, tinh khiết",
+      "definition_en": "in an original, unspoiled, and perfectly clean condition",
+      "synonyms": [
+        "unspoiled",
+        "immaculate",
+        "untouched",
+        "spotless"
+      ],
+      "collocations": [
+        "pristine condition",
+        "pristine wilderness",
+        "pristine beaches"
+      ],
+      "example_simple": "The mountain lake was so pristine that we could see the bottom.",
+      "example_complex": "Conservationists fought to keep the arctic tundra pristine, wary of the damage even minimal tourism might inflict.",
+      "difficulty": "8.0",
+      "band": "8.0",
+      "tags": [
+        "band-8.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "holistic education",
+      "part_of_speech": "noun",
+      "ipa": "həʊˈlɪstɪk ˌedʒuˈkeɪʃn",
+      "vi_meaning": "giáo dục toàn diện",
+      "definition_en": "teaching that develops the whole person, not just academic ability",
+      "synonyms": [
+        "whole-child education",
+        "integrated education",
+        "well-rounded schooling"
+      ],
+      "collocations": [
+        "promote holistic education",
+        "holistic education approach",
+        "embrace holistic education"
+      ],
+      "example_simple": "The school offers holistic education, focusing on both grades and emotional growth.",
+      "example_complex": "Advocates of holistic education argue that nurturing creativity and empathy is as vital as cultivating measurable academic outcomes.",
+      "difficulty": "8.0",
+      "band": "8.0",
+      "tags": [
+        "band-8.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "pedagogical methods",
+      "part_of_speech": "noun",
+      "ipa": "ˌpedəˈɡɒdʒɪkl ˈmeθədz",
+      "vi_meaning": "phương pháp sư phạm",
+      "definition_en": "the approaches and techniques used for teaching and instruction",
+      "synonyms": [
+        "teaching methods",
+        "instructional approaches",
+        "teaching techniques"
+      ],
+      "collocations": [
+        "innovative pedagogical methods",
+        "adopt pedagogical methods",
+        "traditional pedagogical methods"
+      ],
+      "example_simple": "New pedagogical methods make lessons more interactive for young students.",
+      "example_complex": "Researchers evaluated whether learner-centred pedagogical methods yield deeper comprehension than conventional lecturing.",
+      "difficulty": "8.0",
+      "band": "8.0",
+      "tags": [
+        "band-8.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "cultivate intellectual curiosity",
+      "part_of_speech": "verb",
+      "ipa": "ˈkʌltɪveɪt ˌɪntəˈlektʃuəl ˌkjʊəriˈɒsəti",
+      "vi_meaning": "nuôi dưỡng sự tò mò trí tuệ",
+      "definition_en": "to nurture and encourage a genuine desire to learn and question",
+      "synonyms": [
+        "foster inquisitiveness",
+        "nurture curiosity",
+        "encourage a love of learning"
+      ],
+      "collocations": [
+        "cultivate intellectual curiosity in students",
+        "actively cultivate intellectual curiosity",
+        "help cultivate intellectual curiosity"
+      ],
+      "example_simple": "Good teachers cultivate intellectual curiosity by asking open-ended questions.",
+      "example_complex": "Universities should cultivate intellectual curiosity rather than merely rewarding students for memorising prescribed answers.",
+      "difficulty": "8.0",
+      "band": "8.0",
+      "tags": [
+        "band-8.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "demographic shifts",
+      "part_of_speech": "noun",
+      "ipa": "ˌdeməˈɡræfɪk ʃɪfts",
+      "vi_meaning": "sự thay đổi nhân khẩu học",
+      "definition_en": "changes in the composition or distribution of a population",
+      "synonyms": [
+        "population changes",
+        "demographic transitions",
+        "population trends"
+      ],
+      "collocations": [
+        "major demographic shifts",
+        "respond to demographic shifts",
+        "demographic shifts occur"
+      ],
+      "example_simple": "Demographic shifts mean many towns now have far more elderly residents.",
+      "example_complex": "Policymakers must anticipate demographic shifts, as an ageing workforce places mounting strain on pension systems.",
+      "difficulty": "8.0",
+      "band": "8.0",
+      "tags": [
+        "band-8.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "collective identity",
+      "part_of_speech": "noun",
+      "ipa": "kəˈlektɪv aɪˈdentəti",
+      "vi_meaning": "bản sắc tập thể",
+      "definition_en": "a shared sense of belonging and self-definition within a group",
+      "synonyms": [
+        "group identity",
+        "shared identity",
+        "communal identity"
+      ],
+      "collocations": [
+        "strong collective identity",
+        "forge a collective identity",
+        "sense of collective identity"
+      ],
+      "example_simple": "Cheering for the same team gave the fans a strong collective identity.",
+      "example_complex": "Migration and globalisation can erode a nation's collective identity while simultaneously forging new, hybrid allegiances.",
+      "difficulty": "8.0",
+      "band": "8.0",
+      "tags": [
+        "band-8.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "assimilation",
+      "part_of_speech": "noun",
+      "ipa": "əˌsɪmɪˈleɪʃn",
+      "vi_meaning": "sự đồng hóa",
+      "definition_en": "the process of absorbing individuals or ideas into a dominant group",
+      "synonyms": [
+        "integration",
+        "absorption",
+        "incorporation",
+        "acculturation"
+      ],
+      "collocations": [
+        "cultural assimilation",
+        "forced assimilation",
+        "assimilation into society"
+      ],
+      "example_simple": "Learning the local language helped their assimilation into the new country.",
+      "example_complex": "Debates over immigration frequently pit assimilation against the preservation of distinct cultural traditions.",
+      "difficulty": "8.0",
+      "band": "8.0",
+      "tags": [
+        "band-8.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "nutritional deficiencies",
+      "part_of_speech": "noun",
+      "ipa": "njuːˈtrɪʃənl dɪˈfɪʃənsiz",
+      "vi_meaning": "sự thiếu hụt dinh dưỡng",
+      "definition_en": "shortages of essential nutrients needed for good health",
+      "synonyms": [
+        "nutrient shortages",
+        "dietary deficiencies",
+        "malnutrition"
+      ],
+      "collocations": [
+        "suffer from nutritional deficiencies",
+        "address nutritional deficiencies",
+        "chronic nutritional deficiencies"
+      ],
+      "example_simple": "A diet lacking fruit can lead to nutritional deficiencies like low vitamin C.",
+      "example_complex": "Persistent nutritional deficiencies in early childhood can impair cognitive development well into adulthood.",
+      "difficulty": "8.0",
+      "band": "8.0",
+      "tags": [
+        "band-8.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "alleviate symptoms",
+      "part_of_speech": "verb",
+      "ipa": "əˈliːvieɪt ˈsɪmptəmz",
+      "vi_meaning": "làm giảm các triệu chứng",
+      "definition_en": "to make the signs of an illness less severe or painful",
+      "synonyms": [
+        "relieve symptoms",
+        "ease symptoms",
+        "reduce symptoms",
+        "soothe symptoms"
+      ],
+      "collocations": [
+        "help alleviate symptoms",
+        "alleviate symptoms of anxiety",
+        "medication to alleviate symptoms"
+      ],
+      "example_simple": "Drinking warm tea can alleviate symptoms of a sore throat.",
+      "example_complex": "While the drug does not cure the condition, it markedly alleviates symptoms and improves patients' quality of life.",
+      "difficulty": "8.0",
+      "band": "8.0",
+      "tags": [
+        "band-8.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "monetary policy",
+      "part_of_speech": "noun",
+      "ipa": "ˈmʌnɪtri ˈpɒləsi",
+      "vi_meaning": "chính sách tiền tệ",
+      "definition_en": "a central bank's control of money supply and interest rates",
+      "synonyms": [
+        "central bank policy",
+        "interest-rate policy",
+        "financial policy"
+      ],
+      "collocations": [
+        "tight monetary policy",
+        "loosen monetary policy",
+        "monetary policy decisions"
+      ],
+      "example_simple": "The bank changed its monetary policy to keep prices from rising too fast.",
+      "example_complex": "By tightening monetary policy, the central bank hoped to curb inflation without triggering a sharp rise in unemployment.",
+      "difficulty": "8.0",
+      "band": "8.0",
+      "tags": [
+        "band-8.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "market saturation",
+      "part_of_speech": "noun",
+      "ipa": "ˈmɑːrkɪt ˌsætʃəˈreɪʃn",
+      "vi_meaning": "sự bão hòa thị trường",
+      "definition_en": "the point where a product's demand is fully met, limiting sales growth",
+      "synonyms": [
+        "oversupply",
+        "market glut",
+        "demand ceiling"
+      ],
+      "collocations": [
+        "reach market saturation",
+        "avoid market saturation",
+        "signs of market saturation"
+      ],
+      "example_simple": "With everyone owning a smartphone, the market saturation slowed new sales.",
+      "example_complex": "Facing market saturation at home, the corporation pivoted aggressively toward emerging economies to sustain revenue growth.",
+      "difficulty": "8.0",
+      "band": "8.0",
+      "tags": [
+        "band-8.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "economic recession",
+      "part_of_speech": "noun",
+      "ipa": "ˌiːkəˈnɒmɪk rɪˈseʃn",
+      "vi_meaning": "suy thoái kinh tế",
+      "definition_en": "a period of significant decline in economic activity and output",
+      "synonyms": [
+        "economic downturn",
+        "slump",
+        "depression",
+        "contraction"
+      ],
+      "collocations": [
+        "deep economic recession",
+        "trigger an economic recession",
+        "recover from economic recession"
+      ],
+      "example_simple": "Many people lost their jobs during the economic recession.",
+      "example_complex": "The prolonged economic recession forced governments to adopt unprecedented stimulus measures to stabilise faltering markets.",
+      "difficulty": "8.0",
+      "band": "8.0",
+      "tags": [
+        "band-8.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "censorship",
+      "part_of_speech": "noun",
+      "ipa": "ˈsensərʃɪp",
+      "vi_meaning": "sự kiểm duyệt",
+      "definition_en": "the suppression of speech, media, or information deemed objectionable",
+      "synonyms": [
+        "suppression",
+        "restriction",
+        "control",
+        "gag"
+      ],
+      "collocations": [
+        "strict censorship",
+        "impose censorship",
+        "government censorship"
+      ],
+      "example_simple": "Because of censorship, some films were never shown in that country.",
+      "example_complex": "State censorship of the press undermines democratic accountability by shielding those in power from public scrutiny.",
+      "difficulty": "8.0",
+      "band": "8.0",
+      "tags": [
+        "band-8.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "significant",
+      "part_of_speech": "adjective",
+      "ipa": "sɪɡˈnɪfɪkənt",
+      "vi_meaning": "quan trọng, đáng kể",
+      "definition_en": "large or important enough to have a noticeable effect",
+      "synonyms": [
+        "considerable",
+        "substantial",
+        "notable",
+        "important"
+      ],
+      "collocations": [
+        "significant impact",
+        "significant increase",
+        "statistically significant"
+      ],
+      "example_simple": "There was a significant rise in the number of visitors this year.",
+      "example_complex": "The study revealed a significant correlation between sleep deprivation and diminished academic performance.",
+      "difficulty": "7.0",
+      "band": "7.0",
+      "tags": [
+        "band-7.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "challenge",
+      "part_of_speech": "noun",
+      "ipa": "ˈtʃælɪndʒ",
+      "vi_meaning": "thách thức",
+      "definition_en": "a demanding task or situation that tests one's abilities",
+      "synonyms": [
+        "difficulty",
+        "obstacle",
+        "hurdle",
+        "test"
+      ],
+      "collocations": [
+        "face a challenge",
+        "major challenge",
+        "overcome a challenge"
+      ],
+      "example_simple": "Learning a new language was a real challenge for him at first.",
+      "example_complex": "Climate change poses perhaps the most formidable challenge humanity has ever confronted collectively.",
+      "difficulty": "7.0",
+      "band": "7.0",
+      "tags": [
+        "band-7.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "fossil fuels",
+      "part_of_speech": "noun",
+      "ipa": "ˈfɒsl fjuːəlz",
+      "vi_meaning": "nhiên liệu hóa thạch",
+      "definition_en": "natural fuels such as coal, oil, and gas formed from ancient organisms",
+      "synonyms": [
+        "hydrocarbons",
+        "non-renewable fuels",
+        "carbon fuels"
+      ],
+      "collocations": [
+        "burn fossil fuels",
+        "dependence on fossil fuels",
+        "reduce fossil fuels"
+      ],
+      "example_simple": "Cars that burn fossil fuels release gases into the air.",
+      "example_complex": "Weaning industrialised economies off fossil fuels remains essential if global warming is to be kept within safe limits.",
+      "difficulty": "7.0",
+      "band": "7.0",
+      "tags": [
+        "band-7.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "biodiversity",
+      "part_of_speech": "noun",
+      "ipa": "ˌbaɪəʊdaɪˈvɜːrsəti",
+      "vi_meaning": "sự đa dạng sinh học",
+      "definition_en": "the variety of living species within a particular habitat or ecosystem",
+      "synonyms": [
+        "biological diversity",
+        "species variety",
+        "ecological diversity"
+      ],
+      "collocations": [
+        "protect biodiversity",
+        "loss of biodiversity",
+        "rich biodiversity"
+      ],
+      "example_simple": "Rainforests have amazing biodiversity, with thousands of plants and animals.",
+      "example_complex": "The wetland's remarkable biodiversity makes its conservation a priority for scientists studying ecosystem resilience.",
+      "difficulty": "7.0",
+      "band": "7.0",
+      "tags": [
+        "band-7.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "sustainable development",
+      "part_of_speech": "noun",
+      "ipa": "səˈsteɪnəbl dɪˈveləpmənt",
+      "vi_meaning": "phát triển bền vững",
+      "definition_en": "growth that meets present needs without harming future generations",
+      "synonyms": [
+        "sustainable growth",
+        "responsible development",
+        "green development"
+      ],
+      "collocations": [
+        "promote sustainable development",
+        "sustainable development goals",
+        "achieve sustainable development"
+      ],
+      "example_simple": "Sustainable development means using resources carefully so they last.",
+      "example_complex": "Balancing economic expansion with environmental stewardship lies at the heart of any genuine sustainable development strategy.",
+      "difficulty": "7.0",
+      "band": "7.0",
+      "tags": [
+        "band-7.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "vocational training",
+      "part_of_speech": "noun",
+      "ipa": "vəʊˈkeɪʃənl ˈtreɪnɪŋ",
+      "vi_meaning": "đào tạo nghề",
+      "definition_en": "instruction that teaches practical skills for a specific trade or job",
+      "synonyms": [
+        "job training",
+        "trade training",
+        "skills training",
+        "occupational training"
+      ],
+      "collocations": [
+        "provide vocational training",
+        "vocational training programme",
+        "undergo vocational training"
+      ],
+      "example_simple": "He chose vocational training to become an electrician instead of university.",
+      "example_complex": "Expanding vocational training could ease youth unemployment by aligning workers' skills with the demands of local industry.",
+      "difficulty": "7.0",
+      "band": "7.0",
+      "tags": [
+        "band-7.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "numeracy",
+      "part_of_speech": "noun",
+      "ipa": "ˈnjuːmərəsi",
+      "vi_meaning": "khả năng tính toán",
+      "definition_en": "the ability to understand and work confidently with numbers",
+      "synonyms": [
+        "arithmetic skill",
+        "mathematical ability",
+        "number sense"
+      ],
+      "collocations": [
+        "basic numeracy",
+        "improve numeracy",
+        "literacy and numeracy"
+      ],
+      "example_simple": "Good numeracy helps you manage money and check your change.",
+      "example_complex": "Low levels of adult numeracy can limit employment prospects and hinder informed financial decision-making.",
+      "difficulty": "7.0",
+      "band": "7.0",
+      "tags": [
+        "band-7.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "artificial intelligence",
+      "part_of_speech": "noun",
+      "ipa": "ˌɑːrtɪfɪʃəl ɪnˈtelɪdʒəns",
+      "vi_meaning": "trí tuệ nhân tạo (AI)",
+      "definition_en": "computer systems able to perform tasks that normally require human thought",
+      "synonyms": [
+        "AI",
+        "machine intelligence",
+        "computational intelligence"
+      ],
+      "collocations": [
+        "advances in artificial intelligence",
+        "artificial intelligence systems",
+        "powered by artificial intelligence"
+      ],
+      "example_simple": "Artificial intelligence helps my phone recognise my face.",
+      "example_complex": "As artificial intelligence permeates the workplace, questions about accountability and job displacement grow ever more pressing.",
+      "difficulty": "7.0",
+      "band": "7.0",
+      "tags": [
+        "band-7.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "technological advancements",
+      "part_of_speech": "noun",
+      "ipa": "ˌteknəˈlɒdʒɪkl ədˈvænsmənts",
+      "vi_meaning": "những tiến bộ công nghệ",
+      "definition_en": "improvements and breakthroughs in technology over time",
+      "synonyms": [
+        "technological progress",
+        "innovations",
+        "technological developments"
+      ],
+      "collocations": [
+        "rapid technological advancements",
+        "recent technological advancements",
+        "drive technological advancements"
+      ],
+      "example_simple": "Technological advancements have made phones much faster than before.",
+      "example_complex": "Rapid technological advancements in medicine have transformed once-fatal diagnoses into manageable chronic conditions.",
+      "difficulty": "7.0",
+      "band": "7.0",
+      "tags": [
+        "band-7.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "telecommunication",
+      "part_of_speech": "noun",
+      "ipa": "ˌtelikəˌmjuːnɪˈkeɪʃn",
+      "vi_meaning": "viễn thông",
+      "definition_en": "the transmission of information over distances by electronic means",
+      "synonyms": [
+        "telecoms",
+        "electronic communication",
+        "long-distance communication"
+      ],
+      "collocations": [
+        "telecommunication network",
+        "telecommunication industry",
+        "modern telecommunication"
+      ],
+      "example_simple": "Telecommunication lets us call friends who live far away.",
+      "example_complex": "The expansion of telecommunication infrastructure has connected remote communities to global markets and services.",
+      "difficulty": "7.0",
+      "band": "7.0",
+      "tags": [
+        "band-7.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "social issue",
+      "part_of_speech": "noun",
+      "ipa": "ˈsoʊʃəl ˈɪʃuː",
+      "vi_meaning": "vấn đề xã hội",
+      "definition_en": "a problem that affects many people within a society",
+      "synonyms": [
+        "social problem",
+        "societal issue",
+        "public issue"
+      ],
+      "collocations": [
+        "pressing social issue",
+        "address a social issue",
+        "raise a social issue"
+      ],
+      "example_simple": "Homelessness is a serious social issue in many big cities.",
+      "example_complex": "Politicians who ignore deep-rooted social issues risk fostering the very unrest they hope to avoid.",
+      "difficulty": "7.0",
+      "band": "7.0",
+      "tags": [
+        "band-7.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "inequality",
+      "part_of_speech": "noun",
+      "ipa": "ˌɪnɪˈkwɒləti",
+      "vi_meaning": "sự bất bình đẳng",
+      "definition_en": "an unfair difference in wealth, status, or opportunity between people",
+      "synonyms": [
+        "disparity",
+        "imbalance",
+        "unfairness",
+        "inequity"
+      ],
+      "collocations": [
+        "income inequality",
+        "tackle inequality",
+        "growing inequality"
+      ],
+      "example_simple": "There is still a lot of inequality between rich and poor families.",
+      "example_complex": "Widening income inequality can erode social cohesion and fuel resentment toward established institutions.",
+      "difficulty": "7.0",
+      "band": "7.0",
+      "tags": [
+        "band-7.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "globalization",
+      "part_of_speech": "noun",
+      "ipa": "ˌɡləʊbəlaɪˈzeɪʃn",
+      "vi_meaning": "sự toàn cầu hóa",
+      "definition_en": "the growing interconnection of the world's economies and cultures",
+      "synonyms": [
+        "global integration",
+        "internationalisation",
+        "worldwide interdependence"
+      ],
+      "collocations": [
+        "effects of globalization",
+        "economic globalization",
+        "drive globalization"
+      ],
+      "example_simple": "Because of globalization, we can buy products from all over the world.",
+      "example_complex": "Globalization has lifted millions out of poverty, yet it has also deepened the gulf between winners and losers of open markets.",
+      "difficulty": "7.0",
+      "band": "7.0",
+      "tags": [
+        "band-7.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "multiculturalism",
+      "part_of_speech": "noun",
+      "ipa": "ˌmʌltiˈkʌltʃərəlɪzəm",
+      "vi_meaning": "chủ nghĩa đa văn hóa",
+      "definition_en": "the coexistence and acceptance of diverse cultures within one society",
+      "synonyms": [
+        "cultural diversity",
+        "pluralism",
+        "cultural pluralism"
+      ],
+      "collocations": [
+        "embrace multiculturalism",
+        "celebrate multiculturalism",
+        "policy of multiculturalism"
+      ],
+      "example_simple": "The city's multiculturalism means you can taste food from many countries.",
+      "example_complex": "Proponents of multiculturalism contend that cultural diversity enriches a nation's intellectual and creative life.",
+      "difficulty": "7.0",
+      "band": "7.0",
+      "tags": [
+        "band-7.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "citizenship",
+      "part_of_speech": "noun",
+      "ipa": "ˈsɪtɪzənʃɪp",
+      "vi_meaning": "quyền công dân",
+      "definition_en": "the legal status of belonging to a country, with its rights and duties",
+      "synonyms": [
+        "nationality",
+        "civic status",
+        "membership"
+      ],
+      "collocations": [
+        "apply for citizenship",
+        "dual citizenship",
+        "rights of citizenship"
+      ],
+      "example_simple": "After living there for years, she finally gained citizenship.",
+      "example_complex": "Active citizenship entails not merely holding rights but also shouldering responsibilities toward one's community.",
+      "difficulty": "7.0",
+      "band": "7.0",
+      "tags": [
+        "band-7.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "promotion prospects",
+      "part_of_speech": "noun",
+      "ipa": "prəˈmoʊʃn ˈprɒspekts",
+      "vi_meaning": "triển vọng thăng tiến",
+      "definition_en": "The likelihood or opportunities of being advanced to a higher position at work.",
+      "synonyms": [
+        "advancement opportunities",
+        "career prospects",
+        "promotion chances",
+        "upward mobility"
+      ],
+      "collocations": [
+        "good promotion prospects",
+        "limited promotion prospects",
+        "improve promotion prospects"
+      ],
+      "example_simple": "She took the new job because it offered better promotion prospects.",
+      "example_complex": "Employees frequently cite stagnant promotion prospects as a leading reason for seeking alternative employment elsewhere.",
+      "difficulty": "7.0",
+      "band": "7.0",
+      "tags": [
+        "band-7.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "leadership skills",
+      "part_of_speech": "noun",
+      "ipa": "ˈliːdərʃɪp skɪlz",
+      "vi_meaning": "kỹ năng lãnh đạo",
+      "definition_en": "The abilities needed to guide, motivate, and manage a group of people effectively.",
+      "synonyms": [
+        "management skills",
+        "leadership abilities",
+        "leadership qualities",
+        "people skills"
+      ],
+      "collocations": [
+        "strong leadership skills",
+        "develop leadership skills",
+        "demonstrate leadership skills"
+      ],
+      "example_simple": "Playing team sports helped him build his leadership skills from an early age.",
+      "example_complex": "The programme is designed to cultivate the leadership skills that graduates will require in increasingly collaborative workplaces.",
+      "difficulty": "7.0",
+      "band": "7.0",
+      "tags": [
+        "band-7.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "redundancy",
+      "part_of_speech": "noun",
+      "ipa": "rɪˈdʌndənsi",
+      "vi_meaning": "sự dư thừa nhân lực",
+      "definition_en": "The loss of a job because the employer no longer needs the position.",
+      "synonyms": [
+        "layoff",
+        "job loss",
+        "dismissal",
+        "downsizing"
+      ],
+      "collocations": [
+        "face redundancy",
+        "voluntary redundancy",
+        "redundancy package"
+      ],
+      "example_simple": "Many workers were worried about redundancy when the factory closed.",
+      "example_complex": "The wave of redundancies that followed the merger disproportionately affected long-serving administrative staff.",
+      "difficulty": "7.0",
+      "band": "7.0",
+      "tags": [
+        "band-7.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "physical activity",
+      "part_of_speech": "noun",
+      "ipa": "ˈfɪzɪkl ækˈtɪvəti",
+      "vi_meaning": "hoạt động thể chất",
+      "definition_en": "Any bodily movement produced by muscles that uses energy, such as exercise.",
+      "synonyms": [
+        "exercise",
+        "physical exertion",
+        "movement",
+        "bodily activity"
+      ],
+      "collocations": [
+        "regular physical activity",
+        "moderate physical activity",
+        "engage in physical activity"
+      ],
+      "example_simple": "Doctors recommend at least thirty minutes of physical activity each day.",
+      "example_complex": "Longitudinal studies consistently link sustained physical activity with reduced incidence of cardiovascular disease in later life.",
+      "difficulty": "7.0",
+      "band": "7.0",
+      "tags": [
+        "band-7.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "disruptive technology",
+      "part_of_speech": "noun",
+      "ipa": "dɪsˈrʌptɪv tekˈnɒlədʒi",
+      "vi_meaning": "công nghệ mang tính đột phá",
+      "definition_en": "New technology that significantly changes or displaces an established industry or market.",
+      "synonyms": [
+        "breakthrough technology",
+        "innovation",
+        "game-changing technology",
+        "emerging technology"
+      ],
+      "collocations": [
+        "potentially disruptive technology",
+        "adopt disruptive technology",
+        "invest in disruptive technology"
+      ],
+      "example_simple": "Smartphones were a disruptive technology that changed how people communicate.",
+      "example_complex": "Incumbent firms often underestimate disruptive technologies precisely because they initially serve only niche, low-margin segments.",
+      "difficulty": "7.0",
+      "band": "7.0",
+      "tags": [
+        "band-7.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "hypothesis",
+      "part_of_speech": "noun",
+      "ipa": "haɪˈpɒθ.ɪ.sɪs",
+      "vi_meaning": "giả thuyết",
+      "definition_en": "A proposed explanation put forward as a starting point for further investigation.",
+      "synonyms": [
+        "theory",
+        "supposition",
+        "conjecture",
+        "premise"
+      ],
+      "collocations": [
+        "test a hypothesis",
+        "formulate a hypothesis",
+        "support the hypothesis"
+      ],
+      "example_simple": "The scientists ran experiments to test their hypothesis.",
+      "example_complex": "The data gathered over five years neither conclusively confirmed nor refuted the researchers' central hypothesis.",
+      "difficulty": "7.0",
+      "band": "7.0",
+      "tags": [
+        "band-7.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "unscrupulous",
+      "part_of_speech": "adjective",
+      "ipa": "ʌnˈskruː.pjə.ləs",
+      "vi_meaning": "vô lương tâm, bất chấp thủ đoạn",
+      "definition_en": "Having no moral principles; behaving in a dishonest or unfair way.",
+      "synonyms": [
+        "dishonest",
+        "unethical",
+        "corrupt",
+        "immoral"
+      ],
+      "collocations": [
+        "unscrupulous businessman",
+        "unscrupulous practices",
+        "unscrupulous dealers"
+      ],
+      "example_simple": "The unscrupulous salesman lied to customers to make more money.",
+      "example_complex": "Regulators introduced stricter oversight to protect vulnerable consumers from unscrupulous lenders exploiting legal loopholes.",
+      "difficulty": "7.0",
+      "band": "7.0",
+      "tags": [
+        "band-7.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "hard-working",
+      "part_of_speech": "adjective",
+      "ipa": "ˈhɑːrd ˈwɜːrkɪŋ",
+      "vi_meaning": "chăm chỉ",
+      "definition_en": "Putting a lot of effort and diligence into one's work or tasks.",
+      "synonyms": [
+        "diligent",
+        "industrious",
+        "conscientious",
+        "assiduous"
+      ],
+      "collocations": [
+        "hard-working student",
+        "hard-working employee",
+        "incredibly hard-working"
+      ],
+      "example_simple": "She is a hard-working student who never misses a deadline.",
+      "example_complex": "The company's success is largely attributable to a hard-working team that consistently exceeds performance targets.",
+      "difficulty": "6.0",
+      "band": "6.0",
+      "tags": [
+        "band-6.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "casual wear",
+      "part_of_speech": "noun",
+      "ipa": "ˈkæʒuəl wer",
+      "vi_meaning": "quần áo thường ngày",
+      "definition_en": "Comfortable, informal clothing suitable for relaxed, everyday occasions.",
+      "synonyms": [
+        "informal clothing",
+        "everyday clothes",
+        "leisurewear",
+        "informal attire"
+      ],
+      "collocations": [
+        "comfortable casual wear",
+        "smart casual wear",
+        "wear casual wear"
+      ],
+      "example_simple": "On weekends he prefers casual wear like jeans and a T-shirt.",
+      "example_complex": "The relaxed dress code allows employees to adopt casual wear, provided it remains presentable for client meetings.",
+      "difficulty": "6.0",
+      "band": "6.0",
+      "tags": [
+        "band-6.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "formal wear",
+      "part_of_speech": "noun",
+      "ipa": "ˈfɔːrməl wer",
+      "vi_meaning": "quần áo trang trọng",
+      "definition_en": "Smart, elegant clothing worn for official or ceremonial occasions.",
+      "synonyms": [
+        "formal attire",
+        "formal dress",
+        "evening wear",
+        "smart clothing"
+      ],
+      "collocations": [
+        "elegant formal wear",
+        "require formal wear",
+        "traditional formal wear"
+      ],
+      "example_simple": "The wedding invitation asked all guests to arrive in formal wear.",
+      "example_complex": "Diplomatic functions typically demand formal wear, signalling both respect and adherence to established protocol.",
+      "difficulty": "6.0",
+      "band": "6.0",
+      "tags": [
+        "band-6.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "fitness level",
+      "part_of_speech": "noun",
+      "ipa": "ˈfɪtnəs ˈlevl",
+      "vi_meaning": "mức độ thể chất",
+      "definition_en": "The degree to which a person is physically healthy and able to exercise.",
+      "synonyms": [
+        "physical condition",
+        "fitness",
+        "physical fitness",
+        "conditioning"
+      ],
+      "collocations": [
+        "improve fitness level",
+        "current fitness level",
+        "assess fitness level"
+      ],
+      "example_simple": "Running every morning has really improved my fitness level.",
+      "example_complex": "The training regimen is tailored to each participant's fitness level to minimise the risk of injury.",
+      "difficulty": "6.0",
+      "band": "6.0",
+      "tags": [
+        "band-6.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "equipment",
+      "part_of_speech": "noun",
+      "ipa": "ɪˈkwɪpmənt",
+      "vi_meaning": "trang thiết bị",
+      "definition_en": "The tools, machines, or supplies needed for a particular purpose or activity.",
+      "synonyms": [
+        "apparatus",
+        "gear",
+        "tools",
+        "kit"
+      ],
+      "collocations": [
+        "specialised equipment",
+        "sports equipment",
+        "use the equipment"
+      ],
+      "example_simple": "The gym has all the equipment you need for a good workout.",
+      "example_complex": "Researchers require sophisticated laboratory equipment to detect concentrations of the compound at the molecular level.",
+      "difficulty": "6.0",
+      "band": "6.0",
+      "tags": [
+        "band-6.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "tournament",
+      "part_of_speech": "noun",
+      "ipa": "ˈtʊrnəmənt",
+      "vi_meaning": "giải đấu",
+      "definition_en": "A competition involving many players or teams competing in a series of games.",
+      "synonyms": [
+        "competition",
+        "championship",
+        "contest",
+        "tourney"
+      ],
+      "collocations": [
+        "win a tournament",
+        "tennis tournament",
+        "host a tournament"
+      ],
+      "example_simple": "Our school team reached the final of the football tournament.",
+      "example_complex": "The prestigious tournament attracts elite athletes whose performances are scrutinised by scouts from around the world.",
+      "difficulty": "6.0",
+      "band": "6.0",
+      "tags": [
+        "band-6.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "enthusiastic",
+      "part_of_speech": "adjective",
+      "ipa": "ɪnˌθuːziˈæstɪk",
+      "vi_meaning": "nhiệt tình",
+      "definition_en": "Showing intense and eager enjoyment, interest, or approval about something.",
+      "synonyms": [
+        "eager",
+        "keen",
+        "passionate",
+        "ardent"
+      ],
+      "collocations": [
+        "enthusiastic supporter",
+        "enthusiastic response",
+        "highly enthusiastic"
+      ],
+      "example_simple": "The children were enthusiastic about the trip to the zoo.",
+      "example_complex": "Her enthusiastic endorsement of the reforms galvanised colleagues who had previously been reluctant to change.",
+      "difficulty": "6.0",
+      "band": "6.0",
+      "tags": [
+        "band-6.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "assertive",
+      "part_of_speech": "adjective",
+      "ipa": "əˈsɜːrtɪv",
+      "vi_meaning": "quyết đoán, quả quyết",
+      "definition_en": "Confident and forceful in stating one's opinions or claims respectfully.",
+      "synonyms": [
+        "confident",
+        "self-assured",
+        "forceful",
+        "decisive"
+      ],
+      "collocations": [
+        "assertive manner",
+        "become more assertive",
+        "assertive leader"
+      ],
+      "example_simple": "You need to be more assertive when asking for a pay rise.",
+      "example_complex": "An assertive negotiating style, distinct from aggression, allowed her to secure favourable terms without alienating partners.",
+      "difficulty": "6.0",
+      "band": "6.0",
+      "tags": [
+        "band-6.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "eccentric",
+      "part_of_speech": "adjective",
+      "ipa": "ɪkˈsentrɪk",
+      "vi_meaning": "lập dị",
+      "definition_en": "Behaving in an unusual or slightly strange way that differs from the norm.",
+      "synonyms": [
+        "unconventional",
+        "quirky",
+        "odd",
+        "idiosyncratic"
+      ],
+      "collocations": [
+        "eccentric behaviour",
+        "eccentric millionaire",
+        "rather eccentric"
+      ],
+      "example_simple": "My uncle is a bit eccentric and collects old clocks.",
+      "example_complex": "The novelist's eccentric habits, once dismissed as affectation, later came to be seen as integral to his creative process.",
+      "difficulty": "6.0",
+      "band": "6.0",
+      "tags": [
+        "band-6.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "accommodation",
+      "part_of_speech": "noun",
+      "ipa": "əˌkɒməˈdeɪʃn",
+      "vi_meaning": "chỗ ở",
+      "definition_en": "A place to live, stay, or work in, especially temporarily.",
+      "synonyms": [
+        "lodging",
+        "housing",
+        "quarters",
+        "living space"
+      ],
+      "collocations": [
+        "find accommodation",
+        "affordable accommodation",
+        "student accommodation"
+      ],
+      "example_simple": "We booked our accommodation online before the trip.",
+      "example_complex": "The influx of tourists has driven up demand for short-term accommodation across the historic city centre.",
+      "difficulty": "6.0",
+      "band": "6.0",
+      "tags": [
+        "band-6.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "travel agency",
+      "part_of_speech": "noun",
+      "ipa": "ˈtrævl ˈeɪdʒənsi",
+      "vi_meaning": "công ty du lịch",
+      "definition_en": "A business that arranges trips, tickets, and holidays for travellers.",
+      "synonyms": [
+        "travel bureau",
+        "tour operator",
+        "travel company",
+        "booking agency"
+      ],
+      "collocations": [
+        "local travel agency",
+        "book through a travel agency",
+        "reputable travel agency"
+      ],
+      "example_simple": "We used a travel agency to plan our holiday to Italy.",
+      "example_complex": "Traditional travel agencies have had to reinvent themselves as consumers increasingly book itineraries directly online.",
+      "difficulty": "6.0",
+      "band": "6.0",
+      "tags": [
+        "band-6.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "experience",
+      "part_of_speech": "n/v",
+      "ipa": "ɪkˈspɪəriəns",
+      "vi_meaning": "kinh nghiệm, trải nghiệm",
+      "definition_en": "Knowledge or skill gained over time; also, to encounter or undergo something.",
+      "synonyms": [
+        "knowledge",
+        "expertise",
+        "encounter",
+        "undergo"
+      ],
+      "collocations": [
+        "gain experience",
+        "valuable experience",
+        "experience difficulties"
+      ],
+      "example_simple": "She has years of experience working with children.",
+      "example_complex": "Candidates who have experienced diverse working environments tend to adapt more readily to organisational change.",
+      "difficulty": "6.0",
+      "band": "6.0",
+      "tags": [
+        "band-6.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "sightseeing",
+      "part_of_speech": "noun",
+      "ipa": "ˈsaɪtsiːɪŋ",
+      "vi_meaning": "sự tham quan",
+      "definition_en": "The activity of visiting interesting places, especially as a tourist.",
+      "synonyms": [
+        "touring",
+        "exploring",
+        "excursion",
+        "visiting attractions"
+      ],
+      "collocations": [
+        "go sightseeing",
+        "sightseeing tour",
+        "day of sightseeing"
+      ],
+      "example_simple": "We spent the morning sightseeing around the old town.",
+      "example_complex": "Beyond conventional sightseeing, the itinerary encouraged travellers to engage meaningfully with local communities and customs.",
+      "difficulty": "6.0",
+      "band": "6.0",
+      "tags": [
+        "band-6.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "cuisine",
+      "part_of_speech": "noun",
+      "ipa": "kwɪˈziːn",
+      "vi_meaning": "ẩm thực",
+      "definition_en": "A style or method of cooking, especially of a particular country or region.",
+      "synonyms": [
+        "cooking",
+        "food",
+        "gastronomy",
+        "fare"
+      ],
+      "collocations": [
+        "local cuisine",
+        "traditional cuisine",
+        "sample the cuisine"
+      ],
+      "example_simple": "I love trying different cuisines when I travel abroad.",
+      "example_complex": "The region's cuisine reflects centuries of trade, blending indigenous ingredients with flavours introduced by foreign settlers.",
+      "difficulty": "6.0",
+      "band": "6.0",
+      "tags": [
+        "band-6.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "neighbourhood",
+      "part_of_speech": "noun",
+      "ipa": "ˈneɪbəhʊd",
+      "vi_meaning": "khu dân cư",
+      "definition_en": "A district or area within a town or city where people live.",
+      "synonyms": [
+        "district",
+        "area",
+        "locality",
+        "vicinity"
+      ],
+      "collocations": [
+        "quiet neighbourhood",
+        "residential neighbourhood",
+        "grow up in a neighbourhood"
+      ],
+      "example_simple": "They moved to a friendly neighbourhood near the park.",
+      "example_complex": "Urban regeneration transformed a once-neglected neighbourhood into a thriving hub for artists and small businesses.",
+      "difficulty": "6.0",
+      "band": "6.0",
+      "tags": [
+        "band-6.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "currency",
+      "part_of_speech": "noun",
+      "ipa": "ˈkʌrənsi",
+      "vi_meaning": "tiền tệ",
+      "definition_en": "The system of money used in a particular country or economic area.",
+      "synonyms": [
+        "money",
+        "legal tender",
+        "cash",
+        "coinage"
+      ],
+      "collocations": [
+        "foreign currency",
+        "exchange currency",
+        "strong currency"
+      ],
+      "example_simple": "You should exchange your currency before you travel.",
+      "example_complex": "A sudden depreciation of the national currency eroded household savings and heightened political instability.",
+      "difficulty": "6.0",
+      "band": "6.0",
+      "tags": [
+        "band-6.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "tour guide",
+      "part_of_speech": "noun",
+      "ipa": "ˈtʊr ɡaɪd",
+      "vi_meaning": "hướng dẫn viên du lịch",
+      "definition_en": "A person who shows tourists around places and explains their history.",
+      "synonyms": [
+        "guide",
+        "escort",
+        "docent",
+        "courier"
+      ],
+      "collocations": [
+        "local tour guide",
+        "knowledgeable tour guide",
+        "hire a tour guide"
+      ],
+      "example_simple": "Our tour guide told us fascinating stories about the castle.",
+      "example_complex": "An experienced tour guide can transform a routine visit into a vivid, immersive encounter with the past.",
+      "difficulty": "6.0",
+      "band": "6.0",
+      "tags": [
+        "band-6.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "carpenter",
+      "part_of_speech": "noun",
+      "ipa": "ˈkɑːrpəntər",
+      "vi_meaning": "thợ mộc",
+      "definition_en": "A person who makes and repairs wooden objects and structures.",
+      "synonyms": [
+        "woodworker",
+        "joiner",
+        "cabinetmaker",
+        "craftsman"
+      ],
+      "collocations": [
+        "skilled carpenter",
+        "work as a carpenter",
+        "hire a carpenter"
+      ],
+      "example_simple": "The carpenter built us a beautiful oak table.",
+      "example_complex": "A master carpenter's precision joinery, achieved without nails, testifies to a craft refined over generations.",
+      "difficulty": "6.0",
+      "band": "6.0",
+      "tags": [
+        "band-6.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "climate",
+      "part_of_speech": "noun",
+      "ipa": "ˈklaɪmət",
+      "vi_meaning": "khí hậu",
+      "definition_en": "The general weather conditions of a place over a long period.",
+      "synonyms": [
+        "weather conditions",
+        "atmosphere",
+        "temperature pattern",
+        "conditions"
+      ],
+      "collocations": [
+        "tropical climate",
+        "climate change",
+        "harsh climate"
+      ],
+      "example_simple": "The country has a warm climate all year round.",
+      "example_complex": "Shifting rainfall patterns associated with a changing climate threaten the viability of traditional agriculture in the region.",
+      "difficulty": "6.0",
+      "band": "6.0",
+      "tags": [
+        "band-6.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "landscape",
+      "part_of_speech": "noun",
+      "ipa": "ˈlændskeɪp",
+      "vi_meaning": "phong cảnh",
+      "definition_en": "All the visible features of an area of countryside or land.",
+      "synonyms": [
+        "scenery",
+        "terrain",
+        "countryside",
+        "vista"
+      ],
+      "collocations": [
+        "stunning landscape",
+        "rural landscape",
+        "dominate the landscape"
+      ],
+      "example_simple": "The mountain landscape was breathtaking at sunrise.",
+      "example_complex": "Centuries of intensive farming have profoundly reshaped a landscape once dominated by dense ancient woodland.",
+      "difficulty": "6.0",
+      "band": "6.0",
+      "tags": [
+        "band-6.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "pessimistic",
+      "part_of_speech": "adjective",
+      "ipa": "ˌpes.ɪˈmɪs.tɪk",
+      "vi_meaning": "bi quan",
+      "definition_en": "Tending to expect the worst possible outcome in any situation.",
+      "synonyms": [
+        "negative",
+        "gloomy",
+        "cynical",
+        "despairing"
+      ],
+      "collocations": [
+        "pessimistic outlook",
+        "deeply pessimistic",
+        "pessimistic view"
+      ],
+      "example_simple": "He was pessimistic about passing the exam.",
+      "example_complex": "Economists offered a strikingly pessimistic forecast, warning that recovery would be slower than official projections suggested.",
+      "difficulty": "6.0",
+      "band": "6.0",
+      "tags": [
+        "band-6.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "family",
+      "part_of_speech": "noun",
+      "ipa": "ˈfæməli",
+      "vi_meaning": "gia đình",
+      "definition_en": "A group of people related by blood, marriage, or close bonds.",
+      "synonyms": [
+        "household",
+        "relatives",
+        "kin",
+        "clan"
+      ],
+      "collocations": [
+        "close-knit family",
+        "extended family",
+        "support a family"
+      ],
+      "example_simple": "We spend every holiday with our whole family.",
+      "example_complex": "Sociologists note that the traditional nuclear family is increasingly one arrangement among many diverse household structures.",
+      "difficulty": "5.0",
+      "band": "5.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "relative",
+      "part_of_speech": "noun",
+      "ipa": "ˈrelətɪv",
+      "vi_meaning": "người thân",
+      "definition_en": "A person connected to another by blood or marriage; a family member.",
+      "synonyms": [
+        "family member",
+        "kin",
+        "relation",
+        "kinsman"
+      ],
+      "collocations": [
+        "close relative",
+        "distant relative",
+        "visit relatives"
+      ],
+      "example_simple": "Several relatives came to celebrate my grandmother's birthday.",
+      "example_complex": "Genealogical databases now allow individuals to identify distant relatives they had no prior knowledge of.",
+      "difficulty": "5.0",
+      "band": "5.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "animal",
+      "part_of_speech": "noun",
+      "ipa": "ˈænɪml",
+      "vi_meaning": "động vật",
+      "definition_en": "A living organism that feeds on organic matter and can move independently.",
+      "synonyms": [
+        "creature",
+        "beast",
+        "living thing",
+        "fauna"
+      ],
+      "collocations": [
+        "wild animal",
+        "domestic animal",
+        "protect animals"
+      ],
+      "example_simple": "The children love visiting the animals at the farm.",
+      "example_complex": "Conservationists warn that many animal species face extinction as their natural habitats are steadily destroyed.",
+      "difficulty": "5.0",
+      "band": "5.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "dictionary",
+      "part_of_speech": "noun",
+      "ipa": "ˈdɪkʃəneri",
+      "vi_meaning": "từ điển",
+      "definition_en": "A book or resource listing words with their meanings and usage.",
+      "synonyms": [
+        "lexicon",
+        "wordbook",
+        "glossary",
+        "vocabulary reference"
+      ],
+      "collocations": [
+        "consult a dictionary",
+        "bilingual dictionary",
+        "look up in a dictionary"
+      ],
+      "example_simple": "I looked up the new word in my dictionary.",
+      "example_complex": "Lexicographers continually revise the dictionary to document neologisms and shifts in established usage.",
+      "difficulty": "5.0",
+      "band": "5.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "textbook",
+      "part_of_speech": "noun",
+      "ipa": "ˈtekstbʊk",
+      "vi_meaning": "sách giáo khoa",
+      "definition_en": "A book used for studying a particular subject, especially in school.",
+      "synonyms": [
+        "coursebook",
+        "manual",
+        "study book",
+        "primer"
+      ],
+      "collocations": [
+        "school textbook",
+        "prescribed textbook",
+        "study from a textbook"
+      ],
+      "example_simple": "Please open your textbook to page fifty.",
+      "example_complex": "Critics argue that outdated textbooks can perpetuate misconceptions long after scholarship has moved on.",
+      "difficulty": "5.0",
+      "band": "5.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "soft drink",
+      "part_of_speech": "noun",
+      "ipa": "sɒft drɪŋk",
+      "vi_meaning": "nước ngọt",
+      "definition_en": "A cold, non-alcoholic drink, usually sweet and often carbonated.",
+      "synonyms": [
+        "fizzy drink",
+        "soda",
+        "pop",
+        "carbonated beverage"
+      ],
+      "collocations": [
+        "sugary soft drink",
+        "can of soft drink",
+        "order a soft drink"
+      ],
+      "example_simple": "She ordered a soft drink instead of coffee.",
+      "example_complex": "Public health campaigns increasingly target soft drink consumption as a significant contributor to childhood obesity.",
+      "difficulty": "5.0",
+      "band": "5.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "social studies",
+      "part_of_speech": "noun",
+      "ipa": "ˈsoʊʃəl ˈstʌdiz",
+      "vi_meaning": "khoa học xã hội",
+      "definition_en": "The study of human society, including history, geography, and civics.",
+      "synonyms": [
+        "social science",
+        "humanities",
+        "civics",
+        "human sciences"
+      ],
+      "collocations": [
+        "social studies teacher",
+        "social studies curriculum",
+        "study social studies"
+      ],
+      "example_simple": "We learned about local government in our social studies class.",
+      "example_complex": "A well-designed social studies curriculum equips students to interpret contemporary issues within their broader historical context.",
+      "difficulty": "5.0",
+      "band": "5.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "learn languages",
+      "part_of_speech": "verb",
+      "ipa": "lɜːrn ˈlæŋɡwɪdʒɪz",
+      "vi_meaning": "học ngoại ngữ",
+      "definition_en": "To acquire the ability to understand and communicate in foreign tongues.",
+      "synonyms": [
+        "study languages",
+        "acquire languages",
+        "master languages"
+      ],
+      "collocations": [
+        "learn languages quickly",
+        "learn foreign languages",
+        "learn languages online"
+      ],
+      "example_simple": "She loves to learn languages, and she already speaks three of them.",
+      "example_complex": "Immersion abroad remains the most effective way to learn languages, since constant exposure accelerates both fluency and cultural understanding.",
+      "difficulty": "5.0",
+      "band": "5.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "collect stamps",
+      "part_of_speech": "verb",
+      "ipa": "kəˈlekt stæmps",
+      "vi_meaning": "sưu tập tem",
+      "definition_en": "To gather and keep postage stamps as an organised hobby.",
+      "synonyms": [
+        "gather stamps",
+        "amass stamps",
+        "hoard stamps"
+      ],
+      "collocations": [
+        "collect rare stamps",
+        "collect stamps as a hobby",
+        "collect stamps from abroad"
+      ],
+      "example_simple": "My grandfather likes to collect stamps from every country he visits.",
+      "example_complex": "Enthusiasts who collect stamps often argue that philately preserves miniature records of a nation's political and artistic history.",
+      "difficulty": "5.0",
+      "band": "5.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "listen to music",
+      "part_of_speech": "verb",
+      "ipa": "ˈlɪsn tuː ˈmjuːzɪk",
+      "vi_meaning": "nghe nhạc",
+      "definition_en": "To pay attention to sounds arranged as songs or compositions.",
+      "synonyms": [
+        "hear music",
+        "play music",
+        "enjoy music"
+      ],
+      "collocations": [
+        "listen to music online",
+        "listen to music together",
+        "listen to relaxing music"
+      ],
+      "example_simple": "I like to listen to music while I do my homework.",
+      "example_complex": "Recent studies suggest that people who regularly listen to music while working may experience reduced stress but occasionally diminished concentration.",
+      "difficulty": "5.0",
+      "band": "5.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "traffic light",
+      "part_of_speech": "noun",
+      "ipa": "ˈtræfɪk laɪt",
+      "vi_meaning": "đèn giao thông",
+      "definition_en": "A signal with coloured lights controlling the movement of vehicles.",
+      "synonyms": [
+        "stoplight",
+        "signal light",
+        "traffic signal"
+      ],
+      "collocations": [
+        "red traffic light",
+        "stop at the traffic light",
+        "traffic light junction"
+      ],
+      "example_simple": "You must stop your car when the traffic light turns red.",
+      "example_complex": "Smart traffic lights that adjust to real-time congestion could substantially cut the emissions produced by idling vehicles at busy intersections.",
+      "difficulty": "5.0",
+      "band": "5.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "bus station",
+      "part_of_speech": "noun",
+      "ipa": "ˈbʌs ˈsteɪʃn",
+      "vi_meaning": "bến xe buýt",
+      "definition_en": "A building or place where buses start, stop, and pick up passengers.",
+      "synonyms": [
+        "bus terminal",
+        "bus depot",
+        "coach station"
+      ],
+      "collocations": [
+        "central bus station",
+        "wait at the bus station",
+        "busy bus station"
+      ],
+      "example_simple": "We met our friends at the bus station before the trip.",
+      "example_complex": "The modernised bus station now integrates rail and cycling links, reflecting a broader push toward seamless urban public transport.",
+      "difficulty": "5.0",
+      "band": "5.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "embarrassed",
+      "part_of_speech": "adjective",
+      "ipa": "ɪmˈbærəst",
+      "vi_meaning": "xấu hổ",
+      "definition_en": "Feeling awkward, ashamed, or uncomfortable in a social situation.",
+      "synonyms": [
+        "ashamed",
+        "mortified",
+        "self-conscious",
+        "humiliated"
+      ],
+      "collocations": [
+        "deeply embarrassed",
+        "feel embarrassed",
+        "embarrassed silence"
+      ],
+      "example_simple": "He was embarrassed when he forgot his teacher's name.",
+      "example_complex": "Visibly embarrassed by the auditor's findings, the executive struggled to defend the discrepancies before the assembled shareholders.",
+      "difficulty": "5.0",
+      "band": "5.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "astronaut",
+      "part_of_speech": "noun",
+      "ipa": "ˈæs.trə.nɑːt",
+      "vi_meaning": "phi hành gia",
+      "definition_en": "A person trained to travel and work in outer space.",
+      "synonyms": [
+        "cosmonaut",
+        "spaceman",
+        "space traveller"
+      ],
+      "collocations": [
+        "become an astronaut",
+        "veteran astronaut",
+        "train as an astronaut"
+      ],
+      "example_simple": "The young boy dreams of becoming an astronaut one day.",
+      "example_complex": "Every astronaut endures years of rigorous physiological and psychological conditioning before being cleared for a long-duration orbital mission.",
+      "difficulty": "5.0",
+      "band": "5.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "comedian",
+      "part_of_speech": "noun",
+      "ipa": "kəˈmiː.di.ən",
+      "vi_meaning": "diễn viên hài",
+      "definition_en": "A performer whose job is to entertain people by making them laugh.",
+      "synonyms": [
+        "comic",
+        "humorist",
+        "jester",
+        "funnyman"
+      ],
+      "collocations": [
+        "stand-up comedian",
+        "famous comedian",
+        "talented comedian"
+      ],
+      "example_simple": "The comedian told so many jokes that everyone laughed all night.",
+      "example_complex": "A skilled comedian weaves social commentary into humour, disarming audiences even as they confront uncomfortable truths.",
+      "difficulty": "5.0",
+      "band": "5.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "entrepreneur",
+      "part_of_speech": "noun",
+      "ipa": "ˌɑːn.trə.prəˈnɝː",
+      "vi_meaning": "nhà kinh doanh",
+      "definition_en": "A person who starts and manages a business, taking financial risks.",
+      "synonyms": [
+        "businessperson",
+        "founder",
+        "business owner",
+        "innovator"
+      ],
+      "collocations": [
+        "successful entrepreneur",
+        "young entrepreneur",
+        "tech entrepreneur"
+      ],
+      "example_simple": "The young entrepreneur opened her first coffee shop last year.",
+      "example_complex": "A visionary entrepreneur must balance calculated risk-taking with disciplined financial management to sustain a venture through volatile markets.",
+      "difficulty": "5.0",
+      "band": "5.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "active",
+      "part_of_speech": "adjective",
+      "ipa": "ˈæk.tɪv",
+      "vi_meaning": "năng nổ, lanh lợi",
+      "definition_en": "Energetically busy, involved, or physically and mentally lively.",
+      "synonyms": [
+        "energetic",
+        "lively",
+        "dynamic",
+        "vigorous"
+      ],
+      "collocations": [
+        "physically active",
+        "active lifestyle",
+        "active participant"
+      ],
+      "example_simple": "My grandmother is still very active and walks every morning.",
+      "example_complex": "Remaining cognitively active in later life appears to delay the onset of degenerative conditions such as dementia.",
+      "difficulty": "5.0",
+      "band": "5.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "conscientious",
+      "part_of_speech": "adjective",
+      "ipa": "ˌkɑːn.ʃiˈen.ʃəs",
+      "vi_meaning": "chu đáo, tỉ mỉ",
+      "definition_en": "Careful, thorough, and diligent in doing one's work or duty.",
+      "synonyms": [
+        "diligent",
+        "meticulous",
+        "thorough",
+        "dutiful"
+      ],
+      "collocations": [
+        "conscientious worker",
+        "conscientious about details",
+        "highly conscientious"
+      ],
+      "example_simple": "She is a conscientious student who always finishes her work on time.",
+      "example_complex": "Conscientious employees, who consistently attend to detail, tend to outperform more talented but careless colleagues over the long term.",
+      "difficulty": "5.0",
+      "band": "5.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "application",
+      "part_of_speech": "noun",
+      "ipa": "ˌæp.lɪˈkeɪ.ʃən",
+      "vi_meaning": "ứng dụng",
+      "definition_en": "A software program, or a formal request, or a practical use of something.",
+      "synonyms": [
+        "program",
+        "app",
+        "software",
+        "use"
+      ],
+      "collocations": [
+        "mobile application",
+        "practical application",
+        "submit an application"
+      ],
+      "example_simple": "I downloaded a new application to help me learn vocabulary.",
+      "example_complex": "The practical application of this theory in industrial settings has transformed how engineers approach material fatigue.",
+      "difficulty": "5.0",
+      "band": "5.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "experiment",
+      "part_of_speech": "noun",
+      "ipa": "ɪkˈspɛr.ɪ.mənt",
+      "vi_meaning": "thí nghiệm",
+      "definition_en": "A scientific test done to discover or prove something.",
+      "synonyms": [
+        "test",
+        "trial",
+        "investigation",
+        "study"
+      ],
+      "collocations": [
+        "conduct an experiment",
+        "scientific experiment",
+        "controlled experiment"
+      ],
+      "example_simple": "We did an experiment in class to see how plants grow.",
+      "example_complex": "The experiment was carefully controlled to isolate the single variable responsible for the observed change in reaction rate.",
+      "difficulty": "5.0",
+      "band": "5.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "minimalist",
+      "part_of_speech": "adjective",
+      "ipa": "ˈmɪn.ɪ.mə.lɪst",
+      "vi_meaning": "tối giản",
+      "definition_en": "Using or preferring very simple, sparse design with few elements.",
+      "synonyms": [
+        "spare",
+        "simple",
+        "pared-down",
+        "understated"
+      ],
+      "collocations": [
+        "minimalist design",
+        "minimalist lifestyle",
+        "minimalist aesthetic"
+      ],
+      "example_simple": "Her bedroom has a minimalist style with just a bed and a lamp.",
+      "example_complex": "The architect's minimalist approach stripped the interior to its essentials, letting light and proportion carry the entire aesthetic.",
+      "difficulty": "5.0",
+      "band": "5.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "typhoon",
+      "part_of_speech": "noun",
+      "ipa": "taɪˈfuːn",
+      "vi_meaning": "bão nhiệt đới",
+      "definition_en": "A violent tropical storm with strong winds, common in the Pacific.",
+      "synonyms": [
+        "hurricane",
+        "cyclone",
+        "tropical storm"
+      ],
+      "collocations": [
+        "powerful typhoon",
+        "typhoon warning",
+        "typhoon season"
+      ],
+      "example_simple": "The typhoon brought heavy rain and knocked down many trees.",
+      "example_complex": "As the typhoon intensified overnight, coastal authorities ordered mass evacuations to avert the devastating storm surge.",
+      "difficulty": "5.0",
+      "band": "4.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "forecast",
+      "part_of_speech": "noun",
+      "ipa": "ˈfɔː.kɑːst",
+      "vi_meaning": "dự báo thời tiết",
+      "definition_en": "A prediction of future conditions, especially the weather.",
+      "synonyms": [
+        "prediction",
+        "projection",
+        "outlook",
+        "prognosis"
+      ],
+      "collocations": [
+        "weather forecast",
+        "economic forecast",
+        "accurate forecast"
+      ],
+      "example_simple": "The weather forecast says it will rain tomorrow afternoon.",
+      "example_complex": "The bank's gloomy economic forecast prompted investors to withdraw capital from emerging markets almost overnight.",
+      "difficulty": "5.0",
+      "band": "4.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "employee",
+      "part_of_speech": "noun",
+      "ipa": "ɪmˈplɔɪ.iː",
+      "vi_meaning": "nhân viên",
+      "definition_en": "A person who is paid to work for a company or organisation.",
+      "synonyms": [
+        "worker",
+        "staff member",
+        "member of staff",
+        "hire"
+      ],
+      "collocations": [
+        "full-time employee",
+        "loyal employee",
+        "employee benefits"
+      ],
+      "example_simple": "Every employee at the shop wears a blue uniform.",
+      "example_complex": "The firm's decision to reward each employee with equity dramatically improved retention among its most skilled engineers.",
+      "difficulty": "5.0",
+      "band": "4.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "responsible",
+      "part_of_speech": "adjective",
+      "ipa": "rɪˈspɒn.sɪ.bl̩",
+      "vi_meaning": "có trách nhiệm",
+      "definition_en": "Having a duty to deal with something, or being reliable and trustworthy.",
+      "synonyms": [
+        "accountable",
+        "reliable",
+        "dependable",
+        "trustworthy"
+      ],
+      "collocations": [
+        "responsible for",
+        "socially responsible",
+        "responsible adult"
+      ],
+      "example_simple": "She is responsible for feeding the class rabbit every day.",
+      "example_complex": "Managers held directly responsible for safety lapses are far more likely to enforce rigorous compliance procedures.",
+      "difficulty": "5.0",
+      "band": "4.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "laboratory",
+      "part_of_speech": "noun",
+      "ipa": "ləˈbɒr.ə.tər.i",
+      "vi_meaning": "phòng thí nghiệm",
+      "definition_en": "A room or building equipped for scientific experiments and research.",
+      "synonyms": [
+        "lab",
+        "research facility",
+        "workshop"
+      ],
+      "collocations": [
+        "research laboratory",
+        "laboratory experiment",
+        "well-equipped laboratory"
+      ],
+      "example_simple": "The students put on gloves before entering the laboratory.",
+      "example_complex": "The pharmaceutical laboratory operates under strict sterile protocols to prevent any contamination of its sensitive cultures.",
+      "difficulty": "5.0",
+      "band": "4.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "brainstorm",
+      "part_of_speech": "verb",
+      "ipa": "ˈbreɪn.stɔːm",
+      "vi_meaning": "động não, lên ý tưởng",
+      "definition_en": "To generate many ideas quickly through free group discussion.",
+      "synonyms": [
+        "ideate",
+        "conceptualise",
+        "think up",
+        "generate ideas"
+      ],
+      "collocations": [
+        "brainstorm ideas",
+        "brainstorm solutions",
+        "brainstorm together"
+      ],
+      "example_simple": "Let's brainstorm some ideas for the school party.",
+      "example_complex": "During the workshop, participants brainstorm freely before critically evaluating which proposals merit further development.",
+      "difficulty": "5.0",
+      "band": "4.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "collaborate",
+      "part_of_speech": "verb",
+      "ipa": "kəˈlæb.ə.reɪt",
+      "vi_meaning": "hợp tác, cộng tác",
+      "definition_en": "To work jointly with others to achieve a shared goal.",
+      "synonyms": [
+        "cooperate",
+        "partner",
+        "team up",
+        "work together"
+      ],
+      "collocations": [
+        "collaborate closely",
+        "collaborate on a project",
+        "collaborate with colleagues"
+      ],
+      "example_simple": "The two classes will collaborate to make a big wall poster.",
+      "example_complex": "When researchers from different disciplines collaborate, they frequently uncover insights that neither field could have reached alone.",
+      "difficulty": "5.0",
+      "band": "4.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "celebration",
+      "part_of_speech": "noun",
+      "ipa": "ˌsel.ɪˈbreɪ.ʃən",
+      "vi_meaning": "sự kỷ niệm, lễ hội",
+      "definition_en": "A special event or activity held to mark a happy occasion.",
+      "synonyms": [
+        "festivity",
+        "commemoration",
+        "party",
+        "observance"
+      ],
+      "collocations": [
+        "birthday celebration",
+        "hold a celebration",
+        "joyful celebration"
+      ],
+      "example_simple": "There was a big celebration in the village after the harvest.",
+      "example_complex": "The centenary celebration blended traditional ritual with contemporary performance, drawing visitors from across the region.",
+      "difficulty": "5.0",
+      "band": "4.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "appearance",
+      "part_of_speech": "noun",
+      "ipa": "əˈpɪə.rəns",
+      "vi_meaning": "ngoại hình",
+      "definition_en": "The way that someone or something looks to others.",
+      "synonyms": [
+        "look",
+        "aspect",
+        "outward form",
+        "guise"
+      ],
+      "collocations": [
+        "physical appearance",
+        "outward appearance",
+        "neat appearance"
+      ],
+      "example_simple": "He always cares about his appearance before going out.",
+      "example_complex": "The company insists that a candidate's competence, not their appearance, should determine hiring decisions.",
+      "difficulty": "5.0",
+      "band": "4.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "receptionist",
+      "part_of_speech": "noun",
+      "ipa": "rɪˈsep.ʃən.ɪst",
+      "vi_meaning": "nhân viên lễ tân",
+      "definition_en": "A person who greets and helps visitors at an office or hotel.",
+      "synonyms": [
+        "front-desk clerk",
+        "greeter",
+        "desk attendant"
+      ],
+      "collocations": [
+        "hotel receptionist",
+        "friendly receptionist",
+        "ask the receptionist"
+      ],
+      "example_simple": "The receptionist gave us the key to our hotel room.",
+      "example_complex": "A courteous receptionist often shapes a client's first impression more decisively than any marketing campaign.",
+      "difficulty": "5.0",
+      "band": "4.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "seafood",
+      "part_of_speech": "noun",
+      "ipa": "ˈsiː.fuːd",
+      "vi_meaning": "hải sản",
+      "definition_en": "Fish and shellfish from the sea that are eaten as food.",
+      "synonyms": [
+        "shellfish",
+        "fish",
+        "marine food"
+      ],
+      "collocations": [
+        "fresh seafood",
+        "seafood restaurant",
+        "eat seafood"
+      ],
+      "example_simple": "We ate delicious seafood by the beach last summer.",
+      "example_complex": "Rising ocean temperatures threaten the seafood supply chains upon which many coastal economies depend.",
+      "difficulty": "5.0",
+      "band": "4.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "library",
+      "part_of_speech": "noun",
+      "ipa": "ˈlaɪ.brər.i",
+      "vi_meaning": "thư viện",
+      "definition_en": "A place where books and other resources are kept for reading and borrowing.",
+      "synonyms": [
+        "book collection",
+        "reading room",
+        "archive"
+      ],
+      "collocations": [
+        "public library",
+        "school library",
+        "visit the library"
+      ],
+      "example_simple": "I borrowed three books from the library yesterday.",
+      "example_complex": "The university library has digitised its rare manuscripts, granting scholars worldwide unprecedented access to fragile historical texts.",
+      "difficulty": "5.0",
+      "band": "4.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "smartphone",
+      "part_of_speech": "noun",
+      "ipa": "ˈsmɑːrt.foʊn",
+      "vi_meaning": "điện thoại thông minh",
+      "definition_en": "A mobile phone with advanced computing and internet features.",
+      "synonyms": [
+        "mobile phone",
+        "cell phone",
+        "handset",
+        "mobile device"
+      ],
+      "collocations": [
+        "use a smartphone",
+        "smartphone app",
+        "latest smartphone"
+      ],
+      "example_simple": "She uses her smartphone to take photos and send messages.",
+      "example_complex": "Excessive smartphone use before bedtime has been repeatedly linked to disrupted sleep patterns among adolescents.",
+      "difficulty": "5.0",
+      "band": "4.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "magazine",
+      "part_of_speech": "noun",
+      "ipa": "ˌmæɡ.əˈziːn",
+      "vi_meaning": "tạp chí",
+      "definition_en": "A regularly published booklet with articles, pictures, and advertisements.",
+      "synonyms": [
+        "periodical",
+        "journal",
+        "publication",
+        "gazette"
+      ],
+      "collocations": [
+        "fashion magazine",
+        "read a magazine",
+        "monthly magazine"
+      ],
+      "example_simple": "My mother reads a cooking magazine every weekend.",
+      "example_complex": "As print advertising declined, the magazine reinvented itself as a subscription-based digital platform to survive.",
+      "difficulty": "5.0",
+      "band": "4.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "homework",
+      "part_of_speech": "noun",
+      "ipa": "ˈhoʊm.wɜːrk",
+      "vi_meaning": "bài tập về nhà",
+      "definition_en": "School work that pupils are given to do at home.",
+      "synonyms": [
+        "assignment",
+        "schoolwork",
+        "coursework",
+        "prep"
+      ],
+      "collocations": [
+        "do homework",
+        "finish your homework",
+        "homework assignment"
+      ],
+      "example_simple": "I have to finish my maths homework before dinner.",
+      "example_complex": "Educators continue to debate whether heavy homework loads genuinely reinforce learning or merely heighten student anxiety.",
+      "difficulty": "5.0",
+      "band": "4.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "tradition",
+      "part_of_speech": "noun",
+      "ipa": "trəˈdɪʃ.ən",
+      "vi_meaning": "truyền thống",
+      "definition_en": "A custom or belief passed down through generations within a group.",
+      "synonyms": [
+        "custom",
+        "convention",
+        "ritual",
+        "heritage"
+      ],
+      "collocations": [
+        "family tradition",
+        "cultural tradition",
+        "long-standing tradition"
+      ],
+      "example_simple": "Eating cake on your birthday is a popular tradition.",
+      "example_complex": "Preserving an ancient tradition while adapting it to modern values is a delicate task for any community.",
+      "difficulty": "5.0",
+      "band": "4.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "loyal",
+      "part_of_speech": "adjective",
+      "ipa": "ˈlɔɪ.əl",
+      "vi_meaning": "trung thành",
+      "definition_en": "Firmly faithful and devoted to a person, group, or cause.",
+      "synonyms": [
+        "faithful",
+        "devoted",
+        "dependable",
+        "steadfast"
+      ],
+      "collocations": [
+        "loyal friend",
+        "loyal customer",
+        "remain loyal"
+      ],
+      "example_simple": "A loyal dog will always wait for its owner.",
+      "example_complex": "Brands invest heavily in rewards programmes because a loyal customer base insulates revenue against competitive disruption.",
+      "difficulty": "5.0",
+      "band": "4.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "forest",
+      "part_of_speech": "noun",
+      "ipa": "ˈfɔːrɪst",
+      "vi_meaning": "rừng",
+      "definition_en": "A large area of land thickly covered with trees and plants.",
+      "synonyms": [
+        "woodland",
+        "woods",
+        "jungle",
+        "grove"
+      ],
+      "collocations": [
+        "dense forest",
+        "tropical forest",
+        "protect the forest"
+      ],
+      "example_simple": "We saw many birds when we walked through the forest.",
+      "example_complex": "Clearing the rainforest for agriculture releases vast quantities of stored carbon, accelerating global climate change.",
+      "difficulty": "5.0",
+      "band": "4.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "volcano",
+      "part_of_speech": "noun",
+      "ipa": "vɑːlˈkeɪ.noʊ",
+      "vi_meaning": "núi lửa",
+      "definition_en": "A mountain with an opening through which lava and gases erupt.",
+      "synonyms": [
+        "eruptive mountain",
+        "fire mountain",
+        "vent"
+      ],
+      "collocations": [
+        "active volcano",
+        "erupting volcano",
+        "dormant volcano"
+      ],
+      "example_simple": "The volcano sent smoke and ash high into the sky.",
+      "example_complex": "Geologists monitor the dormant volcano constantly, since even subtle seismic tremors may signal an impending eruption.",
+      "difficulty": "5.0",
+      "band": "4.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    },
+    {
+      "word": "shopping",
+      "part_of_speech": "noun",
+      "ipa": "ˈʃɑːpɪŋ",
+      "vi_meaning": "mua sắm",
+      "definition_en": "The activity of buying goods from shops or online stores.",
+      "synonyms": [
+        "buying",
+        "purchasing",
+        "retail",
+        "marketing"
+      ],
+      "collocations": [
+        "go shopping",
+        "online shopping",
+        "shopping centre"
+      ],
+      "example_simple": "We went shopping for new clothes at the mall.",
+      "example_complex": "The explosive growth of online shopping has hollowed out traditional high streets across much of the developed world.",
+      "difficulty": "5.0",
+      "band": "4.0",
+      "tags": [
+        "band-5.0"
+      ],
+      "source": "import",
+      "enriched": true
+    }
+  ]
+}
