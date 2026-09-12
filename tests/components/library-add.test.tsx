@@ -23,6 +23,7 @@ const NOT_STUDIED: WordListItem = {
   ipa: "/rɪˈlʌktənt/",
   vi_meaning: "miễn cưỡng",
   tags: [],
+  difficulty: null,
   stage: "new",
   times_seen: 0,
   recent_results: [],

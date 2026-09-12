@@ -10,6 +10,7 @@ import type {
   Progress,
   Visibility,
 } from "./types";
+import { IELTS_BANDS } from "./types";
 import { SYSTEM_OWNER, canEdit, ownerIdFor } from "./auth/user";
 import { getDb, CONTENT_COLS } from "./db";
 import {
@@ -219,6 +220,7 @@ function makeWord(input: NewWord): Word {
     false_friend_note: input.false_friend_note ?? "",
     personal_note: input.personal_note ?? "",
     tags: input.tags ?? [],
+    difficulty: input.difficulty ?? null,
     source: input.source ?? "manual",
     owner_id: input.owner_id ?? "",
     stage: input.stage ?? "new",
@@ -273,6 +275,7 @@ function toRow(w: Word): Record<string, string> {
     false_friend_note: w.false_friend_note,
     personal_note: w.personal_note,
     tags: JSON.stringify(w.tags),
+    difficulty: w.difficulty ?? "",
     source: w.source,
     stage: w.stage,
     times_seen: String(w.times_seen),
@@ -292,6 +295,14 @@ function jsonArr(s: string | undefined): string[] {
   }
 }
 
+/** Parse a stored difficulty cell into an IELTS band or null (blank ⇒ null). */
+function asBand(s: string | undefined): Word["difficulty"] {
+  const v = (s ?? "").trim();
+  return (IELTS_BANDS as readonly string[]).includes(v)
+    ? (v as Word["difficulty"])
+    : null;
+}
+
 function fromRow(get: (k: string) => string | undefined): Word {
   return makeWord({
     id: get("id") || randomUUID(),
@@ -307,6 +318,7 @@ function fromRow(get: (k: string) => string | undefined): Word {
     false_friend_note: get("false_friend_note") || "",
     personal_note: get("personal_note") || "",
     tags: jsonArr(get("tags")),
+    difficulty: asBand(get("difficulty")),
     source: (get("source") as Word["source"]) || "manual",
     owner_id: get("owner_id") || "",
     stage: (get("stage") as Word["stage"]) || "new",
@@ -374,6 +386,7 @@ class SqliteStore implements Store {
       false_friend_note: str(row.false_friend_note),
       personal_note: str(row.personal_note),
       tags: jsonArr(strOrU(row.tags)),
+      difficulty: asBand(strOrU(row.difficulty)),
       source: (str(row.source) as Word["source"]) || "manual",
       owner_id: str(row.owner_id),
       stage: (row.p_stage != null ? String(row.p_stage) : "new") as Word["stage"],
@@ -403,7 +416,7 @@ class SqliteStore implements Store {
     // and fetched per-word via get() when a row is expanded to edit.
     const rs = await this.db.execute({
       sql: `SELECT w."id", w."word", w."ipa", w."vi_meaning", w."tags",
-                   w."created_at", ${W_PROGRESS}
+                   w."difficulty", w."created_at", ${W_PROGRESS}
               FROM user_words uw JOIN words w ON w.id = uw.word_id
              WHERE uw.user_id = ?
              ORDER BY w.created_at DESC`,
@@ -415,6 +428,7 @@ class SqliteStore implements Store {
       ipa: r.ipa || "",
       vi_meaning: r.vi_meaning || "",
       tags: jsonArr(r.tags),
+      difficulty: asBand(r.difficulty),
       stage: (r.p_stage as WordListItem["stage"]) || "new",
       times_seen: Number(r.p_times || 0),
       recent_results: jsonArr(r.p_recent) as WordListItem["recent_results"],
@@ -478,7 +492,7 @@ class SqliteStore implements Store {
 
     const rs = await this.db.execute({
       sql: `SELECT w."id", w."word", w."ipa", w."vi_meaning", w."tags",
-                   w."created_at", ${W_PROGRESS},
+                   w."difficulty", w."created_at", ${W_PROGRESS},
                    (uw.word_id IS NOT NULL) AS studying
               ${from}
              ORDER BY w.created_at DESC
@@ -491,6 +505,7 @@ class SqliteStore implements Store {
       ipa: str(r.ipa),
       vi_meaning: str(r.vi_meaning),
       tags: jsonArr(strOrU(r.tags)),
+      difficulty: asBand(strOrU(r.difficulty)),
       stage: (r.p_stage != null ? String(r.p_stage) : "new") as WordListItem["stage"],
       times_seen: r.p_times != null ? Number(r.p_times) : 0,
       recent_results: jsonArr(strOrU(r.p_recent)) as WordListItem["recent_results"],
@@ -1489,6 +1504,7 @@ class SheetStore implements Store {
       ipa: w.ipa,
       vi_meaning: w.vi_meaning,
       tags: w.tags,
+      difficulty: w.difficulty,
       stage: w.stage,
       times_seen: w.times_seen,
       recent_results: w.recent_results,

@@ -27,6 +27,7 @@ const WORD: Word = {
   false_friend_note: "",
   personal_note: "",
   tags: [],
+  difficulty: null,
   source: "manual",
   owner_id: "__system__",
   stage: "recall",

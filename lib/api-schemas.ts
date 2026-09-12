@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { EXERCISE_TYPES, STAGES } from "@/lib/types";
+import { EXERCISE_TYPES, IELTS_BANDS, STAGES } from "@/lib/types";
 import { PROMPT_TEXT_MAX, PROMPT_TITLE_MAX } from "@/lib/writing/types";
 import { FEEDBACK_CATEGORIES, FEEDBACK_MESSAGE_MAX, FEEDBACK_PAGE_MAX } from "@/lib/feedback/types";
 import {
@@ -51,6 +51,8 @@ const wordContentFields = {
   false_friend_note: longText.optional(),
   personal_note: longText.optional(),
   tags: strArr.optional(),
+  // IELTS target band — one of IELTS_BANDS, or null to clear it.
+  difficulty: z.enum(IELTS_BANDS).nullable().optional(),
 };
 
 export const emptySchema = z.strictObject({});

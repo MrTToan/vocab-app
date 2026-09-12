@@ -23,6 +23,7 @@ Given an English word (and any partial info the learner already has), produce a 
 - example_simple: ONE everyday sentence that USES the word naturally, simple grammar.
 - example_complex: ONE richer sentence in a more complex or formal/professional scenario that USES the word.
 - false_friend_note: If the word is a common trap for Vietnamese speakers (false friend, make-vs-do type confusion, tricky preposition/collocation), give a SHORT warning. Otherwise return an empty string "".
+- difficulty: the IELTS target band the word is pitched at, one of "5.0", "6.0", "7.0", "8.0", "9.0". Rough guide: common everyday vocab 5.0–6.0, solid upper-intermediate 6.0–7.0, advanced/less-common 7.0–8.0, rare/sophisticated 8.0–9.0.
 - spelling_suggestion: If the given word looks like a MISSPELLING of a real English word, put the correctly-spelled word here; otherwise return an empty string "". Do NOT "correct" valid but uncommon words, proper nouns, technical terms, or intentional multi-word phrases.
 Keep everything correct and natural. Do not invent fake IPA if the word is unusual — approximate sensibly.`;
 
@@ -50,6 +51,7 @@ export const ENRICH_SCHEMA = {
     example_simple: { type: "string" },
     example_complex: { type: "string" },
     false_friend_note: { type: "string" },
+    difficulty: { type: "string", enum: ["5.0", "6.0", "7.0", "8.0", "9.0"] },
     spelling_suggestion: { type: "string" },
   },
   required: [
