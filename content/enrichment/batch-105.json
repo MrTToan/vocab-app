@@ -1,0 +1,170 @@
+{
+  "meta": { "batch": "batch-105", "authored_by": "claude", "count": 26 },
+  "words": {
+    "a25cfaed-7527-4c05-91ab-b934fa887337": {
+      "difficulty": "8.0",
+      "definition_en": "dishonest or fraudulent conduct by those in power that continues without stopping",
+      "ipa": "/rɪˈlentləs kəˈrʌpʃən/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-5360447a42f2841f": {
+      "synonyms": ["pertinent", "applicable", "related", "germane"],
+      "collocations": ["highly relevant", "relevant information", "relevant to the topic"],
+      "example_simple": "Please include only the information that is relevant to your application.",
+      "example_complex": "The committee dismissed the objection as not relevant to the central question under debate.",
+      "definition_en": "closely connected or appropriate to the matter at hand",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-c5e8cfa79b53d0af": {
+      "synonyms": ["dependable", "trustworthy", "trusty", "consistent"],
+      "collocations": ["reliable source", "reliable information", "highly reliable"],
+      "example_simple": "My old car is still very reliable and rarely breaks down.",
+      "example_complex": "Researchers must draw their conclusions from reliable data gathered under controlled conditions.",
+      "definition_en": "able to be trusted to work well or behave in the expected way",
+      "part_of_speech": "adjective"
+    },
+    "05d52240-8fb9-4a66-a1d0-cbfc8f83ddac": {
+      "difficulty": "6.0",
+      "definition_en": "to reduce or make less severe pain, worry, or a problem",
+      "ipa": "/rɪˈliːv/",
+      "part_of_speech": "verb"
+    },
+    "a6afe479-b627-4b37-970d-275134077927": {
+      "difficulty": "7.0",
+      "definition_en": "strong loyalty to and enthusiasm for a religion or its practices",
+      "ipa": "/rɪˈlɪdʒəs dɪˈvəʊʃən/",
+      "part_of_speech": "phrase"
+    },
+    "8d9ef8fd-92a3-41d5-b7ac-318f1c2d35bf": {
+      "difficulty": "7.0",
+      "definition_en": "an unwillingness or hesitation to do something",
+      "ipa": "/rɪˈlʌktəns/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-ed94da0b55542d04": {
+      "difficulty": "5.0",
+      "synonyms": ["stay composed", "keep cool", "stay collected", "keep your head"],
+      "collocations": ["remain calm under pressure", "try to remain calm", "remain calm and focused"],
+      "example_simple": "Even during the fire drill, the teacher told us to remain calm.",
+      "example_complex": "A good leader must remain calm under pressure, making measured decisions while others panic.",
+      "definition_en": "to stay peaceful and in control of your emotions, especially in a difficult situation",
+      "ipa": "/rɪˈmeɪn kɑːm/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "giữ bình tĩnh"
+    },
+    "29922e57-d13a-476d-9da3-934473eec153": {
+      "difficulty": "7.0",
+      "definition_en": "intended to correct or improve something, especially poor skills or a health problem",
+      "ipa": "/rɪˈmiːdiəl/",
+      "part_of_speech": "adjective"
+    },
+    "85bf5dec-70ae-4550-ad6b-d938716b84e2": {
+      "difficulty": "7.0",
+      "synonyms": ["remedial literacy programs", "reading support programs", "reading intervention programs"],
+      "definition_en": "courses designed to help students who are behind improve their reading skills",
+      "ipa": "/rɪˈmiːdiəl ˈriːdɪŋ ˈprəʊɡræmz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-083276616e30701c": {
+      "synonyms": ["recollect", "look back", "recall", "hark back"],
+      "collocations": ["reminisce about the past", "fondly reminisce", "reminisce with old friends"],
+      "example_simple": "My grandparents love to reminisce about their childhood.",
+      "example_complex": "Over dinner, the old classmates began to reminisce about the summers they had spent together decades earlier."
+    },
+    "b17dc334-c51c-495c-91dd-bc534a11c32d": {
+      "difficulty": "8.0",
+      "definition_en": "reminding you of someone or something else",
+      "ipa": "/ˌremɪˈnɪsnt/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-53229bcc9399365a": {
+      "synonyms": ["protest", "objection", "complaint", "expostulation"],
+      "collocations": ["a formal remonstrance", "issue a remonstrance", "in remonstrance"],
+      "example_simple": "The workers sent a remonstrance to the manager about the long hours.",
+      "example_complex": "Despite the villagers' vigorous remonstrance, the council approved the demolition of the old market.",
+      "vi_meaning_correction": "sự phản đối, lời phàn nàn"
+    },
+    "pubcol-w-5bda53a91705b53a": {
+      "synonyms": ["protest", "object", "complain", "expostulate"],
+      "collocations": ["remonstrate with someone", "remonstrate against a decision", "remonstrate angrily"],
+      "example_simple": "She tried to remonstrate with the referee about the unfair call.",
+      "example_complex": "The ambassador remonstrated with the government over its failure to honour the treaty.",
+      "vi_meaning_correction": "phản đối, phản kháng"
+    },
+    "pubcol-w-16bd8b218d858915": {
+      "synonyms": ["regret", "guilt", "contrition", "repentance"],
+      "collocations": ["feel remorse", "deep remorse", "without remorse"],
+      "example_simple": "He felt great remorse after lying to his parents.",
+      "example_complex": "The judge noted that the defendant had shown no remorse whatsoever for the harm he had caused."
+    },
+    "3de21261-17dd-4a41-8789-58e0d6bf80ae": {
+      "difficulty": "8.0",
+      "definition_en": "money paid to someone for work or services",
+      "ipa": "/rɪˌmjuːnəˈreɪʃn/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-8aa8e6a0d03e19fa": {
+      "synonyms": ["revival", "rebirth", "resurgence", "renewal"],
+      "collocations": ["the Italian Renaissance", "a cultural renaissance", "a renaissance in the arts"],
+      "example_simple": "Many famous paintings were created during the Renaissance.",
+      "example_complex": "The neighbourhood has enjoyed something of a renaissance, with derelict warehouses reborn as galleries and cafés."
+    },
+    "pubcol-w-82cea2d4d5cd888c": {
+      "difficulty": "6.0",
+      "ipa": "/rɪˈnjuːəbl ˈenədʒi/"
+    },
+    "f8ccef26-3578-48a9-9ef4-c521801dce80": {
+      "difficulty": "6.0",
+      "definition_en": "the process of repairing and improving a building or structure",
+      "ipa": "/ˌrenəˈveɪʃn/",
+      "part_of_speech": "noun"
+    },
+    "8ce08005-6688-4c68-ae26-d1e98dc9b2e7": {
+      "difficulty": "7.0",
+      "definition_en": "the state of being famous and widely respected",
+      "ipa": "/rɪˈnaʊn/",
+      "part_of_speech": "noun"
+    },
+    "2e4e0780-f72b-41f0-8bbd-00cb4f3a9b19": {
+      "difficulty": "8.0",
+      "definition_en": "to officially cancel a law or act of parliament",
+      "ipa": "/rɪˈpiːl/",
+      "part_of_speech": "verb"
+    },
+    "56d3f39e-2171-4f7b-aa45-a1d3c5b99959": {
+      "difficulty": "7.0",
+      "definition_en": "the ways in which a substance drives away insects, animals, or other things",
+      "ipa": "/rɪˈpelənt ɪˈfekts/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-4818db46f572d4d4": {
+      "difficulty": "5.0",
+      "synonyms": ["notify the police", "file a report", "alert the authorities"],
+      "collocations": ["report the crime to the police", "immediately report the crime", "report the crime anonymously"],
+      "example_simple": "If you see a theft, you should report the crime to the police.",
+      "example_complex": "Many victims hesitate to report the crime for fear of retaliation or of not being believed.",
+      "definition_en": "to formally inform the police or authorities that an illegal act has taken place",
+      "ipa": "/rɪˈpɔːt ðə kraɪm/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "trình báo vụ án"
+    },
+    "5e3b9e1e-a779-4afb-ab8d-dfac9dffd079": {
+      "example_simple": "The two elected members represent our town in parliament.",
+      "example_complex": "As spokesperson, she was chosen to represent the interests of thousands of workers in the negotiations.",
+      "definition_en": "to act or speak officially on behalf of someone or something",
+      "part_of_speech": "verb"
+    },
+    "cf8d5721-847a-495e-bf99-e570a977b0de": {
+      "difficulty": "8.0",
+      "definition_en": "the act of using force to control or restrain a group of people, or the holding back of feelings",
+      "ipa": "/rɪˈpreʃn/",
+      "part_of_speech": "noun"
+    },
+    "99a02f42-4aa4-4865-8a52-adba82b7e2af": {
+      "difficulty": "8.0",
+      "definition_en": "to criticise or scold someone officially and sharply",
+      "ipa": "/ˈreprɪmɑːnd/",
+      "part_of_speech": "verb"
+    }
+  }
+}

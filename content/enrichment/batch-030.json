@@ -1,0 +1,171 @@
+{
+  "meta": { "batch": "batch-030", "authored_by": "claude", "count": 26 },
+  "words": {
+    "2be5fad3-52c7-4e15-9f6b-7ee9eba9d55c": {
+      "difficulty": "6.0",
+      "definition_en": "a specific, real instance used to illustrate a point",
+      "ipa": "/ˈkɒŋkriːt ɪɡˈzɑːmpəl/",
+      "part_of_speech": "phrase"
+    },
+    "027e6159-169e-434a-b4e4-dc872757f320": {
+      "difficulty": "7.0",
+      "definition_en": "to agree with someone or share the same opinion",
+      "ipa": "/kənˈkɜː/",
+      "part_of_speech": "verb"
+    },
+    "7ade9177-c12f-42e3-8531-bec1b2d3b7ab": {
+      "difficulty": "6.0",
+      "definition_en": "to express strong public disapproval of something",
+      "ipa": "/kənˈdem/",
+      "part_of_speech": "verb"
+    },
+    "71abe65c-58dc-4843-95fc-f7f6b003a70e": {
+      "difficulty": "7.0",
+      "definition_en": "behaving as if you are superior to others",
+      "ipa": "/ˌkɒndɪˈsendɪŋ/",
+      "part_of_speech": "adjective"
+    },
+    "76e28684-3e60-4916-852b-55eb3204b78a": {
+      "difficulty": "7.0",
+      "definition_en": "making a particular situation or outcome more likely",
+      "ipa": "/kənˈdjuːsɪv/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-46c81407f015cb65": {
+      "difficulty": "6.0",
+      "synonyms": ["carry out an environmental cleanup", "run a cleanup operation", "organise an environmental clean-up"],
+      "collocations": ["conduct an environmental cleanup along the coast", "conduct an environmental cleanup after a spill", "volunteers conduct an environmental cleanup"],
+      "example_simple": "Every weekend, students conduct an environmental cleanup at the local beach.",
+      "example_complex": "The company pledged to conduct an environmental cleanup of the river before it faced legal action for the pollution.",
+      "definition_en": "to carry out an organised effort to remove waste or pollution from an area",
+      "ipa": "/kənˈdʌkt ən ɪnˌvaɪrənˈmentəl ˈkliːnʌp/",
+      "part_of_speech": "phrase"
+    },
+    "46478d2d-65be-45b6-bd75-8967e00a9b38": {
+      "difficulty": "7.0",
+      "definition_en": "to discuss something with others, or to grant a title or honour",
+      "ipa": "/kənˈfɜː/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-2f9b8bf343c4b326": {
+      "difficulty": "6.0",
+      "synonyms": ["admit to (doing) something", "own up to something", "acknowledge doing something"],
+      "collocations": ["confess to stealing the money", "confess to a crime", "finally confess to doing it"],
+      "example_simple": "He confessed to breaking the window while playing football.",
+      "example_complex": "After hours of questioning, the suspect confessed to committing the robbery.",
+      "definition_en": "to admit that you have done something wrong or secret",
+      "ipa": "/kənˈfes tuː ˈduːɪŋ ˈsʌmθɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "a04080f6-d77b-4c64-8a0b-531fe4a92dc8": {
+      "difficulty": "7.0",
+      "definition_en": "to keep someone or something within limits, or to shut in",
+      "ipa": "/kənˈfaɪn/",
+      "part_of_speech": "verb"
+    },
+    "e9588696-ab5a-4783-b4a1-ba0c8ea1d01d": {
+      "difficulty": "8.0",
+      "definition_en": "to become solid or set into a firm mass, especially as a liquid cools",
+      "ipa": "/kənˈdʒiːl ˈɪntuː/",
+      "part_of_speech": "phrase"
+    },
+    "455384ca-4414-4d3b-aaba-39b03559dd7b": {
+      "difficulty": "8.0",
+      "definition_en": "the quality of being pleasant, friendly and agreeable",
+      "ipa": "/kənˌdʒiːniˈæləti/",
+      "part_of_speech": "noun",
+      "vi_meaning_correction": "sự dễ chịu, tính hòa nhã, sự hợp tính"
+    },
+    "pubcol-w-976b52edb3448eb2": {
+      "difficulty": "6.0",
+      "synonyms": ["congratulate someone on something", "offer best wishes on"],
+      "collocations": ["congratulations on your promotion", "congratulations on passing the exam", "congratulations upon your marriage"],
+      "example_simple": "Congratulations on your new job!",
+      "example_complex": "The principal offered warm congratulations on the students' outstanding exam results.",
+      "definition_en": "an expression of praise or good wishes for someone's success or achievement",
+      "ipa": "/kənˌɡrætjʊˈleɪʃənz ɒn/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-c14dee3b5c6acc5a": {
+      "synonyms": ["parliament", "legislature", "assembly", "senate"],
+      "collocations": ["a member of Congress", "Congress passed the bill", "an act of Congress"],
+      "example_simple": "The new law was approved by Congress last week.",
+      "example_complex": "Congress debated the budget for weeks before finally reaching a compromise."
+    },
+    "pubcol-w-e02c4a06f389ccdd": {
+      "synonyms": ["awareness", "alertness", "cognisance", "mindfulness"],
+      "collocations": ["lose consciousness", "regain consciousness", "raise public consciousness"],
+      "example_simple": "She lost consciousness for a few seconds after the fall.",
+      "example_complex": "The campaign aimed to raise public consciousness about the dangers of plastic pollution."
+    },
+    "pubcol-w-f4475dac731e939f": {
+      "synonyms": ["result", "outcome", "effect", "repercussion"],
+      "collocations": ["face the consequences", "serious consequences", "a direct consequence of"],
+      "example_simple": "He didn't think about the consequences of his actions.",
+      "example_complex": "Rising sea levels are a direct consequence of global warming and threaten coastal communities."
+    },
+    "pubcol-w-338526e5c661ccb2": {
+      "synonyms": ["preservation", "protection", "safeguarding", "upkeep"],
+      "collocations": ["wildlife conservation", "energy conservation", "conservation efforts"],
+      "example_simple": "Water conservation is important during the dry season.",
+      "example_complex": "Government funding for wildlife conservation has helped several endangered species recover."
+    },
+    "pubcol-w-42dc7e4f3f947f5d": {
+      "synonyms": ["traditional", "conventional", "cautious", "old-fashioned"],
+      "collocations": ["a conservative estimate", "a conservative approach", "politically conservative"],
+      "example_simple": "My grandparents have quite conservative views on family life.",
+      "example_complex": "Even by a conservative estimate, the project will cost twice as much as originally planned.",
+      "vi_meaning_correction": "bảo thủ"
+    },
+    "06cd0b75-c4bb-40f4-83b5-7052eeb96081": {
+      "difficulty": "6.0",
+      "ipa": "/kənˈsɪdərəbli/"
+    },
+    "pubcol-w-47a721979b81ecc9": {
+      "synonyms": ["strengthen", "reinforce", "merge", "combine"],
+      "collocations": ["consolidate power", "consolidate debts", "consolidate one's position"],
+      "example_simple": "The company decided to consolidate its offices into one building.",
+      "example_complex": "After the election, the party moved quickly to consolidate its power in the region."
+    },
+    "pubcol-w-37a9d69667119778": {
+      "synonyms": ["speech sound"],
+      "collocations": ["a hard consonant", "a silent consonant", "consonant sounds"],
+      "example_simple": "The letter 'b' is a consonant.",
+      "example_complex": "Learners often struggle with consonant clusters like 'str' at the start of a word.",
+      "definition_en": "a speech sound made by partly or completely blocking the flow of air, or a letter representing it",
+      "part_of_speech": "noun"
+    },
+    "26b05d08-824f-42a0-b0ee-c17a1d7b8e35": {
+      "difficulty": "6.0",
+      "definition_en": "speech sounds made by blocking the flow of air, or the letters representing them",
+      "ipa": "/ˈkɒnsənənts/",
+      "part_of_speech": "noun"
+    },
+    "d1c0448b-56d6-426c-95b5-fb788ea944de": {
+      "difficulty": "8.0",
+      "definition_en": "clearly visible or attracting attention",
+      "ipa": "/kənˈspɪkjuəs/",
+      "part_of_speech": "adjective"
+    },
+    "fbef398e-fda1-4598-854c-71f92f0aaeb7": {
+      "difficulty": "8.0",
+      "definition_en": "a comment or complaint that is repeated again and again",
+      "ipa": "/ˈkɒnstənt rɪˈfreɪn/",
+      "part_of_speech": "phrase"
+    },
+    "29a8cd51-e19e-4263-b39d-4dbc43f0033e": {
+      "difficulty": "7.0",
+      "definition_en": "a group of stars forming a recognisable pattern, or a group of related things",
+      "ipa": "/ˌkɒnstəˈleɪʃən/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-e2907a2e99aa6aeb": {
+      "synonyms": ["electorate", "voters", "district", "voting district"],
+      "collocations": ["a marginal constituency", "represent a constituency", "a rural constituency"],
+      "example_simple": "The MP visited her constituency to meet local voters.",
+      "example_complex": "The candidate won a narrow victory in a constituency that had traditionally supported the opposition.",
+      "definition_en": "a district that elects a representative to a parliament, or the voters in it",
+      "part_of_speech": "noun"
+    }
+  }
+}

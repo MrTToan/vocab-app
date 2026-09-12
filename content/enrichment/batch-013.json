@@ -1,0 +1,191 @@
+{
+  "meta": { "batch": "batch-013", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-1625e5edf7e71784": {
+      "part_of_speech": "noun",
+      "definition_en": "a file sent together with an email message",
+      "synonyms": ["enclosure", "file", "annex", "appendix"],
+      "collocations": ["open the attachment", "send an attachment", "email attachment"],
+      "example_simple": "I forgot to add the attachment to my email.",
+      "example_complex": "The recruiter asked me to submit my CV as a PDF attachment rather than pasting it into the message body."
+    },
+    "pubcol-w-38e4e4b0ad783ff9": {
+      "part_of_speech": "verb",
+      "definition_en": "to make an effort to do something, especially something difficult",
+      "synonyms": ["try", "endeavour", "strive", "undertake"],
+      "collocations": ["attempt to solve", "make an attempt", "attempt a task"],
+      "example_simple": "She will attempt to finish the report by Friday.",
+      "example_complex": "Despite the storm, the climbers decided to attempt the summit before conditions deteriorated further."
+    },
+    "pubcol-w-600f311cf31f8446": {
+      "part_of_speech": "verb",
+      "definition_en": "to be present at an event, meeting, or place",
+      "synonyms": ["go to", "be present at", "take part in", "join"],
+      "collocations": ["attend a meeting", "attend classes", "attend an event"],
+      "example_simple": "Students must attend all their lectures.",
+      "example_complex": "Delegates from more than fifty countries attended the international summit on climate change."
+    },
+    "pubcol-w-f61b43b4164a1f11": {
+      "part_of_speech": "noun",
+      "definition_en": "the fact of being present at an event, or the number of people present",
+      "synonyms": ["presence", "turnout", "participation"],
+      "collocations": ["poor attendance", "record attendance", "take attendance"],
+      "example_simple": "The teacher checks attendance at the start of every class.",
+      "example_complex": "Falling attendance at the museum forced the trustees to rethink their pricing and marketing strategy."
+    },
+    "pubcol-w-83f945711f63fbdf": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɪn ðə ˈmiːntaɪm/",
+      "definition_en": "during the period of time between two events; meanwhile",
+      "synonyms": ["meanwhile", "in the interim", "for now", "meantime"],
+      "collocations": ["in the meantime, wait", "do something in the meantime", "in the meantime, prepare"],
+      "example_simple": "Dinner will be ready soon; in the meantime, please sit down.",
+      "example_complex": "The new software will launch next month; in the meantime, staff should continue using the existing system."
+    },
+    "pubcol-w-82197627c41452c7": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ət ðə wiːl/",
+      "definition_en": "driving or in control of a vehicle, or in charge of an organisation",
+      "synonyms": ["driving", "in control", "in charge", "steering"],
+      "collocations": ["fall asleep at the wheel", "be at the wheel", "put someone at the wheel"],
+      "example_simple": "He was at the wheel when the accident happened.",
+      "example_complex": "With a seasoned executive at the wheel, the struggling company gradually returned to profitability."
+    },
+    "pubcol-w-628912ee5037df8c": {
+      "part_of_speech": "noun",
+      "definition_en": "a way of thinking or feeling about something, often shown in behaviour",
+      "synonyms": ["outlook", "mindset", "stance", "disposition"],
+      "collocations": ["positive attitude", "change your attitude", "attitude towards work"],
+      "example_simple": "A positive attitude helps you learn faster.",
+      "example_complex": "Her professional attitude and willingness to help made her the most respected member of the team."
+    },
+    "pubcol-w-91bb694390f96ad2": {
+      "difficulty": "7.0",
+      "ipa": "/əˈtrɪbjuːt tə/"
+    },
+    "d354f2f5-c525-4f50-bdd6-e5574d8545cb": {
+      "difficulty": "8.0",
+      "part_of_speech": "noun",
+      "ipa": "/əˈtrɪʃən/",
+      "definition_en": "a gradual reduction in strength or numbers, especially of staff leaving or through steady wearing down"
+    },
+    "pubcol-w-cea71655669957ef": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə tjuːb əv ˈtuːθpeɪst/",
+      "definition_en": "a soft container that holds toothpaste and is squeezed to release it",
+      "synonyms": ["toothpaste tube"],
+      "collocations": ["squeeze a tube of toothpaste", "buy a tube of toothpaste", "an empty tube of toothpaste"],
+      "example_simple": "I need to buy a new tube of toothpaste.",
+      "example_complex": "He squeezed the last bit from the tube of toothpaste, reminding himself to add it to the shopping list."
+    },
+    "pubcol-w-02409e80441a53ce": {
+      "difficulty": "8.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə juˈnænɪməs ˈdʒʊəri/",
+      "definition_en": "a jury in which every member agrees on the verdict",
+      "synonyms": ["undivided jury"],
+      "collocations": ["reach a unanimous jury verdict", "require a unanimous jury", "a unanimous jury decision"],
+      "example_simple": "The court needs a unanimous jury to convict him.",
+      "example_complex": "After days of deliberation, the case ended in a mistrial because the court could not secure a unanimous jury."
+    },
+    "6210019c-7473-48cc-86af-2ac0e5bdebb5": {
+      "difficulty": "8.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɒˈsterəti ˈpɒləsiz/",
+      "definition_en": "government measures that cut public spending to reduce debt"
+    },
+    "4917a75f-bb1f-4b1d-85a5-90b1d8ce4137": {
+      "difficulty": "6.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˌɔːtəbaɪˈɒɡrəfi/",
+      "definition_en": "the story of a person's life written by that person"
+    },
+    "5be62e8e-6749-4142-bce3-7423dc0b3623": {
+      "difficulty": "8.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˌɔːtəˈkrætɪk ˈliːdəʃɪp/",
+      "definition_en": "a leadership style in which one person makes all decisions with little input from others"
+    },
+    "pubcol-w-f415700d4d0ce1c8": {
+      "difficulty": "7.0",
+      "ipa": "/ˌɔːtəˈmeɪʃən/"
+    },
+    "b6e25780-99d6-4b05-961f-0e1390849275": {
+      "difficulty": "9.0",
+      "part_of_speech": "phrase",
+      "ipa": "/əˈvɜːʃən kənˈdɪʃənɪŋ/",
+      "definition_en": "a form of therapy that links an unwanted habit with an unpleasant sensation to discourage it"
+    },
+    "875b039e-0d9a-4d46-a61c-bb2642c468a4": {
+      "difficulty": "8.0",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈævɪd/",
+      "definition_en": "having a keen interest in or enthusiasm for something"
+    },
+    "pubcol-w-3b3e737d6805b83e": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə wɒd əv ˈdɒləz/",
+      "definition_en": "a thick bundle or roll of banknotes",
+      "synonyms": ["roll of cash", "bundle of notes", "stack of bills"],
+      "collocations": ["pull out a wad of dollars", "carry a wad of dollars", "a thick wad of dollars"],
+      "example_simple": "He pulled a wad of dollars from his pocket.",
+      "example_complex": "The buyer counted out a wad of dollars on the counter, insisting on paying the full amount in cash."
+    },
+    "pubcol-w-03d67c263c27a453": {
+      "difficulty": "5.0",
+      "ipa": "/ˈɔːsəm/"
+    },
+    "pubcol-w-3ddc154c66a1e080": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə waɪd reɪndʒ / vəˈraɪəti əv/",
+      "definition_en": "a large number of different types of something",
+      "synonyms": ["many kinds of", "a great diversity of", "an assortment of", "numerous"],
+      "collocations": ["offer a wide range of", "a wide variety of options", "cover a wide range of topics"],
+      "example_simple": "The shop sells a wide range of products.",
+      "example_complex": "The university offers a wide variety of courses designed to suit students from a wide range of academic backgrounds."
+    },
+    "0f21db1d-cb6c-4f82-85a4-ee7243870aea": {
+      "difficulty": "6.0",
+      "part_of_speech": "noun",
+      "ipa": "/æks/",
+      "definition_en": "a tool with a heavy metal blade on a handle, used for chopping wood"
+    },
+    "pubcol-w-78b5a47a3e0c8f7d": {
+      "difficulty": "8.0",
+      "part_of_speech": "idiom",
+      "ipa": "/bæk ðə rɒŋ hɔːs/",
+      "definition_en": "to support the person or plan that turns out to be unsuccessful",
+      "synonyms": ["bet on the loser", "make a bad bet", "misjudge"],
+      "collocations": ["back the wrong horse in an election", "afraid to back the wrong horse", "investors backed the wrong horse"],
+      "example_simple": "By choosing that company, the investors backed the wrong horse.",
+      "example_complex": "Analysts who dismissed the start-up soon realised they had backed the wrong horse when its rival collapsed."
+    },
+    "pubcol-w-fc2def45f300cd14": {
+      "synonyms": ["backfire", "boomerang", "rebound", "misfire"],
+      "collocations": ["the plan backfired", "backfire badly", "backfire on someone"],
+      "example_simple": "His joke backfired and made everyone angry.",
+      "example_complex": "The company's aggressive cost-cutting backfired, driving away its most experienced employees."
+    },
+    "pubcol-w-b26ffa8d0bcda2c7": {
+      "synonyms": ["rescue", "financial rescue", "relief", "bail-out"],
+      "collocations": ["government bailout", "bank bailout", "receive a bailout"],
+      "example_simple": "The bank needed a bailout to survive the crisis.",
+      "example_complex": "Critics argued that the taxpayer-funded bailout rewarded the very institutions responsible for the financial collapse."
+    },
+    "pubcol-w-55028ebd87f964b0": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˈbælənst ˈdaɪət/",
+      "definition_en": "a diet containing the right variety and amounts of food for good health",
+      "synonyms": ["healthy diet", "nutritious diet", "well-rounded diet"],
+      "collocations": ["eat a balanced diet", "maintain a balanced diet", "a balanced diet and exercise"],
+      "example_simple": "A balanced diet keeps your body healthy.",
+      "example_complex": "Nutritionists stress that a balanced diet, rich in vegetables and whole grains, does more for long-term health than any supplement."
+    }
+  }
+}

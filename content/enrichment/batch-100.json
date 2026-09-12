@@ -1,0 +1,215 @@
+{
+  "meta": { "batch": "batch-100", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-3238899113f03f81": {
+      "difficulty": "6.0",
+      "ipa": "/ˈpʌblɪk ˈhelθkeə/"
+    },
+    "361aebf3-ef68-49c5-b6ec-9ca666e66321": {
+      "difficulty": "7.0",
+      "definition_en": "a strong feeling of anger or shock shared by many people in society",
+      "ipa": "/ˈpʌblɪk ˈaʊtreɪdʒ/",
+      "part_of_speech": "phrase"
+    },
+    "2946d106-f84a-4c4d-a699-035bc157df11": {
+      "difficulty": "6.0",
+      "definition_en": "the soft, fleshy part of a fruit or vegetable",
+      "ipa": "/pʌlp/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-3d7722c87a85ae10": {
+      "difficulty": "8.0",
+      "synonyms": ["vibrant nightlife", "buzzing nightlife", "lively nightlife"],
+      "collocations": ["the city's pulsating nightlife", "enjoy the pulsating nightlife", "a resort known for its pulsating nightlife"],
+      "example_simple": "The city is famous for its pulsating nightlife.",
+      "example_complex": "Tourists flock to the coastal resort for its pulsating nightlife, where clubs and bars stay open until dawn.",
+      "definition_en": "an exciting, energetic scene of clubs and bars at night",
+      "ipa": "/ˈpʌlseɪtɪŋ ˈnaɪtlaɪf/",
+      "part_of_speech": "phrase"
+    },
+    "be492ffd-07f6-4971-a2a7-ba40d8fb0df2": {
+      "difficulty": "7.0",
+      "definition_en": "an expert who is often asked to give their opinions in the media",
+      "ipa": "/ˈpʌndɪt/",
+      "part_of_speech": "noun"
+    },
+    "499c8504-286a-43e1-86fc-78eec71b913f": {
+      "difficulty": "8.0",
+      "definition_en": "an occasion when something is claimed to have been seen but is not proven",
+      "ipa": "/pəˈpɔːtɪd ˈsaɪtɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "48131ef6-3c75-4762-a223-5d93c1d63ced": {
+      "difficulty": "8.0",
+      "definition_en": "according to what is claimed or reported, though not proven to be true",
+      "ipa": "/pəˈpɔːtɪdli/",
+      "part_of_speech": "adverb"
+    },
+    "6402a924-501a-4873-8bc2-234065688930": {
+      "difficulty": "5.0",
+      "definition_en": "a small bag for carrying money, or a woman's handbag",
+      "ipa": "/pɜːs/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-706cf2c144a90af6": {
+      "difficulty": "6.0",
+      "synonyms": ["follow a career", "build a career", "embark on a career"],
+      "collocations": ["pursue a career in medicine", "pursue a successful career", "pursue a career abroad"],
+      "example_simple": "She decided to pursue a career in teaching.",
+      "example_complex": "After graduating, he chose to pursue a career in international law rather than join the family business.",
+      "definition_en": "to work towards developing a particular profession",
+      "ipa": "/pəˈsjuː ə kəˈrɪə/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-e21ea26266c6d768": {
+      "difficulty": "6.0",
+      "synonyms": ["chase goals", "work towards goals", "strive for goals"],
+      "collocations": ["pursue personal goals", "pursue ambitious goals", "relentlessly pursue goals"],
+      "example_simple": "You should pursue your goals with determination.",
+      "example_complex": "The company encourages employees to pursue long-term goals that align with its wider mission.",
+      "definition_en": "to make continuous efforts to achieve aims or objectives",
+      "ipa": "/pəˈsjuː ɡəʊlz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-05557dc9605cb133": {
+      "difficulty": "6.0",
+      "synonyms": ["resist", "oppose", "object"],
+      "collocations": ["push back against a plan", "push back on the proposal", "meet strong push back"],
+      "example_simple": "Many workers pushed back against the new rules.",
+      "example_complex": "Residents pushed back hard against the proposed development, arguing it would ruin the neighbourhood's character.",
+      "definition_en": "to strongly resist or oppose a plan, idea, or change",
+      "ipa": "/pʊʃ bæk/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-6da8385807e20597": {
+      "synonyms": ["aggressive", "forceful", "assertive", "insistent"],
+      "collocations": ["a pushy salesperson", "overly pushy", "pushy parents"],
+      "example_simple": "The salesman was too pushy, so I left the shop.",
+      "example_complex": "She disliked how pushy some colleagues became when competing for a promotion."
+    },
+    "pubcol-w-b542b454c5025ce1": {
+      "difficulty": "6.0",
+      "synonyms": ["end", "halt", "stop", "curb"],
+      "collocations": ["put a stop to the rumours", "put a stop to bullying", "put a stop to it once and for all"],
+      "example_simple": "The teacher put a stop to the fighting.",
+      "example_complex": "The government introduced strict laws to put a stop to illegal logging in the region.",
+      "definition_en": "to make an activity or behaviour end, especially one you disapprove of",
+      "ipa": "/pʊt ə stɒp tuː/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-ce87c21ff964ace7": {
+      "difficulty": "6.0",
+      "synonyms": ["end", "stop", "terminate", "abolish"],
+      "collocations": ["put an end to the conflict", "put an end to the practice", "finally put an end to it"],
+      "example_simple": "They wanted to put an end to the argument.",
+      "example_complex": "International pressure eventually put an end to the regime's abuses.",
+      "definition_en": "to stop something from continuing or existing",
+      "ipa": "/pʊt ən end tuː/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-b17ab342fdb34726": {
+      "difficulty": "6.0",
+      "synonyms": ["set aside", "save", "reserve", "disregard"],
+      "collocations": ["put aside some money", "put aside your differences", "put aside time"],
+      "example_simple": "I try to put aside some money each month.",
+      "example_complex": "The two leaders agreed to put aside their political differences for the good of the country.",
+      "definition_en": "to save something for later, or to stop thinking about something",
+      "ipa": "/pʊt əˈsaɪd/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-33ec78543c134c4d": {
+      "difficulty": "5.0",
+      "synonyms": ["set down", "place down", "lay down"],
+      "collocations": ["put down the phone", "put down your bags", "put the baby down"],
+      "example_simple": "Please put down your pen when you finish.",
+      "example_complex": "She carefully put down the fragile vase before answering the door.",
+      "definition_en": "to place something you are holding onto a surface",
+      "ipa": "/pʊt daʊn/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-ef1c2f1c13e7823f": {
+      "difficulty": "7.0",
+      "synonyms": ["implement", "enforce", "apply", "enact"],
+      "collocations": ["put the plan into effect", "put new rules into effect", "put a policy into effect"],
+      "example_simple": "The new law was put into effect last week.",
+      "example_complex": "Once the reforms are put into effect, the tax system will become significantly simpler.",
+      "definition_en": "to make a plan, law, or decision start to operate",
+      "ipa": "/pʊt ˈɪntuː ɪˈfekt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-87880401a0be46d2": {
+      "difficulty": "7.0",
+      "synonyms": ["value highly", "prize", "treasure", "esteem"],
+      "collocations": ["put much value on education", "put much value on honesty", "put great value on"],
+      "example_simple": "They put much value on family time.",
+      "example_complex": "Employers increasingly put much value on communication skills as well as technical ability.",
+      "definition_en": "to consider something as very important or worthwhile",
+      "ipa": "/pʊt mʌtʃ ˈvæljuː ɒn/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-b1425b245cf9b8f4": {
+      "difficulty": "6.0",
+      "ipa": "/pʊt ɒf/"
+    },
+    "pubcol-w-0b9d1985940f12fc": {
+      "difficulty": "7.0",
+      "synonyms": ["pretend", "fake it", "put on a show", "playact"],
+      "collocations": ["just putting on an act", "put on an act for the cameras", "see through the act"],
+      "example_simple": "He was not really upset; he was just putting on an act.",
+      "example_complex": "She realised her friend had been putting on an act the whole time to gain her sympathy.",
+      "definition_en": "to pretend to have feelings or qualities that you do not really have",
+      "ipa": "/pʊt ɒn ən ækt/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-5bb7ae19df7c5dc0": {
+      "difficulty": "7.0",
+      "synonyms": ["postpone", "suspend", "shelve", "delay"],
+      "collocations": ["put the project on ice", "put plans on ice", "the deal was put on ice"],
+      "example_simple": "The company put the project on ice until next year.",
+      "example_complex": "Due to budget cuts, the ambitious expansion plans were put on ice indefinitely.",
+      "definition_en": "to postpone or suspend something for a period of time",
+      "ipa": "/pʊt ɒn aɪs/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-c37e652244a14843": {
+      "difficulty": "8.0",
+      "synonyms": ["say the wrong thing", "misspeak", "blunder", "commit a gaffe"],
+      "collocations": ["really put my foot in my mouth", "tend to put your foot in your mouth", "put his foot in his mouth again"],
+      "example_simple": "I put my foot in my mouth when I asked about her job.",
+      "example_complex": "By congratulating her on a pregnancy she hadn't announced, he well and truly put his foot in his mouth.",
+      "definition_en": "to say something embarrassing or tactless without meaning to",
+      "ipa": "/pʊt wʌnz fʊt ɪn wʌnz maʊθ/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-6bdef56f3dde64cc": {
+      "difficulty": "6.0",
+      "synonyms": ["pressure", "pressurise", "push", "coerce"],
+      "collocations": ["put pressure on the government", "put pressure on someone to decide", "put constant pressure on"],
+      "example_simple": "Don't put pressure on him to make a quick decision.",
+      "example_complex": "Environmental groups continue to put pressure on companies to reduce their carbon emissions.",
+      "definition_en": "to try to persuade or force someone to do something",
+      "ipa": "/pʊt ˈpreʃə ɒn/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-edc59ed43953775e": {
+      "difficulty": "6.0",
+      "synonyms": ["pressure", "pressurise", "push", "coerce"],
+      "collocations": ["put pressure on the authorities", "put pressure on him", "put enormous pressure on"],
+      "example_simple": "Fans put pressure on the team to win.",
+      "example_complex": "Rising living costs put enormous pressure on families to cut back their spending.",
+      "definition_en": "to try to force or strongly persuade someone to do something",
+      "ipa": "/pʊt ˈpreʃə ɒn/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-51869c38dcc26cd0": {
+      "difficulty": "6.0",
+      "synonyms": ["accommodate", "host", "lodge", "house"],
+      "collocations": ["put me up for the night", "put up a guest", "happy to put you up"],
+      "example_simple": "My friend put me up for a few days when I visited.",
+      "example_complex": "They kindly offered to put us up during the conference so we wouldn't need a hotel.",
+      "definition_en": "to let someone stay at your home for a short time",
+      "ipa": "/pʊt ˈsʌmbədi ʌp/",
+      "part_of_speech": "phrase"
+    }
+  }
+}

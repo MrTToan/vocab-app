@@ -1,0 +1,156 @@
+{
+  "meta": { "batch": "batch-035", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-52934c29ca4a1a75": {
+      "synonyms": ["assign", "entrust", "hand over", "depute"],
+      "collocations": ["delegate authority", "delegate responsibility", "delegate tasks"],
+      "example_simple": "Good managers know how to delegate tasks to their team.",
+      "example_complex": "Rather than micromanaging every detail, she learned to delegate responsibility to capable colleagues and focus on strategy."
+    },
+    "pubcol-w-a5cbba149e326346": {
+      "synonyms": ["fragile", "dainty", "fine", "sensitive"],
+      "collocations": ["delicate balance", "delicate situation", "delicate fabric"],
+      "example_simple": "The vase is very delicate, so please handle it with care.",
+      "example_complex": "Negotiators had to maintain a delicate balance between competing interests to reach a lasting agreement."
+    },
+    "pubcol-w-1a8985602f34b95c": {
+      "synonyms": ["charming", "lovely", "pleasant", "enjoyable"],
+      "collocations": ["delightful surprise", "delightful experience", "absolutely delightful"],
+      "example_simple": "We had a delightful evening by the beach.",
+      "example_complex": "The novel offers a delightful blend of wit and warmth that keeps readers thoroughly engaged."
+    },
+    "1f3c9e3d-f1bd-40f4-a60e-e3feca611a0d": {
+      "difficulty": "8.0",
+      "definition_en": "to describe or portray something precisely, or to mark out its boundaries",
+      "ipa": "/dɪˈlɪneɪt/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-4809dc5163be7402": {
+      "difficulty": "8.0",
+      "ipa": "/dɪˈlɪneɪt/"
+    },
+    "0cd1a517-b684-485e-94ad-473e272b1d8c": {
+      "difficulty": "8.0",
+      "definition_en": "in an extremely excited or uncontrolled way, or in a state of delirium",
+      "ipa": "/dɪˈlɪriəsli/",
+      "part_of_speech": "adverb"
+    },
+    "pubcol-w-736fcab46d3c1830": {
+      "synonyms": ["estuary", "floodplain", "alluvial plain"],
+      "collocations": ["river delta", "the Mekong Delta", "fertile delta"],
+      "example_simple": "The Mekong Delta is famous for its rice fields.",
+      "example_complex": "Sediment carried downstream over millennia gradually formed the vast, fertile delta at the river's mouth."
+    },
+    "45b6c0ee-1b33-4b64-8b72-de5e2310a7e7": {
+      "difficulty": "8.0",
+      "definition_en": "a false belief or impression firmly held despite evidence to the contrary",
+      "ipa": "/dɪˈluːʒən/",
+      "part_of_speech": "noun"
+    },
+    "5df4c899-da61-4f3b-9274-055ae19385f8": {
+      "difficulty": "8.0",
+      "definition_en": "setting or marking out the boundaries or limits of something",
+      "ipa": "/ˈdiːmɑːkeɪtɪŋ/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-087522e1e2687308": {
+      "synonyms": ["senility", "cognitive decline", "mental deterioration"],
+      "collocations": ["develop dementia", "early-onset dementia", "dementia patients"],
+      "example_simple": "Her grandfather has dementia and often forgets people's names.",
+      "example_complex": "Researchers are investigating whether lifestyle factors can delay the onset of dementia in older adults."
+    },
+    "d971601d-cf21-4f47-b278-72801b24b37d": {
+      "difficulty": "8.0",
+      "definition_en": "a person's death, or the end or failure of something",
+      "ipa": "/dɪˈmaɪz/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-b2309b916c9f1055": {
+      "synonyms": ["self-government", "republic", "representative government"],
+      "collocations": ["parliamentary democracy", "liberal democracy", "defend democracy"],
+      "example_simple": "In a democracy, citizens vote to choose their leaders.",
+      "example_complex": "A healthy democracy depends on an informed electorate and a free press that holds those in power accountable."
+    },
+    "47053e65-211a-4c74-837c-864ecc82b401": {
+      "difficulty": "8.0"
+    },
+    "pubcol-w-dd3f5d096b993566": {
+      "synonyms": ["destroy", "tear down", "raze", "flatten"],
+      "collocations": ["demolish a building", "demolish an argument", "completely demolish"],
+      "example_simple": "They plan to demolish the old factory next month.",
+      "example_complex": "The lawyer methodically demolished the prosecution's case, exposing inconsistencies in every witness statement."
+    },
+    "pubcol-w-48b18b140461cdc1": {
+      "difficulty": "6.0",
+      "ipa": "/ˈdemənstreɪt/"
+    },
+    "pubcol-w-21fe1cdf28476fee": {
+      "synonyms": ["discouraged", "disheartened", "dispirited", "uninspired"],
+      "collocations": ["feel demotivated", "demotivated employees", "become demotivated"],
+      "example_simple": "I felt demotivated after failing the exam twice.",
+      "example_complex": "Constant criticism without any recognition can leave even the most dedicated staff feeling demotivated and disengaged."
+    },
+    "pubcol-w-457c15a7e8a9dbde": {
+      "synonyms": ["jean fabric", "dungaree", "blue jean cloth"],
+      "collocations": ["denim jacket", "denim jeans", "blue denim"],
+      "example_simple": "She wore a blue denim jacket to the concert.",
+      "example_complex": "Once regarded purely as workwear, denim has evolved into a staple of casual fashion worldwide."
+    },
+    "pubcol-w-c8e834d8c5ac678f": {
+      "synonyms": ["thick", "compact", "crowded", "concentrated"],
+      "collocations": ["dense fog", "densely populated", "dense vegetation"],
+      "example_simple": "The forest was so dense that little light reached the ground.",
+      "example_complex": "Navigating the dense fog, the ship's captain relied entirely on radar to avoid the rocky coastline."
+    },
+    "pubcol-w-763fc2f578a7ef98": {
+      "difficulty": "6.0",
+      "synonyms": ["thick forests", "dense woodland", "lush jungle"],
+      "collocations": ["clear dense forests", "dense tropical forests", "dense forest cover"],
+      "example_simple": "Dense forests once covered most of this region.",
+      "example_complex": "The dense forests of the Amazon basin play a vital role in regulating the planet's climate.",
+      "definition_en": "areas thickly covered with closely growing trees",
+      "ipa": "/dens ˈfɒrɪsts/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-bbbf26a1fbb280a5": {
+      "synonyms": ["concentration", "thickness", "compactness"],
+      "collocations": ["population density", "high density", "bone density"],
+      "example_simple": "The population density of the city is very high.",
+      "example_complex": "Engineers measured the density of the material to determine whether it could withstand the required load."
+    },
+    "pubcol-w-53f3a5d432f70ed7": {
+      "synonyms": ["dint", "indentation", "hollow", "ding"],
+      "collocations": ["make a dent", "a dent in the car", "put a dent in"],
+      "example_simple": "There is a small dent in the side of my car.",
+      "example_complex": "The unexpected repairs made a serious dent in the company's quarterly profits."
+    },
+    "pubcol-w-602d9caf0b398a70": {
+      "synonyms": ["portray", "represent", "illustrate", "describe"],
+      "collocations": ["depict a scene", "vividly depict", "depict as"],
+      "example_simple": "The painting depicts a quiet village by the sea.",
+      "example_complex": "The documentary depicts the harsh realities faced by refugees fleeing conflict."
+    },
+    "pubcol-w-c1e1755345bde510": {
+      "difficulty": "8.0",
+      "synonyms": ["damage the ozone layer", "thin the ozone layer", "erode the ozone layer"],
+      "collocations": ["chemicals that deplete the ozone layer", "gradually deplete the ozone layer", "deplete the ozone layer significantly"],
+      "example_simple": "CFCs can deplete the ozone layer that protects us from the sun.",
+      "example_complex": "International agreements were introduced to ban substances that deplete the ozone layer and expose life to harmful ultraviolet radiation.",
+      "definition_en": "to reduce or destroy the amount of ozone in the upper atmosphere",
+      "ipa": "/dɪˈpliːt ðə ˈəʊzəʊn ˈleɪə/",
+      "part_of_speech": "phrase"
+    },
+    "6d145553-c261-4e9f-ad43-de49f9fc45db": {
+      "difficulty": "8.0",
+      "definition_en": "to feel or express strong disapproval of or regret about something",
+      "ipa": "/dɪˈplɔː/",
+      "part_of_speech": "verb"
+    },
+    "515ade26-9165-4d6f-8759-0ec8e1fb8a5c": {
+      "difficulty": "7.0",
+      "definition_en": "to prevent someone from having or keeping something they need or want",
+      "ipa": "/dɪˈpraɪv/",
+      "part_of_speech": "verb"
+    }
+  }
+}

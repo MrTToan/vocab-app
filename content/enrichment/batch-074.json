@@ -1,0 +1,211 @@
+{
+  "meta": { "batch": "batch-074", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-81a3f7e0384b01a7": {
+      "synonyms": ["freedom", "release", "emancipation", "deliverance"],
+      "collocations": ["national liberation", "women's liberation", "the liberation of a city"],
+      "example_simple": "The liberation of the town brought great joy to its people.",
+      "example_complex": "The movement fought tirelessly for the liberation of oppressed communities from decades of colonial rule."
+    },
+    "b96f6ca1-aa9c-4163-a647-b9d541daa810": {
+      "difficulty": "8.0",
+      "definition_en": "a person who writes the text or words for an opera or other extended musical work",
+      "ipa": "/lɪˈbretɪst/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-352f9d142e5dcb7a": {
+      "difficulty": "6.0",
+      "synonyms": ["lifespan", "longevity", "life span"],
+      "collocations": ["average life expectancy", "increase life expectancy", "life expectancy at birth"],
+      "example_simple": "Life expectancy in the country has risen over the last fifty years.",
+      "example_complex": "Improvements in healthcare and nutrition have significantly raised life expectancy across the developing world.",
+      "definition_en": "the average number of years a person or group is expected to live",
+      "ipa": "/laɪf ɪkˌspektənsi/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-a27d6c2457175650": {
+      "difficulty": "6.0",
+      "synonyms": ["life sentence", "life term"],
+      "collocations": ["sentenced to life imprisonment", "face life imprisonment", "life imprisonment without parole"],
+      "example_simple": "The judge sentenced him to life imprisonment for the crime.",
+      "example_complex": "The court handed down a sentence of life imprisonment, ruling that the offender posed a permanent danger to society.",
+      "definition_en": "the punishment of being sent to prison for the rest of one's life",
+      "ipa": "/laɪf ɪmˈprɪzənmənt/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-36dead8299839cf0": {
+      "difficulty": "7.0",
+      "synonyms": ["a hectic lifestyle", "the fast life", "a high-pressure life"],
+      "collocations": ["live life in the fast lane", "enjoy life in the fast lane", "the fast lane of city living"],
+      "example_simple": "After years of living life in the fast lane, he moved to a quiet village.",
+      "example_complex": "The novel portrays a banker seduced by life in the fast lane, only to discover the emptiness behind the money and glamour.",
+      "definition_en": "a busy, exciting and often risky way of living, full of activity and expense",
+      "ipa": "/laɪf ɪn ðə ˈfɑːst leɪn/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "cuộc sống hối hả, sôi động và đầy rủi ro"
+    },
+    "pubcol-w-3ae6d49445235937": {
+      "difficulty": "5.0",
+      "synonyms": ["life preserver", "flotation device", "buoyancy aid"],
+      "collocations": ["wear a life jacket", "put on a life vest", "an inflatable life jacket"],
+      "example_simple": "Everyone on the boat must wear a life jacket.",
+      "example_complex": "Passengers were instructed to fasten their life vests securely before the small ferry set out across the choppy water.",
+      "definition_en": "a sleeveless garment that keeps a person afloat in water",
+      "ipa": "/laɪf vest ˈdʒækɪt/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-fae6a10a7a4301f2": {
+      "difficulty": "6.0",
+      "synonyms": ["breeze", "gust", "gale"],
+      "collocations": ["a light wind", "a strong wind", "gale-force winds"],
+      "example_simple": "A light wind cooled us as we walked along the beach.",
+      "example_complex": "The forecast warned of gale-force winds overnight, so the harbour authorities advised all small vessels to remain in port.",
+      "definition_en": "words describing the strength of moving air, from a gentle breeze to a fierce gale",
+      "ipa": "/wɪnd/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-850c2311b7b06cac": {
+      "difficulty": "8.0",
+      "synonyms": ["overjoyed", "delighted", "thrilled", "over the moon"],
+      "collocations": ["be like a dog with two tails", "grinning like a dog with two tails"],
+      "example_simple": "When she won the prize, she was like a dog with two tails.",
+      "example_complex": "After hearing that his book had been accepted for publication, he walked around all day like a dog with two tails.",
+      "definition_en": "extremely happy and pleased about something",
+      "ipa": "/laɪk ə dɒɡ wɪð tuː teɪlz/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "vui mừng khôn xiết, mừng rơn"
+    },
+    "pubcol-w-15a8dbc931bc53e9": {
+      "difficulty": "7.0",
+      "synonyms": ["out of place", "ill at ease", "uncomfortable"],
+      "collocations": ["feel like a fish out of water", "look like a fish out of water"],
+      "example_simple": "At the fancy party, I felt like a fish out of water.",
+      "example_complex": "Having spent his whole life in the countryside, he was like a fish out of water amid the noise and crowds of the capital.",
+      "definition_en": "feeling uncomfortable because you are in an unfamiliar or unsuitable situation",
+      "ipa": "/laɪk ə fɪʃ aʊt əv ˈwɔːtə/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-2287a7e7224f7b36": {
+      "difficulty": "7.0",
+      "synonyms": ["refreshing change", "welcome novelty", "new energy"],
+      "collocations": ["like a breath of fresh air", "be a breath of fresh air", "feel like a breath of fresh air"],
+      "example_simple": "Her cheerful attitude was like a breath of fresh air in the office.",
+      "example_complex": "After years of dull, predictable leadership, the new director's bold ideas came like a breath of fresh air to the whole team.",
+      "definition_en": "someone or something new and refreshing that brings pleasant change",
+      "ipa": "/laɪk ə breθ əv freʃ eə/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-35ad97c0d1b26999": {
+      "difficulty": "6.0",
+      "ipa": "/ˈlaɪkwaɪz/"
+    },
+    "pubcol-w-26871c9240055918": {
+      "synonyms": ["persistent", "enduring", "prolonged", "remaining"],
+      "collocations": ["a lingering doubt", "a lingering smell", "lingering pain"],
+      "example_simple": "There was a lingering smell of smoke in the room.",
+      "example_complex": "Despite the official apology, a lingering sense of distrust remained between the two governments for years."
+    },
+    "pubcol-w-0d1937d5017814b7": {
+      "synonyms": ["language-related", "verbal", "lexical"],
+      "collocations": ["linguistic skills", "linguistic diversity", "linguistic analysis"],
+      "example_simple": "Children develop their linguistic skills very quickly.",
+      "example_complex": "The study examined the linguistic diversity of the region, where more than a dozen languages coexist within a single community."
+    },
+    "4077cc61-35a3-4bd8-99d0-0821637e8096": {
+      "difficulty": "8.0",
+      "definition_en": "to treat someone as a celebrity or object of great admiration",
+      "ipa": "/ˈlaɪənaɪz/",
+      "part_of_speech": "verb"
+    },
+    "9998b082-b0bc-42c5-9d7a-c7fad9ff4e87": {
+      "difficulty": "8.0",
+      "definition_en": "the process by which solid rock becomes molten or fluid, usually through intense heat",
+      "ipa": "/ˈlɪkwɪfaɪɪŋ əv ðə rɒk/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-f4eb97c6e6da786b": {
+      "difficulty": "6.0",
+      "ipa": "/ˈlɪtərəli/"
+    },
+    "pubcol-w-489998b2f1ec0fcf": {
+      "synonyms": ["written", "bookish", "belletristic"],
+      "collocations": ["literary criticism", "a literary work", "literary tradition"],
+      "example_simple": "She won an award for her literary work.",
+      "example_complex": "The professor's lectures explored how the literary tradition of the period reflected the political anxieties of its writers."
+    },
+    "pubcol-w-5f04582cb1b0f1be": {
+      "synonyms": ["dump rubbish", "throw trash", "strew"],
+      "collocations": ["litter the streets", "drop litter", "litter the ground"],
+      "example_simple": "Please do not litter in the park.",
+      "example_complex": "Careless visitors continued to litter the beach, leaving plastic bottles and wrappers scattered across the sand."
+    },
+    "pubcol-w-19f786fa753f5aba": {
+      "difficulty": "9.0",
+      "synonyms": ["foul-smelling herb", "pungent plant"],
+      "collocations": ["a strong-smelling herb", "an unpleasant odour", "a pungent plant"],
+      "example_simple": "This herb has a truly terrible smell.",
+      "example_complex": "The gardener warned us that although the plant looked harmless, its leaves gave off a truly dreadful smell when crushed.",
+      "definition_en": "a herb or plant noted for its strongly unpleasant smell",
+      "ipa": "/ˈlɪtl ˈdiːɒn/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-dbe84475bbb913b0": {
+      "difficulty": "6.0",
+      "synonyms": ["live in luxury", "live in comfort", "live it up"],
+      "collocations": ["live like a king", "live like royalty", "live like a king on a small budget"],
+      "example_simple": "With his new salary, he could live like a king.",
+      "example_complex": "Thanks to the favourable exchange rate, the travellers found they could live like kings in the small coastal town for very little money.",
+      "definition_en": "to live in great comfort and luxury",
+      "ipa": "/lɪv laɪk ə kɪŋ/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-f1b56fcda5f7a242": {
+      "difficulty": "5.0",
+      "synonyms": ["live show", "concert", "gig"],
+      "collocations": ["a live performance", "enjoy live music", "watch a live performance"],
+      "example_simple": "We went to a live music performance last night.",
+      "example_complex": "There is an energy to a live performance that no studio recording can quite capture, as the audience and musicians feed off one another.",
+      "definition_en": "music or a show performed in front of an audience in real time",
+      "ipa": "/laɪv pəˈfɔːməns laɪv ˈmjuːzɪk/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-4bb8cc54ad518d7c": {
+      "difficulty": "7.0",
+      "synonyms": ["energetic and cheerful", "full of energy", "vivacious"],
+      "collocations": ["lively and in high spirits", "in high spirits", "feel lively"],
+      "example_simple": "The children were lively and in high spirits at the party.",
+      "example_complex": "Despite the long journey, the group arrived lively and in high spirits, eager to begin their tour of the city.",
+      "definition_en": "full of energy, cheerful and enthusiastic",
+      "ipa": "/ˈlaɪvli ənd ɪn haɪ ˈspɪrɪts/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-ef91f2ce51a9c947": {
+      "difficulty": "6.0",
+      "synonyms": ["cost of living", "household expenses", "day-to-day costs"],
+      "collocations": ["cover living expenses", "rising living expenses", "monthly living expenses"],
+      "example_simple": "My part-time job helps me pay my living expenses.",
+      "example_complex": "Many students take on debt because their scholarships fail to cover the full cost of tuition and everyday living expenses.",
+      "definition_en": "the money needed to pay for everyday needs such as food, rent and bills",
+      "ipa": "/ˈlɪvɪŋ ɪkˈspensɪz/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-f836dfefc4f2dc8d": {
+      "difficulty": "5.0",
+      "synonyms": ["in a hurry", "hurriedly", "hastily"],
+      "collocations": ["be in a rush", "leave in a hurry", "in a mad rush"],
+      "example_simple": "I was in a rush this morning, so I skipped breakfast.",
+      "example_complex": "She left the house in such a hurry that she forgot her keys and had to wait outside until her flatmate returned.",
+      "definition_en": "doing something quickly because there is little time",
+      "ipa": "/ɪn ə rʌʃ ˈhʌri/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "vội vã, gấp gáp (in a rush / in a hurry)"
+    },
+    "38c2233d-8d67-468e-85ec-3005291568c9": {
+      "difficulty": "9.0",
+      "synonyms": ["cargo transfer rates", "ballast discharge rates"],
+      "definition_en": "the speed at which cargo is loaded onto a ship and ballast water is removed from it",
+      "ipa": "/ˈləʊdɪŋ ənd diːˈbæləstɪŋ reɪts/",
+      "part_of_speech": "phrase"
+    }
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "meta": { "batch": "batch-081", "authored_by": "claude", "count": 25 },
+  "words": {
+    "57239aa4-fcb9-4b5b-ad6f-9a303f03344f": {
+      "difficulty": "7.0",
+      "definition_en": "space travel carried out with a human crew on board",
+      "ipa": "/mænd ˈspeɪsflaɪt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-077549a7d3b460e3": {
+      "difficulty": "7.0",
+      "synonyms": ["happy birthday", "best wishes on your birthday", "compliments of the day"],
+      "collocations": ["wish someone many happy returns", "many happy returns of the day", "send many happy returns"],
+      "example_simple": "She smiled and said, \"Many happy returns of the day!\" as she handed him the gift.",
+      "example_complex": "Raising his glass, the old gentleman offered his warmest wishes, \"Many happy returns of the day,\" to the birthday girl.",
+      "definition_en": "a traditional expression used to wish someone a happy birthday",
+      "ipa": "/ˈmeni ˈhæpi rɪˈtɜːnz əv ðə deɪ/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-d2b272d75494ab78": {
+      "difficulty": "5.0",
+      "synonyms": ["tidy the bed", "arrange the bedclothes", "straighten the sheets"],
+      "collocations": ["make the bed every morning", "make your bed neatly", "help make the beds"],
+      "example_simple": "I always make the bed before I leave for work.",
+      "example_complex": "Although she was exhausted, she still took a moment to make the bed and tidy the room before her guests arrived.",
+      "definition_en": "to tidy the sheets and covers of a bed after sleeping",
+      "ipa": "/meɪk ðə bed/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-908897f614cc47da": {
+      "synonyms": ["minor", "slight", "negligible", "insignificant"],
+      "collocations": ["a marginal improvement", "a marginal difference", "marginal cost"],
+      "example_simple": "There was only a marginal difference between the two prices.",
+      "example_complex": "The new policy produced only a marginal reduction in emissions, far below what campaigners had hoped for."
+    },
+    "c9e0ca00-5f4b-416b-88dc-91d778c92534": {
+      "difficulty": "7.0",
+      "definition_en": "women who are pushed to the edge of society and denied equal opportunities",
+      "ipa": "/ˈmɑːdʒɪnəlaɪzd ˈwɪmɪn/",
+      "part_of_speech": "phrase"
+    },
+    "7177af4a-7d00-406a-b1f6-74261bfe544f": {
+      "difficulty": "7.0",
+      "ipa": "/ˈmɑːdʒɪnəli/"
+    },
+    "c1578a6b-e255-4387-840a-e6f5b00389b9": {
+      "difficulty": "7.0",
+      "ipa": "/mɑːkt/"
+    },
+    "e8d2b946-5092-4540-9394-91fae134c1f8": {
+      "difficulty": "7.0",
+      "ipa": "/ˈmɑːkɪdli/"
+    },
+    "62b3a013-db85-4108-a51c-c3273a96dd26": {
+      "difficulty": "8.0",
+      "synonyms": ["tree sap", "pith", "resin"],
+      "definition_en": "the soft pith or sap-like substance released from the trunk or branches of trees",
+      "ipa": "/ˈmæroʊ dɪsˈtʃɑːdʒd baɪ triːz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-513ce9d53722c8a1": {
+      "difficulty": "7.0",
+      "synonyms": ["marry into wealth", "marry a fortune", "wed for money"],
+      "collocations": ["marry money", "marry into money", "hope to marry money"],
+      "example_simple": "Her family expected her to marry money rather than fall in love.",
+      "example_complex": "In many nineteenth-century novels, characters scheme to marry money in order to secure a comfortable social position.",
+      "definition_en": "to marry someone who is rich, especially for financial gain",
+      "ipa": "/ˈmæri ˈmʌni/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-60cdf5a63ee68e7c": {
+      "synonyms": ["pouched mammal", "metatherian"],
+      "collocations": ["a native marsupial", "marsupial species", "a pouched marsupial"],
+      "example_simple": "The kangaroo is a marsupial that carries its young in a pouch.",
+      "example_complex": "Australia is home to a remarkable variety of marsupials, many of which are found nowhere else on Earth."
+    },
+    "pubcol-w-1b8a0bcee0e27412": {
+      "synonyms": ["wonderful", "splendid", "fabulous", "superb"],
+      "collocations": ["a marvellous idea", "look marvellous", "have a marvellous time"],
+      "example_simple": "We had a marvellous time at the beach yesterday.",
+      "example_complex": "The chef prepared a marvellous five-course dinner that left every guest utterly impressed.",
+      "definition_en": "extremely good, impressive, or wonderful",
+      "part_of_speech": "adjective"
+    },
+    "39d1457c-572b-4287-ad4c-75d20ba87671": {
+      "difficulty": "8.0",
+      "synonyms": ["exquisite taste", "refined taste", "impeccable taste"],
+      "definition_en": "an exceptionally refined and sophisticated sense of style or aesthetic judgement",
+      "ipa": "/ˈmɑːvələsli faɪn teɪst/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-61b37e76959cf830": {
+      "synonyms": ["male", "manly", "virile"],
+      "collocations": ["masculine features", "a masculine voice", "the masculine gender"],
+      "example_simple": "He has a deep, masculine voice.",
+      "example_complex": "The advertisement deliberately played on traditional masculine stereotypes to appeal to its target audience."
+    },
+    "003ca2ca-0406-4c9e-ba00-91050e834724": {
+      "difficulty": "7.0",
+      "definition_en": "a very large arrival of people or things into a place over a short period",
+      "ipa": "/ˈmæsɪv ˈɪnflʌks/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-e165bceed83ea0c7": {
+      "difficulty": "6.0",
+      "synonyms": ["large scale", "vast scale", "enormous scale"],
+      "collocations": ["on a massive scale", "produce on a massive scale", "the massive scale of the project"],
+      "example_simple": "The factory produces goods on a massive scale.",
+      "example_complex": "The environmental damage caused by deforestation is now occurring on a massive scale across the tropics.",
+      "definition_en": "a very large size, extent, or degree",
+      "ipa": "/ˈmæsɪv skeɪl/",
+      "part_of_speech": "phrase"
+    },
+    "826c70ec-1269-4610-851b-57dc18c9976e": {
+      "difficulty": "8.0"
+    },
+    "9032b60e-0073-47c3-898c-50240daea0f7": {
+      "difficulty": "7.0",
+      "definition_en": "to become real, actual, or visible; to happen as expected",
+      "ipa": "/məˈtɪəriəlaɪz/",
+      "part_of_speech": "verb"
+    },
+    "71071c06-6503-4bb6-afe0-7cf10cf731c2": {
+      "difficulty": "8.0",
+      "definition_en": "genes that are inherited from the mother",
+      "ipa": "/məˈtɜːnəl dʒiːnz/",
+      "part_of_speech": "phrase"
+    },
+    "3999138c-0dfd-4274-9cad-92e387ec2c51": {
+      "difficulty": "8.0",
+      "definition_en": "a place where female animals, especially bats, gather to give birth and raise their young",
+      "ipa": "/məˈtɜːnəti ruːst/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-4acfc3108918cd66": {
+      "difficulty": "6.0",
+      "synonyms": ["might discover", "could find", "may come across"],
+      "collocations": ["you may find", "may find it difficult", "may find it useful"],
+      "example_simple": "You may find the instructions helpful if you get stuck.",
+      "example_complex": "Readers who persevere through the dense opening chapters may find that the novel rewards their patience handsomely.",
+      "definition_en": "used to express the possibility of discovering or realizing something",
+      "ipa": "/meɪ faɪnd/",
+      "part_of_speech": "phrase"
+    },
+    "5b80a3b7-3d46-4638-a3e0-5888dbf6cc17": {
+      "difficulty": "7.0",
+      "definition_en": "a situation of great confusion, disorder, or chaos",
+      "ipa": "/ˈmeɪhem/",
+      "part_of_speech": "noun",
+      "vi_meaning_correction": "sự hỗn loạn, cảnh náo loạn, sự lộn xộn"
+    },
+    "af096cdc-3a26-4d84-a59a-aed3d54c896e": {
+      "difficulty": "8.0",
+      "definition_en": "a very low level of public liking, fame, or approval",
+      "ipa": "/ˈmiːɡə ˌpɒpjəˈlærəti/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "ít phổ biến, mức độ nổi tiếng thấp"
+    },
+    "pubcol-w-a8af3df70a3d600f": {
+      "synonyms": ["wind", "wander", "zigzag", "snake"],
+      "collocations": ["the river meanders", "meander through the valley", "meander slowly"],
+      "example_simple": "The path meanders gently through the woods.",
+      "example_complex": "The lecture began to meander, drifting from one loosely related topic to another without any clear point."
+    },
+    "14b23454-5804-4c02-b30e-4faaf74b5660": {
+      "difficulty": "7.0",
+      "example_simple": "They didn't have the means to buy a new car.",
+      "example_complex": "The scholarship was created specifically for talented students who lack the financial means to attend university.",
+      "definition_en": "the money or resources that allow someone to live or to do something",
+      "ipa": "/miːnz/",
+      "part_of_speech": "noun"
+    }
+  }
+}

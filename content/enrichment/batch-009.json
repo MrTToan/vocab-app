@@ -1,0 +1,212 @@
+{
+  "meta": { "batch": "batch-009", "authored_by": "claude", "count": 26 },
+  "words": {
+    "pubcol-w-d2f96c11986b1d46": {
+      "difficulty": "5.0",
+      "part_of_speech": "noun",
+      "ipa": "/əˈpɑːtmənt ˈkɒmpleks/",
+      "definition_en": "a group of residential buildings containing many separate flats, usually with shared facilities",
+      "synonyms": ["housing complex", "block of flats", "residential complex", "condominium"],
+      "collocations": ["a large apartment complex", "live in an apartment complex", "a modern apartment complex"],
+      "example_simple": "They moved into a new apartment complex near the city centre.",
+      "example_complex": "The developer plans to build a sprawling apartment complex with a gym, pool and underground parking for hundreds of families."
+    },
+    "pubcol-w-b7380bc044cba78b": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə pəˈtrəʊl əv pəˈliːsmən/",
+      "definition_en": "a small group of police officers moving through an area to keep watch",
+      "synonyms": ["a squad of officers", "a police patrol", "a unit of police"],
+      "collocations": ["a patrol of policemen on the streets", "send a patrol of policemen", "a patrol of policemen on duty"],
+      "example_simple": "A patrol of policemen walked slowly through the busy market.",
+      "example_complex": "After the disturbance, a patrol of policemen was stationed at every entrance to reassure the frightened residents."
+    },
+    "pubcol-w-6791531d5eaea390": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə ˈpensl əv reɪz/",
+      "definition_en": "a narrow bundle of light rays that pass through or meet at a single point",
+      "synonyms": ["a beam of light", "a bundle of rays", "a shaft of light"],
+      "collocations": ["a pencil of rays converges", "a narrow pencil of rays", "focus a pencil of rays"],
+      "example_simple": "The lens gathered a pencil of rays into a bright spot on the paper.",
+      "example_complex": "In the diagram, a pencil of rays leaving the object is refracted by the lens and brought to focus on the screen behind it."
+    },
+    "pubcol-w-b9ccc72510c8c124": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə ˈpɪəriəd əv kɑːm/",
+      "definition_en": "a stretch of time in which everything is quiet and untroubled",
+      "synonyms": ["a spell of quiet", "a moment of peace", "a lull", "a period of stillness"],
+      "collocations": ["enjoy a period of calm", "a brief period of calm", "a moment of calm before the storm"],
+      "example_simple": "After the noisy party, the house finally returned to a period of calm.",
+      "example_complex": "The ceasefire brought a fragile moment of calm that both sides knew could shatter at any time."
+    },
+    "pubcol-w-b0215324c0200cd5": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə ˈpɜːsn əv ˈɪnfluəns/",
+      "definition_en": "someone with the power to affect decisions, opinions or events",
+      "synonyms": ["an influential figure", "a power broker", "a mover and shaker", "a heavyweight"],
+      "collocations": ["become a person of influence", "a person of great influence", "a person of influence in politics"],
+      "example_simple": "Her father was a person of influence in the local community.",
+      "example_complex": "As a person of influence in the industry, she could open doors that remained firmly shut to everyone else."
+    },
+    "pubcol-w-43a81d2540870eb5": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə piːs əv ədˈvaɪs/",
+      "definition_en": "a single suggestion or recommendation about what someone should do",
+      "synonyms": ["a tip", "a recommendation", "a suggestion", "a pointer"],
+      "collocations": ["give a piece of advice", "take a piece of advice", "a useful piece of advice"],
+      "example_simple": "Let me give you one piece of advice before your interview.",
+      "example_complex": "The best piece of advice I ever received was to listen far more than I speak."
+    },
+    "pubcol-w-c02a9ccd5b9aad53": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə piːs əv njuːz/",
+      "definition_en": "a single item of information about a recent event",
+      "synonyms": ["a news item", "a bulletin", "an update", "a report"],
+      "collocations": ["a piece of news", "hear a piece of news", "an exciting piece of news"],
+      "example_simple": "I have a wonderful piece of news to share with you all.",
+      "example_complex": "The announcement contained a startling piece of news that quickly dominated every headline in the country."
+    },
+    "pubcol-w-e26fa0f57d186ee5": {
+      "difficulty": "6.0",
+      "part_of_speech": "noun",
+      "ipa": "/ə ˈpɪtstɒp/",
+      "definition_en": "a short stop during a journey to rest, eat, refuel or use the toilet",
+      "synonyms": ["a rest stop", "a break", "a stopover", "a layover"],
+      "collocations": ["make a pit stop", "a quick pit stop", "a pit stop for fuel"],
+      "example_simple": "We made a quick pit stop for coffee halfway through the drive.",
+      "example_complex": "On the long road trip we planned regular pit stops so the children could stretch their legs and grab a snack."
+    },
+    "pubcol-w-6a1cf064531c1868": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə pleɪɡ swɔːm əv ˈɪnsekts/",
+      "definition_en": "a very large mass of insects moving or gathering together, often causing damage",
+      "synonyms": ["a swarm of insects", "an infestation", "a horde", "a cloud of insects"],
+      "collocations": ["a plague of insects descends", "a swarm of insects", "a plague of locusts"],
+      "example_simple": "A swarm of insects filled the air above the pond at dusk.",
+      "example_complex": "A plague of insects swept across the fields, stripping the crops bare within a matter of days."
+    },
+    "b60fd8c0-24f7-4cd6-9693-f455bd491cc5": {
+      "difficulty": "6.0",
+      "part_of_speech": "adjective",
+      "ipa": "/əˌpɒləˈdʒetɪk/",
+      "definition_en": "showing or expressing regret for having done something wrong"
+    },
+    "pubcol-w-1421caa825b413a9": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/əˈpiːl ðə ˈvɜːdɪkt/",
+      "definition_en": "to formally ask a higher court to review and change a legal decision",
+      "synonyms": ["appeal the ruling", "challenge the verdict", "contest the decision", "seek an appeal"],
+      "collocations": ["appeal the verdict in court", "decide to appeal the verdict", "the right to appeal the verdict"],
+      "example_simple": "The lawyer said they would appeal the verdict at once.",
+      "example_complex": "Convinced that the jury had been misled, the defence team vowed to appeal the verdict all the way to the supreme court."
+    },
+    "pubcol-w-b28e5f65a774d6df": {
+      "difficulty": "6.0",
+      "ipa": "/əˈpɪə tuː/"
+    },
+    "4919a88d-562f-4573-a20d-fd56bfad8bb1": {
+      "difficulty": "8.0",
+      "part_of_speech": "verb",
+      "ipa": "/əˈpiːz/",
+      "definition_en": "to calm or satisfy someone, often by giving in to their demands"
+    },
+    "pubcol-w-ae42b3c35694af56": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ˈæplz ənd ˈɒrɪndʒɪz/",
+      "definition_en": "two things that are so different they cannot fairly be compared",
+      "synonyms": ["chalk and cheese", "worlds apart", "an unfair comparison"],
+      "collocations": ["comparing apples and oranges", "that's apples and oranges", "like apples and oranges"],
+      "example_simple": "You can't compare the two jobs; they're apples and oranges.",
+      "example_complex": "Judging a poet against a physicist is comparing apples and oranges, since each excels in a completely different field.",
+      "vi_meaning_correction": "so sánh hai thứ hoàn toàn khác nhau (sự so sánh khập khiễng)"
+    },
+    "pubcol-w-1c6a922c22eb5596": {
+      "synonyms": ["traineeship", "internship", "training", "pupillage"],
+      "collocations": ["serve an apprenticeship", "complete an apprenticeship", "an apprenticeship in carpentry"],
+      "example_simple": "He started an apprenticeship as an electrician after leaving school.",
+      "example_complex": "A four-year apprenticeship allowed her to earn a wage while gradually mastering the craft under an experienced mentor."
+    },
+    "7b21994f-71c3-4cc8-a3e0-4261b86bc34f": {
+      "difficulty": "8.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˌæprəˈbeɪʃn/",
+      "definition_en": "formal approval or praise for something"
+    },
+    "464bfeda-2272-409b-addc-f47607847a14": {
+      "difficulty": "8.0",
+      "part_of_speech": "noun",
+      "ipa": "/əˌprəʊpriˈeɪʃn/",
+      "definition_en": "the act of taking something for one's own use, or the setting aside of money for a purpose"
+    },
+    "59bfa6cc-fb7c-4732-beeb-b2216272f2af": {
+      "difficulty": "6.0",
+      "ipa": "/əˈprɒksɪmətli/"
+    },
+    "pubcol-w-7bd58590a8a3629d": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə praɪd əv ˈlaɪənz/",
+      "definition_en": "a group of lions living together",
+      "synonyms": ["a group of lions", "a troop of lions"],
+      "collocations": ["a pride of lions rests", "spot a pride of lions", "a pride of lions on the plains"],
+      "example_simple": "We saw a pride of lions sleeping under a tree on safari.",
+      "example_complex": "At dawn a whole pride of lions moved silently across the savannah in search of prey."
+    },
+    "d662b36b-62bd-4aee-bee8-e2a9fd307ce1": {
+      "difficulty": "7.0",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈærəbl/",
+      "definition_en": "(of land) suitable or used for growing crops"
+    },
+    "6a3ef65e-d6d8-450d-bbd8-a8038321068e": {
+      "difficulty": "7.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˈærəbl ˈæɡrɪkʌltʃə/",
+      "definition_en": "farming that focuses on growing crops rather than raising animals"
+    },
+    "pubcol-w-b27276563c5558c2": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə reɪndʒ əv ˈmaʊntɪnz/",
+      "definition_en": "a connected line or series of mountains",
+      "synonyms": ["a mountain range", "a chain of mountains", "a ridge"],
+      "collocations": ["a range of mountains stretches", "a snow-capped range of mountains", "cross a range of mountains"],
+      "example_simple": "A range of mountains rose behind the small village.",
+      "example_complex": "Beyond the valley, a jagged range of mountains stretched as far as the eye could see, their peaks lost in cloud."
+    },
+    "15293566-bd7f-491d-be71-636e115b36ea": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɑː baʊnd tuː/",
+      "definition_en": "are certain or very likely to do or experience something"
+    },
+    "pubcol-w-e85a58b13acca135": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɑː ˈduːɪŋ/",
+      "definition_en": "are in the process of performing an action at the present moment",
+      "synonyms": ["are carrying out", "are performing", "are working on"],
+      "collocations": ["mind what you are doing", "know what you are doing", "watch what you are doing"],
+      "example_simple": "Please be careful and watch what you are doing.",
+      "example_complex": "If you truly know what you are doing, you should be able to explain each step of the process to a beginner."
+    },
+    "pubcol-w-bb80f24501e9b9ee": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ə ˈresəpi fə dɪˈzɑːstə/",
+      "definition_en": "a situation or plan that is very likely to end badly",
+      "synonyms": ["a disaster waiting to happen", "an accident waiting to happen", "a formula for failure"],
+      "collocations": ["a recipe for disaster", "prove a recipe for disaster", "be a recipe for disaster"],
+      "example_simple": "Driving when you're that tired is a recipe for disaster.",
+      "example_complex": "Cutting the safety budget while expanding production was a recipe for disaster that the managers would soon come to regret."
+    }
+  }
+}

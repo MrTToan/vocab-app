@@ -1,0 +1,184 @@
+{
+  "meta": { "batch": "batch-049", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-85f48bd3135790d5": {
+      "difficulty": "6.0",
+      "synonyms": ["travel classes", "cabin classes", "seating classes", "fare classes"],
+      "collocations": ["fly first-class", "travel business-class", "book an economy-class ticket"],
+      "example_simple": "We could only afford economy-class seats for the long flight.",
+      "example_complex": "The airline's revenue depends heavily on first-class and business-class passengers, even though most travellers sit in economy-class.",
+      "definition_en": "the different levels of service and comfort offered to passengers on a plane or train, ranging from the most expensive (first-class) to the cheapest (economy-class)",
+      "ipa": "/ˌfɜːst klɑːs ˈbɪznəs klɑːs ɪˈkɒnəmi klɑːs/",
+      "part_of_speech": "phrase"
+    },
+    "10714867-ad6b-4c3b-889b-bd89799ef92b": {
+      "difficulty": "7.0",
+      "definition_en": "reports or descriptions given by someone who directly saw or experienced an event",
+      "ipa": "/ˌfɜːstˈhænd əˈkaʊnts/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-97485882fc32c77b": {
+      "difficulty": "5.0",
+      "synonyms": ["top spot", "lead", "winning position", "number one"],
+      "collocations": ["finish in first place", "take first place", "win first place"],
+      "example_simple": "She came in first place at the school swimming competition.",
+      "example_complex": "After trailing for most of the race, the underdog surged ahead to seize first place in the final lap.",
+      "definition_en": "the winning or leading position in a competition or ranking",
+      "ipa": "/ˌfɜːst ˈpleɪs/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-112f3a99b283a4e1": {
+      "synonyms": ["banner", "standard", "ensign", "pennant"],
+      "collocations": ["raise a flag", "wave a flag", "national flag"],
+      "example_simple": "The children waved a small flag as the parade passed by.",
+      "example_complex": "The mountaineers planted their national flag on the summit to mark the historic achievement.",
+      "definition_en": "a piece of cloth with a distinctive design used as a symbol of a country, group, or message",
+      "part_of_speech": "noun"
+    },
+    "ba4b4c83-cd6a-4ffe-b51c-0fb86c1944d2": {
+      "difficulty": "7.0",
+      "definition_en": "a natural talent or stylish ability to do something well",
+      "ipa": "/fleə/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-27a80c3b136bb91a": {
+      "difficulty": "6.0",
+      "synonyms": ["sudden floods", "torrential floods", "surge floods"],
+      "collocations": ["flash floods hit", "trigger flash floods", "warning of flash floods"],
+      "example_simple": "Heavy rain caused flash floods that swept through the village overnight.",
+      "example_complex": "Rapid urbanisation and poor drainage have made flash floods increasingly common in low-lying cities.",
+      "definition_en": "sudden, violent floods that occur very quickly after heavy rainfall",
+      "ipa": "/ˈflæʃ flʌdz/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-b9c7b42de27fde88": {
+      "synonyms": ["level", "even", "smooth", "horizontal"],
+      "collocations": ["flat surface", "flat land", "lie flat"],
+      "example_simple": "They looked for a flat area of ground to pitch the tent.",
+      "example_complex": "The vast, flat plains stretched to the horizon without a single hill to break the monotony.",
+      "definition_en": "having a level, smooth surface without curves, bumps, or slopes",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-bab3c850902093b2": {
+      "synonyms": ["flute player", "flutist", "musician"],
+      "collocations": ["a talented flautist", "the orchestra's flautist", "professional flautist"],
+      "example_simple": "The flautist played a gentle melody at the wedding.",
+      "example_complex": "As the lead flautist in the symphony, she rehearsed the demanding solo for weeks before the premiere.",
+      "definition_en": "a person who plays the flute",
+      "part_of_speech": "noun",
+      "vi_meaning_correction": "người thổi sáo, nghệ sĩ sáo"
+    },
+    "pubcol-w-4f2b9a8d43a6666f": {
+      "synonyms": ["taste", "savour", "tang", "relish"],
+      "collocations": ["rich flavour", "add flavour", "a strong flavour"],
+      "example_simple": "I love the fresh flavour of ripe strawberries.",
+      "example_complex": "The chef layered spices carefully so that each dish revealed a distinct and complex flavour.",
+      "definition_en": "the distinctive taste of a food or drink",
+      "part_of_speech": "noun"
+    },
+    "590175a6-4f76-4c80-a015-7218211f8f7e": {
+      "difficulty": "5.0",
+      "definition_en": "small jumping insects that live on animals or people and feed on their blood",
+      "ipa": "/fliːz/",
+      "part_of_speech": "noun"
+    },
+    "1f977251-2e63-4464-9839-e4a6043fe361": {
+      "difficulty": "7.0",
+      "definition_en": "a new industry or organisation that is still young, small, and inexperienced",
+      "ipa": "/ˈfledʒlɪŋ ˈɪndəstri/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-26a41ba9774c6fd2": {
+      "synonyms": ["brief", "momentary", "transient", "short-lived"],
+      "collocations": ["a fleeting moment", "a fleeting glance", "fleeting fame"],
+      "example_simple": "She caught only a fleeting glimpse of the singer as the car sped past.",
+      "example_complex": "Fame in the digital age is often fleeting, with today's viral star forgotten within a matter of weeks."
+    },
+    "pubcol-w-14790f5b5fe98425": {
+      "difficulty": "6.0",
+      "synonyms": ["kin", "relatives", "family", "kindred"],
+      "collocations": ["my own flesh and blood", "flesh and blood relatives", "more than flesh and blood"],
+      "example_simple": "He would do anything to protect his own flesh and blood.",
+      "example_complex": "However bitter their disputes became, she reminded herself that they were still her flesh and blood.",
+      "definition_en": "a person's close blood relatives; one's own family",
+      "ipa": "/ˌfleʃ ənd ˈblʌd/",
+      "part_of_speech": "idiom"
+    },
+    "5fb458ee-c509-477a-aeb4-93ba501bc2c7": {
+      "difficulty": "7.0",
+      "definition_en": "to add more detail or information to something to make it more complete",
+      "ipa": "/ˌfleʃ ˈaʊt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-57e9fcfa42f8d975": {
+      "synonyms": ["flexible hours", "flexible working", "flextime"],
+      "collocations": ["offer flexi-time", "work flexi-time", "a flexi-time system"],
+      "example_simple": "Her company offers flexi-time, so she can start work early and leave early.",
+      "example_complex": "Introducing flexi-time allowed employees to balance childcare with their careers, boosting both morale and productivity."
+    },
+    "pubcol-w-82907740e763bc0a": {
+      "synonyms": ["flash", "waver", "gutter", "twinkle"],
+      "collocations": ["flicker on and off", "a flickering flame", "the lights flicker"],
+      "example_simple": "The candle began to flicker in the cold draught.",
+      "example_complex": "The old projector's bulb would flicker unpredictably, casting trembling shadows across the screen."
+    },
+    "pubcol-w-cca5020761d41326": {
+      "synonyms": ["journey", "trip", "voyage", "flight path"],
+      "collocations": ["book a flight", "a direct flight", "catch a flight"],
+      "example_simple": "Our flight to Paris leaves at seven in the morning.",
+      "example_complex": "The connecting flight was delayed for hours, leaving hundreds of passengers stranded at the terminal.",
+      "definition_en": "a journey made by flying in an aircraft",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-44126a768ff9192a": {
+      "synonyms": ["herd", "group", "swarm", "gathering"],
+      "collocations": ["a flock of sheep", "a flock of birds", "flock together"],
+      "example_simple": "A flock of birds settled on the field at dusk.",
+      "example_complex": "As winter approached, huge flocks of migrating geese darkened the evening sky."
+    },
+    "pubcol-w-ff0db992256ad5c4": {
+      "synonyms": ["deluge", "inundation", "torrent", "overflow"],
+      "collocations": ["a devastating flood", "flood waters rise", "cause a flood"],
+      "example_simple": "The heavy rain caused a flood that damaged many homes.",
+      "example_complex": "The catastrophic flood submerged entire neighbourhoods, forcing thousands of residents to evacuate overnight."
+    },
+    "500c6207-dce5-412d-af95-4ef3c821af76": {
+      "difficulty": "7.0",
+      "definition_en": "a gate that controls the flow of water; figuratively, the point at which a sudden, overwhelming rush is released",
+      "ipa": "/ˈflʌdɡeɪt/",
+      "part_of_speech": "noun"
+    },
+    "ff913c17-12c4-4e04-ba60-0e782aaeca1b": {
+      "difficulty": "7.0",
+      "ipa": "/ˈflʌktʃueɪt/"
+    },
+    "92cec2cd-3d97-4075-8aeb-1bb1ad540f77": {
+      "difficulty": "5.0",
+      "definition_en": "a musical wind instrument consisting of a long tube that you blow across while pressing keys",
+      "ipa": "/fluːt/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-ff25d17873bba4bc": {
+      "synonyms": ["quiver", "tremble", "palpitation", "wave"],
+      "collocations": ["a flutter of wings", "a heart flutter", "flutter in the wind"],
+      "example_simple": "She felt a nervous flutter in her chest before the interview.",
+      "example_complex": "The sudden flutter of the butterfly's wings seemed almost too delicate for the gusting wind."
+    },
+    "pubcol-w-bf42ad18b82cd84d": {
+      "difficulty": "6.0",
+      "synonyms": ["travel economy", "fly coach", "fly budget class"],
+      "collocations": ["choose to fly economy", "fly economy to save money", "prefer to fly economy"],
+      "example_simple": "To save money, we decided to fly economy on our holiday.",
+      "example_complex": "Even senior executives were asked to fly economy as the company tightened its travel budget.",
+      "definition_en": "to travel in the cheapest class of seating on an aircraft",
+      "ipa": "/ˌflaɪ ɪˈkɒnəmi/",
+      "part_of_speech": "phrase"
+    },
+    "f379af66-9f86-49b1-bf40-b0406165f729": {
+      "difficulty": "8.0",
+      "definition_en": "a tiny spot or mark, especially one left by a fly; something extremely small or trivial",
+      "ipa": "/ˈflaɪspek/",
+      "part_of_speech": "noun"
+    }
+  }
+}

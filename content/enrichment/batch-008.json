@@ -1,0 +1,202 @@
+{
+  "meta": { "batch": "batch-008", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-a7b1b3a8e0520921": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ən ˈentri ˌlevəl dʒɒb/",
+      "definition_en": "a job at the lowest level of a career that requires little or no prior experience",
+      "synonyms": ["starter job", "junior role", "beginner position", "trainee job"],
+      "collocations": ["apply for an entry-level job", "start in an entry-level job", "entry-level job with training"],
+      "example_simple": "She took an entry-level job at a bank after finishing school.",
+      "example_complex": "Many graduates accept an entry-level job to gain experience before moving into more specialised roles."
+    },
+    "pubcol-w-704e3fa95a55d4ee": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ən ɪmˈpresɪv əˈkʌmplɪʃmənt/",
+      "definition_en": "a notably remarkable achievement that earns admiration",
+      "synonyms": ["remarkable achievement", "notable feat", "outstanding accomplishment"],
+      "collocations": ["quite an impressive accomplishment", "an impressive accomplishment for", "regarded as an impressive accomplishment"],
+      "example_simple": "Finishing the marathon was an impressive accomplishment for a beginner.",
+      "example_complex": "Building a profitable company from scratch in two years is an impressive accomplishment by any standard.",
+      "vi_meaning_correction": "một thành tựu ấn tượng"
+    },
+    "pubcol-w-5899b0928060642b": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ən ˌəʊpən ən ˈʃʌt keɪs/",
+      "definition_en": "a matter that is easy to solve or decide because the facts are obvious",
+      "synonyms": ["clear-cut case", "foregone conclusion", "sure thing"],
+      "collocations": ["an open-and-shut case", "seem like an open-and-shut case", "hardly an open-and-shut case"],
+      "example_simple": "With the video evidence, the trial was an open-and-shut case.",
+      "example_complex": "What looked like an open-and-shut case grew complicated once new witnesses came forward."
+    },
+    "pubcol-w-01ff17bdac3ee23b": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ən ʌnˈpresɪdentɪd səkˈses/",
+      "definition_en": "a success greater than any achieved before",
+      "synonyms": ["record-breaking success", "unparalleled success", "historic triumph"],
+      "collocations": ["achieve unprecedented success", "enjoy unprecedented success", "an unprecedented success story"],
+      "example_simple": "The film was an unprecedented success at the box office.",
+      "example_complex": "The vaccine's rapid development marked an unprecedented success in modern medical research."
+    },
+    "pubcol-w-36fa0f5293392227": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ən əˈbrʌpt ˈsʌdən end/",
+      "definition_en": "a very quick and unexpected finish to something",
+      "synonyms": ["sudden halt", "abrupt conclusion", "premature end"],
+      "collocations": ["come to an abrupt end", "bring to a sudden end", "an abrupt end to the meeting"],
+      "example_simple": "The rain brought the picnic to an abrupt end.",
+      "example_complex": "The scandal brought his political career to an abrupt and humiliating end."
+    },
+    "d6dbc66a-709e-4353-b11c-6f96767d4bd8": {
+      "difficulty": "8.0",
+      "part_of_speech": "adjective",
+      "ipa": "/əˌnækrəˈnɪstɪk/",
+      "definition_en": "belonging to a period other than the one portrayed, or seeming out of date"
+    },
+    "8af5b844-a8d7-439d-ac8a-c45d8851662c": {
+      "difficulty": "8.0",
+      "part_of_speech": "noun",
+      "ipa": "/əˈnæθəmə/",
+      "definition_en": "something or someone that is intensely disliked or detested"
+    },
+    "pubcol-w-78f2a73b678c2ccb": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ən əˈweɪ ɡeɪm/",
+      "definition_en": "a sports match played at the opponent's ground rather than one's own",
+      "synonyms": ["road game", "visiting fixture"],
+      "collocations": ["win an away game", "play an away game", "travel to an away game"],
+      "example_simple": "Our team lost the away game by two goals.",
+      "example_complex": "Securing a draw in a difficult away game against the league leaders felt like a victory."
+    },
+    "pubcol-w-b48ccc829fa31359": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ənd ðə laɪk/",
+      "definition_en": "and other similar things of the same kind",
+      "synonyms": ["and so on", "and such", "et cetera", "and suchlike"],
+      "collocations": ["books, magazines and the like", "coffee, tea and the like", "and the like"],
+      "example_simple": "The shop sells pens, notebooks and the like.",
+      "example_complex": "The policy covers accommodation, transport, meals and the like during official business trips."
+    },
+    "pubcol-w-d8eebbe7767419c0": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ən ɪnˈkʌrɪdʒɪŋ ˈprɒmɪsɪŋ stɑːt/",
+      "definition_en": "a beginning that shows good potential and gives hope for success",
+      "synonyms": ["promising beginning", "hopeful start", "positive opening"],
+      "collocations": ["make an encouraging start", "an encouraging start to the season", "a promising start to her career"],
+      "example_simple": "The project got off to an encouraging start in its first week.",
+      "example_complex": "Despite an encouraging start, the campaign lost momentum as funding dried up."
+    },
+    "pubcol-w-ea58f03de2300fdb": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə nest əv maɪs/",
+      "definition_en": "a hidden group of mice living together in one place",
+      "synonyms": ["mouse nest", "brood of mice"],
+      "collocations": ["find a nest of mice", "a nest of mice in the attic", "disturb a nest of mice"],
+      "example_simple": "We found a nest of mice behind the kitchen cupboard.",
+      "example_complex": "Clearing the old barn, they uncovered a nest of mice tucked beneath the rotting floorboards."
+    },
+    "3dcf7cf2-4eea-466b-bea0-9b0451a504ce": {
+      "difficulty": "7.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˌænəsˈθiːʒə/",
+      "definition_en": "loss of sensation, especially induced by drugs before surgery"
+    },
+    "6f28d42f-1cc3-4d46-b349-2b76186ff822": {
+      "difficulty": "8.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˈænəlz/",
+      "definition_en": "a chronological record of events year by year; historical records"
+    },
+    "pubcol-w-6b6966044b59b6da": {
+      "synonyms": ["emaciated", "starved", "underweight"],
+      "collocations": ["dangerously anorexic", "an anorexic patient", "look anorexic"],
+      "example_simple": "The doctor said the young model was dangerously anorexic.",
+      "example_complex": "Years of pressure to stay thin left her anorexic and in urgent need of treatment."
+    },
+    "pubcol-w-1145ec2d916ccb56": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ən ˈʃeɪki ʌnˈstedi stɑːt/",
+      "definition_en": "an uncertain or unstable beginning that lacks confidence or control",
+      "synonyms": ["rocky start", "wobbly beginning", "faltering start"],
+      "collocations": ["get off to a shaky start", "after a shaky start", "a shaky start to the year"],
+      "example_simple": "The team had a shaky start but improved later in the game.",
+      "example_complex": "After a shaky start marked by delays and budget overruns, the project eventually stabilised."
+    },
+    "560dc99d-8e90-4271-810a-4f651a29242a": {
+      "difficulty": "6.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˈæntˌiːtə/",
+      "definition_en": "a mammal with a long snout that feeds on ants and termites"
+    },
+    "75e6f242-ce80-465e-8db2-1216ce88b736": {
+      "difficulty": "8.0",
+      "part_of_speech": "verb",
+      "ipa": "/ˌæntiˈdeɪt/",
+      "definition_en": "to come before in time, or to mark something with an earlier date than the actual one"
+    },
+    "787f9874-115b-4e6c-b28e-72fdbb93295b": {
+      "difficulty": "7.0",
+      "part_of_speech": "noun",
+      "ipa": "/ænˈθɒlədʒi/",
+      "definition_en": "a published collection of writings, such as poems or stories, by various authors"
+    },
+    "55eed79b-cd4a-4511-8176-e9d70dcb24fb": {
+      "difficulty": "7.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˌænθrəˈpɒlədʒi/",
+      "definition_en": "the scientific study of human societies, cultures and their development"
+    },
+    "5a72d711-0280-4ad7-ad02-57209a35ec05": {
+      "difficulty": "8.0",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈæntɪkweɪtɪd/",
+      "definition_en": "old-fashioned and no longer suitable for modern use"
+    },
+    "a89d31c3-7b96-429a-b471-b86fbbe2bdf1": {
+      "difficulty": "7.0",
+      "part_of_speech": "noun",
+      "ipa": "/ænˈtɪkwəti/",
+      "definition_en": "the distant past, especially before the Middle Ages; also an object from that time"
+    },
+    "46fee480-f4e1-497e-b2b7-c73c625d61c5": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˈeni luːs ˈæɡrɪɡət/",
+      "definition_en": "any loose material made of separate particles such as sand, gravel or crushed stone"
+    },
+    "pubcol-w-5e679fb7458ac0c2": {
+      "difficulty": "8.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ˈeni pɔːt ɪn ə stɔːm/",
+      "definition_en": "in a difficult situation, any solution is acceptable even if it is not ideal",
+      "synonyms": ["beggars can't be choosers", "make do", "last resort"],
+      "collocations": ["any port in a storm", "it's any port in a storm", "as they say, any port in a storm"],
+      "example_simple": "The hostel was cheap and dirty, but it was any port in a storm.",
+      "example_complex": "Taking the unpopular loan was very much a case of any port in a storm for the struggling firm."
+    },
+    "pubcol-w-736b67b302dc5ebd": {
+      "difficulty": "5.0",
+      "ipa": "/ˈeniweɪ/"
+    },
+    "pubcol-w-7190b20dd47f8e6e": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə pæk əv wʊlvz/",
+      "definition_en": "a group of wolves that live and hunt together",
+      "synonyms": ["wolf pack", "group of wolves"],
+      "collocations": ["a pack of wolves", "hunted by a pack of wolves", "surrounded by a pack of wolves"],
+      "example_simple": "A pack of wolves crossed the snowy field at dawn.",
+      "example_complex": "The lone deer had little chance once a pack of wolves closed in from the ridge."
+    }
+  }
+}

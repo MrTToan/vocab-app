@@ -1,0 +1,183 @@
+{
+  "meta": { "batch": "batch-115", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-cccc103eb6cdc754": {
+      "difficulty": "6.0",
+      "synonyms": ["eventually", "in time", "at some point", "ultimately"],
+      "collocations": ["will happen sooner or later", "sooner or later you'll find out", "everyone realizes sooner or later"],
+      "example_simple": "If you keep spending like that, sooner or later you'll run out of money.",
+      "example_complex": "Sooner or later, every ambitious company must decide whether to expand overseas or consolidate its position at home.",
+      "definition_en": "at some uncertain point in the future; eventually",
+      "ipa": "/ˈsuːnər ɔːr ˈleɪtər/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-84fa1bbaf1f7b6df": {
+      "difficulty": "5.0",
+      "ipa": "/ˈsɔːrt əv/"
+    },
+    "pubcol-w-2c89dfd4f91a54c0": {
+      "difficulty": "6.0",
+      "ipa": "/ˌsɔːrt ˈaʊt/"
+    },
+    "pubcol-w-d9aa0a2bb32f2d35": {
+      "difficulty": "6.0",
+      "synonyms": ["good advice", "wise counsel", "sensible advice", "solid guidance"],
+      "collocations": ["give sound advice", "offer sound advice", "follow sound advice"],
+      "example_simple": "My teacher gave me sound advice about how to prepare for the exam.",
+      "example_complex": "Drawing on decades of experience, the mentor offered sound advice that helped the young entrepreneur avoid several costly mistakes.",
+      "definition_en": "sensible, reliable advice that can be trusted",
+      "ipa": "/ˌsaʊnd ədˈvaɪs/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-e1f61fad0a18bf9a": {
+      "difficulty": "5.0",
+      "ipa": "/ˌsaʊndz ˈɡʊd/"
+    },
+    "e42c58fc-f38e-430d-947c-4fb91ce87f86": {
+      "difficulty": "7.0",
+      "definition_en": "having supreme power or authority; self-governing and independent",
+      "ipa": "/ˈsɒvrɪn/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-bdbd210b6cc9e43f": {
+      "difficulty": "6.0",
+      "synonyms": ["packed", "crowded", "jammed", "full"],
+      "collocations": ["the space is filled with", "every space is filled", "filled to capacity"],
+      "example_simple": "During the festival, every space is filled with people and stalls.",
+      "example_complex": "By mid-morning the exhibition hall was so packed that every available space was filled with visitors jostling for a better view.",
+      "definition_en": "every available area is occupied, leaving no room",
+      "ipa": "/ˈspeɪs ɪz ˈfɪld/",
+      "part_of_speech": "phrase"
+    },
+    "9da99255-b1b4-4430-bc71-e1523ce3eafa": {
+      "difficulty": "8.0",
+      "synonyms": ["solar weather", "solar activity", "solar-terrestrial conditions"],
+      "definition_en": "the conditions in space, driven by the Sun's activity, that can affect satellites, power grids and communications",
+      "ipa": "/ˈspeɪs ˌweðər/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-9973a621d5a45c6b": {
+      "difficulty": "6.0",
+      "synonyms": ["free", "available", "unoccupied", "idle"],
+      "collocations": ["spare time", "free time", "in my spare time"],
+      "example_simple": "In my spare time, I like to read and go for walks.",
+      "example_complex": "She devotes almost all of her free time to volunteering, rarely leaving any spare hours for herself.",
+      "definition_en": "not occupied or in use; available, especially of time",
+      "ipa": "/speər / friː/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-7521ad3345332a89": {
+      "synonyms": ["glittering", "shimmering", "glistening", "twinkling"],
+      "collocations": ["sparkling water", "sparkling eyes", "sparkling lights"],
+      "example_simple": "The lake was sparkling in the bright morning sun.",
+      "example_complex": "Her eyes were sparkling with excitement as the sparkling city lights spread out beneath the plane.",
+      "definition_en": "shining brightly with quick flashes of light; also, of a drink, fizzy",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-bea8411e219c0dd3": {
+      "synonyms": ["scanty", "scattered", "thin", "meager"],
+      "collocations": ["sparse population", "sparse vegetation", "sparse information"],
+      "example_simple": "The desert has only sparse vegetation.",
+      "example_complex": "Researchers struggled to draw firm conclusions from the sparse and sometimes contradictory data available."
+    },
+    "9112de85-8446-4236-a827-710fc3809257": {
+      "difficulty": "7.0",
+      "definition_en": "the time of year when fish or other aquatic animals lay their eggs",
+      "ipa": "/ˈspɔːnɪŋ ˌsiːzən/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-d235a40835f5fb81": {
+      "difficulty": "6.0",
+      "synonyms": ["praise", "commend", "laud", "extol"],
+      "collocations": ["speak highly of the school", "everyone speaks highly of her", "speak highly of his work"],
+      "example_simple": "All the students speak highly of their new teacher.",
+      "example_complex": "Colleagues who had worked with her for years continued to speak highly of her integrity and dedication long after she retired.",
+      "definition_en": "to praise something or someone; to say very positive things about them",
+      "ipa": "/ˌspiːk ˈhaɪli əv ˈsʌmθɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-739f65ff85a6530f": {
+      "difficulty": "6.0",
+      "synonyms": ["praise or criticize", "commend or disparage", "compliment or badmouth"],
+      "collocations": ["speak highly of", "never speak ill of others", "speak ill of the dead"],
+      "example_simple": "You should never speak ill of people behind their backs.",
+      "example_complex": "Whether people speak highly or ill of a leader often depends more on their own interests than on any objective judgement.",
+      "definition_en": "to praise (highly) or criticize (ill) someone or something",
+      "ipa": "/ˌspiːk ˈhaɪli / ˈɪl əv/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-697c80b530553b29": {
+      "difficulty": "7.0",
+      "synonyms": ["talk of the devil"],
+      "ipa": "/ˌspiːk əv ðə ˈdevəl/"
+    },
+    "d00a7767-2ed8-4bb3-b8e8-73eb4b274283": {
+      "difficulty": "6.0",
+      "synonyms": ["sledge ride", "sleigh journey"],
+      "example_simple": "On our winter holiday, we went on a special sleigh ride through the snowy forest.",
+      "example_complex": "The resort's most popular attraction is a special sleigh ride that glides silently between towering, snow-laden pines at dusk.",
+      "definition_en": "a memorable trip in a sledge pulled over snow, often offered as a special experience",
+      "ipa": "/ˌspeʃəl ˈsleɪ ˌraɪd/",
+      "part_of_speech": "phrase"
+    },
+    "e83955d3-9ec5-40a2-9d17-ecb2303fbe8a": {
+      "difficulty": "8.0",
+      "definition_en": "the evolutionary process by which new biological species arise",
+      "ipa": "/ˌspiːʃiˈeɪʃən/",
+      "part_of_speech": "noun"
+    },
+    "a1e031f7-cc99-4590-ad92-c1d79b7bcc90": {
+      "difficulty": "7.0",
+      "definition_en": "an individual example or sample of something, especially used for study",
+      "ipa": "/ˈspesɪmən/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-6b7d75a954c0ec5c": {
+      "synonyms": ["glasses", "eyeglasses", "specs"],
+      "collocations": ["a pair of spectacles", "wear spectacles", "reading spectacles"],
+      "example_simple": "My grandfather wears spectacles when he reads the newspaper.",
+      "example_complex": "Peering over his half-moon spectacles, the old professor examined the manuscript with obvious delight."
+    },
+    "pubcol-w-8911def39f3cb708": {
+      "synonyms": ["impressive", "stunning", "breathtaking", "dramatic"],
+      "collocations": ["spectacular view", "spectacular success", "spectacular scenery"],
+      "example_simple": "From the top of the hill, we had a spectacular view of the city.",
+      "example_complex": "The festival ended with a spectacular fireworks display that lit up the entire bay in shifting colours.",
+      "definition_en": "extremely impressive, dramatic, or beautiful to look at",
+      "part_of_speech": "adjective"
+    },
+    "8e9e6d0b-b2a5-4386-b768-16c19936c17e": {
+      "difficulty": "6.0"
+    },
+    "c50448fb-4ad0-44a7-a864-eb9a182dbb48": {
+      "difficulty": "8.0",
+      "definition_en": "based on guesswork rather than knowledge; or involving financial risk in the hope of gain",
+      "ipa": "/ˈspekjələtɪv/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-9c22d0e90937aa77": {
+      "difficulty": "5.0",
+      "synonyms": ["use time / squander time", "invest time / fritter away time"],
+      "collocations": ["spend time with family", "waste time on trivial things", "spend/waste time doing something"],
+      "example_simple": "I like to spend time with my friends, but I don't want to waste time arguing.",
+      "example_complex": "Learning to spend time on what truly matters, rather than waste time on endless distractions, is a skill few people master early in life.",
+      "definition_en": "to use time (productively) versus to use time uselessly",
+      "ipa": "/ˌspend ˈtaɪm ˌweɪst ˈtaɪm/",
+      "part_of_speech": "phrase"
+    },
+    "ff715822-64b7-4720-9d67-e8d5898f17f8": {
+      "difficulty": "6.0",
+      "definition_en": "having sharp points or covered with spikes",
+      "ipa": "/ˈspaɪki/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-4e766d85b6416d58": {
+      "synonyms": ["greens", "leafy greens", "leafy vegetable"],
+      "collocations": ["fresh spinach", "spinach salad", "cook the spinach"],
+      "example_simple": "She added some fresh spinach to the salad.",
+      "example_complex": "Rich in iron and vitamins, spinach can be eaten raw in salads or wilted quickly into soups and stews.",
+      "definition_en": "a green leafy vegetable eaten either cooked or raw",
+      "part_of_speech": "noun"
+    }
+  }
+}

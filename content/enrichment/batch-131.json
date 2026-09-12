@@ -1,0 +1,172 @@
+{
+  "meta": { "batch": "batch-131", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-59ad4cc6894bd434": {
+      "difficulty": "5.0",
+      "synonyms": ["stressed", "strained", "burdened"],
+      "collocations": ["work under pressure", "crack under pressure", "put someone under pressure"],
+      "example_simple": "She stays calm even when she is under pressure at work.",
+      "example_complex": "The negotiators, under enormous pressure to reach a deal before the deadline, worked through the night without a break.",
+      "definition_en": "experiencing stress or a demanding situation that forces you to act",
+      "ipa": "/ˌʌndər ˈpreʃər/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-e736768088147433": {
+      "difficulty": "6.0",
+      "synonyms": ["believing", "assuming", "convinced"],
+      "collocations": ["under the impression that", "labour under the impression", "be under the mistaken impression"],
+      "example_simple": "I was under the impression that the meeting had been cancelled.",
+      "example_complex": "For years the committee laboured under the impression that the funding was secure, only to discover the grant had quietly lapsed.",
+      "definition_en": "believing something that may not actually be true",
+      "ipa": "/ˌʌndər ði ɪmˈpreʃən/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-a7bdd5436693569b": {
+      "difficulty": "6.0",
+      "synonyms": ["affected by", "swayed by", "intoxicated"],
+      "collocations": ["under the influence of alcohol", "driving under the influence", "under the influence of drugs"],
+      "example_simple": "He was arrested for driving under the influence of alcohol.",
+      "example_complex": "Her early paintings were clearly created under the influence of the Impressionists, though her later style became entirely her own.",
+      "definition_en": "affected or controlled by something, especially alcohol, drugs, or another person's ideas",
+      "ipa": "/ˌʌndər ði ˈɪnfluəns/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-9eb6e51007f3bb17": {
+      "difficulty": "7.0",
+      "ipa": "/ˌʌndər ðə ˈweðər/"
+    },
+    "pubcol-w-ed5a2ea05916cbfd": {
+      "difficulty": "7.0",
+      "synonyms": ["threatened with", "menaced by", "at risk of"],
+      "collocations": ["under threat of extinction", "under threat of closure", "under threat of legal action"],
+      "example_simple": "Many small shops are now under threat of closure.",
+      "example_complex": "The ancient wetlands, under threat of drainage for farmland, harbour species found nowhere else on the continent.",
+      "definition_en": "in danger of something bad happening or being done to you",
+      "ipa": "/ˌʌndər ˈθret əv/",
+      "part_of_speech": "phrase"
+    },
+    "94bb8f4d-6bce-4ee6-97a5-aa12df47573c": {
+      "difficulty": "7.0",
+      "definition_en": "a layer of material placed under something, especially beneath a carpet for cushioning",
+      "ipa": "/ˈʌndərleɪ/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-90e7552bb9a2611e": {
+      "difficulty": "7.0",
+      "ipa": "/ˌʌndərˈlaɪɪŋ/"
+    },
+    "pubcol-w-e05ab99be74beeb5": {
+      "synonyms": ["below", "beneath", "under"],
+      "collocations": ["hidden underneath", "the layer underneath", "tucked underneath"],
+      "example_simple": "The cat was hiding underneath the table.",
+      "example_complex": "Underneath his gruff manner lay a surprisingly gentle and generous nature.",
+      "definition_en": "directly below or beneath something",
+      "part_of_speech": "adverb"
+    },
+    "pubcol-w-eb8cad81c40850d6": {
+      "difficulty": "8.0",
+      "ipa": "/ˌʌndərˈpɪn/"
+    },
+    "pubcol-w-63e295a85beef836": {
+      "difficulty": "6.0",
+      "synonyms": ["certainly", "definitely", "unquestionably"],
+      "collocations": ["undoubtedly true", "undoubtedly the best", "will undoubtedly happen"],
+      "example_simple": "This is undoubtedly the best film I have seen this year.",
+      "example_complex": "The policy will undoubtedly reduce emissions in the short term, though its long-term economic effects remain hotly debated.",
+      "definition_en": "used to say that something is certainly true and cannot be doubted",
+      "ipa": "/ʌnˈdaʊtɪdli/",
+      "part_of_speech": "adverb"
+    },
+    "4d033e89-99d6-4ca3-abfa-dd5f0afaf39f": {
+      "difficulty": "8.0",
+      "definition_en": "to an excessive or unreasonable degree",
+      "ipa": "/ʌnˈdjuːli/",
+      "part_of_speech": "adverb"
+    },
+    "2ada4818-819f-4827-a5d0-8332b9c0e4f3": {
+      "difficulty": "7.0",
+      "definition_en": "dug up out of the ground, or discovered after being hidden",
+      "ipa": "/ʌnˈɜːrθt/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-ff922d72a5010cb9": {
+      "difficulty": "5.0",
+      "ipa": "/ˌʌnɪmˈplɔɪmənt/"
+    },
+    "97b1b350-98a7-4f8b-9049-4b73e1fa0351": {
+      "difficulty": "8.0",
+      "definition_en": "leaving no doubt; completely clear and firm",
+      "ipa": "/ˌʌnɪˈkwɪvəkəl/",
+      "part_of_speech": "adjective"
+    },
+    "c59f793d-be08-4cb5-a221-e5df331518e3": {
+      "difficulty": "8.0",
+      "definition_en": "an instinct or judgement that is always accurate and never mistaken",
+      "ipa": "/ʌnˈɜːrɪŋ sens/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "trực giác/khả năng phán đoán chính xác, không bao giờ sai"
+    },
+    "5827e78c-405c-40d6-8325-3a66dc479020": {
+      "difficulty": "8.0",
+      "definition_en": "an economic system in which markets operate freely without government restriction",
+      "ipa": "/ʌnˈfetərd ˈkæpɪtəlɪzəm/",
+      "part_of_speech": "phrase"
+    },
+    "ce0eabb6-f2cd-4396-be00-e6281efe2373": {
+      "difficulty": "8.0",
+      "definition_en": "a character who receives little recognition or advance notice",
+      "ipa": "/ʌnˈherəldɪd ˈkærəktər/",
+      "part_of_speech": "phrase"
+    },
+    "2e5ca406-49f7-4a13-a156-527c3a7a1bbb": {
+      "difficulty": "8.0",
+      "definition_en": "the quality of applying to or being shared by everyone or everything",
+      "ipa": "/ˌjuːnɪvɜːrˈsæləti/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-28c7ff244807b14e": {
+      "synonyms": ["messy", "dishevelled", "untidy", "scruffy"],
+      "collocations": ["unkempt hair", "unkempt appearance", "an unkempt garden"],
+      "example_simple": "His hair was unkempt and his clothes looked slept in.",
+      "example_complex": "The once-elegant mansion had fallen into neglect, its unkempt lawns swallowed by weeds and ivy."
+    },
+    "8ad086f7-7051-4b7a-b308-ac4e3b744cd9": {
+      "difficulty": "8.0",
+      "definition_en": "not likely to be opposed or disliked by anyone; inoffensive",
+      "ipa": "/ˌʌnəbˈdʒekʃənəbəl/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-c60bb18a63eb166c": {
+      "synonyms": ["immoral", "unscrupulous", "dishonest", "corrupt"],
+      "collocations": ["unprincipled behaviour", "an unprincipled politician", "unprincipled tactics"],
+      "example_simple": "He was an unprincipled man who would do anything for money.",
+      "example_complex": "The scandal exposed a web of unprincipled dealings that reached the highest levels of the company."
+    },
+    "df0ab87f-9e2d-4742-b5ef-6309f0a5da60": {
+      "difficulty": "6.0",
+      "definition_en": "not having the necessary skills, experience, or official qualifications",
+      "ipa": "/ˌʌnˈkwɒlɪfaɪd/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-a8b763fecb6e3546": {
+      "synonyms": ["untrustworthy", "undependable", "erratic"],
+      "collocations": ["unreliable witness", "unreliable data", "notoriously unreliable"],
+      "example_simple": "My old car is very unreliable and often breaks down.",
+      "example_complex": "Because the survey relied on unreliable self-reported figures, the researchers treated its conclusions with caution.",
+      "definition_en": "not able to be trusted or depended on to work well or be accurate",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-ae7c5f79cc4c4736": {
+      "synonyms": ["turmoil", "instability", "disorder", "agitation"],
+      "collocations": ["political unrest", "civil unrest", "social unrest"],
+      "example_simple": "The rise in food prices led to widespread unrest.",
+      "example_complex": "Months of civil unrest, fuelled by unemployment and corruption, eventually forced the government to resign."
+    },
+    "pubcol-w-663e86c8ad45ab9a": {
+      "synonyms": ["green", "immature", "unready"],
+      "collocations": ["unripe fruit", "unripe bananas", "still unripe"],
+      "example_simple": "Don't eat that mango yet; it's still unripe.",
+      "example_complex": "The unripe tomatoes were picked early and left on the windowsill to redden in the sun."
+    }
+  }
+}

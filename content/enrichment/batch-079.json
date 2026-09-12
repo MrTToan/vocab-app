@@ -1,0 +1,251 @@
+{
+  "meta": { "batch": "batch-079", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-4424b02235ef56c4": {
+      "difficulty": "6.0",
+      "synonyms": ["advance well", "come along nicely", "move forward", "get on well"],
+      "collocations": ["make good progress towards a goal", "make good progress in learning", "students make good progress"],
+      "example_simple": "She is making good progress in her English class.",
+      "example_complex": "Thanks to the new treatment, the patient is making good progress towards a full recovery.",
+      "definition_en": "to advance well or improve at a satisfactory rate",
+      "ipa": "/meɪk ɡʊd ˈprəʊɡres/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-c50c8963612655fb": {
+      "difficulty": "6.0",
+      "synonyms": ["travel quickly", "make good headway", "get there fast"],
+      "collocations": ["make good time on the motorway", "make good time to the airport", "we made good time"],
+      "example_simple": "We made good time and arrived an hour early.",
+      "example_complex": "With no traffic on the roads at dawn, the delivery driver made good time and beat the deadline easily.",
+      "definition_en": "to travel somewhere faster than expected",
+      "ipa": "/meɪk ɡʊd taɪm/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-0664c99688f23405": {
+      "difficulty": "7.0",
+      "synonyms": ["seize the opportunity", "strike while the iron is hot", "act now"],
+      "collocations": ["make hay while the sun shines", "we should make hay", "make hay while you can"],
+      "example_simple": "Business is booming, so let's make hay while the sun shines.",
+      "example_complex": "The young athlete knew his prime years were short, so he made hay while the sun shone and signed every deal he could.",
+      "definition_en": "to make the most of a good opportunity while it lasts",
+      "ipa": "/meɪk heɪ waɪl ðə sʌn ʃaɪnz/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-4f5469b2afc2e76d": {
+      "difficulty": "8.0",
+      "synonyms": ["overcomplicate", "make a fuss over", "struggle unnecessarily with"],
+      "collocations": ["make heavy weather of a task", "make heavy weather of the negotiations", "don't make heavy weather of it"],
+      "example_simple": "He made heavy weather of a very simple repair.",
+      "example_complex": "The committee made heavy weather of what should have been a routine decision, dragging the meeting on for hours.",
+      "definition_en": "to make a task seem more difficult than it really is",
+      "ipa": "/meɪk ˈhevi ˈweðər əv/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "làm quá lên, làm cho việc gì đó có vẻ khó khăn hơn thực tế"
+    },
+    "pubcol-w-7ef9eae7027b1fa2": {
+      "difficulty": "6.0",
+      "synonyms": ["set a record", "break new ground", "achieve something historic"],
+      "collocations": ["make history with a victory", "the first to make history", "make history in the sport"],
+      "example_simple": "She made history as the first woman to win the prize.",
+      "example_complex": "By landing a spacecraft on the comet, the team made history and reshaped our understanding of the solar system.",
+      "definition_en": "to do something important that will be remembered",
+      "ipa": "/meɪk ˈhɪstəri/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-d3f80d604cb3b716": {
+      "difficulty": "5.0",
+      "ipa": "/meɪk ɪt/"
+    },
+    "pubcol-w-c2b883cbfc94073d": {
+      "difficulty": "6.0",
+      "synonyms": ["make changes", "adjust", "alter", "amend"],
+      "collocations": ["make modifications to the design", "make minor modifications", "make necessary modifications"],
+      "example_simple": "We had to make modifications to the plan after the meeting.",
+      "example_complex": "The engineers made several modifications to the prototype before it passed the safety tests.",
+      "definition_en": "to make small changes to something to improve it",
+      "ipa": "/meɪk ˌmɒdɪfɪˈkeɪʃənz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-dda759ba9d3b513c": {
+      "difficulty": "5.0",
+      "synonyms": ["earn money", "profit", "generate income"],
+      "collocations": ["make money online", "make money from investments", "make a lot of money"],
+      "example_simple": "He makes money by selling handmade jewellery.",
+      "example_complex": "The company struggled for years before finally learning how to make money from its subscription service.",
+      "definition_en": "to earn money or gain a profit",
+      "ipa": "/meɪk ˈmʌni/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-af51ded0f3567287": {
+      "difficulty": "7.0",
+      "synonyms": ["exaggerate", "overreact", "blow out of proportion"],
+      "collocations": ["make mountains out of molehills", "stop making mountains of molehills", "tends to make mountains of molehills"],
+      "example_simple": "Don't make mountains of molehills over one small mistake.",
+      "example_complex": "Rather than making mountains of molehills about every tiny setback, a good manager keeps the team focused on real problems.",
+      "definition_en": "to treat a small problem as if it were very serious",
+      "ipa": "/meɪk ˈmaʊntɪnz əv ˈməʊlhɪlz/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-8a3d7ff35c52f8af": {
+      "difficulty": "8.0",
+      "synonyms": ["not hesitate", "be open about", "make no secret of"],
+      "collocations": ["make no bones about it", "make no bones about saying", "make no bones about how you feel"],
+      "example_simple": "She made no bones about wanting the promotion.",
+      "example_complex": "The critic made no bones about his dislike of the film, calling it the worst release of the year.",
+      "definition_en": "to say or do something openly, without hesitation or embarrassment",
+      "ipa": "/meɪk nəʊ bəʊnz əˈbaʊt/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-5778015d22acf54b": {
+      "difficulty": "5.0",
+      "synonyms": ["have no effect", "not matter", "count for nothing"],
+      "collocations": ["it makes no difference", "make no difference at all", "whether or not makes no difference"],
+      "example_simple": "It makes no difference whether we go today or tomorrow.",
+      "example_complex": "However hard he argued, it made no difference to the final decision of the board.",
+      "definition_en": "to have no effect on a situation or outcome",
+      "ipa": "/meɪk nəʊ ˈdɪfrəns/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-81ec140187ebc5df": {
+      "difficulty": "6.0",
+      "synonyms": ["have no effect on", "not matter to", "not affect"],
+      "collocations": ["make no difference to me", "make no difference to the result", "it will make no difference to them"],
+      "example_simple": "The extra money makes no difference to him.",
+      "example_complex": "Losing the match made no difference to the team's chances, as they had already qualified for the final.",
+      "definition_en": "to have no effect on someone or something",
+      "ipa": "/meɪk nəʊ ˈdɪfrəns tə/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-22c63e7b9a677b7e": {
+      "difficulty": "5.0",
+      "synonyms": ["be noisy", "make a racket", "create a din"],
+      "collocations": ["make a lot of noise", "make noise at night", "stop making noise"],
+      "example_simple": "Please don't make noise while the baby is sleeping.",
+      "example_complex": "The old heating system made so much noise that residents complained to the landlord repeatedly.",
+      "definition_en": "to produce loud or unwanted sound",
+      "ipa": "/meɪk nɔɪz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-569850872bd8552b": {
+      "difficulty": "7.0",
+      "synonyms": ["take a bow", "bow", "greet with a bow"],
+      "collocations": ["make one's bow to the audience", "make a low bow", "made his bow and left"],
+      "example_simple": "The actor made his bow as the audience clapped.",
+      "example_complex": "After the final aria, the soprano made her bow to a standing ovation that lasted several minutes.",
+      "definition_en": "to bend the upper body forward as a formal greeting or after a performance",
+      "ipa": "/meɪk wʌnz baʊ/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-dbbf6349c48cc412": {
+      "difficulty": "7.0",
+      "synonyms": ["terrify", "frighten", "make one's blood run cold"],
+      "collocations": ["make your hair stand on end", "a story that makes your hair stand on end", "enough to make your hair stand on end"],
+      "example_simple": "The ghost story made my hair stand on end.",
+      "example_complex": "The survivor's account of the shipwreck was so vivid that it made the listeners' hair stand on end.",
+      "definition_en": "to make someone very frightened or horrified",
+      "ipa": "/meɪk wʌnz heər stænd ɒn end/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-06be97967e0e7f6e": {
+      "difficulty": "6.0",
+      "synonyms": ["relax", "feel comfortable", "settle in"],
+      "collocations": ["make yourself at home", "please make yourself at home", "told us to make ourselves at home"],
+      "example_simple": "Come in and make yourself at home.",
+      "example_complex": "Our hosts were so welcoming that we made ourselves at home within minutes of arriving.",
+      "definition_en": "to relax and behave as if you were in your own home",
+      "ipa": "/meɪk wʌnˈself ət həʊm/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-608558d14c391f81": {
+      "difficulty": "6.0",
+      "synonyms": ["discern", "understand", "distinguish", "figure out"],
+      "collocations": ["make out the words", "can't make out his handwriting", "make out a figure in the dark"],
+      "example_simple": "I could just make out a figure in the fog.",
+      "example_complex": "The recording was so faint that the detectives could barely make out what the suspect was saying.",
+      "definition_en": "to manage to see, hear, or understand something with difficulty",
+      "ipa": "/meɪk aʊt/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-0f4df267a92f1329": {
+      "difficulty": "6.0",
+      "synonyms": ["reconcile with", "bury the hatchet with", "settle differences with"],
+      "collocations": ["make peace with an old friend", "make peace with a rival", "try to make peace with"],
+      "example_simple": "He finally made peace with his brother after years of silence.",
+      "example_complex": "The two nations made peace with each other only after decades of costly conflict.",
+      "definition_en": "to end a quarrel and become friendly with someone again",
+      "ipa": "/meɪk piːs wɪð/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-5ae07c68b8411734": {
+      "difficulty": "6.0",
+      "synonyms": ["prepare for", "get ready for", "arrange for"],
+      "collocations": ["make preparations for the trip", "make preparations for the event", "make careful preparations for"],
+      "example_simple": "They are making preparations for the wedding.",
+      "example_complex": "The city spent months making preparations for the international summit it was due to host.",
+      "definition_en": "to get things ready in advance for a future event",
+      "ipa": "/meɪk ˌprepəˈreɪʃən fɔː/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-fd48cdfe409da820": {
+      "difficulty": "5.0",
+      "synonyms": ["advance", "improve", "move forward", "develop"],
+      "collocations": ["make progress on a project", "make steady progress", "make rapid progress"],
+      "example_simple": "We are making progress on the new project.",
+      "example_complex": "Although the negotiations were slow, both sides insisted they were making real progress towards an agreement.",
+      "definition_en": "to move forward or improve towards a goal",
+      "ipa": "/meɪk ˈprəʊɡres/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-ec07d63f63950273": {
+      "difficulty": "7.0",
+      "synonyms": ["provide for", "plan for", "arrange for", "allow for"],
+      "collocations": ["make provision for the future", "make provision for retirement", "make adequate provision for"],
+      "example_simple": "You should make provision for your children's education.",
+      "example_complex": "The new law requires employers to make provision for staff who need to work from home.",
+      "definition_en": "to arrange or plan in advance for a future need",
+      "ipa": "/meɪk prəˈvɪʒən fɔː/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "chuẩn bị, dự phòng, thu xếp cho điều gì (trong tương lai)"
+    },
+    "pubcol-w-7aa0e4c7d5bbea34": {
+      "difficulty": "8.0",
+      "synonyms": ["publicly accuse", "openly charge", "denounce"],
+      "collocations": ["make a public accusation of fraud", "make public accusations against", "made a public accusation of corruption"],
+      "example_simple": "She made a public accusation of cheating against the champion.",
+      "example_complex": "By making a public accusation of misconduct, the journalist risked a costly lawsuit for defamation.",
+      "definition_en": "to openly blame someone for doing something wrong",
+      "ipa": "/meɪk ˈpʌblɪk ˌækjuˈzeɪʃən əv/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-31b52a882757a4e7": {
+      "difficulty": "5.0",
+      "synonyms": ["clear space for", "free up space for", "accommodate"],
+      "collocations": ["make room for the new furniture", "make room for one more", "make room for growth"],
+      "example_simple": "Can you make room for me on the sofa?",
+      "example_complex": "The old factory was demolished to make room for a new housing development.",
+      "definition_en": "to create enough space for someone or something",
+      "ipa": "/meɪk ruːm fɔː/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-6352fbe2fc964007": {
+      "difficulty": "6.0",
+      "synonyms": ["give up something", "forgo", "sacrifice"],
+      "collocations": ["make sacrifices for the family", "make personal sacrifices", "be willing to make sacrifices"],
+      "example_simple": "Her parents made many sacrifices so she could study abroad.",
+      "example_complex": "Soldiers are often expected to make enormous sacrifices for the safety of their country.",
+      "definition_en": "to give up something valuable for the sake of something more important",
+      "ipa": "/meɪk ˈsækrɪfaɪsɪz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-6aa75fee0d4b0f3d": {
+      "difficulty": "6.0",
+      "synonyms": ["understand", "comprehend", "figure out", "interpret"],
+      "collocations": ["make sense of the data", "try to make sense of it", "make sense of the situation"],
+      "example_simple": "I can't make sense of these instructions.",
+      "example_complex": "Historians are still trying to make sense of the contradictory accounts left by eyewitnesses.",
+      "definition_en": "to understand something that is complicated or confusing",
+      "ipa": "/meɪk sens əv/",
+      "part_of_speech": "phrase"
+    }
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "meta": { "batch": "batch-103", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-4c2f37b37806e5dd": {
+      "synonyms": ["audience", "readers", "subscribers", "following"],
+      "collocations": ["a wide readership", "target readership", "readership figures"],
+      "example_simple": "The magazine has a large readership among young people.",
+      "example_complex": "Since going digital, the newspaper has broadened its readership well beyond its traditional regional base."
+    },
+    "ea8d9a61-714d-4bea-91e3-35f7b6f8aaa2": {
+      "difficulty": "6.0"
+    },
+    "f552b6d5-9fdd-49fb-bc42-5bf693cd6e8f": {
+      "difficulty": "7.0",
+      "definition_en": "raising young cattle from birth to maturity",
+      "ipa": "/ˈrɪərɪŋ kɑːvz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-759cc80a7701ce99": {
+      "difficulty": "6.0",
+      "synonyms": ["sensible", "fair", "rational", "moderate"],
+      "collocations": ["a reasonable price", "a reasonable request", "beyond reasonable doubt"],
+      "example_simple": "The shop sells good clothes at reasonable prices.",
+      "example_complex": "It seems perfectly reasonable to expect a full refund when the product arrived damaged.",
+      "definition_en": "fair, sensible, and based on good judgement; not excessive",
+      "ipa": "/ˈriːznəbl/",
+      "part_of_speech": "adjective",
+      "vi_meaning_correction": "hợp lý, phải chăng, có lý"
+    },
+    "b8937c35-5e0b-4815-aa88-9a02af04680b": {
+      "difficulty": "7.0",
+      "definition_en": "showing a desire to resist or defy authority or control",
+      "ipa": "/rɪˈbeljəs/",
+      "part_of_speech": "adjective"
+    },
+    "41d74bb9-da50-4cc3-8568-d28c48f332ae": {
+      "difficulty": "7.0",
+      "ipa": "/rɪˈbaʊnd/"
+    },
+    "942850f2-e9b8-4871-bd3c-ca32a0aeff97": {
+      "difficulty": "8.0",
+      "definition_en": "to prove that a statement or accusation is false",
+      "ipa": "/rɪˈbʌt/",
+      "part_of_speech": "verb"
+    },
+    "6a07f4e3-5b0c-421b-aba1-6cf807ead45d": {
+      "difficulty": "7.0",
+      "definition_en": "to move back or gradually diminish in strength or extent",
+      "ipa": "/rɪˈsiːd/",
+      "part_of_speech": "verb"
+    },
+    "92e81230-7b5e-4e61-b168-b419c540e8ab": {
+      "difficulty": "8.0",
+      "definition_en": "a sudden series of similar events happening in quick succession recently",
+      "ipa": "/ˈriːsnt speɪt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-e2a2270c8ad2b82d": {
+      "synonyms": ["formula", "instructions", "method"],
+      "collocations": ["follow a recipe", "a recipe for success", "a secret recipe"],
+      "example_simple": "I found a simple recipe for chocolate cake online.",
+      "example_complex": "Trying to please everyone at once is often a recipe for disaster."
+    },
+    "d2ba39e8-ced2-4be6-8766-2a3b518b8b19": {
+      "difficulty": "8.0",
+      "synonyms": ["tendencies", "temperaments", "inclinations"],
+      "definition_en": "the general tendencies or moods of the people who receive something",
+      "ipa": "/rɪˈsɪpiənts ˌəʊvərɔːl ˌdɪspəˈzɪʃnz/",
+      "part_of_speech": "phrase"
+    },
+    "34c8948b-6971-4b29-b381-906a2a1061c9": {
+      "difficulty": "8.0",
+      "definition_en": "in a way that involves two people or groups giving and receiving equally",
+      "ipa": "/rɪˈsɪprəkli/",
+      "part_of_speech": "adverb"
+    },
+    "6ce994e2-0163-4b62-b7bb-6268edb49d83": {
+      "difficulty": "7.0",
+      "definition_en": "restoring a natural environment to its original condition for wildlife",
+      "ipa": "/rɪˈkleɪmɪŋ ˈhæbɪtæt/",
+      "part_of_speech": "phrase"
+    },
+    "793153d1-d577-4f3a-ab3e-ebc38e94db53": {
+      "difficulty": "7.0",
+      "definition_en": "the process of making land usable or recovering material for reuse",
+      "ipa": "/ˌrekləˈmeɪʃn/",
+      "part_of_speech": "noun"
+    },
+    "b70c35de-b4ab-40d4-a032-1a9164707cb2": {
+      "difficulty": "8.0",
+      "definition_en": "the act of dishonestly altering records to hide the truth",
+      "ipa": "/ˈrekɔːd ˈfʌdʒɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "38ff0069-bb6d-45f8-89cc-2202eac9443c": {
+      "difficulty": "7.0",
+      "definition_en": "to tell someone about something that happened; to count again",
+      "ipa": "/rɪˈkaʊnt/",
+      "part_of_speech": "verb"
+    },
+    "cf3a3c9f-4df3-4a80-819d-358e3c3fb573": {
+      "difficulty": "8.0",
+      "definition_en": "to join or link together again after being separated",
+      "ipa": "/ˌriːˈkʌpl/",
+      "part_of_speech": "verb"
+    },
+    "bd791aee-aeb5-4685-8243-cfb1c3e11a82": {
+      "difficulty": "7.0",
+      "definition_en": "a source of help or a course of action turned to in a difficult situation",
+      "ipa": "/rɪˈkɔːs/",
+      "part_of_speech": "noun"
+    },
+    "9eb85d49-3c75-48ac-af91-d57f783fc8a2": {
+      "difficulty": "5.0",
+      "ipa": "/rɪˈkʌvə/"
+    },
+    "9fc00ecf-268c-427b-8e2c-a6825bc6a1e7": {
+      "difficulty": "7.0",
+      "definition_en": "a person who fishes for pleasure rather than for a living",
+      "ipa": "/ˌrekriˈeɪʃənl ˈæŋɡlə/",
+      "part_of_speech": "phrase"
+    },
+    "4b2371e4-32a1-487a-a649-04624f1a06c1": {
+      "difficulty": "7.0",
+      "synonyms": ["giant star"],
+      "definition_en": "a very large, bright star in a late stage of its life with a relatively cool, reddish surface",
+      "ipa": "/red ˈdʒaɪənt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-a0c6af5780a66d95": {
+      "difficulty": "6.0",
+      "synonyms": ["read thoroughly", "read from start to finish", "read in full"],
+      "collocations": ["read a book from cover to cover", "read the report from cover to cover", "devour it from cover to cover"],
+      "example_simple": "I enjoyed the novel so much that I read it from cover to cover in one day.",
+      "example_complex": "Rather than skimming the manual, she read it from cover to cover before assembling the machine.",
+      "definition_en": "to read something completely, from the beginning to the end",
+      "ipa": "/red ˈsʌmθɪŋ frəm ˈkʌvə tə ˈkʌvə/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "đọc từ đầu đến cuối, đọc toàn bộ"
+    },
+    "5ae7325b-29f9-4cee-bf27-a696cf9abf49": {
+      "difficulty": "8.0",
+      "synonyms": ["resolution of complaints", "remedy for wrongs", "settlement of grievances"],
+      "definition_en": "the act of setting right or providing a remedy for complaints and injustices",
+      "ipa": "/rɪˈdres əv ˈɡriːvənsɪz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-2dbf54d3dfa8c02a": {
+      "difficulty": "5.0",
+      "synonyms": ["ease pressure", "relieve pressure", "lessen strain"],
+      "collocations": ["reduce pressure on the system", "reduce pressure at work", "help reduce pressure"],
+      "example_simple": "Taking regular breaks can help reduce pressure at work.",
+      "example_complex": "The new hiring policy was designed to reduce pressure on existing staff during the busy season.",
+      "definition_en": "to make an amount of force, stress, or demand smaller",
+      "ipa": "/rɪˈdjuːs ˈpreʃə/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-a5bb007d57629776": {
+      "difficulty": "6.0",
+      "synonyms": ["make someone cry", "move someone to tears", "leave someone in tears"],
+      "collocations": ["reduce her to tears", "reduce the audience to tears", "be reduced to tears"],
+      "example_simple": "The harsh criticism reduced the young singer to tears.",
+      "example_complex": "The emotional reunion at the airport reduced even the most hardened onlookers to tears.",
+      "definition_en": "to make someone cry, especially through harsh or overwhelming treatment",
+      "ipa": "/rɪˈdjuːs ˈsʌmbədi tə tɪəz/",
+      "part_of_speech": "idiom"
+    }
+  }
+}

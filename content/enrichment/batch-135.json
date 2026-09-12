@@ -1,0 +1,192 @@
+{
+  "meta": { "batch": "batch-135", "authored_by": "claude", "count": 25 },
+  "words": {
+    "22ae53b4-42a0-467d-8768-3383cdc2ac12": {
+      "difficulty": "6.0",
+      "definition_en": "the hard round nut of a walnut tree, with an edible wrinkled seed inside",
+      "ipa": "/ˈwɔːlnʌt/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-e11ed3aff207480e": {
+      "difficulty": "8.0",
+      "ipa": "/ˈwɒrənt/"
+    },
+    "bc22aa0e-4c79-4c3a-bcf0-2190aee1c5fe": {
+      "difficulty": "8.0",
+      "definition_en": "the young grub-like offspring of a wasp before it becomes an adult",
+      "ipa": "/wɒsp ˈlɑːviː/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-3f81e6c1f2c68b25": {
+      "difficulty": "7.0",
+      "synonyms": ["waste management", "refuse disposal", "garbage disposal"],
+      "collocations": ["safe waste disposal", "waste disposal system", "waste disposal site"],
+      "example_simple": "The city built a new plant for waste disposal.",
+      "example_complex": "Inadequate waste disposal in rapidly growing cities poses a serious threat to public health and the environment.",
+      "definition_en": "the process of getting rid of rubbish or unwanted material safely",
+      "ipa": "/weɪst dɪˈspəʊzəl/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "xử lý/tiêu hủy chất thải"
+    },
+    "pubcol-w-dedeacca5ff48b40": {
+      "difficulty": "5.0",
+      "synonyms": ["beware of", "look out for", "be careful of", "guard against"],
+      "collocations": ["watch out for cars", "watch out for scams", "watch out for danger"],
+      "example_simple": "Watch out for the broken step near the door.",
+      "example_complex": "When investing online, you should watch out for schemes that promise unrealistically high returns.",
+      "definition_en": "to be careful about a possible danger or problem",
+      "ipa": "/wɒtʃ aʊt fɔː/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-385fdf3806dc427e": {
+      "difficulty": "6.0",
+      "synonyms": ["monitor portion sizes", "control portions", "keep an eye on portions"],
+      "collocations": ["watch portion sizes carefully", "watch your portion sizes", "help watch portion sizes"],
+      "example_simple": "If you want to lose weight, you should watch portion sizes at every meal.",
+      "example_complex": "Nutritionists advise people to watch portion sizes rather than cut out whole food groups entirely.",
+      "definition_en": "to pay careful attention to how much food you serve or eat",
+      "ipa": "/wɒtʃ ˈpɔːʃən ˌsaɪzɪz/",
+      "part_of_speech": "phrase"
+    },
+    "36f68161-eedc-4940-bdd8-aafd7839dd95": {
+      "difficulty": "7.0",
+      "definition_en": "the amount or weight of water carried, held, or handled by something",
+      "ipa": "/ˈwɔːtə ləʊd/",
+      "part_of_speech": "phrase"
+    },
+    "bff9ff15-c73e-41f5-99eb-e50ace918eb7": {
+      "difficulty": "6.0",
+      "example_simple": "When water boils, it turns into water vapour.",
+      "example_complex": "As warm air rises and cools, the water vapour it carries condenses into clouds.",
+      "definition_en": "water in the form of a gas, produced when water is heated or evaporates",
+      "ipa": "/ˈwɔːtə ˈveɪpə/",
+      "part_of_speech": "noun"
+    },
+    "35f311ec-8837-412e-bd36-3fb3419438ac": {
+      "difficulty": "7.0",
+      "definition_en": "an illness caused by germs spread through contaminated water",
+      "ipa": "/ˈwɔːtəbɔːn dɪˈziːz/",
+      "part_of_speech": "phrase"
+    },
+    "7d4c4875-fee0-4adb-9b26-4b6ad15195b2": {
+      "difficulty": "8.0",
+      "definition_en": "fungi that live and spread in water",
+      "ipa": "/ˈwɔːtəbɔːn ˈfʌŋɡaɪ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-adb89c757a7da04c": {
+      "difficulty": "7.0",
+      "synonyms": ["wide of the mark", "wrong", "inaccurate", "off target"],
+      "collocations": ["way off the mark", "be way off the mark", "guess was off the mark"],
+      "example_simple": "His guess about the price was way off the mark.",
+      "example_complex": "The early forecasts of a mild winter turned out to be way off the mark, as record snowfalls hit the region.",
+      "definition_en": "completely wrong or inaccurate",
+      "ipa": "/weɪ ɒf ðə mɑːk/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-09f3e9bf81e0754b": {
+      "difficulty": "7.0",
+      "synonyms": ["ride out the storm", "pull through", "survive", "get through"],
+      "collocations": ["weather the storm together", "manage to weather the storm", "help the company weather the storm"],
+      "example_simple": "The small business managed to weather the storm during the recession.",
+      "example_complex": "Firms with strong cash reserves are far better placed to weather the storm when the economy takes a downturn.",
+      "definition_en": "to survive a difficult period or situation successfully",
+      "ipa": "/ˈweðə ðə stɔːm/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "vượt qua giai đoạn khó khăn; xử lý thành công một vấn đề khó"
+    },
+    "6b84804a-8163-4eb9-a774-685f359f14d6": {
+      "difficulty": "6.0",
+      "definition_en": "to make cloth or a pattern by crossing threads over and under each other; to combine elements into a whole",
+      "ipa": "/wiːv/",
+      "part_of_speech": "verb"
+    },
+    "53bd771a-4ea5-4523-a0a3-9eeea9e2cd89": {
+      "difficulty": "6.0",
+      "definition_en": "wild plants that grow where they are not wanted, especially among crops",
+      "ipa": "/wiːdz/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-c803e426188665bb": {
+      "synonyms": ["every week", "once a week", "each week"],
+      "collocations": ["weekly meeting", "weekly report", "on a weekly basis"],
+      "example_simple": "We have a weekly meeting every Monday morning.",
+      "example_complex": "The team submits a weekly report so that managers can track progress on a regular basis.",
+      "definition_en": "happening or done once a week or every week",
+      "part_of_speech": "adjective"
+    },
+    "f46750a6-59be-4c3d-8a58-0e8fcca4d694": {
+      "difficulty": "6.0",
+      "definition_en": "a person whose job is to join pieces of metal together by heating them",
+      "ipa": "/ˈweldə/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-96c6a86f51659020": {
+      "difficulty": "8.0",
+      "ipa": "/ˈwelfeə steɪt/"
+    },
+    "7846f365-533a-4b7f-9dc7-9fabc384ac45": {
+      "difficulty": "6.0",
+      "definition_en": "a long time after a particular point or event",
+      "ipa": "/wel ˈɑːftə/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-aaf01da9f063dba0": {
+      "difficulty": "5.0",
+      "synonyms": ["high-paying jobs", "lucrative jobs", "highly paid work"],
+      "collocations": ["secure well-paid jobs", "create well-paid jobs", "attract well-paid jobs"],
+      "example_simple": "Many students go to university hoping to find well-paid jobs.",
+      "example_complex": "Governments often argue that investing in education will lead to more well-paid jobs and a stronger economy.",
+      "definition_en": "jobs that pay a high salary",
+      "ipa": "/wel peɪd dʒɒbz/",
+      "part_of_speech": "phrase"
+    },
+    "cafaf64d-da82-472a-a5d7-4d8f53a3ddf4": {
+      "difficulty": "8.0",
+      "definition_en": "a subject or idea that has been discussed so often it is very familiar",
+      "ipa": "/wel wɔːn ɡraʊnd/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-196a721f09ae816b": {
+      "difficulty": "6.0",
+      "synonyms": ["what nonsense", "what rubbish", "what a load of rubbish"],
+      "collocations": ["what a load of crap", "that's a load of crap", "spouting a load of crap"],
+      "example_simple": "What a load of crap — none of that is true!",
+      "example_complex": "When the salesman claimed the product could cure any illness, I thought, what a load of crap.",
+      "definition_en": "an informal, rude exclamation used to say that something is complete nonsense",
+      "ipa": "/wɒt ə ləʊd əv kræp/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "toàn chuyện nhảm nhí!; toàn thứ vớ vẩn!"
+    },
+    "pubcol-w-75a6e0169ef3a91b": {
+      "difficulty": "6.0",
+      "synonyms": ["moreover", "furthermore", "in addition", "besides"],
+      "collocations": ["what is more important", "and what is more", "what is more, ..."],
+      "example_simple": "The hotel was cheap, and what is more, it was very close to the beach.",
+      "example_complex": "The new policy will reduce costs; what is more, it is likely to improve customer satisfaction significantly.",
+      "definition_en": "used to add a further point that is even more important than the one before",
+      "ipa": "/wɒt ɪz mɔː/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "hơn nữa, thêm vào đó (dùng để bổ sung một điều quan trọng hơn)"
+    },
+    "pubcol-w-996ba4a8f1062612": {
+      "difficulty": "5.0",
+      "ipa": "/wɒts ʌp/"
+    },
+    "pubcol-w-d869db7fe62fb07c": {
+      "difficulty": "6.0",
+      "ipa": "/wɒtˈevə/"
+    },
+    "pubcol-w-d82b9fa654355e1c": {
+      "difficulty": "7.0",
+      "synonyms": ["fall apart", "go wrong", "collapse", "unravel"],
+      "collocations": ["the wheels fall off", "wheels started to fall off", "watch the wheels fall off"],
+      "example_simple": "The project was going well until the wheels fell off in the final month.",
+      "example_complex": "The team led at half-time, but the wheels fell off completely after their key player was sent off.",
+      "definition_en": "when a plan or situation suddenly goes badly wrong or falls apart",
+      "ipa": "/wiːlz fɔːl ɒf/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "mọi việc đổ bể/hỏng bét, không diễn ra như ý"
+    }
+  }
+}

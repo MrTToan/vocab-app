@@ -1,0 +1,185 @@
+{
+  "meta": { "batch": "batch-057", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-211107fb13c1cf42": {
+      "synonyms": ["rough estimate", "approximation", "ballpark figure", "educated guess"],
+      "collocations": ["make a guesstimate", "a rough guesstimate", "guesstimate the cost"],
+      "example_simple": "I don't have the exact figure, so I'll just make a guesstimate.",
+      "example_complex": "Without reliable data, the analysts could offer only a guesstimate of how many people would attend the festival."
+    },
+    "pubcol-w-927eca9aa5744b23": {
+      "synonyms": ["recommendation", "instruction", "rule", "principle"],
+      "collocations": ["follow the guidelines", "issue guidelines", "clear guidelines"],
+      "example_simple": "The teacher gave us clear guidelines for writing the essay.",
+      "example_complex": "The government issued new safety guidelines that all restaurants were required to follow."
+    },
+    "2cb277b6-de53-42df-b073-841fbef4f87f": {
+      "difficulty": "7.0",
+      "definition_en": "an organization of people who do the same job or share the same interests",
+      "ipa": "/ɡɪld/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-c1649ab30f7ed983": {
+      "difficulty": "6.0",
+      "synonyms": ["remorse", "sense of guilt", "self-reproach", "pang of guilt"],
+      "collocations": ["have a guilty conscience", "ease a guilty conscience", "a nagging guilty conscience"],
+      "example_simple": "He had a guilty conscience after lying to his mother.",
+      "example_complex": "Unable to shake off her guilty conscience, she finally confessed that she had taken the money.",
+      "definition_en": "an uncomfortable feeling caused by knowing you have done something wrong",
+      "ipa": "/ˌɡɪlti ˈkɒnʃəns/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-0b4b5ba7a870b226": {
+      "synonyms": ["naive", "credulous", "trusting", "easily fooled"],
+      "collocations": ["gullible enough to believe", "a gullible person", "prey on gullible people"],
+      "example_simple": "He is so gullible that he believes almost anything you tell him.",
+      "example_complex": "Scammers deliberately target gullible investors who are desperate to make quick profits."
+    },
+    "pubcol-w-a9c25a67db80a64f": {
+      "synonyms": ["bargain", "negotiate", "barter", "quibble"],
+      "collocations": ["haggle over the price", "haggle with a seller", "haggle for a discount"],
+      "example_simple": "Tourists often haggle with vendors at the local market.",
+      "example_complex": "She spent nearly an hour haggling over the price of the carpet before the merchant finally agreed.",
+      "definition_en": "to argue in order to agree on a price or the terms of a deal",
+      "part_of_speech": "verb"
+    },
+    "8b1b5237-89ef-43ce-bcb5-eaaceabfc5d3": {
+      "difficulty": "6.0",
+      "definition_en": "to stop, or to make something stop moving or happening",
+      "ipa": "/hɔːlt/",
+      "part_of_speech": "verb"
+    },
+    "55190662-19da-4e00-bf2c-5f4010ceeeff": {
+      "difficulty": "6.0",
+      "definition_en": "reduced by half, or divided into two equal parts",
+      "ipa": "/hɑːvd/",
+      "part_of_speech": "verb"
+    },
+    "bcecbb95-557c-4302-ba1b-1bfce12d8467": {
+      "difficulty": "7.0",
+      "definition_en": "to prevent someone or something from moving or making progress easily",
+      "ipa": "/ˈhæmpə(r)/",
+      "part_of_speech": "verb"
+    },
+    "36db20b4-2617-464b-b0a1-04e58ebafa71": {
+      "difficulty": "7.0",
+      "definition_en": "to hinder or prevent progress (a misspelling of 'hamper')",
+      "ipa": "/ˈhæmpə(r)/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-feafdbd9ac1c21a9": {
+      "difficulty": "7.0",
+      "synonyms": ["resign", "quit", "give notice", "tender one's resignation"],
+      "collocations": ["hand in your notice", "decide to hand in his notice", "hand in her notice immediately"],
+      "example_simple": "He was so unhappy at work that he decided to hand in his notice.",
+      "example_complex": "After being passed over for promotion yet again, she handed in her notice and began looking for a new job.",
+      "definition_en": "to formally tell your employer that you are going to leave your job",
+      "ipa": "/ˌhænd ɪn hɪz ˈnəʊtɪs/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "nộp đơn xin nghỉ việc, xin thôi việc"
+    },
+    "3235bf54-11dc-48b3-9111-44e281450f54": {
+      "difficulty": "6.0",
+      "definition_en": "a physical or mental disability, or something that makes progress difficult",
+      "ipa": "/ˈhændikæp/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-3d28d74e967fb612": {
+      "difficulty": "7.0",
+      "synonyms": ["practical", "interactive", "experiential", "involved"],
+      "collocations": ["hands-on experience", "a hands-on approach", "hands-on training"],
+      "example_simple": "The course gives students hands-on experience with real equipment.",
+      "example_complex": "Rather than simply lecturing, the instructor favoured a hands-on approach that let trainees solve genuine problems themselves.",
+      "definition_en": "involving direct, practical experience rather than theory",
+      "ipa": "/ˌhændz ˈɒn/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-e5d7b2808ff8d9fc": {
+      "difficulty": "6.0",
+      "ipa": "/ˌhæŋ ɪn ˈðeə(r)/"
+    },
+    "pubcol-w-5a365eb6d4eb23dc": {
+      "difficulty": "5.0",
+      "ipa": "/ˌhæŋ ˈɒn/"
+    },
+    "pubcol-w-1b537010d613f171": {
+      "difficulty": "5.0",
+      "ipa": "/ˌhæŋ ˈaʊt/"
+    },
+    "pubcol-w-ce0f5124a61d00dd": {
+      "difficulty": "5.0",
+      "ipa": "/ˌhæŋ ˈaʊt wɪð/"
+    },
+    "pubcol-w-7ef92dc862441c7e": {
+      "difficulty": "7.0",
+      "synonyms": ["loom over", "linger", "overshadow", "threaten"],
+      "collocations": ["hang over the meeting", "a threat hanging over", "uncertainty hanging over"],
+      "example_simple": "A feeling of sadness hung over the whole town after the accident.",
+      "example_complex": "The threat of redundancy hung over the employees for months, making it impossible to concentrate on their work.",
+      "definition_en": "(of something unpleasant) to remain present or threatening over a period of time",
+      "ipa": "/ˌhæŋ ˈəʊvə(r)/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "bao trùm, đè nặng lên, lơ lửng đe dọa"
+    },
+    "pubcol-w-80271f9ece264de1": {
+      "difficulty": "5.0",
+      "ipa": "/ˌhæŋ ˈʌp/"
+    },
+    "pubcol-w-6168b790263e4aa9": {
+      "synonyms": ["port", "haven", "dock", "marina"],
+      "collocations": ["a natural harbour", "sail into the harbour", "a busy harbour"],
+      "example_simple": "The boats returned to the harbour before the storm arrived.",
+      "example_complex": "The city's deep natural harbour made it an important centre for international trade for centuries.",
+      "definition_en": "an area of water next to the coast where ships are kept safe",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-cae5970fc939e302": {
+      "difficulty": "5.0",
+      "synonyms": ["strenuously", "intensely", "vigorously", "diligently"],
+      "collocations": ["work hard", "try hard", "push hard"],
+      "example_simple": "She studied hard for her final exams.",
+      "example_complex": "If you push yourself too hard for too long, you risk burning out completely.",
+      "definition_en": "with a lot of effort or force",
+      "ipa": "/hɑːd/",
+      "part_of_speech": "adverb"
+    },
+    "pubcol-w-d9326fa93ea08141": {
+      "difficulty": "6.0",
+      "synonyms": ["damage wildlife", "endanger life", "hurt living things", "threaten the ecosystem"],
+      "collocations": ["harm marine life", "harm wildlife", "harm plant life"],
+      "example_simple": "Plastic waste in the ocean can harm the life that lives there.",
+      "example_complex": "Scientists warn that rising water temperatures harm the marine life on which coastal communities depend.",
+      "definition_en": "to cause damage or injury to living things, especially wildlife or the natural environment",
+      "ipa": "/ˌhɑːm ðə ˈlaɪf/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "gây hại cho sự sống / động thực vật tự nhiên (đặc biệt là sinh vật biển)"
+    },
+    "e76e3589-d8e4-42c5-8cc0-27568f27fa42": {
+      "difficulty": "8.0",
+      "definition_en": "musical notes that sound pleasing when played or sung together",
+      "ipa": "/hɑːˌmɒnɪk ˈnəʊts/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-b131867c5de6fc08": {
+      "difficulty": "6.0",
+      "synonyms": [],
+      "collocations": ["old Harold", "Uncle Harold", "Harold said"],
+      "example_simple": "Harold works at the bank near my house.",
+      "example_complex": "Harold, who had lived in the village all his life, knew every family by name.",
+      "definition_en": "a male first name",
+      "ipa": "/ˈhærəld/",
+      "part_of_speech": "noun",
+      "vi_meaning_correction": "tên riêng của nam giới (Harold)"
+    },
+    "pubcol-w-5558729b9b0c6819": {
+      "difficulty": "7.0",
+      "synonyms": ["have a police record", "have prior convictions", "have a rap sheet"],
+      "collocations": ["have a criminal record", "check for a criminal record", "a clean criminal record"],
+      "example_simple": "It can be hard to find a job if you have a criminal record.",
+      "example_complex": "The company runs background checks to see whether any applicant has a criminal record before making an offer.",
+      "definition_en": "to have an official list of the crimes that a person has been found guilty of",
+      "ipa": "/ˌhæz ə ˈkrɪmɪnl ˈrekɔːd/",
+      "part_of_speech": "phrase"
+    }
+  }
+}

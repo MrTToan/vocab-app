@@ -1,0 +1,233 @@
+{
+  "meta": { "batch": "batch-093", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-c1601c5af1f1aa3a": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/pɑːs fɔː(r)/",
+      "definition_en": "to be accepted or mistaken as someone or something else",
+      "synonyms": ["be taken for", "be mistaken for", "count as", "be regarded as"],
+      "collocations": ["pass for human", "could pass for", "easily pass for"],
+      "example_simple": "In that suit, he could easily pass for a businessman.",
+      "example_complex": "With her fluent accent and local knowledge, she could pass for a native of the city she had visited only twice."
+    },
+    "pubcol-w-82e2b6d76eaec5f0": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/pɑːs lɔːz/",
+      "definition_en": "to formally approve and enact laws through a legislative body",
+      "synonyms": ["enact laws", "legislate", "adopt legislation"],
+      "collocations": ["pass laws to protect", "pass strict laws", "pass new laws"],
+      "example_simple": "The government wants to pass laws to reduce pollution.",
+      "example_complex": "Parliament moved quickly to pass laws that would hold technology companies accountable for the content on their platforms."
+    },
+    "pubcol-w-8caf8e524c354cae": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/pɑːs feɪl ðə test/",
+      "definition_en": "to succeed or fail in an examination or assessment",
+      "synonyms": ["succeed in", "fail in", "sit the exam", "score on the test"],
+      "collocations": ["pass the test with ease", "fail the driving test", "pass the final test"],
+      "example_simple": "You need sixty marks to pass the test.",
+      "example_complex": "Whether students pass or fail the test often depends less on ability than on how calmly they manage exam pressure."
+    },
+    "1ed295bf-a7a4-48b9-904b-9b23f9a25bf8": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˈpæsɪdʒ əv lɔː/",
+      "definition_en": "the formal approval and enactment of a law by a legislature"
+    },
+    "b9ce2848-0fb1-4df5-81dd-8d17fad940c9": {
+      "difficulty": "8.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˈpæsɪv ənd ˈsuːpaɪn/",
+      "definition_en": "completely inactive and submissive, accepting things without any resistance"
+    },
+    "41c52f01-00e2-4e54-ba3d-a669d1cac7cf": {
+      "difficulty": "6.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˈpɑːstə(r)/",
+      "definition_en": "a minister or priest in charge of a Christian church or congregation"
+    },
+    "deb72f8f-9ac9-4119-bce9-272a520ef7b9": {
+      "difficulty": "8.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˈpɑːstʃə puːl/",
+      "definition_en": "a small natural pond or pool of water lying in a grassy field or meadow"
+    },
+    "pubcol-w-858540cfe95180a5": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/pæt jɔːˈself ɒn ðə bæk/",
+      "definition_en": "to praise or congratulate yourself for something you have done well",
+      "synonyms": ["congratulate yourself", "take credit", "feel proud"],
+      "collocations": ["pat yourself on the back for", "give yourself a pat on the back", "deserve to pat yourself on the back"],
+      "example_simple": "You can pat yourself on the back for finishing the project on time.",
+      "example_complex": "Rather than pausing to pat themselves on the back, the team immediately began planning how to improve on their record.",
+      "vi_meaning_correction": "tự khen ngợi bản thân, tự hào về việc mình làm"
+    },
+    "c9677e43-af01-40a9-a710-45694d4227f3": {
+      "difficulty": "6.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˈpætiəʊ/",
+      "definition_en": "a paved outdoor area next to a house, used for sitting or dining"
+    },
+    "710618a8-5543-45bd-b65c-587b0761f027": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˌpeɪtriˈɑːkl ˈfæməli/",
+      "definition_en": "a family structure in which the father or eldest male holds authority",
+      "vi_meaning_correction": "gia đình phụ hệ, gia đình do người đàn ông đứng đầu"
+    },
+    "c12c8fce-cf50-4c1d-845c-ffc19eae8430": {
+      "difficulty": "7.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˈpeɪtrən/",
+      "definition_en": "a person who gives money or support to a shop, artist, or cause"
+    },
+    "pubcol-w-316d23671e6dd52f": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/peɪv ðə weɪ fɔː(r)/",
+      "definition_en": "to create conditions that make a later development possible or easier",
+      "synonyms": ["prepare for", "clear the way for", "set the stage for", "lay the groundwork for"],
+      "collocations": ["pave the way for reform", "help pave the way", "pave the way for future generations"],
+      "example_simple": "This research could pave the way for a new treatment.",
+      "example_complex": "The peace agreement paved the way for decades of cooperation between two nations that had long been rivals."
+    },
+    "pubcol-w-c8a94754d23b6f20": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/peɪ ə ˈvɪzɪt tuː/",
+      "definition_en": "to go to see a person or place for a short time",
+      "synonyms": ["visit", "call on", "drop in on", "stop by"],
+      "collocations": ["pay a visit to a friend", "pay a short visit to", "pay a visit to the doctor"],
+      "example_simple": "We plan to pay a visit to my grandmother this weekend.",
+      "example_complex": "While in the capital, the delegation paid a visit to several museums that showcased the region's ancient heritage."
+    },
+    "pubcol-w-b6bce7593e3c2059": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/peɪ ə ˈvɪzɪt tuː/",
+      "definition_en": "to go to see a person or place for a short time",
+      "synonyms": ["visit", "call on", "drop in on", "stop by"],
+      "collocations": ["pay a visit to a friend", "pay a short visit to", "pay a visit to the doctor"],
+      "example_simple": "We plan to pay a visit to my grandmother this weekend.",
+      "example_complex": "While in the capital, the delegation paid a visit to several museums that showcased the region's ancient heritage.",
+      "vi_meaning_correction": "thăm ai/cái gì"
+    },
+    "pubcol-w-0c59eb344eccd582": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/peɪ əˈtenʃn tuː/",
+      "definition_en": "to watch, listen to, or think about something carefully",
+      "synonyms": ["focus on", "concentrate on", "take notice of", "heed"],
+      "collocations": ["pay close attention to", "pay attention to detail", "pay careful attention to"],
+      "example_simple": "Please pay attention to the teacher's instructions.",
+      "example_complex": "Investors who pay attention to small shifts in consumer behaviour often spot opportunities long before their competitors do."
+    },
+    "pubcol-w-76064479a269a831": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/peɪ wʌnz lɑːst rɪˈspekts/",
+      "definition_en": "to show honour and affection to someone who has died, usually at a funeral",
+      "synonyms": ["mourn", "honour the deceased", "bid farewell"],
+      "collocations": ["pay one's last respects at the funeral", "come to pay one's last respects", "gather to pay one's last respects"],
+      "example_simple": "Hundreds of people came to pay their last respects.",
+      "example_complex": "Mourners from across the country travelled to the small village to pay their last respects to a man who had quietly changed so many lives."
+    },
+    "pubcol-w-2bc60965b6f6c758": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/peɪ wʌnz lɑːst rɪˈspekts tuː/",
+      "definition_en": "to show honour and affection to a person who has died, usually at a funeral",
+      "synonyms": ["mourn", "honour the deceased", "bid farewell to"],
+      "collocations": ["pay one's last respects to a friend", "come to pay one's last respects to", "gather to pay one's last respects to"],
+      "example_simple": "She flew home to pay her last respects to her uncle.",
+      "example_complex": "Colleagues and former students alike came to pay their last respects to the professor whose lectures had shaped a generation.",
+      "vi_meaning_correction": "đến chào/tiễn biệt ai lần cuối (người đã mất)"
+    },
+    "pubcol-w-cf5b2808508f28a9": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/peɪ ˌsʌmbədi ə ˈvɪzɪt/",
+      "definition_en": "to go to see someone for a short time",
+      "synonyms": ["visit", "call on", "drop in on", "stop by"],
+      "collocations": ["pay someone a quick visit", "decide to pay someone a visit", "pay someone a surprise visit"],
+      "example_simple": "I'll pay you a visit when I'm in town.",
+      "example_complex": "Whenever business took him overseas, he made a point of paying an old mentor a visit to seek her advice."
+    },
+    "pubcol-w-5eddfa94af004824": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/peɪ ˈsʌmwʌn ə ˈkɒmplɪmənt/",
+      "definition_en": "to say something nice to someone to show admiration or approval",
+      "synonyms": ["compliment", "praise", "flatter", "commend"],
+      "collocations": ["pay someone a sincere compliment", "pay someone a nice compliment", "stop to pay someone a compliment"],
+      "example_simple": "He paid her a compliment on her cooking.",
+      "example_complex": "The critic rarely praised anyone, so when he paid the young author a compliment, she treasured it for years."
+    },
+    "pubcol-w-6bbe8a173b017b3f": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/peɪ ðə dɪˈpɒzɪt əv ˈmʌni/",
+      "definition_en": "to pay a sum of money in advance to secure or reserve something",
+      "synonyms": ["put down a deposit", "pay a deposit", "make a down payment"],
+      "collocations": ["pay the deposit on a flat", "pay a deposit to reserve", "pay the deposit upfront"],
+      "example_simple": "We had to pay the deposit before moving into the flat.",
+      "example_complex": "Buyers are usually required to pay a substantial deposit, which they forfeit if they later withdraw from the sale.",
+      "vi_meaning_correction": "đặt cọc"
+    },
+    "pubcol-w-26dde172ff32f3a4": {
+      "difficulty": "8.0",
+      "part_of_speech": "idiom",
+      "ipa": "/peɪ θruː ðə nəʊz/",
+      "definition_en": "to pay far too much money for something",
+      "synonyms": ["overpay", "be overcharged", "pay a fortune"],
+      "collocations": ["pay through the nose for tickets", "end up paying through the nose", "pay through the nose for repairs"],
+      "example_simple": "We paid through the nose for the hotel during the festival.",
+      "example_complex": "Tourists who fail to book in advance often pay through the nose for accommodation that locals would consider absurdly overpriced."
+    },
+    "pubcol-w-ad9e7f598185a742": {
+      "difficulty": "8.0",
+      "part_of_speech": "idiom",
+      "ipa": "/peɪ θruː ðə nəʊz fɔː(r)/",
+      "definition_en": "to pay far too much money for a particular thing",
+      "synonyms": ["overpay for", "be overcharged for", "pay a fortune for"],
+      "collocations": ["pay through the nose for parking", "pay through the nose for the service", "pay through the nose for it"],
+      "example_simple": "You'll pay through the nose for tickets on the day.",
+      "example_complex": "Because the part was no longer manufactured, the collector had to pay through the nose for a single replacement that once cost almost nothing."
+    },
+    "pubcol-w-685c3c9ed66d570a": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/peɪ ˈtrɪbjuːt tuː/",
+      "definition_en": "to publicly express respect, admiration, or gratitude for someone or something",
+      "synonyms": ["honour", "commend", "praise", "salute"],
+      "collocations": ["pay tribute to the victims", "pay warm tribute to", "pay tribute to their courage"],
+      "example_simple": "The president paid tribute to the soldiers who died.",
+      "example_complex": "In her acceptance speech, the director paid tribute to the mentors who had believed in her long before anyone else did."
+    },
+    "pubcol-w-7162b08646840cff": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/peɪ ə ˈvɪzɪt tuː/",
+      "definition_en": "to go to see a person or place for a short time",
+      "synonyms": ["visit", "call on", "drop in on", "stop by"],
+      "collocations": ["pay a visit to a friend", "pay a short visit to", "pay a visit to the museum"],
+      "example_simple": "We decided to pay a visit to the old castle.",
+      "example_complex": "On their way through the region, the couple paid a visit to a small vineyard that few tourists had ever heard of."
+    },
+    "pubcol-w-f8e5e65b936196a7": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/piːs əv maɪnd/",
+      "definition_en": "a feeling of calm and freedom from worry or anxiety",
+      "synonyms": ["calm", "reassurance", "serenity", "tranquillity"],
+      "collocations": ["give you peace of mind", "for your peace of mind", "complete peace of mind"],
+      "example_simple": "Good insurance gives me peace of mind.",
+      "example_complex": "Knowing that his family was financially secure gave him the peace of mind he needed to take the risky new job.",
+      "vi_meaning_correction": "cảm giác yên tâm, không lo lắng"
+    }
+  }
+}

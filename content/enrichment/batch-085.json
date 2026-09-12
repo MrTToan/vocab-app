@@ -1,0 +1,174 @@
+{
+  "meta": { "batch": "batch-085", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-1d06756dfdc87013": {
+      "synonyms": ["ordinary", "dull", "humdrum", "routine"],
+      "collocations": ["mundane tasks", "mundane routine", "mundane details"],
+      "example_simple": "She was tired of the mundane chores she had to do every day.",
+      "example_complex": "Behind the glamour of the job lay a great deal of mundane paperwork that no one talked about."
+    },
+    "e4293ac7-2cda-405f-a7cb-910f28395c1f": {
+      "difficulty": "7.0",
+      "definition_en": "the tightening or shortening of a muscle that produces movement or force",
+      "ipa": "/ˈmʌs.əl kənˈtræk.ʃən/",
+      "part_of_speech": "phrase"
+    },
+    "6290c4bf-30d9-46ce-a784-5036017e1479": {
+      "difficulty": "7.0",
+      "definition_en": "to change in form or structure, especially through a change in genes",
+      "ipa": "/mjuːˈteɪt/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-d23498d44a44ac46": {
+      "synonyms": ["mumble", "murmur", "grumble"],
+      "collocations": ["mutter under one's breath", "mutter something", "mutter angrily"],
+      "example_simple": "He began to mutter to himself as he searched for his keys.",
+      "example_complex": "She muttered a few resentful words under her breath, careful not to let her boss overhear."
+    },
+    "pubcol-w-1e9e6b59d6984ce6": {
+      "difficulty": "6.0",
+      "ipa": "/maɪ bæd/"
+    },
+    "pubcol-w-d364475be736b0d5": {
+      "synonyms": ["serviette", "table napkin"],
+      "collocations": ["paper napkins", "fold the napkins", "a pile of napkins"],
+      "example_simple": "She put clean napkins next to each plate on the table.",
+      "example_complex": "The waiter discreetly replaced the used napkins before the next course arrived.",
+      "definition_en": "small pieces of cloth or paper used at meals to protect clothes and wipe the mouth and hands",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-64682af9daaa982e": {
+      "synonyms": ["diaper", "nappie"],
+      "collocations": ["change a nappy", "a disposable nappy", "a dirty nappy"],
+      "example_simple": "The baby needs a clean nappy before bedtime.",
+      "example_complex": "New parents quickly learn to change a nappy in the dark without fully waking up."
+    },
+    "pubcol-w-e1b335fb5313ef3a": {
+      "synonyms": ["thin", "tight", "slender", "constricted"],
+      "collocations": ["a narrow street", "a narrow escape", "narrow margin"],
+      "example_simple": "The car could barely fit through the narrow lane.",
+      "example_complex": "The candidate won by a narrow margin, taking the seat by just a few hundred votes.",
+      "definition_en": "small in width, especially in comparison with length",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-10f6d30cf94e34a0": {
+      "synonyms": ["intolerant", "prejudiced", "bigoted", "closed-minded"],
+      "collocations": ["narrow-minded attitude", "narrow-minded people", "narrow-minded view"],
+      "example_simple": "He is too narrow-minded to accept new ideas.",
+      "example_complex": "Their narrow-minded refusal to consider other cultures held the whole discussion back."
+    },
+    "pubcol-w-ba1d4317935dffc0": {
+      "synonyms": ["nationwide", "state", "governmental", "public"],
+      "collocations": ["national government", "national identity", "national holiday"],
+      "example_simple": "Football is the national sport in many countries.",
+      "example_complex": "The disaster sparked a national debate about how the government funds emergency services.",
+      "definition_en": "relating to or belonging to a whole country rather than a part of it",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-4ba4f10c3ae5a7e2": {
+      "difficulty": "6.0",
+      "synonyms": ["national song", "patriotic anthem"],
+      "collocations": ["sing the national anthem", "play the national anthem", "stand for the national anthem"],
+      "example_simple": "Everyone stood up when the national anthem was played.",
+      "example_complex": "The crowd fell silent as the national anthem echoed around the stadium before the match began.",
+      "definition_en": "the official song of a country, usually sung on formal occasions",
+      "ipa": "/ˈnæʃ.ən.əl ˈæn.θəm/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-8bbe53cbeca1d38d": {
+      "difficulty": "6.0",
+      "synonyms": ["national test", "state examination"],
+      "collocations": ["sit the national exam", "pass the national examination", "prepare for the national exam"],
+      "example_simple": "Students spend months revising for the national exam.",
+      "example_complex": "The results of the national examination often determine which university a student can attend.",
+      "definition_en": "an official test taken by students across a whole country, often used for university admission",
+      "ipa": "/ˈnæʃ.ən.əl ɪɡˌzæm.ɪˈneɪ.ʃən/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-3f49c2c343021ad3": {
+      "difficulty": "6.0",
+      "synonyms": ["natural assets", "raw materials"],
+      "collocations": ["exploit natural resources", "conserve natural resources", "abundant natural resources"],
+      "example_simple": "The country is rich in natural resources such as oil and gas.",
+      "example_complex": "Sustainable development requires that we use natural resources without depriving future generations of them.",
+      "definition_en": "materials or substances such as minerals, forests, and water that occur in nature and can be used for economic gain",
+      "ipa": "/ˈnætʃ.ər.əl rɪˈzɔː.sɪz/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "tài nguyên thiên nhiên"
+    },
+    "bfa1110e-bdca-4123-a366-e01ad8582efb": {
+      "difficulty": "9.0",
+      "definition_en": "theories of knowledge that treat it as a natural phenomenon best studied through the empirical methods of science",
+      "ipa": "/ˈnætʃ.ər.əl.aɪzd ɪˌpɪs.təˈmɒl.ə.dʒiz/",
+      "part_of_speech": "phrase"
+    },
+    "6caf96f6-33bf-4591-b67b-381ff4862977": {
+      "difficulty": "7.0",
+      "definition_en": "a feeling of sickness with an urge to vomit",
+      "ipa": "/ˈnɔː.zi.ə/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-4ebb6ed1e3301013": {
+      "synonyms": ["sick", "queasy", "ill", "unwell"],
+      "collocations": ["feel nauseous", "nauseous smell", "nauseous sensation"],
+      "example_simple": "The long boat trip made her feel nauseous.",
+      "example_complex": "He grew increasingly nauseous during the flight, gripping the armrest through every patch of turbulence."
+    },
+    "pubcol-w-fb6aa5c2f5f14a5d": {
+      "synonyms": ["steer", "guide", "maneuver", "find one's way"],
+      "collocations": ["navigate a ship", "navigate through", "navigate the system"],
+      "example_simple": "It can be hard to navigate through a busy city for the first time.",
+      "example_complex": "Learning to navigate the complex tax system took her several frustrating weeks."
+    },
+    "pubcol-w-36bcace379bb5e15": {
+      "synonyms": ["innocent", "gullible", "unsophisticated", "credulous"],
+      "collocations": ["naïve assumption", "hopelessly naïve", "a naïve belief"],
+      "example_simple": "It was naïve of him to think the job would be easy.",
+      "example_complex": "Her naïve trust in strangers made her an easy target for the scammers."
+    },
+    "d6c32039-916e-4da7-b1c5-909820cda72b": {
+      "difficulty": "8.0",
+      "definition_en": "to make something ineffective or invalid; to deny or contradict",
+      "ipa": "/nɪˈɡeɪt/",
+      "part_of_speech": "verb"
+    },
+    "84b83a10-4925-4044-bba6-45154e567107": {
+      "difficulty": "6.0",
+      "definition_en": "to fail to give proper care or attention to someone or something",
+      "ipa": "/nɪˈɡlekt/",
+      "part_of_speech": "verb"
+    },
+    "8ddb05ab-12ef-40c7-be02-3d7b2efeae46": {
+      "difficulty": "7.0",
+      "definition_en": "failing to take proper care over something; careless",
+      "ipa": "/ˈneɡ.lɪ.dʒənt/",
+      "part_of_speech": "adjective"
+    },
+    "ac39ad0b-0fc4-4914-97b2-697f6e743f64": {
+      "difficulty": "7.0",
+      "ipa": "/ˈneɡ.lɪ.dʒə.bəl/"
+    },
+    "pubcol-w-51530c6f31e75f1c": {
+      "synonyms": ["brother's son", "sister's son"],
+      "collocations": ["my little nephew", "visit one's nephew", "a favourite nephew"],
+      "example_simple": "My nephew is only five years old.",
+      "example_complex": "She left most of her estate to her nephew, who had cared for her in her final years.",
+      "definition_en": "the son of your brother or sister",
+      "part_of_speech": "noun"
+    },
+    "6b76f8d9-bca0-471b-ad12-230163a939c3": {
+      "difficulty": "7.0",
+      "definition_en": "the tips of nerve cells that detect stimuli such as pain, touch, or temperature",
+      "ipa": "/nɜːv ˈen.dɪŋz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-e159bc524f9a6d88": {
+      "synonyms": ["anxious", "worried", "tense", "uneasy"],
+      "collocations": ["feel nervous", "nervous about", "a nervous laugh"],
+      "example_simple": "She always feels nervous before an exam.",
+      "example_complex": "He gave a nervous smile as he waited for the interviewers to reveal their decision.",
+      "definition_en": "worried or slightly afraid about something",
+      "part_of_speech": "adjective"
+    }
+  }
+}

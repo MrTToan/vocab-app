@@ -1,0 +1,180 @@
+{
+  "meta": { "batch": "batch-113", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-e18a8f2eed3f1064": {
+      "difficulty": "8.0",
+      "synonyms": ["gutted", "devastated", "bitterly disappointed"],
+      "collocations": ["absolutely sick as a parrot", "left sick as a parrot", "feel sick as a parrot"],
+      "example_simple": "When his team lost the final, he was sick as a parrot.",
+      "example_complex": "Having missed the penalty in the last minute, the striker admitted he was sick as a parrot about the result.",
+      "definition_en": "extremely disappointed or upset, especially about a defeat",
+      "ipa": "/ˌsɪk əz ə ˈpærət/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "rất thất vọng"
+    },
+    "pubcol-w-1baf21f9c28eb3de": {
+      "difficulty": "6.0",
+      "synonyms": ["adverse effects", "reactions", "after-effects"],
+      "collocations": ["unwanted side effects", "possible side effects", "cause side effects"],
+      "example_simple": "This medicine can have side effects like headaches.",
+      "example_complex": "Patients were carefully warned about the potential side effects before starting the new treatment.",
+      "definition_en": "unintended, usually unwanted effects of a drug or action",
+      "ipa": "/ˈsaɪd ɪˌfekts/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-5fd985c9f83bfc77": {
+      "difficulty": "7.0",
+      "synonyms": ["think it over", "consider carefully", "take time to decide"],
+      "collocations": ["let me sleep on it", "sleep on it before deciding", "sleep on the decision"],
+      "example_simple": "I can't decide now, so I'll sleep on it.",
+      "example_complex": "Rather than signing the contract immediately, she chose to sleep on it and give her answer in the morning.",
+      "definition_en": "to delay a decision until the next day so you can think about it more carefully",
+      "ipa": "/ˈsliːp ɒn ɪt/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "xem xét kỹ, để đến hôm sau mới quyết định"
+    },
+    "pubcol-w-e7fa9259aff200d1": {
+      "synonyms": ["sieve", "filter", "sort through"],
+      "collocations": ["sift through the evidence", "sift the flour", "sift through the data"],
+      "example_simple": "She sifted the flour before making the cake.",
+      "example_complex": "Investigators had to sift through thousands of documents to find the crucial evidence."
+    },
+    "faecd85f-5981-4695-958e-97c0776ebb2b": {
+      "difficulty": "7.0",
+      "synonyms": ["commit in writing to", "formally pledge to", "sign a pledge to"],
+      "definition_en": "to formally commit to doing something by signing a written document",
+      "ipa": "/ˈsaɪn ə ˈfɔːm ˈpledʒɪŋ tuː/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-fab5f62863cdedc5": {
+      "synonyms": ["autograph", "signing", "mark"],
+      "collocations": ["forge a signature", "put your signature", "digital signature"],
+      "example_simple": "Please put your signature at the bottom of the page.",
+      "example_complex": "The contract was invalid because it lacked the authorised signature of the director.",
+      "definition_en": "a person's name written by themselves, used to sign documents",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-07235a8030d5a88a": {
+      "synonyms": ["endorsed", "autographed", "ratified"],
+      "collocations": ["signed agreement", "signed contract", "signed and dated"],
+      "example_simple": "The letter was signed by the manager.",
+      "example_complex": "Once the treaty had been signed by both nations, it came into immediate effect.",
+      "definition_en": "marked with a signature; formally agreed to in writing",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-559c8b2d48b02b13": {
+      "synonyms": ["importance", "meaning", "consequence"],
+      "collocations": ["historical significance", "of great significance", "grasp the significance"],
+      "example_simple": "The discovery has great significance for science.",
+      "example_complex": "Historians still debate the true significance of the events that led to the war.",
+      "definition_en": "the quality of being important or meaningful",
+      "part_of_speech": "noun"
+    },
+    "85eee8e3-dd33-4471-bc9e-ee4df5e7ebdf": {
+      "difficulty": "6.0",
+      "ipa": "/sɪɡˈnɪfɪkənt/"
+    },
+    "fa058e38-f211-47b3-8110-917698e46cac": {
+      "difficulty": "6.0",
+      "ipa": "/sɪɡˈnɪfɪkəntli/"
+    },
+    "pubcol-w-1bc0846e3b630ce3": {
+      "difficulty": "6.0",
+      "ipa": "/ˈsɪmɪləli/"
+    },
+    "pubcol-w-2b29c3ceeea9a4ad": {
+      "synonyms": ["at the same time", "concurrently", "at once"],
+      "collocations": ["happen simultaneously", "occur simultaneously", "run simultaneously"],
+      "example_simple": "The two events happened simultaneously.",
+      "example_complex": "The software allows several users to edit the same document simultaneously without any conflicts."
+    },
+    "pubcol-w-a9877d06df9e9881": {
+      "difficulty": "6.0",
+      "synonyms": ["sing along with", "join in singing"],
+      "collocations": ["sing along to the radio", "sing along to a song", "sing along to music"],
+      "example_simple": "We love to sing along to our favourite songs.",
+      "example_complex": "The whole crowd sang along to the band's most famous hit as the lights went down.",
+      "definition_en": "to sing while a song or music is playing",
+      "ipa": "/ˈsɪŋ əˌlɒŋ tuː/",
+      "part_of_speech": "phrase"
+    },
+    "1f71ec1d-5761-4a53-8c9c-6e3b304f7654": {
+      "difficulty": "7.0",
+      "definition_en": "discomfort or aching in the sinuses, often caused by infection or congestion",
+      "ipa": "/ˈsaɪnəs ˌpeɪn/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-f8d9b285fba8dd19": {
+      "difficulty": "8.0",
+      "synonyms": ["baby welcome party", "meet-the-baby gathering"],
+      "collocations": ["host a sip and see party", "hold a sip and see", "invited to a sip and see party"],
+      "example_simple": "They held a sip and see party to introduce their newborn to friends.",
+      "example_complex": "Instead of a formal christening, the couple threw a relaxed sip and see party where guests could have a drink and meet the baby.",
+      "definition_en": "an informal party where guests have a drink and meet a couple's new baby",
+      "ipa": "/ˈsɪp ənd ˈsiː ˌpɑːti/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-e05c90dc53f92fe2": {
+      "difficulty": "7.0",
+      "synonyms": ["take", "sit", "undergo"],
+      "collocations": ["sit for an exam", "sit for a test", "sit for a portrait"],
+      "example_simple": "She will sit for her final exam next week.",
+      "example_complex": "Candidates must sit for a written examination before they can qualify as lawyers.",
+      "definition_en": "to take an examination; also, to pose for a portrait or photograph",
+      "ipa": "/ˈsɪt fɔː/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "dự thi, tham gia kỳ thi"
+    },
+    "pubcol-w-e70e778c5a016171": {
+      "synonyms": ["scanty", "meagre", "revealing"],
+      "collocations": ["skimpy outfit", "skimpy portion", "skimpy details"],
+      "example_simple": "The waiter gave us a skimpy portion of chips.",
+      "example_complex": "Critics said the report was based on skimpy evidence that hardly justified its conclusions.",
+      "vi_meaning_correction": "ít ỏi, thiếu thốn, không đủ; (quần áo) hở hang, thiếu vải"
+    },
+    "pubcol-w-7c2fe14f1b8b0a89": {
+      "difficulty": "7.0",
+      "synonyms": ["emaciated", "skinny", "all skin and bone"],
+      "collocations": ["nothing but skin and bones", "all skin and bones", "reduced to skin and bones"],
+      "example_simple": "After the long illness, he was just skin and bones.",
+      "example_complex": "The rescued dog was nothing but skin and bones when the shelter first took it in.",
+      "definition_en": "extremely thin, with very little flesh on the body",
+      "ipa": "/ˈskɪn ənd ˈbəʊnz/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-04e47c645b3e4ccb": {
+      "synonyms": ["broke", "penniless", "hard up"],
+      "collocations": ["completely skint", "skint until payday", "totally skint"],
+      "example_simple": "I can't go out tonight because I'm skint.",
+      "example_complex": "By the end of the month, most students are completely skint and waiting for their next loan."
+    },
+    "519fff8f-6010-452d-a7d7-feba6374cd6e": {
+      "difficulty": "7.0"
+    },
+    "7a13e306-3a7e-4a87-bf94-1835f9f93188": {
+      "difficulty": "7.0",
+      "definition_en": "a small feeling of worry or fear about something that may happen",
+      "ipa": "/ˈslaɪt ˌæprɪˈhenʃən/",
+      "part_of_speech": "noun"
+    },
+    "bea58a2e-bfc0-45eb-9164-5dde4d1246ec": {
+      "difficulty": "5.0",
+      "ipa": "/ˈslaɪtli/"
+    },
+    "1b44f556-c5b9-40bd-b230-41da459e10fb": {
+      "difficulty": "7.0",
+      "definition_en": "moving or reacting more slowly than usual; lacking energy",
+      "ipa": "/ˈslʌɡɪʃ/",
+      "part_of_speech": "adjective"
+    },
+    "63e82b8e-bd5c-416a-aa59-11ab1470a928": {
+      "difficulty": "8.0",
+      "definition_en": "sleep, especially a peaceful or deep sleep (literary)",
+      "ipa": "/ˈslʌmbə/",
+      "part_of_speech": "noun"
+    },
+    "d3f437b7-a9ca-499f-a667-dd0a94a080a1": {
+      "difficulty": "7.0"
+    }
+  }
+}

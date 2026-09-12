@@ -1,0 +1,221 @@
+{
+  "meta": { "batch": "batch-017", "authored_by": "claude", "count": 25 },
+  "words": {
+    "fad4d2a0-fe1e-469a-a887-bfdf14473f6b": {
+      "difficulty": "8.0",
+      "definition_en": "a person who has recently lost a close friend or relative to death",
+      "ipa": "/bɪˈriːvd ˌɪndɪˈvɪdʒuəl/",
+      "part_of_speech": "phrase"
+    },
+    "9f491d85-2f91-4927-a8a8-77b4fa90a3fd": {
+      "difficulty": "7.0",
+      "definition_en": "a fixed bed or sleeping space on a ship or train; a place where a ship can dock",
+      "ipa": "/bɜːθ/",
+      "part_of_speech": "noun"
+    },
+    "c52072c4-f693-4e20-a224-0fdfb65c7198": {
+      "difficulty": "8.0",
+      "definition_en": "to trouble or harass someone persistently; to surround on all sides",
+      "ipa": "/bɪˈset/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-94a325fbad774506": {
+      "part_of_speech": "adverb",
+      "definition_en": "in addition; apart from",
+      "synonyms": ["moreover", "furthermore", "in addition", "apart from"],
+      "collocations": ["besides that", "and besides", "besides all this"],
+      "example_simple": "I don't want to go out tonight; besides, I'm too tired.",
+      "example_complex": "Besides offering competitive salaries, the company invests heavily in staff training and well-being."
+    },
+    "788f197f-e6aa-4ff2-8143-1a464f83a5ad": {
+      "difficulty": "8.0",
+      "definition_en": "specially made to suit a particular customer's requirements",
+      "ipa": "/bɪˈspəʊk/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-00d50023bdf01570": {
+      "synonyms": ["confer", "grant", "award", "present"],
+      "collocations": ["bestow an honour", "bestow a gift", "bestow a title"],
+      "example_simple": "The king decided to bestow a medal on the brave soldier.",
+      "example_complex": "The committee chose to bestow its highest award on a scientist whose quiet work had transformed the field."
+    },
+    "pubcol-w-b31e84df86bf46d0": {
+      "difficulty": "6.0",
+      "synonyms": ["late is better than not at all", "at least it happened", "finally"],
+      "collocations": ["well, better late than never", "as they say, better late than never", "better late than never, I suppose"],
+      "example_simple": "He finally apologized after a week — better late than never.",
+      "example_complex": "The government's investment in renewable energy arrived years behind schedule, but as the saying goes, better late than never.",
+      "definition_en": "it is better for something to happen late than not to happen at all",
+      "ipa": "/ˈbetə leɪt ðən ˈnevə/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "Muộn còn hơn không"
+    },
+    "pubcol-w-f75557bf122381e2": {
+      "difficulty": "6.0",
+      "synonyms": ["err on the side of caution", "play it safe", "prevention is better than cure"],
+      "collocations": ["better safe than sorry", "play it safe", "take precautions"],
+      "example_simple": "Take an umbrella just in case — better safe than sorry.",
+      "example_complex": "The engineers ran the safety checks three times; when lives are at stake, it is always better safe than sorry.",
+      "definition_en": "it is wiser to be cautious than to act carelessly and regret it later",
+      "ipa": "/ˈbetə seɪf ðən ˈsɒri/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "Cẩn thận vẫn hơn (thà cẩn thận còn hơn hối tiếc)"
+    },
+    "pubcol-w-5e24025efcfa6bb0": {
+      "difficulty": "8.0",
+      "synonyms": ["under suspicion", "in disgrace", "out of favour"],
+      "collocations": ["be under a cloud", "remain under a cloud", "leave under a cloud"],
+      "example_simple": "Since the money went missing, he has been under a cloud at work.",
+      "example_complex": "The former minister left office under a cloud, with several corruption inquiries still unresolved.",
+      "definition_en": "to be under suspicion or in disgrace because people think you have done something wrong",
+      "ipa": "/biː ˌʌndər ə ˈklaʊd/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "Bị nghi ngờ, mất uy tín vì người ta nghĩ bạn đã làm điều gì sai"
+    },
+    "pubcol-w-dae304db67df44ab": {
+      "difficulty": "6.0",
+      "synonyms": ["at risk", "in danger", "endangered"],
+      "collocations": ["be under threat", "come under threat", "under threat of extinction"],
+      "example_simple": "Many wild animals are under threat because of hunting.",
+      "example_complex": "As habitats shrink, countless species are under threat, and conservationists warn that some may vanish within decades.",
+      "definition_en": "to be at risk of harm, damage, or extinction",
+      "ipa": "/biː ˌʌndə ˈθret/",
+      "part_of_speech": "phrase"
+    },
+    "dbb0c779-e7e4-4e6a-8483-2d2a64f164fd": {
+      "difficulty": "7.0",
+      "definition_en": "to confuse or puzzle someone completely",
+      "ipa": "/bɪˈwɪldə/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-06dd3122511f9fe7": {
+      "synonyms": ["enchanting", "captivating", "alluring", "spellbinding"],
+      "collocations": ["a bewitching smile", "bewitching beauty", "a bewitching voice"],
+      "example_simple": "She gave him a bewitching smile that he could not forget.",
+      "example_complex": "The novel's bewitching prose drew readers into a world so vivid that they lost all sense of time."
+    },
+    "8e1856c9-be09-4073-8c3c-c76316bac173": {
+      "difficulty": "7.0",
+      "definition_en": "in a way that is completely certain and cannot be questioned",
+      "ipa": "/bɪˌjɒnd ˈeni daʊt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-04b08766bf57f562": {
+      "difficulty": "7.0",
+      "synonyms": ["no longer funny", "too serious", "past a joke"],
+      "collocations": ["this is beyond a joke", "getting beyond a joke", "go beyond a joke"],
+      "example_simple": "The noise from next door is beyond a joke now.",
+      "example_complex": "The constant delays and broken promises have gone beyond a joke, and customers are now demanding refunds.",
+      "definition_en": "so annoying or serious that it can no longer be treated as amusing",
+      "ipa": "/bɪˌjɒnd ə ˈdʒəʊk/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-520dbcf143bfcf5e": {
+      "difficulty": "7.0",
+      "synonyms": ["without question", "undeniably", "absolutely certainly"],
+      "collocations": ["prove beyond a shadow of a doubt", "know beyond a shadow of a doubt", "established beyond a shadow of a doubt"],
+      "example_simple": "The evidence showed beyond a shadow of a doubt that he was there.",
+      "example_complex": "The prosecution established beyond a shadow of a doubt that the documents had been deliberately forged.",
+      "definition_en": "with complete certainty; without any possibility of doubt",
+      "ipa": "/bɪˌjɒnd ə ˌʃædəʊ əv ə ˈdaʊt/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-fac7793c03eed6ac": {
+      "difficulty": "8.0",
+      "synonyms": ["immeasurably", "enormously", "infinitely"],
+      "collocations": ["grateful beyond measure", "pleased beyond measure", "suffer beyond measure"],
+      "example_simple": "She was happy beyond measure when she passed the exam.",
+      "example_complex": "The support from readers moved the author beyond measure, far exceeding anything she had dared to hope for.",
+      "definition_en": "to a very great extent; too much to be measured",
+      "ipa": "/bɪˌjɒnd ˈmeʒə/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-591f1323df7e10bc": {
+      "difficulty": "7.0",
+      "synonyms": ["unreasonable", "irrational", "illogical"],
+      "collocations": ["beyond all reason", "stubborn beyond reason", "priced beyond reason"],
+      "example_simple": "His demands were beyond reason, so nobody agreed to them.",
+      "example_complex": "The landlord's rent increases were beyond reason, prompting the tenants to take the matter to court.",
+      "definition_en": "unreasonable or illogical; going against common sense",
+      "ipa": "/bɪˌjɒnd ˈriːzn/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-35f0beed7180c604": {
+      "difficulty": "7.0",
+      "synonyms": ["unrecognizably", "utterly changed", "past recognition"],
+      "collocations": ["changed beyond recognition", "damaged beyond recognition", "altered beyond recognition"],
+      "example_simple": "The old town has changed beyond recognition since I was a child.",
+      "example_complex": "Decades of rapid development have transformed the fishing village beyond recognition, leaving few traces of its past.",
+      "definition_en": "changed so much that someone or something can no longer be recognized",
+      "ipa": "/bɪˌjɒnd ˌrekəɡˈnɪʃn/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-bca251f9e0cc4cb7": {
+      "difficulty": "6.0",
+      "synonyms": ["irreparable", "unfixable", "broken for good"],
+      "collocations": ["damaged beyond repair", "broken beyond repair", "beyond repair"],
+      "example_simple": "The old phone was broken beyond repair, so I bought a new one.",
+      "example_complex": "The flood left much of the machinery damaged beyond repair, forcing the factory to replace it entirely.",
+      "definition_en": "too badly damaged to be mended or restored",
+      "ipa": "/bɪˌjɒnd rɪˈpeə/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-4252c32990c0cacf": {
+      "difficulty": "7.0",
+      "synonyms": ["beyond one's wildest dreams", "unimaginably great", "more than one ever hoped for"],
+      "collocations": ["success beyond your dreams", "wealth beyond his dreams", "beyond her wildest dreams"],
+      "example_simple": "Winning the prize was success beyond my dreams.",
+      "example_complex": "The start-up grew so quickly that its founders achieved a level of wealth beyond their wildest dreams.",
+      "definition_en": "far greater or better than anything one could have imagined",
+      "ipa": "/bɪˌjɒnd ðə ˈdriːmz/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "Vượt xa sức tưởng tượng"
+    },
+    "pubcol-w-1449b723c7bb535f": {
+      "difficulty": "6.0",
+      "synonyms": ["uncontrollable", "unmanageable", "out of hand"],
+      "collocations": ["spiral out of control", "get out of control", "beyond control"],
+      "example_simple": "The fire quickly got out of control.",
+      "example_complex": "Once the rumours spread online, the situation spiralled beyond control and the company struggled to respond.",
+      "definition_en": "impossible to manage, restrain, or direct",
+      "ipa": "/bɪˌjɒnd ɔːr ˌaʊt əv kənˈtrəʊl/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-da249836fda4ddf8": {
+      "difficulty": "7.0",
+      "synonyms": ["indisputable", "undeniable", "unquestionable"],
+      "collocations": ["beyond dispute", "without dispute", "past dispute"],
+      "example_simple": "It is beyond dispute that exercise is good for your health.",
+      "example_complex": "That the climate is warming is now beyond dispute; the debate has shifted to how quickly nations should respond.",
+      "definition_en": "so certain or obvious that it cannot be argued about",
+      "ipa": "/bɪˈjɒnd / pɑːst / wɪˈðaʊt dɪˈspjuːt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-a61b4f1343e6327f": {
+      "difficulty": "8.0",
+      "synonyms": ["incomparable", "matchless", "unrivalled", "peerless"],
+      "collocations": ["beyond compare", "beauty beyond compare", "without compare"],
+      "example_simple": "To her, his kindness was beyond compare.",
+      "example_complex": "Critics agree that, in its craftsmanship, the violin remains beyond compare even after three centuries.",
+      "definition_en": "so good that nothing else can be compared to it",
+      "ipa": "/bɪˈjɒnd / wɪˈðaʊt / pɑːst kəmˈpeə/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-9c5c188a0c062f4b": {
+      "synonyms": ["twice-yearly", "semi-annual", "half-yearly"],
+      "collocations": ["a biannual conference", "biannual review", "biannual report"],
+      "example_simple": "The club holds a biannual meeting in spring and autumn.",
+      "example_complex": "The journal's biannual publication schedule allows editors to gather more thorough, peer-reviewed research for each issue."
+    },
+    "pubcol-w-b25976e8eca015ba": {
+      "difficulty": "6.0",
+      "synonyms": ["fit in", "match", "harmonize with", "merge with"],
+      "collocations": ["blend in with the crowd", "blend in with the surroundings", "blend in with the background"],
+      "example_simple": "The green curtains blend in with the walls nicely.",
+      "example_complex": "The building's timber façade was designed to blend in with the surrounding forest rather than stand out against it.",
+      "definition_en": "to match or harmonize with something (such as colour or surroundings) so as not to stand out",
+      "ipa": "/blend ɪn wɪð ˈsʌmθɪŋ/",
+      "part_of_speech": "phrase"
+    }
+  }
+}

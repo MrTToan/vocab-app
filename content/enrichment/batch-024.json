@@ -1,0 +1,203 @@
+{
+  "meta": { "batch": "batch-024", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-d5aca1527bbe825f": {
+      "difficulty": "5.0",
+      "synonyms": ["come down with a cold", "get a cold", "get sick"],
+      "collocations": ["catch a cold", "have a bad cold", "catch a cold easily"],
+      "example_simple": "I always catch a cold when the weather gets cold.",
+      "example_complex": "After standing in the rain for hours, she caught a nasty cold that kept her in bed for a week.",
+      "definition_en": "to become infected with or suffer from a common cold",
+      "ipa": "/kætʃ ə koʊld/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-482f065753345d5a": {
+      "synonyms": ["classify", "sort", "group", "class"],
+      "collocations": ["categorise data", "categorise information", "categorise into groups"],
+      "example_simple": "The teacher asked us to categorise the animals by size.",
+      "example_complex": "Researchers categorise the responses according to several distinct behavioural patterns before analysing the results."
+    },
+    "0356c9b2-725f-42a0-ae46-dc1ee0c89ec8": {
+      "difficulty": "7.0",
+      "definition_en": "to provide what is wanted or needed by a particular group of people",
+      "ipa": "/ˈkeɪtər tuː/",
+      "part_of_speech": "phrase"
+    },
+    "b1d9a7fc-34d0-400a-b9d1-faec368cd989": {
+      "difficulty": "6.0",
+      "definition_en": "the long worm-like larva of a butterfly or moth",
+      "ipa": "/ˈkætərˌpɪlər/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-ec7dd515eea502cc": {
+      "difficulty": "7.0",
+      "synonyms": ["pouring rain", "heavy downpour", "torrential rain"],
+      "collocations": ["rain cats and dogs", "raining cats and dogs", "pour cats and dogs"],
+      "example_simple": "Take an umbrella — it's raining cats and dogs out there.",
+      "example_complex": "We had planned a picnic, but by noon it was raining cats and dogs, so we stayed indoors.",
+      "definition_en": "used to describe very heavy rain",
+      "ipa": "/kæts ənd dɒɡz/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-d8510559e5029c7f": {
+      "difficulty": "7.0",
+      "synonyms": ["cause a commotion", "create a stir", "spark outrage"],
+      "collocations": ["cause a public uproar", "cause an uproar among fans", "cause an uproar over the decision"],
+      "example_simple": "The new tax caused an uproar among small business owners.",
+      "example_complex": "The minister's controversial remarks caused an uproar in parliament and dominated the headlines for days.",
+      "definition_en": "to provoke a loud outburst of anger, protest, or public disturbance",
+      "ipa": "/kɔːz ən ˈʌpˌrɔːr/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-80036fb85103c1cc": {
+      "difficulty": "5.0",
+      "synonyms": ["create confusion", "cause bewilderment", "muddle"],
+      "collocations": ["cause widespread confusion", "cause a lot of confusion", "cause confusion among students"],
+      "example_simple": "The unclear signs caused confusion for many visitors.",
+      "example_complex": "Frequent changes to the timetable caused so much confusion that passengers began missing their connections.",
+      "definition_en": "to make people feel uncertain or unable to understand something",
+      "ipa": "/kɔːz kənˈfjuːʒən/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-c3538408bfa20cd3": {
+      "difficulty": "5.0",
+      "synonyms": ["do damage", "inflict harm", "wreak havoc"],
+      "collocations": ["cause serious damage", "cause lasting damage", "cause damage to property"],
+      "example_simple": "The storm caused damage to several homes in the village.",
+      "example_complex": "Prolonged exposure to pollution can cause irreversible damage to the delicate ecosystem of the wetlands.",
+      "definition_en": "to make something become harmed, broken, or spoiled",
+      "ipa": "/kɔːz ˈdæmɪdʒ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-d6e8029dc99bf405": {
+      "difficulty": "6.0",
+      "synonyms": ["lead to death", "result in death", "be fatal"],
+      "collocations": ["cause death or injury", "cause premature death", "cause instant death"],
+      "example_simple": "Smoking can cause death from many serious diseases.",
+      "example_complex": "The report warned that air pollution causes thousands of premature deaths in the region every year.",
+      "definition_en": "to result in someone dying",
+      "ipa": "/kɔːz dɛθ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-a9d67dcda42a6492": {
+      "difficulty": "7.0",
+      "synonyms": ["reason to worry", "grounds for concern", "source of alarm"],
+      "collocations": ["give cause for concern", "a real cause for concern", "cause for serious alarm"],
+      "example_simple": "The child's high fever was a cause for concern.",
+      "example_complex": "The steady decline in bee populations is a genuine cause for alarm among environmental scientists.",
+      "definition_en": "a good reason to feel worried or anxious about something",
+      "ipa": "/kɔːz fər kənˈsɜːrn/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-93f66dbf917bee99": {
+      "difficulty": "5.0",
+      "synonyms": ["do the damage", "inflict the harm", "be responsible for the damage"],
+      "collocations": ["cause the damage", "who caused the damage", "cause the most damage"],
+      "example_simple": "The heavy rain caused the damage to the roof.",
+      "example_complex": "Investigators are still trying to determine exactly what caused the damage to the aircraft's engine.",
+      "definition_en": "to be the thing that makes particular harm or destruction happen",
+      "ipa": "/kɔːz ðə ˈdæmɪdʒ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-e94e25f328a65684": {
+      "difficulty": "5.0",
+      "synonyms": ["create a problem", "give rise to a problem", "lead to trouble"],
+      "collocations": ["cause a serious problem", "cause a major problem", "cause problems for everyone"],
+      "example_simple": "Parking here will cause a problem for other drivers.",
+      "example_complex": "Ignoring routine maintenance can cause a problem that is far more expensive to fix later on.",
+      "definition_en": "to make a difficulty or trouble happen",
+      "ipa": "/kɔːz ə ˈprɒbləm/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-faa83530042dcaae": {
+      "difficulty": "6.0",
+      "synonyms": ["break the rules", "foul", "play unfairly"],
+      "collocations": ["commit a foul", "commit fouls repeatedly", "commit a professional foul"],
+      "example_simple": "The player was sent off for committing too many fouls.",
+      "example_complex": "The defender deliberately committed a foul near the penalty area to stop the striker from scoring.",
+      "definition_en": "to break the rules of a sport by an unfair act against an opponent",
+      "ipa": "/kəˈmɪt faʊlz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-4b5df547bda6bd27": {
+      "difficulty": "7.0",
+      "synonyms": ["threaten", "endanger", "menace"],
+      "collocations": ["pose a serious threat", "pose a threat to security", "pose a growing threat"],
+      "example_simple": "Rising sea levels pose a threat to coastal cities.",
+      "example_complex": "Invasive species can pose a significant threat to native wildlife by competing for limited resources.",
+      "definition_en": "to be likely to cause harm or danger to someone or something",
+      "ipa": "/poʊz ə θrɛt tuː/",
+      "part_of_speech": "phrase"
+    },
+    "87dd7a49-6099-412e-956f-7d54b70df24a": {
+      "difficulty": "7.0",
+      "definition_en": "to stop happening or to bring an activity to an end",
+      "ipa": "/siːs/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-dcd3a293247efd65": {
+      "synonyms": ["truce", "armistice", "cessation of hostilities"],
+      "collocations": ["declare a ceasefire", "a temporary ceasefire", "agree to a ceasefire"],
+      "example_simple": "Both sides agreed to a ceasefire after weeks of fighting.",
+      "example_complex": "The fragile ceasefire collapsed within days, as sporadic gunfire resumed along the disputed border."
+    },
+    "pubcol-w-93ac4aa7216c118e": {
+      "synonyms": ["festive", "commemorative", "jubilant"],
+      "collocations": ["a celebratory mood", "a celebratory dinner", "raise a celebratory toast"],
+      "example_simple": "There was a celebratory atmosphere at the party.",
+      "example_complex": "After the team's victory, the whole town gathered for a celebratory parade through the streets."
+    },
+    "52f11a46-8dfb-4ba0-9ace-079c94f67542": {
+      "difficulty": "7.0",
+      "definition_en": "natural objects in the sky such as stars, planets, and moons",
+      "ipa": "/sɪˈlɛstiəl ˈbɒdiz/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-c1f4699759140507": {
+      "synonyms": ["concrete", "mortar", "bind"],
+      "collocations": ["a bag of cement", "cement and sand", "cement a relationship"],
+      "example_simple": "The workers mixed cement to build the wall.",
+      "example_complex": "The two nations signed the treaty to cement an alliance that had been growing for decades."
+    },
+    "3a95a6a6-8f48-4a05-9ab1-2cd94e9be003": {
+      "difficulty": "8.0",
+      "definition_en": "to express strong formal disapproval or criticism of someone",
+      "ipa": "/ˈsɛnʃər/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-4de3cbda53b70b0d": {
+      "synonyms": ["centennial", "hundredth anniversary"],
+      "collocations": ["celebrate a centenary", "the centenary of the event", "mark its centenary"],
+      "example_simple": "The town celebrated the centenary of its founding.",
+      "example_complex": "To mark the centenary of the composer's birth, the orchestra performed his complete symphonies over a single weekend."
+    },
+    "2e2ca1c1-5ab2-4db2-a636-d2df3800ed57": {
+      "difficulty": "7.0",
+      "definition_en": "articles and objects made from fired clay, such as pots and dishes",
+      "ipa": "/səˈræmɪk wɛər/",
+      "part_of_speech": "noun"
+    },
+    "8922280c-590c-4f39-89ab-28ed7ec8b1fc": {
+      "difficulty": "7.0",
+      "definition_en": "particular varieties or genetic lines of a plant, animal, or microorganism",
+      "ipa": "/ˈsɜːrtən streɪnz/",
+      "part_of_speech": "noun"
+    },
+    "d480cb86-c634-4545-86eb-e5fb4cb3031f": {
+      "difficulty": "8.0",
+      "definition_en": "the fact of something stopping or coming to an end",
+      "ipa": "/sɛˈseɪʃən/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-e1784b9c6872fc30": {
+      "difficulty": "7.0",
+      "synonyms": ["completely different", "poles apart", "worlds apart"],
+      "collocations": ["be like chalk and cheese", "as different as chalk and cheese", "they are chalk and cheese"],
+      "example_simple": "The two brothers are like chalk and cheese.",
+      "example_complex": "Although they grew up in the same household, the sisters are chalk and cheese in both temperament and taste.",
+      "definition_en": "used to say that two people or things are completely different from each other",
+      "ipa": "/tʃɔːk ənd tʃiːz/",
+      "part_of_speech": "idiom"
+    }
+  }
+}

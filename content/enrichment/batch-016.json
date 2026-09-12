@@ -1,0 +1,218 @@
+{
+  "meta": { "batch": "batch-016", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-7db58bd10354a61e": {
+      "difficulty": "7.0",
+      "synonyms": ["prevaricate", "hedge", "equivocate", "stall"],
+      "collocations": ["stop beating around the bush", "beat around the bush for ages", "no beating around the bush"],
+      "example_simple": "Stop beating around the bush and tell me what happened.",
+      "example_complex": "Rather than beating around the bush, the manager addressed the layoffs directly at the very start of the meeting.",
+      "definition_en": "to avoid talking about something directly or delay getting to the main point",
+      "ipa": "/biːt əˈraʊnd ðə bʊʃ/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-8094efc341f8e358": {
+      "difficulty": "7.0",
+      "synonyms": ["suffer", "bear the brunt", "endure", "be subjected to"],
+      "collocations": ["be at the receiving end of criticism", "be at the receiving end of complaints", "be at the receiving end of an attack"],
+      "example_simple": "The new waiter was at the receiving end of a lot of complaints.",
+      "example_complex": "Junior staff often find themselves at the receiving end of decisions made far above their level.",
+      "definition_en": "to be the person who is affected by something unpleasant, usually an action done by others",
+      "ipa": "/biː ət ðə rɪˈsiːvɪŋ end əv ˈsʌmθɪŋ/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "phải hứng chịu điều gì (thường là điều khó chịu)"
+    },
+    "pubcol-w-b8b32884de778dea": {
+      "difficulty": "6.0",
+      "synonyms": ["set a record", "surpass a record", "smash a record"],
+      "collocations": ["beat the world record", "break the record for", "break a long-standing record"],
+      "example_simple": "She beat the record for the 100-metre sprint last week.",
+      "example_complex": "The young swimmer broke a record that had stood unchallenged for nearly two decades.",
+      "definition_en": "to do something better or faster than the best result ever achieved before",
+      "ipa": "/biːt breɪk ðə ˈrekɔːd/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-6be4e3017bd5f762": {
+      "difficulty": "7.0",
+      "synonyms": ["have nothing to do", "be idle", "be free", "be unoccupied"],
+      "collocations": ["be at a loose end", "kick around at a loose end", "find oneself at a loose end"],
+      "example_simple": "If you're at a loose end this weekend, come and visit us.",
+      "example_complex": "Newly retired and at a loose end, he took up painting to fill the long afternoons.",
+      "definition_en": "to have nothing particular to do and feel unsure how to spend your time",
+      "ipa": "/biː ət ə luːs end/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-00ad5e1df600dbe6": {
+      "difficulty": "7.0",
+      "synonyms": ["disagree", "be in conflict", "clash", "be at variance"],
+      "collocations": ["be at odds with", "be at odds over", "be seriously at odds"],
+      "example_simple": "His version of events is at odds with what the witnesses said.",
+      "example_complex": "The company's public statements were increasingly at odds with the reality described by its own employees.",
+      "definition_en": "to disagree with or be in conflict with someone or something",
+      "ipa": "/biː ət ɒdz/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "bất đồng, mâu thuẫn, không ăn khớp với"
+    },
+    "pubcol-w-c0dfdfad79709664": {
+      "difficulty": "6.0",
+      "synonyms": ["die out", "vanish", "disappear"],
+      "collocations": ["become extinct in the wild", "species become extinct", "almost become extinct"],
+      "example_simple": "Many animals may become extinct if we do not protect their habitats.",
+      "example_complex": "Without urgent conservation, several amphibian species are likely to become extinct within a generation.",
+      "definition_en": "to stop existing, so that no members of a species remain alive",
+      "ipa": "/bɪˈkʌm ɪkˈstɪŋkt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-5c983106916880ef": {
+      "synonyms": ["bedbound", "housebound", "confined to bed"],
+      "collocations": ["bedridden patient", "left bedridden", "bedridden for weeks"],
+      "example_simple": "Her grandmother has been bedridden since the accident.",
+      "example_complex": "The illness left him bedridden for months, dependent on relatives for even the simplest tasks."
+    },
+    "fa927d44-1dab-4f55-9167-c283877c4dca": {
+      "difficulty": "8.0",
+      "definition_en": "post-mortem examinations carried out on bees to determine the cause of their death",
+      "ipa": "/biː ˈɔːtɒpsiz/",
+      "part_of_speech": "noun"
+    },
+    "a82b30cb-d5a5-47ed-af80-b2e69195ceff": {
+      "difficulty": "6.0",
+      "definition_en": "soon; after a short period of time",
+      "ipa": "/bɪˈfɔː ˈveri lɒŋ/",
+      "part_of_speech": "phrase"
+    },
+    "32a21cfd-1991-4cb0-ba01-98d456c1f099": {
+      "difficulty": "8.0",
+      "definition_en": "to cause something to happen or exist; (formal) to father a child",
+      "ipa": "/bɪˈɡet/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-113e32dbc28ccef1": {
+      "difficulty": "7.0",
+      "synonyms": ["in private", "secretly", "in secret", "confidentially"],
+      "collocations": ["negotiate behind closed doors", "held behind closed doors", "decided behind closed doors"],
+      "example_simple": "The important decisions were made behind closed doors.",
+      "example_complex": "Critics complained that the treaty had been negotiated behind closed doors, with no chance for public scrutiny.",
+      "definition_en": "in private, without the public or outsiders being allowed to know",
+      "ipa": "/bɪˈhaɪnd kləʊzd dɔːz/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-178ad6c05b87d522": {
+      "difficulty": "6.0",
+      "synonyms": ["outdated", "old-fashioned", "out of date", "outmoded"],
+      "collocations": ["hopelessly behind the times", "attitudes behind the times", "feel behind the times"],
+      "example_simple": "Their office equipment is really behind the times.",
+      "example_complex": "The bank's paper-based procedures made it seem hopelessly behind the times compared with its digital rivals.",
+      "definition_en": "old-fashioned and not aware of or using the latest ideas or methods",
+      "ipa": "/bɪˈhaɪnd ðə taɪmz/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-d8bddbe1b3e79fe2": {
+      "difficulty": "7.0",
+      "synonyms": ["late", "outdated", "old-fashioned", "behindhand"],
+      "collocations": ["running behind time", "behind the times in", "left behind the times"],
+      "example_simple": "The train was behind time, so we missed our connection.",
+      "example_complex": "The firm was both behind time on its deliveries and behind the times in its technology, a combination that cost it customers.",
+      "definition_en": "late; or old-fashioned and out of date",
+      "ipa": "/bɪˈhaɪnd taɪm bɪˈhaɪnd ðə taɪmz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-2eee85477de7eff2": {
+      "difficulty": "6.0",
+      "synonyms": ["late", "behind schedule", "delayed", "overdue"],
+      "collocations": ["running behind times", "be behind times", "far behind times"],
+      "example_simple": "We were behind times and had to hurry to catch the bus.",
+      "example_complex": "With the project already behind times, the team worked through the weekend to meet the deadline.",
+      "definition_en": "later than the expected or scheduled time",
+      "ipa": "/bɪˈhaɪnd taɪmz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-861c8be91988a6bc": {
+      "difficulty": "6.0",
+      "synonyms": ["agree with", "concur with", "be of one mind"],
+      "collocations": ["be in agreement with", "fully in agreement with", "reach agreement with"],
+      "example_simple": "I am in agreement with you on this point.",
+      "example_complex": "The two ministers were in agreement with each other on the goal but sharply divided over how to reach it.",
+      "definition_en": "to share the same opinion as someone; to agree with them",
+      "ipa": "/biː ɪn əˈɡriːmənt wɪð ˈsʌmbɒdi/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "đồng ý, đồng quan điểm với ai"
+    },
+    "pubcol-w-9814af040388836b": {
+      "difficulty": "7.0",
+      "synonyms": ["be contested", "be disputed", "be in question", "be debated"],
+      "collocations": ["be in dispute over", "still in dispute", "the facts in dispute"],
+      "example_simple": "The ownership of the land is still in dispute.",
+      "example_complex": "Because the exact boundary remained in dispute, neither side could begin construction near the river.",
+      "definition_en": "to be the subject of disagreement or argument; not yet settled",
+      "ipa": "/biː ɪn dɪˈspjuːt/",
+      "part_of_speech": "phrase"
+    },
+    "29f1b32e-452d-429a-a502-6a0b6cc126d9": {
+      "difficulty": "7.0",
+      "definition_en": "later than it should have happened; too late",
+      "ipa": "/bɪˈleɪtɪdli/",
+      "part_of_speech": "adverb"
+    },
+    "f74bc400-dada-4fe2-a2f3-20b75c2666e1": {
+      "difficulty": "8.0",
+      "definition_en": "hostile and aggressive; eager to fight or argue",
+      "ipa": "/bɪˈlɪdʒərənt/",
+      "part_of_speech": "adjective"
+    },
+    "2021b55b-287b-4c38-b4e2-299507e301ca": {
+      "difficulty": "8.0",
+      "definition_en": "confused and unable to think clearly; puzzled",
+      "ipa": "/bɪˈmjuːzd/",
+      "part_of_speech": "adjective"
+    },
+    "35dbda87-67cd-4226-8201-3a1bfbd461eb": {
+      "difficulty": "7.0",
+      "definition_en": "a person who gives money or other help to a person or cause",
+      "ipa": "/ˈbenɪfæktə/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-e6d44304aae01b1f": {
+      "difficulty": "7.0",
+      "synonyms": ["favourable effect", "positive impact", "harmful effect", "detrimental impact"],
+      "collocations": ["have a beneficial effect on", "a beneficial effect on health", "an adverse effect on"],
+      "example_simple": "Exercise has a beneficial effect on your health, while stress can have an adverse effect.",
+      "example_complex": "Moderate rainfall had a beneficial effect on the crops, but the later drought produced a severe adverse effect on the yield.",
+      "definition_en": "a helpful or favourable result, as opposed to a harmful or negative one",
+      "ipa": "/ˌbenɪˈfɪʃl ɪˈfekt ˈædvɜːs ɪˈfekt/",
+      "part_of_speech": "phrase"
+    },
+    "067907a4-bfd4-47a0-b94f-554504d76a4c": {
+      "difficulty": "8.0",
+      "definition_en": "harmless microorganisms that do not cause disease",
+      "ipa": "/bɪˈnaɪn ˈmaɪkrəʊbz/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-7506d35240aa7c04": {
+      "difficulty": "7.0",
+      "synonyms": ["be heading for conflict", "be set to clash", "be on a crash course"],
+      "collocations": ["be on a collision course with", "on a collision course over", "set on a collision course"],
+      "example_simple": "The two political parties are on a collision course over the new law.",
+      "example_complex": "By refusing to compromise, the union and management put themselves on a collision course that made a strike almost inevitable.",
+      "definition_en": "to be moving towards a situation that is certain to result in conflict or disagreement",
+      "ipa": "/biː ɒn ə kəˈlɪʒn kɔːs/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-c90f320e621d762e": {
+      "difficulty": "8.0",
+      "synonyms": ["be released on licence", "be on probation", "break one's word", "violate parole"],
+      "collocations": ["be released on parole", "be out on parole", "break one's parole"],
+      "example_simple": "He was on parole and had to report to the police every week.",
+      "example_complex": "Freed early on parole, the prisoner knew that a single mistake could break his parole and send him straight back to jail.",
+      "definition_en": "to be released from prison early on the promise of good behaviour; to break that promise is to break one's parole",
+      "ipa": "/biː ɒn pəˈrəʊl breɪk wʌnz pəˈrəʊl/",
+      "part_of_speech": "phrase"
+    },
+    "129e4976-5d3e-44eb-9aa3-44eb1ab5a3e3": {
+      "difficulty": "8.0",
+      "definition_en": "scolded or criticised someone angrily and at length",
+      "ipa": "/bɪˈreɪtɪd/",
+      "part_of_speech": "verb"
+    }
+  }
+}

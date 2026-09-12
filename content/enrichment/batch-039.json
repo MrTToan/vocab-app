@@ -1,0 +1,251 @@
+{
+  "meta": { "batch": "batch-039", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-b82469f4805142e7": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/duː ˈdæmɪdʒ tə ˈsʌmθɪŋ/",
+      "definition_en": "to harm something or cause it to work less well",
+      "synonyms": ["harm", "damage", "hurt", "impair"],
+      "collocations": ["do serious damage to", "do lasting damage to", "do untold damage to"],
+      "example_simple": "The heavy rain did a lot of damage to the crops.",
+      "example_complex": "Repeated financial scandals have done serious damage to the bank's once-solid reputation."
+    },
+    "pubcol-w-f8dd1984e6d146f5": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/duː ˈeksəsaɪzɪz/",
+      "definition_en": "to perform physical movements or practice tasks to stay fit or improve a skill",
+      "synonyms": ["work out", "train", "exercise"],
+      "collocations": ["do daily exercises", "do breathing exercises", "do stretching exercises"],
+      "example_simple": "I do some simple exercises every morning before school.",
+      "example_complex": "Her physiotherapist recommended that she do gentle strengthening exercises to speed up her recovery."
+    },
+    "pubcol-w-5f9588f459e48b9f": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/duː hɑːm tə ˈsʌmbədi ɔː ˈsʌmθɪŋ/",
+      "definition_en": "to hurt or have a bad effect on a person or thing",
+      "synonyms": ["harm", "hurt", "injure", "damage"],
+      "collocations": ["do real harm to", "do no harm to", "do great harm to"],
+      "example_simple": "Eating too much sugar can do harm to your teeth.",
+      "example_complex": "Spreading unverified rumours online can do lasting harm to innocent people's reputations."
+    },
+    "pubcol-w-210bfe04b1aa1a4e": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/duː ˈhəʊmwɜːk ɔː ˈhaʊswɜːk/",
+      "definition_en": "to complete school assignments at home, or to do cleaning and other tasks around the house",
+      "synonyms": ["do chores", "study", "tidy up"],
+      "collocations": ["do your homework", "do the housework", "do the daily housework"],
+      "example_simple": "I have to do my homework before I can watch television.",
+      "example_complex": "After a long shift at work, she still had to do the housework and help the children with their homework."
+    },
+    "pubcol-w-63c7abb370d05580": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/duː ˈmɑːkɪt rɪˈsɜːtʃ/",
+      "definition_en": "to collect and study information about what customers want and how a market behaves",
+      "synonyms": ["survey the market", "study the market", "analyse demand"],
+      "collocations": ["do thorough market research", "do extensive market research", "do some market research"],
+      "example_simple": "Before opening the café, they did some market research in the neighbourhood.",
+      "example_complex": "The start-up did detailed market research to identify a gap that larger competitors had overlooked."
+    },
+    "pubcol-w-5ae423fd25268415": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/duː nɒt heɪt/",
+      "definition_en": "to not feel strong dislike or hostility towards someone or something",
+      "synonyms": ["do not dislike", "bear no hatred", "hold no grudge"],
+      "collocations": ["do not hate anyone", "do not hate him", "really do not hate"],
+      "example_simple": "I do not hate her; I just don't agree with her.",
+      "example_complex": "Despite everything that happened between them, he insists that he does not hate his former partner."
+    },
+    "pubcol-w-93902db479bb14af": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/duː nɒt ˈpræktɪs/",
+      "definition_en": "to not do a repeated activity meant to improve a skill",
+      "synonyms": ["do not rehearse", "do not train", "neglect practice"],
+      "collocations": ["do not practise enough", "do not practise regularly", "do not practise daily"],
+      "example_simple": "If you do not practise, you will forget how to play the piano.",
+      "example_complex": "Many learners do not practise speaking regularly, which is why their fluency improves so slowly."
+    },
+    "pubcol-w-ffdc131caf631e9a": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/duː wʌnz ˈdjuːti/",
+      "definition_en": "to carry out the tasks or responsibilities one is expected to perform",
+      "synonyms": ["fulfil an obligation", "carry out one's role", "meet one's responsibility"],
+      "collocations": ["do one's duty faithfully", "simply do one's duty", "do one's civic duty"],
+      "example_simple": "The soldier said he was only doing his duty.",
+      "example_complex": "She believed that voting was not merely a right but a way of doing her duty as a citizen."
+    },
+    "pubcol-w-1d47f4be0e4e6af9": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/duː wʌnz ruːm/",
+      "definition_en": "to clean and tidy one's room",
+      "synonyms": ["tidy one's room", "clean one's room", "make up a room"],
+      "collocations": ["do your room", "do the rooms", "do a room every morning"],
+      "example_simple": "Please do your room before your friends come over.",
+      "example_complex": "At the small hotel, the same two staff members did all the rooms before the midday check-in."
+    },
+    "pubcol-w-98a83c28bb0a730c": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/duː ˈsʌmbədi ə ˈfeɪvə/",
+      "definition_en": "to do something kind or helpful for someone",
+      "synonyms": ["help someone out", "oblige someone", "lend a hand"],
+      "collocations": ["do me a favour", "do someone a big favour", "do a friend a favour"],
+      "example_simple": "Could you do me a favour and close the window?",
+      "example_complex": "She agreed to do her neighbour a favour by watering his plants while he was away on holiday."
+    },
+    "pubcol-w-8ab376107ae7661e": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/duː ˈsʌmbədi ɡʊd/",
+      "definition_en": "to have a positive or beneficial effect on someone",
+      "synonyms": ["benefit someone", "help someone", "be good for someone"],
+      "collocations": ["do you good", "do a world of good", "do someone a lot of good"],
+      "example_simple": "A short walk will do you good after such a long meeting.",
+      "example_complex": "The doctor assured him that a few weeks of rest by the sea would do him a world of good."
+    },
+    "pubcol-w-c3d8ae8ec8b12050": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/duː ˈsʌmbədi aʊt əv ˈsʌmθɪŋ/",
+      "definition_en": "to unfairly deprive someone of something, especially by cheating or trickery",
+      "synonyms": ["cheat out of", "swindle", "deprive of"],
+      "collocations": ["do someone out of money", "do someone out of a job", "do someone out of their share"],
+      "example_simple": "The salesman tried to do us out of our deposit.",
+      "example_complex": "By altering the figures, the manager effectively did several employees out of the bonuses they were owed."
+    },
+    "pubcol-w-a4fc112fa3d00fb1": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/duː ði ˈaɪənɪŋ ˈʃɒpɪŋ ˈwɒʃɪŋ/",
+      "definition_en": "to carry out everyday household tasks such as ironing clothes, buying groceries or washing laundry",
+      "synonyms": ["do the chores", "do household tasks", "take care of the housework"],
+      "collocations": ["do the ironing", "do the shopping", "do the washing"],
+      "example_simple": "On Saturdays I do the shopping and my brother does the washing.",
+      "example_complex": "They shared the chores fairly, so that whoever did the ironing was excused from doing the washing that week."
+    },
+    "pubcol-w-8168ac8bc5f9bc43": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/duː ðə pəˈlaɪt/",
+      "definition_en": "to behave in a deliberately polite or courteous way, often just for show",
+      "synonyms": ["be on one's best behaviour", "make polite conversation", "observe the courtesies"],
+      "collocations": ["do the polite thing", "do the polite with guests", "have to do the polite"],
+      "example_simple": "At the dinner he had to do the polite and chat with everyone.",
+      "example_complex": "Although she was exhausted, she did the polite for another hour, smiling at guests she barely knew."
+    },
+    "pubcol-w-dff5e3676a433138": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/duː wɪð/",
+      "definition_en": "used with 'could' or 'can' to say that someone needs or would like something",
+      "synonyms": ["need", "want", "benefit from"],
+      "collocations": ["could do with", "can't do with", "could do with a rest"],
+      "example_simple": "I could do with a hot cup of tea right now.",
+      "example_complex": "After such an exhausting week, the whole team could do with a proper break rather than another late meeting."
+    },
+    "pubcol-w-580a888cb1816253": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/duː ˈwʌndəz ɔː ˈmɪrəklz/",
+      "definition_en": "to have a remarkably good effect or produce excellent results",
+      "synonyms": ["work wonders", "work miracles", "do the trick"],
+      "collocations": ["do wonders for", "do wonders for your confidence", "do miracles for someone"],
+      "example_simple": "A good night's sleep can do wonders for your mood.",
+      "example_complex": "The new coaching approach did wonders for a team that had seemed hopelessly out of form only months earlier."
+    },
+    "pubcol-w-3f61333b938208d4": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/duː rɒŋ/",
+      "definition_en": "to act in a way that is morally wrong or mistaken",
+      "synonyms": ["misbehave", "sin", "act wrongly"],
+      "collocations": ["do wrong by someone", "do no wrong", "know right from wrong"],
+      "example_simple": "He was taught never to do wrong, even when no one is watching.",
+      "example_complex": "In their eyes their hero could do no wrong, so they ignored every report of his misconduct."
+    },
+    "pubcol-w-625a64535f28d86d": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/duː jɔː heə/",
+      "definition_en": "to arrange, style or take care of your hair",
+      "synonyms": ["style your hair", "fix your hair", "get your hair done"],
+      "collocations": ["do your hair", "have your hair done", "do your hair up"],
+      "example_simple": "She spent an hour doing her hair before the party.",
+      "example_complex": "He waited patiently while she did her hair, knowing they would still arrive fashionably late."
+    },
+    "pubcol-w-0e25a06486630dd6": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/duː ə ɔː ðə ˈkrɒswɜːd/",
+      "definition_en": "to solve a crossword puzzle",
+      "synonyms": ["solve a crossword", "complete a crossword", "work a puzzle"],
+      "collocations": ["do the crossword", "do a crossword puzzle", "do the daily crossword"],
+      "example_simple": "My grandfather likes to do the crossword every morning.",
+      "example_complex": "She could do the fiendishly difficult crossword in the Sunday paper faster than anyone else in the family."
+    },
+    "pubcol-w-e2b29d83eb5271b3": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/duː ə ˈkɒnsət ɔː rɪˈsaɪtl/",
+      "definition_en": "to give or perform a musical concert or recital",
+      "synonyms": ["give a concert", "perform a recital", "put on a performance"],
+      "collocations": ["do a concert", "do a recital", "do a charity concert"],
+      "example_simple": "The band will do a concert in the park this weekend.",
+      "example_complex": "Before retiring, the pianist agreed to do one final recital in the hall where she had first performed as a child."
+    },
+    "pubcol-w-aaf255a0b3040bf0": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/duː ə kɔːs/",
+      "definition_en": "to take part in a series of lessons or study on a particular subject",
+      "synonyms": ["take a course", "study a course", "enrol on a course"],
+      "collocations": ["do a course in", "do an online course", "do a training course"],
+      "example_simple": "I'm doing a course in web design this term.",
+      "example_complex": "She decided to do an intensive course in business English before applying for jobs abroad."
+    },
+    "pubcol-w-52af6c8a57c0fbc1": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/duː ən əˈsaɪnmənt/",
+      "definition_en": "to complete a task or piece of work that has been set, especially for study",
+      "synonyms": ["complete an assignment", "do a task", "finish a project"],
+      "collocations": ["do an assignment", "do a written assignment", "do a group assignment"],
+      "example_simple": "I have to do an assignment on climate change for geography.",
+      "example_complex": "Rather than doing the assignment at the last minute, she planned her research over several weeks."
+    },
+    "b47a407c-32e0-439e-a073-af2cd6c03d46": {
+      "difficulty": "8.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˈdɒɡmə/",
+      "definition_en": "a principle or set of beliefs laid down by an authority as unquestionably true"
+    },
+    "pubcol-w-f35cce1a9d290aaa": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/duː hɑːm/",
+      "definition_en": "to cause damage or have a harmful effect",
+      "synonyms": ["cause harm", "be harmful", "do damage"],
+      "collocations": ["do more harm than good", "do untold harm", "do no harm"],
+      "example_simple": "Too much screen time can do harm to young children.",
+      "example_complex": "Well-meant but poorly planned aid can sometimes do more harm than good to local economies."
+    },
+    "pubcol-w-e9ddc3d9a51cf085": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/dəʊl ˈmʌni/",
+      "definition_en": "money paid by the state to people who are unemployed",
+      "synonyms": ["unemployment benefit", "welfare payment", "the dole"],
+      "collocations": ["live on dole money", "collect dole money", "rely on dole money"],
+      "example_simple": "After losing his job, he had to live on dole money for a few months.",
+      "example_complex": "Cuts to dole money left many families struggling to cover their basic living costs during the recession."
+    }
+  }
+}

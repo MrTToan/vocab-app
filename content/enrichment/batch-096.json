@@ -1,0 +1,178 @@
+{
+  "meta": { "batch": "batch-096", "authored_by": "claude", "count": 25 },
+  "words": {
+    "01730cc1-7db9-4c09-8a88-0206f70a5852": {
+      "difficulty": "8.0",
+      "definition_en": "a small gland in the brain that produces the hormone melatonin",
+      "ipa": "/ˈpaɪniəl ɡlænd/",
+      "part_of_speech": "noun"
+    },
+    "aee2d124-d86e-446a-9ce4-77b1052e0d18": {
+      "difficulty": "7.0",
+      "definition_en": "brief summaries that express a lot of meaning in few, forceful words",
+      "ipa": "/ˈpɪθi ˈsʌməriz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-f540afccb2927272": {
+      "difficulty": "6.0",
+      "synonyms": ["pressurise sb", "push sb", "lean on sb", "urge sb"],
+      "collocations": ["put pressure on the government", "place pressure on students", "put pressure on someone to decide"],
+      "example_simple": "My parents put pressure on me to get good marks.",
+      "example_complex": "Rising living costs have placed enormous pressure on young families to work longer hours.",
+      "definition_en": "to try to force or strongly persuade someone to do something",
+      "ipa": "/pleɪs ɔː pʊt ˈpreʃə(r) ɒn ˈsʌmbədi/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-f598f1f5f5e3f5e5": {
+      "synonyms": ["afterbirth"],
+      "collocations": ["the placenta develops", "deliver the placenta", "an anterior placenta"],
+      "example_simple": "The placenta supplies the baby with food and oxygen before birth.",
+      "example_complex": "During pregnancy, the placenta acts as a filter, transferring nutrients to the foetus while removing waste products."
+    },
+    "pubcol-w-979041c958f6ec0d": {
+      "synonyms": ["calm", "serene", "tranquil", "gentle"],
+      "collocations": ["a placid temperament", "placid waters", "remain placid"],
+      "example_simple": "The lake was calm and placid in the early morning.",
+      "example_complex": "Despite the chaos around her, she kept a placid expression that reassured everyone in the room."
+    },
+    "pubcol-w-00b9b2cfa4e55438": {
+      "synonyms": ["copying", "piracy", "theft of ideas"],
+      "collocations": ["accused of plagiarism", "commit plagiarism", "detect plagiarism"],
+      "example_simple": "Copying an essay from the internet is plagiarism.",
+      "example_complex": "The university has strict policies on plagiarism, and students can be expelled for presenting others' work as their own."
+    },
+    "65f9f358-7eb9-4c20-8f47-4ce7c4e5b4b6": {
+      "difficulty": "6.0",
+      "definition_en": "a serious infectious disease that spreads quickly; (verb) to cause continual trouble to",
+      "ipa": "/pleɪɡ/",
+      "part_of_speech": "noun"
+    },
+    "5a706525-33ef-463c-8887-f3c696e916cf": {
+      "difficulty": "8.0",
+      "definition_en": "sounding sad and mournful",
+      "ipa": "/ˈpleɪntɪv/",
+      "part_of_speech": "adjective"
+    },
+    "14b0228d-e22f-4bf4-98b1-29ed8b5d8ac1": {
+      "difficulty": "7.0",
+      "ipa": "/ˈplætəʊ/"
+    },
+    "pubcol-w-e9d0631c575e060d": {
+      "difficulty": "6.0",
+      "synonyms": ["be crucial", "be significant", "matter greatly"],
+      "collocations": ["play a key role in", "play an important part in", "play a vital role in development"],
+      "example_simple": "Teachers play an important role in a child's life.",
+      "example_complex": "Renewable energy will play an increasingly important role in reducing global carbon emissions.",
+      "definition_en": "to be an important factor in or contributor to something",
+      "ipa": "/pleɪ ən ɪmˈpɔːtənt rəʊl ɔː pɑːt ɪn/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-52340df5696d805a": {
+      "difficulty": "7.0",
+      "synonyms": ["downplay", "minimise", "understate", "de-emphasise"],
+      "collocations": ["play down the risks", "play down concerns", "play down its importance"],
+      "example_simple": "The manager tried to play down the problem.",
+      "example_complex": "Officials attempted to play down the severity of the crisis to avoid causing public panic.",
+      "definition_en": "to make something seem less important or serious than it really is",
+      "ipa": "/pleɪ daʊn/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-20e90ba2b9776dc0": {
+      "difficulty": "5.0",
+      "synonyms": ["a lot of", "lots of", "plenty", "an abundance of"],
+      "collocations": ["plenty of time", "plenty of money", "plenty of opportunities"],
+      "example_simple": "There is plenty of food for everyone.",
+      "example_complex": "Big cities offer plenty of opportunities for young graduates, though the competition can be fierce.",
+      "definition_en": "a large amount or number of something; more than enough",
+      "ipa": "/ˈplenti əv/",
+      "part_of_speech": "phrase"
+    },
+    "88aeffb9-2865-41c1-956c-6a9dd7bf1d47": {
+      "difficulty": "8.0",
+      "definition_en": "speech sounds made by fully blocking airflow (plosives) or by narrowing it to create friction (fricatives)",
+      "ipa": "/ˈpləʊsɪvz ənd ˈfrɪkətɪvz/",
+      "part_of_speech": "phrase"
+    },
+    "4592845e-ad90-4950-9380-58138f66d42a": {
+      "difficulty": "6.0",
+      "definition_en": "an unexpected change in the story of a book, film, or play",
+      "ipa": "/plɒt twɪst/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-0b514d44f8c41052": {
+      "difficulty": "5.0",
+      "synonyms": ["connect", "hook up", "attach"],
+      "collocations": ["plug in the charger", "plug in the device", "plug it in"],
+      "example_simple": "Please plug in your phone to charge it.",
+      "example_complex": "Before you can use the printer, you need to plug it in and install the correct drivers.",
+      "definition_en": "to connect a piece of electrical equipment to a power supply",
+      "ipa": "/plʌɡ ɪn/",
+      "part_of_speech": "phrase"
+    },
+    "d02e6560-23a2-4cc3-ae94-3f79c4bd7376": {
+      "difficulty": "7.0",
+      "ipa": "/ˈplʌmɪt/"
+    },
+    "4e9a578d-fe29-4142-949a-6beb22cf4aa0": {
+      "difficulty": "6.0",
+      "ipa": "/plʌndʒ/"
+    },
+    "04b0f7f8-5e2c-45f0-a0ff-5f18ba304f2f": {
+      "difficulty": "7.0",
+      "definition_en": "a luxurious, expensively furnished flat in a tall building",
+      "ipa": "/plʌʃ ˈhaɪ raɪz əˈpɑːtmənt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-4d6081a3491c5825": {
+      "difficulty": "5.0",
+      "synonyms": ["allowance", "spending money"],
+      "collocations": ["get pocket money", "give pocket money", "weekly pocket money"],
+      "example_simple": "My parents give me some pocket money every week.",
+      "example_complex": "Many children learn to manage their finances by budgeting the pocket money their parents give them.",
+      "definition_en": "a small amount of money given regularly to a child, or for small personal expenses",
+      "ipa": "/ˈpɒkɪt ˈmʌni/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-301398c4e88f62b1": {
+      "difficulty": "6.0",
+      "ipa": "/pɔɪnt aʊt/"
+    },
+    "pubcol-w-b8da3840425f6774": {
+      "difficulty": "6.0",
+      "synonyms": ["indicate", "highlight", "draw attention to"],
+      "collocations": ["point out an error", "point out that", "point out the problem"],
+      "example_simple": "She pointed out the mistake in my report.",
+      "example_complex": "The reviewer pointed out several inconsistencies in the data that the authors had overlooked.",
+      "definition_en": "to draw attention to or make someone aware of something",
+      "ipa": "/pɔɪnt aʊt wɪð/",
+      "part_of_speech": "phrase"
+    },
+    "5861107a-b1bc-498e-9853-b0cd3c97d855": {
+      "difficulty": "8.0",
+      "definition_en": "involving strongly critical or controversial argument",
+      "ipa": "/pəˈlemɪkl/",
+      "part_of_speech": "adjective"
+    },
+    "f6587289-0283-4319-b611-47c0307e713e": {
+      "difficulty": "7.0",
+      "definition_en": "scientific research into pollen grains, often to learn about past climates and plants",
+      "ipa": "/ˈpɒlən ˈstʌdi/",
+      "part_of_speech": "phrase"
+    },
+    "e21331d1-77d5-4851-8f23-e5bdaaad77e6": {
+      "difficulty": "7.0",
+      "definition_en": "the transfer of pollen to a plant so that it can produce seeds",
+      "ipa": "/ˌpɒləˈneɪʃn/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-67b252c59af77039": {
+      "synonyms": ["fame", "widespread appeal", "prevalence"],
+      "collocations": ["gain popularity", "grow in popularity", "enjoy great popularity"],
+      "example_simple": "The song quickly gained popularity among teenagers.",
+      "example_complex": "The rapid popularity of streaming services has transformed the way people consume entertainment.",
+      "definition_en": "the state of being liked, admired, or supported by many people",
+      "part_of_speech": "noun",
+      "vi_meaning_correction": "sự phổ biến, sự nổi tiếng"
+    }
+  }
+}

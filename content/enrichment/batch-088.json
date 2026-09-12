@@ -1,0 +1,216 @@
+{
+  "meta": { "batch": "batch-088", "authored_by": "claude", "count": 24 },
+  "words": {
+    "pubcol-w-100d7e73fd08d633": {
+      "synonyms": ["resident", "tenant", "inhabitant", "dweller"],
+      "collocations": ["the sole occupant", "the previous occupant", "occupants of the building"],
+      "example_simple": "The new occupant of the flat moved in last week.",
+      "example_complex": "All occupants of the building were evacuated within minutes of the fire alarm sounding."
+    },
+    "pubcol-w-7db36a79a404925f": {
+      "synonyms": ["incident", "event", "instance", "happening"],
+      "collocations": ["a common occurrence", "a rare occurrence", "an everyday occurrence"],
+      "example_simple": "Flooding is a common occurrence in this area during the rainy season.",
+      "example_complex": "The sudden collapse of the currency was an unprecedented occurrence that caught economists off guard.",
+      "vi_meaning_correction": "sự việc xảy ra; lần xuất hiện"
+    },
+    "pubcol-w-721a45b6ef9c0367": {
+      "part_of_speech": "noun",
+      "definition_en": "a very large expanse of salt water covering most of the earth's surface",
+      "synonyms": ["sea", "the deep", "the high seas"],
+      "collocations": ["cross the ocean", "the deep ocean", "ocean currents"],
+      "example_simple": "We sailed across the ocean for three weeks.",
+      "example_complex": "Rising ocean temperatures are disrupting marine ecosystems on a global scale."
+    },
+    "5d7f3d26-3ed9-43ee-823e-7b6342c234b8": {
+      "difficulty": "7.0",
+      "definition_en": "a large depression in the earth's crust that holds an ocean",
+      "ipa": "/ˈəʊʃən ˈbeɪsɪn/",
+      "part_of_speech": "noun"
+    },
+    "cc79ee82-d38c-4b12-9cc6-267e25772519": {
+      "difficulty": "9.0",
+      "synonyms": ["mighty wave", "commanding swell", "majestic surge"],
+      "definition_en": "a poetic image of a powerful, domineering wave of the sea",
+      "ipa": "/ˈəʊʃənz ɪmˈpɪəriəs weɪv/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-30179a4f86bc3ab7": {
+      "difficulty": "7.0",
+      "synonyms": ["bits and pieces", "miscellany", "sundries", "scraps"],
+      "collocations": ["a few odds and ends", "odds and ends left over", "sort out the odds and ends"],
+      "example_simple": "I packed a few odds and ends into my bag before leaving.",
+      "example_complex": "The drawer was cluttered with odds and ends that nobody could bring themselves to throw away.",
+      "definition_en": "various small items or leftover things of little value",
+      "ipa": "/ˌɒdz ənd ˈendz/",
+      "part_of_speech": "idiom"
+    },
+    "4111c390-7225-438c-9d75-da6eac97710e": {
+      "difficulty": "6.0",
+      "definition_en": "a distinctive smell, especially an unpleasant one",
+      "ipa": "/ˈəʊdər/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-8169caca8852c58f": {
+      "difficulty": "7.0",
+      "synonyms": ["remote", "secluded", "out of the way", "unfrequented"],
+      "collocations": ["a village off the beaten track", "get off the beaten track", "somewhere off the beaten path"],
+      "example_simple": "We stayed in a small town off the beaten track, away from the tourists.",
+      "example_complex": "Seasoned travellers often seek out destinations off the beaten track, where local culture remains largely untouched by tourism.",
+      "definition_en": "in or to a place that is isolated and not visited by many people",
+      "ipa": "/ˌɒf ðə ˌbiːtn ˈtræk/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-87f8bddf1ba82b81": {
+      "difficulty": "7.0",
+      "synonyms": ["ready-made", "off-the-rack", "ready-to-wear", "mass-produced"],
+      "collocations": ["an off-the-peg suit", "buy off the peg", "off-the-peg clothing"],
+      "example_simple": "He bought an off-the-peg suit for the interview.",
+      "example_complex": "Rather than commission a bespoke solution, the company opted for an off-the-peg software package to save time and money.",
+      "definition_en": "made in standard sizes and ready to be sold, not made to order",
+      "ipa": "/ˌɒf ðə ˈpeɡ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-390f57316582b17c": {
+      "difficulty": "7.0",
+      "synonyms": ["unofficial", "confidential", "private", "not for publication"],
+      "collocations": ["speak off the record", "off-the-record comments", "strictly off the record"],
+      "example_simple": "The minister spoke to reporters off the record.",
+      "example_complex": "Off the record, several officials admitted that the policy had failed, though none would say so publicly.",
+      "definition_en": "given or made privately and not intended to be officially recorded or published",
+      "ipa": "/ˌɒf ðə ˈrekɔːd/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-528f92efb340d80e": {
+      "difficulty": "6.0",
+      "synonyms": ["business hours", "working hours", "opening hours"],
+      "collocations": ["during office hours", "outside office hours", "normal office hours"],
+      "example_simple": "You can call the clinic during office hours.",
+      "example_complex": "The professor holds office hours twice a week so that students can discuss their coursework in person.",
+      "definition_en": "the hours during which business is normally conducted, or a set time when someone is available to see people",
+      "ipa": "/ˈɒfɪs ˌaʊəz/",
+      "part_of_speech": "phrase"
+    },
+    "23677482-37d4-4c83-9bfa-31e2347f824b": {
+      "difficulty": "8.0",
+      "definition_en": "something that develops or results from something else, such as a branch or by-product",
+      "ipa": "/ˈɒfʃuːt/",
+      "part_of_speech": "noun"
+    },
+    "998054ab-6697-41fd-9c1f-25783fc1e153": {
+      "difficulty": "7.0",
+      "definition_en": "the young or descendants of a person, animal, or plant",
+      "ipa": "/ˈɒfsprɪŋ/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-7069d2ae1db33a0e": {
+      "difficulty": "7.0",
+      "synonyms": ["astray", "off course", "off track", "sidetracked"],
+      "collocations": ["go offtrack", "get offtrack", "veer offtrack"],
+      "example_simple": "The discussion went offtrack and we forgot the main point.",
+      "example_complex": "Without a clear agenda, the meeting quickly went offtrack, and the important decisions were left unmade.",
+      "definition_en": "away from the intended course, subject, or goal",
+      "ipa": "/ˌɒfˈtræk/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-4278d2fd1f52449e": {
+      "difficulty": "7.0",
+      "synonyms": ["oil leak", "petroleum spill", "marine oil discharge"],
+      "collocations": ["a major oil spill", "clean up the oil spill", "an oil spill disaster"],
+      "example_simple": "The oil spill killed many fish and birds along the coast.",
+      "example_complex": "The catastrophic oil spill devastated marine life and left local fishing communities without a livelihood for years.",
+      "definition_en": "an accidental release of oil into the sea or other body of water",
+      "ipa": "/ˈɔɪl spɪl/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-f68a8f830660e10f": {
+      "difficulty": "7.0",
+      "synonyms": ["veteran", "expert", "old-timer", "seasoned pro"],
+      "collocations": ["an old hand at", "a real old hand", "old hands in the business"],
+      "example_simple": "She is an old hand at teaching and knows how to keep students interested.",
+      "example_complex": "As an old hand at crisis management, he stayed calm while everyone around him panicked.",
+      "definition_en": "a person with a great deal of experience in a particular activity",
+      "ipa": "/ˌəʊld ˈhænd/",
+      "part_of_speech": "idiom"
+    },
+    "f76c8ee8-1e0e-47af-b3ef-5dbac4a9c879": {
+      "difficulty": "8.0",
+      "definition_en": "a very rich and powerful person, especially in business or politics",
+      "ipa": "/ˈɒlɪɡɑːk/",
+      "part_of_speech": "noun"
+    },
+    "962f2fa6-532d-408a-bd56-f95356833cb6": {
+      "difficulty": "9.0",
+      "definition_en": "the state of knowing everything",
+      "ipa": "/ɒmˈnɪsiəns/",
+      "part_of_speech": "noun"
+    },
+    "051f588b-2661-4b1e-b3b9-9f2dbc5efb9d": {
+      "difficulty": "8.0",
+      "definition_en": "a mammal of the primate group that eats both plants and animals",
+      "ipa": "/ɒmˈnɪvərəs ˈpraɪmeɪt/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-2d4e4cf85f7215ad": {
+      "difficulty": "6.0",
+      "synonyms": ["intermittently", "sporadically", "now and then", "occasionally"],
+      "collocations": ["on and off for years", "rain on and off", "date on and off"],
+      "example_simple": "It rained on and off all afternoon.",
+      "example_complex": "They had been dating on and off for nearly a decade before finally deciding to marry.",
+      "definition_en": "happening or existing occasionally, not continuously",
+      "ipa": "/ˌɒn ənd ˈɒf/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-352c9b65799b29ec": {
+      "difficulty": "6.0",
+      "synonyms": ["on the whole", "typically", "generally", "as a rule"],
+      "collocations": ["on average per year", "spend on average", "on average people"],
+      "example_simple": "On average, I read two books a month.",
+      "example_complex": "On average, households in the region consume significantly more energy in winter than in summer.",
+      "definition_en": "taking all cases or figures into account; typically",
+      "ipa": "/ɒn ˈævərɪdʒ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-3082878b2295aea6": {
+      "difficulty": "7.0",
+      "synonyms": ["on someone's behalf", "representing", "for", "in place of"],
+      "collocations": ["on behalf of the company", "speak on behalf of", "accept on behalf of"],
+      "example_simple": "I am writing on behalf of my whole family to thank you.",
+      "example_complex": "The lawyer negotiated the settlement on behalf of the injured workers, securing them substantial compensation.",
+      "definition_en": "as a representative of or for the benefit of someone",
+      "ipa": "/ɒn bɪˈhɑːf əv/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-20dbe68efd4238f4": {
+      "difficulty": "6.0",
+      "synonyms": ["on a business trip", "working", "for work", "away on work"],
+      "collocations": ["travel on business", "go abroad on business", "here on business"],
+      "example_simple": "My father is often away on business.",
+      "example_complex": "She was in Tokyo on business, but managed to set aside a day to explore the city.",
+      "definition_en": "for work-related purposes rather than for pleasure",
+      "ipa": "/ɒn ˈbɪznəs/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-69236912d81d1fd2": {
+      "difficulty": "7.0",
+      "synonyms": ["on standby", "on duty", "available", "ready to be summoned"],
+      "collocations": ["doctor on call", "be on call", "on call all night"],
+      "example_simple": "The doctor is on call this weekend in case of emergencies.",
+      "example_complex": "Being on call around the clock left the young surgeon perpetually exhausted and unable to make plans.",
+      "definition_en": "available to work or be contacted if needed, especially outside normal hours",
+      "ipa": "/ɒn ˈkɔːl/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "trực (sẵn sàng làm việc khi được gọi đến)"
+    },
+    "pubcol-w-a2b8927667418226": {
+      "difficulty": "7.0",
+      "synonyms": ["continuously", "in a row", "without a break", "on the trot"],
+      "collocations": ["for hours on end", "for days on end", "for weeks on end"],
+      "example_simple": "He played video games for hours on end.",
+      "example_complex": "It rained for days on end, until the low-lying fields were completely submerged.",
+      "definition_en": "continuously; for a long period without stopping",
+      "ipa": "/ɒn ˈend/",
+      "part_of_speech": "idiom"
+    }
+  }
+}

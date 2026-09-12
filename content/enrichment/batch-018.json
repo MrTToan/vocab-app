@@ -1,0 +1,204 @@
+{
+  "meta": { "batch": "batch-018", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-b855c328085b770f": {
+      "difficulty": "7.0",
+      "synonyms": ["lucky break", "breakthrough", "golden opportunity", "big chance"],
+      "collocations": ["get your big break", "wait for a big break", "land your big break"],
+      "example_simple": "Her big break came when a director saw her in a small play.",
+      "example_complex": "After years of performing in obscure clubs, the singer finally got her big break when a record-label executive attended one of her shows.",
+      "definition_en": "a sudden opportunity that leads to success, especially in a career",
+      "ipa": "/bɪɡ breɪk/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-23f5831d81aa4cd1": {
+      "difficulty": "5.0",
+      "ipa": "/bɪɡ diːl/"
+    },
+    "pubcol-w-310acc36a111ec6b": {
+      "difficulty": "7.0",
+      "synonyms": ["local hero", "top dog", "a person of importance"],
+      "collocations": ["be a big fish in a small pond", "prefer being a big fish in a small pond", "remain a big fish in a small pond"],
+      "example_simple": "In his small town he was a big fish in a small pond, but the city felt different.",
+      "example_complex": "She chose to stay at the local firm, where she was a big fish in a small pond, rather than risk being overlooked at a large corporation.",
+      "definition_en": "an important or influential person within a small or limited group",
+      "ipa": "/bɪɡ fɪʃ ɪn ə smɔːl pɒnd/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "người quan trọng trong một nhóm hoặc phạm vi nhỏ"
+    },
+    "pubcol-w-76789c76aaa42292": {
+      "difficulty": "6.0",
+      "synonyms": ["arrogant", "conceited", "cocky", "self-important"],
+      "collocations": ["get big-headed", "become big-headed", "a big-headed attitude"],
+      "example_simple": "He became big-headed after winning the competition.",
+      "example_complex": "Success never made her big-headed; she remained modest despite the widespread acclaim.",
+      "definition_en": "thinking you are more important or clever than you really are; conceited",
+      "ipa": "/ˌbɪɡ ˈhedɪd/",
+      "part_of_speech": "adjective"
+    },
+    "b6739d2b-0600-47b2-beb0-98f4d16496d3": {
+      "difficulty": "8.0",
+      "definition_en": "a small burrowing Australian marsupial with long ears and a pointed snout",
+      "ipa": "/ˈbɪlbi/",
+      "part_of_speech": "noun"
+    },
+    "5fdc936a-a68e-4b9b-b779-e6a72b8f6bad": {
+      "difficulty": "7.0",
+      "definition_en": "a large community of plants and animals occupying a major habitat",
+      "ipa": "/ˈbaɪəʊm/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-4c275da9345bd6ee": {
+      "difficulty": "6.0",
+      "synonyms": ["birth record", "birth document"],
+      "collocations": ["apply for a birth certificate", "a copy of your birth certificate", "issue a birth certificate"],
+      "example_simple": "You need your birth certificate to apply for a passport.",
+      "example_complex": "When registering the newborn, the parents were required to submit a certified copy of the birth certificate.",
+      "definition_en": "an official document that records a person's birth",
+      "ipa": "/ˈbɜːθ səˌtɪfɪkət/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-7eaa345e570f9da1": {
+      "difficulty": "7.0",
+      "synonyms": ["odds and ends", "bits and pieces", "this and that"],
+      "collocations": ["a few bits and bobs", "bits and bobs to do", "buy some bits and bobs"],
+      "example_simple": "I need to buy a few bits and bobs from the shop.",
+      "example_complex": "Before the guests arrived, she spent the morning tidying up and finishing off various bits and bobs around the house.",
+      "definition_en": "an assortment of small, miscellaneous items or tasks",
+      "ipa": "/ˌbɪts ən ˈbɒbz/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-808f0e5638bcdf78": {
+      "difficulty": "6.0",
+      "synonyms": ["go red", "turn crimson", "flush with embarrassment"],
+      "collocations": ["blush with embarrassment", "blush deeply", "blush furiously"],
+      "example_simple": "She blushed with embarrassment when she forgot his name.",
+      "example_complex": "The young intern blushed with embarrassment when the manager praised her work in front of the entire team.",
+      "definition_en": "to become red in the face because you feel ashamed or self-conscious",
+      "ipa": "/blʌʃ wɪð ɪmˈbærəsmənt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-067cb2b4d11bea74": {
+      "synonyms": ["cutting edge", "knife edge", "edge"],
+      "collocations": ["a sharp blade", "the blade of a knife", "a razor blade"],
+      "example_simple": "Be careful, the blade of this knife is very sharp.",
+      "example_complex": "The surgeon replaced the scalpel's blade before beginning the delicate procedure."
+    },
+    "pubcol-w-e04a67a1c220ec37": {
+      "synonyms": ["accuse", "hold responsible", "criticize", "fault"],
+      "collocations": ["take the blame", "put the blame on", "get the blame"],
+      "example_simple": "Don't blame me for the mistake.",
+      "example_complex": "It would be unfair to blame the teacher for results that stem from years of underfunding."
+    },
+    "pubcol-w-b123b5c826e7ed7f": {
+      "difficulty": "6.0",
+      "synonyms": ["hold someone responsible for", "pin something on", "fault someone for"],
+      "collocations": ["blame someone for the mistake", "blame someone for the loss", "wrongly blame someone"],
+      "example_simple": "They blamed him for the accident.",
+      "example_complex": "The report blamed senior management for the failure to act on the early warnings.",
+      "definition_en": "to say that someone is responsible for something bad that happened",
+      "ipa": "/bleɪm ˈsʌmbədi fɔː ˈsʌmθɪŋ/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "đổ lỗi cho ai về việc gì"
+    },
+    "pubcol-w-efb61c7f9cd06683": {
+      "synonyms": ["tasteless", "dull", "insipid", "flavourless"],
+      "collocations": ["bland food", "a bland taste", "a bland personality"],
+      "example_simple": "The soup was bland and needed more salt.",
+      "example_complex": "Critics dismissed the film as bland and forgettable, lacking any real emotional depth."
+    },
+    "144d0c70-b984-4b29-a0a0-a1c060bd6ce5": {
+      "difficulty": "7.0",
+      "definition_en": "a single general method applied to all cases without regard to individual differences",
+      "ipa": "/ˈblæŋkɪt əˌprəʊtʃ/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-b4bb50bcc46b39d0": {
+      "difficulty": "6.0",
+      "synonyms": ["turn off the lights", "pass out", "faint"],
+      "collocations": ["black out the stage", "black out completely", "black out the windows"],
+      "example_simple": "They blacked out the theatre before the show began.",
+      "example_complex": "The technicians blacked out the entire auditorium so the audience's attention would focus solely on the spotlight.",
+      "definition_en": "to turn off or cover all the lights, or to lose consciousness suddenly",
+      "ipa": "/blæk aʊt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-531b7acc9fd5cd5c": {
+      "synonyms": ["explosion", "detonation", "burst", "blowup"],
+      "collocations": ["a bomb blast", "at full blast", "a blast of air"],
+      "example_simple": "The blast shattered every window in the building.",
+      "example_complex": "Investigators concluded that the blast had been caused by a gas leak in the basement."
+    },
+    "73056187-0e1a-4521-abe9-046c7f6bff98": {
+      "difficulty": "8.0",
+      "definition_en": "an obvious and shameless lie or invented story",
+      "ipa": "/ˌbleɪtənt ˌfæbrɪˈkeɪʃn/",
+      "part_of_speech": "noun"
+    },
+    "9669883a-0471-435f-995f-2aa56a9e5e3b": {
+      "difficulty": "7.0",
+      "definition_en": "swollen with liquid or gas; excessively large or full",
+      "ipa": "/ˈbləʊtɪd/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-a1fa62fd1973cc85": {
+      "difficulty": "7.0",
+      "synonyms": ["be indecisive", "waver", "vacillate"],
+      "collocations": ["blow hot and cold about", "keep blowing hot and cold", "blow hot and cold on the idea"],
+      "example_simple": "He keeps blowing hot and cold about the trip.",
+      "example_complex": "Investors grew wary as the government blew hot and cold over whether to approve the merger.",
+      "definition_en": "to keep changing your opinion or attitude about something",
+      "ipa": "/bləʊ hɒt ən kəʊld/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-13666b10e01eae76": {
+      "difficulty": "7.0",
+      "synonyms": ["expose", "report", "inform on", "denounce"],
+      "collocations": ["blow the whistle on corruption", "blow the whistle on a company", "be the first to blow the whistle"],
+      "example_simple": "She blew the whistle on the company's illegal dumping.",
+      "example_complex": "The accountant who blew the whistle on the fraud was later praised for his courage despite losing his job.",
+      "definition_en": "to report someone's illegal or wrongful behaviour to an authority in order to stop it",
+      "ipa": "/bləʊ ðə ˈwɪsl ɒn/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-c7ed69885a56306d": {
+      "difficulty": "6.0",
+      "synonyms": ["manual workers and office workers", "labourers and professionals"],
+      "collocations": ["blue-collar and white-collar jobs", "blue-collar versus white-collar workers", "the blue-collar white-collar divide"],
+      "example_simple": "The town has both blue-collar and white-collar workers.",
+      "example_complex": "Economic changes have gradually blurred the traditional divide between blue-collar and white-collar employment.",
+      "definition_en": "manual or industrial workers versus office or professional workers",
+      "ipa": "/ˌbluː ˈkɒlə ˌwaɪt ˈkɒlə/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-b7d8cda165255dd9": {
+      "difficulty": "6.0",
+      "synonyms": ["manual", "working-class", "industrial"],
+      "collocations": ["a blue-collar job", "blue-collar workers", "a blue-collar background"],
+      "example_simple": "He grew up in a blue-collar neighbourhood.",
+      "example_complex": "Many blue-collar workers saw their jobs disappear as factories relocated overseas.",
+      "definition_en": "relating to manual or industrial work",
+      "ipa": "/ˌbluː ˈkɒlə/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-d309d158eaa39df1": {
+      "difficulty": "7.0",
+      "synonyms": ["wholeheartedly", "completely", "with all your heart"],
+      "collocations": ["devote body and soul", "throw yourself body and soul into", "belong body and soul"],
+      "example_simple": "She devoted herself body and soul to her work.",
+      "example_complex": "He threw himself body and soul into the charity, sacrificing weekends and holidays for the cause.",
+      "definition_en": "with all your energy and commitment; completely",
+      "ipa": "/ˌbɒdi ən ˈsəʊl/",
+      "part_of_speech": "idiom"
+    },
+    "571f96e5-cbaf-4271-9231-9bfeba116656": {
+      "difficulty": "7.0"
+    },
+    "a780433e-a6b4-45ce-9e22-0c1a0350cc15": {
+      "difficulty": "7.0",
+      "definition_en": "to slow someone down or prevent them from making progress",
+      "ipa": "/bɒɡ ˈsʌmbədi daʊn/",
+      "part_of_speech": "phrase"
+    }
+  }
+}

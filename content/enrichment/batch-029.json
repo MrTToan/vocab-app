@@ -1,0 +1,182 @@
+{
+  "meta": { "batch": "batch-029", "authored_by": "claude", "count": 25 },
+  "words": {
+    "81f1ad63-e959-44d0-b450-6998de230569": {
+      "difficulty": "8.0",
+      "definition_en": "relating to or marked by friendly companionship rather than passion",
+      "ipa": "/kəmˈpænjənət/",
+      "part_of_speech": "adjective"
+    },
+    "fd1baace-acdc-4f00-80ad-3ac69ff1932a": {
+      "difficulty": "6.0",
+      "ipa": "/kəmˈpeəd wɪð/"
+    },
+    "pubcol-w-4d04521b659a9803": {
+      "synonyms": ["contrast", "juxtaposition", "evaluation", "analogy"],
+      "collocations": ["make a comparison", "in comparison with", "by comparison"],
+      "example_simple": "There is no comparison between the two phones; one is much faster.",
+      "example_complex": "A careful comparison of the two economies reveals striking differences in productivity and wage growth.",
+      "definition_en": "the act of examining how two or more things are similar or different",
+      "part_of_speech": "noun"
+    },
+    "e071422e-9c5d-4070-b2d5-e5c1a87d07df": {
+      "difficulty": "6.0",
+      "definition_en": "sympathetic concern for the suffering or misfortune of others",
+      "ipa": "/kəmˈpæʃən/",
+      "part_of_speech": "noun"
+    },
+    "5073e87b-6d31-4d55-accb-da5416d7bb11": {
+      "difficulty": "8.0",
+      "definition_en": "eating food to cope with or make up for stress, boredom, or negative emotions",
+      "ipa": "/kəmˈpensətəri ˈiːtɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-1b44f6ddeeb852b7": {
+      "synonyms": ["contest", "rivalry", "tournament", "contention"],
+      "collocations": ["fierce competition", "enter a competition", "win the competition"],
+      "example_simple": "She won first prize in the singing competition.",
+      "example_complex": "Intense competition among airlines has driven fares down while squeezing profit margins to razor-thin levels.",
+      "definition_en": "a situation in which people or organizations try to win or to do better than others",
+      "part_of_speech": "noun"
+    },
+    "745f673a-98c0-4af2-adaa-ed420912b0ed": {
+      "difficulty": "8.0",
+      "definition_en": "a business project undertaken in a market where firms compete against one another",
+      "ipa": "/kəmˈpetətɪv ˈventʃə/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-af04e67b39287aa0": {
+      "difficulty": "6.0",
+      "synonyms": ["totally", "entirely", "wholly", "thoroughly"],
+      "collocations": ["completely exhausted", "absolutely certain", "utterly ridiculous"],
+      "example_simple": "After the long hike I was completely, absolutely, utterly exhausted.",
+      "example_complex": "By the end of the campaign the volunteers were utterly drained, absolutely convinced they could not manage another day.",
+      "definition_en": "adverbs meaning totally or entirely, used to intensify what follows",
+      "ipa": "/kəmˈpliːtli, ˈæbsəluːtli, ˈʌtəli/",
+      "part_of_speech": "adverb",
+      "vi_meaning_correction": "hoàn toàn, tuyệt đối"
+    },
+    "pubcol-w-fc202879f3adb45c": {
+      "difficulty": "7.0",
+      "synonyms": ["anthology", "collection", "greatest hits", "boxed set"],
+      "collocations": ["release a compilation album", "a compilation album of hits", "feature on a compilation album"],
+      "example_simple": "The band released a compilation album of their best songs.",
+      "example_complex": "The label's charity compilation album gathered previously unreleased tracks from a dozen artists across three decades.",
+      "definition_en": "an album made up of songs previously released or drawn from various sources",
+      "ipa": "/ˌkɒmpɪˈleɪʃən ˈælbəm/",
+      "part_of_speech": "noun"
+    },
+    "c34cb138-04a9-4574-9595-5a75b41947b7": {
+      "difficulty": "8.0",
+      "definition_en": "a feeling of smug or uncritical satisfaction with oneself or one's situation",
+      "ipa": "/kəmˈpleɪsənsi/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-6a91578231ef5136": {
+      "synonyms": ["grumble", "protest", "moan", "gripe"],
+      "collocations": ["complain about the noise", "complain to the manager", "have nothing to complain about"],
+      "example_simple": "Customers often complain about the slow service.",
+      "example_complex": "Residents complained bitterly that the council had ignored their repeated warnings about the flooding.",
+      "definition_en": "to express dissatisfaction or annoyance about something",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-0e865980c9c5eb3f": {
+      "difficulty": "6.0",
+      "synonyms": ["gripe to someone about", "protest to someone about", "grumble to someone about"],
+      "collocations": ["complain to the manager about the delay", "complain to staff of poor service", "complain to a neighbour about the noise"],
+      "example_simple": "She complained to the waiter about the cold soup.",
+      "example_complex": "Several tenants complained to the landlord of persistent damp that management had promised, but failed, to fix.",
+      "definition_en": "to tell a particular person that you are unhappy about something",
+      "ipa": "/kəmˈpleɪn tə ˈsʌmbədi əˈbaʊt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-903571af4865e39f": {
+      "synonyms": ["grievance", "criticism", "objection", "grumble"],
+      "collocations": ["make a complaint", "lodge a complaint", "a formal complaint"],
+      "example_simple": "The hotel received a complaint about the noisy room.",
+      "example_complex": "The ombudsman upheld the complaint, ruling that the bank had misled customers about the fees.",
+      "definition_en": "a statement that expresses dissatisfaction or annoyance about something",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-36152587b7f8361c": {
+      "synonyms": ["totally", "entirely", "fully", "utterly"],
+      "collocations": ["completely different", "completely forget", "agree completely"],
+      "example_simple": "I completely forgot about the meeting this morning.",
+      "example_complex": "The new evidence completely undermined the prosecution's case, leaving the jury little choice but to acquit.",
+      "definition_en": "totally or entirely; in every way or respect",
+      "part_of_speech": "adverb"
+    },
+    "pubcol-w-c163c109e6bbc9e8": {
+      "difficulty": "6.0",
+      "synonyms": ["flop", "fall flat", "fail utterly", "collapse"],
+      "collocations": ["completely fail to appear", "the plan completely failed", "completely fail an exam"],
+      "example_simple": "The plan completely failed because no one followed it.",
+      "example_complex": "The rescue operation completely failed when the equipment malfunctioned in the storm.",
+      "definition_en": "to be entirely unsuccessful; to not succeed at all",
+      "ipa": "/kəmˈpliːtli feɪl/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-d27c7a190bdd5a36": {
+      "synonyms": ["complex", "intricate", "convoluted", "involved"],
+      "collocations": ["a complicated process", "get complicated", "unnecessarily complicated"],
+      "example_simple": "The instructions were too complicated for me to follow.",
+      "example_complex": "The negotiations grew increasingly complicated as each party introduced new conditions at the last minute.",
+      "definition_en": "consisting of many interconnected parts and therefore difficult to understand or deal with",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-79ce2a4db86baac8": {
+      "difficulty": "6.0",
+      "synonyms": ["system failure", "computer freeze", "breakdown", "system crash"],
+      "collocations": ["the computer crashes frequently", "recover after a computer crash", "lose work when the computer crashes"],
+      "example_simple": "My computer crashes every time I open that program.",
+      "example_complex": "When the computer crashes mid-transaction, the system must roll back to prevent corrupted records.",
+      "definition_en": "when a computer suddenly stops working or shuts down unexpectedly",
+      "ipa": "/kəmˈpjuːtə ˈkræʃɪz/",
+      "part_of_speech": "phrase"
+    },
+    "4dc42c58-ca36-4633-854f-26dfe1629e38": {
+      "difficulty": "7.0",
+      "definition_en": "to hide something or keep it from being seen or known",
+      "ipa": "/kənˈsiːl/",
+      "part_of_speech": "verb"
+    },
+    "b263be87-b135-46dd-b059-a4736364489e": {
+      "difficulty": "7.0",
+      "ipa": "/kənˈsiːd/"
+    },
+    "5b47cf3d-b1e0-4e3c-97f9-ee0a2d34fe80": {
+      "difficulty": "8.0",
+      "definition_en": "excessive pride in or admiration of oneself",
+      "ipa": "/kənˈsiːt/",
+      "part_of_speech": "noun"
+    },
+    "9b639136-acd1-4aff-af59-de9f5150db88": {
+      "difficulty": "7.0",
+      "definition_en": "capable of being imagined or believed to be possible",
+      "ipa": "/kənˈsiːvəbəl/",
+      "part_of_speech": "adjective"
+    },
+    "2b1aa92f-05c4-4874-ac17-3158c6555cc6": {
+      "difficulty": "7.0",
+      "definition_en": "to form an idea or plan in the mind; also, to become pregnant",
+      "ipa": "/kənˈsiːv/",
+      "part_of_speech": "verb"
+    },
+    "efcb3cde-32c4-4fc1-a5f9-77167b3d54e2": {
+      "difficulty": "7.0",
+      "definition_en": "something granted or yielded, especially in the course of negotiation",
+      "ipa": "/kənˈseʃən/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-5c187656a3dcf100": {
+      "difficulty": "6.0",
+      "ipa": "/kənˈkluːd/"
+    },
+    "51e79017-909a-4941-9ff4-9a08cb2e5235": {
+      "difficulty": "8.0",
+      "definition_en": "to invent or fabricate a story or excuse; to make something by combining ingredients",
+      "ipa": "/kənˈkɒkt/",
+      "part_of_speech": "verb"
+    }
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "meta": { "batch": "batch-129", "authored_by": "claude", "count": 26 },
+  "words": {
+    "b5d83d3b-13d3-40e6-92aa-f36076b2af1d": {
+      "difficulty": "7.0",
+      "definition_en": "a government department responsible for managing transport systems and roads",
+      "ipa": "/ˌtrænspɔːˈteɪʃən ˈbjʊərəʊ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-3a4d4cab56ac250f": {
+      "synonyms": ["distressing", "disturbing", "harrowing", "shocking"],
+      "collocations": ["a traumatic experience", "traumatic event", "deeply traumatic"],
+      "example_simple": "Losing his job was a traumatic experience for the whole family.",
+      "example_complex": "Survivors of the earthquake still struggle to process the traumatic memories that resurface without warning."
+    },
+    "pubcol-w-5cc328cbc6328609": {
+      "difficulty": "5.0",
+      "synonyms": ["tour operator", "travel bureau", "travel company"],
+      "collocations": ["book through a travel agency", "a local travel agency", "work at a travel agency"],
+      "example_simple": "We booked our holiday through a travel agency in town.",
+      "example_complex": "Although online booking platforms have grown rapidly, many travellers still rely on a travel agency to arrange complex multi-country itineraries.",
+      "definition_en": "a business that arranges trips, flights, and holidays for customers",
+      "ipa": "/ˈtrævəl ˈeɪdʒənsi/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-a08689140788fce0": {
+      "synonyms": ["platter", "salver"],
+      "collocations": ["a serving tray", "carry a tray", "a tea tray"],
+      "example_simple": "The waiter carried the drinks to our table on a silver tray.",
+      "example_complex": "She balanced a tray laden with plates as she weaved carefully between the crowded tables.",
+      "definition_en": "a flat, rigid container with raised edges used for carrying food or objects",
+      "part_of_speech": "noun"
+    },
+    "f8591b30-e3b2-427a-a4a2-d412e0ccd93d": {
+      "difficulty": "6.0",
+      "definition_en": "an exercise machine with a moving belt that you walk or run on while staying in place",
+      "ipa": "/ˈtredmɪl/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-1f6d9f4e27fb764f": {
+      "synonyms": ["pay for", "buy for", "take out"],
+      "collocations": ["treat someone to dinner", "my treat", "let me treat you"],
+      "example_simple": "Let me treat you to lunch to celebrate your new job.",
+      "example_complex": "To thank the team for their hard work, she treated everyone to a lavish meal at a downtown restaurant.",
+      "definition_en": "to pay for something enjoyable for someone else as a gift or gesture",
+      "part_of_speech": "verb"
+    },
+    "5df1a51a-8b62-4bdb-a185-71d2e81dde6d": {
+      "difficulty": "8.0",
+      "definition_en": "to accept something as absolutely true and beyond question",
+      "ipa": "/ˈtriːtɪd æz ˈɡɒspəl/",
+      "part_of_speech": "idiom"
+    },
+    "f2d6d78c-f321-4e17-b97c-a77f30efdc58": {
+      "difficulty": "7.0",
+      "synonyms": ["Paris Peace Accords", "peace agreement", "peace treaty"],
+      "definition_en": "a formal agreement signed in Paris to end a conflict or war",
+      "ipa": "/ˈtriːti əv ˈpærɪs/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-80655da8d80aaaf9": {
+      "synonyms": ["sapling", "timber"],
+      "collocations": ["plant a tree", "climb a tree", "a tall tree"],
+      "example_simple": "We planted a small tree in the garden last spring.",
+      "example_complex": "The ancient oak tree at the edge of the village has stood for over three hundred years.",
+      "definition_en": "a tall plant with a wooden trunk, branches, and leaves",
+      "part_of_speech": "noun"
+    },
+    "cf03718a-59c1-4bf4-911c-964336712f7e": {
+      "difficulty": "6.0",
+      "example_simple": "A squirrel scurried up the rough bark of the tree trunk.",
+      "example_complex": "The storm had split the massive tree trunk down the middle, leaving jagged splinters exposed to the rain.",
+      "definition_en": "the thick main woody stem of a tree from which the branches grow",
+      "ipa": "/ˈtriː trʌŋk/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "thân cây"
+    },
+    "3713a321-8a65-42a5-b184-0168bf2ba9d9": {
+      "difficulty": "7.0",
+      "definition_en": "shaking or trembling movements, often of the ground or the body",
+      "ipa": "/ˈtremərz/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-48075864b2596de2": {
+      "synonyms": ["tendency", "movement", "drift", "direction"],
+      "collocations": ["a growing trend", "follow the trend", "an upward trend"],
+      "example_simple": "There is a growing trend towards working from home.",
+      "example_complex": "Analysts identified a clear upward trend in renewable energy investment over the past decade.",
+      "definition_en": "a general direction in which something is changing or developing",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-8eff4cc1a8ab96cb": {
+      "difficulty": "6.0",
+      "synonyms": ["fashionable", "stylish", "in vogue", "hip"],
+      "collocations": ["a trendy café", "trendy clothes", "a trendy neighbourhood"],
+      "example_simple": "They opened a trendy café on the corner of our street.",
+      "example_complex": "The once-neglected district has been transformed into a trendy hub of boutiques, galleries, and pavement cafés.",
+      "definition_en": "very fashionable and following the latest styles",
+      "ipa": "/ˈtrendi/",
+      "part_of_speech": "adjective",
+      "vi_meaning_correction": "hợp thời trang, theo xu hướng"
+    },
+    "pubcol-w-599baf0755532d82": {
+      "synonyms": ["intruder", "interloper", "encroacher"],
+      "collocations": ["a trespasser on private land", "prosecute trespassers", "warn off trespassers"],
+      "example_simple": "The sign warned that trespassers would be prosecuted.",
+      "example_complex": "The landowner installed security cameras after repeated incidents involving trespassers cutting through his fields at night."
+    },
+    "8e510999-e9ce-4241-9ece-7d5d2b3efb3d": {
+      "difficulty": "8.0",
+      "definition_en": "an official body or court set up to judge a particular type of dispute",
+      "ipa": "/traɪˈbjuːnəl/",
+      "part_of_speech": "noun"
+    },
+    "43a032f5-f6e5-4fcb-b11b-416aff13e699": {
+      "difficulty": "8.0",
+      "definition_en": "smaller streams or rivers that flow into a larger river or lake",
+      "ipa": "/ˈtrɪbjətəriz/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-f2fc8123700c9588": {
+      "synonyms": ["insignificant", "minor", "petty", "unimportant"],
+      "collocations": ["a trivial matter", "trivial detail", "seem trivial"],
+      "example_simple": "Don't waste time arguing over such trivial matters.",
+      "example_complex": "What seemed like a trivial oversight at the design stage later caused significant delays across the entire project."
+    },
+    "pubcol-w-954838112256f768": {
+      "synonyms": ["belittle", "downplay", "minimise", "make light of"],
+      "collocations": ["trivialise an issue", "trivialise someone's concerns", "trivialise the problem"],
+      "example_simple": "We should not trivialise the concerns that older workers have raised.",
+      "example_complex": "Critics argued that the documentary trivialised a complex tragedy by reducing it to a few sensational sound bites."
+    },
+    "pubcol-w-64f836f6c55cbd24": {
+      "synonyms": ["cart", "trolley cart", "wagon"],
+      "collocations": ["a shopping trolley", "push a trolley", "a luggage trolley"],
+      "example_simple": "She pushed her shopping trolley slowly down the aisle.",
+      "example_complex": "Passengers loaded their heavy suitcases onto a luggage trolley and hurried towards the departure gate.",
+      "definition_en": "a large basket or container on wheels used for carrying goods, such as in a supermarket",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-1f5bbe7f3c283e37": {
+      "synonyms": ["cup", "award", "prize"],
+      "collocations": ["win a trophy", "lift the trophy", "a trophy cabinet"],
+      "example_simple": "The team lifted the trophy after winning the final.",
+      "example_complex": "A row of gleaming trophies in the club's cabinet bore witness to decades of hard-won victories."
+    },
+    "deffcb97-a291-4743-b75d-911947773745": {
+      "difficulty": "9.0",
+      "definition_en": "relating to the troposphere, the lowest layer of the earth's atmosphere",
+      "ipa": "/ˌtrɒpəˈsferɪk/",
+      "part_of_speech": "adjective"
+    },
+    "e635ef46-e96a-48d2-a8ee-93c5a89d7859": {
+      "difficulty": "8.0",
+      "ipa": "/trɒf/"
+    },
+    "pubcol-w-432e9fa24ab5b5c9": {
+      "synonyms": ["pants", "slacks"],
+      "collocations": ["a pair of trousers", "wear trousers", "smart trousers"],
+      "example_simple": "He bought a new pair of trousers for the interview.",
+      "example_complex": "The tailor adjusted the hem of his trousers so they fell neatly over his polished shoes.",
+      "definition_en": "a piece of clothing worn on the lower body, covering each leg separately",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-7a4d63b1ba7178fa": {
+      "synonyms": ["lorry", "van", "HGV"],
+      "collocations": ["drive a truck", "a delivery truck", "load the truck"],
+      "example_simple": "A large truck delivered the furniture to our new house.",
+      "example_complex": "Convoys of heavy trucks rumbled through the town all night, carrying supplies to the flooded region.",
+      "definition_en": "a large road vehicle used for carrying goods",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-562540cd391b44ef": {
+      "synonyms": ["horn", "bugle"],
+      "collocations": ["play the trumpet", "a trumpet solo", "blow a trumpet"],
+      "example_simple": "He learned to play the trumpet when he was ten.",
+      "example_complex": "The jazz band fell silent as the soloist launched into a soaring trumpet improvisation.",
+      "definition_en": "a brass musical instrument played by blowing into it, with three valves for changing notes",
+      "part_of_speech": "noun"
+    }
+  }
+}

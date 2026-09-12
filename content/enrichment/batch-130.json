@@ -1,0 +1,187 @@
+{
+  "meta": { "batch": "batch-130", "authored_by": "claude", "count": 25 },
+  "words": {
+    "085ff5f8-462f-430e-9f25-1007da65bc8f": {
+      "difficulty": "8.0",
+      "definition_en": "a situation in which trust is absent, allowing suspicion or misinformation to spread",
+      "ipa": "/trʌst ˈvækjuːəm/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-b5aa2daf7859c856": {
+      "difficulty": "6.0",
+      "synonyms": ["school fees", "course fees", "tuition costs"],
+      "collocations": ["pay tuition fees", "rising tuition fees", "waive tuition fees"],
+      "example_simple": "The university raised its tuition fees again this year.",
+      "example_complex": "Soaring tuition fees have deterred many low-income students from pursuing a university degree.",
+      "definition_en": "the money charged for teaching, especially at a school, college, or university",
+      "ipa": "/tjuˈɪʃən fiːz/",
+      "part_of_speech": "noun"
+    },
+    "6850c4c6-0c09-4335-8663-d175b2dccf78": {
+      "difficulty": "6.0",
+      "ipa": "/ˈtʌmbəl/"
+    },
+    "cb9234ba-d592-4d77-98ab-9eb351ecc96b": {
+      "difficulty": "7.0",
+      "definition_en": "a state of confusion, disorder, or violent, unsteady movement",
+      "ipa": "/ˈtɜːbjələns/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-040d9499b1219162": {
+      "difficulty": "5.0",
+      "synonyms": ["turn round", "spin around", "reverse", "recover"],
+      "collocations": ["turn around slowly", "turn the company around", "turn around and leave"],
+      "example_simple": "She heard a noise and turned around to see who was there.",
+      "example_complex": "The new manager managed to turn the struggling business around within a single year.",
+      "definition_en": "to move so as to face the opposite direction; also, to change from failure to success",
+      "ipa": "/tɜːn əˈraʊnd/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-ca24e2467d180e3c": {
+      "difficulty": "7.0",
+      "synonyms": ["reform", "make a fresh start", "mend one's ways", "start over"],
+      "collocations": ["decide to turn over a new leaf", "vow to turn over a new leaf", "turn over a new leaf after"],
+      "example_simple": "After the accident, he decided to turn over a new leaf and quit smoking.",
+      "example_complex": "Released from prison and determined to turn over a new leaf, she enrolled in college and never looked back.",
+      "definition_en": "to change one's behaviour for the better and make a fresh start",
+      "ipa": "/tɜːn ˈəʊvə ə njuː liːf/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-a7717453395888ab": {
+      "difficulty": "5.0",
+      "ipa": "/tɜːn ʌp/"
+    },
+    "bb8a42c6-8e59-4460-8b8b-d6124eb87d43": {
+      "difficulty": "7.0",
+      "definition_en": "to discover or produce evidence, often unexpectedly",
+      "ipa": "/tɜːn ʌp ˈevɪdəns/",
+      "part_of_speech": "phrase"
+    },
+    "0308f84a-fb88-4cde-a3eb-524961a91a64": {
+      "difficulty": "6.0",
+      "definition_en": "the number of people who attend or take part in an event",
+      "ipa": "/ˈtɜːnaʊt/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-d0a3e7f81a9885e9": {
+      "difficulty": "5.0",
+      "synonyms": ["kind", "sort", "category", "keyboard"],
+      "collocations": ["a type of", "blood type", "type a message"],
+      "example_simple": "What type of music do you like best?",
+      "example_complex": "She had to type up the entire report before the deadline that evening.",
+      "definition_en": "a category of things sharing common features; or to write text using a keyboard",
+      "ipa": "/taɪp/",
+      "part_of_speech": "noun",
+      "vi_meaning_correction": "loại, kiểu; gõ (bàn phím)"
+    },
+    "c3be89f0-4c67-4032-9669-0354dc68fc6d": {
+      "difficulty": "8.0",
+      "definition_en": "cases of an infectious bacterial fever spread through contaminated food or water",
+      "ipa": "/ˈtaɪfɔɪdz/",
+      "part_of_speech": "noun"
+    },
+    "208a8368-e188-406d-9fed-db344bce184c": {
+      "difficulty": "8.0",
+      "definition_en": "using power in a cruel, unjust, and oppressive way",
+      "ipa": "/tɪˈrænɪk/",
+      "part_of_speech": "adjective"
+    },
+    "2f564df2-1c24-4878-9836-420b2c790f82": {
+      "difficulty": "8.0",
+      "definition_en": "the ethical theory that the best action is the one that maximises overall happiness",
+      "ipa": "/juːˌtɪlɪˈteəriənɪzəm/",
+      "part_of_speech": "noun",
+      "vi_meaning_correction": "thuyết vị lợi (chủ nghĩa công lợi)"
+    },
+    "4e2b7169-f9a9-47a3-bfd3-da1f7f480253": {
+      "difficulty": "8.0",
+      "definition_en": "the long, thinner of the two bones in the forearm, on the side of the little finger",
+      "ipa": "/ˈʌlnə bəʊnz/",
+      "part_of_speech": "noun"
+    },
+    "6922ad89-baa8-4aba-bfcd-b4ffe49b8935": {
+      "difficulty": "8.0",
+      "definition_en": "a hidden reason for doing something, usually selfish or dishonest",
+      "ipa": "/ʌlˈtɪəriə ˈməʊtɪv/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-495e4de0a0d144b8": {
+      "synonyms": ["alone", "solo", "unescorted", "on one's own"],
+      "collocations": ["unaccompanied minor", "unaccompanied baggage", "travel unaccompanied"],
+      "example_simple": "Children under twelve cannot fly unaccompanied on this airline.",
+      "example_complex": "The museum does not admit unaccompanied minors after six in the evening."
+    },
+    "453c9d55-9cfd-4043-9ad5-88cf7f419608": {
+      "difficulty": "7.0",
+      "definition_en": "fully in agreement; agreed to by everyone involved",
+      "ipa": "/juːˈnænɪməs/",
+      "part_of_speech": "adjective"
+    },
+    "7443285d-ccb6-4f5b-949f-39621192fc0c": {
+      "difficulty": "7.0",
+      "definition_en": "a decision or arrangement that everyone involved accepts and supports",
+      "ipa": "/juːˈnænɪməs əˈɡriːmənt/",
+      "part_of_speech": "phrase"
+    },
+    "c246acf7-f356-45c4-b309-5120f7215043": {
+      "difficulty": "8.0",
+      "definition_en": "impossible to attack, question, or defeat",
+      "ipa": "/ˌʌnəˈseɪləbəl/",
+      "part_of_speech": "adjective"
+    },
+    "f29c88db-5b5e-4480-a124-e3cc49da4986": {
+      "difficulty": "8.0",
+      "definition_en": "in a way that cannot be attacked, challenged, or criticised",
+      "ipa": "/ˌʌnəˈseɪləbli/",
+      "part_of_speech": "adverb"
+    },
+    "pubcol-w-80927930981974a2": {
+      "difficulty": "5.0",
+      "synonyms": ["incredible", "unimaginable", "astonishing", "far-fetched"],
+      "collocations": ["absolutely unbelievable", "an unbelievable story", "unbelievable news"],
+      "example_simple": "The view from the mountain top was absolutely unbelievable.",
+      "example_complex": "It seemed unbelievable that a team written off by everyone could win the championship.",
+      "definition_en": "so surprising or extreme that it is hard to believe",
+      "ipa": "/ˌʌnbɪˈliːvəbəl/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-7f15ab43f2535184": {
+      "synonyms": ["relax", "loosen up", "unwind", "straighten"],
+      "collocations": ["unbend a little", "begin to unbend", "unbend the wire"],
+      "example_simple": "After a few jokes, the strict teacher began to unbend.",
+      "example_complex": "It took several drinks before the reserved diplomat finally unbent and shared a laugh with the guests."
+    },
+    "pubcol-w-5482b9a5677e609e": {
+      "difficulty": "7.0",
+      "synonyms": ["be attacked", "be criticised", "face scrutiny", "be examined"],
+      "collocations": ["come under attack", "come under scrutiny", "come under heavy criticism"],
+      "example_simple": "The new policy soon came under attack from angry parents.",
+      "example_complex": "Once the scandal broke, the minister's spending came under intense scrutiny from the press.",
+      "definition_en": "to become the target of criticism, examination, or hostile action",
+      "ipa": "/ˈʌndər əˈtæk / ˈskruːtɪni kʌm/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-928c2a52fd5b4b2c": {
+      "difficulty": "5.0",
+      "synonyms": ["managed", "in check", "handled", "contained"],
+      "collocations": ["keep under control", "bring under control", "get the situation under control"],
+      "example_simple": "The firefighters soon brought the blaze under control.",
+      "example_complex": "Despite the chaos, the experienced pilot kept the aircraft firmly under control.",
+      "definition_en": "being successfully managed or restrained so that nothing goes wrong",
+      "ipa": "/ˈʌndə kənˈtrəʊl/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "trong tầm kiểm soát"
+    },
+    "pubcol-w-dbf023eed4dfca5e": {
+      "difficulty": "7.0",
+      "synonyms": ["not required", "not obliged", "free from duty", "not bound"],
+      "collocations": ["under no obligation to buy", "under no obligation to accept", "you are under no obligation"],
+      "example_simple": "You are under no obligation to buy anything at the shop.",
+      "example_complex": "The company stressed that customers were under no obligation to renew the contract after the trial ended.",
+      "definition_en": "not legally or morally required to do something",
+      "ipa": "/ˈʌndə nəʊ ˌɒblɪˈɡeɪʃən/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "không có nghĩa vụ phải làm gì"
+    }
+  }
+}

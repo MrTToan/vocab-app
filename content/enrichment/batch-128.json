@@ -1,0 +1,200 @@
+{
+  "meta": { "batch": "batch-128", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-00390e10ee0d2774": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/tə biː ɪn flʌdz əv tɪəz/",
+      "definition_en": "to be crying a great deal; weeping uncontrollably",
+      "synonyms": ["sobbing", "weeping", "crying one's eyes out", "in tears"],
+      "collocations": ["suddenly in floods of tears", "left her in floods of tears", "in floods of tears at the news"],
+      "example_simple": "She was in floods of tears when she heard the sad news.",
+      "example_complex": "By the end of the farewell speech, half the audience was in floods of tears.",
+      "vi_meaning_correction": "khóc nức nở, khóc như mưa"
+    },
+    "pubcol-w-792051e3381fc68e": {
+      "part_of_speech": "noun",
+      "definition_en": "a young child who has just learned to walk",
+      "synonyms": ["infant", "little one", "tot", "young child"],
+      "collocations": ["active toddler", "toddler tantrum", "chase after a toddler"],
+      "example_simple": "The toddler took her first steps across the living room.",
+      "example_complex": "Parents of toddlers often struggle to keep up with their boundless energy."
+    },
+    "pubcol-w-96835dd8bfa718bd": {
+      "difficulty": "5.0",
+      "part_of_speech": "noun",
+      "ipa": "/tɒm/",
+      "definition_en": "a common English male given name, short for Thomas",
+      "synonyms": [],
+      "collocations": ["a boy named Tom", "Tom and his friends", "ask Tom"],
+      "example_simple": "Tom invited a friend to the party.",
+      "example_complex": "Tom, who had just moved into the neighbourhood, quickly made new friends.",
+      "vi_meaning_correction": "Tom (tên riêng nam giới, dạng ngắn của Thomas)"
+    },
+    "pubcol-w-a18c6e69c1a57980": {
+      "synonyms": ["pincers", "pliers", "grippers"],
+      "collocations": ["a pair of tongs", "kitchen tongs", "grab with tongs"],
+      "example_simple": "She used tongs to turn the meat on the grill.",
+      "example_complex": "Handling the hot coals carefully with a pair of tongs, he rearranged the barbecue."
+    },
+    "86a72642-7f3a-43c9-848d-96b6d0307651": {
+      "difficulty": "8.0",
+      "definition_en": "the wearing away of a tooth's surface caused by mechanical force such as brushing too hard",
+      "ipa": "/tuːθ əˈbreɪʒən/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-3ba4827c1b0417e7": {
+      "synonyms": ["first-rate", "excellent", "top-quality", "superb"],
+      "collocations": ["top-notch service", "top-notch quality", "a top-notch performance"],
+      "example_simple": "The hotel offers top-notch service to all its guests.",
+      "example_complex": "The restaurant has earned its reputation for top-notch cuisine prepared by award-winning chefs."
+    },
+    "pubcol-w-e7de9e6263e25245": {
+      "synonyms": ["flame", "flambeau", "brand", "flashlight"],
+      "collocations": ["carry a torch", "light a torch", "the Olympic torch"],
+      "example_simple": "The runner carried the burning torch through the streets.",
+      "example_complex": "Protesters marched at night, each holding a flaming torch aloft."
+    },
+    "pubcol-w-474446ad24ee5490": {
+      "synonyms": ["twister", "cyclone", "whirlwind"],
+      "collocations": ["a powerful tornado", "tornado warning", "the tornado struck"],
+      "example_simple": "A tornado destroyed several houses in the small town.",
+      "example_complex": "The devastating tornado tore through the region, leaving a trail of destruction in its wake."
+    },
+    "pubcol-w-067af0d3c34055e4": {
+      "synonyms": ["downpour", "heavy rain", "deluge", "cloudburst"],
+      "collocations": ["torrential rain fell", "hit by torrential rain", "days of torrential rain"],
+      "example_simple": "Torrential rain flooded the streets within an hour.",
+      "example_complex": "The festival was cancelled after torrential rain turned the fields into a sea of mud."
+    },
+    "ecb844d9-50ef-4a31-8f58-c53f915b916c": {
+      "difficulty": "7.0",
+      "definition_en": "the main part of the human body, not including the head, arms, or legs",
+      "ipa": "/ˈtɔːsəʊ/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-102a0076f00fb7d4": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/tʌf ˌkɒmpəˈtɪʃən/",
+      "definition_en": "very strong rivalry in which it is hard to succeed",
+      "synonyms": ["fierce competition", "stiff competition", "strong rivalry"],
+      "collocations": ["face tough competition", "tough competition for jobs", "beat tough competition"],
+      "example_simple": "There is tough competition for places at the top universities.",
+      "example_complex": "Despite facing tough competition from established brands, the startup managed to carve out a loyal customer base."
+    },
+    "pubcol-w-1a07c5dbb32dfe6c": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/tʌf dɪˈsɪʒən/",
+      "definition_en": "a choice that is difficult to make",
+      "synonyms": ["hard choice", "difficult decision", "tough call"],
+      "collocations": ["make a tough decision", "face a tough decision", "a tough decision to make"],
+      "example_simple": "Leaving her hometown was a tough decision for her.",
+      "example_complex": "Management faced the tough decision of whether to cut jobs or reduce everyone's salary."
+    },
+    "pubcol-w-104ffb2696d2bc18": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˈtʊərɪst əˈtrækʃənz/",
+      "definition_en": "places that many people visit for interest or enjoyment",
+      "synonyms": ["landmarks", "sights", "points of interest"],
+      "collocations": ["popular tourist attractions", "visit tourist attractions", "major tourist attractions"],
+      "example_simple": "The city has many famous tourist attractions.",
+      "example_complex": "The ancient temples remain among the country's most visited tourist attractions, drawing millions each year."
+    },
+    "pubcol-w-7bc4fd34d345965f": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˈtʊərɪst træp/",
+      "definition_en": "a place that attracts tourists and charges high prices for poor value",
+      "synonyms": ["overpriced attraction", "rip-off spot"],
+      "collocations": ["avoid the tourist trap", "a classic tourist trap", "turn into a tourist trap"],
+      "example_simple": "The restaurant near the beach is a tourist trap with high prices.",
+      "example_complex": "Once a charming fishing village, the town has become a tourist trap crammed with souvenir shops."
+    },
+    "pubcol-w-74319aa2ce8818b4": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˈtaʊərɪŋ klɪfs/",
+      "definition_en": "extremely high, steep rock faces",
+      "synonyms": ["high cliffs", "sheer cliffs", "lofty precipices"],
+      "collocations": ["towering cliffs above", "the towering cliffs of the coast", "surrounded by towering cliffs"],
+      "example_simple": "Towering cliffs rose above the small fishing village.",
+      "example_complex": "The narrow bay was flanked by towering cliffs that plunged straight into the churning sea."
+    },
+    "c3c15a32-9bac-429e-891c-b48720408bda": {
+      "difficulty": "8.0",
+      "definition_en": "very small amounts of unwanted substances present in a material",
+      "ipa": "/treɪs ɪmˈpjʊərətiz/",
+      "part_of_speech": "noun"
+    },
+    "3a410512-8ac8-405e-af5d-4a63c744e95c": {
+      "difficulty": "7.0",
+      "definition_en": "a customary form of amusement or entertainment handed down over time",
+      "ipa": "/trəˈdɪʃənəl daɪˈvɜːʃən/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-94cb5597a54139a9": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˈtræfɪk dʒæmz ənd ˈnærəʊ ˈkɒbəlstəʊn striːts/",
+      "definition_en": "congested traffic on narrow streets paved with cobblestones",
+      "synonyms": ["traffic congestion", "gridlock", "narrow paved lanes"],
+      "collocations": ["stuck in traffic jams", "narrow cobblestone streets", "wind through cobblestone streets"],
+      "example_simple": "The old town is full of traffic jams and narrow cobblestone streets.",
+      "example_complex": "Tourists love the charm of the narrow cobblestone streets, even if the resulting traffic jams frustrate local drivers.",
+      "vi_meaning_correction": "ách tắc giao thông và những con phố nhỏ lát đá cuội"
+    },
+    "0fc0d461-815f-47c7-9b78-d15b76b6bd05": {
+      "difficulty": "7.0",
+      "definition_en": "a very sad or disastrous destiny, especially one involving death or ruin",
+      "ipa": "/ˈtrædʒɪk feɪt/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-18aa2757ef2936fd": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/treɪn əv ɪˈvents/",
+      "definition_en": "a connected series of happenings, each one leading to the next",
+      "synonyms": ["chain of events", "sequence of events", "series of events"],
+      "collocations": ["a train of events", "set off a train of events", "the whole train of events"],
+      "example_simple": "One small mistake started a train of events that changed his life.",
+      "example_complex": "Historians still debate which decision set in motion the train of events that led to the war."
+    },
+    "pubcol-w-5cf4cd01cd2d0df6": {
+      "difficulty": "6.0",
+      "part_of_speech": "idiom",
+      "ipa": "/treɪn əv θɔːt/",
+      "definition_en": "a connected sequence of ideas going through one's mind",
+      "synonyms": ["line of thinking", "chain of thought", "thought process"],
+      "collocations": ["lose one's train of thought", "follow someone's train of thought", "interrupt my train of thought"],
+      "example_simple": "The loud noise made me lose my train of thought.",
+      "example_complex": "She paused, trying to recover the train of thought that the interruption had scattered."
+    },
+    "be2e9b44-c1c2-416c-bc08-2b3b47f94ee0": {
+      "difficulty": "7.0",
+      "definition_en": "crossing or relating to both sides of the Atlantic Ocean",
+      "ipa": "/ˌtrænzətˈlæntɪk/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-aeee57983687ad3b": {
+      "synonyms": ["temporary", "fleeting", "short-lived", "momentary"],
+      "collocations": ["transient population", "a transient phase", "a transient feeling"],
+      "example_simple": "The pain was transient and soon disappeared.",
+      "example_complex": "Fame can be transient, vanishing as quickly as it arrives."
+    },
+    "pubcol-w-038e6f38d030592b": {
+      "synonyms": ["clear", "see-through", "translucent", "crystal-clear"],
+      "collocations": ["transparent glass", "transparent material", "a transparent process"],
+      "example_simple": "The water in the lake was so transparent that we could see the fish.",
+      "example_complex": "The company promised a transparent decision-making process open to public scrutiny."
+    },
+    "9a4e3825-8e44-4d76-a457-740835f365bf": {
+      "difficulty": "8.0",
+      "definition_en": "to happen or occur; (of information) to become known",
+      "ipa": "/trænˈspaɪə/",
+      "part_of_speech": "verb"
+    }
+  }
+}

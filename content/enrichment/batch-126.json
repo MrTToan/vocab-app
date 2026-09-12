@@ -1,0 +1,191 @@
+{
+  "meta": { "batch": "batch-126", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-6e76a4e5f5c6cb1a": {
+      "difficulty": "7.0",
+      "ipa": "/ˌðeəˈbaɪ/"
+    },
+    "pubcol-w-012071d7359274e1": {
+      "difficulty": "5.0",
+      "ipa": "/ˈðeəfɔː/"
+    },
+    "b9b433d0-ff4a-450a-92f2-2fc275df8b3b": {
+      "difficulty": "6.0",
+      "definition_en": "the large bone in the upper part of the leg; the femur",
+      "ipa": "/ˈθaɪbəʊn/",
+      "part_of_speech": "noun"
+    },
+    "d8fc6bc4-9021-4c99-9685-1229b9b56f5e": {
+      "difficulty": "5.0",
+      "definition_en": "a thin, crisp pizza base rolled out before baking",
+      "ipa": "/ˌθɪn ˈkrʌst/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-babedb8b8dedefa6": {
+      "difficulty": "7.0",
+      "synonyms": ["adore", "cherish", "hold in high regard", "dote on"],
+      "collocations": ["think the world of her children", "really think the world of him", "thought the world of his teacher"],
+      "example_simple": "She thinks the world of her little brother and helps him every day.",
+      "example_complex": "Although he rarely says so, it is clear he thinks the world of the colleagues who supported him early in his career.",
+      "definition_en": "to like or admire someone very much",
+      "ipa": "/ˌθɪŋk ðə ˈwɜːld əv/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-c84afbf7c6261359": {
+      "synonyms": ["around thirty", "in one's thirties", "thirty-something"],
+      "collocations": ["a thirtyish woman", "look thirtyish", "a thirtyish couple"],
+      "example_simple": "The new manager is a thirtyish man with a friendly smile.",
+      "example_complex": "The café was full of thirtyish professionals catching up over coffee before heading to work."
+    },
+    "d333215d-945f-40b9-b9b8-cfc7e39b9e0e": {
+      "difficulty": "8.0"
+    },
+    "pubcol-w-653ca56794d35dca": {
+      "synonyms": ["prickle", "spike", "spine", "barb"],
+      "collocations": ["a sharp thorn", "prick your finger on a thorn", "a thorn in someone's side"],
+      "example_simple": "A thorn from the rose bush pricked her finger.",
+      "example_complex": "The unresolved border dispute remained a thorn in the government's side for years."
+    },
+    "pubcol-w-d2c74847154b3d5a": {
+      "difficulty": "7.0",
+      "synonyms": ["public danger", "menace", "hazard to the public"],
+      "collocations": ["pose a threat to society", "a serious threat to society", "regarded as a threat to society"],
+      "example_simple": "The judge said the criminal was a real threat to society.",
+      "example_complex": "Critics argue that releasing repeat offenders too early makes them an ongoing threat to society.",
+      "definition_en": "a person or thing considered dangerous to the public",
+      "ipa": "/ˌθret tə səˈsaɪəti/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-cae266d5e81de61f": {
+      "difficulty": "7.0",
+      "synonyms": ["endanger someone's life and health", "put lives at risk", "jeopardise people's wellbeing"],
+      "collocations": ["threaten the lives and health of workers", "seriously threaten their lives and health", "threaten the lives and health of millions"],
+      "example_simple": "Air pollution can threaten the lives and health of people in big cities.",
+      "example_complex": "Officials warned that the toxic spill could threaten the lives and health of everyone living downstream.",
+      "definition_en": "to put someone's life and physical wellbeing in serious danger",
+      "ipa": "/ˌθretn ðə ˌlaɪvz ənd ˈhelθ əv/",
+      "part_of_speech": "phrase"
+    },
+    "e39dc9ec-c808-4438-b4e5-160611031b29": {
+      "difficulty": "7.0",
+      "definition_en": "careful about spending money and avoiding waste",
+      "ipa": "/ˈθrɪfti/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-d95827942b5e9eaa": {
+      "synonyms": ["pound", "pulsate", "ache", "beat"],
+      "collocations": ["my head throbbed", "throb with pain", "a throbbing wound"],
+      "example_simple": "My finger began to throb after I hit it with the hammer.",
+      "example_complex": "Her head throbbed painfully as she struggled to concentrate on the exam in the stifling room."
+    },
+    "pubcol-w-b7f05f4ad532feda": {
+      "difficulty": "8.0",
+      "synonyms": ["take a risk", "act recklessly", "abandon restraint", "be daring"],
+      "collocations": ["throw caution to the wind and", "decided to throw caution to the wind", "throwing caution to the wind"],
+      "example_simple": "She threw caution to the wind and spent all her savings on the trip.",
+      "example_complex": "Tired of always playing it safe, he threw caution to the wind and invested everything in his own start-up.",
+      "definition_en": "to behave in a reckless way, ignoring the possible risks",
+      "ipa": "/ˌθrəʊ ˈkɔːʃn tə ðə ˈwɪnd/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-fbdede69d873cbe4": {
+      "difficulty": "8.0",
+      "synonyms": ["discard the good with the bad", "overreact and lose what is valuable"],
+      "collocations": ["don't throw the baby out with the bathwater", "risk throwing the baby out with the bathwater"],
+      "example_simple": "The plan has some flaws, but let's not throw the baby out with the bathwater.",
+      "example_complex": "In scrapping the entire programme over a single failing, the committee risked throwing the baby out with the bathwater.",
+      "definition_en": "to get rid of something valuable while trying to remove unwanted things",
+      "ipa": "/ˌθrəʊ ðə ˈbeɪbi aʊt wɪð ðə ˈbɑːθwɔːtə/",
+      "part_of_speech": "idiom"
+    },
+    "5b291112-538c-4fe0-a172-9e54abae7bb0": {
+      "difficulty": "6.0",
+      "definition_en": "the act of hurling long pointed weapons, as in hunting or sport",
+      "ipa": "/ˌθrəʊɪŋ ˈspɪəz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-62bd98a63558d75c": {
+      "difficulty": "6.0",
+      "synonyms": ["give someone a ride", "offer someone a lift", "pick someone up"],
+      "collocations": ["give me a lift", "thumb a lift home", "offer someone a lift to the station"],
+      "example_simple": "Can you give me a lift to the station tomorrow morning?",
+      "example_complex": "Stranded by the roadside, she tried to thumb a lift from passing cars until a kind driver finally gave her a ride.",
+      "definition_en": "to give someone a ride in your vehicle, or to signal for one",
+      "ipa": "/ˌθʌm ˌsʌmbədi ə ˈlɪft/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-2e53d1fd94ee7ca8": {
+      "difficulty": "6.0",
+      "ipa": "/ðʌs/"
+    },
+    "c5c77aed-8896-476c-b09c-2bebd142feea": {
+      "difficulty": "8.0",
+      "definition_en": "prevented from accomplishing something; frustrated in an attempt",
+      "ipa": "/ˈθwɔːtɪd/",
+      "part_of_speech": "verb"
+    },
+    "708e4e49-5e62-4091-9a13-5202a727bbba": {
+      "difficulty": "7.0",
+      "definition_en": "a fast-running predatory beetle with large eyes and powerful jaws",
+      "ipa": "/ˈtaɪɡə ˌbiːtl/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-27ac8cc76bd6fc05": {
+      "difficulty": "7.0",
+      "synonyms": ["cut back", "economise", "spend less", "cut spending"],
+      "collocations": ["tighten our belts", "families tightening their belts", "have to tighten the belt"],
+      "example_simple": "After losing his job, the family had to tighten the belt.",
+      "example_complex": "With prices rising sharply, many households are tightening their belts and cutting all non-essential spending.",
+      "definition_en": "to spend less money because you have less available than before",
+      "ipa": "/ˌtaɪtn ðə ˈbelt/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-714eea0f4c980736": {
+      "difficulty": "5.0",
+      "synonyms": ["period", "duration", "moment", "spell"],
+      "collocations": ["spend time", "waste time", "a long time"],
+      "example_simple": "I don't have enough time to finish my homework tonight.",
+      "example_complex": "Managing your time wisely is essential if you want to balance a demanding job with your studies.",
+      "definition_en": "the ongoing sequence of moments measured in hours, days, and years",
+      "ipa": "/taɪm/",
+      "part_of_speech": "noun",
+      "vi_meaning_correction": "thời gian"
+    },
+    "pubcol-w-e64e975a2c468343": {
+      "difficulty": "6.0",
+      "synonyms": ["repeatedly", "again and again", "over and over", "time and again"],
+      "collocations": ["time after time she", "warned time after time", "fails time after time"],
+      "example_simple": "Time after time, he promised to change, but he never did.",
+      "example_complex": "Despite being warned of the risks time after time, investors kept pouring money into the scheme.",
+      "definition_en": "repeatedly; on many separate occasions",
+      "ipa": "/ˌtaɪm ˈɑːftə taɪm/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-2234190344fcc233": {
+      "difficulty": "8.0",
+      "synonyms": ["act now", "don't delay", "time waits for no one"],
+      "collocations": ["remember that time and tide waits for no man", "as the saying goes, time and tide waits for no man"],
+      "example_simple": "Hurry up and decide; time and tide waits for no man.",
+      "example_complex": "He reminded his students that time and tide waits for no man, urging them to seize opportunities while they still could.",
+      "definition_en": "no one can stop the passing of time, so one should act promptly",
+      "ipa": "/ˌtaɪm ənd ˈtaɪd ˌweɪts fə ˈnəʊ mæn/",
+      "part_of_speech": "idiom"
+    },
+    "d51e72c7-ebe2-45b5-a8e2-e5b840e69a22": {
+      "difficulty": "6.0",
+      "definition_en": "a sealed container of objects stored for people to discover in the future",
+      "ipa": "/ˈtaɪm ˌkæpsjuːl/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-cb9d4d401d54a9aa": {
+      "difficulty": "7.0",
+      "synonyms": ["time passes quickly", "how time flies", "time races by"],
+      "collocations": ["time flies like an arrow", "as they say, time flies like an arrow"],
+      "example_simple": "It's already midnight — time flies like an arrow!",
+      "example_complex": "Looking back on his decades at the company, he mused that time flies like an arrow and youth slips away unnoticed.",
+      "definition_en": "time passes by very quickly",
+      "ipa": "/ˌtaɪm ˈflaɪz laɪk ən ˈærəʊ/",
+      "part_of_speech": "idiom"
+    }
+  }
+}

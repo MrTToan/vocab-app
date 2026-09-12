@@ -1,0 +1,255 @@
+{
+  "meta": { "batch": "batch-078", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-fc73c187c1b5dcec": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/meɪk ˌɔːltəˈreɪʃənz/",
+      "definition_en": "to make changes to something, often to clothes or a design",
+      "synonyms": ["make changes", "modify", "adjust", "amend"],
+      "collocations": ["make alterations to a dress", "make minor alterations", "make major alterations"],
+      "example_simple": "The tailor will make alterations to the jacket so it fits me better.",
+      "example_complex": "Before the building could be reopened, the architect had to make substantial alterations to the original plans to meet safety regulations."
+    },
+    "pubcol-w-454998f5ea8d408d": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/meɪk əˈmendz fɔː/",
+      "definition_en": "to do something to make up for a wrong or harm you have caused",
+      "synonyms": ["compensate for", "atone for", "make up for", "make reparation for"],
+      "collocations": ["make amends for a mistake", "try to make amends for", "make amends for the damage"],
+      "example_simple": "He sent flowers to make amends for forgetting her birthday.",
+      "example_complex": "Determined to make amends for the harm his company had caused, the director set up a fund to support the affected families."
+    },
+    "pubcol-w-fc9e145c43cbf3da": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/meɪk əˈmendz tə ˌsʌmbədi fɔː ˈsʌmθɪŋ/",
+      "definition_en": "to compensate someone for a wrong or loss you have caused them",
+      "synonyms": ["compensate someone for", "make it up to someone", "make reparation to someone"],
+      "collocations": ["make amends to him for the trouble", "make amends to someone for the loss", "want to make amends to sb for"],
+      "example_simple": "She wanted to make amends to her neighbour for breaking his window.",
+      "example_complex": "The airline promised to make amends to the stranded passengers for the delay by offering full refunds and hotel accommodation."
+    },
+    "pubcol-w-d90f2a2679bf74c6": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/meɪk ən əˈnaʊnsmənt/",
+      "definition_en": "to tell people about something officially or publicly",
+      "synonyms": ["announce", "declare", "give notice", "proclaim"],
+      "collocations": ["make an official announcement", "make a public announcement", "make an important announcement"],
+      "example_simple": "The teacher stood up to make an announcement about the school trip.",
+      "example_complex": "The government is expected to make a major announcement regarding the new tax policy later this week."
+    },
+    "pubcol-w-000bf99ac2e6bbc6": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/meɪk ən əˈpɔɪntmənt/",
+      "definition_en": "to arrange a fixed time to meet or see someone",
+      "synonyms": ["arrange a meeting", "book a slot", "schedule a meeting", "set up a meeting"],
+      "collocations": ["make an appointment with the doctor", "make an appointment to see", "make a dental appointment"],
+      "example_simple": "I need to make an appointment with the dentist next week.",
+      "example_complex": "If you wish to discuss your results in detail, please make an appointment with your tutor during office hours."
+    },
+    "pubcol-w-befe8382bba85c68": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/meɪk ən ˈɜːli stɑːt/",
+      "definition_en": "to begin something, especially a journey, early in the day",
+      "synonyms": ["set off early", "start early", "get an early start"],
+      "collocations": ["make an early start on the journey", "make an early start in the morning", "want to make an early start"],
+      "example_simple": "We should make an early start so we can avoid the traffic.",
+      "example_complex": "Knowing how long the hike would take, the group decided to make an early start and set off before dawn."
+    },
+    "pubcol-w-cf8c4d7667389d51": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/meɪk ən ˈefət tə duː ˈsʌmθɪŋ/",
+      "definition_en": "to try hard to do something",
+      "synonyms": ["try to", "endeavour to", "strive to", "attempt to"],
+      "collocations": ["make an effort to improve", "make a real effort to", "make every effort to"],
+      "example_simple": "You should make an effort to speak English every day.",
+      "example_complex": "Despite her busy schedule, she always makes an effort to attend every meeting and support her colleagues."
+    },
+    "pubcol-w-2a831d0d78f3e605": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/meɪk ən ɪmˈpruːvmənt/",
+      "definition_en": "to make something better than it was before",
+      "synonyms": ["improve", "enhance", "upgrade", "better"],
+      "collocations": ["make a significant improvement", "make an improvement in", "make a noticeable improvement"],
+      "example_simple": "The new teacher helped him make an improvement in his grades.",
+      "example_complex": "By investing in modern equipment, the factory managed to make a dramatic improvement in both productivity and safety."
+    },
+    "pubcol-w-690a7a16eb9352cd": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/meɪk ən ˈaʊtlaɪn/",
+      "definition_en": "to write a plan showing the main points of something",
+      "synonyms": ["draft an outline", "sketch out", "draw up a plan"],
+      "collocations": ["make an outline of the essay", "make a rough outline", "make a detailed outline"],
+      "example_simple": "Before writing the essay, I like to make an outline of my ideas.",
+      "example_complex": "The researcher was advised to make a clear outline of her argument before drafting the full thesis chapter."
+    },
+    "pubcol-w-7cd935399edde2f1": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/meɪk əˈreɪndʒmənts fɔː/",
+      "definition_en": "to organise or plan the details needed for something to happen",
+      "synonyms": ["arrange", "organise", "prepare for", "set up"],
+      "collocations": ["make arrangements for the trip", "make arrangements for the funeral", "make all the arrangements for"],
+      "example_simple": "We need to make arrangements for the party this weekend.",
+      "example_complex": "The embassy will make arrangements for the safe return of the citizens stranded abroad."
+    },
+    "pubcol-w-e4d981c67e2e93d5": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/meɪk əz ɪf/",
+      "definition_en": "to behave as though something were true; to pretend to do something",
+      "synonyms": ["pretend", "act as though", "make out"],
+      "collocations": ["make as if to leave", "make as if to speak", "make as if nothing had happened"],
+      "example_simple": "He made as if to leave, then sat back down.",
+      "example_complex": "She made as if she hadn't heard the insult, calmly continuing her presentation as though nothing had happened."
+    },
+    "pubcol-w-5232c40cb5a27b7c": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/meɪk bɪˈliːv/",
+      "definition_en": "to pretend that something imaginary is real, especially in play",
+      "synonyms": ["pretend", "imagine", "play-act", "fantasise"],
+      "collocations": ["make believe that", "a world of make believe", "children make believe"],
+      "example_simple": "The children like to make believe they are pirates on a ship.",
+      "example_complex": "For a few hours they could make believe the war had never happened and that their old life was waiting to be resumed."
+    },
+    "pubcol-w-1eca552468dfb9da": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/meɪk bəʊθ endz miːt/",
+      "definition_en": "to earn just enough money to cover one's basic expenses",
+      "synonyms": ["get by", "make ends meet", "scrape by", "manage financially"],
+      "collocations": ["struggle to make both ends meet", "barely make both ends meet", "work hard to make both ends meet"],
+      "example_simple": "After losing his job, it was hard to make both ends meet.",
+      "example_complex": "With prices rising faster than wages, many families are finding it increasingly difficult to make both ends meet each month."
+    },
+    "pubcol-w-2f5fa98d2fc3ee1e": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/meɪk bred/",
+      "definition_en": "to prepare and bake bread",
+      "synonyms": ["bake bread", "prepare bread"],
+      "collocations": ["make bread at home", "learn to make bread", "make fresh bread"],
+      "example_simple": "My grandmother taught me how to make bread from scratch.",
+      "example_complex": "During the lockdown, many people took up baking and learned to make bread using traditional sourdough methods."
+    },
+    "pubcol-w-3748258141e36161": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/meɪk ˌkælkjʊˈleɪʃən əv/",
+      "definition_en": "to work out an amount or result using numbers",
+      "synonyms": ["calculate", "work out", "compute", "reckon"],
+      "collocations": ["make a calculation of the cost", "make a rough calculation of", "make a quick calculation of"],
+      "example_simple": "The engineer had to make a calculation of the total weight.",
+      "example_complex": "Before approving the budget, the accountant made a careful calculation of the projected costs for the entire year."
+    },
+    "pubcol-w-899212ed99b75fab": {
+      "difficulty": "8.0",
+      "part_of_speech": "idiom",
+      "ipa": "/meɪk ˈkɒmən kɔːz wɪð ˈsʌmwʌn/",
+      "definition_en": "to unite with someone to achieve a shared aim",
+      "synonyms": ["join forces with", "side with", "ally with", "unite with"],
+      "collocations": ["make common cause with rivals", "make common cause with the opposition", "make common cause against"],
+      "example_simple": "The two parties made common cause with each other to defeat the plan.",
+      "example_complex": "Former enemies made common cause with one another, setting aside old grievances to confront the greater threat they now shared."
+    },
+    "pubcol-w-558e592ea19c0a8a": {
+      "difficulty": "8.0",
+      "part_of_speech": "idiom",
+      "ipa": "/meɪk ˈkɒmən kɔːz wɪð/",
+      "definition_en": "to unite with others in pursuit of a common goal",
+      "synonyms": ["join forces with", "side with", "ally with", "band together with"],
+      "collocations": ["make common cause with", "make common cause against a rival", "make common cause on the issue"],
+      "example_simple": "The workers made common cause with the students during the protest.",
+      "example_complex": "Environmental groups made common cause with local farmers, recognising that both stood to lose if the river was polluted."
+    },
+    "pubcol-w-a00646d552476925": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/meɪk kəmˈpærɪsən wɪð/",
+      "definition_en": "to examine how something is similar to or different from someone or something else",
+      "synonyms": ["compare with", "draw a comparison with", "contrast with"],
+      "collocations": ["make a comparison with the original", "make a direct comparison with", "make a fair comparison with"],
+      "example_simple": "It is useful to make a comparison with last year's results.",
+      "example_complex": "In her essay, she makes an insightful comparison with the works of earlier poets to highlight the writer's originality."
+    },
+    "pubcol-w-b13d9082004686e5": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/meɪk ˌkɒntrɪˈbjuːʃən/",
+      "definition_en": "to give money, help, or ideas towards something",
+      "synonyms": ["contribute", "donate", "give", "chip in"],
+      "collocations": ["make a valuable contribution", "make a significant contribution", "make a contribution to society"],
+      "example_simple": "Everyone was asked to make a contribution to the charity.",
+      "example_complex": "Through her groundbreaking research, she made a lasting contribution to our understanding of the human brain."
+    },
+    "pubcol-w-23ec5149e4f4643f": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/meɪk endz miːt/",
+      "definition_en": "to earn just enough money to pay for what one needs",
+      "synonyms": ["get by", "scrape by", "manage financially", "keep afloat"],
+      "collocations": ["struggle to make ends meet", "barely make ends meet", "work hard to make ends meet"],
+      "example_simple": "They both work two jobs just to make ends meet.",
+      "example_complex": "As the cost of living soared, even well-qualified professionals found it a struggle to make ends meet."
+    },
+    "pubcol-w-ddcc317cff331512": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/meɪk fɔː/",
+      "definition_en": "to help to produce or bring about a particular result",
+      "synonyms": ["contribute to", "lead to", "result in", "promote"],
+      "collocations": ["make for a better result", "make for an enjoyable evening", "make for interesting reading"],
+      "example_simple": "Good communication makes for a happy team.",
+      "example_complex": "The combination of clever writing and strong performances makes for one of the most compelling dramas of the year."
+    },
+    "pubcol-w-17b43f27701d33ba": {
+      "difficulty": "8.0",
+      "part_of_speech": "idiom",
+      "ipa": "/meɪk friː wɪð/",
+      "definition_en": "to use or treat something freely, often without permission or respect",
+      "synonyms": ["take liberties with", "help oneself to", "use freely"],
+      "collocations": ["make free with someone's money", "make free with the drinks", "make free with other people's things"],
+      "example_simple": "He tends to make free with other people's belongings.",
+      "example_complex": "The guests made free with the host's fine wine, opening bottle after bottle as if it were their own."
+    },
+    "pubcol-w-25e1e3046689c741": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/meɪk frendz wɪð ˌsʌmbədi/",
+      "definition_en": "to begin a friendship with someone",
+      "synonyms": ["befriend", "get to know", "become friends with"],
+      "collocations": ["make friends with a classmate", "make friends easily", "make new friends with"],
+      "example_simple": "She quickly made friends with the new student in her class.",
+      "example_complex": "Living abroad taught him how to make friends with people from very different cultural backgrounds."
+    },
+    "pubcol-w-9a639c91546c19ca": {
+      "difficulty": "6.0",
+      "part_of_speech": "idiom",
+      "ipa": "/meɪk fʌn əv/",
+      "definition_en": "to laugh at someone or something in an unkind way",
+      "synonyms": ["mock", "tease", "ridicule", "poke fun at"],
+      "collocations": ["make fun of someone", "make fun of the way he talks", "stop making fun of"],
+      "example_simple": "It's cruel to make fun of people because of how they look.",
+      "example_complex": "The comedian built his entire routine around making fun of the absurd rituals of everyday office life."
+    },
+    "pubcol-w-f49dde2e7e7380ff": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/meɪk ɡʊd/",
+      "definition_en": "to succeed or become successful, especially after a difficult start",
+      "synonyms": ["succeed", "prosper", "do well", "make it"],
+      "collocations": ["make good on a promise", "make good in life", "a chance to make good"],
+      "example_simple": "He left his village poor but returned having made good in the city.",
+      "example_complex": "The film tells the story of an immigrant who, against all odds, makes good and builds a thriving business from nothing."
+    }
+  }
+}

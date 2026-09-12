@@ -1,0 +1,203 @@
+{
+  "meta": { "batch": "batch-048", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-bb050decce6d6fc3": {
+      "difficulty": "6.0",
+      "synonyms": ["enjoy oneself", "take pleasure", "have fun", "relish"],
+      "collocations": ["feel a real sense of enjoyment", "feel a sense of enjoyment from", "genuine sense of enjoyment"],
+      "example_simple": "I feel a sense of enjoyment whenever I cook for my family.",
+      "example_complex": "Only when she stopped competing did she feel a genuine sense of enjoyment in painting again.",
+      "definition_en": "to experience pleasure or satisfaction in doing something",
+      "ipa": "/fiːl ə sens əv ɪnˈdʒɔɪmənt/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "thấy vui thích, cảm thấy sự thích thú"
+    },
+    "pubcol-w-8479f8f828dc72fa": {
+      "difficulty": "6.0",
+      "synonyms": ["feel sad", "feel down", "feel low", "be depressed"],
+      "collocations": ["feel blue about", "start to feel blue", "feel a little blue"],
+      "example_simple": "I always feel blue when the summer holidays end.",
+      "example_complex": "Living far from home, he tended to feel blue during the long, grey winter months.",
+      "definition_en": "to feel sad or slightly depressed",
+      "ipa": "/fiːl bluː/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-9a83d4299e965739": {
+      "difficulty": "5.0",
+      "ipa": "/fiːl friː/"
+    },
+    "pubcol-w-f1dbf1b327b7637b": {
+      "difficulty": "7.0",
+      "synonyms": ["have a gut feeling", "sense intuitively", "just know", "have a hunch"],
+      "collocations": ["feel it in one's bones", "know it in your bones", "feel deep in one's bones"],
+      "example_simple": "I feel it in my bones that something good will happen today.",
+      "example_complex": "She couldn't explain why, but she felt it in her bones that the deal would fall through.",
+      "definition_en": "to be certain about something through intuition rather than evidence",
+      "ipa": "/fiːl ɪt ɪn wʌnz bəʊnz/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-b32a2981efaf7649": {
+      "difficulty": "5.0",
+      "synonyms": ["want to", "be in the mood for", "fancy", "would like"],
+      "collocations": ["feel like doing something", "feel like a walk", "don't feel like it"],
+      "example_simple": "I feel like watching a movie tonight.",
+      "example_complex": "After such a stressful week, she didn't feel like doing anything but sleeping.",
+      "definition_en": "to want to have or do something",
+      "ipa": "/fiːl laɪk/",
+      "part_of_speech": "phrase"
+    },
+    "bb56024b-eab6-428c-8e94-2ad5bff7dda4": {
+      "difficulty": "8.0",
+      "definition_en": "to feel proved right or justified after being doubted or blamed",
+      "ipa": "/fiːl ˈvɪndɪkeɪtɪd/",
+      "part_of_speech": "phrase"
+    },
+    "bfe42a01-2572-4cde-9d2d-3f5cdf0931c7": {
+      "difficulty": "7.0",
+      "definition_en": "a serious crime, such as murder or robbery, punishable by a long prison sentence",
+      "ipa": "/ˈfeləni/",
+      "part_of_speech": "noun"
+    },
+    "1c6f5c74-4356-4ca2-a1dc-34a26543fbf8": {
+      "difficulty": "8.0",
+      "definition_en": "passionate and enthusiastic public support for a cause",
+      "ipa": "/ˈfɜːvənt ˈædvəkəsi/",
+      "part_of_speech": "phrase"
+    },
+    "36846ee3-70ac-40bf-9b86-8d97583fc2cc": {
+      "difficulty": "7.0",
+      "definition_en": "the medieval social system in which land is held in exchange for service or labour",
+      "ipa": "/ˈfjuːdl ˈɔːdə/",
+      "part_of_speech": "phrase"
+    },
+    "fbf556c8-294c-4323-a8a1-691df68428ac": {
+      "difficulty": "7.0",
+      "definition_en": "powerful lords who owned land and controlled others under the feudal system",
+      "ipa": "/ˈfjuːdl ˈəʊvəlɔːdz/",
+      "part_of_speech": "noun"
+    },
+    "4bd199ad-b116-489c-b27a-922d75fe540f": {
+      "difficulty": "5.0",
+      "definition_en": "a thin thread-like structure, or the part of plant-based food that aids digestion",
+      "ipa": "/ˈfaɪbə/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-f222d2cafdd0f3b0": {
+      "difficulty": "7.0",
+      "synonyms": ["stand up for what is right", "champion a cause", "defend justice"],
+      "collocations": ["fight for the just cause", "fight for a just cause bravely", "die for the just cause"],
+      "example_simple": "The soldiers believed they were fighting for a just cause.",
+      "example_complex": "Throughout her life she fought for the just cause of equal rights, regardless of the personal cost.",
+      "definition_en": "to struggle in support of something morally right",
+      "ipa": "/faɪt fɔː ðə dʒʌst kɔːz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-3a1d90e01fc14ef6": {
+      "difficulty": "6.0",
+      "synonyms": ["quarrel constantly", "bicker", "squabble", "argue fiercely"],
+      "collocations": ["fight like cat and dog", "always fighting like cat and dog", "fight like cats and dogs"],
+      "example_simple": "My brother and I used to fight like cat and dog when we were young.",
+      "example_complex": "Despite fighting like cat and dog as teenagers, the two sisters became inseparable in adulthood.",
+      "definition_en": "to argue or quarrel violently and frequently",
+      "ipa": "/faɪt laɪk kæt ənd dɒɡ/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-32da14c664e64e49": {
+      "difficulty": "7.0",
+      "synonyms": ["fight fiercely", "struggle hard", "battle relentlessly", "resist strongly"],
+      "collocations": ["fight tooth and nail", "fight tooth and nail to keep", "fight tooth and nail against"],
+      "example_simple": "The workers fought tooth and nail to keep their jobs.",
+      "example_complex": "Local residents fought tooth and nail against the proposal to build a motorway through the valley.",
+      "definition_en": "to fight or struggle with great determination and effort",
+      "ipa": "/faɪt tuːθ ənd neɪl/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-3cf9862b7af68dfc": {
+      "difficulty": "6.0",
+      "synonyms": ["hold back tears", "choke back tears", "struggle not to cry"],
+      "collocations": ["fighting back tears", "fight back the tears", "fighting back tears of joy"],
+      "example_simple": "She was fighting back tears as she said goodbye.",
+      "example_complex": "Fighting back tears, the champion thanked the coach who had believed in her from the start.",
+      "definition_en": "trying hard not to cry",
+      "ipa": "/ˈfaɪtɪŋ bæk tɪəz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-7c63de27beb6ce9c": {
+      "difficulty": "5.0",
+      "ipa": "/ˈfɪɡər aʊt/"
+    },
+    "b3e69f5b-003e-45b1-a5e1-dba962e8c7a7": {
+      "difficulty": "7.0",
+      "definition_en": "a very thin thread or wire, especially the one in a light bulb that glows",
+      "ipa": "/ˈfɪləmənt/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-3fed15bdc0d1e0f4": {
+      "difficulty": "8.0",
+      "synonyms": ["ultimate purpose", "end goal", "aim", "objective"],
+      "collocations": ["the final cause of", "final cause and purpose", "seek the final cause"],
+      "example_simple": "For Aristotle, the final cause is the purpose for which a thing exists.",
+      "example_complex": "Philosophers debated whether nature has a final cause or merely operates through blind mechanism.",
+      "definition_en": "the ultimate purpose or end for which something exists or is done",
+      "ipa": "/ˈfaɪnl kɔːz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-c66fb84cdb2662b3": {
+      "difficulty": "5.0",
+      "synonyms": ["final examination", "end-of-year exam", "graduation exam"],
+      "collocations": ["sit the final exam", "pass the final examination", "revise for finals"],
+      "example_simple": "I have to study hard for my final exam next week.",
+      "example_complex": "Having failed the final examination once before, she prepared for months to make sure it would not happen again.",
+      "definition_en": "an important test taken at the end of a course or school year",
+      "ipa": "/ˈfaɪnl ɪɡˌzæmɪˈneɪʃn/",
+      "part_of_speech": "noun",
+      "vi_meaning_correction": "kì thi cuối kì, kì thi cuối khoá"
+    },
+    "pubcol-w-562724de10e9b992": {
+      "difficulty": "6.0",
+      "synonyms": ["fund a charity", "sponsor a charity", "bankroll a charity"],
+      "collocations": ["finance a charity", "finance a charity project", "help finance a charity"],
+      "example_simple": "The company decided to finance a charity that helps homeless people.",
+      "example_complex": "The foundation was set up to finance charities working in regions where governments could not reach.",
+      "definition_en": "to provide the money needed to run a charitable organisation",
+      "ipa": "/ˈfaɪnæns ə ˈtʃærəti/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-bbfa9cc4f656112d": {
+      "difficulty": "7.0",
+      "synonyms": ["finance company", "lending firm", "credit institution"],
+      "collocations": ["borrow from a finance house", "a licensed finance house", "a finance house loan"],
+      "example_simple": "They borrowed money from a finance house to buy the car.",
+      "example_complex": "The finance house offered flexible repayment terms, but its interest rates were far higher than a bank's.",
+      "definition_en": "a company that lends money or provides credit, especially for purchases",
+      "ipa": "/ˈfaɪnæns haʊs/",
+      "part_of_speech": "noun"
+    },
+    "ac8c034b-a91a-4a58-857e-9fa28d7993dc": {
+      "difficulty": "7.0",
+      "definition_en": "serious money problems or financial difficulties",
+      "ipa": "/faɪˈnænʃl wəʊz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-d705173e52c62a16": {
+      "difficulty": "6.0",
+      "synonyms": ["criticise", "nitpick", "complain about", "pick holes in"],
+      "collocations": ["find fault with everything", "always finding fault", "find fault with the plan"],
+      "example_simple": "My boss finds fault with everything I do.",
+      "example_complex": "Rather than offering help, he seemed determined to find fault with every decision the committee made.",
+      "definition_en": "to criticise someone or something, often for small or unimportant reasons",
+      "ipa": "/faɪnd fɔːlt wɪð ˈsʌmθɪŋ/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-ecdbd35c938dea22": {
+      "difficulty": "5.0",
+      "ipa": "/faɪnd aʊt/"
+    },
+    "973f7167-a5fa-440f-b410-1c7ade8b4bf0": {
+      "difficulty": "5.0",
+      "definition_en": "comparative form of 'fine': better in quality, or thinner and more delicate",
+      "ipa": "/ˈfaɪnə/",
+      "part_of_speech": "adjective"
+    }
+  }
+}

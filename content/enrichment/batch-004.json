@@ -1,0 +1,194 @@
+{
+  "meta": { "batch": "batch-004", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-5695170f672c25be": {
+      "synonyms": ["contact", "associate", "connection"],
+      "collocations": ["a mutual acquaintance", "a casual acquaintance", "make someone's acquaintance"],
+      "example_simple": "She is not a close friend, just an acquaintance from work.",
+      "example_complex": "Through a chance encounter at the conference, he struck up an acquaintance that would later shape his career."
+    },
+    "pubcol-w-e6520fc757684242": {
+      "difficulty": "7.0",
+      "ipa": "/ˌækwɪˈzɪʃn/"
+    },
+    "pubcol-w-53323faa3e569a7e": {
+      "synonyms": ["clear", "absolve", "exonerate", "vindicate"],
+      "collocations": ["acquit the defendant", "be acquitted of all charges", "acquit oneself well"],
+      "example_simple": "The jury decided to acquit him because there was no clear evidence.",
+      "example_complex": "After a lengthy trial, the court acquitted the suspect on the grounds that the prosecution's case rested entirely on hearsay."
+    },
+    "pubcol-w-fbff0589caf7dd90": {
+      "difficulty": "5.0",
+      "synonyms": ["strategy", "roadmap", "scheme", "programme"],
+      "collocations": ["draw up an action plan", "implement an action plan", "a detailed action plan"],
+      "definition_en": "a detailed proposal setting out the steps needed to achieve a particular goal",
+      "ipa": "/ˈækʃn plæn/",
+      "part_of_speech": "noun",
+      "example_simple": "The team wrote an action plan to finish the project on time.",
+      "example_complex": "Once the risks had been identified, the committee drew up a comprehensive action plan outlining who was responsible for each measure."
+    },
+    "pubcol-w-f3139668cb45bf39": {
+      "difficulty": "6.0",
+      "synonyms": ["deeds not words", "practise what you preach"],
+      "collocations": ["as the saying goes, actions speak louder than words", "prove that actions speak louder than words"],
+      "definition_en": "what someone actually does matters more than what they merely say",
+      "ipa": "/ˈækʃnz spiːk ˈlaʊdər ðən ˈwɜːdz/",
+      "part_of_speech": "idiom",
+      "example_simple": "He promised to help, but actions speak louder than words, so let's wait and see.",
+      "example_complex": "Rather than issue another statement of concern, the government should remember that actions speak louder than words and deliver the reforms it pledged.",
+      "vi_meaning_correction": "hành động thuyết phục hơn lời nói; làm hơn nói"
+    },
+    "d08457c5-27f8-411a-8020-6e71db4ae5b0": {
+      "difficulty": "8.0",
+      "definition_en": "refusing to be persuaded or to change one's mind; unshakably firm",
+      "ipa": "/ˈædəmənt/",
+      "part_of_speech": "adjective"
+    },
+    "64b06a49-e929-4acc-903c-2be9a9ba9589": {
+      "difficulty": "8.0",
+      "definition_en": "items of extra material added at the end of a book or document (plural of addendum)",
+      "ipa": "/əˈdendə/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-8df846f7da080a8b": {
+      "difficulty": "6.0",
+      "synonyms": ["impasse", "deadlock", "stalemate", "cul-de-sac"],
+      "collocations": ["reach a dead end", "come to a dead end", "a dead-end street"],
+      "definition_en": "a situation or road with no way forward or no possible progress",
+      "ipa": "/ə ˌded ˈend/",
+      "part_of_speech": "noun",
+      "example_simple": "The negotiations reached a dead end and both sides went home.",
+      "example_complex": "After months of research led to a dead end, the scientists were forced to abandon their original hypothesis entirely."
+    },
+    "pubcol-w-307e2873974502ec": {
+      "difficulty": "6.0",
+      "synonyms": ["going-nowhere job", "menial job"],
+      "collocations": ["stuck in a dead-end job", "a low-paid dead-end job", "quit a dead-end job"],
+      "definition_en": "a job that offers no prospect of promotion or advancement",
+      "ipa": "/ə ˌded end ˈdʒɒb/",
+      "part_of_speech": "noun",
+      "example_simple": "He hated his dead-end job and dreamed of starting his own business.",
+      "example_complex": "Many graduates fear being trapped in a dead-end job that neither pays well nor develops the skills they studied for."
+    },
+    "pubcol-w-28e3147a08957308": {
+      "synonyms": ["compliance", "observance", "conformity", "obedience"],
+      "collocations": ["strict adherence", "adherence to the rules", "adherence to a treatment"],
+      "example_simple": "Adherence to the safety rules is required in the factory.",
+      "example_complex": "The study found that patients' long-term adherence to the medication was the single strongest predictor of recovery."
+    },
+    "pubcol-w-8c65a38241219362": {
+      "difficulty": "6.0",
+      "synonyms": ["a grimy room", "a shabby room", "a gloomy room"],
+      "collocations": ["a dingy little room", "a dark and dingy room", "live in a dingy room"],
+      "definition_en": "a dark, dirty and depressing room",
+      "ipa": "/ə ˌdɪndʒi ˈruːm/",
+      "part_of_speech": "noun",
+      "example_simple": "They stayed in a dingy room with one small window.",
+      "example_complex": "The novelist spent his early years writing in a dingy room above a bakery, illuminated only by a flickering gas lamp."
+    },
+    "pubcol-w-800c8548e13d9fbf": {
+      "difficulty": "6.0",
+      "synonyms": ["a poor start", "an underwhelming start", "a bad beginning"],
+      "collocations": ["make a disappointing start", "after a disappointing start", "a disappointing start to the season"],
+      "definition_en": "a beginning that fails to meet expectations",
+      "ipa": "/ə ˌdɪsəˈpɔɪntɪŋ ˈstɑːt/",
+      "part_of_speech": "noun",
+      "example_simple": "The team had a disappointing start but won their next three games.",
+      "example_complex": "Despite a disappointing start to the fiscal year, the company managed to recover its losses through aggressive cost-cutting."
+    },
+    "pubcol-w-3e07b97e8f1907f1": {
+      "difficulty": "6.0",
+      "synonyms": ["a catastrophic start", "a terrible beginning", "a ruinous start"],
+      "collocations": ["make a disastrous start", "a disastrous start to the campaign", "recover from a disastrous start"],
+      "definition_en": "an extremely bad or damaging beginning",
+      "ipa": "/ə dɪˌzɑːstrəs ˈstɑːt/",
+      "part_of_speech": "noun",
+      "example_simple": "The trip got off to a disastrous start when we missed our flight.",
+      "example_complex": "The product launch was a disastrous start for the firm, as a software fault forced an immediate and costly recall."
+    },
+    "pubcol-w-dd9a320ec078885b": {
+      "difficulty": "6.0",
+      "synonyms": ["a faraway mountain range", "distant mountains"],
+      "collocations": ["a distant mountain range on the horizon", "gaze at a distant mountain range", "silhouette of a distant mountain range"],
+      "definition_en": "a line of mountains far away on the horizon",
+      "ipa": "/ə ˌdɪstənt ˈmaʊntɪn reɪndʒ/",
+      "part_of_speech": "noun",
+      "example_simple": "From the window we could see a distant mountain range covered in snow.",
+      "example_complex": "As dawn broke, a distant mountain range emerged from the mist, its jagged peaks tinged pink by the rising sun."
+    },
+    "pubcol-w-3b4c729b3079a775": {
+      "synonyms": ["neighbouring", "adjacent", "abutting", "connecting"],
+      "collocations": ["an adjoining room", "the adjoining building", "adjoining property"],
+      "example_simple": "Our hotel rooms were adjoining, so we could talk through the door.",
+      "example_complex": "The gallery expanded into the adjoining warehouse, converting the two adjoining spaces into a single exhibition hall."
+    },
+    "bf89526b-1824-4acf-ae09-a93905f90c2b": {
+      "difficulty": "7.0",
+      "definition_en": "to manage the running of something, or to give or apply something such as medicine or a test",
+      "ipa": "/ədˈmɪnɪstə/",
+      "part_of_speech": "verb"
+    },
+    "33b69b22-e1e0-481d-b79e-bae39d2925cd": {
+      "difficulty": "6.0",
+      "definition_en": "the proportion of applicants who are accepted by an institution such as a university",
+      "ipa": "/ədˈmɪʃn reɪt/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-10b07fdc7d71d281": {
+      "difficulty": "6.0",
+      "synonyms": ["go green", "live sustainably", "embrace eco-friendly living"],
+      "collocations": ["adopt a green lifestyle", "encourage people to adopt a green lifestyle", "adopt a greener lifestyle"],
+      "definition_en": "to start living in an environmentally friendly way",
+      "ipa": "/əˈdɒpt ə ˌɡriːn ˈlaɪfstaɪl/",
+      "part_of_speech": "phrase",
+      "example_simple": "More families are trying to adopt a green lifestyle to protect the environment.",
+      "example_complex": "Governments can nudge citizens to adopt a green lifestyle by subsidising public transport and taxing single-use plastics."
+    },
+    "pubcol-w-5e1dc1d5c3fa6b61": {
+      "synonyms": ["worship", "devotion", "reverence", "love"],
+      "collocations": ["look at someone with adoration", "deep adoration", "gaze of adoration"],
+      "example_simple": "The little boy looked at his father with pure adoration.",
+      "example_complex": "The singer was met with such adoration from her fans that she could barely move through the crowd."
+    },
+    "pubcol-w-afa3bc10a510a073": {
+      "synonyms": ["love", "cherish", "worship", "be devoted to"],
+      "collocations": ["absolutely adore", "adore your children", "simply adore"],
+      "example_simple": "I adore chocolate ice cream on a hot day.",
+      "example_complex": "She adored her grandmother, whose stories of the old country coloured her entire childhood."
+    },
+    "pubcol-w-054f2d0e39490766": {
+      "difficulty": "6.0",
+      "synonyms": ["a marked improvement", "a striking improvement", "a significant improvement"],
+      "collocations": ["see a dramatic improvement", "a dramatic improvement in performance", "show a dramatic improvement"],
+      "definition_en": "a large and noticeable change for the better",
+      "ipa": "/ə drəˌmætɪk ɪmˈpruːvmənt/",
+      "part_of_speech": "noun",
+      "example_simple": "There was a dramatic improvement in her grades after she started studying every day.",
+      "example_complex": "The new teaching method produced a dramatic improvement in literacy rates across the whole district within a single year."
+    },
+    "eaea8b73-3549-4bef-9a76-ea7dd4bc9f8f": {
+      "difficulty": "9.0",
+      "definition_en": "excessively flattering or praising in an insincere way",
+      "ipa": "/ˈædjʊleɪtəri/",
+      "part_of_speech": "adjective"
+    },
+    "14302a68-9ff8-4185-bf29-bc59960cd4fb": {
+      "difficulty": "7.0",
+      "definition_en": "the arrival or coming into use of something notable, especially something new",
+      "ipa": "/ˈædvent/",
+      "part_of_speech": "noun"
+    },
+    "e898cff3-a500-4f26-bfb6-90216bbf432f": {
+      "difficulty": "8.0",
+      "definition_en": "involving or characterized by conflict or opposition",
+      "ipa": "/ˌædvəˈseəriəl/",
+      "part_of_speech": "adjective"
+    },
+    "90cfa881-ddac-40fe-8984-09bdcafe99c8": {
+      "difficulty": "7.0",
+      "definition_en": "opponents or enemies in a contest, conflict or dispute (plural of adversary)",
+      "ipa": "/ˈædvəsəriz/",
+      "part_of_speech": "noun"
+    }
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "meta": { "batch": "batch-086", "authored_by": "claude", "count": 25 },
+  "words": {
+    "941e76af-ed82-42a2-83a6-53c3493369c2": {
+      "difficulty": "8.0",
+      "definition_en": "the extremely dense collapsed core of a massive star, made almost entirely of neutrons",
+      "ipa": "/ˈnjuːtrɒn stɑː/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-863b3ed5c3e65754": {
+      "difficulty": "5.0",
+      "ipa": "/ˌnevə ˈmaɪnd/"
+    },
+    "pubcol-w-80d7ab15fdb172ce": {
+      "difficulty": "7.0",
+      "ipa": "/ˌnevəðəˈles/"
+    },
+    "c88e928d-6d26-4bfc-80f4-0c782c87b54a": {
+      "difficulty": "7.0",
+      "definition_en": "interesting or important enough to be reported as news",
+      "ipa": "/ˈnjuːzˌwɜːði/",
+      "part_of_speech": "adjective",
+      "vi_meaning_correction": "đáng đưa tin, đáng lên báo"
+    },
+    "pubcol-w-75ef9faee755c705": {
+      "synonyms": ["cut", "notch", "graze", "chip"],
+      "collocations": ["nick your chin", "a small nick", "nick the surface"],
+      "example_simple": "He got a small nick on his finger while chopping vegetables.",
+      "example_complex": "The blade left a tiny nick in the wooden table that you could barely see."
+    },
+    "d3c59de5-2ee8-4639-8cc2-4a3d6d81418b": {
+      "difficulty": "8.0",
+      "definition_en": "the belief that life has no inherent meaning, value, or purpose",
+      "ipa": "/ˈnaɪɪlɪzəm/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-d62fbc4a9ce7e13f": {
+      "difficulty": "6.0",
+      "ipa": "/ˌnəʊ bɪɡ ˈdiːl/"
+    },
+    "pubcol-w-7bf7ca17c6c6e3a3": {
+      "difficulty": "5.0",
+      "ipa": "/ˌnəʊ ˈprɒbləm/"
+    },
+    "pubcol-w-1b20fde73faed69e": {
+      "difficulty": "5.0",
+      "ipa": "/ˌnəʊ ˈweɪ/"
+    },
+    "pubcol-w-483f112c6848bb26": {
+      "difficulty": "6.0",
+      "ipa": "/ˌnəʊ ˈwʌriz/"
+    },
+    "554e1650-9d79-468d-95d5-3ef714b35079": {
+      "difficulty": "8.0",
+      "definition_en": "a method of growing crops without disturbing the soil through tillage or ploughing",
+      "ipa": "/ˌnəʊ tɪl ˈfɑːmɪŋ/",
+      "part_of_speech": "noun"
+    },
+    "190b8365-95c0-410a-a53c-e06c6b4b56de": {
+      "difficulty": "7.0",
+      "definition_en": "people of the highest social class with hereditary titles; also the quality of being morally admirable",
+      "ipa": "/nəʊˈbɪləti/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-74d798e0b35e4a71": {
+      "difficulty": "7.0",
+      "synonyms": ["nothing to worry about", "no need to panic", "everything's fine"],
+      "collocations": ["there is no cause for alarm", "give no cause for alarm", "no immediate cause for alarm"],
+      "example_simple": "The doctor said there was no cause for alarm and sent me home.",
+      "example_complex": "Officials reassured residents that the tremor was minor and there was no cause for alarm.",
+      "definition_en": "no reason to be worried or frightened",
+      "ipa": "/ˌnəʊ kɔːz fər əˈlɑːm/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "không có gì phải lo sợ"
+    },
+    "45960d84-2088-42c5-9eb6-65a0716dfe71": {
+      "difficulty": "8.0",
+      "definition_en": "active at night versus active during the daytime",
+      "ipa": "/nɒkˈtɜːnəl ənd daɪˈɜːnəl/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-af65049c94d1051b": {
+      "difficulty": "7.0",
+      "synonyms": ["never-ending", "with no end in sight", "unending"],
+      "collocations": ["with no end in sight", "a crisis with no end in sight", "the delays continue with no end in sight"],
+      "example_simple": "The traffic jam stretched on with no end in sight.",
+      "example_complex": "Negotiations dragged on for months with no end in sight, exhausting everyone involved.",
+      "definition_en": "with no sign of finishing or being resolved soon",
+      "ipa": "/ˌnəʊ end ɪn ˈsaɪt/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-919cc44b17869019": {
+      "difficulty": "7.0",
+      "synonyms": ["plenty of", "a great deal of", "loads of", "endless"],
+      "collocations": ["no end of trouble", "no end of problems", "no end of fun"],
+      "example_simple": "The new puppy has caused no end of trouble in our house.",
+      "example_complex": "His careless remarks caused the company no end of embarrassment in the press.",
+      "definition_en": "a very large amount of; a great deal of",
+      "ipa": "/ˌnəʊ ˈend əv/",
+      "part_of_speech": "idiom"
+    },
+    "62cb587f-0586-484e-aa48-6b7f393c0dd5": {
+      "difficulty": "8.0",
+      "definition_en": "not able to soak up or take in liquid",
+      "ipa": "/ˌnɒnəbˈzɔːbənt/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-cefc253f5f4b326e": {
+      "difficulty": "7.0",
+      "ipa": "/ˌnʌnðəˈles/"
+    },
+    "pubcol-w-f81fb99a4cc9c0dd": {
+      "difficulty": "8.0",
+      "synonyms": ["not as good as", "inferior to", "no match for"],
+      "collocations": ["not a patch on the original", "not a patch on his rival", "isn't a patch on"],
+      "example_simple": "The film was okay, but it's not a patch on the book.",
+      "example_complex": "For all its glossy marketing, the sequel is not a patch on the groundbreaking original.",
+      "definition_en": "not nearly as good as someone or something else",
+      "ipa": "/ˌnɒt ə ˈpætʃ ɒn/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "không tốt bằng, không sánh được với"
+    },
+    "pubcol-w-c31a27ee574c3dae": {
+      "difficulty": "8.0",
+      "synonyms": ["penniless", "broke", "impoverished", "hard up"],
+      "collocations": ["not have two pennies to rub together", "didn't have a bean to rub together", "so poor they hadn't two coins to rub together"],
+      "example_simple": "When they first married, they didn't have two pennies to rub together.",
+      "example_complex": "He built a thriving business from nothing, having started out without two coins to rub together.",
+      "definition_en": "to be extremely poor, having almost no money",
+      "ipa": "/ˌnɒt hæv tuː biːnz tə ˈrʌb təˌɡeðə/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "nghèo rớt mồng tơi, không một xu dính túi"
+    },
+    "pubcol-w-f6e3efa22ba3b4f0": {
+      "difficulty": "7.0",
+      "synonyms": ["stay awake all night", "not sleep at all", "lie awake"],
+      "collocations": ["didn't sleep a wink", "not sleep a wink all night", "hardly sleep a wink"],
+      "example_simple": "I was so worried about the exam that I didn't sleep a wink.",
+      "example_complex": "With the storm rattling the windows all night, none of us slept a wink.",
+      "definition_en": "to not sleep at all, usually because of worry or discomfort",
+      "ipa": "/ˌnɒt sliːp ə ˈwɪŋk/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-673ff4283818dd2a": {
+      "difficulty": "7.0",
+      "synonyms": ["not even", "not as much as"],
+      "collocations": ["not so much as a word", "not so much as a glance", "didn't so much as look"],
+      "example_simple": "She left without so much as a goodbye.",
+      "example_complex": "He took all the credit for the project without so much as a mention of the team that did the work.",
+      "definition_en": "not even the smallest amount of something; used to emphasise a complete absence",
+      "ipa": "/ˌnɒt səʊ ˈmʌtʃ əz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-dd41cf6e851cd448": {
+      "difficulty": "7.0",
+      "synonyms": ["know better than to", "have the sense not to", "avoid doing"],
+      "collocations": ["wise enough not to do it", "sensible enough not to", "had the good sense not to"],
+      "example_simple": "She was clever enough not to fall for the trick.",
+      "example_complex": "Experienced negotiators know better than to reveal their bottom line too early.",
+      "definition_en": "to be sensible or wise enough to avoid doing something",
+      "ipa": "/ˌnɒt tə ˈduː ˌsʌmθɪŋ/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "đủ khôn ngoan để không làm điều gì đó"
+    },
+    "pubcol-w-57649289d3842112": {
+      "difficulty": "7.0",
+      "ipa": "/ˈnəʊtəbli/"
+    },
+    "pubcol-w-f0ba8cbc0ac0405b": {
+      "difficulty": "6.0",
+      "synonyms": ["write down", "jot down", "record", "take down"],
+      "collocations": ["note down the details", "note down a number", "quickly note down"],
+      "example_simple": "Please note down my phone number before you forget it.",
+      "example_complex": "During the lecture she noted down the key points so she could review them later.",
+      "definition_en": "to write something down so that you remember it",
+      "ipa": "/ˌnəʊt ˈdaʊn/",
+      "part_of_speech": "phrase"
+    }
+  }
+}

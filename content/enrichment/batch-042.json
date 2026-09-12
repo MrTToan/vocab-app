@@ -1,0 +1,191 @@
+{
+  "meta": { "batch": "batch-042", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-8ec4382b31516822": {
+      "part_of_speech": "noun",
+      "definition_en": "the system by which a country or region produces, distributes and uses money, goods and services",
+      "synonyms": ["market", "financial system", "economic system"],
+      "collocations": ["a growing economy", "the global economy", "boost the economy"],
+      "example_simple": "The country's economy is growing quickly this year.",
+      "example_complex": "Rising energy prices threaten to push the entire economy into a prolonged recession."
+    },
+    "pubcol-w-39198ca979eb250f": {
+      "synonyms": ["overjoyed", "elated", "thrilled", "euphoric"],
+      "collocations": ["ecstatic about the news", "an ecstatic crowd", "absolutely ecstatic"],
+      "example_simple": "She was ecstatic when she passed her exam.",
+      "example_complex": "The fans were ecstatic as their team scored the winning goal in the final minute."
+    },
+    "pubcol-w-c36f673522662a46": {
+      "synonyms": ["eatable", "safe to eat", "consumable"],
+      "collocations": ["edible plants", "edible mushrooms", "perfectly edible"],
+      "example_simple": "Are these berries edible?",
+      "example_complex": "The guide taught us how to distinguish edible fungi from their poisonous look-alikes."
+    },
+    "6ec622c2-4067-43ca-8cb3-b23d1c1af7c5": {
+      "difficulty": "8.0",
+      "definition_en": "an official order or command issued by a person in authority",
+      "ipa": "/ˈiːdɪkt/",
+      "part_of_speech": "noun"
+    },
+    "3ec473ae-2f11-4e12-b64d-7e3d7ecbc12a": {
+      "difficulty": "8.0",
+      "definition_en": "successful in producing an intended result; effective",
+      "ipa": "/ˌɛfɪˈkeɪʃəs/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-b8892fcae2bf9cab": {
+      "difficulty": "6.0",
+      "synonyms": ["impact on", "influence on", "effect upon"],
+      "collocations": ["have an effect on", "a lasting effect on", "the effect on health"],
+      "example_simple": "The weather had a big effect on our plans.",
+      "example_complex": "Researchers are studying the long-term effect on the brain of using screens late at night.",
+      "definition_en": "an influence or change that something produces on someone or something",
+      "ipa": "/ɪˈfɛkt ɒn/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-3246504b1eb7a389": {
+      "synonyms": ["gushing", "overflowing", "unrestrained", "demonstrative"],
+      "collocations": ["effusive praise", "effusive thanks", "an effusive welcome"],
+      "example_simple": "She was effusive in her thanks for the gift.",
+      "example_complex": "The critics were effusive in their praise, calling the film a masterpiece."
+    },
+    "pubcol-w-647cdfc1a7d81646": {
+      "difficulty": "7.0",
+      "synonyms": ["be suitable", "be just right", "meet the requirements", "be ideal"],
+      "collocations": ["perfectly fit the bill", "certainly fits the bill", "just what fits the bill"],
+      "example_simple": "We needed a cheap, quiet hotel, and this place fit the bill.",
+      "example_complex": "For a role demanding both creativity and discipline, few candidates fit the bill as neatly as she did.",
+      "definition_en": "to be exactly what is needed or suitable for a particular purpose",
+      "ipa": "/fɪt ðə bɪl/",
+      "part_of_speech": "idiom"
+    },
+    "21e56db0-9a05-4e31-a71f-de3bc67b1888": {
+      "difficulty": "7.0",
+      "definition_en": "believing in or supporting the principle that all people are equal and deserve equal rights",
+      "ipa": "/ɪˌɡælɪˈtɛəriən/",
+      "part_of_speech": "adjective"
+    },
+    "38a1e10e-85b0-4986-b88e-b737af55fc52": {
+      "difficulty": "6.0",
+      "definition_en": "small electrical signals that carry information along nerves or through a system",
+      "ipa": "/ɪˈlɛktrɪkəl ˈɪmpʌlsɪz/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "xung điện"
+    },
+    "pubcol-w-3b0a5de1dbc0c8ba": {
+      "difficulty": "7.0",
+      "synonyms": ["background music", "muzak", "canned music"],
+      "collocations": ["bland elevator music", "sounds like elevator music", "annoying elevator music"],
+      "example_simple": "The song was boring, like elevator music.",
+      "example_complex": "The album was pleasant enough but ultimately forgettable, drifting by like so much elevator music.",
+      "definition_en": "bland, inoffensive recorded background music, often considered dull or characterless",
+      "ipa": "/ˈɛlɪveɪtər ˈmjuːzɪk/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "nhạc nền nhàm chán, nhạt nhẽo (thường phát ở nơi công cộng)"
+    },
+    "pubcol-w-05c1c4b80678bff1": {
+      "difficulty": "6.0",
+      "synonyms": ["removal", "exclusion", "eradication", "knockout"],
+      "collocations": ["the elimination of errors", "face elimination", "process of elimination"],
+      "example_simple": "The team lost the game and now faces elimination from the tournament.",
+      "example_complex": "By a careful process of elimination, the detectives narrowed the list of suspects down to one.",
+      "definition_en": "the act of completely removing or getting rid of something, or being knocked out of a competition",
+      "ipa": "/ɪˌlɪmɪˈneɪʃən/",
+      "part_of_speech": "noun",
+      "vi_meaning_correction": "sự loại bỏ, sự loại trừ; vòng loại"
+    },
+    "ed72d6ce-7455-4a16-94f2-17fa3465ebba": {
+      "difficulty": "7.0",
+      "definition_en": "believing that a society should be led by a small group of people seen as superior, or favouring such a group",
+      "ipa": "/ɪˈliːtɪst/",
+      "part_of_speech": "adjective"
+    },
+    "dd8421fe-87cf-4778-aa6a-783ba54dea1a": {
+      "difficulty": "7.0",
+      "synonyms": ["stretched figures", "attenuated figures", "lengthened figures"],
+      "definition_en": "human forms depicted as unnaturally long or stretched, as in certain styles of art",
+      "ipa": "/ˈiːlɒŋɡeɪtɪd ˈfɪɡəz/",
+      "part_of_speech": "phrase"
+    },
+    "8bac8e04-50d8-46e0-9305-708e174b4b31": {
+      "difficulty": "7.0",
+      "definition_en": "difficult to find, catch, achieve or understand",
+      "ipa": "/ɪˈluːsɪv/",
+      "part_of_speech": "adjective"
+    },
+    "1846912b-d2c0-4785-86ed-2fc2e5b7f9c5": {
+      "difficulty": "7.0",
+      "definition_en": "the act of setting someone free from legal, social or political restrictions",
+      "ipa": "/ɪˌmænsɪˈpeɪʃən/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-83e7a8323cb8699f": {
+      "difficulty": "7.0",
+      "synonyms": ["start a career", "begin a career", "launch a career"],
+      "collocations": ["embark on a career in law", "embark on a new career", "embark on a teaching career"],
+      "example_simple": "After university, she embarked on a career in journalism.",
+      "example_complex": "Having embarked on a career in finance, he soon realised his true passion lay elsewhere.",
+      "definition_en": "to begin a new profession or line of work",
+      "ipa": "/ɪmˈbɑːk ɒn ə kəˈrɪə/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-ecc16fe25180b1c6": {
+      "part_of_speech": "adjective",
+      "definition_en": "feeling awkward, ashamed or uncomfortable, especially in a social situation",
+      "synonyms": ["ashamed", "self-conscious", "mortified", "awkward"],
+      "collocations": ["deeply embarrassed", "embarrassed about the mistake", "feel embarrassed"],
+      "example_simple": "He felt embarrassed when he forgot her name.",
+      "example_complex": "She was too embarrassed to admit that she had never actually read the book she was praising."
+    },
+    "pubcol-w-e8ea60a515931672": {
+      "synonyms": ["misappropriation", "fraud", "theft"],
+      "collocations": ["charged with embezzlement", "guilty of embezzlement", "large-scale embezzlement"],
+      "example_simple": "The accountant was arrested for embezzlement.",
+      "example_complex": "The company collapsed after years of embezzlement by its own senior executives went undetected."
+    },
+    "1b14b742-5a9c-45b1-abe8-5c8cc3a453cb": {
+      "difficulty": "8.0",
+      "definition_en": "to involve someone deeply in a difficult or unpleasant situation, especially conflict or argument",
+      "ipa": "/ɪmˈbrɔɪl/",
+      "part_of_speech": "verb"
+    },
+    "7b7c6f84-fad4-4f88-aa35-369bdc2a2bda": {
+      "difficulty": "6.0",
+      "definition_en": "an unborn animal or human in the earliest stages of development",
+      "ipa": "/ˈɛmbriəʊ/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-125cbc5ceeae7419": {
+      "difficulty": "7.0",
+      "ipa": "/ɪˈmɜːdʒəns/"
+    },
+    "pubcol-w-a4b7517fba785ebf": {
+      "synonyms": ["crisis", "urgent situation", "predicament"],
+      "collocations": ["in an emergency", "a medical emergency", "declare a state of emergency"],
+      "example_simple": "Call this number in an emergency.",
+      "example_complex": "The government declared a state of emergency as the floodwaters continued to rise.",
+      "definition_en": "a sudden, serious and dangerous situation that requires immediate action",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-b121685bd12c0638": {
+      "difficulty": "6.0",
+      "synonyms": ["fire exit", "escape route", "emergency door"],
+      "collocations": ["nearest emergency exit", "blocked emergency exit", "locate the emergency exit"],
+      "example_simple": "In case of fire, please use the emergency exit.",
+      "example_complex": "Flight attendants pointed out the emergency exits before the plane began to taxi down the runway.",
+      "definition_en": "a special door used to leave a building or vehicle quickly in a dangerous situation",
+      "ipa": "/ɪˈmɜːdʒənsi ˈɛɡzɪt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-bdc4ef1503d3c23e": {
+      "difficulty": "6.0",
+      "synonyms": ["rainy-day fund", "savings buffer", "financial cushion"],
+      "collocations": ["build an emergency fund", "dip into the emergency fund", "a three-month emergency fund"],
+      "example_simple": "It is wise to keep an emergency fund for unexpected costs.",
+      "example_complex": "Financial advisers recommend setting aside an emergency fund covering at least six months of living expenses.",
+      "definition_en": "money set aside to cover unexpected expenses or financial difficulties",
+      "ipa": "/ɪˈmɜːdʒənsi fʌnd/",
+      "part_of_speech": "phrase"
+    }
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "meta": { "batch": "batch-046", "authored_by": "claude", "count": 25 },
+  "words": {
+    "0abab12e-665e-45b9-a706-52dca6ad2408": {
+      "difficulty": "7.0",
+      "definition_en": "to put out a fire or light, or to cause something to stop existing",
+      "ipa": "/ɪkˈstɪŋɡwɪʃ/",
+      "part_of_speech": "verb"
+    },
+    "5ad6264b-6e37-4804-8fdd-ef2b1bfc3a81": {
+      "difficulty": "8.0",
+      "definition_en": "to praise someone or something very highly",
+      "ipa": "/ɪkˈstəʊl/",
+      "part_of_speech": "verb"
+    },
+    "3bf9ef70-af49-4fff-b814-a1a5ccaa4cae": {
+      "difficulty": "7.0",
+      "definition_en": "the act of spending much more money than is necessary or reasonable",
+      "ipa": "/ɪkˈstrævəɡəns/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-ac2069c0e7acb0a0": {
+      "difficulty": "6.0",
+      "synonyms": ["destitution", "abject poverty", "dire poverty", "extreme deprivation"],
+      "collocations": ["live in extreme poverty", "eradicate extreme poverty", "be trapped in extreme poverty"],
+      "example_simple": "Millions of people around the world still live in extreme poverty.",
+      "example_complex": "The programme aims to lift entire communities out of extreme poverty by providing access to clean water, healthcare, and education.",
+      "definition_en": "the condition of being so poor that one cannot afford basic necessities such as food and shelter",
+      "ipa": "/ɪkˌstriːm ˈpɒvəti/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-73368c9d70f9b108": {
+      "difficulty": "6.0",
+      "synonyms": ["severe weather", "harsh weather", "adverse weather conditions"],
+      "collocations": ["face extreme weather conditions", "cope with extreme weather conditions", "cause extreme weather conditions"],
+      "example_simple": "The farmers lost their crops because of extreme weather conditions this year.",
+      "example_complex": "Climate change has made extreme weather conditions, such as prolonged droughts and violent storms, far more frequent than in the past.",
+      "definition_en": "severe or unusual weather such as storms, floods, heatwaves, or droughts",
+      "ipa": "/ɪkˌstriːm ˈweðə kənˌdɪʃənz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-b08f55cf36db0ff9": {
+      "difficulty": "6.0",
+      "synonyms": ["severe weather", "harsh weather", "climate extremes"],
+      "collocations": ["suffer extreme weather", "severe and frequent droughts", "intense storms"],
+      "example_simple": "Extreme weather, including severe droughts and strong storms, is becoming more common.",
+      "example_complex": "Scientists warn that extreme weather, marked by severe and frequent droughts as well as intense storms, will threaten food supplies worldwide.",
+      "definition_en": "severe weather patterns such as frequent droughts and intense storms",
+      "ipa": "/ɪkˌstriːm ˈweðə/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "thời tiết cực đoan: hạn hán nghiêm trọng, thường xuyên và bão dữ dội"
+    },
+    "pubcol-w-1b3ac14a074bf0a3": {
+      "difficulty": "5.0",
+      "synonyms": ["gaze", "mutual gaze", "direct look"],
+      "collocations": ["make eye contact", "maintain eye contact", "avoid eye contact"],
+      "example_simple": "She was shy and found it hard to make eye contact with strangers.",
+      "example_complex": "Maintaining steady eye contact during an interview can convey confidence, but staring too intensely may make the other person uncomfortable.",
+      "definition_en": "the act of looking directly into another person's eyes",
+      "ipa": "/ˈaɪ ˌkɒntækt/",
+      "part_of_speech": "noun"
+    },
+    "89310b18-293c-4147-9818-7a9c9a21bee6": {
+      "difficulty": "6.0",
+      "definition_en": "a short story, usually with animals as characters, that teaches a moral lesson",
+      "ipa": "/ˈfeɪbl/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-b040f4b0edeb00e2": {
+      "difficulty": "7.0",
+      "synonyms": ["furious look", "scowl", "thunderous expression"],
+      "collocations": ["have a face like thunder", "come in with a face like thunder", "give someone a face like thunder"],
+      "example_simple": "When he saw the broken window, he came into the room with a face like thunder.",
+      "example_complex": "The manager walked out of the meeting with a face like thunder, and everyone immediately guessed that the negotiations had collapsed.",
+      "definition_en": "a very angry or furious facial expression",
+      "ipa": "/ˌfeɪs laɪk ˈθʌndə/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-ebf12c4481822fda": {
+      "difficulty": "7.0",
+      "synonyms": ["accept the consequences", "take one's punishment", "face the consequences"],
+      "collocations": ["have to face the music", "be forced to face the music", "eventually face the music"],
+      "example_simple": "After cheating on the test, he had to face the music and talk to the principal.",
+      "example_complex": "Once the fraud was exposed, the executives knew they would eventually have to face the music in court.",
+      "definition_en": "to accept and deal with the unpleasant consequences of one's actions",
+      "ipa": "/ˌfeɪs ðə ˈmjuːzɪk/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-6df2e00ff8076a14": {
+      "difficulty": "6.0",
+      "synonyms": ["confront", "come to terms with", "deal with"],
+      "collocations": ["face up to a problem", "face up to your responsibilities", "face up to reality"],
+      "example_simple": "You need to face up to the fact that you made a mistake.",
+      "example_complex": "It took her years to face up to the responsibilities that came with running the family business.",
+      "definition_en": "to accept and deal honestly with a difficult situation or truth",
+      "ipa": "/ˌfeɪs ˈʌp tə/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "đối mặt với, chấp nhận và giải quyết (điều khó khăn)"
+    },
+    "pubcol-w-794199e201fec008": {
+      "difficulty": "5.0",
+      "synonyms": ["in person", "direct", "one-on-one"],
+      "collocations": ["a face-to-face meeting", "meet face-to-face", "face-to-face conversation"],
+      "example_simple": "I prefer a face-to-face conversation rather than a phone call.",
+      "example_complex": "Despite the convenience of video calls, many managers believe that face-to-face meetings build trust more effectively.",
+      "definition_en": "involving people who are physically present together; direct and in person",
+      "ipa": "/ˌfeɪs tə ˈfeɪs/",
+      "part_of_speech": "adjective",
+      "vi_meaning_correction": "trực tiếp, mặt đối mặt"
+    },
+    "2de0eb37-54ae-482f-ba3d-d2d48e6028cd": {
+      "difficulty": "8.0",
+      "synonyms": [],
+      "definition_en": "the product of a whole number and all the positive whole numbers below it",
+      "ipa": "/fækˈtɔːriəl/",
+      "part_of_speech": "noun"
+    },
+    "1958e4f6-2b74-4a5e-9993-99ca797ace5f": {
+      "difficulty": "8.0",
+      "example_simple": "The company used a factor to sell its goods and collect payments from customers.",
+      "example_complex": "In the wool trade, factors acted as commissioned agents, buying and selling merchandise on behalf of distant merchants.",
+      "definition_en": "a business agent who sells goods on commission on behalf of others",
+      "ipa": "/ˈfæktəz/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-ab6b7841b27872d9": {
+      "difficulty": "6.0",
+      "synonyms": ["fail completely", "flop", "come to nothing"],
+      "collocations": ["fail miserably at something", "the plan failed miserably", "fail miserably to do something"],
+      "example_simple": "He tried to fix the car himself but failed miserably.",
+      "example_complex": "The marketing campaign failed miserably, alienating the very customers it had been designed to attract.",
+      "definition_en": "to fail completely and in an embarrassing way",
+      "ipa": "/ˌfeɪl ˈmɪzərəbli/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-85b76e10a9519ea6": {
+      "difficulty": "5.0",
+      "ipa": "/ˌfeər ɪˈnʌf/"
+    },
+    "pubcol-w-a96986bd4115a94e": {
+      "difficulty": "5.0",
+      "synonyms": ["drop off", "doze off", "nod off"],
+      "collocations": ["fall asleep quickly", "fall asleep on the sofa", "fall fast asleep"],
+      "example_simple": "The baby finally fell asleep in her mother's arms.",
+      "example_complex": "He was so exhausted after the long flight that he fell asleep before his head even touched the pillow.",
+      "definition_en": "to pass from being awake into sleep",
+      "ipa": "/ˌfɔːl əˈsliːp/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "ngủ thiếp đi, chìm vào giấc ngủ"
+    },
+    "pubcol-w-c0cc87b1ddd1c2c1": {
+      "difficulty": "7.0",
+      "synonyms": ["fall madly in love", "be smitten", "fall deeply in love"],
+      "collocations": ["fall head over heels for someone", "fall head over heels in love", "be head over heels for someone"],
+      "example_simple": "He fell head over heels for her the moment they met.",
+      "example_complex": "Within weeks of moving to the coastal town, she had fallen head over heels for a local fisherman she barely knew.",
+      "definition_en": "to fall suddenly and completely in love with someone",
+      "ipa": "/ˌfɔːl ˌhed əʊvə ˈhiːlz fə/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-2dfdc17be7cb6948": {
+      "difficulty": "5.0",
+      "synonyms": ["become enamoured of", "lose one's heart to", "be smitten with"],
+      "collocations": ["fall in love with someone", "fall deeply in love", "fall madly in love with someone"],
+      "example_simple": "They fell in love with each other during their first year at university.",
+      "example_complex": "She never expected to fall in love with a colleague, yet after months of working late together, her feelings became impossible to ignore.",
+      "definition_en": "to begin to feel romantic love for someone",
+      "ipa": "/ˌfɔːl ɪn ˈlʌv wɪð/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-345f194c93e1b291": {
+      "difficulty": "7.0",
+      "synonyms": ["agree with", "go along with", "accept"],
+      "collocations": ["fall in with a plan", "fall in with someone's wishes", "fall in with the crowd"],
+      "example_simple": "In the end, she fell in with our plan to travel by train.",
+      "example_complex": "Rather than voice his objections, he quietly fell in with the committee's proposal to avoid a lengthy argument.",
+      "definition_en": "to agree with or accept someone's ideas, plans, or wishes",
+      "ipa": "/ˌfɔːl ˈɪn wɪð/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-33fc2bb18e2c4891": {
+      "difficulty": "7.0",
+      "synonyms": ["lose consciousness", "become comatose", "regain consciousness"],
+      "collocations": ["fall into a coma", "come out of a coma", "slip into a coma"],
+      "example_simple": "After the accident he fell into a coma, but he came out of the coma two weeks later.",
+      "example_complex": "The patient fell into a deep coma following the surgery, and doctors could not predict whether or when she might come out of the coma.",
+      "definition_en": "to enter a prolonged state of unconsciousness, and later to regain consciousness from it",
+      "ipa": "/ˌfɔːl ɪntuː ə ˈkəʊmə/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-2abb3681b90ea2c5": {
+      "difficulty": "7.0",
+      "synonyms": ["fall out of use", "become obsolete", "be abandoned"],
+      "collocations": ["fall into disuse", "gradually fall into disuse", "the custom fell into disuse"],
+      "example_simple": "The old railway line fell into disuse after the new road was built.",
+      "example_complex": "Many traditional crafts have fallen into disuse as cheaper, mass-produced goods have flooded the market.",
+      "definition_en": "to stop being used, often gradually over time",
+      "ipa": "/ˌfɔːl ɪntuː dɪsˈjuːs/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "bị bỏ đi, không còn được dùng đến"
+    },
+    "pubcol-w-9cd4e5b71470dfcb": {
+      "difficulty": "8.0",
+      "synonyms": ["be stolen", "be obtained illegally", "be nicked"],
+      "collocations": ["fall off the back of a lorry", "goods that fell off the back of a lorry", "buy something that fell off the back of a lorry"],
+      "example_simple": "He sold cheap watches that had probably fallen off the back of a lorry.",
+      "example_complex": "The suspiciously low price suggested that the electronics had fallen off the back of a lorry rather than being sold through legitimate channels.",
+      "definition_en": "(of goods) to have been acquired illegally or dishonestly, especially stolen",
+      "ipa": "/ˌfɔːl ɒf ðə ˌbæk əv ə ˈlɒri/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-95c0953901f75f38": {
+      "difficulty": "6.0",
+      "synonyms": ["fail", "collapse", "come to nothing"],
+      "collocations": ["the deal fell through", "plans fall through", "fall through at the last minute"],
+      "example_simple": "We were going to buy the house, but the deal fell through.",
+      "example_complex": "After months of negotiation, the merger fell through when the two companies failed to agree on a final price.",
+      "definition_en": "(of a plan, deal, or arrangement) to fail to happen or be completed",
+      "ipa": "/ˌfɔːl ˈθruː/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "thất bại, không thành (kế hoạch, thỏa thuận)"
+    },
+    "9dd153e8-02c3-4f0b-b647-82eac468a7a0": {
+      "difficulty": "8.0",
+      "definition_en": "capable of making mistakes or being wrong",
+      "ipa": "/ˈfæləbl/",
+      "part_of_speech": "adjective"
+    }
+  }
+}

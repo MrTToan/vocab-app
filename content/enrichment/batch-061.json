@@ -1,0 +1,199 @@
+{
+  "meta": { "batch": "batch-061", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-3041d633d82cb442": {
+      "difficulty": "8.0",
+      "ipa": "/ˌhɪðəˈtuː/"
+    },
+    "764b9953-38f8-49dc-9385-258ad50858f8": {
+      "difficulty": "7.0",
+      "definition_en": "an itchy skin rash of raised red patches, usually caused by an allergic reaction",
+      "ipa": "/haɪvz/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-bf573f10d5ef7a0b": {
+      "difficulty": "6.0",
+      "synonyms": ["restrain", "keep down", "suppress", "hold back"],
+      "collocations": ["hold down a job", "hold down costs", "hold someone down"],
+      "example_simple": "It was hard for him to hold down a steady job.",
+      "example_complex": "The government introduced new measures to hold down inflation and keep everyday prices affordable.",
+      "definition_en": "to keep something under control or in place, or to keep a job for a period of time",
+      "ipa": "/ˌhəʊld ˈdaʊn/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-c820d4df51ca1a0f": {
+      "difficulty": "7.0",
+      "synonyms": ["debate", "argue over", "dispute", "have an argument about"],
+      "collocations": ["hold a dispute on the matter", "hold a dispute on the issue", "hold a heated dispute on"],
+      "example_simple": "The two groups held a dispute on who should pay for the repairs.",
+      "example_complex": "Scholars have long held a dispute on whether economic growth necessarily improves overall quality of life.",
+      "definition_en": "to have an argument or formal discussion about a particular matter",
+      "ipa": "/ˌhəʊld ə dɪˈspjuːt ɒn/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-a9c07b2f23ebbe80": {
+      "difficulty": "6.0",
+      "synonyms": ["set a record", "hold the record", "be the record holder"],
+      "collocations": ["hold a world record", "hold a record for speed", "currently hold a record"],
+      "example_simple": "She holds a record for the fastest swim in her school.",
+      "example_complex": "The athlete continues to hold a record that no competitor has come close to breaking in over a decade.",
+      "definition_en": "to have achieved the best performance ever officially measured for a particular activity",
+      "ipa": "/ˌhəʊld ə ˈrekɔːd/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-a982200975b5f311": {
+      "difficulty": "5.0",
+      "synonyms": ["wait", "hang on", "grip", "cling"],
+      "collocations": ["hold on tight", "hold on a moment", "hold on to the rail"],
+      "example_simple": "Please hold on while I check your booking.",
+      "example_complex": "Despite the chaos around her, she managed to hold on to a sense of calm until help arrived.",
+      "definition_en": "to wait for a short time, or to grip something firmly so you do not fall or let go",
+      "ipa": "/ˌhəʊld ˈɒn/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-97a113616107d090": {
+      "difficulty": "6.0",
+      "synonyms": ["travel brochure", "holiday catalogue", "tour booklet"],
+      "collocations": ["flick through a holiday brochure", "pick up a holiday brochure", "order a holiday brochure"],
+      "example_simple": "We looked through a holiday brochure to choose where to go this summer.",
+      "example_complex": "The glossy photographs in the holiday brochure made the resort look far more luxurious than it turned out to be.",
+      "definition_en": "a small booklet with pictures and information advertising holidays and destinations",
+      "ipa": "/ˈhɒlədeɪ ˈbrəʊʃə/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-bfb43964446cea65": {
+      "difficulty": "6.0",
+      "synonyms": ["tourist resort", "vacation spot", "travel destination", "holiday spot"],
+      "collocations": ["popular holiday resort", "seaside holiday destination", "top holiday destination"],
+      "example_simple": "The island is a famous holiday resort that attracts thousands of tourists.",
+      "example_complex": "Once a quiet fishing village, the town has been transformed into a bustling holiday destination full of hotels and restaurants.",
+      "definition_en": "a place with hotels and facilities where people go to relax and spend their holidays",
+      "ipa": "/ˈhɒlədeɪ rɪˌzɔːt ˈhɒlədeɪ ˌdestɪˈneɪʃn/",
+      "part_of_speech": "phrase"
+    },
+    "2cbebd51-1c61-46c5-9082-d3485fa62e8a": {
+      "difficulty": "7.0",
+      "definition_en": "small empty spaces or dips in a surface",
+      "ipa": "/ˈhɒləʊz/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-7f9a754b7a8632c3": {
+      "difficulty": "8.0",
+      "synonyms": ["safe and successful", "in the clear", "out of danger", "home free"],
+      "collocations": ["be home and dry", "almost home and dry", "nearly home and dry"],
+      "example_simple": "Once we passed the final test, we knew we were home and dry.",
+      "example_complex": "With a commanding lead in the polls, the party assumed it was home and dry, only to lose ground in the final week.",
+      "definition_en": "having successfully completed or achieved something, with no more difficulty to face",
+      "ipa": "/ˌhəʊm ən ˈdraɪ/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "êm xuôi, xuôi chèo mát mái (thành công, an toàn)"
+    },
+    "pubcol-w-9d1664a516ad220e": {
+      "difficulty": "5.0",
+      "synonyms": ["home fixture", "home match"],
+      "collocations": ["play a home game", "win the home game", "an important home game"],
+      "example_simple": "Our team always plays better in a home game.",
+      "example_complex": "The atmosphere at a home game gives the local side a clear psychological advantage over visiting opponents.",
+      "definition_en": "a sports match played at a team's own stadium or ground",
+      "ipa": "/ˈhəʊm ɡeɪm/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-30634c1d29665407": {
+      "difficulty": "5.0",
+      "synonyms": ["main page", "landing page", "front page"],
+      "collocations": ["visit the home page", "return to the home page", "update the home page"],
+      "example_simple": "Click the logo to go back to the home page.",
+      "example_complex": "A well-designed home page should immediately convey what the organisation does and guide visitors to the right section.",
+      "definition_en": "the main or introductory page of a website",
+      "ipa": "/ˈhəʊm peɪdʒ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-2d1b47e71cc0f51b": {
+      "difficulty": "5.0",
+      "synonyms": ["host team", "home side"],
+      "collocations": ["support the home team", "the home team scored", "cheer for the home team"],
+      "example_simple": "The home team won the match three to one.",
+      "example_complex": "Roared on by their supporters, the home team overturned an early deficit to secure a memorable victory.",
+      "definition_en": "the team that plays a match at its own ground, hosting the visiting opponents",
+      "ipa": "/ˈhəʊm tiːm/",
+      "part_of_speech": "phrase"
+    },
+    "bf3a0fd4-52c9-4f5a-ad79-f4cc811d2eb4": {
+      "difficulty": "8.0",
+      "definition_en": "consisting of parts or members that are all the same kind",
+      "ipa": "/ˌhɒməˈdʒiːniəs/",
+      "part_of_speech": "adjective"
+    },
+    "21229a1f-5a8c-4edf-b480-0b802e1b599e": {
+      "difficulty": "8.0",
+      "definition_en": "factors that are uniform or of the same kind across a group or population",
+      "ipa": "/ˌhɒməˈdʒiːnɪk ˈfæktəz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-d2275560a89994ac": {
+      "difficulty": "5.0",
+      "ipa": "/ˈɒnɪstli/"
+    },
+    "pubcol-w-2baea2d0e8a6261d": {
+      "difficulty": "8.0",
+      "synonyms": ["different people suit different tasks", "each to their own strengths"],
+      "collocations": ["it's horses for courses", "a case of horses for courses", "horses for courses when hiring"],
+      "example_simple": "He's great at sales but not at admin — it's horses for courses.",
+      "example_complex": "When assembling the project team, the manager applied a horses for courses approach, matching each specialist to the task that best suited their strengths.",
+      "definition_en": "the idea that different people or things are suited to different situations or tasks",
+      "ipa": "/ˌhɔːsɪz fə ˈkɔːsɪz/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "dụng nhân như dụng mộc; mỗi người hợp với một việc"
+    },
+    "pubcol-w-e1e2090556941c00": {
+      "synonyms": ["antagonism", "aggression", "animosity", "enmity"],
+      "collocations": ["open hostility", "growing hostility", "show hostility towards"],
+      "example_simple": "There was clear hostility between the two neighbours.",
+      "example_complex": "The proposed reforms were met with open hostility from workers who feared for their jobs."
+    },
+    "pubcol-w-eae8a4ec4e43b8da": {
+      "synonyms": ["flatmate", "roommate", "lodger"],
+      "collocations": ["share with a housemate", "a friendly housemate", "a new housemate"],
+      "example_simple": "My housemate and I take turns cooking dinner.",
+      "example_complex": "Living with a considerate housemate can make renting far more pleasant, especially when chores are shared fairly."
+    },
+    "pubcol-w-9a016e9cf5005dc0": {
+      "difficulty": "5.0",
+      "ipa": "/ˌhaʊz ɪt ˈɡəʊɪŋ/"
+    },
+    "73a044ac-5070-44d8-ba9b-768b25df426b": {
+      "difficulty": "8.0",
+      "definition_en": "a loud, confused noise made by a crowd of people",
+      "ipa": "/ˈhʌbʌb/",
+      "part_of_speech": "noun"
+    },
+    "d73df46e-5b14-4a2e-9f96-e4a59b2439a9": {
+      "difficulty": "7.0",
+      "definition_en": "crowding closely together, usually for warmth or to talk privately",
+      "ipa": "/ˈhʌdəlɪŋ/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-f11fb55cedc6b7d6": {
+      "synonyms": ["embrace", "cuddle", "hold", "clasp"],
+      "collocations": ["give someone a hug", "hug tightly", "hug goodbye"],
+      "example_simple": "She gave her friend a warm hug at the airport.",
+      "example_complex": "After months apart, the two brothers hugged each other tightly, too overwhelmed to speak.",
+      "definition_en": "to hold someone closely in your arms to show affection",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-f2104f95264636b0": {
+      "synonyms": ["enormous", "massive", "gigantic", "vast"],
+      "collocations": ["a huge difference", "a huge amount", "huge success"],
+      "example_simple": "They live in a huge house near the sea.",
+      "example_complex": "The new policy is expected to have a huge impact on the way small businesses operate.",
+      "definition_en": "extremely large in size, amount, or degree",
+      "part_of_speech": "adjective"
+    },
+    "36615b92-8f3f-49e6-aa30-1b258d441223": {
+      "difficulty": "7.0",
+      "definition_en": "the presence of people living in a particular place",
+      "ipa": "/ˈhjuːmən ˌhæbɪˈteɪʃn/",
+      "part_of_speech": "phrase"
+    }
+  }
+}

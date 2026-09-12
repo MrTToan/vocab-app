@@ -1,0 +1,194 @@
+{
+  "meta": { "batch": "batch-002", "authored_by": "claude", "count": 25 },
+  "words": {
+    "8c1d47b0-3fc8-47ec-ab4f-886185f1448f": {
+      "difficulty": "7.0",
+      "definition_en": "a formal or serious promise to do something",
+      "ipa": "/ə pledʒ/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-611c5ec844c09280": {
+      "difficulty": "6.0",
+      "ipa": "/ə ˈrɪp ɒf/"
+    },
+    "pubcol-w-70b241d452686e94": {
+      "difficulty": "7.0",
+      "synonyms": ["a shabby hotel", "a run-down hotel", "a sleazy hotel", "a squalid hotel"],
+      "collocations": ["stay in a seedy hotel", "a seedy hotel downtown", "a cheap, seedy hotel"],
+      "example_simple": "We were tired, so we stayed the night in a seedy hotel near the station.",
+      "example_complex": "The detective traced the suspect to a seedy hotel where the paint was peeling and the corridors reeked of stale smoke.",
+      "definition_en": "a dirty, run-down hotel in a disreputable or unpleasant area",
+      "ipa": "/ə ˈsiːdi həʊˈtel/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-638c3a736136be26": {
+      "difficulty": "7.0",
+      "synonyms": ["a major effect", "a far-reaching impact", "a deep influence", "a marked effect"],
+      "collocations": ["have a significant impact on", "make a profound impact", "a profound impact on society"],
+      "example_simple": "Social media has had a significant impact on how young people communicate.",
+      "example_complex": "The industrial revolution had a profound impact on urban life, reshaping everything from labour patterns to family structures.",
+      "definition_en": "a large and important effect on someone or something",
+      "ipa": "/ə sɪɡˈnɪfɪkənt ˈɪmpækt/",
+      "part_of_speech": "phrase"
+    },
+    "9a19cca9-656c-4335-915f-cca359273959": {
+      "difficulty": "7.0",
+      "definition_en": "an organised uprising by enslaved people against their owners",
+      "ipa": "/ə sleɪv rɪˈvəʊlt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-9deb6bc990116f08": {
+      "difficulty": "8.0",
+      "synonyms": ["no chance at all", "little to no hope", "a hopeless chance", "a slim chance"],
+      "collocations": ["not a snowball's chance in hell", "a snowball's chance of winning", "have a snowball's chance"],
+      "example_simple": "With no money and no experience, he has a snowball's chance of getting the job.",
+      "example_complex": "Against a team of professionals, our amateur side had about a snowball's chance in hell of reaching the final.",
+      "definition_en": "an extremely small or non-existent chance of success",
+      "ipa": "/ə ˈsnəʊbɔːlz tʃɑːns/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-e16ac361ed96d830": {
+      "difficulty": "6.0",
+      "synonyms": ["a gang of robbers", "a group of thieves", "a robber band", "an outlaw gang"],
+      "collocations": ["a band of robbers attacked", "led a band of robbers", "a notorious band of robbers"],
+      "example_simple": "A band of robbers stopped the coach and took everything the travellers had.",
+      "example_complex": "The legend tells of a band of robbers who hid in the forest and preyed on wealthy merchants passing through.",
+      "definition_en": "a group of people who steal, especially by force",
+      "ipa": "/ə bænd əv ˈrɒbəz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-acf3501ada15b977": {
+      "difficulty": "5.0",
+      "synonyms": ["a chocolate bar", "a slab of chocolate", "a block of chocolate"],
+      "collocations": ["buy a bar of chocolate", "share a bar of chocolate", "a large bar of chocolate"],
+      "example_simple": "She bought a bar of chocolate to eat on the train.",
+      "example_complex": "As a treat after the long hike, he broke a bar of chocolate into squares and passed them round.",
+      "definition_en": "a flat, rectangular block of chocolate",
+      "ipa": "/ə bɑː əv ˈtʃɒklət/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-b5eab17526d4f42f": {
+      "synonyms": ["kidnap", "seize", "carry off", "snatch"],
+      "collocations": ["abduct a child", "be abducted at gunpoint", "abduct someone for ransom"],
+      "example_simple": "The men tried to abduct the boy as he walked home from school.",
+      "example_complex": "Investigators believe the gang planned to abduct the executive and demand a large ransom for his release."
+    },
+    "aa16ad1f-fa54-49f2-8d07-e80d4247260a": {
+      "difficulty": "6.0",
+      "definition_en": "to accept and follow a rule, decision, or agreement",
+      "ipa": "/əˈbaɪd baɪ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-49a70cb3cfd8fe35": {
+      "difficulty": "5.0",
+      "synonyms": ["a grass blade", "a shoot of grass", "a stalk of grass"],
+      "collocations": ["a single blade of grass", "not a blade of grass", "each blade of grass"],
+      "example_simple": "A drop of dew shone on every blade of grass in the morning light.",
+      "example_complex": "So thorough was the drought that not a single blade of grass survived on the cracked, sunbaked field.",
+      "definition_en": "a single, thin leaf of grass",
+      "ipa": "/ə bleɪd əv ɡrɑːs/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-6f13d0a6d190c0ad": {
+      "synonyms": ["dwelling", "residence", "home", "habitation"],
+      "collocations": ["place of abode", "a humble abode", "of no fixed abode"],
+      "example_simple": "Welcome to my humble abode; please make yourself at home.",
+      "example_complex": "The suspect was described in court as a man of no fixed abode who had drifted between cities for years."
+    },
+    "pubcol-w-b360f28daaa69c35": {
+      "difficulty": "8.0",
+      "synonyms": ["a group of men and a group of girls", "a troop of men and a cluster of girls"],
+      "collocations": ["a body of men marched", "a bevy of girls gathered", "a large body of men"],
+      "example_simple": "A body of men guarded the gate while a bevy of girls laughed in the courtyard nearby.",
+      "example_complex": "As the procession passed, a body of men in uniform led the way, followed by a bevy of girls scattering flower petals across the road.",
+      "definition_en": "a group of men (a body) and a group of girls (a bevy) — collective nouns for people",
+      "ipa": "/ə ˈbɒdi əv men, ə ˈbevi əv ɡɜːlz/",
+      "part_of_speech": "phrase"
+    },
+    "2f63974c-8fd7-4fce-a01b-f1c43a9ac014": {
+      "difficulty": "6.0",
+      "definition_en": "to officially end a law, system, or practice",
+      "ipa": "/əˈbɒlɪʃ/",
+      "part_of_speech": "verb"
+    },
+    "fc2869c5-ba99-40e1-85c1-755493cb3dac": {
+      "difficulty": "7.0",
+      "definition_en": "the official ending of a system or practice, especially slavery",
+      "ipa": "/ˌæbəˈlɪʃn/",
+      "part_of_speech": "noun",
+      "vi_meaning_correction": "sự bãi bỏ, sự thủ tiêu (đặc biệt là chế độ nô lệ)"
+    },
+    "pubcol-w-8b3b05a0889f6945": {
+      "difficulty": "8.0",
+      "synonyms": ["a point of dispute", "a source of conflict", "a contentious issue", "a sticking point"],
+      "collocations": ["a bone of contention between them", "remain a bone of contention", "the main bone of contention"],
+      "example_simple": "Money is often a bone of contention between couples.",
+      "example_complex": "The disputed border has long been a bone of contention between the two nations, sparking repeated diplomatic crises.",
+      "definition_en": "a subject or issue that causes ongoing argument or disagreement",
+      "ipa": "/ə bəʊn əv kənˈtenʃn/",
+      "part_of_speech": "idiom"
+    },
+    "37f0ea6e-806c-43a3-b9b3-ddaa88a9e96c": {
+      "difficulty": "7.0",
+      "definition_en": "relating to the original people who lived in a place, especially in Australia",
+      "ipa": "/ˌæbəˈrɪdʒənl/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-1305b03449022fca": {
+      "difficulty": "6.0",
+      "synonyms": ["a flock of chickens", "a clutch of chickens", "a group of chickens"],
+      "collocations": ["a brood of chickens followed", "raise a brood of chickens", "a hen with her brood"],
+      "example_simple": "The hen led her brood of chickens across the yard to feed.",
+      "example_complex": "Every morning the farmer scattered grain, and a noisy brood of chickens came scrambling from the barn to peck at it.",
+      "definition_en": "a group of young chickens, especially those cared for by one hen",
+      "ipa": "/ə bruːd əv ˈtʃɪkɪnz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-d1194e9f3a8c886a": {
+      "difficulty": "6.0",
+      "synonyms": ["a clutch of chicks", "a group of chicks", "a hatch of chicks"],
+      "collocations": ["a brood of chicks", "a clutch of newly hatched chicks", "hatch a clutch of chicks"],
+      "example_simple": "The hen kept her brood of chicks warm under her wings.",
+      "example_complex": "Within hours of hatching, the whole clutch of chicks was tottering after their mother across the coop.",
+      "definition_en": "a group of newly hatched or young chicks (brood/clutch)",
+      "ipa": "/ə bruːd, klʌtʃ əv tʃɪks/",
+      "part_of_speech": "phrase"
+    },
+    "e54f9ba0-50c2-40b7-a624-6ab947fa74b8": {
+      "difficulty": "6.0",
+      "definition_en": "sudden and unexpected, often in a way that seems rude",
+      "ipa": "/əˈbrʌpt/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-f33f51a1b8728c7c": {
+      "synonyms": ["forgetful", "distracted", "inattentive", "preoccupied"],
+      "collocations": ["an absent-minded professor", "become absent-minded", "an absent-minded look"],
+      "example_simple": "My grandfather is so absent-minded that he often forgets where he put his glasses.",
+      "example_complex": "In her absent-minded state, she poured orange juice into her coffee and only noticed after the first sip."
+    },
+    "18c6f707-145c-48cf-92a4-432d7ee452da": {
+      "difficulty": "7.0",
+      "definition_en": "the practice of regularly staying away from work or school without good reason",
+      "ipa": "/ˌæbsənˈtiːɪzəm/",
+      "part_of_speech": "noun"
+    },
+    "16f36cba-8dae-4268-94ef-bcdbf9851b61": {
+      "difficulty": "6.0",
+      "definition_en": "tending to forget things or not pay attention because your mind is elsewhere",
+      "ipa": "/ˌæbsəntˈmaɪndɪd/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-6e68c25f391b34c3": {
+      "synonyms": ["engrossing", "fascinating", "gripping", "captivating"],
+      "collocations": ["an absorbing book", "an absorbing account", "find something absorbing"],
+      "example_simple": "The film was so absorbing that I forgot about my phone completely.",
+      "example_complex": "Her memoir is an absorbing account of survival, holding the reader's attention from the first page to the last."
+    },
+    "pubcol-w-ec3ec33367ae7140": {
+      "synonyms": ["theoretical", "conceptual", "intangible", "notional"],
+      "collocations": ["an abstract concept", "abstract art", "in the abstract"],
+      "example_simple": "Freedom is an abstract idea that can mean different things to different people.",
+      "example_complex": "Students often struggle with the more abstract areas of mathematics, where the concepts cannot be pictured or touched."
+    }
+  }
+}

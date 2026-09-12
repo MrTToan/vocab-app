@@ -1,0 +1,219 @@
+{
+  "meta": { "batch": "batch-123", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-ca95faac88640390": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk ʌp ə ˈmjuːzɪkl ˈɪnstrəmənt/",
+      "definition_en": "to start learning to play a musical instrument as a new hobby or activity",
+      "synonyms": ["learn an instrument", "start playing", "begin studying music", "pick up an instrument"],
+      "collocations": ["take up the violin", "take up a musical instrument later in life", "decide to take up an instrument"],
+      "example_simple": "She decided to take up a musical instrument and chose the guitar.",
+      "example_complex": "Many adults who take up a musical instrument later in life find that it sharpens their memory and relieves stress."
+    },
+    "pubcol-w-b4afe6a51ec6f45e": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk ʌp ˈeksəsaɪz/",
+      "definition_en": "to begin doing physical activity regularly as a habit",
+      "synonyms": ["start exercising", "begin working out", "get into fitness", "take up sport"],
+      "collocations": ["take up regular exercise", "take up exercise to lose weight", "encourage someone to take up exercise"],
+      "example_simple": "My doctor advised me to take up exercise to improve my health.",
+      "example_complex": "After years of a sedentary lifestyle, he finally took up exercise and gradually built the stamina to run a marathon."
+    },
+    "pubcol-w-2a817a71df67e501": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk əˈsjuːm rɪˌspɒnsəˈbɪləti fɔː/",
+      "definition_en": "to accept that you are in charge of something and will be blamed if it goes wrong",
+      "synonyms": ["accept responsibility", "be accountable", "take charge", "answer for"],
+      "collocations": ["take full responsibility for", "assume responsibility for the decision", "take responsibility for doing something"],
+      "example_simple": "As team leader, she had to take responsibility for the project's results.",
+      "example_complex": "The minister publicly assumed responsibility for the failures of his department rather than blaming his subordinates."
+    },
+    "pubcol-w-86f12bd6277b0f55": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk əˈsjuːm rɪˌspɒnsəˈbɪləti fɔː/",
+      "definition_en": "to accept that you are answerable for something and its consequences",
+      "synonyms": ["accept responsibility", "be accountable for", "take the blame for", "answer for"],
+      "collocations": ["take responsibility for the mistake", "assume responsibility for the outcome", "refuse to take responsibility for"],
+      "example_simple": "He agreed to take responsibility for the broken window.",
+      "example_complex": "No one was willing to assume responsibility for the budget shortfall, so the investigation dragged on for months."
+    },
+    "pubcol-w-c9ac27e3efd87b91": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk kɑːst ə ɡlɑːns æt/",
+      "definition_en": "to look quickly at something",
+      "synonyms": ["glance at", "peek at", "have a quick look at", "cast an eye over"],
+      "collocations": ["take a glance at the menu", "cast a glance at the clock", "take a quick glance at"],
+      "example_simple": "She took a glance at her phone during the meeting.",
+      "example_complex": "He cast a nervous glance at the examiner before turning over the paper and beginning the test."
+    },
+    "pubcol-w-7345bbdfddac940d": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk duː sɪt ən ɪɡˈzæm/",
+      "definition_en": "to be tested formally on a subject by answering questions under exam conditions",
+      "synonyms": ["sit an exam", "take a test", "do an examination", "undergo a test"],
+      "collocations": ["sit an exam", "take a final exam", "do a written exam"],
+      "example_simple": "I have to take an exam next Monday.",
+      "example_complex": "Candidates who wish to study abroad must sit an English proficiency exam before they can apply to most universities."
+    },
+    "pubcol-w-f6b14d8359a44d41": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk ə bʌs/",
+      "definition_en": "to travel somewhere by bus",
+      "synonyms": ["catch a bus", "go by bus", "ride the bus", "get the bus"],
+      "collocations": ["take a bus to work", "take the last bus home", "take a bus downtown"],
+      "example_simple": "I take a bus to school every morning.",
+      "example_complex": "Rather than sitting in traffic, commuters are increasingly choosing to take a bus that runs in a dedicated lane."
+    },
+    "pubcol-w-da46ca6c95bc4a33": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk ˈækʃn/",
+      "definition_en": "to do something in order to deal with a problem or achieve a result",
+      "synonyms": ["act", "take steps", "take measures", "intervene"],
+      "collocations": ["take immediate action", "take action against", "take decisive action"],
+      "example_simple": "We must take action to reduce plastic waste.",
+      "example_complex": "Unless governments take urgent action on emissions, scientists warn that the effects of climate change will soon be irreversible."
+    },
+    "pubcol-w-e8a363b3db8e601a": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk ə siːt/",
+      "definition_en": "to sit down (often said politely as an invitation)",
+      "synonyms": ["sit down", "be seated", "have a seat", "settle down"],
+      "collocations": ["please take a seat", "take a seat in the waiting room", "take a seat at the table"],
+      "example_simple": "Please take a seat while the doctor gets ready.",
+      "example_complex": "The receptionist smiled and asked us to take a seat until our name was called for the interview."
+    },
+    "pubcol-w-bbcb9fd2fd347a00": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk ˈɪntrəst ɪn/",
+      "definition_en": "to become interested in or pay attention to something",
+      "synonyms": ["be interested in", "show interest in", "care about", "pay attention to"],
+      "collocations": ["take a keen interest in", "take an active interest in", "take interest in someone's work"],
+      "example_simple": "She takes a great interest in painting.",
+      "example_complex": "Good managers take a genuine interest in their employees' development rather than focusing solely on output."
+    },
+    "e1b8debc-11f1-4d47-83ff-39fea058bfe2": {
+      "difficulty": "7.0",
+      "part_of_speech": "verb",
+      "ipa": "/ˈtæmpə/",
+      "definition_en": "to interfere with or alter something without permission, usually to cause damage or gain an advantage"
+    },
+    "pubcol-w-3330ed719152b09e": {
+      "synonyms": ["equivalent to", "as good as", "amounting to", "the same as"],
+      "collocations": ["tantamount to treason", "tantamount to an admission", "be tantamount to a refusal"],
+      "example_simple": "His silence was tantamount to admitting he was guilty.",
+      "example_complex": "The committee argued that ignoring the warnings was tantamount to negligence, and demanded a full investigation."
+    },
+    "pubcol-w-e799c3668f4b1c33": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪst ɪn ˈmjuːzɪk/",
+      "definition_en": "the kind of music that a person likes and prefers",
+      "synonyms": ["musical preference", "musical taste", "musical tastes", "preference in music"],
+      "collocations": ["have eclectic taste in music", "share a taste in music", "similar taste in music"],
+      "example_simple": "We have the same taste in music, so we always agree on playlists.",
+      "example_complex": "Her taste in music is remarkably eclectic, ranging from baroque concertos to underground electronic tracks."
+    },
+    "pubcol-w-817967366c6796d1": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ˈtiːtʃəz pet/",
+      "definition_en": "a student who is treated as a favourite by the teacher, often disliked by classmates for it",
+      "synonyms": ["favourite pupil", "the teacher's favourite", "pet student", "apple-polisher"],
+      "collocations": ["seen as the teacher's pet", "become the teacher's pet", "the classic teacher's pet"],
+      "example_simple": "Everyone called him the teacher's pet because he always got the best marks.",
+      "example_complex": "She resented being labelled the teacher's pet, since her good grades came from hard work rather than any special favour."
+    },
+    "b2376f72-b63e-4bd9-863a-75e78af75cde": {
+      "difficulty": "7.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˈtiːtʃɪŋ ˌhɒspɪtl/",
+      "definition_en": "a hospital connected to a medical school where students are trained while patients are treated"
+    },
+    "pubcol-w-d25187dc137f35c8": {
+      "difficulty": "5.0",
+      "part_of_speech": "noun",
+      "ipa": "/tiːm/",
+      "definition_en": "a group of people who work or play together towards a shared goal",
+      "synonyms": ["group", "squad", "crew", "side"],
+      "collocations": ["work as a team", "join the team", "lead a team"],
+      "example_simple": "Our team won the football match yesterday.",
+      "example_complex": "A well-coordinated team can achieve far more than a group of talented individuals working in isolation."
+    },
+    "4dd46842-b99c-42d3-8f53-80e3a3483b84": {
+      "difficulty": "8.0",
+      "part_of_speech": "noun",
+      "ipa": "/tek ˌkɒŋkɪˈstɑːdɔː/",
+      "definition_en": "a figurative term for an ambitious technology entrepreneur who aggressively dominates or conquers new markets"
+    },
+    "pubcol-w-54c4f31b224078c0": {
+      "synonyms": ["boring", "dull", "monotonous", "tiresome"],
+      "collocations": ["a tedious task", "tedious and repetitive", "tedious paperwork"],
+      "example_simple": "Filling in the forms was a tedious job.",
+      "example_complex": "Although the research involved months of tedious data entry, the eventual findings proved well worth the effort."
+    },
+    "pubcol-w-7a49c995a63bc18a": {
+      "synonyms": ["abstinent", "non-drinking", "sober", "abstemious"],
+      "collocations": ["a strict teetotal policy", "remain teetotal", "a teetotal household"],
+      "example_simple": "He has been teetotal since his twenties and never touches alcohol.",
+      "example_complex": "Having grown up in a teetotal family, she found the heavy drinking culture at university genuinely bewildering."
+    },
+    "pubcol-w-d69e57cfad112101": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/tel ˈsʌmbədi əˈpɑːt/",
+      "definition_en": "to recognise the difference between two or more similar people or things",
+      "synonyms": ["distinguish", "differentiate", "tell apart", "tell the difference"],
+      "collocations": ["tell the twins apart", "hard to tell apart", "can't tell them apart"],
+      "example_simple": "The twins look so alike that I can't tell them apart.",
+      "example_complex": "The imitations were so skilfully made that even experts struggled to tell the forgeries apart from the originals."
+    },
+    "pubcol-w-964e4c3f047fcece": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/tel ðə ˈdɪfrənsɪz bɪˈtwiːn/",
+      "definition_en": "to identify how two or more things are not the same",
+      "synonyms": ["distinguish between", "differentiate between", "tell apart", "compare"],
+      "collocations": ["tell the difference between", "clearly tell the differences between", "learn to tell the differences between"],
+      "example_simple": "Can you tell the difference between these two colours?",
+      "example_complex": "A skilled sommelier can tell the subtle differences between wines from neighbouring vineyards after a single sip."
+    },
+    "0a7290d7-5ad9-44b4-b8f3-f508e00d76fc": {
+      "difficulty": "8.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˈtempə ði ˌæspəˈreɪʃnz/",
+      "definition_en": "to moderate or hold back ambitious hopes so they become more realistic"
+    },
+    "c02e7069-a5bc-42e4-b9d3-7917bae2757e": {
+      "difficulty": "7.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˈtemprəmənt/",
+      "definition_en": "a person's natural character, especially how they typically feel and react"
+    },
+    "pubcol-w-4107f5f091bb9610": {
+      "synonyms": ["lure", "enticement", "allure", "urge"],
+      "collocations": ["resist temptation", "give in to temptation", "the temptation to give up"],
+      "example_simple": "I couldn't resist the temptation to eat another slice of cake.",
+      "example_complex": "For many investors, the temptation to sell during a market panic is precisely what they must learn to overcome."
+    },
+    "pubcol-w-99b0abd812ca7154": {
+      "difficulty": "8.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ten ə ˈpeni/",
+      "definition_en": "so common and easy to find that it has little value",
+      "synonyms": ["commonplace", "a dime a dozen", "two a penny", "very common"],
+      "collocations": ["talent like that is ten a penny", "such jobs are ten a penny", "ideas are ten a penny"],
+      "example_simple": "Cheap souvenirs like these are ten a penny in tourist areas.",
+      "example_complex": "Vague promises from politicians are ten a penny; what voters really want is concrete action."
+    }
+  }
+}

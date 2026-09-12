@@ -1,0 +1,176 @@
+{
+  "meta": { "batch": "batch-056", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-18b7380734507e5c": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˌɡəʊ ˈθruː ˈsʌmθɪŋ/",
+      "definition_en": "to examine or search through something carefully; also, to experience a difficult period",
+      "synonyms": ["examine", "review", "look over", "undergo"],
+      "collocations": ["go through the details", "go through a hard time", "go through the paperwork"],
+      "example_simple": "Let's go through the list together to make sure nothing is missing.",
+      "example_complex": "After going through months of uncertainty, she finally received the results she had been dreading."
+    },
+    "pubcol-w-a069f8117823c43e": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ˌɡəʊ ʌp ðə ˈwɔːl/",
+      "definition_en": "to become extremely angry, frustrated, or annoyed",
+      "synonyms": ["lose one's temper", "hit the roof", "get furious"],
+      "collocations": ["go up the wall with worry", "drive someone up the wall", "nearly go up the wall"],
+      "example_simple": "My dad will go up the wall if he sees this mess.",
+      "example_complex": "The constant noise from the construction next door was enough to make anyone go up the wall."
+    },
+    "pubcol-w-b64efbfc775ec195": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˌɡəʊ ɒn ðə ˈrʌn ˌtɜːn wʌnˈself ˈɪn/",
+      "definition_en": "to be fleeing from the authorities, and then to surrender oneself to the police",
+      "synonyms": ["flee", "abscond", "surrender", "give oneself up"],
+      "collocations": ["be on the run from the law", "go on the run", "turn oneself in to the police"],
+      "example_simple": "The thief was on the run for weeks before he decided to turn himself in.",
+      "example_complex": "After months on the run, the fugitive finally turned himself in, exhausted by a life of constant hiding."
+    },
+    "pubcol-w-5ceb7772aa24551f": {
+      "difficulty": "5.0",
+      "ipa": "/ˌɡʊd fɔː ˈjuː/"
+    },
+    "pubcol-w-e2e3cc534e7ddfa9": {
+      "difficulty": "6.0",
+      "ipa": "/ˈɡɒtʃə/"
+    },
+    "pubcol-w-db6916fbcdfbcc1a": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˈɡɔːmeɪ ˈrestrɒnt/",
+      "definition_en": "a high-class restaurant serving fine, sophisticated food for discerning diners",
+      "synonyms": ["fine-dining restaurant", "upscale restaurant", "haute cuisine restaurant"],
+      "collocations": ["dine at a gourmet restaurant", "an award-winning gourmet restaurant", "book a gourmet restaurant"],
+      "example_simple": "We celebrated our anniversary at a gourmet restaurant in the city centre.",
+      "example_complex": "The gourmet restaurant, renowned for its inventive tasting menu, attracts food lovers from across the country.",
+      "vi_meaning_correction": "nhà hàng sang trọng dành cho dân sành ăn"
+    },
+    "pubcol-w-204f5fe030f38047": {
+      "difficulty": "6.0",
+      "ipa": "/ˌɡræb ə ˈbaɪt/"
+    },
+    "pubcol-w-4e98bfab6279e0a9": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˌɡreɪd ði əˈsaɪnmənt/",
+      "definition_en": "to assess a piece of student work and give it a mark or score",
+      "synonyms": ["mark the assignment", "score the work", "assess the paper"],
+      "collocations": ["grade the assignment fairly", "grade student assignments", "grade the assignment on time"],
+      "example_simple": "The teacher stayed late to grade the assignments.",
+      "example_complex": "It took the professor the whole weekend to grade the assignments for her three overflowing classes."
+    },
+    "57c017d0-38f7-4bf9-86a1-4c50f5cd3c8a": {
+      "difficulty": "6.0",
+      "ipa": "/ˈɡrædʒuəl/"
+    },
+    "b91fc951-82ab-4e68-98e8-8b8526fb0489": {
+      "difficulty": "8.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˈɡrædʒuəl ˌdɪsəˈluːʃn/",
+      "definition_en": "the slow, progressive breaking up or ending of something over time",
+      "vi_meaning_correction": "sự tan rã dần dần, sự tan biến từ từ"
+    },
+    "3cb44441-4a88-4d0d-8b5d-9442cc0bb0dd": {
+      "difficulty": "6.0",
+      "ipa": "/ˈɡrædʒuəli/"
+    },
+    "pubcol-w-825df23fa3d01e76": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˈɡrædʒueɪt frəm ˈkɒlɪdʒ/",
+      "definition_en": "to complete a college degree and receive one's qualification",
+      "synonyms": ["finish college", "earn a degree", "complete one's studies"],
+      "collocations": ["graduate from college with honours", "graduate from college next year", "graduate from a top college"],
+      "example_simple": "She hopes to graduate from college next summer.",
+      "example_complex": "After graduating from college with a degree in engineering, he immediately landed a job at a leading tech firm."
+    },
+    "e2031d52-1385-4ad5-bd73-c412079d14ff": {
+      "difficulty": "8.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˌɡrænd ˈɑːks əv ˈhjuːmən əˈfeəz/",
+      "definition_en": "the sweeping, large-scale patterns and pivotal turning points of human history",
+      "synonyms": ["sweep of history", "course of human events", "broad currents of history"]
+    },
+    "91e19b93-ece3-4935-bdf5-44c027cde94b": {
+      "difficulty": "7.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˌɡrænjəˈlærəti/",
+      "definition_en": "the level of detail or fineness with which something is described or divided"
+    },
+    "8fcf2672-7994-402e-a23d-2ce9a87e15b8": {
+      "difficulty": "7.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˌɡrætɪfɪˈkeɪʃn/",
+      "definition_en": "the pleasure or satisfaction that comes from having a desire or need fulfilled"
+    },
+    "pubcol-w-c3996f8f53073f81": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˌɡriːn ˈpɒlətɪks/",
+      "definition_en": "a political ideology aimed at creating an ecologically sustainable and environmentally friendly society",
+      "synonyms": ["environmental politics", "ecopolitics", "green movement"],
+      "collocations": ["embrace green politics", "the rise of green politics", "green politics agenda"],
+      "example_simple": "Green politics has become more popular as people worry about climate change.",
+      "example_complex": "The party's shift towards green politics reflected growing public demand for sustainable environmental policies."
+    },
+    "pubcol-w-07280c6a47faeb39": {
+      "difficulty": "6.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˈɡriːnhaʊs ˌɡæsɪz/",
+      "definition_en": "gases such as carbon dioxide that trap heat in the atmosphere and contribute to global warming",
+      "synonyms": ["carbon emissions", "heat-trapping gases", "atmospheric pollutants"],
+      "collocations": ["reduce greenhouse gases", "greenhouse gas emissions", "release greenhouse gases"],
+      "example_simple": "Cars and factories produce a lot of greenhouse gases.",
+      "example_complex": "Governments worldwide have pledged to cut greenhouse gases in an effort to slow the pace of climate change."
+    },
+    "3e05f138-5064-4938-910d-fd35cbedc2cd": {
+      "difficulty": "6.0",
+      "part_of_speech": "noun",
+      "ipa": "/ɡriːf/",
+      "definition_en": "deep sorrow, especially that caused by someone's death"
+    },
+    "pubcol-w-e1545f8f38fdd71b": {
+      "part_of_speech": "verb",
+      "definition_en": "to cook food on a metal frame over direct heat or an open fire",
+      "synonyms": ["barbecue", "broil", "char"],
+      "collocations": ["grill the chicken", "grill over charcoal", "grill some vegetables"],
+      "example_simple": "We like to grill fish and vegetables in the summer.",
+      "example_complex": "He carefully grilled the steaks over glowing coals until they were perfectly seared on the outside."
+    },
+    "a8506aa2-1e17-4935-b9e9-262db45c240a": {
+      "difficulty": "6.0"
+    },
+    "pubcol-w-cd12af96fa5c9a02": {
+      "part_of_speech": "noun",
+      "definition_en": "the solid surface of the earth that we stand and walk on",
+      "synonyms": ["earth", "land", "soil", "floor"],
+      "collocations": ["fall to the ground", "lie on the ground", "solid ground"],
+      "example_simple": "The children sat on the ground to play.",
+      "example_complex": "After the earthquake, deep cracks appeared in the ground across the entire valley."
+    },
+    "a4ef24f9-ac7b-47ae-841a-4246b3fe4535": {
+      "difficulty": "8.0"
+    },
+    "a1d8d3ba-a803-4a1d-b9e5-c11fc4071975": {
+      "difficulty": "8.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˌɡɑːdɪd ˈskeptɪsɪzəm/",
+      "definition_en": "cautious, reserved doubt or distrust that holds back full belief"
+    },
+    "59661585-d6a2-4123-8353-df19906e2e23": {
+      "difficulty": "8.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˌɡuːbənəˈtɔːriəl ɪˈlekʃnz/",
+      "definition_en": "elections held to choose the governor of a US state"
+    },
+    "pubcol-w-59e129046973306c": {
+      "difficulty": "5.0",
+      "ipa": "/ˌɡes ˈwɒt/"
+    }
+  }
+}

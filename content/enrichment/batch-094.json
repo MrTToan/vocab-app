@@ -1,0 +1,175 @@
+{
+  "meta": { "batch": "batch-094", "authored_by": "claude", "count": 25 },
+  "words": {
+    "bc5ac3ac-d4de-4c79-8aba-76cc171cd341": {
+      "difficulty": "6.0",
+      "ipa": "/piːk/"
+    },
+    "pubcol-w-fe16e3fc08a5de4a": {
+      "difficulty": "6.0",
+      "synonyms": ["high season", "busy season", "rush period"],
+      "collocations": ["during peak season", "peak season prices", "peak season traffic"],
+      "example_simple": "Hotels are much more expensive during the peak season.",
+      "example_complex": "Tour operators hire extra staff for the peak season, when visitor numbers can triple almost overnight.",
+      "definition_en": "the busiest time of year, when demand and prices are highest",
+      "ipa": "/piːk ˈsiːzən/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "mùa cao điểm"
+    },
+    "eff959b2-a886-4f00-a486-6fd6b83903f2": {
+      "difficulty": "6.0",
+      "definition_en": "a small, smooth, rounded stone",
+      "ipa": "/ˈpebəl/",
+      "part_of_speech": "noun"
+    },
+    "c07f2938-b15e-4d3d-a761-d9e7565cf09d": {
+      "difficulty": "7.0",
+      "definition_en": "to sell small goods informally, often going from place to place; to promote something aggressively",
+      "ipa": "/ˈpedəl/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-fa95ea715aa6ca95": {
+      "synonyms": ["walker", "foot passenger", "person on foot"],
+      "collocations": ["pedestrian crossing", "pedestrian zone", "careful pedestrian"],
+      "example_simple": "A pedestrian was waiting to cross the busy road.",
+      "example_complex": "The city widened its pavements to make the centre safer and more welcoming for pedestrians.",
+      "definition_en": "a person walking rather than travelling in a vehicle",
+      "part_of_speech": "noun"
+    },
+    "3735eace-2b03-40f9-86b7-222c02674330": {
+      "difficulty": "7.0",
+      "definition_en": "relating to the medical care of children",
+      "ipa": "/ˌpiːdiˈætrɪk/",
+      "part_of_speech": "adjective"
+    },
+    "787770a4-5e2d-454e-957a-523f777c7151": {
+      "difficulty": "7.0",
+      "definition_en": "the body of laws that define crimes and their punishments",
+      "ipa": "/ˈpiːnəl kəʊd/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-4683630e999028a0": {
+      "synonyms": ["retiree", "senior citizen", "old-age pensioner"],
+      "collocations": ["state pensioner", "pensioners on low incomes", "a group of pensioners"],
+      "example_simple": "The bus was full of pensioners heading to the market.",
+      "example_complex": "The government introduced a heating allowance to help pensioners cope with rising energy costs."
+    },
+    "pubcol-w-be70095bb95741d5": {
+      "synonyms": ["luxury flat", "rooftop apartment", "top-floor suite"],
+      "collocations": ["luxury penthouse", "penthouse suite", "penthouse with a view"],
+      "example_simple": "They rented a penthouse with a beautiful view of the city.",
+      "example_complex": "The developer marketed the top-floor penthouse as the building's crown jewel, complete with a private roof terrace."
+    },
+    "pubcol-w-1c37ff78d7ff2a0e": {
+      "synonyms": ["poverty", "destitution", "hardship"],
+      "collocations": ["live in penury", "reduced to penury", "a life of penury"],
+      "example_simple": "After losing his job, he was forced to live in penury.",
+      "example_complex": "The once-wealthy family slid into penury after a series of disastrous investments."
+    },
+    "pubcol-w-48619257272a3113": {
+      "synonyms": ["notice", "recognise", "sense"],
+      "collocations": ["perceive a threat", "perceive a difference", "widely perceived as"],
+      "example_simple": "Many people perceive him as a strong leader.",
+      "example_complex": "How risk is perceived often depends more on emotion than on the actual statistical danger."
+    },
+    "d3050bb8-84d1-4783-9532-b9252c3ffed7": {
+      "difficulty": "8.0",
+      "definition_en": "(of liquid) to pass slowly through a porous material; (of an idea) to spread gradually",
+      "ipa": "/ˈpɜːkəleɪt/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-40828c4f1b0e7076": {
+      "difficulty": "7.0",
+      "synonyms": ["conduct experiments on", "carry out tests on", "run trials on"],
+      "collocations": ["perform experiments on animals", "perform experiments on samples", "perform experiments on patients"],
+      "example_simple": "Scientists perform experiments on plants to see how they grow.",
+      "example_complex": "The laboratory was criticised for performing experiments on animals without adequate ethical oversight.",
+      "definition_en": "to carry out scientific tests on a person or thing to study a reaction or effect",
+      "ipa": "/pəˈfɔːm ɪkˈsperɪmənts ɒn/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "thực hiện thí nghiệm trên (ai/cái gì)"
+    },
+    "pubcol-w-476ee0f6af1d78aa": {
+      "synonyms": ["efficiency", "output", "achievement"],
+      "collocations": ["improve performance", "strong performance", "performance level"],
+      "example_simple": "The new engine improved the car's performance.",
+      "example_complex": "Analysts linked the company's poor quarterly performance to weak demand in overseas markets.",
+      "definition_en": "how well a person, machine, or system does a task or works",
+      "part_of_speech": "noun"
+    },
+    "241ed0c4-0a20-438a-acbc-fd1a0f899066": {
+      "difficulty": "7.0",
+      "definition_en": "relating to the outer edge of something; of secondary importance",
+      "ipa": "/pəˈrɪfərəl/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-48fe601c8422eecf": {
+      "synonyms": ["die", "spoil", "go bad"],
+      "collocations": ["perish in the cold", "food will perish", "perish without water"],
+      "example_simple": "Fresh fruit will perish quickly in hot weather.",
+      "example_complex": "Without refrigeration, the vaccines would perish long before reaching remote villages.",
+      "vi_meaning_correction": "chết; hư hỏng, thối rữa"
+    },
+    "pubcol-w-f2c0330844f2faf2": {
+      "synonyms": ["liar", "false witness", "oath-breaker"],
+      "collocations": ["convicted perjurer", "expose a perjurer", "a known perjurer"],
+      "example_simple": "The witness turned out to be a perjurer who had lied in court.",
+      "example_complex": "The defence lawyer set out to prove that the key witness was a perjurer whose testimony could not be trusted."
+    },
+    "pubcol-w-c16975ccdbe43ee5": {
+      "synonyms": ["false testimony", "lying under oath", "false evidence"],
+      "collocations": ["commit perjury", "charged with perjury", "accused of perjury"],
+      "example_simple": "He was sent to prison for committing perjury.",
+      "example_complex": "Lying under oath amounts to perjury, a serious offence that can undermine the entire justice system."
+    },
+    "pubcol-w-edc12fcc9b0f1161": {
+      "synonyms": ["benefit", "bonus", "advantage"],
+      "collocations": ["job perks", "one of the perks", "generous perks"],
+      "example_simple": "Free lunches are one of the perks of working here.",
+      "example_complex": "The company attracts talented staff with perks ranging from flexible hours to on-site childcare.",
+      "vi_meaning_correction": "quyền lợi, đãi ngộ thêm (ngoài lương)"
+    },
+    "pubcol-w-8699f2b04f0dd007": {
+      "synonyms": ["lasting", "permanent", "long-term"],
+      "collocations": ["permanent job", "permanent damage", "permanent solution"],
+      "example_simple": "She finally found a permanent job after years of temporary work.",
+      "example_complex": "The accident left him with permanent damage to his hearing that no surgery could reverse.",
+      "definition_en": "lasting or intended to last for a long time or forever",
+      "part_of_speech": "adjective",
+      "vi_meaning_correction": "lâu dài, vĩnh viễn, cố định"
+    },
+    "3f889b4e-6d3a-4525-b9b0-5c4e3c930d87": {
+      "difficulty": "8.0",
+      "definition_en": "the quality of a material that allows liquids or gases to pass through it",
+      "ipa": "/ˌpɜːmiəˈbɪləti/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-6d244f58364223af": {
+      "synonyms": ["authorisation", "consent", "approval"],
+      "collocations": ["ask for permission", "grant permission", "without permission"],
+      "example_simple": "You need permission from your teacher to leave early.",
+      "example_complex": "The company was fined for building the extension without planning permission from the local council.",
+      "definition_en": "official agreement allowing someone to do something",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-348850bf29a70b7c": {
+      "synonyms": ["lenient", "tolerant", "liberal"],
+      "collocations": ["permissive parents", "permissive attitude", "too permissive"],
+      "example_simple": "His parents were permissive and let him do almost anything.",
+      "example_complex": "Critics argued that an increasingly permissive society had eroded traditional discipline in schools.",
+      "vi_meaning_correction": "dễ dãi, khoan dung, dễ chấp nhận"
+    },
+    "8fb6c8c7-c842-46bd-85b0-8a8cf4505131": {
+      "difficulty": "7.0",
+      "definition_en": "at an angle of 90 degrees to a given line or surface",
+      "ipa": "/ˌpɜːpənˈdɪkjələr/",
+      "part_of_speech": "adjective"
+    },
+    "0d4c10af-b67d-47ac-97a0-30462631fddc": {
+      "difficulty": "7.0",
+      "definition_en": "in a way that never ends or seems to happen all the time",
+      "ipa": "/pəˈpetʃuəli/",
+      "part_of_speech": "adverb"
+    }
+  }
+}

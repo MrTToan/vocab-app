@@ -1,0 +1,230 @@
+{
+  "meta": { "batch": "batch-080", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-0fcac35afc041c97": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/meɪk ˈsmɔːl tɔːk/",
+      "definition_en": "to have a polite, casual conversation about unimportant things",
+      "synonyms": ["chat", "chit-chat", "make conversation", "engage in pleasantries"],
+      "collocations": ["make small talk with a colleague", "make small talk at a party", "struggle to make small talk"],
+      "example_simple": "We made small talk about the weather while we waited for the bus.",
+      "example_complex": "Although he found it awkward, he forced himself to make small talk with the other guests before the meeting began."
+    },
+    "pubcol-w-0de192c342517ae1": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/meɪk ˈtiː/",
+      "definition_en": "to prepare tea by adding hot water to tea leaves or a tea bag",
+      "synonyms": ["brew tea", "prepare tea", "steep tea"],
+      "collocations": ["make a cup of tea", "make tea for everyone", "offer to make tea"],
+      "example_simple": "I'll make some tea while you sit down and relax.",
+      "example_complex": "She always makes a fresh pot of tea for her guests the moment they arrive."
+    },
+    "pubcol-w-8440b5a36be7f445": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/meɪk ˈtrævl əˌreɪndʒmənts/",
+      "definition_en": "to organise the details of a journey, such as transport and accommodation",
+      "synonyms": ["plan a trip", "book travel", "organise a journey", "arrange transport"],
+      "collocations": ["make travel arrangements for the team", "make all the travel arrangements", "help make travel arrangements"],
+      "example_simple": "My assistant will make the travel arrangements for the conference.",
+      "example_complex": "Before the delegation could leave, someone had to make travel arrangements for flights, hotels and local transfers."
+    },
+    "265c76a0-4cd9-4927-83e7-345e11535f5f": {
+      "difficulty": "6.0",
+      "ipa": "/ˌmeɪk ˈʌp/"
+    },
+    "pubcol-w-662797b75bbffe71": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˌmeɪk ˈʌp fɔː/",
+      "definition_en": "to compensate for something bad or missing",
+      "synonyms": ["compensate for", "atone for", "offset", "balance out"],
+      "collocations": ["make up for lost time", "make up for a mistake", "try to make up for it"],
+      "example_simple": "He bought her flowers to make up for forgetting her birthday.",
+      "example_complex": "The team worked overtime for weeks to make up for the delays caused earlier in the project."
+    },
+    "pubcol-w-cc87206d63b7ef40": {
+      "difficulty": "6.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ˌmeɪk ʌp wʌnz ˈmaɪnd/",
+      "definition_en": "to reach a decision after considering something",
+      "synonyms": ["decide", "resolve", "settle on", "come to a decision"],
+      "collocations": ["make up your mind quickly", "can't make up my mind", "finally made up her mind"],
+      "example_simple": "Hurry up and make up your mind — the shop is closing soon.",
+      "example_complex": "After weeks of hesitation, she finally made up her mind to accept the job abroad."
+    },
+    "pubcol-w-f6155390d02d3d6e": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˌmeɪk ˈjuːs ɒv/",
+      "definition_en": "to use something for a useful purpose; take advantage of",
+      "synonyms": ["use", "utilise", "employ", "take advantage of"],
+      "collocations": ["make good use of", "make full use of", "make use of resources"],
+      "example_simple": "You should make use of the library while you are a student.",
+      "example_complex": "The company made effective use of social media to reach a much wider audience."
+    },
+    "pubcol-w-1d98bd7d93c4152e": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/meɪk ˈvɜːsɪz/",
+      "definition_en": "to compose poetry",
+      "synonyms": ["write poetry", "compose verse", "versify"],
+      "collocations": ["make verses about nature", "sit and make verses", "make verses for a wedding"],
+      "example_simple": "As a boy he loved to make verses about the sea.",
+      "example_complex": "In his spare time the professor made verses that he never dared to show anyone."
+    },
+    "pubcol-w-9f5dd36b60107ebb": {
+      "difficulty": "8.0",
+      "part_of_speech": "phrase",
+      "ipa": "/meɪk wɪð/",
+      "definition_en": "to produce or supply something quickly (informal)",
+      "synonyms": ["produce", "hand over", "supply", "come up with"],
+      "collocations": ["make with the details", "make with the money", "make with the jokes"],
+      "example_simple": "Come on, make with the popcorn — the film is starting!",
+      "example_complex": "The audience grew restless, waiting for the comedian to make with the punchlines they had paid for."
+    },
+    "pubcol-w-52f00462a3e4063b": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/meɪk / ɜːn ˈmʌni/",
+      "definition_en": "to earn money through work or business",
+      "synonyms": ["earn money", "make a living", "generate income", "bring in cash"],
+      "collocations": ["make money online", "earn good money", "make money from investments"],
+      "example_simple": "She makes money by selling handmade jewellery.",
+      "example_complex": "Many young entrepreneurs are finding new ways to make money without ever setting up a physical shop."
+    },
+    "pubcol-w-2949450545931999": {
+      "difficulty": "8.0",
+      "part_of_speech": "idiom",
+      "ipa": "/meɪk / set ðə ˈfɜː flaɪ/",
+      "definition_en": "to cause a fierce quarrel or angry commotion",
+      "synonyms": ["cause a row", "stir up trouble", "start a fight", "cause an uproar"],
+      "collocations": ["really make the fur fly", "that made the fur fly", "set the fur flying"],
+      "example_simple": "Her comment about the budget really made the fur fly at the meeting.",
+      "example_complex": "Announcing the redundancies without warning was bound to set the fur flying among the staff."
+    },
+    "pubcol-w-794e54272ac24266": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/meɪk ə dɪˈmɑːnd (ɒn)/",
+      "definition_en": "to firmly ask for something or place a heavy requirement on someone",
+      "synonyms": ["demand", "require", "call for", "insist on"],
+      "collocations": ["make demands on your time", "make a demand for higher pay", "make constant demands"],
+      "example_simple": "The job makes a lot of demands on my time.",
+      "example_complex": "The union made a formal demand for better working conditions before agreeing to end the strike."
+    },
+    "pubcol-w-010fd9d734bb575d": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/meɪk ə ˈprɒfɪt/",
+      "definition_en": "to earn more money than you spend in a business activity",
+      "synonyms": ["turn a profit", "earn money", "profit", "come out ahead"],
+      "collocations": ["make a healthy profit", "make a profit on the sale", "fail to make a profit"],
+      "example_simple": "The shop finally made a profit in its second year.",
+      "example_complex": "By cutting costs and raising prices slightly, the company managed to make a modest profit despite the recession."
+    },
+    "pubcol-w-07a888bfe45fd670": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/meɪk ə ˈwɪʃ/",
+      "definition_en": "to silently express a hope for something to come true",
+      "synonyms": ["wish", "hope for", "long for"],
+      "collocations": ["make a wish and blow out the candles", "close your eyes and make a wish", "make a birthday wish"],
+      "example_simple": "Make a wish before you blow out the candles!",
+      "example_complex": "As the shooting star crossed the sky, she closed her eyes and made a wish she had held for years."
+    },
+    "pubcol-w-4c5fdae83be76f97": {
+      "difficulty": "6.0",
+      "part_of_speech": "idiom",
+      "ipa": "/meɪk ə ˈfʌs/",
+      "definition_en": "to complain or become excited about something unimportant",
+      "synonyms": ["complain", "kick up a fuss", "make a scene", "fret"],
+      "collocations": ["make a fuss about nothing", "make a big fuss", "stop making a fuss"],
+      "example_simple": "Don't make a fuss — it's only a small scratch.",
+      "example_complex": "He made such a fuss over the tiny error that everyone forgot how well the rest of the report was written."
+    },
+    "pubcol-w-167162de4b3ff8f8": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/meɪk ə ˈmes/",
+      "definition_en": "to make a place dirty or untidy, or to spoil something",
+      "synonyms": ["create a mess", "mess up", "make a muddle", "botch"],
+      "collocations": ["make a mess in the kitchen", "make a real mess of it", "clean up the mess"],
+      "example_simple": "The children made a mess in the living room.",
+      "example_complex": "By trying to fix the software himself, he only made a bigger mess of the whole system."
+    },
+    "pubcol-w-19cb20500be67d49": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/meɪk ən ɪnˈkwaɪəri/",
+      "definition_en": "to ask for information about something",
+      "synonyms": ["ask", "inquire", "request information", "look into"],
+      "collocations": ["make an inquiry about a booking", "make inquiries into the matter", "make a formal inquiry"],
+      "example_simple": "I made an inquiry about the price of the tickets.",
+      "example_complex": "The journalist made discreet inquiries into the company's finances before publishing her story."
+    },
+    "pubcol-w-35a7dc833a8032c4": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/meɪk ə ˈnɔɪz/",
+      "definition_en": "to produce sound, especially loud or unwanted sound",
+      "synonyms": ["be noisy", "make a racket", "make a din"],
+      "collocations": ["make a lot of noise", "stop making noise", "make a strange noise"],
+      "example_simple": "Please don't make so much noise — the baby is sleeping.",
+      "example_complex": "The old engine made a worrying noise every time the car climbed a steep hill."
+    },
+    "pubcol-w-b24712037738d33f": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ˌmeɪkɪŋ ə ˈmaʊntɪn aʊt əv ə ˈmoʊlhɪl/",
+      "definition_en": "to treat a small problem as if it were far more serious than it is",
+      "synonyms": ["exaggerate", "overreact", "blow out of proportion", "overstate"],
+      "collocations": ["stop making a mountain out of a molehill", "always making a mountain out of a molehill", "it's just making a mountain out of a molehill"],
+      "example_simple": "It's only a small delay — you're making a mountain out of a molehill.",
+      "example_complex": "Rather than making a mountain out of a molehill, the manager calmly explained that the minor bug would be fixed within the hour."
+    },
+    "pubcol-w-08a7c28510a26c3b": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˌmæn ˈmeɪd dɪˈzɑːstə/",
+      "definition_en": "a catastrophe caused by human activity rather than nature",
+      "synonyms": ["human-caused disaster", "artificial disaster", "human-made catastrophe"],
+      "collocations": ["a man-made disaster on a huge scale", "prevent man-made disasters", "man-made environmental disaster"],
+      "example_simple": "The oil spill was a man-made disaster that harmed thousands of animals.",
+      "example_complex": "Unlike earthquakes or floods, many man-made disasters could be avoided with stricter safety regulations.",
+      "vi_meaning_correction": "thảm họa do con người gây ra (khác với thiên tai như động đất, lũ lụt, bão)"
+    },
+    "pubcol-w-dfe0ef17be118ac0": {
+      "synonyms": ["hair", "locks", "ruff"],
+      "collocations": ["a lion's mane", "flowing mane", "a horse's mane"],
+      "example_simple": "The lion shook its thick mane in the sun.",
+      "example_complex": "Her long mane of golden hair fell loose over her shoulders as she turned to face the crowd."
+    },
+    "53f1f785-3ebe-480e-abce-a2419dfad798": {
+      "difficulty": "8.0",
+      "part_of_speech": "noun",
+      "ipa": "/məˌnuːvərəˈbɪləti/",
+      "definition_en": "the ability of a vehicle or object to be moved and controlled easily"
+    },
+    "aaf06642-899e-43e3-a51d-90ddfae0a195": {
+      "difficulty": "7.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˈmæŋɡroʊv ˌfɒrɪsts/",
+      "definition_en": "coastal forests of salt-tolerant trees that grow in tidal, muddy water"
+    },
+    "905c1ba4-014d-41c9-88dd-61e9f69af92d": {
+      "difficulty": "7.0",
+      "part_of_speech": "verb",
+      "ipa": "/ˈmænɪfest ˈsʌmθɪŋ/",
+      "definition_en": "to show or display something clearly through actions or signs"
+    },
+    "23d55b9b-589d-456d-8933-299462408b9f": {
+      "difficulty": "7.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˌmænɪˈfestoʊ/",
+      "definition_en": "a public written declaration of the aims and policies of a group or leader"
+    }
+  }
+}

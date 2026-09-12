@@ -1,0 +1,191 @@
+{
+  "meta": { "batch": "batch-038", "authored_by": "claude", "count": 25 },
+  "words": {
+    "912e6931-cb9c-46d2-976e-41c8d3a69e23": {
+      "difficulty": "8.0",
+      "definition_en": "to cause something to spread out and gradually disappear; to scatter or dispel",
+      "ipa": "/dɪˈsɪpeɪt/",
+      "part_of_speech": "verb"
+    },
+    "11e51cff-ee37-46c7-ad79-bb7632bac3d1": {
+      "difficulty": "7.0",
+      "definition_en": "to make a feeling, belief, or idea go away",
+      "ipa": "/dɪˈspel/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-32acf02c559968cc": {
+      "difficulty": "7.0",
+      "synonyms": ["beat the heat", "cool down", "relieve the heat"],
+      "collocations": ["dispel the heat of summer with a fan", "help dispel the heat", "dispel the summer heat"],
+      "example_simple": "A cold drink can dispel the heat of summer for a while.",
+      "example_complex": "The shaded courtyard, cooled by a gentle breeze and a trickling fountain, did much to dispel the heat of summer.",
+      "definition_en": "to drive away or relieve the intense warmth of the summer season",
+      "ipa": "/dɪˈspel ðə hiːt əv ˈsʌmə/",
+      "part_of_speech": "phrase"
+    },
+    "d8b0849b-671d-4329-9e77-31840615e9b9": {
+      "difficulty": "7.0",
+      "definition_en": "to force someone or something out of its usual or proper place; to take the place of",
+      "ipa": "/dɪsˈpleɪs/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-59b189070af751d4": {
+      "synonyms": ["show", "exhibit", "present", "showcase"],
+      "collocations": ["display goods", "display emotion", "on display"],
+      "example_simple": "The shop displays its new products in the front window.",
+      "example_complex": "The museum displays a remarkable collection of artefacts that document the region's ancient history.",
+      "definition_en": "to put something where people can see it, or to show a quality or feeling",
+      "part_of_speech": "verb"
+    },
+    "fd9a1c80-03be-4f86-b1c9-36da41bf58e0": {
+      "difficulty": "6.0",
+      "synonyms": ["throwaway diapers", "single-use nappies", "disposable nappies"],
+      "definition_en": "diapers designed to be thrown away after a single use",
+      "ipa": "/dɪˈspəʊzəbl ˈdaɪəpəz/",
+      "part_of_speech": "noun"
+    },
+    "0c4ca6c5-14e9-4373-8cd2-cbd7bee170d9": {
+      "difficulty": "7.0",
+      "synonyms": ["take-home pay", "net income", "spendable income"],
+      "definition_en": "the money a person has left to spend or save after taxes are paid",
+      "ipa": "/dɪˈspəʊzəbl ˈɪnkʌm/",
+      "part_of_speech": "noun"
+    },
+    "51b38512-f427-4b23-9dcb-6a13f128ccf7": {
+      "difficulty": "6.0",
+      "definition_en": "to get rid of something, or to deal with and finish a task or problem",
+      "ipa": "/dɪˈspəʊz əv/",
+      "part_of_speech": "phrase"
+    },
+    "8b102a16-0ca6-48cb-9dd5-0c787f2d3e91": {
+      "difficulty": "7.0",
+      "definition_en": "a person's natural qualities of character or mood; the way something is arranged",
+      "ipa": "/ˌdɪspəˈzɪʃn/",
+      "part_of_speech": "noun"
+    },
+    "e62fc213-29da-435a-b6eb-3e2e503991a7": {
+      "difficulty": "6.0",
+      "definition_en": "an argument or disagreement, especially a formal or prolonged one",
+      "ipa": "/dɪˈspjuːt/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-ad8c780153fff316": {
+      "difficulty": "8.0",
+      "synonyms": ["fight for every inch", "contest fiercely", "resist at every step"],
+      "collocations": ["dispute every inch of ground with the enemy", "forced to dispute every inch of ground", "dispute each inch of ground"],
+      "example_simple": "The soldiers refused to give up and disputed every inch of ground.",
+      "example_complex": "Outnumbered but determined, the defenders disputed every inch of ground, making the invaders pay dearly for their advance.",
+      "definition_en": "to fight hard to hold or gain each small part of a territory or position",
+      "ipa": "/dɪˈspjuːt ˈevri ɪntʃ əv ɡraʊnd/",
+      "part_of_speech": "phrase"
+    },
+    "782eccb9-2611-4898-8b42-6d78934f9e4c": {
+      "difficulty": "7.0",
+      "definition_en": "to cut something open to study it, or to analyse something in great detail",
+      "ipa": "/dɪˈsekt/",
+      "part_of_speech": "verb"
+    },
+    "f5813965-4129-47cd-83a8-6ea11b99e1a0": {
+      "difficulty": "7.0"
+    },
+    "27b3c873-1789-452d-bcbb-6724c24f46ee": {
+      "difficulty": "7.0",
+      "definition_en": "to gradually disappear or scatter, or to cause this to happen",
+      "ipa": "/ˈdɪsɪpeɪt/",
+      "part_of_speech": "verb"
+    },
+    "404ba716-03ee-4ff7-96c1-e2f29e6bf5ff": {
+      "difficulty": "8.0",
+      "definition_en": "to separate or stop being connected with a person, group, or idea",
+      "ipa": "/dɪˈsəʊʃieɪt/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-104082c0efcf62ca": {
+      "synonyms": ["gap", "space", "interval", "range"],
+      "collocations": ["a long distance", "keep your distance", "within walking distance"],
+      "example_simple": "The distance between my house and the school is about two kilometres.",
+      "example_complex": "Advances in communication have shrunk the distance between nations, allowing people to collaborate across continents in real time.",
+      "definition_en": "the amount of space between two points, places, or things",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-d4fd228948d766c1": {
+      "difficulty": "7.0",
+      "ipa": "/dɪˈstɪŋkʃn/"
+    },
+    "2caf197b-38cc-4d46-a9a1-c2005d31481c": {
+      "difficulty": "7.0",
+      "definition_en": "a lack of trust or confidence in someone or something",
+      "ipa": "/dɪsˈtrʌst/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-f7b617c1fd0eaed4": {
+      "synonyms": ["bother", "interrupt", "unsettle", "disrupt"],
+      "collocations": ["disturb the peace", "sorry to disturb you", "disturb someone's sleep"],
+      "example_simple": "Please be quiet so you don't disturb the other students.",
+      "example_complex": "The construction noise continued late into the night, disturbing residents who had to wake early for work.",
+      "definition_en": "to interrupt or interfere with someone, or to make someone feel anxious or upset",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-ad8e0aad84b64025": {
+      "difficulty": "8.0",
+      "synonyms": ["upset the ecological balance", "damage the ecosystem", "unbalance nature"],
+      "collocations": ["disturb the ecological balance of a region", "human activity disturbs the ecological balance", "seriously disturb the ecological balance"],
+      "example_simple": "Cutting down too many trees can disturb the ecological balance.",
+      "example_complex": "Introducing a non-native species into the wetlands could disturb the ecological balance and threaten the survival of local wildlife.",
+      "definition_en": "to disrupt the natural equilibrium among living things and their environment",
+      "ipa": "/dɪˈstɜːb ðə ˌiːkəˈlɒdʒɪkl ˈbæləns/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-652b6edaa8ae94e3": {
+      "difficulty": "8.0",
+      "synonyms": ["plunge in", "throw yourself into it", "get stuck in"],
+      "collocations": ["dive in feet first", "jump in feet first without hesitation", "just dive in"],
+      "example_simple": "Instead of worrying, she decided to dive in feet first and start the project.",
+      "example_complex": "Rather than spending months planning, the young entrepreneur jumped in feet first, learning the ins and outs of the business as he went.",
+      "definition_en": "to start or take on something quickly and eagerly, without hesitation or worry",
+      "ipa": "/daɪv ɪn fiːt fɜːst/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-704438770464c8a0": {
+      "difficulty": "5.0",
+      "synonyms": ["conduct an experiment", "carry out an experiment", "run a test"],
+      "collocations": ["do an experiment in class", "do a science experiment", "do an experiment on plants"],
+      "example_simple": "We did an experiment in science class to see how plants grow.",
+      "example_complex": "Before drawing any conclusions, the researchers did a carefully controlled experiment to test their hypothesis.",
+      "definition_en": "to carry out a scientific test or procedure to discover or prove something",
+      "ipa": "/duː ən ɪkˈsperɪmənt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-9e192dea722e6c99": {
+      "difficulty": "5.0",
+      "synonyms": ["complete an assignment", "do homework", "finish a task"],
+      "collocations": ["do an assignment on time", "do a written assignment", "do the assignment at home"],
+      "example_simple": "I have to do my assignment before class tomorrow.",
+      "example_complex": "Students who do each assignment thoroughly tend to perform better in their final examinations.",
+      "definition_en": "to complete a piece of work or task given by a teacher",
+      "ipa": "/duː əˈsaɪnmənt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-54533c418b56307c": {
+      "difficulty": "7.0",
+      "synonyms": ["fight", "struggle", "wage war", "combat"],
+      "collocations": ["do battle with rivals", "ready to do battle", "do battle over an issue"],
+      "example_simple": "The two teams will do battle in the final match on Sunday.",
+      "example_complex": "Consumer groups continue to do battle with large corporations over misleading advertising.",
+      "definition_en": "to fight or struggle against an opponent, whether physically or figuratively",
+      "ipa": "/duː ˈbætl/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "chiến đấu, giao chiến (với ai/cái gì)"
+    },
+    "pubcol-w-b7c96526fd834fc6": {
+      "difficulty": "5.0",
+      "synonyms": ["trade", "conduct business", "run a company"],
+      "collocations": ["do business with a company", "a good place to do business", "do business online"],
+      "example_simple": "Our company does business with many countries in Asia.",
+      "example_complex": "Establishing trust is essential if you want to do business successfully in unfamiliar international markets.",
+      "definition_en": "to buy, sell, or trade goods and services; to engage in commercial activity",
+      "ipa": "/duː ˈbɪznəs/",
+      "part_of_speech": "phrase"
+    }
+  }
+}

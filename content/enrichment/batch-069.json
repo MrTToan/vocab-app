@@ -1,0 +1,180 @@
+{
+  "meta": { "batch": "batch-069", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-691911bb26d8155e": {
+      "synonyms": ["disturb", "cut off", "break in", "disrupt"],
+      "collocations": ["interrupt a conversation", "sorry to interrupt", "interrupt the flow"],
+      "example_simple": "Please don't interrupt me while I'm speaking.",
+      "example_complex": "The chairman politely asked the audience not to interrupt the presentation until the question session began.",
+      "definition_en": "to stop someone from speaking or something from continuing for a short time",
+      "part_of_speech": "verb"
+    },
+    "e7b91db1-8120-4376-8af1-639f58c6706f": {
+      "difficulty": "6.0",
+      "definition_en": "connecting or existing between two or more states",
+      "ipa": "/ˈɪntərsteɪt/",
+      "part_of_speech": "adjective"
+    },
+    "f7e3e43b-c7ff-46c9-a4dc-7fc0f1b4a4eb": {
+      "difficulty": "8.0",
+      "definition_en": "the scientific investigation of space beyond a solar system, between the stars",
+      "ipa": "/ˌɪntərˈstelər ˌekspləˈreɪʃn/",
+      "part_of_speech": "phrase"
+    },
+    "879d92f1-7af0-4f6a-8c84-2eabd42cff7f": {
+      "difficulty": "7.0",
+      "definition_en": "an illness that affects the intestines or digestive tract",
+      "ipa": "/ɪnˈtestɪnl dɪˈziːz/",
+      "part_of_speech": "phrase"
+    },
+    "06e546a0-dc13-48b5-b7ab-141bf78284f6": {
+      "difficulty": "7.0",
+      "definition_en": "open sores that develop on the lining of the intestines",
+      "ipa": "/ɪnˈtestɪnl ˈʌlsərz/",
+      "part_of_speech": "phrase"
+    },
+    "8c4ef3a5-7206-4fc6-a583-8941f69358a8": {
+      "difficulty": "7.0",
+      "definition_en": "having many small parts or details arranged in a complicated way",
+      "ipa": "/ˈɪntrɪkət/",
+      "part_of_speech": "adjective"
+    },
+    "cea39275-b6c1-4b85-8c1b-c14db6a5fb53": {
+      "difficulty": "7.0",
+      "definition_en": "affecting someone in a way that annoys them and invades their privacy",
+      "ipa": "/ɪnˈtruːsɪv/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-69cde14c6f8b1303": {
+      "difficulty": "6.0",
+      "synonyms": ["on key", "off key", "harmonious", "discordant"],
+      "collocations": ["sing in tune", "play out of tune", "perfectly in tune"],
+      "example_simple": "The choir sang beautifully in tune, but one guitar was out of tune.",
+      "example_complex": "However carefully she tuned the old piano, a few notes remained stubbornly out of tune during the concert.",
+      "definition_en": "at the correct musical pitch (in tune) versus at an incorrect pitch (out of tune)",
+      "ipa": "/ɪn tjuːn aʊt əv tjuːn/",
+      "part_of_speech": "phrase"
+    },
+    "26760c84-5e3c-4ea0-afea-7b3a6ab43b12": {
+      "difficulty": "7.0",
+      "definition_en": "always; on every occasion, without exception",
+      "ipa": "/ɪnˈveəriəbli/",
+      "part_of_speech": "adverb"
+    },
+    "pubcol-w-1e489c2d76b5aefa": {
+      "synonyms": ["create", "devise", "design", "come up with"],
+      "collocations": ["invent a machine", "invent a story", "invent a new method"],
+      "example_simple": "Who invented the telephone?",
+      "example_complex": "The engineer spent years trying to invent a device that could purify water using only sunlight.",
+      "definition_en": "to create or design something that has never existed before",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-94ac05762d597279": {
+      "synonyms": ["creation", "innovation", "device", "discovery"],
+      "collocations": ["a brilliant invention", "the invention of the wheel", "a useful invention"],
+      "example_simple": "The printing press was a very important invention.",
+      "example_complex": "Many people regard the smartphone as one of the most influential inventions of the modern era.",
+      "definition_en": "something new that has been created or designed",
+      "part_of_speech": "noun"
+    },
+    "daccaae9-fe77-412d-88ed-d1faffd4660c": {
+      "difficulty": "8.0",
+      "example_complex": "By royal decree, the new governor was invested with sweeping powers over the colony's trade.",
+      "definition_en": "to give someone power, authority, or an important quality",
+      "ipa": "/ɪnˈvest wɪð/",
+      "part_of_speech": "verb",
+      "vi_meaning_correction": "trao cho ai quyền lực hay quyền hạn (đặc biệt trong công việc)"
+    },
+    "pubcol-w-ff2ccd73154c1c71": {
+      "difficulty": "6.0",
+      "ipa": "/ɪnˈvestɪɡeɪt/"
+    },
+    "pubcol-w-c3ab248e87bc3fb7": {
+      "difficulty": "6.0",
+      "synonyms": ["look into a crime", "probe a crime", "examine a case"],
+      "collocations": ["investigate a crime thoroughly", "police investigate the crime", "investigate the crime scene"],
+      "example_simple": "The police are investigating the crime.",
+      "example_complex": "A special team of detectives was assigned to investigate the crime, gathering evidence from every possible witness.",
+      "definition_en": "to carry out an official examination to find out the facts about a crime",
+      "ipa": "/ɪnˈvestɪɡeɪt ðə kraɪm/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "điều tra vụ án"
+    },
+    "ec29d9b5-55cc-4d08-98bb-550398f627b4": {
+      "difficulty": "8.0",
+      "definition_en": "to give someone energy and strength; to make something more lively",
+      "ipa": "/ɪnˈvɪɡəreɪt/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-baeba7e7b9ec453e": {
+      "synonyms": ["bill", "statement", "receipt", "account"],
+      "collocations": ["issue an invoice", "pay an invoice", "an outstanding invoice"],
+      "example_simple": "The company sent me an invoice for the repairs.",
+      "example_complex": "Once the goods have been delivered, the supplier will issue an invoice detailing every item and its unit price.",
+      "definition_en": "a document listing goods or services with the amount of money owed for them",
+      "part_of_speech": "noun"
+    },
+    "5bb91079-ddd2-424b-80c6-c4720d42623a": {
+      "difficulty": "7.0",
+      "definition_en": "to refer to or use a law, rule, or authority in support of an argument or action",
+      "ipa": "/ɪnˈvoʊk/",
+      "part_of_speech": "verb"
+    },
+    "c5607a5e-51cc-4d55-bdc9-9200dc54caf6": {
+      "difficulty": "8.0",
+      "definition_en": "the forced movement of people from their homes against their will",
+      "ipa": "/ɪnˈvɑːlənteri dɪsˈpleɪsmənt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-968d77ca9e41d0ed": {
+      "synonyms": ["include", "entail", "engage", "concern"],
+      "collocations": ["involve a risk", "be involved in a project", "involve a lot of work"],
+      "example_simple": "The job involves a lot of travelling.",
+      "example_complex": "Setting up the new laboratory involved months of careful planning and the cooperation of several departments.",
+      "definition_en": "to include something as a necessary part or to affect someone",
+      "part_of_speech": "verb"
+    },
+    "7d7ac283-c503-47b2-b146-133eb84ecfbe": {
+      "difficulty": "6.0",
+      "definition_en": "showing that you mean the opposite of what you say, often in an amusing way; strange because it is the opposite of what you expect",
+      "ipa": "/aɪˈrɑːnɪk/",
+      "part_of_speech": "adjective"
+    },
+    "4bbf923d-efe0-48f3-bcac-37b646a9755d": {
+      "difficulty": "8.0",
+      "definition_en": "a way of downplaying one's abilities that is meant to be understood as the opposite",
+      "ipa": "/aɪˈrɑːnɪk ˈmɑːdəsti/",
+      "part_of_speech": "phrase"
+    },
+    "a6f6c099-abf3-443d-8997-012676322e58": {
+      "difficulty": "8.0",
+      "synonyms": ["food irradiation", "treating food with radiation"],
+      "definition_en": "exposing food to radiation to kill bacteria and extend its shelf life",
+      "ipa": "/ɪˈreɪdieɪtɪŋ fuːd/",
+      "part_of_speech": "phrase"
+    },
+    "d01e0f50-8f9b-40cc-8031-95014f2feefb": {
+      "difficulty": "8.0",
+      "definition_en": "too strong or lively to be controlled or held back",
+      "ipa": "/ˌɪrɪˈpresəbl/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-449f001709362809": {
+      "difficulty": "7.0",
+      "synonyms": ["regardless of", "without regard to", "no matter"],
+      "collocations": ["irrespective of age", "irrespective of the cost", "irrespective of the outcome"],
+      "example_simple": "Everyone is welcome, irrespective of age.",
+      "example_complex": "The scholarship is awarded on academic merit alone, irrespective of the applicant's background or financial situation.",
+      "definition_en": "without considering something; regardless of",
+      "ipa": "/ˌɪrɪˈspektɪv əv/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "bất kể, bất chấp"
+    },
+    "0fa32cda-ef99-4ceb-9825-ab75f9e21a1a": {
+      "difficulty": "8.0",
+      "definition_en": "not showing the expected respect for official, important, or holy things",
+      "ipa": "/ɪˈrevərənt/",
+      "part_of_speech": "adjective"
+    }
+  }
+}

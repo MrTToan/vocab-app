@@ -1,0 +1,166 @@
+{
+  "meta": { "batch": "batch-133", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-4ced1e69d4fb7c2b": {
+      "synonyms": ["completely", "totally", "absolutely", "entirely"],
+      "collocations": ["utterly exhausted", "utterly ridiculous", "utterly impossible"],
+      "example_simple": "I was utterly exhausted after the long journey.",
+      "example_complex": "The proposal was utterly rejected by the committee, leaving no room for further negotiation."
+    },
+    "f93612f4-b3f2-4d69-90df-b725cd6bc9f5": {
+      "difficulty": "8.0",
+      "definition_en": "a psychological framework that classifies emotions by how pleasant or unpleasant they feel",
+      "ipa": "/ˈveɪləns ˈmɒdl̩/",
+      "part_of_speech": "noun"
+    },
+    "345101c0-b277-4ba8-9395-07a8f3383368": {
+      "difficulty": "7.0",
+      "definition_en": "a personal male attendant, or a service that parks cars for guests",
+      "ipa": "/ˈvæleɪ/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-e90682f2196e6abb": {
+      "difficulty": "5.0",
+      "synonyms": ["legal driving permit", "current driver's license"],
+      "collocations": ["hold a valid driving licence", "present a valid driving licence", "require a valid driving licence"],
+      "example_simple": "You must have a valid driving licence to rent a car.",
+      "example_complex": "Applicants for the delivery job are required to hold a valid driving licence and a clean safety record.",
+      "definition_en": "an official, currently legal document permitting a person to drive",
+      "ipa": "/ˈvælɪd ˈdraɪvɪŋ ˈlaɪsəns/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-f32b67c7e26342af": {
+      "synonyms": ["worth", "importance", "merit", "significance"],
+      "collocations": ["good value", "add value", "market value"],
+      "example_simple": "This phone offers great value for its price.",
+      "example_complex": "Investors carefully assessed the long-term value of the company before committing their funds.",
+      "definition_en": "the worth, usefulness, or importance of something",
+      "part_of_speech": "noun"
+    },
+    "daabea25-bfe5-4f97-8c7f-40ea9111a07f": {
+      "difficulty": "7.0",
+      "definition_en": "the deliberate destruction of or damage to public or private property",
+      "ipa": "/ˈvændəlɪzəm/",
+      "part_of_speech": "noun"
+    },
+    "d91dc311-de86-42c3-a8da-22a0d0d2c7ea": {
+      "difficulty": "8.0",
+      "definition_en": "to defeat someone thoroughly, especially in a competition or war",
+      "ipa": "/ˈvæŋkwɪʃ/",
+      "part_of_speech": "verb"
+    },
+    "9370628a-7615-4beb-9d03-b9fbb46d499c": {
+      "difficulty": "8.0",
+      "definition_en": "a toothed wheel whose size can be changed to alter gear ratios",
+      "ipa": "/ˈveəriəbl̩ saɪzd kɒɡ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-bee82315774bcca0": {
+      "difficulty": "6.0",
+      "synonyms": ["diverse scenery", "varied terrain", "mixed landscapes"],
+      "collocations": ["explore varied landscapes", "region of varied landscapes", "boast varied landscapes"],
+      "example_simple": "The country has varied landscapes, from beaches to mountains.",
+      "example_complex": "Travellers are drawn to the region for its varied landscapes, which shift from rolling hills to rugged coastlines within a few hours' drive.",
+      "definition_en": "areas of countryside that differ widely in their features and appearance",
+      "ipa": "/ˈveərid ˈlændskeɪps/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-7f1e513ca98efe12": {
+      "difficulty": "6.0",
+      "synonyms": ["expansive grasslands", "sprawling fields", "wide pastures"],
+      "collocations": ["roll across vast meadows", "graze in vast meadows", "stretch of vast meadows"],
+      "example_simple": "Cows grazed peacefully in the vast meadows.",
+      "example_complex": "Beyond the village lay vast meadows dotted with wildflowers, stretching all the way to the distant tree line.",
+      "definition_en": "very large, open areas of grassy land",
+      "ipa": "/vɑːst ˈmedəʊz/",
+      "part_of_speech": "phrase"
+    },
+    "47f61459-9d4d-4af3-9f42-c56a8e3bc4e0": {
+      "difficulty": "7.0",
+      "definition_en": "a very large open-surface excavation site where minerals are extracted from the ground",
+      "ipa": "/vɑːst strɪp maɪn/",
+      "part_of_speech": "phrase"
+    },
+    "7296190d-e3f1-4156-a6c0-372f9ffd43a3": {
+      "difficulty": "8.0",
+      "definition_en": "intense or forceful passion in feeling or expression",
+      "ipa": "/ˈviːəməns/",
+      "part_of_speech": "noun"
+    },
+    "623e126a-937f-4f79-800c-5b2e7eccfcf0": {
+      "difficulty": "8.0",
+      "definition_en": "showing very strong and forceful feeling",
+      "ipa": "/ˈviːəmənt/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-caf83e3e0df47d39": {
+      "synonyms": ["speed", "pace", "rate", "swiftness"],
+      "collocations": ["high velocity", "at great velocity", "velocity increases"],
+      "example_simple": "The ball travelled through the air at high velocity.",
+      "example_complex": "Engineers measured the velocity of the fluid as it passed through the narrow pipe."
+    },
+    "35777561-901a-458c-bbb5-ed15321e8bc4": {
+      "difficulty": "8.0",
+      "definition_en": "great respect or deep reverence, especially for someone or something sacred",
+      "ipa": "/ˌvenəˈreɪʃn̩/",
+      "part_of_speech": "noun"
+    },
+    "cc70f893-3ee9-41cc-8405-5e8ce6d7752d": {
+      "difficulty": "7.0",
+      "definition_en": "a wound from an animal that injects poison when it pierces the skin",
+      "ipa": "/ˈvenəməs stɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "f23b620c-42f9-42bb-b068-2513af69b451": {
+      "difficulty": "6.0"
+    },
+    "pubcol-w-32185118d94a1840": {
+      "synonyms": ["location", "site", "venue", "place"],
+      "collocations": ["concert venue", "book a venue", "wedding venue"],
+      "example_simple": "The stadium is a great venue for big concerts.",
+      "example_complex": "Organisers chose a historic building as the venue for the conference, hoping its atmosphere would impress delegates."
+    },
+    "pubcol-w-3f73a838273f8b6a": {
+      "synonyms": ["wordy", "long-winded", "rambling", "prolix"],
+      "collocations": ["verbose style", "overly verbose", "verbose explanation"],
+      "example_simple": "His report was too verbose and hard to follow.",
+      "example_complex": "The professor's verbose lectures often buried a simple point beneath layers of unnecessary detail."
+    },
+    "pubcol-w-860360acc76b71ae": {
+      "synonyms": ["judgment", "ruling", "decision", "finding"],
+      "collocations": ["reach a verdict", "guilty verdict", "return a verdict"],
+      "example_simple": "The jury reached a verdict after three hours.",
+      "example_complex": "The court's verdict, delivered after a lengthy trial, sparked heated debate across the country."
+    },
+    "92bfb60f-a22c-45f9-a1d6-db8f44e66241": {
+      "difficulty": "9.0",
+      "definition_en": "the appearance of being true or real",
+      "ipa": "/ˌverɪsɪˈmɪlɪtjuːd/",
+      "part_of_speech": "noun"
+    },
+    "892a1e96-51aa-48d9-a140-691094b7fc7a": {
+      "difficulty": "9.0",
+      "definition_en": "a style of realism in art or opera that portrays everyday life truthfully",
+      "ipa": "/veˈrɪzməʊ/",
+      "part_of_speech": "noun"
+    },
+    "5cd1ea36-2a97-4299-a59c-2427b246ec77": {
+      "difficulty": "7.0",
+      "definition_en": "the internal bony framework of an animal that has a backbone",
+      "ipa": "/ˈvɜːtɪbrət ˈskelɪtn̩/",
+      "part_of_speech": "phrase"
+    },
+    "7dc64b62-a8e3-46e5-93a3-8ccfb4db8a5c": {
+      "difficulty": "6.0",
+      "definition_en": "a doctor who treats animals; also informally a former member of the armed forces",
+      "ipa": "/vet/",
+      "part_of_speech": "noun"
+    },
+    "883e201b-80dd-47d1-82f2-9fed7cb1b08a": {
+      "difficulty": "7.0",
+      "definition_en": "to get along well and feel a natural rapport with a teammate",
+      "ipa": "/vaɪb wel wɪð ˈtiːmeɪt/",
+      "part_of_speech": "phrase"
+    }
+  }
+}

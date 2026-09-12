@@ -1,0 +1,188 @@
+{
+  "meta": { "batch": "batch-051", "authored_by": "claude", "count": 25 },
+  "words": {
+    "e033ee7d-0d3c-4d80-a061-518b587910d3": {
+      "difficulty": "8.0",
+      "definition_en": "to prevent something from happening by taking action in advance",
+      "ipa": "/fɔːˈstɔːl/",
+      "part_of_speech": "verb"
+    },
+    "77c9822e-cc69-4eb0-9d82-df544848f282": {
+      "difficulty": "7.0",
+      "definition_en": "to lose or give up something as a penalty for a fault or breach of rules",
+      "ipa": "/ˈfɔːfɪt/",
+      "part_of_speech": "verb"
+    },
+    "9be87a42-6265-435f-865f-841585857da0": {
+      "difficulty": "7.0",
+      "definition_en": "a person who makes illegal copies of documents, money, or works of art",
+      "ipa": "/ˈfɔːdʒə/",
+      "part_of_speech": "noun"
+    },
+    "34b903ab-500a-4d36-9eb6-5b5e46ef5e4c": {
+      "difficulty": "7.0",
+      "definition_en": "to decide not to have or do something you would like to have or do",
+      "ipa": "/fɔːˈɡəʊ/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-46102433ccd7b596": {
+      "synonyms": ["previous", "earlier", "prior", "past"],
+      "collocations": ["the former president", "in former times", "my former colleague"],
+      "example_simple": "My former teacher still lives in the same town.",
+      "example_complex": "The company was founded by a former banker who wanted to rethink how ordinary people save money.",
+      "definition_en": "existing or happening before the present time; previous",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-d803e9bd4ce7da57": {
+      "synonyms": ["two weeks", "14 days"],
+      "collocations": ["in a fortnight", "once a fortnight", "the next fortnight"],
+      "example_simple": "I will be on holiday for a fortnight next month.",
+      "example_complex": "The project deadline was extended by a fortnight to give the team time to fix the remaining bugs.",
+      "definition_en": "a period of two weeks",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-7ef172de58ba035f": {
+      "synonyms": ["luckily", "happily", "thankfully"],
+      "collocations": ["fortunately for us", "fortunately nobody was hurt", "fortunately enough"],
+      "example_simple": "Fortunately, the rain stopped before the game started.",
+      "example_complex": "Fortunately for the passengers, the pilot managed to land the plane safely despite the engine failure.",
+      "definition_en": "by good luck; used to say that something good has happened",
+      "part_of_speech": "adverb"
+    },
+    "pubcol-w-1c9fb81e172cdd02": {
+      "difficulty": "6.0",
+      "synonyms": ["coal, oil and gas", "hydrocarbon fuels", "carbon fuels"],
+      "collocations": ["burn fossil fuels", "dependence on fossil fuels", "fossil fuel emissions"],
+      "example_simple": "Burning fossil fuels releases a lot of carbon dioxide into the air.",
+      "example_complex": "Many governments are investing in renewable energy to reduce their long-term reliance on fossil fuels.",
+      "definition_en": "natural fuels such as coal, oil, and gas formed from the remains of ancient organisms",
+      "ipa": "/ˌfɒsl ˈfjuːəlz/",
+      "part_of_speech": "phrase"
+    },
+    "c7cbb313-d1f8-4b93-8c1e-58e34f9d246d": {
+      "difficulty": "6.0",
+      "definition_en": "a very bad, angry, or irritable state of mind",
+      "ipa": "/ˌfaʊl ˈmuːd/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-41a12a74acd2ddb0": {
+      "synonyms": ["delicate", "breakable", "flimsy", "brittle"],
+      "collocations": ["fragile items", "a fragile peace", "extremely fragile"],
+      "example_simple": "Please be careful, the glasses are very fragile.",
+      "example_complex": "The fragile ceasefire collapsed within days as both sides accused each other of breaking the agreement.",
+      "definition_en": "easily broken or damaged; delicate"
+    },
+    "pubcol-w-ced2ee26bcb21041": {
+      "synonyms": ["sweet-smelling", "aromatic", "perfumed", "scented"],
+      "collocations": ["fragrant flowers", "a fragrant smell", "fragrant herbs"],
+      "example_simple": "The garden was full of fragrant roses.",
+      "example_complex": "As we entered the kitchen, the fragrant aroma of freshly baked bread filled the whole house.",
+      "definition_en": "having a pleasant, sweet smell"
+    },
+    "pubcol-w-f178867da2879cae": {
+      "difficulty": "6.0",
+      "ipa": "/ˈfreɪmwɜːk/"
+    },
+    "pubcol-w-86a8c2da8527a1c6": {
+      "synonyms": ["honest", "candid", "direct", "straightforward"],
+      "collocations": ["a frank discussion", "to be frank", "frank and open"],
+      "example_simple": "She was very frank about her mistakes.",
+      "example_complex": "In a surprisingly frank interview, the minister admitted that the policy had failed to help the poorest families.",
+      "definition_en": "honest and direct in what you say, even when the truth is unpleasant"
+    },
+    "e3c9783d-e110-41b2-981f-84d32c6e64f7": {
+      "difficulty": "8.0",
+      "definition_en": "relating to brothers or to a brotherly relationship",
+      "ipa": "/frəˈtɜːnl/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-a0e019c0c56c8911": {
+      "synonyms": ["deception", "scam", "swindle", "cheating"],
+      "collocations": ["commit fraud", "credit card fraud", "a fraud investigation"],
+      "example_simple": "He was sent to prison for fraud.",
+      "example_complex": "The bank introduced new security measures after a series of online frauds cost customers thousands of pounds.",
+      "definition_en": "the crime of deceiving people to gain money or an unfair advantage"
+    },
+    "0502c8e9-3702-474c-8812-52294fc95b8e": {
+      "difficulty": "7.0",
+      "definition_en": "to wear away or become worn at the edges; also a noisy fight or quarrel",
+      "ipa": "/freɪ/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-d4af478794c3bd83": {
+      "difficulty": "6.0",
+      "synonyms": ["make time", "find time", "create free time"],
+      "collocations": ["free up some time", "free up time for family", "free up your schedule"],
+      "example_simple": "I finished early so I could free up some time for the gym.",
+      "example_complex": "By automating the weekly reports, the manager hoped to free up some time for more creative work.",
+      "definition_en": "to make time available by removing other tasks or commitments",
+      "ipa": "/ˌfriː ʌp səm ˈtaɪm/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "sắp xếp/dành ra được thời gian rảnh"
+    },
+    "pubcol-w-cd273560b234096c": {
+      "difficulty": "6.0",
+      "synonyms": ["fresh fruit and vegetables", "farm produce", "fresh goods"],
+      "collocations": ["buy fresh produce", "locally grown produce", "fresh produce section"],
+      "example_simple": "The market sells cheap fresh produce every morning.",
+      "example_complex": "Restaurants that rely on locally sourced fresh produce often change their menus with the seasons.",
+      "definition_en": "fresh fruit and vegetables, especially newly harvested",
+      "ipa": "/ˌfreʃ ˈprɒdjuːs/",
+      "part_of_speech": "phrase"
+    },
+    "1f2a7b9b-ecca-497d-8621-6dde0eded329": {
+      "difficulty": "6.0",
+      "definition_en": "beaches beside lakes or rivers rather than the salty sea",
+      "ipa": "/ˈfreʃwɔːtə ˈbiːtʃɪz/",
+      "part_of_speech": "phrase"
+    },
+    "1d1de5cc-1b0f-481b-9e90-f237c973755e": {
+      "difficulty": "8.0",
+      "definition_en": "a broad horizontal band of decoration, often carved, along the upper part of a wall",
+      "ipa": "/friːz/",
+      "part_of_speech": "noun"
+    },
+    "13e791ae-12b6-4199-9b29-20a94f46a00e": {
+      "difficulty": "7.0",
+      "definition_en": "not having any serious purpose or value; silly and unimportant",
+      "ipa": "/ˈfrɪvələs/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-0b1e95cfd9775191": {
+      "difficulty": "5.0",
+      "synonyms": ["starting at", "out of", "away from"],
+      "collocations": ["from home", "from the beginning", "different from"],
+      "example_simple": "She travelled all the way from Vietnam to study in London.",
+      "example_complex": "From the moment he arrived, it was clear that his approach was completely different from the one we had planned.",
+      "definition_en": "used to show a starting point, source, or origin in space, time, or amount",
+      "ipa": "/frɒm/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "từ (chỉ điểm xuất phát, nguồn gốc)"
+    },
+    "pubcol-w-d6cbf7c4c6b9e3f0": {
+      "difficulty": "6.0",
+      "synonyms": ["increasingly worse", "going downhill", "deteriorating"],
+      "collocations": ["go from bad to worse", "things went from bad to worse", "the situation went from bad to worse"],
+      "example_simple": "After he lost his job, things went from bad to worse.",
+      "example_complex": "The economy went from bad to worse as inflation rose and thousands of small businesses were forced to close.",
+      "definition_en": "used to say that a bad situation becomes even worse",
+      "ipa": "/frəm ˌbæd tə ˈwɜːs/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-03b7e08f5e8861cf": {
+      "difficulty": "6.0",
+      "synonyms": ["by heart", "without notes", "from recall"],
+      "collocations": ["recite from memory", "play from memory", "quote from memory"],
+      "example_simple": "She sang the whole song from memory.",
+      "example_complex": "The pianist performed the entire concerto from memory, without once glancing at the sheet music.",
+      "definition_en": "using only what you remember, without notes or written help",
+      "ipa": "/frəm ˈmeməri/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "theo trí nhớ, thuộc lòng"
+    },
+    "pubcol-w-48c64dc6d116ce5a": {
+      "difficulty": "6.0",
+      "ipa": "/frəm maɪ pəˈspektɪv/"
+    }
+  }
+}

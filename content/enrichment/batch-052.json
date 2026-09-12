@@ -1,0 +1,193 @@
+{
+  "meta": { "batch": "batch-052", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-1c3d72faf23fb6d9": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/frəm ˈnaʊ ðen ɒn/",
+      "definition_en": "starting from this moment and continuing into the future",
+      "synonyms": ["henceforth", "from here on", "hereafter", "going forward"],
+      "collocations": ["from now on I will", "from now on we should", "remember this from now on"],
+      "example_simple": "From now on, I will study English every day.",
+      "example_complex": "From now on, the company will require all employees to submit their reports electronically rather than on paper."
+    },
+    "pubcol-w-d1881a0742b426a2": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/frəm ˈtaɪm tə ˈtaɪm/",
+      "definition_en": "occasionally; now and then",
+      "synonyms": ["occasionally", "now and then", "sometimes", "once in a while"],
+      "collocations": ["visit from time to time", "from time to time we", "check from time to time"],
+      "example_simple": "From time to time, I like to go for a walk in the park.",
+      "example_complex": "From time to time, even the most experienced professionals need to update their skills to keep pace with new technology."
+    },
+    "pubcol-w-e16000cff9109c61": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/frəm ˈskrætʃ/",
+      "definition_en": "from the very beginning, without using anything prepared in advance",
+      "synonyms": ["from the beginning", "from the ground up", "from nothing", "from square one"],
+      "collocations": ["build from scratch", "start from scratch", "make from scratch"],
+      "example_simple": "She learned to bake bread from scratch.",
+      "example_complex": "After the fire destroyed their records, the team had to rebuild the entire database from scratch.",
+      "vi_meaning_correction": "từ đầu, từ con số không"
+    },
+    "a642fa0b-f9b3-41c1-a24d-e57b6ad8699e": {
+      "difficulty": "8.0",
+      "definition_en": "cosmetic injections used to smooth the wrinkles that form between the eyebrows",
+      "ipa": "/ˌfraʊn laɪn rɪˈdjuːsɪŋ ɪnˈdʒekʃənz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-b10a0030f213c08f": {
+      "synonyms": ["thrifty", "economical", "sparing", "careful with money"],
+      "collocations": ["frugal lifestyle", "frugal with money", "live frugally"],
+      "example_simple": "My grandmother is very frugal and never wastes food.",
+      "example_complex": "Despite earning a high salary, he remained remarkably frugal, saving most of his income for retirement."
+    },
+    "pubcol-w-54380d16c3ea0e18": {
+      "synonyms": ["productive", "successful", "rewarding", "profitable"],
+      "collocations": ["fruitful discussion", "fruitful collaboration", "fruitful career"],
+      "example_simple": "We had a fruitful meeting and made many decisions.",
+      "example_complex": "The two universities enjoyed a fruitful partnership that produced several groundbreaking research papers."
+    },
+    "5da20a68-b6f9-49b9-b9cd-84d6f48788a1": {
+      "difficulty": "6.0",
+      "definition_en": "a soft, rich sweet made by boiling sugar, butter, and milk; (as a verb) to deal with something in a vague or dishonest way to avoid difficulty",
+      "ipa": "/fʌdʒ/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-ff50e3026ffc4bc3": {
+      "difficulty": "6.0",
+      "synonyms": ["all talk", "full of empty words", "boastful", "long-winded"],
+      "collocations": ["he's full of hot air", "just hot air", "politicians full of hot air"],
+      "example_simple": "Don't listen to him; he's full of hot air.",
+      "example_complex": "The candidate's promises turned out to be full of hot air, as none of the reforms were ever implemented.",
+      "definition_en": "talking a lot but saying nothing meaningful or true; full of empty, exaggerated talk",
+      "ipa": "/ˌfʊl əv ˌhɒt ˈeə/",
+      "part_of_speech": "idiom"
+    },
+    "2b5650e5-1c12-4bae-9416-1151d2ffca21": {
+      "difficulty": "5.0",
+      "definition_en": "the soft, thick hair that covers the bodies of many animals",
+      "ipa": "/fɜː/",
+      "part_of_speech": "noun"
+    },
+    "ad2a56e0-66e4-4acd-a3fb-af4688c3770b": {
+      "difficulty": "7.0",
+      "definition_en": "enclosed structures in which material is heated to very high temperatures",
+      "ipa": "/ˈfɜːnɪsɪz/",
+      "part_of_speech": "noun"
+    },
+    "77e28ec5-8d38-4cc3-b17c-32547eefe8e3": {
+      "difficulty": "6.0",
+      "definition_en": "to provide a room or building with furniture; to supply something needed",
+      "ipa": "/ˈfɜːnɪʃ/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-c8c9184c234c771c": {
+      "difficulty": "6.0",
+      "ipa": "/ˈfɜːðəmɔː/"
+    },
+    "c2e1d60a-08c7-4728-99a0-12f9a2057372": {
+      "difficulty": "7.0",
+      "definition_en": "the process of joining two or more things together to form a single entity",
+      "ipa": "/ˈfjuːʒən/",
+      "part_of_speech": "noun"
+    },
+    "6f728e14-5443-423e-9a57-9968af2412a3": {
+      "difficulty": "7.0",
+      "definition_en": "producing no useful result; pointless",
+      "ipa": "/ˈfjuːtaɪl/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-baca49ea0c4651ce": {
+      "difficulty": "6.0",
+      "synonyms": ["defeat someone", "triumph over someone", "beat someone", "overcome someone"],
+      "collocations": ["gain a victory over an opponent", "gain a decisive victory", "gain a victory over rivals"],
+      "example_simple": "Our team gained a victory over the champions last night.",
+      "example_complex": "After years of struggle, the small nation finally gained a victory over the forces that had long oppressed it.",
+      "definition_en": "to defeat someone in a contest, battle, or competition",
+      "ipa": "/ˌɡeɪn ə ˈvɪktəri ˌəʊvə ˈsʌmbədi/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-db7f2eb506910948": {
+      "difficulty": "6.0",
+      "synonyms": ["become recognized", "earn recognition", "gain acclaim", "achieve fame"],
+      "collocations": ["gain international recognition", "gain recognition for", "gradually gain recognition"],
+      "example_simple": "The young artist began to gain recognition after her first exhibition.",
+      "example_complex": "The scientist gained widespread recognition only after her theories were confirmed by later experiments.",
+      "definition_en": "to become known, respected, or acknowledged for one's work or achievements",
+      "ipa": "/ˌɡeɪn ˌrekəɡˈnɪʃən/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-7c557c8799bb6d3f": {
+      "difficulty": "5.0",
+      "synonyms": ["put on weight", "slim down", "shed pounds", "fill out"],
+      "collocations": ["gain weight quickly", "lose weight gradually", "gain and lose weight"],
+      "example_simple": "Many people gain weight in winter and lose weight in summer.",
+      "example_complex": "Crash diets often cause people to lose weight rapidly, only to gain it all back within a few months.",
+      "definition_en": "to become heavier / to become lighter in body weight",
+      "ipa": "/ˌɡeɪn ˈweɪt luːz ˈweɪt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-f53af749c7c775e5": {
+      "difficulty": "6.0",
+      "synonyms": ["year out", "sabbatical year", "break year"],
+      "collocations": ["take a gap year", "gap year travel", "gap year before university"],
+      "example_simple": "She took a gap year to travel around Asia before university.",
+      "example_complex": "Many students use their gap year to gain work experience or volunteer abroad, which strengthens their university applications.",
+      "definition_en": "a year that a person takes off from study or work, often to travel or gain experience",
+      "ipa": "/ˈɡæp jɪə/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "một năm nghỉ giữa các giai đoạn học tập hoặc làm việc, thường để đi du lịch hoặc tích lũy kinh nghiệm"
+    },
+    "7e8648ff-df2c-422d-8b4d-5b33a8ed8974": {
+      "difficulty": "8.0",
+      "definition_en": "extremely large; enormous",
+      "ipa": "/ɡɑːˈɡæntjuən/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-a5a97e0f3193ebb4": {
+      "synonyms": ["item of clothing", "piece of clothing", "apparel", "attire"],
+      "collocations": ["outer garment", "garment industry", "woollen garment"],
+      "example_simple": "This garment must be washed by hand.",
+      "example_complex": "The museum displayed delicate garments woven from silk over three centuries ago."
+    },
+    "pubcol-w-3cbfd5fa4c203e13": {
+      "synonyms": ["talkative", "chatty", "loquacious", "long-winded"],
+      "collocations": ["garrulous old man", "garrulous manner", "become garrulous"],
+      "example_simple": "My garrulous neighbour talks to everyone she meets.",
+      "example_complex": "The garrulous guide entertained the tourists with endless anecdotes, though few of them were relevant."
+    },
+    "9f6fe69f-a750-4c55-95c8-cb855ee0e19d": {
+      "difficulty": "7.0",
+      "definition_en": "the act of breathing in gas, especially harmful or toxic gas",
+      "ipa": "/ˈɡæs ˌɪnhəˈleɪʃən/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-13f32d052f4504b3": {
+      "synonyms": ["broad statement", "sweeping statement", "generalization", "oversimplification"],
+      "collocations": ["make a generalisation", "broad generalisation", "sweeping generalisation"],
+      "example_simple": "It's a generalisation to say that all teenagers are lazy.",
+      "example_complex": "The report was criticised for relying on sweeping generalisations rather than concrete evidence.",
+      "definition_en": "a general statement based on only a few facts or examples, often too broad to be accurate",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-cd738ebdb108645f": {
+      "synonyms": ["age group", "cohort", "era", "peer group"],
+      "collocations": ["younger generation", "future generations", "generation gap"],
+      "example_simple": "My grandparents' generation lived through the war.",
+      "example_complex": "Each generation faces its own unique challenges, shaped by the technology and values of its time.",
+      "definition_en": "all the people born and living at about the same time, regarded collectively",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-feb97d0e31b03b31": {
+      "synonyms": ["giving", "kind", "open-handed", "liberal"],
+      "collocations": ["generous donation", "generous offer", "generous with money"],
+      "example_simple": "She is very generous and always helps her friends.",
+      "example_complex": "The foundation received a generous donation that allowed it to expand its scholarship programme.",
+      "definition_en": "willing to give money, help, or time freely",
+      "part_of_speech": "adjective"
+    }
+  }
+}

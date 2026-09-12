@@ -1,0 +1,164 @@
+{
+  "meta": { "batch": "batch-036", "authored_by": "claude", "count": 25 },
+  "words": {
+    "f53ce004-73b1-4709-ab9b-eb4cee5b1f8c": {
+      "difficulty": "6.0",
+      "definition_en": "the complete loss or absence of hope",
+      "ipa": "/dɪˈspeə/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-68e3e9374d2c1ad0": {
+      "difficulty": "6.0",
+      "ipa": "/dɪˈspaɪt/"
+    },
+    "1053c734-0d4d-44b1-9406-7c9b516b5cc9": {
+      "difficulty": "8.0",
+      "synonyms": ["unbalanced grazer populations", "disrupted plant-eater numbers", "unsettled herbivore communities"],
+      "definition_en": "populations of plant-eating animals whose natural balance has been disrupted",
+      "ipa": "/diːˈsteɪbɪlaɪzd ˈhɜːbɪvɔː ˌpɒpjuˈleɪʃənz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-0cf1bc84bb8baca8": {
+      "synonyms": ["endpoint", "terminus", "goal", "target"],
+      "collocations": ["final destination", "popular tourist destination", "reach a destination"],
+      "example_simple": "Our final destination was a small village by the sea.",
+      "example_complex": "The city has quietly become a sought-after destination for travellers in search of authentic cultural experiences.",
+      "definition_en": "the place to which someone or something is going or being sent",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-b0ca8ae08329d654": {
+      "synonyms": ["poverty", "penury", "hardship", "privation"],
+      "collocations": ["live in destitution", "reduced to destitution", "utter destitution"],
+      "example_simple": "The war left many families in complete destitution.",
+      "example_complex": "Without any social safety net, a single serious illness can plunge an entire household into lasting destitution."
+    },
+    "pubcol-w-6870010883a79e8b": {
+      "synonyms": ["demolish", "ruin", "wreck", "annihilate"],
+      "collocations": ["destroy evidence", "completely destroy", "destroy the environment"],
+      "example_simple": "The fire destroyed the entire building in a matter of minutes.",
+      "example_complex": "Decades of intensive logging have destroyed vast tracts of ancient rainforest across the region.",
+      "definition_en": "to damage something so severely that it no longer exists or can no longer be used",
+      "part_of_speech": "verb"
+    },
+    "f42cc339-3da2-4c16-90f0-898a1be48b3e": {
+      "difficulty": "6.0",
+      "definition_en": "to separate or remove something from the thing it is connected to",
+      "ipa": "/dɪˈtætʃ/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-e9711657b066fc86": {
+      "synonyms": ["particulars", "specifics", "facts", "points"],
+      "collocations": ["further details", "personal details", "go into details"],
+      "example_simple": "Please fill in your contact details on this form.",
+      "example_complex": "The report sets out the technical details of the proposal with striking precision.",
+      "definition_en": "individual features, facts, or pieces of information about something",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-ef09700897d17119": {
+      "synonyms": ["investigator", "sleuth", "private eye"],
+      "collocations": ["private detective", "detective work", "police detective"],
+      "example_simple": "The detective questioned everyone who had been in the house.",
+      "example_complex": "A seasoned detective, she patiently pieced together the seemingly unrelated clues into a coherent case.",
+      "definition_en": "a person, especially a police officer, whose job is to investigate crimes",
+      "part_of_speech": "noun"
+    },
+    "866ecaeb-e1dc-4d56-8d12-65972942da19": {
+      "difficulty": "7.0",
+      "definition_en": "to discourage someone from doing something, often by making it seem difficult or unpleasant",
+      "ipa": "/dɪˈtɜː/",
+      "part_of_speech": "verb"
+    },
+    "5df78ddc-595d-480d-b050-d7c53aab12ad": {
+      "difficulty": "7.0",
+      "definition_en": "becoming progressively worse in condition or quality",
+      "ipa": "/dɪˈtɪəriəreɪtɪŋ/",
+      "part_of_speech": "adjective"
+    },
+    "1e9a423a-50be-4780-9d32-910108334105": {
+      "difficulty": "7.0",
+      "definition_en": "the process of becoming progressively worse",
+      "ipa": "/dɪˌtɪəriəˈreɪʃən/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-a82bcea8149eb6f8": {
+      "difficulty": "6.0",
+      "synonyms": ["resolute manner", "purposefully", "with determination"],
+      "collocations": ["in a determined way", "act in a determined way", "speak in a determined way"],
+      "example_simple": "She worked in a determined way until the whole project was finished.",
+      "example_complex": "He tackled each obstacle in a determined way, refusing to be discouraged by his early setbacks.",
+      "definition_en": "in a manner that shows firm resolve and unwavering intent",
+      "ipa": "/dɪˈtɜːmɪnd weɪ/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "một cách quyết tâm, kiên định"
+    },
+    "pubcol-w-fa175ce5976faa78": {
+      "difficulty": "7.0",
+      "ipa": "/dɪˈterənt/"
+    },
+    "pubcol-w-1198ce9c0eb4fb79": {
+      "difficulty": "7.0",
+      "ipa": "/ˌdetrɪˈmentl/"
+    },
+    "fb183e77-ad97-47d4-bb64-07e13749876e": {
+      "difficulty": "7.0",
+      "definition_en": "to destroy or ruin something completely",
+      "ipa": "/ˈdevəsteɪt/",
+      "part_of_speech": "verb"
+    },
+    "8bd7a8aa-d8b2-4686-a977-6c1609fa0925": {
+      "difficulty": "8.0",
+      "definition_en": "entirely lacking or free from a particular quality",
+      "ipa": "/dɪˈvɔɪd/",
+      "part_of_speech": "adjective"
+    },
+    "9cc09ef1-3d32-46c7-87bc-335d57520b16": {
+      "difficulty": "7.0",
+      "definition_en": "to eat something quickly and greedily",
+      "ipa": "/dɪˈvaʊə/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-c2460636c946c8b8": {
+      "difficulty": "8.0",
+      "synonyms": ["hidden gem", "rough diamond", "unpolished talent"],
+      "collocations": ["a real diamond in the rough", "spot a diamond in the rough", "prove to be a diamond in the rough"],
+      "example_simple": "He's a bit rough around the edges, but he's a real diamond in the rough.",
+      "example_complex": "The scout recognised the young striker as a diamond in the rough, raw but brimming with untapped talent.",
+      "definition_en": "a person or thing with hidden potential or good qualities that are not yet obvious",
+      "ipa": "/ˌdaɪəmənd ɪn ðə ˈrʌf/",
+      "part_of_speech": "idiom"
+    },
+    "60946969-25e1-4431-b547-7867d86cc197": {
+      "difficulty": "9.0",
+      "synonyms": ["major scale", "seven-note scale", "heptatonic scale"],
+      "definition_en": "a musical scale of seven notes within an octave, made up of five whole tones and two semitones",
+      "ipa": "/ˌdaɪəˈtɒnɪk ˈmjuːzɪkl skeɪl/",
+      "part_of_speech": "phrase"
+    },
+    "8efa5f05-b05f-4e9c-8358-dba2d0367a4b": {
+      "difficulty": "7.0",
+      "definition_en": "the typical ways in which people eat and the kinds of food they habitually consume",
+      "ipa": "/ˈdaɪətəri ˈpætənz/",
+      "part_of_speech": "phrase"
+    },
+    "62835604-f796-4baf-b0a6-d557ae2a927a": {
+      "difficulty": "7.0",
+      "definition_en": "an expert who advises people on nutrition and appropriate diets",
+      "ipa": "/ˈdaɪətəri ˈspeʃəlɪst/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-aad755e9c627afac": {
+      "difficulty": "6.0",
+      "ipa": "/ˈdɪfə frɒm/"
+    },
+    "175db333-a210-44b6-9638-4019f1e3dc87": {
+      "difficulty": "8.0",
+      "definition_en": "shy and lacking confidence in oneself",
+      "ipa": "/ˈdɪfɪdənt/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-75b1ff7f336ff401": {
+      "difficulty": "7.0",
+      "ipa": "/ˈdɪdʒɪtl ˈlɪtərəsi/"
+    }
+  }
+}

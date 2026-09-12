@@ -1,0 +1,192 @@
+{
+  "meta": { "batch": "batch-110", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-31e2cad36a6715b6": {
+      "synonyms": ["examine", "inspect", "study", "analyse"],
+      "collocations": ["scrutinise the details", "scrutinise a document", "scrutinise every clause"],
+      "example_simple": "The teacher scrutinised each essay for spelling mistakes.",
+      "example_complex": "Auditors scrutinise the company's accounts closely to detect any irregularities before signing off the report."
+    },
+    "pubcol-w-3188b6994feee3e3": {
+      "synonyms": ["scamper", "dash", "hurry", "scuttle"],
+      "collocations": ["scurry away", "scurry across the floor", "scurry for cover"],
+      "example_simple": "The mice scurried into their hole when the light came on.",
+      "example_complex": "As the rain began to fall, commuters scurried for shelter beneath the shop awnings."
+    },
+    "pubcol-w-3f574a01342fc671": {
+      "synonyms": ["scamper", "scurry", "dart", "scramble"],
+      "collocations": ["scuttle away", "scuttle across the deck", "scuttle for cover"],
+      "example_simple": "The crab scuttled sideways across the wet sand.",
+      "example_complex": "Startled by the sudden noise, the children scuttled off down the corridor before anyone could stop them."
+    },
+    "7ee76973-75be-42c6-ba14-7d644e0f5523": {
+      "difficulty": "6.0",
+      "synonyms": ["marine mammal"],
+      "definition_en": "a small marine mammal with thick fur that floats on its back and lives in coastal waters",
+      "ipa": "/ˈsiː ˌɒtə/",
+      "part_of_speech": "noun"
+    },
+    "56794024-b1f1-4374-996c-2610d8a2f76a": {
+      "difficulty": "7.0",
+      "synonyms": ["sea hedgehog"],
+      "definition_en": "a small round sea creature covered in sharp spines that lives on the sea floor",
+      "ipa": "/ˈsiː ˌɜːtʃɪn/",
+      "part_of_speech": "noun"
+    },
+    "15bebdc9-47a0-4beb-be8a-a63e3075b950": {
+      "difficulty": "7.0",
+      "synonyms": ["sea hedgehogs"],
+      "definition_en": "small round spiny sea creatures that live on the ocean floor",
+      "ipa": "/ˈsiː ˌɜːtʃɪnz/",
+      "part_of_speech": "noun"
+    },
+    "ba96b15e-1298-41a8-a16e-bfb93c4da864": {
+      "difficulty": "7.0",
+      "definition_en": "a substance used to fill gaps and cracks so that liquid or air cannot pass through",
+      "ipa": "/ˈsiːlənt/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-3c27558c0f820268": {
+      "difficulty": "6.0",
+      "synonyms": ["isolated beaches", "remote beaches", "quiet beaches"],
+      "collocations": ["find secluded beaches", "explore secluded beaches", "relax on secluded beaches"],
+      "example_simple": "We spent the afternoon on a secluded beach with hardly anyone around.",
+      "example_complex": "The island is famous for its secluded beaches, where visitors can escape the crowds and enjoy complete tranquillity.",
+      "definition_en": "quiet, private beaches that are far from crowds and hard to reach",
+      "ipa": "/sɪˈkluːdɪd ˈbiːtʃɪz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-2f0c35438f7772b9": {
+      "difficulty": "6.0",
+      "synonyms": ["another portion", "seconds", "extra serving"],
+      "collocations": ["have a second helping", "ask for a second helping", "offer a second helping"],
+      "example_simple": "The food was so good that I had a second helping of rice.",
+      "example_complex": "My grandmother is always delighted when guests ask for a second helping of her homemade stew.",
+      "definition_en": "an additional portion of food taken after finishing the first",
+      "ipa": "/ˈsekənd ˈhelpɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-b17f20435d408e82": {
+      "difficulty": "6.0",
+      "ipa": "/ˈsedntri ˈlaɪfstaɪl/"
+    },
+    "e402e107-907a-48bd-a5ee-a36435fe7831": {
+      "difficulty": "7.0",
+      "synonyms": ["stratified rock"],
+      "definition_en": "rock formed over time from layers of mineral or organic particles deposited by water or wind",
+      "ipa": "/ˌsedɪˈmentri ˈrɒk/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-e349e6135c14523a": {
+      "difficulty": "7.0",
+      "synonyms": ["agree", "concur", "be of one mind"],
+      "collocations": ["see eye to eye on something", "never see eye to eye", "finally see eye to eye"],
+      "example_simple": "My brother and I don't always see eye to eye about money.",
+      "example_complex": "Although the two managers rarely see eye to eye on strategy, they respect each other's expertise.",
+      "definition_en": "to agree with someone and share the same opinion",
+      "ipa": "/ˌsiː ˌaɪ tu ˈaɪ/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-41858eee395ea7df": {
+      "difficulty": "7.0",
+      "synonyms": ["agree with someone", "concur with someone", "be of one mind with someone"],
+      "collocations": ["see eye to eye with a colleague", "see eye to eye with your partner", "never see eye to eye with someone"],
+      "example_simple": "I finally see eye to eye with my sister on where to go on holiday.",
+      "example_complex": "It took years before the founder learned to see eye to eye with his business partner over the company's direction.",
+      "definition_en": "to have the same opinion as someone and agree with them",
+      "ipa": "/ˌsiː ˌaɪ tu ˈaɪ wɪð ˈsʌmwʌn/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "đồng quan điểm với ai"
+    },
+    "pubcol-w-6486b065235ac8e9": {
+      "difficulty": "6.0",
+      "synonyms": ["send off", "bid farewell", "wave goodbye to"],
+      "collocations": ["see someone off at the airport", "see off a friend", "come to see me off"],
+      "example_simple": "My parents came to the station to see me off.",
+      "example_complex": "A small crowd of relatives gathered at the port to see off the passengers boarding the cruise ship.",
+      "definition_en": "to go to the place where someone is leaving from in order to say goodbye to them",
+      "ipa": "/ˌsiː ˈɒf/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "tiễn (ai đó)"
+    },
+    "pubcol-w-6cfa51554e836211": {
+      "difficulty": "7.0",
+      "synonyms": ["see hope ahead", "see an end to difficulties", "sense relief coming"],
+      "collocations": ["finally see the light at the end of the tunnel", "start to see the light at the end of the tunnel", "there is light at the end of the tunnel"],
+      "example_simple": "After months of hard work, I can finally see the light at the end of the tunnel.",
+      "example_complex": "With the vaccine rollout under way, exhausted health workers at last began to see the light at the end of the tunnel.",
+      "definition_en": "to see signs that a long and difficult situation is finally coming to an end",
+      "ipa": "/ˌsiː ðə ˈlaɪt ət ði end əv ðə ˈtʌnl/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-c3b989226a560bd2": {
+      "difficulty": "8.0",
+      "synonyms": ["wait and see", "test the water", "gauge the situation"],
+      "collocations": ["see which way the wind blows before deciding", "wait to see which way the wind blows", "watch which way the wind blows"],
+      "example_simple": "I'll see which way the wind blows before I ask for a pay rise.",
+      "example_complex": "Rather than commit to either candidate early, the seasoned politician preferred to see which way the wind blows before declaring his support.",
+      "definition_en": "to wait and find out how a situation is developing before deciding what to do",
+      "ipa": "/ˌsiː wɪtʃ weɪ ðə ˈwɪnd bləʊz/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-33288f746ddb6133": {
+      "difficulty": "6.0",
+      "synonyms": ["since", "because", "given that"],
+      "collocations": ["seeing that it was late", "seeing that everyone agreed", "seeing that you asked"],
+      "example_simple": "Seeing that it was raining, we decided to stay indoors.",
+      "example_complex": "Seeing that the deadline had already passed, there was little point in rushing to finish the remaining sections.",
+      "definition_en": "used to give a reason for something, meaning 'because' or 'since'",
+      "ipa": "/ˈsiːɪŋ ðæt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-8a6b25fbfb068393": {
+      "difficulty": "7.0",
+      "ipa": "/ˈsiːmɪŋli/"
+    },
+    "0f0f7133-b03e-46b9-bffb-e852a9c0ee90": {
+      "difficulty": "6.0",
+      "definition_en": "to slowly pass down through a surface or material, especially of a liquid",
+      "ipa": "/ˈsiːp daʊn/",
+      "part_of_speech": "phrase"
+    },
+    "b87881b5-f30a-4b33-ab57-54c337382f6c": {
+      "difficulty": "6.0",
+      "definition_en": "to slowly flow or pass into something through small gaps, especially of a liquid",
+      "ipa": "/ˈsiːp ɪn/",
+      "part_of_speech": "phrase"
+    },
+    "70385fb0-5ac5-4d37-b75b-f40bfb5d931a": {
+      "difficulty": "8.0",
+      "definition_en": "waves of energy that travel through the earth, especially during an earthquake",
+      "ipa": "/ˈsaɪzmɪk weɪvz/",
+      "part_of_speech": "noun"
+    },
+    "25231836-b4c4-4de6-b330-3d15f076545c": {
+      "difficulty": "6.0",
+      "definition_en": "to quickly take advantage of a chance to do something",
+      "ipa": "/ˌsiːz ən ˌɒpəˈtjuːnəti/",
+      "part_of_speech": "phrase"
+    },
+    "f981b27f-41ab-4759-ab8c-ff0054b9dbd8": {
+      "difficulty": "8.0",
+      "definition_en": "sudden attacks of uncontrolled movements or unconsciousness caused by abnormal brain activity",
+      "ipa": "/ˈsiːʒəz/",
+      "part_of_speech": "noun"
+    },
+    "3ce9faac-814a-4242-a8fc-0550c514978f": {
+      "difficulty": "8.0",
+      "synonyms": ["breeding and gene editing", "selective breeding and genetic modification"],
+      "example_simple": "Selection and genetic manipulation are used to grow crops that resist disease.",
+      "example_complex": "Modern agriculture relies heavily on selection and genetic manipulation to develop livestock and plants with higher yields.",
+      "definition_en": "the process of choosing organisms with desired traits and altering their genes to improve them",
+      "ipa": "/sɪˈlekʃn ənd dʒəˈnetɪk məˌnɪpjuˈleɪʃn/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-603cb6c4f8e10bc9": {
+      "synonyms": ["confident", "self-confident", "poised", "assured"],
+      "collocations": ["a self-assured manner", "look self-assured", "remarkably self-assured"],
+      "example_simple": "She gave a calm, self-assured answer during the interview.",
+      "example_complex": "Despite his youth, the new manager came across as remarkably self-assured when addressing the board."
+    }
+  }
+}

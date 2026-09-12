@@ -1,0 +1,209 @@
+{
+  "meta": { "batch": "batch-027", "authored_by": "claude", "count": 25 },
+  "words": {
+    "73428c8a-d8c0-4fc2-951a-10b615870d5b": {
+      "difficulty": "8.0",
+      "definition_en": "arranged laws or rules into a formal systematic code",
+      "ipa": "/ˈkəʊdɪfaɪd/",
+      "part_of_speech": "verb"
+    },
+    "c8fe68e3-cdc8-4e9f-89ee-cf656aa50fbe": {
+      "difficulty": "8.0",
+      "definition_en": "the sense of worth and respect shared by a group or community as a whole",
+      "ipa": "/kəˈlektɪv ˈdɪɡnɪti/",
+      "part_of_speech": "phrase"
+    },
+    "2093274b-8d3d-4a47-b553-aa610cb3cf2a": {
+      "difficulty": "7.0",
+      "definition_en": "a student who achieves the highest marks in their college or class",
+      "ipa": "/ˈkɒlɪdʒ ˈtɒpə/",
+      "part_of_speech": "noun"
+    },
+    "6ae8ec80-06b4-4470-879e-c38dcb04dc74": {
+      "difficulty": "7.0",
+      "definition_en": "large sections of the Earth's crust that crash into one another",
+      "ipa": "/kəˈlaɪdɪŋ tekˈtɒnɪk pleɪts/",
+      "part_of_speech": "phrase"
+    },
+    "dd7b8b48-fc18-40a2-9430-8fa1376acb4d": {
+      "difficulty": "7.0",
+      "definition_en": "an informal, everyday regional variety of a language",
+      "ipa": "/kəˈləʊkwiəl ˈdaɪəlekt/",
+      "part_of_speech": "phrase"
+    },
+    "d473756f-c193-4c57-826b-3ca49989074b": {
+      "difficulty": "7.0",
+      "definition_en": "the sudden die-off or disappearance of a whole colony, especially of bees",
+      "ipa": "/ˈkɒləni kəˈlæps/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-12bfcafffd0463f7": {
+      "difficulty": "6.0",
+      "synonyms": ["merge", "blend", "mix", "unite"],
+      "collocations": ["combine work with study", "combine theory with practice", "combine talent with hard work"],
+      "example_simple": "You can combine exercise with a healthy diet to lose weight.",
+      "example_complex": "Successful entrepreneurs often combine bold ambition with a disciplined attention to detail.",
+      "definition_en": "to join or mix one thing together with another",
+      "ipa": "/kəmˈbaɪn ˈsʌmθɪŋ wɪð ˈsʌmθɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "77ea4395-9df5-4ca1-a12c-9ad69eeee7ab": {
+      "difficulty": "7.0",
+      "definition_en": "the process of burning something",
+      "ipa": "/kəmˈbʌstʃən/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-527572d5807a5cf9": {
+      "difficulty": "6.0",
+      "synonyms": ["happen", "occur", "arise", "take place"],
+      "collocations": ["how did it come about", "changes came about", "come about gradually"],
+      "example_simple": "Nobody knew how the mistake came about.",
+      "example_complex": "The reforms came about largely as a result of sustained public pressure.",
+      "definition_en": "to happen, especially in a way that was not planned",
+      "ipa": "/kʌm əˈbaʊt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-20aa81e7decff1a6": {
+      "difficulty": "6.0",
+      "ipa": "/kʌm əˈkrɒs/"
+    },
+    "pubcol-w-97822dd0211869bc": {
+      "difficulty": "7.0",
+      "synonyms": ["divide", "separate", "estrange", "drive apart"],
+      "collocations": ["come between friends", "let nothing come between us", "come between a couple"],
+      "example_simple": "Don't let money come between you and your best friend.",
+      "example_complex": "She refused to let professional rivalry come between her and her sister.",
+      "definition_en": "to damage the relationship between two people",
+      "ipa": "/kʌm bɪˈtwiːn ˌsʌmbədi ənd ˌsʌmbədi/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-a43620ad71173695": {
+      "difficulty": "7.0",
+      "synonyms": ["confess", "own up", "admit", "tell the truth"],
+      "collocations": ["come clean about something", "finally come clean", "come clean with someone"],
+      "example_simple": "He decided to come clean and tell his parents the truth.",
+      "example_complex": "After weeks of denial, the minister finally came clean about the scandal.",
+      "definition_en": "to confess and tell the whole truth about something",
+      "ipa": "/kʌm kliːn/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-32ff3173b2bb4e09": {
+      "difficulty": "7.0",
+      "synonyms": ["confess", "own up", "admit", "tell the truth"],
+      "collocations": ["come clean about something", "finally come clean", "come clean with someone"],
+      "example_simple": "She came clean and admitted she had broken the vase.",
+      "example_complex": "The company was forced to come clean about the safety flaws in its product.",
+      "definition_en": "to confess to something you had been hiding",
+      "ipa": "/kʌm kliːn/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-1e22e0691d60979a": {
+      "difficulty": "8.0",
+      "synonyms": ["pour down", "bucket down", "rain cats and dogs", "pelt down"],
+      "collocations": ["rain came down in torrents", "come down in torrents all day", "the storm came down in torrents"],
+      "example_simple": "The rain came down in torrents, so we stayed inside.",
+      "example_complex": "By the time we reached shelter, the rain was coming down in torrents and the streets had flooded.",
+      "definition_en": "to rain very heavily",
+      "ipa": "/kʌm daʊn ɪn ˈtɒrənts/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-c34b6a94d7f06e04": {
+      "difficulty": "7.0",
+      "synonyms": ["receive", "get", "be subjected to", "attract"],
+      "collocations": ["come in for criticism", "come in for praise", "come in for a lot of blame"],
+      "example_simple": "The referee came in for a lot of criticism after the match.",
+      "example_complex": "The new policy came in for fierce criticism from both employers and unions.",
+      "definition_en": "to receive something, especially criticism or blame",
+      "ipa": "/kʌm ɪn fɔː/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-3a0c06821f70a9fb": {
+      "difficulty": "7.0",
+      "synonyms": ["receive", "be subjected to", "attract", "incur"],
+      "collocations": ["come in for criticism", "come in for blame", "come in for attention"],
+      "example_simple": "His plan came in for a great deal of criticism.",
+      "example_complex": "The government's handling of the crisis came in for sustained public attack.",
+      "definition_en": "to be subjected to or receive something, especially criticism",
+      "ipa": "/kʌm ɪn fɔː wɪð ˈsʌmθɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-04f8efcc4bd5428a": {
+      "difficulty": "7.0",
+      "synonyms": ["take effect", "come into force", "become effective", "become operative"],
+      "collocations": ["come into effect immediately", "the law came into effect", "come into effect next year"],
+      "example_simple": "The new rules come into effect on Monday.",
+      "example_complex": "The tax reforms came into effect just as the economy was showing signs of recovery.",
+      "definition_en": "to start to officially apply or be enforced",
+      "ipa": "/kʌm ˈɪntə ɪˈfekt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-0d33613ce14d1696": {
+      "difficulty": "6.0",
+      "synonyms": ["become fashionable", "catch on", "become popular", "come into vogue"],
+      "collocations": ["come into fashion again", "suddenly come into fashion", "styles that come into fashion"],
+      "example_simple": "Baggy jeans have come into fashion again.",
+      "example_complex": "Minimalist interior design came into fashion just as consumers grew tired of clutter.",
+      "definition_en": "to become fashionable or popular",
+      "ipa": "/kʌm ˈɪntə ˈfæʃən/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-8e1eeb4526186981": {
+      "difficulty": "7.0",
+      "synonyms": ["take effect", "become effective", "come into effect", "become law"],
+      "collocations": ["come into force next month", "the treaty came into force", "regulations come into force"],
+      "example_simple": "The new law comes into force at the start of next year.",
+      "example_complex": "Once the agreement comes into force, member states will be legally bound by its terms.",
+      "definition_en": "to begin to be officially valid or enforced",
+      "ipa": "/kʌm ˈɪntə fɔːs ˈɔː ɪˈfekt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-01f59c4f9c463e32": {
+      "difficulty": "7.0",
+      "synonyms": ["take power", "come to power", "take office", "gain power"],
+      "collocations": ["come into power in an election", "the party came into power", "come into power peacefully"],
+      "example_simple": "The new government came into power after the election.",
+      "example_complex": "When the reformist party came into power, it immediately set about dismantling the old regulations.",
+      "definition_en": "to begin to hold political control or authority",
+      "ipa": "/kʌm ˈɪntə ˈpaʊə/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-14130d0c452f08ce": {
+      "difficulty": "7.0",
+      "synonyms": ["come into use / fall into disuse", "become common / become obsolete", "be adopted / be abandoned"],
+      "collocations": ["come into use widely", "go out of use over time", "words that go out of use"],
+      "example_simple": "The word came into use in the 1990s but has now gone out of use.",
+      "example_complex": "As the technology came into use across industry, older manual methods gradually went out of use.",
+      "definition_en": "to start being used, versus to stop being used",
+      "ipa": "/kʌm ˈɪntə juːs ɡəʊ aʊt əv juːs/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-7732045577f877ce": {
+      "difficulty": "7.0",
+      "synonyms": ["come naturally", "be effortless", "come easily", "be second nature"],
+      "collocations": ["come naturally to someone", "singing comes naturally to her", "leadership comes naturally to him"],
+      "example_simple": "Learning languages comes naturally to her.",
+      "example_complex": "Public speaking never came naturally to him, yet years of practice made him a compelling lecturer.",
+      "definition_en": "to be easy for someone to do without effort",
+      "ipa": "/kʌm ˈnætʃrəli tə ˌsʌmbədi/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-fac2af70fa56922b": {
+      "difficulty": "5.0",
+      "ipa": "/kʌm ɒn/"
+    },
+    "pubcol-w-0ef5fb409b56ce75": {
+      "difficulty": "6.0",
+      "ipa": "/kʌm ˈəʊvə/"
+    },
+    "pubcol-w-205e9f8713a7b06c": {
+      "difficulty": "8.0",
+      "synonyms": ["whatever happens", "no matter what", "regardless", "come what may"],
+      "collocations": ["be there come rain or shine", "come rain or shine every day", "train come rain or shine"],
+      "example_simple": "She goes jogging every morning, come rain or shine.",
+      "example_complex": "The old postman delivered the letters come rain or shine, never missing a single day in forty years.",
+      "definition_en": "whatever happens, no matter the circumstances",
+      "ipa": "/kʌm reɪn ɔː ʃaɪn/",
+      "part_of_speech": "idiom"
+    }
+  }
+}

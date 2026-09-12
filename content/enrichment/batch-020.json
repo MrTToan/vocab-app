@@ -1,0 +1,200 @@
+{
+  "meta": { "batch": "batch-020", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-749f86fe4417725c": {
+      "difficulty": "7.0",
+      "synonyms": ["fall out with sb", "cut ties with sb", "sever relations with sb"],
+      "collocations": ["break with an old friend", "break with a partner", "break with a colleague"],
+      "example_simple": "She decided to break with her boyfriend after years of arguing.",
+      "example_complex": "After the scandal, he chose to break with his former business partner and start again alone.",
+      "definition_en": "to end a relationship or association with someone",
+      "ipa": "/breɪk wɪð ˌsʌmbədi/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-b87a4357758d603e": {
+      "difficulty": "6.0",
+      "synonyms": ["escape", "break free", "pull away", "split off"],
+      "collocations": ["break away from the group", "break away from tradition", "break away and run"],
+      "example_simple": "The horse managed to break away from its owner and ran across the field.",
+      "example_complex": "A few members decided to break away from the main party to form their own political movement.",
+      "definition_en": "to move away suddenly, or to leave a group or established way of doing things",
+      "ipa": "/breɪk əˈweɪ/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "tách ra, thoát khỏi"
+    },
+    "pubcol-w-f2c3d9763cce3fd7": {
+      "difficulty": "6.0",
+      "synonyms": ["set a record", "beat a record", "surpass a record"],
+      "collocations": ["break a world record", "break a national record", "break a long-standing record"],
+      "example_simple": "The young swimmer broke a record at her very first competition.",
+      "example_complex": "By finishing in under two hours, the marathon runner broke a record that had stood for a decade.",
+      "definition_en": "to do something better or faster than has ever been done before",
+      "ipa": "/breɪk ə ˈrekɔːd/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-ef6896ab2d5a3c6e": {
+      "synonyms": ["escape", "flee", "get away"],
+      "collocations": ["break out of prison", "break out of the camp", "make a daring breakout"],
+      "example_simple": "Two prisoners tried to break out of the jail during the night.",
+      "example_complex": "The dramatic breakout from the high-security facility made headlines across the country."
+    },
+    "pubcol-w-189db0933dbd22bb": {
+      "difficulty": "7.0",
+      "synonyms": ["revitalize", "reinvigorate", "rejuvenate", "refresh"],
+      "collocations": ["breathe new life into a project", "breathe new life into the economy", "breathe new life into an old building"],
+      "example_simple": "The new manager breathed new life into the struggling team.",
+      "example_complex": "A wave of young artists breathed new life into a neighbourhood that had long been in decline.",
+      "definition_en": "to give fresh energy, interest, or vitality to something",
+      "ipa": "/briːð njuː laɪf ˈɪntuː/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-3a8ee23881717816": {
+      "difficulty": "7.0",
+      "synonyms": ["mention", "say a word", "utter a word", "let on"],
+      "collocations": ["not breathe a word to anyone", "never breathe a word about it", "not say a word"],
+      "example_simple": "Please don't breathe a word of this to my parents.",
+      "example_complex": "He promised he wouldn't breathe a word about the surprise party, no matter who asked him.",
+      "definition_en": "to say something or tell someone about a matter, especially a secret",
+      "ipa": "/briːð ə ˈwɜːd/",
+      "part_of_speech": "phrase"
+    },
+    "8fe7f67b-b9ae-4aec-8b1b-e44dd3816220": {
+      "difficulty": "6.0",
+      "definition_en": "to keep animals or plants in order to produce young ones or new types",
+      "ipa": "/briːd/",
+      "part_of_speech": "verb"
+    },
+    "f5d36a46-fd39-4ae0-9226-1de413be2e1d": {
+      "difficulty": "8.0",
+      "definition_en": "to think about something anxiously or moodily for a long time",
+      "ipa": "/bruː ˈəʊvə ˈsʌmθɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-0634ff34edd0692f": {
+      "difficulty": "6.0",
+      "synonyms": ["sum up briefly", "recap", "outline"],
+      "collocations": ["briefly summarize the results", "briefly summarize the main points", "briefly summarize the report"],
+      "example_simple": "Could you briefly summarize what happened at the meeting?",
+      "example_complex": "In her conclusion, the author briefly summarizes the key arguments before offering a final recommendation.",
+      "definition_en": "to give a short account of the main points of something",
+      "ipa": "/ˈbriːfli ˈsʌməraɪz/",
+      "part_of_speech": "phrase"
+    },
+    "be4f4209-7a9c-40e1-a91f-318e07b607ca": {
+      "difficulty": "8.0",
+      "definition_en": "the bright central core of a galaxy, comet, or cell",
+      "ipa": "/braɪt ˈnjuːkliəs/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-d491f531335d8091": {
+      "difficulty": "6.0",
+      "ipa": "/brɪŋ əˈbaʊt/"
+    },
+    "pubcol-w-723b4db73ce95cd1": {
+      "difficulty": "6.0",
+      "synonyms": ["evoke", "recall", "call to mind", "revive"],
+      "collocations": ["bring back memories", "bring back the past", "bring back happy times"],
+      "example_simple": "That song always brings back memories of my childhood.",
+      "example_complex": "The smell of the sea brought back vivid memories of the summers he had spent at his grandmother's house.",
+      "definition_en": "to make someone remember something or think of the past",
+      "ipa": "/brɪŋ ˈbæk/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-edc1272d666dfd4a": {
+      "difficulty": "7.0",
+      "synonyms": ["bring out the best in sb", "get the most out of sb", "draw out the best"],
+      "collocations": ["bring out the best in someone", "bring out the best in students", "bring out the best in a team"],
+      "example_simple": "A good coach can bring out the best in every player.",
+      "example_complex": "Adversity, she believed, often brings out the best in people, revealing strengths they never knew they had.",
+      "definition_en": "to cause someone's finest qualities or abilities to show",
+      "ipa": "/brɪŋ aʊt ðə ˈbest/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-a216cde479b5291b": {
+      "difficulty": "6.0",
+      "ipa": "/brɪŋ ˈʌp/"
+    },
+    "pubcol-w-425db116818fa507": {
+      "difficulty": "7.0",
+      "synonyms": ["implement", "put into practice", "enforce", "carry out"],
+      "collocations": ["bring a plan into effect", "put a law into effect", "bring changes into effect"],
+      "example_simple": "The new rules will be brought into effect next month.",
+      "example_complex": "It took the government several years to put the ambitious reforms into effect across the whole country.",
+      "definition_en": "to make something start to happen or become operative",
+      "ipa": "/brɪŋ ˈɪntuː ɪˈfekt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-a559d73269d986c7": {
+      "difficulty": "7.0",
+      "ipa": "/ˈbrɔːdli ˈspiːkɪŋ/"
+    },
+    "f75fec73-cfd3-4fd7-872b-28ced2aee1d0": {
+      "difficulty": "8.0",
+      "definition_en": "containers made of bronze used for holding drink during rituals or ceremonies",
+      "ipa": "/brɒnz ˌserɪˈməʊniəl ˈdrɪŋkɪŋ ˈvesəlz/",
+      "part_of_speech": "noun"
+    },
+    "ffe17c40-992c-47bf-9e4e-98e6047aca30": {
+      "difficulty": "8.0",
+      "definition_en": "to think deeply and unhappily about something for a long time; also, a family of young animals born together",
+      "ipa": "/bruːd/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-bc2b786705f15832": {
+      "synonyms": ["contusion", "black-and-blue mark", "welt"],
+      "collocations": ["a nasty bruise", "cover in bruises", "get a bruise"],
+      "example_simple": "She had a big bruise on her leg after falling off her bike.",
+      "example_complex": "The boxer left the ring with a swollen eye and several bruises across his ribs."
+    },
+    "a4a824af-81c9-4c2f-876d-a24b9850c484": {
+      "difficulty": "8.0",
+      "definition_en": "a serious infectious disease spread by fleas, causing swollen lymph nodes and often death",
+      "ipa": "/bjuːˈbɒnɪk pleɪɡ/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-827b8276dd99a8a9": {
+      "synonyms": ["pail", "container", "tub"],
+      "collocations": ["a bucket of water", "fill a bucket", "carry a bucket"],
+      "example_simple": "He filled a bucket with water to wash the car.",
+      "example_complex": "The old roof leaked so badly that they had to place buckets around the room during the storm.",
+      "definition_en": "an open container with a handle, used for carrying liquids",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-80754af91bfb6d10": {
+      "synonyms": ["construct", "erect", "assemble", "put up"],
+      "collocations": ["build a house", "build a bridge", "build a relationship"],
+      "example_simple": "They plan to build a new school in the village.",
+      "example_complex": "Over many years, the company managed to build a reputation for quality that its rivals could not match.",
+      "definition_en": "to make something by putting parts or materials together",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-98720d36635fccfc": {
+      "difficulty": "7.0",
+      "synonyms": ["develop immunity to", "become resistant to", "toughen up against"],
+      "collocations": ["build up resistance to disease", "build up resistance to infection", "build up resistance to antibiotics"],
+      "example_simple": "Eating well helps your body build up resistance to illness.",
+      "example_complex": "Overuse of antibiotics can allow bacteria to build up resistance to the very drugs meant to destroy them.",
+      "definition_en": "to gradually develop the ability to withstand or fight against something",
+      "ipa": "/bɪld ʌp rɪˈzɪstəns tuː ˈsʌmθɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-138d732519ec9681": {
+      "synonyms": ["ox", "steer"],
+      "collocations": ["a raging bull", "a young bull", "a fighting bull"],
+      "example_simple": "The farmer kept a large bull in the field behind the barn.",
+      "example_complex": "The angry bull charged across the pasture, forcing the workers to scramble over the fence.",
+      "definition_en": "an adult male of the cattle family, or of some other large animals such as elephants",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-87072dcb2c57c274": {
+      "difficulty": "7.0",
+      "synonyms": ["gridlock", "traffic jam", "congestion", "standstill traffic"],
+      "collocations": ["stuck in bumper-to-bumper traffic", "bumper-to-bumper traffic on the highway", "endure bumper-to-bumper traffic"],
+      "example_simple": "We were stuck in bumper-to-bumper traffic for over an hour this morning.",
+      "example_complex": "Every evening the ring road turns into bumper-to-bumper traffic, with cars barely moving for miles on end.",
+      "definition_en": "traffic in which vehicles are so close together and slow that they are almost touching",
+      "ipa": "/ˈbʌmpə tə ˈbʌmpə ˈtræfɪk/",
+      "part_of_speech": "phrase"
+    }
+  }
+}

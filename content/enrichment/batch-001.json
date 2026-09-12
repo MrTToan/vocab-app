@@ -1,0 +1,215 @@
+{
+  "meta": { "batch": "batch-001", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-3987f0c245b4e917": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə ˈbɒtl̩ əv mɪlk ˈwɔːtə waɪn/",
+      "definition_en": "a glass or plastic container holding milk, water, or wine, and the amount it holds",
+      "synonyms": ["a carton of", "a flask of", "a jug of"],
+      "collocations": ["open a bottle of wine", "buy a bottle of water", "a chilled bottle of milk"],
+      "example_simple": "She bought a bottle of water before the long bus journey.",
+      "example_complex": "To celebrate the promotion, they uncorked an expensive bottle of wine that had been ageing in the cellar for years."
+    },
+    "f6c01ffb-4b64-4671-b18a-505f1c6c3e36": {
+      "difficulty": "7.0",
+      "definition_en": "a wide summit of a mountain, or a wide high point on a graph or curve",
+      "ipa": "/ə brɔːd piːk/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-7c30fb9bdf13a0c6": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə ˌkəʊldˈblʌdɪd ˈkɪlə ˈmɜːdərə/",
+      "definition_en": "a person who kills without any emotion, mercy, or remorse",
+      "synonyms": ["ruthless killer", "merciless murderer", "callous killer"],
+      "collocations": ["a cold-blooded killer on the loose", "hunted by a cold-blooded murderer", "a cold-blooded, calculated killing"],
+      "example_simple": "The film is about a cold-blooded killer who feels no guilt.",
+      "example_complex": "Prosecutors portrayed the defendant as a cold-blooded murderer who had planned every detail of the crime in advance."
+    },
+    "c4d551db-75df-41ff-a950-ca60aa1b84eb": {
+      "difficulty": "6.0",
+      "definition_en": "a model of a human figure, a fake or imitation object, or (informal) a foolish person",
+      "ipa": "/ə ˈdʌmi/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-b751cb2c67a59ba9": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə ˌfɜːstˈhænd əˈkaʊnt/",
+      "definition_en": "a description of an event given by someone who saw or experienced it directly",
+      "synonyms": ["eyewitness account", "personal account", "direct report"],
+      "collocations": ["give a first-hand account", "a first-hand account of the war", "provide a first-hand account"],
+      "example_simple": "She gave a first-hand account of what happened during the storm.",
+      "example_complex": "The memoir offers a gripping first-hand account of life inside the refugee camp, told by someone who actually survived it."
+    },
+    "pubcol-w-8ba594d347c9e36d": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə ˌfɜːstˌtaɪm əˈfendə/",
+      "definition_en": "a person who has been convicted of a crime for the first time",
+      "synonyms": ["first offender", "novice offender"],
+      "collocations": ["treated as a first-time offender", "leniency for a first-time offender", "a first-time offender with no record"],
+      "example_simple": "As a first-time offender, he was given a warning instead of a prison sentence.",
+      "example_complex": "The judge argued that a first-time offender who shows genuine remorse deserves rehabilitation rather than a lengthy custodial sentence."
+    },
+    "04ce992b-6757-44bc-91ba-3e81ba28bfb6": {
+      "difficulty": "7.0"
+    },
+    "pubcol-w-4bfb3e2862a4586f": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə flaɪt əv steəz ə swiːt əv ruːmz/",
+      "definition_en": "a set of stairs between two floors; and a connected group of rooms used together",
+      "synonyms": ["a staircase", "a set of stairs", "a suite"],
+      "collocations": ["climb a flight of stairs", "a steep flight of stairs", "a suite of rooms on the top floor"],
+      "example_simple": "We walked up a flight of stairs to reach the office, which had a whole suite of rooms.",
+      "example_complex": "The hotel offered a luxurious suite of rooms at the top of a grand flight of stairs that swept up from the marble lobby."
+    },
+    "pubcol-w-dfe28c74df5fb697": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə flɒk əv bɜːdz/",
+      "definition_en": "a group of birds flying or feeding together",
+      "synonyms": ["a flight of birds", "a swarm of birds"],
+      "collocations": ["a flock of birds flew overhead", "a huge flock of birds", "scare off a flock of birds"],
+      "example_simple": "A flock of birds flew across the evening sky.",
+      "example_complex": "As the sun set, a vast flock of birds wheeled over the wetlands before settling into the reeds for the night."
+    },
+    "pubcol-w-f68581158997a6c7": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə flɒk əv ʃiːp ə flɒk əv ɡəʊts/",
+      "definition_en": "a group of sheep or goats kept or herded together",
+      "synonyms": ["a herd", "a drove", "a group"],
+      "collocations": ["a flock of sheep grazing", "herd a flock of sheep", "a large flock of goats"],
+      "example_simple": "The farmer led a flock of sheep across the road.",
+      "example_complex": "High in the mountains, a shepherd tended a flock of goats that scrambled easily over the rocky slopes."
+    },
+    "979151ee-6b16-4711-ae47-5583736c0b22": {
+      "difficulty": "7.0",
+      "definition_en": "an excessively large supply of something, far more than is needed",
+      "ipa": "/ə ɡlʌt əv/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-4a10d74bc3356ff9": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə ɡʊd ˈbɑːɡɪn ə bæd ˈbɑːɡɪn/",
+      "definition_en": "a good bargain is a worthwhile, cheap deal; a bad bargain is a poor, overpriced one",
+      "synonyms": ["a good deal", "a bad deal", "a steal", "a rip-off"],
+      "collocations": ["strike a good bargain", "get a good bargain", "end up with a bad bargain"],
+      "example_simple": "The old car was a good bargain because it was cheap and reliable.",
+      "example_complex": "What looked like a good bargain at the auction turned out to be a bad bargain once the hidden repair costs came to light."
+    },
+    "pubcol-w-7a415a8386c650b8": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə ɡʊd tiːm ˈpleɪə/",
+      "definition_en": "someone who works well and cooperatively as part of a group",
+      "synonyms": ["team player", "collaborator", "cooperative colleague"],
+      "collocations": ["a good team player", "value a good team player", "prove to be a good team player"],
+      "example_simple": "My manager says I am a good team player because I always help my colleagues.",
+      "example_complex": "Employers increasingly prize a good team player who can set aside personal ambition for the success of the whole group.",
+      "vi_meaning_correction": "người biết làm việc nhóm, người hợp tác tốt trong tập thể"
+    },
+    "pubcol-w-3e9d0ba2977e89a6": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə ɡreɪn əv sænd/",
+      "definition_en": "a single tiny particle of sand",
+      "synonyms": ["a speck of sand", "a particle of sand"],
+      "collocations": ["a single grain of sand", "like a grain of sand", "not a grain of sand"],
+      "example_simple": "A grain of sand got stuck in my shoe.",
+      "example_complex": "Standing beneath the night sky, she felt as insignificant as a single grain of sand on an endless beach."
+    },
+    "pubcol-w-bd901acca2c5970e": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə ɡreɪt diːl əv/",
+      "definition_en": "a large amount of something (used with uncountable nouns)",
+      "synonyms": ["a lot of", "much", "plenty of"],
+      "collocations": ["a great deal of time", "a great deal of money", "a great deal of effort"],
+      "example_simple": "We spent a great deal of time preparing for the exam.",
+      "example_complex": "Restoring the ancient manuscript required a great deal of patience, skill, and specialist knowledge."
+    },
+    "pubcol-w-04ced56adefcd74d": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə hɜːd əv ˈkætl̩/",
+      "definition_en": "a large group of cattle kept or moving together",
+      "synonyms": ["a drove of cattle", "a group", "a herd"],
+      "collocations": ["a herd of cattle grazing", "drive a herd of cattle", "a large herd of cattle"],
+      "example_simple": "A herd of cattle blocked the country road.",
+      "example_complex": "The rancher spent all morning moving a herd of cattle to fresh pasture before the summer heat set in."
+    },
+    "pubcol-w-b2c222b4a53181a6": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə ˌhaɪˈpaʊəd dʒɒb/",
+      "definition_en": "an important, demanding job with a lot of responsibility and influence",
+      "synonyms": ["top job", "senior position", "influential post"],
+      "collocations": ["a high-powered job in the city", "land a high-powered job", "give up a high-powered job"],
+      "example_simple": "She has a high-powered job at a large law firm.",
+      "example_complex": "After years in a high-powered job that consumed his weekends, he chose to step back and prioritise his family.",
+      "vi_meaning_correction": "một công việc quan trọng, nhiều quyền lực và trách nhiệm"
+    },
+    "037901cc-f5dc-4a00-b7b9-32f0cfc22d87": {
+      "difficulty": "6.0"
+    },
+    "79f5ca89-8ebc-4913-8a67-28a7d12bd070": {
+      "difficulty": "7.0",
+      "definition_en": "an amount of arsenic large enough to cause death",
+      "ipa": "/ə ˈliːθl̩ dəʊs əv ˈɑːsnɪk/",
+      "part_of_speech": "phrase"
+    },
+    "90882e1b-2ca4-4380-8872-3ab6492b3fba": {
+      "difficulty": "6.0",
+      "definition_en": "small hollows or dips in a surface; or a mild feeling of sadness",
+      "ipa": "/ə ˈlɪtl̩ dɪˈpreʃn̩z/",
+      "part_of_speech": "phrase"
+    },
+    "73547ce9-378a-4434-9f52-93ed7f75e538": {
+      "difficulty": "7.0",
+      "definition_en": "a huge, frightening insect; or a very serious fault in a computer program",
+      "ipa": "/ə ˈmɒnstrəs bʌɡ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-0063f1af3b95f31a": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə pæk əv θiːvz/",
+      "definition_en": "a group of thieves who work together",
+      "synonyms": ["a band of thieves", "a gang of thieves", "a ring of thieves"],
+      "collocations": ["a pack of thieves", "run with a pack of thieves", "nothing but a pack of thieves"],
+      "example_simple": "The old warehouse was used as a hideout by a pack of thieves.",
+      "example_complex": "He denounced the corrupt officials as nothing more than a pack of thieves plundering the public purse."
+    },
+    "pubcol-w-0b8f4ee0b6334e1c": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə ˌpɜːsn̩l̩ ˈbest/",
+      "definition_en": "the best result a person has ever achieved in a particular activity, especially a sport",
+      "synonyms": ["personal record", "best time", "PB"],
+      "collocations": ["set a personal best", "beat your personal best", "achieve a personal best"],
+      "example_simple": "She ran a personal best in the 100 metres yesterday.",
+      "example_complex": "Despite the wet conditions, the marathon runner smashed her personal best by almost two minutes."
+    },
+    "pubcol-w-452fe3e4d63b2d02": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə ˌpɪktʃəˈresk ˈfɪʃɪŋ ˈvɪlɪdʒ/",
+      "definition_en": "a small, charming coastal village that is very pretty, like a picture",
+      "synonyms": ["quaint fishing village", "scenic village", "charming village"],
+      "collocations": ["a picturesque fishing village on the coast", "visit a picturesque fishing village", "nestled in a picturesque fishing village"],
+      "example_simple": "We spent our holiday in a picturesque fishing village by the sea.",
+      "example_complex": "The coastal path winds past a picturesque fishing village whose whitewashed cottages tumble down to a busy little harbour."
+    },
+    "40ef50e4-278c-4952-abd6-7d5bdf117414": {
+      "difficulty": "7.0",
+      "definition_en": "a naturally friendly and agreeable character or temperament",
+      "ipa": "/ə ˈpleznt ˌdɪspəˈzɪʃn̩/",
+      "part_of_speech": "phrase"
+    }
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "meta": { "batch": "batch-119", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-7cf99e2dd0969ad8": {
+      "difficulty": "7.0",
+      "ipa": "/ˈsʌbsɪdi/"
+    },
+    "pubcol-w-c93d705189e161d5": {
+      "difficulty": "6.0",
+      "ipa": "/səbˈstænʃ(ə)l/"
+    },
+    "103a416d-cb48-44e7-b718-f89c78786ddb": {
+      "difficulty": "6.0",
+      "ipa": "/səbˈstænʃ(ə)li/"
+    },
+    "24a91018-9bea-4ceb-8476-9ed15e0d7210": {
+      "difficulty": "8.0",
+      "ipa": "/səbˈstænʃieɪt/"
+    },
+    "da606517-cd3c-4055-92a5-906b5a448b97": {
+      "difficulty": "8.0",
+      "definition_en": "solid facts or arguments that provide strong support for a case or claim",
+      "ipa": "/ˈsʌbstəntɪv ˌæmjəˈnɪʃ(ə)n/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-cb46a6f90bac6822": {
+      "difficulty": "6.0",
+      "synonyms": ["replace", "swap", "exchange", "switch"],
+      "collocations": ["substitute butter with oil", "substitute one player with another", "substitute sugar with honey"],
+      "example_simple": "You can substitute butter with oil in most cake recipes.",
+      "example_complex": "The coach chose to substitute the injured striker with a younger, faster forward at half-time.",
+      "definition_en": "to replace one thing or person with another",
+      "ipa": "/ˈsʌbstɪtjuːt ˈsʌmθɪŋ wɪð ˈsʌmθɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "32617eaa-068a-40ab-977d-5f94feb2eaf5": {
+      "difficulty": "7.0",
+      "definition_en": "a number of people or things following one after another, or the act of inheriting a title, office, or position",
+      "ipa": "/səkˈseʃ(ə)n/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-ef93476985aa5cb4": {
+      "difficulty": "5.0",
+      "synonyms": ["be afflicted by", "be affected by", "endure", "be plagued by"],
+      "collocations": ["suffer from depression", "suffer from a headache", "suffer from a shortage of"],
+      "example_simple": "Many older people suffer from back pain.",
+      "example_complex": "The region continues to suffer from chronic water shortages that undermine its long-term development.",
+      "definition_en": "to be affected by an illness, problem, or difficulty",
+      "ipa": "/ˈsʌfə frəm/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "chịu đựng, mắc phải (bệnh tật/vấn đề)"
+    },
+    "pubcol-w-9788fb6e9a89f545": {
+      "difficulty": "6.0",
+      "synonyms": ["bear the results", "pay the price", "face the fallout", "answer for"],
+      "collocations": ["suffer the consequences", "minimise the consequences", "address the consequences of"],
+      "example_simple": "If you cheat in the exam, you will suffer the consequences.",
+      "example_complex": "Governments that ignore climate warnings today may force future generations to suffer the consequences of their inaction.",
+      "definition_en": "to experience the unpleasant results of one's actions or decisions",
+      "ipa": "/ˈsʌfə ðə ˈkɒnsɪkwənsɪz/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "gánh chịu hậu quả (của hành động/quyết định)"
+    },
+    "pubcol-w-ce771aef034f86b1": {
+      "difficulty": "6.0",
+      "synonyms": ["bear the consequences", "pay the price", "face the fallout", "answer for"],
+      "collocations": ["suffer the consequences", "face the consequences", "take the consequences"],
+      "example_simple": "He broke the rules, so now he has to face the consequences.",
+      "example_complex": "Executives who authorised the reckless lending were eventually made to take the consequences of the bank's collapse.",
+      "definition_en": "to experience or accept the unpleasant results of one's actions",
+      "ipa": "/ˈsʌfə feɪs teɪk ðə ˈkɒnsɪkwənsɪz/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "gánh chịu/đối mặt với/lãnh hậu quả"
+    },
+    "95266f8c-d6ec-4b3a-a436-e6d55917187d": {
+      "difficulty": "7.0",
+      "definition_en": "the condition of being unable to breathe, causing loss of consciousness or death",
+      "ipa": "/ˌsʌfəˈkeɪʃ(ə)n/",
+      "part_of_speech": "noun"
+    },
+    "582151dd-1d4f-42e8-b144-e33e1723627d": {
+      "difficulty": "8.0",
+      "definition_en": "the right to vote in political elections",
+      "ipa": "/ˈsʌfrɪdʒ/",
+      "part_of_speech": "noun"
+    },
+    "8eba66a7-daad-4ef7-9da0-5e9390b61520": {
+      "difficulty": "8.0",
+      "definition_en": "gradually spread through or filled with a colour, light, or feeling",
+      "ipa": "/səˈfjuːzd/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-2b2a1696b80baae3": {
+      "synonyms": ["sweet", "sweetened", "syrupy", "honeyed"],
+      "collocations": ["sugary drinks", "sugary snacks", "sugary taste"],
+      "example_simple": "The children drink too many sugary sodas.",
+      "example_complex": "Health campaigns increasingly warn that sugary beverages are a major contributor to childhood obesity."
+    },
+    "pubcol-w-fd0a4950be7bdd9f": {
+      "difficulty": "5.0",
+      "ipa": "/səˈdʒest/"
+    },
+    "pubcol-w-3f00a865be967e23": {
+      "synonyms": ["tanned", "bronzed", "sun-kissed", "browned"],
+      "collocations": ["suntanned skin", "deeply suntanned", "suntanned face"],
+      "example_simple": "She came back from the beach looking healthy and suntanned.",
+      "example_complex": "His suntanned complexion betrayed the weeks he had spent sailing in the Mediterranean."
+    },
+    "pubcol-w-e109c8e1cd9a2211": {
+      "difficulty": "5.0",
+      "synonyms": ["celebrity", "megastar", "icon", "idol"],
+      "collocations": ["pop superstar", "become a superstar", "international superstar"],
+      "example_simple": "She dreamed of becoming a football superstar.",
+      "example_complex": "Overnight, the young singer was transformed from an unknown busker into a global superstar.",
+      "definition_en": "an extremely famous and successful performer, athlete, or celebrity",
+      "ipa": "/ˈsuːpəstɑː(r)/",
+      "part_of_speech": "noun"
+    },
+    "366d90d3-302b-4670-89b9-a0b5e1a68dc7": {
+      "difficulty": "7.0",
+      "definition_en": "existing at or affecting only the surface; lacking depth or thoroughness",
+      "ipa": "/ˌsuːpəˈfɪʃ(ə)l/",
+      "part_of_speech": "adjective"
+    },
+    "a3f39340-eac8-4448-a221-595de37095ef": {
+      "difficulty": "7.0",
+      "definition_en": "a person who manages or supervises an organization, department, or place",
+      "ipa": "/ˌsuːpərɪnˈtendənt/",
+      "part_of_speech": "noun"
+    },
+    "841c6386-6142-463c-98c7-89193616e752": {
+      "difficulty": "8.0",
+      "definition_en": "to take the place of something previously in use or in authority",
+      "ipa": "/ˌsuːpəˈsiːd/",
+      "part_of_speech": "verb"
+    },
+    "7d350150-8053-46d1-bf75-8175905071dc": {
+      "difficulty": "7.0",
+      "definition_en": "to forcibly put an end to something, or to prevent it from being expressed or known",
+      "ipa": "/səˈpres/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-c6359a7968b3cd89": {
+      "synonyms": ["exterior", "top", "outside", "face"],
+      "collocations": ["road surface", "smooth surface", "the surface of the water"],
+      "example_simple": "The table has a shiny, smooth surface.",
+      "example_complex": "Beneath its calm surface, the negotiation was riddled with deep-seated distrust.",
+      "definition_en": "the outer or topmost layer or boundary of something",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-12ca7485bbbe5db8": {
+      "synonyms": ["wave-riding", "board-riding", "surf-riding"],
+      "collocations": ["go surfing", "surfing competition", "big-wave surfing"],
+      "example_simple": "They go surfing every summer at the beach.",
+      "example_complex": "The remote coastline has become a magnet for surfing enthusiasts chasing its powerful winter swells.",
+      "definition_en": "the sport of riding on the waves of the sea on a board",
+      "part_of_speech": "noun"
+    },
+    "833154a8-cff7-4c74-801b-e1db9cc9b907": {
+      "difficulty": "7.0",
+      "ipa": "/sɜːdʒ/"
+    },
+    "pubcol-w-5424e8c423c3fb79": {
+      "synonyms": ["operating doctor", "medical specialist"],
+      "collocations": ["heart surgeon", "plastic surgeon", "consult a surgeon"],
+      "example_simple": "The surgeon will perform the operation tomorrow morning.",
+      "example_complex": "The trauma surgeon worked through the night to repair the injuries sustained in the crash.",
+      "definition_en": "a doctor who is qualified to perform surgical operations",
+      "part_of_speech": "noun"
+    }
+  }
+}

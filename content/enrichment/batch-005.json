@@ -1,0 +1,212 @@
+{
+  "meta": { "batch": "batch-005", "authored_by": "claude", "count": 25 },
+  "words": {
+    "03f18e8b-d93a-40db-af76-7a73f867c5ba": {
+      "difficulty": "7.0",
+      "example_simple": "My grandmother is an avid television viewer who never misses her favourite soap opera.",
+      "example_complex": "As an avid television viewer, he could discuss the plot of almost every drama series aired that season.",
+      "definition_en": "a person who watches a great deal of television with keen enthusiasm",
+      "ipa": "/ˌævɪd ˈtelɪvɪʒn ˈvjuːə/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "người mê xem truyền hình"
+    },
+    "pubcol-w-3fb6871c3552beaf": {
+      "difficulty": "7.0",
+      "ipa": "/ˈædvəkeɪt/ (verb), /ˈædvəkət/ (noun)"
+    },
+    "e201e58a-f2b0-46bd-aca8-afd992d8be88": {
+      "difficulty": "6.0",
+      "definition_en": "a view of something from high above, as seen from an aircraft",
+      "ipa": "/ˈeəriəl ˈvjuː/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-0d428729188f9239": {
+      "synonyms": ["fondness", "warmth", "tenderness", "love"],
+      "collocations": ["show affection", "deep affection", "display of affection"],
+      "example_simple": "She showed great affection for her little brother.",
+      "example_complex": "The elderly couple still treated each other with the same affection they had shown as newlyweds."
+    },
+    "pubcol-w-c7a10cc6a5becd05": {
+      "synonyms": ["loving", "tender", "fond", "warm"],
+      "collocations": ["affectionate hug", "affectionate smile", "warm and affectionate"],
+      "example_simple": "He is an affectionate father who hugs his children every morning.",
+      "example_complex": "Their affectionate relationship was obvious to everyone from the tender way they spoke to each other."
+    },
+    "pubcol-w-9e6be8e73b57a51e": {
+      "synonyms": ["rapport", "fondness", "kinship", "attraction"],
+      "collocations": ["natural affinity", "affinity for", "close affinity"],
+      "example_simple": "She has a natural affinity for languages and learns them quickly.",
+      "example_complex": "His deep affinity with the natural world shaped every decision he made as a conservationist.",
+      "vi_meaning_correction": "sự gần gũi, mối liên hệ tự nhiên; sự yêu thích tự nhiên"
+    },
+    "7734f9d2-3083-4658-a08d-083a71710533": {
+      "difficulty": "7.0",
+      "definition_en": "suffering from or affected by something unpleasant, such as illness or pain",
+      "ipa": "/əˈflɪktɪd/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-71570b44af4e5c81": {
+      "synonyms": ["wealth", "prosperity", "riches", "opulence"],
+      "collocations": ["growing affluence", "material affluence", "affluence and comfort"],
+      "example_simple": "The town's new affluence was visible in its large houses and expensive cars.",
+      "example_complex": "Rising affluence among the middle class has fuelled demand for luxury goods and overseas travel."
+    },
+    "pubcol-w-6851e0c5993d8f60": {
+      "difficulty": "6.0",
+      "synonyms": ["fresh start", "clean slate", "new chapter", "new leaf"],
+      "collocations": ["make a fresh start", "a fresh start in life", "a new beginning"],
+      "example_simple": "Moving to a new city gave her a fresh start.",
+      "example_complex": "After the company collapsed, he saw the move abroad as a chance for a completely fresh start.",
+      "definition_en": "an opportunity to begin something again in a new and better way",
+      "ipa": "/ə ˌfreʃ ˈstɑːt, ˌnjuː bɪˈɡɪnɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-1348c91e587f23b9": {
+      "difficulty": "6.0",
+      "synonyms": ["racing the clock", "under time pressure", "in a hurry"],
+      "collocations": ["work against the clock", "race against the clock", "running against the clock"],
+      "example_simple": "The team worked against the clock to finish the project before the deadline.",
+      "example_complex": "Rescue workers were racing against the clock to reach the trapped miners before their oxygen ran out.",
+      "definition_en": "trying to do or finish something very quickly because there is little time left",
+      "ipa": "/əˌɡenst ðə ˈklɒk/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-c8883e48b50007c8": {
+      "difficulty": "5.0",
+      "synonyms": ["illegal", "unlawful", "prohibited", "forbidden"],
+      "collocations": ["against the law to", "strictly against the law", "it is against the law"],
+      "example_simple": "It is against the law to drive without a licence.",
+      "example_complex": "Many people were unaware that recording the conversation without consent was against the law.",
+      "definition_en": "not allowed by the law; illegal",
+      "ipa": "/əˌɡenst ðə ˈlɔː/",
+      "part_of_speech": "phrase"
+    },
+    "114eaabc-d13e-4786-8144-4292214a4550": {
+      "difficulty": "8.0",
+      "definition_en": "a large cluster or mass of things collected or grouped together",
+      "ipa": "/əˌɡlɒməˈreɪʃn/",
+      "part_of_speech": "noun"
+    },
+    "3c9e286b-7a7b-4cf8-9f1e-25d1f4f34bdf": {
+      "difficulty": "7.0",
+      "definition_en": "a sudden strong urge to behave in a hostile or violent way",
+      "ipa": "/əˌɡresɪv ˈɪmpʌls/",
+      "part_of_speech": "phrase"
+    },
+    "d57c38ca-98e9-4478-b598-6d895bb535f8": {
+      "difficulty": "7.0",
+      "definition_en": "to make someone feel anxious or upset, or to stir up public concern about an issue",
+      "ipa": "/ˈædʒɪteɪt/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-5a10d1b73c015ed9": {
+      "synonyms": ["anxiety", "distress", "unrest", "turmoil"],
+      "collocations": ["state of agitation", "growing agitation", "signs of agitation"],
+      "example_simple": "She waited in a state of agitation for the test results.",
+      "example_complex": "His visible agitation during the interview suggested he was hiding something important."
+    },
+    "pubcol-w-400a1fdd48aa2971": {
+      "difficulty": "6.0",
+      "synonyms": ["agree to disagree", "accept the difference", "let it rest"],
+      "collocations": ["agree to differ on", "we'll agree to differ", "politely agree to differ"],
+      "example_simple": "We couldn't reach the same conclusion, so we agreed to differ.",
+      "example_complex": "After a long debate about politics, the two friends decided to agree to differ rather than damage their friendship.",
+      "definition_en": "to accept that you and another person hold different opinions and stop arguing about it",
+      "ipa": "/əˌɡriː tə ˈdɪfə/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-1c0ce84b5ccf78f6": {
+      "difficulty": "6.0",
+      "synonyms": ["agree to differ", "accept differences", "let it rest"],
+      "collocations": ["let's agree to disagree", "agree to disagree on", "politely agree to disagree"],
+      "example_simple": "We have different views on this, so let's just agree to disagree.",
+      "example_complex": "Realizing neither would change their mind about the policy, they chose to agree to disagree and move on.",
+      "definition_en": "to accept that you and another person have different opinions and stop trying to persuade each other",
+      "ipa": "/əˌɡriː tə ˌdɪsəˈɡriː/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "đồng ý rằng mỗi người giữ quan điểm riêng, không tranh cãi thêm"
+    },
+    "pubcol-w-feaf9e1121ff03ea": {
+      "difficulty": "5.0",
+      "synonyms": ["share your view", "see eye to eye", "concur with you"],
+      "collocations": ["I agree with you", "completely agree with you", "couldn't agree with you more"],
+      "example_simple": "I agree with you that we should leave earlier.",
+      "example_complex": "While I agree with you on the main point, I think the details need to be reconsidered.",
+      "definition_en": "to have the same opinion as the person you are speaking to",
+      "ipa": "/əˌɡriː wɪð ˈjuː/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "đồng ý với bạn"
+    },
+    "pubcol-w-ef1c16b5938bfb61": {
+      "difficulty": "6.0",
+      "synonyms": ["blast of wind", "rush of wind", "squall", "gale"],
+      "collocations": ["a sudden gust of wind", "a strong gust of wind", "a gust of wind blew"],
+      "example_simple": "A gust of wind blew my hat off.",
+      "example_complex": "A sudden gust of wind swept across the runway, forcing the pilot to abort the landing.",
+      "definition_en": "a sudden strong rush of wind",
+      "ipa": "/ə ˌɡʌst əv ˈwɪnd/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-ddad47983e14a65c": {
+      "difficulty": "7.0",
+      "synonyms": ["severe punishment", "lenient sentence", "stiff penalty", "mild penalty"],
+      "collocations": ["hand down a harsh sentence", "receive a light sentence", "impose a harsh sentence"],
+      "example_simple": "The judge gave him a harsh sentence, while his friend got a light sentence.",
+      "example_complex": "Critics argued that a harsh sentence for a first offence was unjust and campaigned for a lighter one.",
+      "definition_en": "a severe punishment versus a mild or lenient punishment given by a court",
+      "ipa": "/ə ˌhɑːʃ ˈsentəns, ə ˌlaɪt ˈsentəns/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-3b397aa79719be2a": {
+      "difficulty": "6.0",
+      "synonyms": ["cardiac arrest", "coronary", "myocardial infarction"],
+      "collocations": ["have a heart attack", "suffer a heart attack", "die of a heart attack"],
+      "example_simple": "He had a heart attack and was rushed to hospital.",
+      "example_complex": "Years of stress and a poor diet increased his risk of suffering a fatal heart attack.",
+      "definition_en": "a sudden, dangerous medical condition in which the heart stops working properly due to blocked blood flow",
+      "ipa": "/ə ˈhɑːt əˌtæk/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-f7f620425c22baf8": {
+      "difficulty": "6.0",
+      "synonyms": ["fierce argument", "angry dispute", "row", "quarrel"],
+      "collocations": ["get into a heated argument", "a heated argument broke out", "heated argument over"],
+      "example_simple": "They had a heated argument about money.",
+      "example_complex": "What began as a calm discussion soon turned into a heated argument that neither side was willing to lose.",
+      "definition_en": "an angry and intense disagreement between people",
+      "ipa": "/ə ˌhiːtɪd ˈɑːɡjumənt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-a9608d876088ce37": {
+      "difficulty": "6.0",
+      "synonyms": ["very efficient method", "successful approach", "powerful means"],
+      "collocations": ["a highly effective way to", "prove a highly effective way", "remain a highly effective way"],
+      "example_simple": "Reading every day is a highly effective way to improve your English.",
+      "example_complex": "Peer teaching has proven to be a highly effective way of reinforcing complex concepts among students.",
+      "definition_en": "a method that works very well and produces excellent results",
+      "ipa": "/ə ˌhaɪli ɪˌfektɪv ˈweɪ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-9ddd15b0292372ee": {
+      "difficulty": "6.0",
+      "synonyms": ["walking trail", "footpath", "mountain path", "hiking route"],
+      "collocations": ["follow a hiking trail", "a popular hiking trail", "a scenic hiking trail"],
+      "example_simple": "We followed a hiking trail up the mountain.",
+      "example_complex": "The national park maintains a network of hiking trails ranging from gentle walks to challenging alpine climbs.",
+      "definition_en": "a marked path or route used for walking through the countryside or mountains",
+      "ipa": "/ə ˈhaɪkɪŋ treɪl/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "đường mòn leo núi, đường mòn đi bộ đường dài"
+    },
+    "pubcol-w-43a65e511dffae1f": {
+      "difficulty": "5.0",
+      "synonyms": ["beehive", "swarm of bees", "colony of bees"],
+      "collocations": ["a hive of bees", "a buzzing hive of bees", "keep a hive of bees"],
+      "example_simple": "There was a hive of bees in the old tree.",
+      "example_complex": "Beekeepers must handle a hive of bees carefully to avoid provoking the colony.",
+      "definition_en": "a structure or colony in which a group of bees lives together",
+      "ipa": "/ə ˌhaɪv əv ˈbiːz/",
+      "part_of_speech": "phrase"
+    }
+  }
+}

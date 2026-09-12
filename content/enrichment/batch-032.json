@@ -1,0 +1,174 @@
+{
+  "meta": { "batch": "batch-032", "authored_by": "claude", "count": 25 },
+  "words": {
+    "75ea3d2c-1206-4c62-8f22-f8ecc2c6cc43": {
+      "difficulty": "7.0",
+      "ipa": "/kəˈrɒbəreɪt/"
+    },
+    "3595c2bf-50d9-4d9b-8ff1-9ed7fab7908a": {
+      "difficulty": "8.0"
+    },
+    "pubcol-w-c6b1138e7e0d2385": {
+      "difficulty": "6.0",
+      "ipa": "/ˌkɒst ən ˌɑːm ənd ə ˈleɡ/"
+    },
+    "pubcol-w-f28d55fbebd2f9fb": {
+      "difficulty": "6.0",
+      "synonyms": ["living costs", "living expenses", "cost of subsistence"],
+      "collocations": ["the rising cost of living", "a high cost of living", "cost-of-living increase"],
+      "example_simple": "The cost of living in the city is much higher than in the countryside.",
+      "example_complex": "As the cost of living continues to climb, many families are struggling to cover even their most basic expenses.",
+      "definition_en": "the amount of money needed to pay for basic necessities such as food, housing and clothing",
+      "ipa": "/ˌkɒst əv ˈlɪvɪŋ/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-d30de12dd4775f4c": {
+      "difficulty": "6.0",
+      "ipa": "/ˌkaʊtʃ pəˈteɪtəʊ/"
+    },
+    "pubcol-w-45a4264205db2d61": {
+      "difficulty": "6.0",
+      "ipa": "/ˌkaʊnt mi ˈɪn/"
+    },
+    "f0001af2-ffae-49c4-b5e5-4ca980d95d5b": {
+      "difficulty": "7.0",
+      "definition_en": "to act against something so as to reduce or cancel out its effect",
+      "ipa": "/ˌkaʊntərˈækt/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-95178283277cd28a": {
+      "difficulty": "7.0",
+      "synonyms": ["fake money", "forged currency", "counterfeit currency"],
+      "collocations": ["print counterfeit money", "detect counterfeit money", "circulate counterfeit money"],
+      "example_simple": "The cashier used a special pen to check for counterfeit money.",
+      "example_complex": "Authorities seized a large quantity of counterfeit money that criminals had been passing off in local shops.",
+      "definition_en": "fake banknotes made to look genuine in order to deceive people",
+      "ipa": "/ˌkaʊntəfɪt ˈmʌni/",
+      "part_of_speech": "noun",
+      "vi_meaning_correction": "tiền giả"
+    },
+    "616e7729-3544-4242-a825-86044d2eac8a": {
+      "difficulty": "7.0",
+      "definition_en": "having the opposite of the desired effect",
+      "ipa": "/ˌkaʊntəprəˈdʌktɪv/",
+      "part_of_speech": "adjective"
+    },
+    "0d433c58-9570-40f8-b258-ebd48e298a42": {
+      "difficulty": "6.0",
+      "definition_en": "the process of assigning a student to a suitable class or level of study",
+      "ipa": "/ˌkɔːs ˈpleɪsmənt/",
+      "part_of_speech": "noun"
+    },
+    "feb5fec1-25af-41c7-aee3-14cfda1cfa07": {
+      "difficulty": "7.0",
+      "definition_en": "a court that reviews and can change the decisions of a lower court",
+      "ipa": "/ˌkɔːt əv əˈpiːl/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-6f33337e32912175": {
+      "difficulty": "6.0",
+      "synonyms": ["cover letter", "application letter", "letter of application"],
+      "collocations": ["write a covering letter", "attach a covering letter", "a well-written covering letter"],
+      "example_simple": "She sent her CV together with a short covering letter.",
+      "example_complex": "A persuasive covering letter should highlight the skills that make you the ideal candidate for the position.",
+      "definition_en": "a letter sent with a document or job application to explain its contents",
+      "ipa": "/ˌkʌvərɪŋ ˈletə/",
+      "part_of_speech": "noun"
+    },
+    "21ab2132-c0b8-4175-95a2-a74dbb0e5d4d": {
+      "difficulty": "8.0",
+      "definition_en": "the world of commerce seen as coarse, materialistic and lacking in refinement",
+      "ipa": "/ˌkræs ˈbɪznəs wɜːld/",
+      "part_of_speech": "phrase"
+    },
+    "b3b17feb-78aa-4503-b740-dc4d337aa493": {
+      "difficulty": "6.0",
+      "definition_en": "a large bowl-shaped hollow at the top of a volcano or formed by an impact",
+      "ipa": "/ˈkreɪtə/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-9cf5e7cd8fcf3949": {
+      "difficulty": "6.0",
+      "synonyms": ["acknowledge", "attribute", "recognise", "give recognition to"],
+      "collocations": ["credit someone with", "be credited to", "take credit for"],
+      "example_simple": "The teacher credited her with coming up with the idea.",
+      "example_complex": "The discovery is widely credited to a young researcher whose contribution had long gone unrecognised.",
+      "definition_en": "to acknowledge that someone is responsible for an achievement or quality",
+      "ipa": "/ˈkredɪt/",
+      "part_of_speech": "verb",
+      "vi_meaning_correction": "ghi công, công nhận (ai đã làm điều gì)"
+    },
+    "pubcol-w-644381ea3dd4c66f": {
+      "difficulty": "6.0",
+      "synonyms": ["borrowing limit", "credit line", "spending limit"],
+      "collocations": ["increase your credit limit", "exceed the credit limit", "reach the credit limit"],
+      "example_simple": "The bank raised my credit limit after I paid my bills on time.",
+      "example_complex": "Exceeding your credit limit can trigger hefty fees and damage your credit score.",
+      "definition_en": "the maximum amount of money a bank allows you to borrow on a credit account",
+      "ipa": "/ˈkredɪt ˌlɪmɪt/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-04e1ec913f17be0f": {
+      "difficulty": "6.0",
+      "ipa": "/ˈkraɪm reɪt/"
+    },
+    "pubcol-w-671004f414423427": {
+      "difficulty": "6.0",
+      "synonyms": ["surge in crime", "crime spree", "outbreak of crime"],
+      "collocations": ["a crime wave sweeps the city", "tackle a crime wave", "amid a crime wave"],
+      "example_simple": "The city has seen a crime wave over the past few months.",
+      "example_complex": "In response to the recent crime wave, the government pledged to put more police officers on the streets.",
+      "definition_en": "a sudden increase in the amount of crime in a particular area",
+      "ipa": "/ˈkraɪm weɪv/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-ad3bcfdac54c7e7b": {
+      "difficulty": "7.0",
+      "ipa": "/kraɪˈtɪəriən/"
+    },
+    "ad9efd3d-ae24-45ca-b49e-a6abcde05391": {
+      "difficulty": "6.0",
+      "example_simple": "He was very critical of the way the project had been managed.",
+      "example_complex": "The report offers a critical analysis of the policy, weighing its benefits against its considerable drawbacks.",
+      "definition_en": "expressing disapproval, or involving careful judgement; also extremely important or serious",
+      "ipa": "/ˈkrɪtɪkl/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-d73813ec75bef0b1": {
+      "difficulty": "7.0",
+      "ipa": "/ˌkrɪtɪkl ˈθɪŋkɪŋ/"
+    },
+    "863eb10a-fcd1-46a4-9b54-5dd8a8d1015c": {
+      "difficulty": "8.0",
+      "definition_en": "harsh, cutting criticism that stings like the lash of a whip",
+      "ipa": "/ˌkrɪtɪkl ˈwɪps/",
+      "part_of_speech": "phrase"
+    },
+    "d1a65ff0-04f1-4e2a-bb21-66634a2d854b": {
+      "difficulty": "7.0",
+      "definition_en": "a detailed assessment or evaluation of something, especially a piece of work",
+      "ipa": "/krɪˈtiːk/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-9995a680570e4f29": {
+      "difficulty": "7.0",
+      "synonyms": ["failed harvest", "crop loss", "abundant harvest", "record harvest"],
+      "collocations": ["suffer crop failure", "heavy crop losses", "a bumper crop of wheat"],
+      "example_simple": "A long drought caused widespread crop failure, though the next year brought a bumper crop.",
+      "example_complex": "After successive years of crop failure and mounting losses, farmers were relieved to bring in a bumper crop that finally cleared their debts.",
+      "definition_en": "crop failure/losses is when harvests are badly reduced or destroyed, whereas a bumper crop is an unusually large, successful harvest",
+      "ipa": "/ˌkrɒp ˈfeɪljə ˌlɒsɪz ˌbʌmpə ˈkrɒp/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-3e2174f6da87857f": {
+      "difficulty": "7.0",
+      "synonyms": ["clash", "quarrel", "argue", "lock horns"],
+      "collocations": ["cross swords with someone", "cross swords over an issue", "the two often cross swords"],
+      "example_simple": "The two politicians crossed swords during the televised debate.",
+      "example_complex": "The columnist regularly crosses swords with the government over its handling of the economy.",
+      "definition_en": "to argue or disagree strongly with someone",
+      "ipa": "/ˌkrɒs ˈsɔːdz/",
+      "part_of_speech": "idiom"
+    }
+  }
+}

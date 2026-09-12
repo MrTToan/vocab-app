@@ -1,0 +1,172 @@
+{
+  "meta": { "batch": "batch-097", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-db4d330579352723": {
+      "part_of_speech": "noun",
+      "definition_en": "the total number of people living in a particular area or country",
+      "synonyms": ["inhabitants", "residents", "populace", "people"],
+      "collocations": ["a growing population", "the local population", "population density"],
+      "example_simple": "The population of the city has doubled in the last twenty years.",
+      "example_complex": "Rapid urbanisation has concentrated a large proportion of the country's population in a handful of coastal megacities."
+    },
+    "718085ee-c868-4c9d-8a38-69ede0e34323": {
+      "difficulty": "6.0",
+      "definition_en": "a hard, white, translucent ceramic made by firing refined clay at high temperatures",
+      "ipa": "/ˈpɔːsəlɪn/",
+      "part_of_speech": "noun"
+    },
+    "13d6549b-b99e-4af5-81fd-383b8804068c": {
+      "difficulty": "8.0",
+      "synonyms": ["pore water pressure", "interstitial pressure"],
+      "definition_en": "the pressure of water held in the spaces between particles of soil or rock",
+      "ipa": "/pɔː ˈpreʃə/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-63aef24ed732d81a": {
+      "part_of_speech": "noun",
+      "definition_en": "the meat from a pig, eaten as food",
+      "synonyms": ["pig meat", "swine meat"],
+      "collocations": ["roast pork", "pork chop", "a slice of pork"],
+      "example_simple": "We had roast pork with vegetables for dinner.",
+      "example_complex": "Because pork is forbidden in several religious traditions, the restaurant offers a range of alternatives on its menu."
+    },
+    "pubcol-w-4d9fe5f57b004f4d": {
+      "difficulty": "8.0",
+      "ipa": "/ˈpɒzɪt/"
+    },
+    "abe50b6b-2c4c-4d8d-9720-16af0bdd1ea9": {
+      "difficulty": "8.0",
+      "definition_en": "put forward as a fact or as a basis for argument that something is the case",
+      "ipa": "/ˈpɒzɪtɪd ðæt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-38e57caf537b9b5c": {
+      "difficulty": "7.0",
+      "synonyms": ["not budge an inch", "refuse to give ground", "stand firm"],
+      "collocations": ["not budge on the issue", "budge an inch", "refuse to budge"],
+      "example_simple": "No matter what we said, he would not change his position even a little.",
+      "example_complex": "Despite hours of negotiation, neither side would shift its position even a little, and the talks collapsed.",
+      "definition_en": "to refuse to change a position, decision or opinion even slightly",
+      "ipa": "/nɒt bʌdʒ ən ɪntʃ/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "không nhúc nhích/không lay chuyển (không thay đổi lập trường, quyết định dù chỉ một chút)"
+    },
+    "10388f87-c802-45ba-bdad-b5bf2991392d": {
+      "difficulty": "8.0",
+      "ipa": "/ˈpɒstjʊleɪt/"
+    },
+    "pubcol-w-6bdd63dd640eb11a": {
+      "difficulty": "8.0",
+      "synonyms": ["deride", "mock", "ridicule", "disparage"],
+      "collocations": ["pour scorn on the idea", "pour scorn on his critics", "pour scorn on the plan"],
+      "example_simple": "The critics poured scorn on his new film.",
+      "example_complex": "Rival economists poured scorn on the minister's forecast, dismissing it as wishful thinking.",
+      "definition_en": "to speak about someone or something with great contempt; to mock or belittle them",
+      "ipa": "/pɔː skɔːn ɒn ˈsʌmbɒdi/",
+      "part_of_speech": "idiom"
+    },
+    "ccc6dace-dc6a-4550-9d57-0234af559154": {
+      "difficulty": "6.0",
+      "definition_en": "a period when the electricity supply to an area stops",
+      "ipa": "/ˈpaʊər ˈaʊtɪdʒ/",
+      "part_of_speech": "noun"
+    },
+    "d6f38910-20de-434c-a0ac-dc318cbcabb2": {
+      "difficulty": "7.0",
+      "definition_en": "a doctor who is actively working and treating patients",
+      "ipa": "/ˈpræktɪsɪŋ fɪˈzɪʃən/",
+      "part_of_speech": "noun"
+    },
+    "72be9678-011e-4d4a-ad0e-b75a3b7147ba": {
+      "difficulty": "7.0",
+      "synonyms": ["grassland habitat", "prairie ecosystem"],
+      "definition_en": "the natural grassland environment in which prairie plants and animals live",
+      "ipa": "/ˈpreəri ˈhæbɪtæt/",
+      "part_of_speech": "noun"
+    },
+    "25f857cb-cf8b-4448-b0dd-52f6ca8bf28f": {
+      "difficulty": "6.0",
+      "definition_en": "to give a religious talk to a group of people, usually in a church",
+      "ipa": "/priːtʃ/",
+      "part_of_speech": "verb"
+    },
+    "51ed4a8e-e618-428d-b35f-0a387eb0d984": {
+      "difficulty": "8.0",
+      "definition_en": "not safe or certain; dangerously likely to fail or fall",
+      "ipa": "/prɪˈkeəriəs/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-5b741f6cb3fcc77c": {
+      "difficulty": "6.0",
+      "synonyms": ["packaged food", "convenience food", "manufactured food"],
+      "collocations": ["highly processed foods", "eat processed foods", "cut down on processed foods"],
+      "example_simple": "Doctors advise us to eat fewer processed foods.",
+      "example_complex": "A diet dominated by processed foods, which are typically high in salt and sugar, has been linked to a range of chronic illnesses.",
+      "definition_en": "foods that have been changed from their natural state, often with added ingredients, before being sold",
+      "ipa": "/ˈprəʊsest fuːdz/",
+      "part_of_speech": "noun",
+      "vi_meaning_correction": "thực phẩm chế biến sẵn"
+    },
+    "b865fc86-eb45-4b8f-a140-2a13d348ee08": {
+      "difficulty": "8.0",
+      "definition_en": "to cause something bad to happen suddenly or sooner than expected; (chemistry) to cause a solid to separate from a solution",
+      "ipa": "/prɪˈsɪpɪteɪt/",
+      "part_of_speech": "verb"
+    },
+    "775e4a89-3c9a-4819-ae92-b51970ec8e7e": {
+      "difficulty": "8.0",
+      "definition_en": "dangerously high or steep; (of an action) done too quickly and without enough thought",
+      "ipa": "/prɪˈsɪpɪtəs/",
+      "part_of_speech": "adjective"
+    },
+    "62cf7f27-28d2-40cc-9e55-73f3de805928": {
+      "difficulty": "8.0",
+      "definition_en": "to prevent something from happening or make it impossible",
+      "ipa": "/prɪˈkluːd/",
+      "part_of_speech": "verb"
+    },
+    "56031b55-ea91-416e-84e2-442150392547": {
+      "difficulty": "8.0",
+      "definition_en": "a person or thing that comes before another and leads to its development",
+      "ipa": "/priːˈkɜːsə/",
+      "part_of_speech": "noun"
+    },
+    "683e4fda-0461-4d37-b652-be9b82503712": {
+      "difficulty": "9.0",
+      "synonyms": ["precursory signs", "warning signs", "harbingers"],
+      "definition_en": "signs or events that come before and warn of a larger event about to happen",
+      "ipa": "/prɪˈkɜːsəri fɪˈnɒmɪnə/",
+      "part_of_speech": "noun"
+    },
+    "5021f82e-3e04-468b-93b4-59ac82b714b7": {
+      "difficulty": "7.0",
+      "definition_en": "to exist or happen at an earlier date than something else",
+      "ipa": "/ˌpriːˈdeɪt/",
+      "part_of_speech": "verb"
+    },
+    "bfc4e05c-b85b-4715-8d6e-757c29004335": {
+      "difficulty": "8.0",
+      "definition_en": "a difficult, unpleasant or embarrassing situation that is hard to get out of",
+      "ipa": "/prɪˈdɪkəmənt/",
+      "part_of_speech": "noun"
+    },
+    "775cce96-db62-4241-866f-b8cfe6547548": {
+      "difficulty": "8.0",
+      "definition_en": "the part of a sentence that says something about the subject, usually containing the verb",
+      "ipa": "/ˈpredɪkət/",
+      "part_of_speech": "noun"
+    },
+    "842cfc30-4679-4a5d-bc4e-940049620119": {
+      "difficulty": "8.0",
+      "definition_en": "based or founded on something; established as a condition or assumption",
+      "ipa": "/ˈpredɪkeɪtɪd/",
+      "part_of_speech": "verb"
+    },
+    "a63f8ed1-796a-48e9-a985-52e7261584cc": {
+      "difficulty": "8.0",
+      "definition_en": "made more likely or liable to be affected by something, especially an illness or condition",
+      "ipa": "/ˌpriːdɪˈspəʊzd/",
+      "part_of_speech": "adjective"
+    }
+  }
+}

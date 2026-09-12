@@ -1,0 +1,220 @@
+{
+  "meta": { "batch": "batch-040", "authored_by": "claude", "count": 25 },
+  "words": {
+    "9c1e8f86-aada-4a8d-85f6-ac9cb7fd9c12": {
+      "difficulty": "8.0",
+      "synonyms": ["scope of debt", "extent of indebtedness", "range of liabilities"],
+      "definition_en": "the area or extent of a person's or organisation's financial debt",
+      "ipa": "/dəˈmeɪn ɪn det/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-cbf8f8a8857237f8": {
+      "difficulty": "5.0",
+      "synonyms": ["internal flight", "overseas flight", "cross-border flight"],
+      "collocations": ["book a domestic flight", "take an international flight", "domestic flight schedule"],
+      "example_simple": "We took a domestic flight to the coast, then an international flight home.",
+      "example_complex": "Airport security procedures for an international flight are far stricter than those for a short domestic flight.",
+      "definition_en": "a flight within one country as opposed to one between different countries",
+      "ipa": "/dəˈmestɪk flaɪt ˌɪntəˈnæʃnəl flaɪt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-ce550ed37c42b8ba": {
+      "difficulty": "6.0",
+      "synonyms": ["family abuse", "spousal abuse", "intimate partner violence"],
+      "collocations": ["victim of domestic violence", "report domestic violence", "domestic violence case"],
+      "example_simple": "The charity helps women who have suffered domestic violence.",
+      "example_complex": "New legislation aims to protect victims of domestic violence and to prosecute offenders more effectively.",
+      "definition_en": "violent or abusive behaviour within the home, often between partners or family members",
+      "ipa": "/dəˈmestɪk ˈvaɪələns/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-612b123dec454ba1": {
+      "difficulty": "8.0",
+      "synonyms": ["be grateful for what you get", "don't be ungrateful", "accept gifts gladly"],
+      "collocations": ["don't look a gift horse in the mouth", "as the saying goes, don't look a gift horse in the mouth"],
+      "example_simple": "The car was free, so don't look a gift horse in the mouth.",
+      "example_complex": "He grumbled about the second-hand laptop his uncle gave him, but his mother reminded him not to look a gift horse in the mouth.",
+      "definition_en": "used to say that you should not criticise or be ungrateful for something given to you",
+      "ipa": "/dəʊnt lʊk ə ɡɪft hɔːs ɪn ðə maʊθ/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-e602663a399be47b": {
+      "difficulty": "5.0",
+      "synonyms": ["give money", "contribute funds", "make a donation"],
+      "collocations": ["donate money to charity", "donate money generously", "donate money online"],
+      "example_simple": "Many people donate money to help children in need.",
+      "example_complex": "After the earthquake, thousands of individuals and companies donated money to fund the relief effort.",
+      "definition_en": "to give money to a charity, cause or organisation",
+      "ipa": "/dəʊˈneɪt ˈmʌni/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-c98e40d25fc2be66": {
+      "difficulty": "7.0",
+      "synonyms": ["bound to fail", "destined to fail", "certain to fail"],
+      "collocations": ["doomed to failure from the start", "a plan doomed to failure", "seem doomed to failure"],
+      "example_simple": "Without enough money, the project was doomed to failure.",
+      "example_complex": "Any reform that ignores the concerns of ordinary workers is almost certainly doomed to failure.",
+      "definition_en": "certain to fail",
+      "ipa": "/duːmd tə ˈfeɪljə/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-0e20922e30bd09d1": {
+      "difficulty": "5.0",
+      "synonyms": ["conduct research", "investigate", "study"],
+      "collocations": ["do research on a topic", "do thorough research", "do research online"],
+      "example_simple": "I need to do some research before I write my essay.",
+      "example_complex": "Before launching the product, the company did extensive research into consumer preferences.",
+      "definition_en": "to study a subject carefully in order to discover new facts or information",
+      "ipa": "/duː rɪˈsɜːtʃ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-0ad9cc884ca3026e": {
+      "difficulty": "6.0",
+      "synonyms": ["benefit someone", "help someone", "be good for someone"],
+      "collocations": ["it will do you good", "a holiday would do you good", "fresh air does you good"],
+      "example_simple": "A good night's sleep will do you good.",
+      "example_complex": "Getting out of the office and taking a short walk at lunchtime does you far more good than you might expect.",
+      "definition_en": "to benefit someone or have a positive effect on them",
+      "ipa": "/duː ˈsʌmbədi ɡʊd/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-c27cce2b355bfcc3": {
+      "difficulty": "7.0",
+      "synonyms": ["at the last minute", "to the very end", "right to the finish"],
+      "collocations": ["go down to the wire", "come down to the wire", "right down to the wire"],
+      "example_simple": "The election was so close it went down to the wire.",
+      "example_complex": "With both teams level in the final minutes, the championship came right down to the wire.",
+      "definition_en": "continuing until the very last moment before a deadline or decision",
+      "ipa": "/daʊn tə ðə ˈwaɪə/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-4d41730456f27d4e": {
+      "difficulty": "6.0",
+      "synonyms": ["practical", "sensible", "realistic", "unpretentious"],
+      "collocations": ["a down-to-earth person", "remain down-to-earth", "a down-to-earth attitude"],
+      "example_simple": "She is friendly and down-to-earth, so everyone likes her.",
+      "example_complex": "Despite his enormous success, he has stayed remarkably down-to-earth and approachable.",
+      "definition_en": "practical, sensible and realistic in a way that is not pretentious",
+      "ipa": "/ˌdaʊn tʊ ˈɜːθ/",
+      "part_of_speech": "adjective"
+    },
+    "b11b355d-06cd-4845-af2b-5f43f54623e6": {
+      "difficulty": "7.0",
+      "definition_en": "to make something seem less important or serious than it really is",
+      "ipa": "/ˌdaʊnˈpleɪ/",
+      "part_of_speech": "verb"
+    },
+    "2757df3f-e376-4ac6-93d7-d9903507df93": {
+      "difficulty": "6.0",
+      "ipa": "/ˈdaʊnwəd trend/"
+    },
+    "b45fe1fa-b7c7-4765-b4b4-dc590a87f674": {
+      "difficulty": "6.0",
+      "ipa": "/drəˈmætɪkli/"
+    },
+    "pubcol-w-1db1fd65cc3de8ed": {
+      "difficulty": "7.0",
+      "synonyms": ["reduce", "deplete", "use up", "decrease"],
+      "collocations": ["draw down reserves", "draw down funds", "draw down troops"],
+      "example_simple": "The company had to draw down its savings to pay staff.",
+      "example_complex": "As the crisis deepened, the government began to draw down its foreign currency reserves at an alarming rate.",
+      "definition_en": "to gradually reduce or use up an amount of something, such as money or supplies",
+      "ipa": "/drɔː daʊn/",
+      "part_of_speech": "phrase"
+    },
+    "4c6dad37-e893-4128-9138-6f1552298730": {
+      "difficulty": "8.0",
+      "definition_en": "the process of removing mud, sand and sediment from the bottom of a river, harbour or channel",
+      "ipa": "/ˈdredʒɪŋ/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-ffdf53e4a6334194": {
+      "difficulty": "6.0",
+      "synonyms": ["dress professionally", "dress to impress", "dress smartly"],
+      "collocations": ["dress for success at an interview", "always dress for success", "the dress-for-success philosophy"],
+      "example_simple": "She believes you should always dress for success at a job interview.",
+      "example_complex": "The seminar promoted the idea that dressing for success can boost both confidence and the impression you make on employers.",
+      "definition_en": "to wear smart, professional clothing in order to create a good impression and improve your chances",
+      "ipa": "/dres fə səkˈses/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-3d483bac519eef21": {
+      "difficulty": "7.0",
+      "synonyms": ["drink heavily", "be a heavy drinker", "booze"],
+      "collocations": ["he drinks like a fish", "drink like a fish at parties", "used to drink like a fish"],
+      "example_simple": "He drinks like a fish whenever he goes out with friends.",
+      "example_complex": "In his younger days he drank like a fish, but a serious health scare finally persuaded him to give up alcohol.",
+      "definition_en": "to habitually drink a large amount of alcohol",
+      "ipa": "/drɪŋk laɪk ə fɪʃ/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-340f5b89326bdf49": {
+      "difficulty": "7.0",
+      "synonyms": ["bargain hard", "negotiate firmly", "haggle"],
+      "collocations": ["drive a hard bargain", "known for driving a hard bargain", "she drives a hard bargain"],
+      "example_simple": "The seller drives a hard bargain, so don't expect a big discount.",
+      "example_complex": "The union negotiators drove a hard bargain, refusing to sign until every one of their key demands had been met.",
+      "definition_en": "to negotiate firmly in order to get a deal that strongly favours yourself",
+      "ipa": "/draɪv ə hɑːd ˈbɑːɡɪn/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-e30a549d8081219e": {
+      "difficulty": "7.0",
+      "synonyms": ["push someone to the limit", "drive someone crazy", "exasperate"],
+      "collocations": ["drive someone to the edge", "almost driven to the edge", "drive somebody to the edge of despair"],
+      "example_simple": "The constant noise nearly drove her to the edge.",
+      "example_complex": "Months of overwork and financial worry drove him to the edge, and he finally sought professional help.",
+      "definition_en": "to push someone to the limit of their patience, sanity or endurance",
+      "ipa": "/draɪv ˈsʌmbədi tə ðə edʒ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-7eb5faa6731891ad": {
+      "difficulty": "6.0",
+      "synonyms": ["hint", "imply", "suggest indirectly"],
+      "collocations": ["drop a hint about something", "drop a subtle hint", "drop a few hints"],
+      "example_simple": "She dropped a hint that she wanted a new phone for her birthday.",
+      "example_complex": "Rather than asking directly, he dropped a few hints that he was hoping for a promotion.",
+      "definition_en": "to suggest something indirectly rather than saying it openly",
+      "ipa": "/drɒp ə hɪnt/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-59f90017c2831168": {
+      "difficulty": "5.0",
+      "ipa": "/drɒp baɪ/"
+    },
+    "pubcol-w-f352965f66153a95": {
+      "difficulty": "5.0",
+      "ipa": "/drɒp ɒf/"
+    },
+    "pubcol-w-c0fe4ee42446339b": {
+      "difficulty": "6.0",
+      "synonyms": ["quit", "leave", "withdraw from"],
+      "collocations": ["drop out of school", "drop out of college", "drop out of a race"],
+      "example_simple": "He had to drop out of school to help his family.",
+      "example_complex": "A surprising number of students drop out of university in their first year because they struggle to adjust to the workload.",
+      "definition_en": "to stop attending a school, course or activity before completing it",
+      "ipa": "/drɒp aʊt əv/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-1ccd67f80467b973": {
+      "difficulty": "7.0",
+      "synonyms": ["make a mistake", "mess up", "fail to deliver"],
+      "collocations": ["drop the ball on a project", "really dropped the ball", "can't afford to drop the ball"],
+      "example_simple": "The team dropped the ball and missed the deadline.",
+      "example_complex": "Management admitted it had dropped the ball on customer service, allowing complaints to pile up for months.",
+      "definition_en": "to make a mistake or fail to handle a responsibility properly",
+      "ipa": "/drɒp ðə bɔːl/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-a97eb6e0e5d17893": {
+      "difficulty": "7.0",
+      "synonyms": ["drug smuggling", "drug dealing", "narcotics trade"],
+      "collocations": ["combat drug trafficking", "arrested for drug trafficking", "a drug trafficking ring"],
+      "example_simple": "Police arrested several men for drug trafficking.",
+      "example_complex": "International cooperation is essential if governments are to disrupt the drug trafficking networks that operate across borders.",
+      "definition_en": "the illegal business of transporting and selling drugs",
+      "ipa": "/drʌɡ ˈtræfɪkɪŋ/",
+      "part_of_speech": "phrase"
+    }
+  }
+}

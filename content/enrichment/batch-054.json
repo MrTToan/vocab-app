@@ -1,0 +1,229 @@
+{
+  "meta": { "batch": "batch-054", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-caf44038f339df48": {
+      "difficulty": "6.0",
+      "ipa": "/ɡet ðə hæŋ əv/"
+    },
+    "pubcol-w-4ffba260e3975da2": {
+      "difficulty": "8.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ɡet ðə stɑːt əv ˈsʌmbədi/",
+      "definition_en": "to gain an advantage over someone",
+      "synonyms": ["gain an advantage over", "get a head start on", "get the jump on", "outpace"],
+      "collocations": ["get the start of a rival", "get the start of the competition", "get the start of an opponent"],
+      "example_simple": "She got the start of the other runners and never lost her lead.",
+      "example_complex": "By filing their patent months earlier, the firm got the start of every competitor in the emerging market.",
+      "vi_meaning_correction": "chiếm được lợi thế hơn ai"
+    },
+    "pubcol-w-e1b1da6f6888f24a": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɡet kiːp ɪn tʌtʃ wɪð ˈsʌmbədi/",
+      "definition_en": "to start or continue communicating with someone regularly",
+      "synonyms": ["stay in contact", "keep in contact", "stay connected", "correspond with"],
+      "collocations": ["keep in touch with old friends", "get in touch with a colleague", "keep in touch by email"],
+      "example_simple": "We promised to keep in touch with each other after graduation.",
+      "example_complex": "Despite living on different continents, they managed to keep in touch with one another through weekly video calls."
+    },
+    "pubcol-w-466f80a7d98af94e": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɡet ə dɪˈɡriː ˈdɪpləmə/",
+      "definition_en": "to complete a course of study and be awarded a qualification",
+      "synonyms": ["earn a degree", "obtain a diploma", "be awarded a qualification", "graduate"],
+      "collocations": ["get a degree in economics", "get a diploma in nursing", "get a degree from university"],
+      "example_simple": "She worked hard to get a degree in engineering.",
+      "example_complex": "After years of evening classes, he finally got a diploma in accounting that opened new career doors."
+    },
+    "pubcol-w-f8a580fa38b93a72": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɡet ə prəˈməʊʃn/",
+      "definition_en": "to be moved to a more senior job or position",
+      "synonyms": ["be promoted", "move up", "advance", "climb the ladder"],
+      "collocations": ["get a promotion at work", "deserve a promotion", "get a promotion to manager"],
+      "example_simple": "He hopes to get a promotion by the end of the year.",
+      "example_complex": "After leading the project to success, she got a promotion to head of the department."
+    },
+    "pubcol-w-f154dffd740820cc": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɡet ə reɪz/",
+      "definition_en": "to be given an increase in pay",
+      "synonyms": ["get a pay rise", "earn more", "get a salary increase", "be given a raise"],
+      "collocations": ["get a raise at work", "ask for a raise", "get a big raise"],
+      "example_simple": "She was happy to get a raise after her review.",
+      "example_complex": "Employees who consistently exceed their targets are far more likely to get a raise than those who merely meet them."
+    },
+    "pubcol-w-7b0eaa676aa77fe2": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɡet ə rɪˈzʌlt frɒm/",
+      "definition_en": "to obtain an outcome or effect produced by something",
+      "synonyms": ["obtain an outcome from", "achieve a result from", "gain from", "derive from"],
+      "collocations": ["get a result from an experiment", "get a result from hard work", "get a result from the treatment"],
+      "example_simple": "You won't get a result from the test until tomorrow.",
+      "example_complex": "Researchers were surprised to get such a clear result from a study that used only a small sample."
+    },
+    "pubcol-w-e7e0a90bb3cfb1a4": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ɡet ə ˈsekənd wɪnd/",
+      "definition_en": "to regain energy and enthusiasm after feeling tired",
+      "synonyms": ["find fresh energy", "get a fresh burst of energy", "revive", "regain strength"],
+      "collocations": ["get a second wind at night", "suddenly get a second wind", "get a second wind halfway through"],
+      "example_simple": "I was exhausted, but I got a second wind after a short break.",
+      "example_complex": "Just when the marathon runners seemed spent, many got a second wind in the final stretch and surged toward the finish.",
+      "vi_meaning_correction": "lấy lại được sức lực để tiếp tục làm"
+    },
+    "pubcol-w-cde58f8b8b3273be": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ɡet wɪnd əv/",
+      "definition_en": "to hear a piece of information, especially a secret or rumour",
+      "synonyms": ["hear a rumour of", "catch wind of", "learn of", "get to know about"],
+      "collocations": ["get wind of a plan", "get wind of the news", "get wind of a scandal"],
+      "example_simple": "The press got wind of the deal before it was announced.",
+      "example_complex": "As soon as competitors got wind of the merger talks, the company's share price began to fluctuate wildly.",
+      "vi_meaning_correction": "nghe phong thanh, nghe lỏm được"
+    },
+    "pubcol-w-5232d5f548e39b41": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɡɪv ə ˈkɒnsət/",
+      "definition_en": "to perform music for an audience at an organised event",
+      "synonyms": ["hold a concert", "perform", "put on a concert", "play a gig"],
+      "collocations": ["give a concert in the park", "give a charity concert", "give a free concert"],
+      "example_simple": "The orchestra will give a concert next Saturday.",
+      "example_complex": "To raise money for the flood victims, several famous bands agreed to give a concert in the city stadium."
+    },
+    "pubcol-w-3d42a9e009ff8adc": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɡɪv ə hænd wɪð/",
+      "definition_en": "to help someone do a task",
+      "synonyms": ["help with", "lend a hand with", "assist with", "pitch in with"],
+      "collocations": ["give a hand with the dishes", "give a hand with moving", "give a hand with homework"],
+      "example_simple": "Could you give me a hand with these boxes?",
+      "example_complex": "Whenever the neighbours were struggling, he was always the first to give a hand with whatever needed doing."
+    },
+    "pubcol-w-757ea1ae20391e8b": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɡɪv ə θɔːt əˈbaʊt/",
+      "definition_en": "to spend time thinking or considering something",
+      "synonyms": ["think about", "consider", "give thought to", "reflect on"],
+      "collocations": ["give a thought to the future", "not give a thought to", "give some thought to the idea"],
+      "example_simple": "Have you given any thought to where you want to study?",
+      "example_complex": "Before accepting the offer, she gave careful thought to how the move would affect her family."
+    },
+    "pubcol-w-47bbbccbb846b731": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ɡɪv ənd teɪk/",
+      "definition_en": "a willingness of each side to make concessions in a relationship or negotiation",
+      "synonyms": ["compromise", "mutual concession", "cooperation", "flexibility"],
+      "collocations": ["a spirit of give and take", "require give and take", "healthy give and take"],
+      "example_simple": "Every good marriage needs some give and take.",
+      "example_complex": "Successful negotiations depend on a degree of give and take, with neither party expecting to win every point."
+    },
+    "pubcol-w-99e7335368f1abe2": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɡɪv bɜːθ tuː/",
+      "definition_en": "to produce a baby; also to cause something to begin",
+      "synonyms": ["deliver", "bear", "bring into the world", "give life to"],
+      "collocations": ["give birth to a child", "give birth to twins", "give birth to a movement"],
+      "example_simple": "She gave birth to a healthy baby girl.",
+      "example_complex": "The Industrial Revolution gave birth to social changes whose effects are still felt today."
+    },
+    "pubcol-w-db1766d73a3d93b0": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ɡɪv ɡraʊnd/",
+      "definition_en": "to yield or retreat under pressure; to make concessions",
+      "synonyms": ["back down", "yield", "give way", "concede"],
+      "collocations": ["refuse to give ground", "give ground on an issue", "give ground under pressure"],
+      "example_simple": "Neither side would give ground during the argument.",
+      "example_complex": "The government refused to give ground on immigration policy despite mounting pressure from the opposition."
+    },
+    "pubcol-w-9c1c058d3ea1d1cf": {
+      "difficulty": "6.0",
+      "ipa": "/ɡɪv ɪt ə ɡəʊ/"
+    },
+    "pubcol-w-eee2d5bc82e04b7d": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɡɪv pəˈmɪʃn/",
+      "definition_en": "to allow someone to do something",
+      "synonyms": ["allow", "authorise", "grant permission", "consent"],
+      "collocations": ["give permission to leave", "give written permission", "refuse to give permission"],
+      "example_simple": "My parents gave me permission to go to the party.",
+      "example_complex": "The council eventually gave permission for the new development after months of public consultation."
+    },
+    "pubcol-w-fbd937873e2a7b5f": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɡɪv ˈprɒfɪt ɡɪv ˈsʌmbədi ə ˈpreznt/",
+      "definition_en": "to yield a profit; also, to give someone a gift",
+      "synonyms": ["yield a profit", "make money", "give a gift", "present a gift"],
+      "collocations": ["give a good profit", "give sb a present", "give a birthday present"],
+      "example_simple": "We gave her a present for her birthday.",
+      "example_complex": "The investment gave a steady profit, and to celebrate they gave every employee a present at the end of the year.",
+      "vi_meaning_correction": "sinh lãi; tặng quà cho ai"
+    },
+    "pubcol-w-e05c793c9e720693": {
+      "difficulty": "7.0",
+      "ipa": "/ɡɪv raɪz tuː/"
+    },
+    "pubcol-w-bd90ae39435d7301": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɡɪv ˈsʌmbədi ə lɪft raɪd/",
+      "definition_en": "to take someone somewhere in your vehicle",
+      "synonyms": ["give a ride", "drive someone", "drop someone off", "take someone by car"],
+      "collocations": ["give sb a lift home", "give sb a lift to work", "give sb a ride to the station"],
+      "example_simple": "Can you give me a lift to the airport tomorrow?",
+      "example_complex": "Since it was pouring with rain, a kind stranger offered to give the stranded tourists a lift into town."
+    },
+    "pubcol-w-3b66946c641766c6": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɡɪv ˈsʌmbədi ə lɪft raɪd/",
+      "definition_en": "to take someone somewhere in your vehicle",
+      "synonyms": ["give a ride", "drive someone", "drop someone off", "take someone by car"],
+      "collocations": ["give sb a lift home", "give sb a lift to work", "give sb a ride to the station"],
+      "example_simple": "She kindly gave me a lift to the bus station.",
+      "example_complex": "He often gives his elderly neighbour a lift to the clinic when her son is away."
+    },
+    "pubcol-w-b111b3008721738e": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɡɪv ˈsʌmbədi wʌnz əˈʃʊərəns/",
+      "definition_en": "to promise someone firmly that something is true or will happen",
+      "synonyms": ["assure", "give a guarantee", "promise", "reassure"],
+      "collocations": ["give sb your assurance", "give an assurance that", "seek an assurance"],
+      "example_simple": "He gave me his assurance that the work would be finished on time.",
+      "example_complex": "The minister gave the public his assurance that the new safety measures would be fully funded."
+    },
+    "pubcol-w-80b641ec35815be2": {
+      "difficulty": "5.0",
+      "ipa": "/ɡɪv ˈsʌmwʌn ə hænd/"
+    },
+    "pubcol-w-5ae72a7324045caa": {
+      "difficulty": "8.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ɡɪv ˈsʌmθɪŋ ə njuː liːs əv laɪf/",
+      "definition_en": "to renew or restore something so that it lasts longer or works better",
+      "synonyms": ["revitalise", "breathe new life into", "renew", "rejuvenate"],
+      "collocations": ["give the building a new lease of life", "give a new lease of life to the town", "give the engine a new lease of life"],
+      "example_simple": "A fresh coat of paint gave the old house a new lease of life.",
+      "example_complex": "The regeneration project gave the run-down harbour a new lease of life, drawing tourists and businesses back to the area."
+    },
+    "pubcol-w-54ceacd5d219a44b": {
+      "difficulty": "5.0",
+      "ipa": "/ɡɪv ʌp/"
+    }
+  }
+}

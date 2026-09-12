@@ -1,0 +1,237 @@
+{
+  "meta": { "batch": "batch-014", "authored_by": "claude", "count": 25 },
+  "words": {
+    "6f601365-a442-420e-ba1d-d05c11dde685": {
+      "difficulty": "7.0",
+      "definition_en": "a bank confronting an approaching financial crisis",
+      "ipa": "/bæŋk feɪst ɪmˈpendɪŋ faɪˈnænʃəl/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-d1050013dce36d08": {
+      "difficulty": "6.0",
+      "synonyms": ["expect", "anticipate", "count on", "be prepared for"],
+      "collocations": ["bargain for trouble", "more than we bargained for", "not bargain for the cost"],
+      "example_simple": "We got more rain than we had bargained for on our trip.",
+      "example_complex": "The negotiators had not bargained for such a stubborn response, and the talks quickly stalled.",
+      "definition_en": "to expect or be prepared for something",
+      "ipa": "/ˈbɑːɡɪn fɔː/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-446c971d722ef05b": {
+      "difficulty": "5.0",
+      "ipa": "/ˈbeɪsɪkli/"
+    },
+    "pubcol-w-18d6799e6d560dd1": {
+      "difficulty": "6.0",
+      "synonyms": ["trouble someone", "cause someone hardship", "give someone grief", "burden someone"],
+      "collocations": ["give someone much trouble", "cause a lot of trouble", "put someone through trouble"],
+      "example_simple": "The old car gave him much trouble every winter.",
+      "example_complex": "Her constant complaints gave the manager so much trouble that he began to dread the morning meetings.",
+      "definition_en": "to cause someone a great deal of difficulty or worry",
+      "ipa": "/ɡɪv ˈsʌmwʌn mʌtʃ ˈtrʌbl/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-01dddfb8c86f3d57": {
+      "difficulty": "7.0",
+      "synonyms": ["be irrelevant", "be immaterial", "not matter", "miss the point"],
+      "collocations": ["that's beside the point", "be entirely beside the point", "arguing beside the point"],
+      "example_simple": "Whether he likes it or not is beside the point; the rule applies to everyone.",
+      "example_complex": "The cost of the project may be enormous, but that is beside the point when public safety is at stake.",
+      "definition_en": "to be irrelevant to the matter being discussed",
+      "ipa": "/biː bɪˌsaɪd ðə ˈpɔɪnt/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-4caa990981593242": {
+      "difficulty": "7.0",
+      "synonyms": ["be rebooked", "be rescheduled", "be moved to a later flight"],
+      "collocations": ["get bumped to a later flight", "be bumped off the flight", "be bumped because of overbooking"],
+      "example_simple": "We were bumped to a later flight because the plane was full.",
+      "example_complex": "After being bumped to a later flight, the passengers were offered vouchers as compensation for the delay.",
+      "definition_en": "to be moved from a booked flight to a later one, usually because of overbooking",
+      "ipa": "/biː bʌmpt tʊ ə ˈleɪtə flaɪt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-b6c917424a4a9616": {
+      "difficulty": "7.0",
+      "synonyms": ["be caught red-handed", "be caught in the act", "be caught doing wrong"],
+      "collocations": ["catch somebody red-handed", "be caught in the act of stealing", "caught red-handed by the police"],
+      "example_simple": "The thief was caught in the act as he opened the safe.",
+      "example_complex": "The auditor caught the employee red-handed, altering the invoices just moments before the report was due.",
+      "definition_en": "to be caught in the very moment of doing something wrong",
+      "ipa": "/biː kɔːt ɪn ði ækt/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-021cd9f69c5a4e07": {
+      "difficulty": "6.0",
+      "synonyms": ["be found to have", "be identified as having", "be told one has"],
+      "collocations": ["be diagnosed with cancer", "be diagnosed with a condition", "be diagnosed with diabetes"],
+      "example_simple": "She was diagnosed with the flu and told to rest at home.",
+      "example_complex": "After months of unexplained fatigue, he was finally diagnosed with a chronic autoimmune disorder.",
+      "definition_en": "to be identified by a doctor as having a particular illness",
+      "ipa": "/biː ˌdaɪəɡˈnəʊzd wɪð/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-be8a2eba973f15d6": {
+      "difficulty": "7.0",
+      "synonyms": ["be wiped out", "be eliminated", "be exterminated", "be stamped out"],
+      "collocations": ["be completely eradicated", "a disease being eradicated", "poverty being eradicated"],
+      "example_simple": "Smallpox has been eradicated all over the world.",
+      "example_complex": "Public health officials warned that the virus could never be fully eradicated without a global vaccination campaign.",
+      "definition_en": "to be completely destroyed or eliminated",
+      "ipa": "/biː ɪˈrædɪkeɪtɪd/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-3cd48299d2e4a030": {
+      "difficulty": "7.0",
+      "synonyms": ["be intensified", "be increased", "be stepped up", "worsen"],
+      "collocations": ["a conflict being escalated", "tensions being escalated", "be escalated to management"],
+      "example_simple": "The argument was escalated when both sides refused to back down.",
+      "example_complex": "The complaint was escalated to senior management after the front-line team failed to resolve it.",
+      "definition_en": "to be increased, intensified, or raised to a higher level",
+      "ipa": "/biː ˈeskəleɪtɪd/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-ab1f578c84bf770a": {
+      "difficulty": "6.0",
+      "synonyms": ["be sacked", "be let go", "be terminated", "lose one's job"],
+      "collocations": ["be fired for misconduct", "be dismissed from a job", "be unfairly dismissed"],
+      "example_simple": "He was fired after arriving late every day for a month.",
+      "example_complex": "She was dismissed without warning, and later took the company to court for unfair dismissal.",
+      "definition_en": "to be removed from a job by an employer",
+      "ipa": "/biː ˈfaɪəd dɪsˈmɪst/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "bị đuổi việc/sa thải"
+    },
+    "pubcol-w-8138fb84da63b305": {
+      "difficulty": "7.0",
+      "synonyms": ["be penniless", "be broke", "have no money", "be skint"],
+      "collocations": ["be flat broke", "flat broke by the end of the month", "left flat broke"],
+      "example_simple": "I can't come out tonight because I'm flat broke.",
+      "example_complex": "After paying the hospital bills, the family was left flat broke and had to borrow money from relatives.",
+      "definition_en": "to have absolutely no money at all",
+      "ipa": "/biː flæt brəʊk/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "cháy túi, hết sạch tiền"
+    },
+    "pubcol-w-d7cb370e40481c39": {
+      "difficulty": "6.0",
+      "synonyms": ["be for a worthy cause", "be charitable", "serve a good purpose"],
+      "collocations": ["be for a good cause", "raise money for a good cause", "all in a good cause"],
+      "example_simple": "I don't mind spending the money because it's for a good cause.",
+      "example_complex": "The volunteers worked tirelessly through the night, comforted by the thought that it was all in a good cause.",
+      "definition_en": "to be for a charitable, worthy, or justified purpose",
+      "ipa": "/biː fɔːr ɪn ə ɡʊd kɔːz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-f6d9904cda95304c": {
+      "difficulty": "6.0",
+      "synonyms": ["be naturally kind", "be mild-mannered", "be good-natured"],
+      "collocations": ["be gentle by nature", "gentle and kind by nature", "quiet and gentle by nature"],
+      "example_simple": "My grandmother was gentle by nature and never raised her voice.",
+      "example_complex": "Although he looked intimidating, he was gentle by nature and could never bring himself to hurt anyone.",
+      "definition_en": "to have a naturally kind and mild character",
+      "ipa": "/biː ˈdʒentl baɪ ˈneɪtʃə/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-e4e5fd60eba4c7f4": {
+      "difficulty": "7.0",
+      "synonyms": ["be struck down by a fever", "be burning with fever", "come down with a fever"],
+      "collocations": ["be gripped with a fever", "gripped by a raging fever", "gripped with a high fever"],
+      "example_simple": "The child was gripped with a fever and could not go to school.",
+      "example_complex": "Within hours the traveller was gripped with a fever so severe that the crew radioed for medical help.",
+      "definition_en": "to be suffering from a strong, overpowering fever",
+      "ipa": "/biː ɡrɪpt wɪð ə ˈfiːvə/",
+      "part_of_speech": "phrase"
+    },
+    "c3a9c16e-2d7a-41e2-afbd-3498266cad3f": {
+      "difficulty": "8.0",
+      "definition_en": "to be listened to and taken seriously; to be paid attention to",
+      "ipa": "/biː ˈhiːdɪd/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-6635d51089d3d110": {
+      "difficulty": "8.0",
+      "synonyms": ["be safe", "have succeeded", "be in the clear", "have made it"],
+      "collocations": ["be home and dry", "almost home and dry", "not home and dry yet"],
+      "example_simple": "Once we sign the contract, we'll be home and dry.",
+      "example_complex": "With a two-goal lead and only minutes remaining, the team thought they were home and dry, but a late penalty changed everything.",
+      "definition_en": "to have successfully completed or achieved something",
+      "ipa": "/biː həʊm ənd draɪ/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-f734536c4aa7028b": {
+      "difficulty": "8.0",
+      "synonyms": ["be angry", "be furious", "be annoyed", "be riled up"],
+      "collocations": ["get hot under the collar", "be hot under the collar about something", "hot under the collar with rage"],
+      "example_simple": "He got hot under the collar when they questioned his honesty.",
+      "example_complex": "The minister grew hot under the collar as reporters pressed him about the missing funds.",
+      "definition_en": "to be or become angry, annoyed, or agitated",
+      "ipa": "/biː hɒt ˈʌndə ðə ˈkɒlə/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-c9b336497c8683c5": {
+      "difficulty": "6.0",
+      "synonyms": ["be clearly apparent", "be plainly evident", "be instantly clear"],
+      "collocations": ["be immediately obvious", "not immediately obvious", "the answer was immediately obvious"],
+      "example_simple": "The cause of the problem was immediately obvious to the mechanic.",
+      "example_complex": "It was immediately obvious to everyone in the room that the proposal had been prepared without any serious research.",
+      "definition_en": "to be clear and easy to notice at once",
+      "ipa": "/biː ɪˈmiːdiətli ˈɒbviəs/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-e595cdeb7a938e0e": {
+      "difficulty": "5.0",
+      "synonyms": ["be responsible for", "be in control of", "head", "manage"],
+      "collocations": ["be in charge of a team", "be in charge of a project", "who is in charge here"],
+      "example_simple": "She is in charge of the marketing department.",
+      "example_complex": "As the officer in charge of the investigation, she had to decide which leads were worth pursuing.",
+      "definition_en": "to be responsible for or in control of something or someone",
+      "ipa": "/biː ɪn tʃɑːdʒ ɒv/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-a0e3a84ad845b91b": {
+      "difficulty": "6.0",
+      "ipa": "/biː ɪn ˈfeɪvər ɒv/"
+    },
+    "pubcol-w-0b2285892034b0ee": {
+      "difficulty": "5.0",
+      "synonyms": ["be available", "be on the shelves", "be in supply"],
+      "collocations": ["be in stock", "no longer in stock", "back in stock"],
+      "example_simple": "Please let me know when the item is back in stock.",
+      "example_complex": "The popular model sold out within hours, and the store could not say when it would be in stock again.",
+      "definition_en": "to be available for sale or use in a shop or warehouse",
+      "ipa": "/biː ɪn stɒk/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-bd6b144d692707c1": {
+      "difficulty": "7.0",
+      "synonyms": ["be undecided", "be torn", "be of two minds", "hesitate"],
+      "collocations": ["be in two minds about something", "still in two minds", "in two minds whether to go"],
+      "example_simple": "I'm in two minds about whether to accept the job offer.",
+      "example_complex": "She was in two minds about moving abroad, torn between a promising career and the family she would leave behind.",
+      "definition_en": "to be unable to decide between two options",
+      "ipa": "/biː ɪn tuː maɪndz əˈbaʊt/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-c3beae395ebdb5fe": {
+      "difficulty": "7.0",
+      "synonyms": ["be speechless", "be dumbfounded", "be at a loss for words"],
+      "collocations": ["be lost for words", "leave someone lost for words", "utterly lost for words"],
+      "example_simple": "When she won the award, she was completely lost for words.",
+      "example_complex": "The generosity of the strangers left him lost for words, and he could only nod his thanks.",
+      "definition_en": "to be so surprised or moved that one cannot speak",
+      "ipa": "/biː lɒst fɔː wɜːdz/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-fd5aa33cd28bbce2": {
+      "difficulty": "7.0",
+      "synonyms": ["be on a winning streak", "be on a hot streak", "be doing well"],
+      "collocations": ["be on a roll", "really on a roll", "on a roll lately"],
+      "example_simple": "The team has won five games in a row; they're really on a roll.",
+      "example_complex": "Once the writer found her rhythm she was on a roll, finishing three chapters in a single weekend.",
+      "definition_en": "to be experiencing a period of continued success or good luck",
+      "ipa": "/biː ɒn ə rəʊl/",
+      "part_of_speech": "idiom"
+    }
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "meta": { "batch": "batch-022", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-ee655c2e076fe44f": {
+      "difficulty": "6.0",
+      "synonyms": ["from memory", "memorized", "off by heart"],
+      "collocations": ["learn something by heart", "know a poem by heart", "recite by heart"],
+      "example_simple": "The actors had to learn their lines by heart before the show.",
+      "example_complex": "Having recited the passage by heart countless times, she could deliver it flawlessly even under pressure.",
+      "definition_en": "from memory; memorized so it can be repeated exactly",
+      "ipa": "/baɪ hɑːt/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-422bcb4e2418d501": {
+      "difficulty": "6.0",
+      "synonyms": ["through", "via", "using", "with the help of"],
+      "collocations": ["by means of technology", "by means of a rope", "communicate by means of"],
+      "example_simple": "They crossed the river by means of a small wooden bridge.",
+      "example_complex": "The researchers gathered the data by means of an anonymous online survey distributed across several countries.",
+      "definition_en": "using or with the help of a particular method or thing",
+      "ipa": "/baɪ miːnz əv/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-16ae68cd6015796c": {
+      "difficulty": "7.0",
+      "synonyms": ["by my calculation", "in my estimation", "as I figure it"],
+      "collocations": ["by my reckoning", "by my rough reckoning", "by anyone's reckoning"],
+      "example_simple": "By my reckoning, we should arrive at the hotel around six o'clock.",
+      "example_complex": "By my reckoning, the project will run at least a month over schedule unless we bring in more staff.",
+      "definition_en": "according to my calculation or estimate",
+      "ipa": "/baɪ maɪ ˈrekənɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-bc3bff740049c664": {
+      "difficulty": "5.0",
+      "synonyms": ["alone", "on my own", "unaided", "solo"],
+      "collocations": ["live by myself", "do it by myself", "all by myself"],
+      "example_simple": "I finished the whole puzzle by myself.",
+      "example_complex": "After years of relying on others, she finally learned to manage the household finances entirely by myself.",
+      "definition_en": "alone or without help from anyone else",
+      "ipa": "/baɪ maɪˈself/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "tự bản thân tôi"
+    },
+    "pubcol-w-62c363d159c7e3e0": {
+      "difficulty": "6.0",
+      "synonyms": ["not at all", "in no way", "absolutely not"],
+      "collocations": ["by no means certain", "by no means easy", "by no means the only one"],
+      "example_simple": "The test was by no means easy, but I passed it.",
+      "example_complex": "While the plan looked promising on paper, success was by no means guaranteed given the tight budget.",
+      "definition_en": "not at all; in no way",
+      "ipa": "/baɪ nəʊ miːnz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-e69e65293302f3c4": {
+      "difficulty": "7.0",
+      "synonyms": ["by the rules", "correctly", "strictly", "properly"],
+      "collocations": ["do everything by the book", "play it by the book", "go by the book"],
+      "example_simple": "The new manager likes to do everything by the book.",
+      "example_complex": "Auditors insisted that every transaction be handled by the book to avoid any hint of misconduct.",
+      "definition_en": "strictly according to the rules or the correct procedure",
+      "ipa": "/baɪ ðə bʊk/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-56bfefdcba553e23": {
+      "difficulty": "8.0",
+      "synonyms": ["incidentally", "by the way", "in passing"],
+      "collocations": ["mention by the by", "add by the by", "say by the by"],
+      "example_simple": "By the by, did you remember to lock the door?",
+      "example_complex": "The report was thorough, though, by the by, it never addressed the question everyone was actually asking.",
+      "definition_en": "incidentally; used to add a remark that is not the main point",
+      "ipa": "/baɪ ðə baɪ/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-c233ddb238833205": {
+      "difficulty": "5.0",
+      "ipa": "/baɪ ðə weɪ/"
+    },
+    "a3c34956-3dd0-4adc-833e-9a3fb141f20e": {
+      "difficulty": "7.0",
+      "definition_en": "a rule made by a company, club, or local authority to control its own affairs",
+      "ipa": "/ˈbaɪlɔː/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-56f981c8f5305bd5": {
+      "difficulty": "6.0",
+      "synonyms": ["chicken out", "lose one's nerve", "hesitate", "back out"],
+      "collocations": ["get cold feet about", "suddenly get cold feet", "have cold feet"],
+      "example_simple": "He got cold feet and cancelled the interview at the last minute.",
+      "example_complex": "Just before signing the contract, the investor got cold feet and withdrew from the entire deal.",
+      "definition_en": "to become nervous and lose the courage to do something you had planned",
+      "ipa": "/ɡet kəʊld fiːt/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-920f657923b62b17": {
+      "difficulty": "6.0",
+      "synonyms": ["past", "further than", "outside"],
+      "collocations": ["beyond doubt", "beyond belief", "beyond repair"],
+      "example_simple": "The problem was beyond anything we had expected.",
+      "example_complex": "The damage to the old manuscript was beyond repair, so conservators could only slow its decay.",
+      "definition_en": "expressions built around the word 'beyond', meaning past or outside a limit",
+      "ipa": "/bɪˈjɒnd/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-60612cfe82f851b2": {
+      "difficulty": "6.0",
+      "synonyms": ["the remaining answers", "the other options", "the rest"],
+      "collocations": ["choose the remaining answers", "review the other answers", "the rest of the options"],
+      "example_simple": "Once you finish the first question, look at the remaining answers.",
+      "example_complex": "After eliminating the two obvious mistakes, she carefully weighed the remaining answers before making her choice.",
+      "definition_en": "the answers or options that are left after the others",
+      "ipa": "/ðə rɪˈmeɪnɪŋ ˈɑːnsəz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-6f61b3a4c0909d60": {
+      "synonyms": ["C-section", "caesarean section", "surgical delivery"],
+      "collocations": ["caesarean section", "emergency caesarean", "deliver by caesarean"],
+      "example_simple": "The baby was born by caesarean because of complications.",
+      "example_complex": "When the labour stalled dangerously, doctors decided that an emergency caesarean was the safest option for both mother and child."
+    },
+    "pubcol-w-e47d358c93858b12": {
+      "difficulty": "7.0",
+      "synonyms": ["be in charge", "run the show", "be in control"],
+      "collocations": ["call the shots at work", "let someone call the shots", "who calls the shots"],
+      "example_simple": "In this company, the founder still calls the shots.",
+      "example_complex": "Although the board holds the votes, it is the chief executive who really calls the shots on day-to-day strategy.",
+      "definition_en": "to be the person in charge who makes the important decisions",
+      "ipa": "/kɔːl ðə ʃɒts/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-8f09ec9d1a59c82d": {
+      "difficulty": "6.0",
+      "ipa": "/kɔːl ɪt ə deɪ/"
+    },
+    "pubcol-w-3ebdaad2b4f97dfa": {
+      "difficulty": "5.0",
+      "ipa": "/kɔːl ɒf/"
+    },
+    "pubcol-w-c53400ab1bef4625": {
+      "difficulty": "7.0",
+      "synonyms": ["be in charge", "run the show", "be in control"],
+      "collocations": ["call the shots at work", "let someone call the shots", "who calls the shots"],
+      "example_simple": "As the team leader, she gets to call the shots.",
+      "example_complex": "New employees quickly learn who calls the shots and whose approval is really needed to move a project forward.",
+      "definition_en": "to make the important decisions and be in control",
+      "ipa": "/kɔːl ðə ʃɒts/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-560f85bbcc3d6347": {
+      "difficulty": "8.0",
+      "synonyms": ["call the shots", "be in control", "be in charge"],
+      "collocations": ["who calls the tune", "let the buyer call the tune", "pay the piper and call the tune"],
+      "example_simple": "The people who provide the money usually call the tune.",
+      "example_complex": "In any partnership where one side supplies the funding, that side inevitably ends up calling the tune on major decisions.",
+      "definition_en": "to be the person who controls a situation and makes the key decisions",
+      "ipa": "/kɔːl ðə tjuːn/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-c14f0558b0bbd53c": {
+      "difficulty": "6.0",
+      "synonyms": ["stop for the day", "knock off", "wrap up", "finish up"],
+      "collocations": ["decide to call it a day", "let's call it a day", "time to call it a day"],
+      "example_simple": "It's getting late, so let's call it a day.",
+      "example_complex": "After twelve straight hours of debugging, the exhausted team finally agreed to call it a day and start fresh in the morning.",
+      "definition_en": "to stop working, usually because you have done enough for the day",
+      "ipa": "/kɔːl ɪt ə deɪ/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-3c6cd01a51773d53": {
+      "difficulty": "7.0",
+      "synonyms": ["lull", "quiet period", "respite"],
+      "collocations": ["the calm before the storm", "enjoy the calm before the storm", "just the calm before the storm"],
+      "example_simple": "The quiet office felt like the calm before the storm.",
+      "example_complex": "The eerie stillness of the trading floor was merely the calm before the storm, as markets plunged the moment the news broke.",
+      "definition_en": "a peaceful period just before a time of great trouble or activity",
+      "ipa": "/kɑːm bɪˈfɔː ðə stɔːm/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-aff03a88d5208f26": {
+      "difficulty": "5.0",
+      "ipa": "/kɑːm daʊn/"
+    },
+    "7bf345b8-9306-4477-81c6-4886b6a5b5b4": {
+      "difficulty": "7.0",
+      "definition_en": "a way of hiding something by making it look like its surroundings; colours or materials used for this",
+      "ipa": "/ˈkæməflɑːʒ/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-b648cc810cc2abb8": {
+      "difficulty": "7.0",
+      "synonyms": ["reach more people", "broaden its appeal", "attract more viewers"],
+      "collocations": ["capture a wider audience", "reach a wider audience", "appeal to a wider audience"],
+      "example_simple": "The company redesigned its ads to capture a wider audience.",
+      "example_complex": "By translating its content into several languages, the platform managed to capture a wider audience across emerging markets.",
+      "definition_en": "to attract more people to something, such as a product, show, or message",
+      "ipa": "/ˈkæptʃər ə ˈwaɪdər ˈɔːdiəns/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-65624c47e43117d8": {
+      "difficulty": "6.0",
+      "synonyms": ["motion sickness", "travel sickness", "nausea"],
+      "collocations": ["suffer from car sickness", "get car sickness", "prevent car sickness"],
+      "example_simple": "She often gets car sickness on long journeys.",
+      "example_complex": "To ease his son's car sickness, he kept the windows open and encouraged him to focus on the horizon rather than his phone.",
+      "definition_en": "a feeling of nausea caused by the motion of travelling in a car",
+      "ipa": "/kɑː ˈsɪknəs/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-b011d1663543acb0": {
+      "difficulty": "7.0",
+      "ipa": "/ˈkɑːbən ˈfʊtprɪnt/"
+    }
+  }
+}

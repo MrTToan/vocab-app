@@ -1,0 +1,175 @@
+{
+  "meta": { "batch": "batch-132", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-a9e8cd2db32ebb14": {
+      "synonyms": ["unmatched", "unequalled", "peerless", "unsurpassed"],
+      "collocations": ["unrivalled expertise", "an unrivalled reputation", "unrivalled in quality"],
+      "example_simple": "The museum has an unrivalled collection of ancient coins.",
+      "example_complex": "With decades of research behind it, the institute enjoys an unrivalled reputation for scientific integrity."
+    },
+    "pubcol-w-173d56cc611ca01b": {
+      "synonyms": ["unpleasant", "disreputable", "distasteful", "shady"],
+      "collocations": ["an unsavoury reputation", "unsavoury characters", "unsavoury details"],
+      "example_simple": "He was known to keep company with some rather unsavoury characters.",
+      "example_complex": "The investigation exposed unsavoury dealings that the company had gone to great lengths to conceal.",
+      "vi_meaning_correction": "khó chịu, đáng ngờ, không đứng đắn (về đạo đức)"
+    },
+    "pubcol-w-1556c2059e681e0d": {
+      "synonyms": ["dishonest", "unprincipled", "immoral", "corrupt"],
+      "collocations": ["unscrupulous business practices", "an unscrupulous dealer", "unscrupulous employers"],
+      "example_simple": "Some unscrupulous sellers hide the true condition of the cars they sell.",
+      "example_complex": "Vulnerable tenants are often exploited by unscrupulous landlords who ignore basic safety regulations."
+    },
+    "pubcol-w-74453a13c7890656": {
+      "part_of_speech": "adjective",
+      "definition_en": "not enjoying or seeking the company of other people; unfriendly",
+      "synonyms": ["unfriendly", "aloof", "withdrawn", "reserved"],
+      "collocations": ["unsociable behaviour", "an unsociable person", "unsociable hours"],
+      "example_simple": "He can seem unsociable, but he is really just shy around strangers.",
+      "example_complex": "Working unsociable hours left her with little time to maintain friendships outside the office.",
+      "vi_meaning_correction": "không thích giao du, không hòa đồng"
+    },
+    "6cdd543e-3ed8-437c-9445-35a9014a546e": {
+      "difficulty": "7.0",
+      "definition_en": "not asked for and often not wanted",
+      "ipa": "/ˌʌnsəˈlɪsɪtɪd/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-4ac70f5ba9c7dc4c": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ʌnˈspɔɪlt əv ə pleɪs/",
+      "definition_en": "describing a place that remains beautiful and natural because it has not been changed or damaged by people",
+      "synonyms": ["pristine", "untouched", "unspoiled", "natural"],
+      "collocations": ["an unspoilt beach", "unspoilt countryside", "remain unspoilt"],
+      "example_simple": "We spent our holiday on a quiet, unspoilt beach far from the tourist resorts.",
+      "example_complex": "The valley has remained largely unspoilt, protected from development by its remoteness and steep terrain."
+    },
+    "46f8f7be-4bc3-4d47-922e-772dab7dd1a0": {
+      "difficulty": "8.0",
+      "definition_en": "doubts or beliefs about wrongdoing that are not supported by evidence",
+      "ipa": "/ˌʌnsəbˈstænʃieɪtɪd səˈspɪʃənz/",
+      "part_of_speech": "phrase"
+    },
+    "8813c7bf-ebd3-4219-93e4-075529733606": {
+      "difficulty": "7.0",
+      "definition_en": "not spoiled, damaged, or morally corrupted; still pure",
+      "ipa": "/ʌnˈteɪntɪd/",
+      "part_of_speech": "adjective"
+    },
+    "dadb9236-6b79-4c6b-bc12-5f1501e4b49b": {
+      "difficulty": "8.0",
+      "definition_en": "not able to be defended, maintained, or justified",
+      "ipa": "/ʌnˈtenəbl/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-f0a037b9bbd226eb": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ʌnˈtaɪmli ˈpremətʃə deθ/",
+      "definition_en": "a death that happens sooner than expected, especially when someone is still young",
+      "synonyms": ["premature death", "early death", "sudden death"],
+      "collocations": ["an untimely death", "meet an untimely death", "his premature death"],
+      "example_simple": "The whole town mourned the untimely death of the young doctor.",
+      "example_complex": "His untimely death at the height of his career robbed the film industry of one of its most original voices."
+    },
+    "1e45ea20-b3d0-409a-ac2c-5a87de6a64f6": {
+      "difficulty": "8.0",
+      "definition_en": "unusually calm, gentle, and easy to control or manage",
+      "ipa": "/ʌnˈjuːʒuəli ˈdəʊsaɪl/",
+      "part_of_speech": "phrase"
+    },
+    "e527fc75-5228-4e46-aaa8-916fc6bb6a35": {
+      "difficulty": "7.0",
+      "definition_en": "steady and firm; not weakening or changing, especially in belief or determination",
+      "ipa": "/ʌnˈweɪvərɪŋ/",
+      "part_of_speech": "adjective"
+    },
+    "6f4645aa-8fdb-4782-8b3f-7d8cce7210e5": {
+      "difficulty": "9.0",
+      "definition_en": "large international associations of companies or bodies that are difficult to manage or control",
+      "ipa": "/ʌnˈwiːldi ˌɪntəˈnæʃənl kənˈsɔːtiə/",
+      "part_of_speech": "phrase"
+    },
+    "eec8b06c-2cfa-4ca4-8ab6-9cd5154cc6c1": {
+      "difficulty": "7.0",
+      "definition_en": "without being aware of what one is doing or its consequences",
+      "ipa": "/ʌnˈwɪtɪŋli/",
+      "part_of_speech": "adverb"
+    },
+    "pubcol-w-155bf1684113211a": {
+      "difficulty": "6.0",
+      "ipa": "/ˌʌp ɪn ði ˈeə/"
+    },
+    "pubcol-w-f117f52b555678b0": {
+      "difficulty": "6.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ˌʌp tə wʌnz ˈaɪz/",
+      "definition_en": "extremely busy or deeply involved in something, with more than one can easily handle",
+      "synonyms": ["swamped", "snowed under", "overwhelmed", "flat out"],
+      "collocations": ["up to one's eyes in work", "up to one's eyes in debt", "be up to one's eyes"],
+      "example_simple": "I can't come out tonight — I'm up to my eyes in work.",
+      "example_complex": "With three deadlines looming, she was up to her eyes in paperwork and barely had time to eat."
+    },
+    "pubcol-w-05a33d9105f5f707": {
+      "part_of_speech": "adjective",
+      "definition_en": "including the most recent information or reflecting the latest developments",
+      "synonyms": ["current", "latest", "modern", "recent"],
+      "collocations": ["up-to-date information", "keep something up-to-date", "up-to-date technology"],
+      "example_simple": "Please make sure your contact details are up-to-date.",
+      "example_complex": "The hospital invested heavily in up-to-date equipment to keep pace with rapid advances in medical technology."
+    },
+    "b318497b-a435-4979-a492-0811bed2659b": {
+      "difficulty": "7.0",
+      "definition_en": "money that must be paid at the beginning, before a service or product is provided",
+      "ipa": "/ˌʌpfrʌnt ˈkɒst/",
+      "part_of_speech": "phrase"
+    },
+    "2fafbe0a-3c0d-41ef-b858-5a3ae2b76f07": {
+      "difficulty": "7.0",
+      "definition_en": "to support or maintain a decision, law, or principle, especially formally",
+      "ipa": "/ʌpˈhəʊld/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-c98af972316fe416": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ʌpˈhəʊld ənd ɪnˈfɔːs ðə lɔː/",
+      "definition_en": "to support the law and make sure that people obey it",
+      "synonyms": ["maintain the law", "enforce the law", "administer justice"],
+      "collocations": ["uphold and enforce the law", "a duty to uphold the law", "uphold the rule of law"],
+      "example_simple": "It is the job of the police to uphold and enforce the law.",
+      "example_complex": "Judges are expected to uphold and enforce the law impartially, regardless of the wealth or status of those before them."
+    },
+    "pubcol-w-f810a1068036adc7": {
+      "difficulty": "6.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ˌʌps ənd ˈdaʊnz/",
+      "definition_en": "the mix of good and bad experiences that happen over a period of time",
+      "synonyms": ["highs and lows", "vicissitudes", "fluctuations", "twists and turns"],
+      "collocations": ["the ups and downs of life", "have its ups and downs", "ups and downs of a relationship"],
+      "example_simple": "Every marriage has its ups and downs.",
+      "example_complex": "Looking back on the ups and downs of her long career, she felt the setbacks had taught her more than the successes."
+    },
+    "d22754ba-fc80-4e21-b7d1-3778e427179f": {
+      "difficulty": "6.0",
+      "ipa": "/ˈʌpwəd trend/"
+    },
+    "0a599fa1-9a71-41dc-a028-3900b1a6ef21": {
+      "difficulty": "8.0",
+      "definition_en": "the process by which a city area becomes run-down and dilapidated as it declines",
+      "ipa": "/ˌɜːbən dɪˈkeɪ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-9b2ce7cd769051e3": {
+      "difficulty": "6.0",
+      "ipa": "/ˌɜːbənaɪˈzeɪʃən/"
+    },
+    "pubcol-w-78bd637daf832a17": {
+      "synonyms": ["encourage", "press", "push", "exhort"],
+      "collocations": ["strongly urge", "urge caution", "urge someone to do something"],
+      "example_simple": "Doctors urge people to eat more fruit and vegetables.",
+      "example_complex": "The committee urged the government to reconsider a policy that many experts believed would harm small businesses."
+    }
+  }
+}

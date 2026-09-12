@@ -1,0 +1,220 @@
+{
+  "meta": { "batch": "batch-076", "authored_by": "claude", "count": 25 },
+  "words": {
+    "bf2cd85b-7401-46bd-9f83-8f61838b887e": {
+      "difficulty": "6.0",
+      "definition_en": "paid as a single complete amount rather than in instalments",
+      "ipa": "/ˌlʌmp ˈsʌm/",
+      "part_of_speech": "adjective"
+    },
+    "90a5ac45-f980-4d78-ad5b-d713b0c1166f": {
+      "difficulty": "7.0",
+      "synonyms": ["lunar surface layer", "Moon's crust", "outer lunar layer"],
+      "definition_en": "the solid outermost rocky layer of the Moon",
+      "ipa": "/ˈluːnə krʌst/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-28d37f220f2d96df": {
+      "synonyms": ["airways", "breathing organs", "respiratory organs"],
+      "collocations": ["healthy lungs", "damage the lungs", "fill the lungs with air"],
+      "example_simple": "Smoking can seriously harm your lungs.",
+      "example_complex": "After years of exposure to polluted air, her lungs had lost much of their capacity to take in oxygen.",
+      "definition_en": "the pair of organs in the chest used for breathing",
+      "part_of_speech": "noun"
+    },
+    "abf27b9c-8675-42c0-b432-9d56503c986a": {
+      "difficulty": "6.0",
+      "definition_en": "to tempt or attract someone, often into doing something unwise",
+      "ipa": "/ljʊə/",
+      "part_of_speech": "verb"
+    },
+    "0b7b41f5-c287-48ad-825c-95dca9f5feae": {
+      "difficulty": "6.0",
+      "definition_en": "expensive, high-end clothing and fashion items",
+      "ipa": "/ˈlʌkʃəri əˈpærəl/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-28831971c7037eca": {
+      "synonyms": ["words", "verses", "song text"],
+      "collocations": ["write the lyrics", "song lyrics", "memorise the lyrics"],
+      "example_simple": "I love the melody, but I can't remember the lyrics.",
+      "example_complex": "The band's lyrics dealt with social injustice, giving their songs a depth that few of their rivals could match.",
+      "definition_en": "the words of a song",
+      "part_of_speech": "noun"
+    },
+    "af3055bf-324d-485d-9a61-d48d81959b6b": {
+      "difficulty": "6.0",
+      "definition_en": "regions of space around a magnet or electric current where magnetic force can be detected",
+      "ipa": "/mæɡˌnetɪk ˈfiːldz/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-a5d6c2d30721dee8": {
+      "difficulty": "6.0",
+      "synonyms": ["stunning waterfalls", "spectacular falls", "breathtaking cascades"],
+      "collocations": ["visit the magnificent waterfalls", "a series of magnificent waterfalls", "photograph the magnificent waterfalls"],
+      "example_simple": "We travelled north to see the magnificent waterfalls.",
+      "example_complex": "The national park is famous for its magnificent waterfalls, which plunge hundreds of metres into a mist-filled gorge.",
+      "definition_en": "extremely beautiful and impressive falls of water",
+      "ipa": "/mæɡˌnɪfɪsənt ˈwɔːtəfɔːlz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-5f37fc4adc5b2435": {
+      "difficulty": "6.0",
+      "ipa": "/ˈmæɡnɪtjuːd/"
+    },
+    "pubcol-w-4e5697e794477d28": {
+      "difficulty": "6.0",
+      "synonyms": ["primary effect and secondary effect", "intended effect and adverse effect"],
+      "collocations": ["the main effect of the drug", "an unpleasant side effect", "cause serious side effects"],
+      "example_simple": "The main effect of the pill is to lower blood pressure, but a common side effect is drowsiness.",
+      "example_complex": "Researchers had to weigh the main effect of the treatment against the range of side effects reported by patients.",
+      "definition_en": "the principal intended result of something versus an unintended, often unwanted, secondary result",
+      "ipa": "/meɪn ɪˈfekt saɪd ɪˈfekt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-e871ef739246471b": {
+      "difficulty": "6.0",
+      "synonyms": ["root cause", "leading cause", "chief reason"],
+      "collocations": ["the main cause of", "identify the primary cause", "a primary cause of concern"],
+      "example_simple": "Poor diet is the main cause of the problem.",
+      "example_complex": "Investigators concluded that human error, rather than mechanical failure, was the primary cause of the accident.",
+      "definition_en": "the most important reason why something happens",
+      "ipa": "/meɪn ˈpraɪməri kɔːz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-eb15f8d0d6eef125": {
+      "difficulty": "6.0",
+      "ipa": "/meɪnˈteɪn/"
+    },
+    "3e456cfa-39c1-474a-8b54-94e9ee25827d": {
+      "difficulty": "6.0",
+      "definition_en": "a tall cereal plant grown for its grain; corn",
+      "ipa": "/meɪz/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-8284f0f61e0f0034": {
+      "difficulty": "6.0",
+      "synonyms": ["serious fouls", "grave infringements", "flagrant fouls"],
+      "collocations": ["commit major fouls", "penalised for major fouls", "a series of major fouls"],
+      "example_simple": "The referee sent him off after two major fouls.",
+      "example_complex": "Repeated major fouls late in the match cost the team both a player and, ultimately, the title.",
+      "definition_en": "serious rule violations in a sport that draw heavy penalties",
+      "ipa": "/ˈmeɪdʒə faʊlz/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "lỗi nặng, lỗi nghiêm trọng"
+    },
+    "pubcol-w-fb2f1647b8040a20": {
+      "difficulty": "6.0",
+      "synonyms": ["strike a deal with", "negotiate with", "haggle with"],
+      "collocations": ["make a bargain with a trader", "make a hard bargain", "make a bargain with the seller"],
+      "example_simple": "She made a bargain with the vendor and paid half the price.",
+      "example_complex": "He made a shrewd bargain with the landlord, agreeing to renovate the shop in exchange for a lower rent.",
+      "definition_en": "to negotiate an agreement or deal with someone, often over a price",
+      "ipa": "/meɪk ə ˈbɑːɡɪn wɪð/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-838c24451ac657c8": {
+      "difficulty": "6.0",
+      "synonyms": ["achieve a breakthrough", "make a major advance", "reach a turning point"],
+      "collocations": ["make a scientific breakthrough", "make a breakthrough in research", "finally make a breakthrough"],
+      "example_simple": "Scientists hope to make a breakthrough in cancer treatment.",
+      "example_complex": "After a decade of painstaking work, the team finally made a breakthrough that transformed the entire field.",
+      "definition_en": "to achieve an important and sudden advance or discovery",
+      "ipa": "/meɪk ə ˈbreɪkθruː/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-8a1f9fb465ad6747": {
+      "difficulty": "5.0",
+      "synonyms": ["draw up a budget", "plan spending", "set a budget"],
+      "collocations": ["make a monthly budget", "make a budget for the trip", "make and stick to a budget"],
+      "example_simple": "Before shopping, I make a budget so I don't overspend.",
+      "example_complex": "The couple sat down each January to make a detailed budget covering every household expense for the year ahead.",
+      "definition_en": "to plan how much money you will spend on different things",
+      "ipa": "/meɪk ə ˈbʌdʒɪt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-ab61ecd18e45b8a8": {
+      "difficulty": "7.0",
+      "synonyms": ["argue for", "advocate for", "put forward a case for"],
+      "collocations": ["make a strong case for", "make a compelling case for", "make a case for reform"],
+      "example_simple": "She made a good case for working from home.",
+      "example_complex": "The report makes a compelling case for investing in renewable energy rather than expanding fossil-fuel capacity.",
+      "definition_en": "to give reasons and arguments in support of something",
+      "ipa": "/meɪk ə keɪs fɔː/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "lập luận ủng hộ cho việc gì, đưa ra lý lẽ bảo vệ điều gì"
+    },
+    "pubcol-w-3c77979db00de4dd": {
+      "difficulty": "5.0",
+      "synonyms": ["alter something", "modify something", "shake things up"],
+      "collocations": ["make a change in your life", "make major changes", "make changes to the plan"],
+      "example_simple": "I decided to make a change and move to a new city.",
+      "example_complex": "Management promised to make sweeping changes to the way complaints were handled after the scandal.",
+      "definition_en": "to do something differently or alter something",
+      "ipa": "/meɪk ə tʃeɪndʒ/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "thực hiện thay đổi, tạo ra sự thay đổi"
+    },
+    "pubcol-w-715d006195894a6a": {
+      "difficulty": "5.0",
+      "synonyms": ["choose", "select", "decide"],
+      "collocations": ["make the right choice", "make a difficult choice", "make an informed choice"],
+      "example_simple": "You have to make a choice between the two jobs.",
+      "example_complex": "Faced with limited resources, the government had to make a hard choice about which services to fund.",
+      "definition_en": "to decide on one option out of several",
+      "ipa": "/meɪk ə tʃɔɪs/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-e3a3b05d14e84498": {
+      "difficulty": "6.0",
+      "synonyms": ["assert", "state", "allege"],
+      "collocations": ["make a bold claim about", "make a claim about the product", "make an unfounded claim about"],
+      "example_simple": "The advert makes a claim about losing weight quickly.",
+      "example_complex": "Scientists were sceptical of the company's claim about its new drug curing the disease within days.",
+      "definition_en": "to state that something is true, often without proof",
+      "ipa": "/meɪk ə kleɪm əˈbaʊt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-367c5f576ec5f843": {
+      "difficulty": "7.0",
+      "synonyms": ["win everything", "sweep the board", "take it all"],
+      "collocations": ["make a clean sweep of the awards", "make a clean sweep of the medals", "make a clean sweep of the series"],
+      "example_simple": "Our team made a clean sweep of all the prizes this year.",
+      "example_complex": "The film made a clean sweep at the ceremony, winning every major award it was nominated for.",
+      "definition_en": "to win all of a set of prizes, games, or positions, or to remove everything completely",
+      "ipa": "/meɪk ə kliːn swiːp/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-602e295a96db5956": {
+      "difficulty": "6.0",
+      "synonyms": ["stage a comeback", "bounce back", "return to form"],
+      "collocations": ["make a stunning comeback", "make a comeback in the second half", "make a comeback after injury"],
+      "example_simple": "The team made a comeback and won the game.",
+      "example_complex": "After years out of the spotlight, the singer made a remarkable comeback with an album that topped the charts.",
+      "definition_en": "to return successfully after a period of absence, defeat, or decline",
+      "ipa": "/meɪk ə ˈkʌmbæk/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-32899a8ef8146331": {
+      "difficulty": "5.0",
+      "synonyms": ["comment", "remark", "give feedback"],
+      "collocations": ["make a comment on", "make critical comments", "make no comment"],
+      "example_simple": "She made a comment about my new haircut.",
+      "example_complex": "The minister declined to make any comment on the ongoing investigation until the report was published.",
+      "definition_en": "to express an opinion or give a remark about something",
+      "ipa": "/meɪk ə ˈkɒment/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "bình luận, nhận xét, chú giải (về việc gì)"
+    },
+    "pubcol-w-cbdc37301db08724": {
+      "difficulty": "6.0",
+      "synonyms": ["complain", "lodge a complaint", "file a grievance"],
+      "collocations": ["make a formal complaint", "make a complaint about the service", "make a complaint to the manager"],
+      "example_simple": "I want to make a complaint about the noise.",
+      "example_complex": "Several customers made a formal complaint after the company failed to honour its refund policy.",
+      "definition_en": "to formally state that you are unhappy or dissatisfied about something",
+      "ipa": "/meɪk ə kəmˈpleɪnt/",
+      "part_of_speech": "phrase"
+    }
+  }
+}

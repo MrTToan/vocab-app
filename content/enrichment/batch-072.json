@@ -1,0 +1,180 @@
+{
+  "meta": { "batch": "batch-072", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-9597bc3691e6b648": {
+      "difficulty": "5.0",
+      "ipa": "/ˈkaɪnd əv/"
+    },
+    "d0b17882-31a6-4b1f-88a1-5ceb6f5f563e": {
+      "difficulty": "8.0",
+      "definition_en": "based on family or blood relationships",
+      "ipa": "/ˈkɪnʃɪp beɪst/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-d22dda44c8bc2069": {
+      "synonyms": ["kneecap", "knee joint"],
+      "collocations": ["bend your knees", "a scraped knee", "kneel on one knee"],
+      "example_simple": "I hurt my knee when I fell off my bike.",
+      "example_complex": "After years of running, the constant strain had worn away the cartilage in his knee, leaving him in chronic pain.",
+      "definition_en": "the joint between the upper and lower parts of the leg",
+      "part_of_speech": "noun"
+    },
+    "8872a9fe-1eb3-4fb4-b3eb-57279c67a500": {
+      "difficulty": "7.0",
+      "definition_en": "requiring a lot of time, effort, and hard work",
+      "ipa": "/ləˈbɔːriəs/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-4c7e0a41ee06d2e8": {
+      "synonyms": ["worker", "manual worker", "workman", "hand"],
+      "collocations": ["a construction labourer", "hire labourers", "a farm labourer"],
+      "example_simple": "The labourers worked all day building the new road.",
+      "example_complex": "Many of the labourers on the site were migrant workers hired for a fraction of the local wage."
+    },
+    "pubcol-w-357de8f622ff2aae": {
+      "synonyms": ["maze", "warren", "network", "web"],
+      "collocations": ["a labyrinth of streets", "navigate a labyrinth", "a labyrinth of corridors"],
+      "example_simple": "The old town is a labyrinth of narrow streets.",
+      "example_complex": "Applicants must navigate a bureaucratic labyrinth of forms and approvals before receiving a single grant."
+    },
+    "bd70060e-48e5-4cb0-970c-bfba4328ab59": {
+      "difficulty": "8.0",
+      "synonyms": ["economic stagnation", "limited social mobility", "lack of upward mobility"],
+      "definition_en": "the difficulty people face in improving their financial or social position",
+      "ipa": "/læk əv ˌiːkəˈnɒmɪk məʊˈbɪləti/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-cf55620b1d836c7b": {
+      "synonyms": ["disabled", "crippled", "limping", "hobbling"],
+      "collocations": ["go lame", "a lame leg", "lame in one leg"],
+      "example_simple": "The horse went lame and could not race.",
+      "example_complex": "Left lame by a childhood injury, she walked with a pronounced limp that never fully healed."
+    },
+    "pubcol-w-d45030bf4e818b45": {
+      "synonyms": ["mourn", "grieve", "bewail", "deplore"],
+      "collocations": ["lament the loss", "lament the passing of", "bitterly lament"],
+      "example_simple": "Many people lament the loss of the old cinema.",
+      "example_complex": "In her speech, the professor lamented the steady erosion of critical thinking among students raised on instant answers."
+    },
+    "2ec2caae-a37f-44c6-af81-24d3beb3a236": {
+      "difficulty": "8.0",
+      "definition_en": "the assurance that a person's rights to their land are protected and will not be taken away",
+      "ipa": "/lænd ˈtenjə sɪˈkjʊərəti/",
+      "part_of_speech": "phrase"
+    },
+    "006d4958-8e8f-4b3f-93ec-a8b35a88c230": {
+      "difficulty": "8.0",
+      "definition_en": "wealthy people who own large amounts of land, often with high social status",
+      "ipa": "/ˌlændɪd ˈdʒentri/",
+      "part_of_speech": "noun"
+    },
+    "fe56f28b-2180-4db4-97d7-883f6b612069": {
+      "difficulty": "6.0",
+      "definition_en": "a place where rubbish is buried in the ground",
+      "ipa": "/ˈlændfɪl/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-c68c1a81b10f85a1": {
+      "synonyms": ["fixed line", "home phone", "wired phone"],
+      "collocations": ["a landline number", "call on the landline", "a landline connection"],
+      "example_simple": "You can reach me on my landline in the evening.",
+      "example_complex": "Although most households have abandoned the landline in favour of mobiles, businesses often keep one for reliability.",
+      "definition_en": "a telephone connection that uses a wire or cable rather than a mobile signal",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-0a2f2cd978d1f218": {
+      "synonyms": ["scenery", "terrain", "countryside", "vista"],
+      "collocations": ["a rural landscape", "a stunning landscape", "the political landscape"],
+      "example_simple": "We stopped to admire the beautiful mountain landscape.",
+      "example_complex": "The arrival of digital streaming has transformed the entire media landscape within a single decade.",
+      "definition_en": "the visible features of an area of land, or a general situation or set of conditions",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-910bcfd68eb3e763": {
+      "difficulty": "7.0",
+      "synonyms": ["loss of focus", "momentary distraction", "slip in attention"],
+      "collocations": ["a lapse of concentration", "a brief lapse of concentration", "cost by a lapse of concentration"],
+      "example_simple": "A lapse of concentration caused him to miss the turning.",
+      "example_complex": "A single lapse of concentration during the final lap cost the driver the championship he had spent all season chasing.",
+      "definition_en": "a short period when someone fails to pay attention",
+      "ipa": "/læps əv ˌkɒnsənˈtreɪʃn/",
+      "part_of_speech": "phrase"
+    },
+    "5a5f6bca-6670-4cd7-9f5e-b9296baaf308": {
+      "difficulty": "6.0",
+      "definition_en": "large flat areas of land with few trees",
+      "ipa": "/lɑːdʒ pleɪnz/",
+      "part_of_speech": "phrase"
+    },
+    "abec2665-cce8-466d-9309-71cccec6e94e": {
+      "difficulty": "8.0",
+      "synonyms": ["vast barren land", "large areas of infertile land", "wide wastelands"],
+      "definition_en": "large areas of land that are dry, infertile, and unable to support plant growth",
+      "ipa": "/lɑːdʒ trækts əv lænd ˈbærən/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-e39e8b7c388e5dc0": {
+      "synonyms": ["recently", "of late", "nowadays"],
+      "collocations": ["lately I have", "not lately", "until quite lately"],
+      "example_simple": "I haven't seen him much lately.",
+      "example_complex": "Lately, she had begun to wonder whether the sacrifices demanded by her career were truly worth it.",
+      "definition_en": "in the recent past; not long ago",
+      "part_of_speech": "adverb"
+    },
+    "pubcol-w-0832ff6b5e8115d5": {
+      "difficulty": "6.0",
+      "synonyms": ["better late than never"],
+      "collocations": ["well, later than never", "but later than never", "still, later than never"],
+      "example_simple": "You finally finished the report — later than never, I suppose.",
+      "example_complex": "He apologised a full year after the argument, but as the saying goes, later than never is still worth something.",
+      "definition_en": "it is better for something to happen late than not to happen at all",
+      "ipa": "/ˈleɪtə ðən ˈnevə/",
+      "part_of_speech": "idiom"
+    },
+    "cb91f5ef-eecd-4110-9f12-71c836ba55b6": {
+      "difficulty": "9.0",
+      "synonyms": ["hemispheric bias", "side-dominant bias", "directional bias"],
+      "definition_en": "a tendency in the brain or behaviour that favours one side over the other",
+      "ipa": "/ˈlætərəlaɪzd ˈbaɪəs/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-1481d0a0ceb16ea4": {
+      "synonyms": ["most recent", "newest", "up-to-date"],
+      "collocations": ["the latest news", "the latest model", "at the latest"],
+      "example_simple": "Have you heard the latest news about the merger?",
+      "example_complex": "The company staked its reputation on releasing the latest technology before any of its rivals could react.",
+      "definition_en": "the most recent or newest",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-bd191b34cfc26a12": {
+      "synonyms": ["caffè latte", "milk coffee"],
+      "collocations": ["order a latte", "a vanilla latte", "a hot latte"],
+      "example_simple": "She ordered a large latte with an extra shot.",
+      "example_complex": "The café prides itself on the delicate leaf patterns its baristas swirl into the foam of every latte.",
+      "definition_en": "a coffee drink made with espresso and a large amount of steamed milk",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-f6ac660e3e0aa388": {
+      "difficulty": "6.0",
+      "synonyms": ["release a new product", "roll out a new product", "unveil a new product"],
+      "collocations": ["launch a new product", "successfully launch a new product", "launch a new product line"],
+      "example_simple": "The company plans to launch a new product next spring.",
+      "example_complex": "Before they launch a new product, the firm runs months of market research to gauge how consumers are likely to respond.",
+      "definition_en": "to introduce a new product onto the market",
+      "ipa": "/lɔːntʃ ə njuː ˈprɒdʌkt/",
+      "part_of_speech": "phrase"
+    },
+    "a257857c-8810-4f76-bc43-88fd9ae63347": {
+      "difficulty": "8.0",
+      "definition_en": "a lack of strictness or care; carelessness",
+      "ipa": "/ˈlæksəti/",
+      "part_of_speech": "noun"
+    },
+    "b2b24117-8366-4aa1-91dd-ccc568e7d9c7": {
+      "difficulty": "7.0",
+      "definition_en": "to do the basic work needed to make future progress possible",
+      "ipa": "/leɪ ðə ˈɡraʊndwɜːk/",
+      "part_of_speech": "idiom"
+    }
+  }
+}

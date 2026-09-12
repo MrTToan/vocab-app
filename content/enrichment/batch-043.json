@@ -1,0 +1,183 @@
+{
+  "meta": { "batch": "batch-043", "authored_by": "claude", "count": 25 },
+  "words": {
+    "103c5e20-d411-4189-bc60-60039dacc7a5": {
+      "difficulty": "8.0",
+      "definition_en": "retired from a formal position but keeping the title as an honour",
+      "ipa": "/əˈmerɪtəs/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-ece9986a0f8c2ca6": {
+      "difficulty": "6.0",
+      "ipa": "/ˈemfəsaɪz/"
+    },
+    "pubcol-w-031a205b77e89688": {
+      "difficulty": "7.0",
+      "ipa": "/ɪmˈpɪrɪkl/"
+    },
+    "f2858367-b1cf-4502-a1eb-f3ce9a13ba4f": {
+      "difficulty": "7.0",
+      "definition_en": "to try to equal or match someone by imitating what they do",
+      "ipa": "/ˈemjuleɪt/",
+      "part_of_speech": "verb"
+    },
+    "50aa1cf7-5a64-425f-a634-360ca2a0ef7b": {
+      "difficulty": "7.0",
+      "definition_en": "to make a proposal into a law; also to act out or perform",
+      "ipa": "/ɪˈnækt/",
+      "part_of_speech": "verb"
+    },
+    "e1f4fa90-87ba-4da9-b6b1-2c097b7c5424": {
+      "difficulty": "7.0"
+    },
+    "pubcol-w-8ab18c8f82fca6ac": {
+      "difficulty": "5.0",
+      "ipa": "/ˌend ˈʌp/"
+    },
+    "2d84a2e1-db7a-4307-9b8f-dd7f8a549872": {
+      "difficulty": "7.0",
+      "definition_en": "to try hard to achieve something; also a serious, determined effort",
+      "ipa": "/ɪnˈdevər/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-6996eae3171720b5": {
+      "synonyms": ["effort", "attempt", "undertaking", "venture"],
+      "collocations": ["make every endeavour", "a worthwhile endeavour", "endeavour to improve"],
+      "example_simple": "We will endeavour to answer your email within one day.",
+      "example_complex": "Despite limited funding, the team's endeavour to restore the ancient manuscripts was ultimately successful."
+    },
+    "pubcol-w-1ad6211db6969814": {
+      "synonyms": ["support", "back", "approve", "sanction"],
+      "collocations": ["endorse a candidate", "endorse a product", "publicly endorse"],
+      "example_simple": "Several famous athletes endorse this brand of shoes.",
+      "example_complex": "The committee refused to endorse the proposal until further evidence had been reviewed."
+    },
+    "8379ab4c-7a58-468f-8d17-639ba3954f08": {
+      "difficulty": "8.0",
+      "definition_en": "to give a large sum of money to an institution; also to provide with a quality or ability",
+      "ipa": "/ɪnˈdaʊ/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-4e27cdf76729c0bc": {
+      "synonyms": ["gift", "grant", "bequest", "fund"],
+      "collocations": ["a generous endowment", "endowment fund", "leave an endowment"],
+      "example_simple": "The university received a large endowment from a former student.",
+      "example_complex": "The museum relies on its endowment to finance research that ticket sales alone could never sustain."
+    },
+    "59633f6c-c1e9-4611-9603-3c0608f7a6b8": {
+      "difficulty": "7.0",
+      "definition_en": "an impressive achievement made possible by engineering skill",
+      "ipa": "/ˌendʒɪˈnɪərɪŋ fiːt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-f392b612523b03f3": {
+      "synonyms": ["absorbing", "captivating", "gripping", "fascinating"],
+      "collocations": ["an engrossing novel", "an engrossing story", "utterly engrossing"],
+      "example_simple": "The film was so engrossing that I forgot the time.",
+      "example_complex": "She found the lecture unexpectedly engrossing, taking notes long after her classmates had lost interest."
+    },
+    "36293a74-97e0-4e9f-a753-e714138ebecc": {
+      "difficulty": "8.0",
+      "definition_en": "a person or thing that is mysterious and difficult to understand",
+      "ipa": "/ɪˈnɪɡmə/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-f4ce8ce5a12a59b5": {
+      "difficulty": "6.0",
+      "synonyms": ["take an independent trip", "travel solo", "go on a self-guided tour"],
+      "collocations": ["enjoy a self-planned tour of the city", "prefer a self-planned tour", "book a self-planned tour"],
+      "example_simple": "Many young travellers enjoy a self-planned tour instead of joining a group.",
+      "example_complex": "Rather than following a rigid itinerary, they chose to enjoy a self-planned tour that let them linger wherever the scenery pleased them.",
+      "definition_en": "to travel independently on a trip you have organised yourself rather than with a tour group",
+      "ipa": "/ɪnˈdʒɔɪ ə ˌself ˈplænd tʊər/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-6ef7eb43b1a16121": {
+      "difficulty": "6.0",
+      "synonyms": ["enjoy lively commerce", "enjoy brisk trade", "enjoy a thriving market"],
+      "collocations": ["enjoy bustling trade in the market", "streets that enjoy bustling trade", "the port enjoys bustling trade"],
+      "example_simple": "The old town square still enjoys bustling trade every weekend.",
+      "example_complex": "Thanks to its position on the river, the medieval city enjoyed bustling trade with merchants from across the continent.",
+      "definition_en": "to experience busy, lively buying and selling activity",
+      "ipa": "/ɪnˈdʒɔɪ ˈbʌslɪŋ treɪd/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-ea114db5824501b7": {
+      "difficulty": "6.0",
+      "synonyms": ["huge advantages", "immense benefits", "tremendous gains"],
+      "collocations": ["bring enormous benefits", "offer enormous benefits", "enormous benefits for society"],
+      "example_simple": "Regular exercise brings enormous benefits to your health.",
+      "example_complex": "Investing in early education yields enormous benefits that are often not visible until decades later.",
+      "definition_en": "very large advantages or good effects",
+      "ipa": "/ɪˈnɔːməs ˈbenɪfɪts/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-a98eace100a5e653": {
+      "difficulty": "8.0",
+      "synonyms": ["file a lawsuit against someone", "sue someone", "take legal action against someone"],
+      "collocations": ["enter a lawsuit against a company", "bring a lawsuit against the government", "threaten to enter a lawsuit"],
+      "example_simple": "They decided to enter a lawsuit against the builder for the damage.",
+      "example_complex": "After months of failed negotiations, the shareholders resolved to bring in a lawsuit against the former directors.",
+      "definition_en": "to start a formal legal case in court against someone",
+      "ipa": "/ˈentər ə ˈlɔːsuːt əˈɡenst ˌsʌmbədi/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-8bdb014c11095441": {
+      "difficulty": "5.0",
+      "synonyms": ["take part in a competition", "join a contest", "compete"],
+      "collocations": ["enter a competition to win", "decide to enter a competition", "enter a national competition"],
+      "example_simple": "She decided to enter a competition to test her cooking skills.",
+      "example_complex": "Encouraged by her teacher, the shy student entered a competition she would never have considered on her own.",
+      "definition_en": "to take part in an organised contest",
+      "ipa": "/ˈentər ə ˌkɒmpəˈtɪʃn/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-8cc605484f522657": {
+      "difficulty": "7.0",
+      "synonyms": ["sign an agreement with someone", "make a deal with someone", "conclude a contract with someone"],
+      "collocations": ["enter into an agreement with a supplier", "formally enter into an agreement", "enter into a binding agreement"],
+      "example_simple": "The two companies entered into an agreement to share resources.",
+      "example_complex": "Before entering into an agreement with the overseas partner, the firm sought detailed legal advice.",
+      "definition_en": "to formally make a contract or arrangement with someone",
+      "ipa": "/ˈentər ˈɪntuː əˈɡriːmənt wɪð ˌsʌmbədi/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-97ffd5b15331bcfe": {
+      "difficulty": "5.0",
+      "synonyms": ["leisure area", "recreation zone", "amusement area"],
+      "collocations": ["a large entertainment area", "the hotel's entertainment area", "build an entertainment area"],
+      "example_simple": "The children played happily in the entertainment area of the mall.",
+      "example_complex": "The resort's sprawling entertainment area, complete with cinemas and arcades, kept guests occupied well into the night.",
+      "definition_en": "a place designed for leisure, fun, and amusement",
+      "ipa": "/ˌentəˈteɪnmənt ˈeəriə/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-1da6fd952ed47801": {
+      "difficulty": "6.0",
+      "synonyms": ["support eagerly", "back wholeheartedly", "champion keenly"],
+      "collocations": ["enthusiastically support a plan", "enthusiastically support the team", "voters enthusiastically support"],
+      "example_simple": "The whole class enthusiastically supported the new recycling scheme.",
+      "example_complex": "Local residents enthusiastically supported the restoration project, volunteering their weekends without a moment's hesitation.",
+      "definition_en": "to back or approve something with great eagerness and energy",
+      "ipa": "/ɪnˈθjuːziæstɪkli səˈpɔːt/",
+      "part_of_speech": "phrase"
+    },
+    "76f24da9-be46-4166-9450-47706d245f4c": {
+      "difficulty": "7.0",
+      "definition_en": "persuaded to leave a place or job by the offer of something attractive",
+      "ipa": "/ɪnˈtaɪst əˈweɪ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-037c5430fb8e71d4": {
+      "difficulty": "5.0",
+      "synonyms": ["admission test", "entry exam", "qualifying examination"],
+      "collocations": ["pass the entrance exam", "sit an entrance examination", "prepare for the entrance exam"],
+      "example_simple": "He studied hard to pass the university entrance exam.",
+      "example_complex": "Competition for the scholarship was fierce, with thousands of candidates sitting the same demanding entrance examination.",
+      "definition_en": "a test taken to qualify for admission to a school or university",
+      "ipa": "/ˈentrəns ɪɡˌzæmɪˈneɪʃn/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "kỳ thi tuyển sinh (đầu vào)"
+    }
+  }
+}

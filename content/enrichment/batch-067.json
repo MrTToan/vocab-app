@@ -1,0 +1,170 @@
+{
+  "meta": { "batch": "batch-067", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-1f7b3e48ea835751": {
+      "synonyms": ["increase", "rise", "step-up", "addition"],
+      "collocations": ["a small increment", "salary increment", "in increments"],
+      "example_simple": "She got a small increment in her salary this year.",
+      "example_complex": "The software releases updates in tiny increments rather than one massive overhaul, minimising disruption for users."
+    },
+    "pubcol-w-f7edaf3282dafb60": {
+      "difficulty": "6.0",
+      "ipa": "/ˈɪndɪkeɪt/"
+    },
+    "17f33133-81e2-479f-8118-e69b84b1dc1d": {
+      "difficulty": "7.0",
+      "definition_en": "a lack of interest, concern, or sympathy",
+      "ipa": "/ɪnˈdɪfrəns/",
+      "part_of_speech": "noun"
+    },
+    "44377b26-4e20-4247-b309-7129720f081e": {
+      "difficulty": "8.0",
+      "definition_en": "strong anger provoked by something felt to be unfair or wrong",
+      "ipa": "/ɪnˈdɪɡnənt ˈæŋɡə/",
+      "part_of_speech": "phrase"
+    },
+    "9e29967c-1dd7-47b8-93e7-b0ebbfe1553f": {
+      "difficulty": "7.0",
+      "definition_en": "anger or annoyance at something seen as unjust or unfair",
+      "ipa": "/ˌɪndɪɡˈneɪʃn/",
+      "part_of_speech": "noun"
+    },
+    "9a80bfb2-5f78-43d6-8a94-94587395ccc2": {
+      "difficulty": "8.0",
+      "definition_en": "done at random, without careful judgement or distinction",
+      "ipa": "/ˌɪndɪˈskrɪmɪnət/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-589d230a8d00f115": {
+      "synonyms": ["person", "single", "separate", "particular"],
+      "collocations": ["an individual person", "individual rights", "each individual"],
+      "example_simple": "Each individual has the right to their own opinion.",
+      "example_complex": "The policy aims to balance the interests of society as a whole against the freedoms of the individual.",
+      "definition_en": "a single person or thing considered separately from a group",
+      "part_of_speech": "noun"
+    },
+    "1a13a41c-9d01-4178-b2e1-083351a6678d": {
+      "difficulty": "8.0",
+      "definition_en": "without doubt; certainly",
+      "ipa": "/ɪnˈdjuːbɪtəbli/",
+      "part_of_speech": "adverb"
+    },
+    "72e57d76-74ee-4ef2-991b-d1e0ce986de8": {
+      "difficulty": "7.0",
+      "definition_en": "to bring about or cause a particular state or result",
+      "ipa": "/ɪnˈdjuːs/",
+      "part_of_speech": "verb"
+    },
+    "f84380fa-bddc-4eb7-b63b-5554697f9ebc": {
+      "difficulty": "7.0",
+      "definition_en": "to formally admit someone into a position, group, or organisation",
+      "ipa": "/ɪnˈdʌkt/",
+      "part_of_speech": "verb"
+    },
+    "e3131de1-d1e4-4fbe-9c39-fd78efcf9dd4": {
+      "difficulty": "7.0",
+      "definition_en": "to allow oneself to enjoy the pleasure of something",
+      "ipa": "/ɪnˈdʌldʒ ɪn/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-07b9178924483151": {
+      "difficulty": "6.0",
+      "synonyms": ["industrial park", "industrial estate", "manufacturing district"],
+      "collocations": ["build an industrial zone", "a large industrial zone", "work in an industrial zone"],
+      "example_simple": "Many factories are located in the industrial zone outside the city.",
+      "example_complex": "The government offered tax incentives to attract foreign investors to the newly developed industrial zone.",
+      "definition_en": "an area set aside for factories and manufacturing businesses",
+      "ipa": "/ɪnˈdʌstriəl zəʊn/",
+      "part_of_speech": "phrase"
+    },
+    "2693e0aa-01df-42df-9dfe-197675e553fb": {
+      "difficulty": "8.0",
+      "definition_en": "clumsy or lacking skill at doing something",
+      "ipa": "/ɪˈnept æt/",
+      "part_of_speech": "phrase"
+    },
+    "d9fd9fad-dba9-4ee7-9b03-de2f8036da41": {
+      "difficulty": "8.0",
+      "definition_en": "a tendency to do nothing or remain unchanged; lack of energy or movement",
+      "ipa": "/ɪˈnɜːʃə/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-c991d290b126196e": {
+      "synonyms": ["unavoidable", "certain", "inescapable", "bound to happen"],
+      "collocations": ["an inevitable consequence", "seem inevitable", "the inevitable outcome"],
+      "example_simple": "With so little rain, a water shortage seemed inevitable.",
+      "example_complex": "Given the company's mounting debts, bankruptcy was the inevitable result of years of poor management."
+    },
+    "pubcol-w-97858fe055bcba69": {
+      "difficulty": "6.0",
+      "synonyms": ["unavoidable outcome", "certain consequence", "foregone conclusion"],
+      "collocations": ["an inevitable result of", "the inevitable result", "lead to an inevitable result"],
+      "example_simple": "Poor planning led to the inevitable result of missed deadlines.",
+      "example_complex": "The economic collapse was the inevitable result of decades of unchecked borrowing and speculation.",
+      "definition_en": "an outcome that is certain to happen and cannot be avoided",
+      "ipa": "/ɪnˈevɪtəbl rɪˈzʌlt/",
+      "part_of_speech": "phrase"
+    },
+    "e46af93c-47bd-4283-976a-1da888565908": {
+      "difficulty": "9.0",
+      "synonyms": ["unavoidable strain of daily life", "natural erosion of living"],
+      "definition_en": "the unavoidable gradual damage or exhaustion that ordinary life causes over time",
+      "ipa": "/ɪnˈevɪtəbl weə ənd teə əv ˈlɪvɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "8927cc79-a2bf-425d-b120-7f4112a9f13a": {
+      "difficulty": "8.0",
+      "definition_en": "unable to be explained or understood",
+      "ipa": "/ˌɪnɪkˈsplɪkəbl/",
+      "part_of_speech": "adjective"
+    },
+    "34e40dd1-8ce9-44ae-9bf2-23cbba7a3c66": {
+      "difficulty": "9.0",
+      "definition_en": "the crime or act of killing an infant",
+      "ipa": "/ɪnˈfæntɪsaɪd/",
+      "part_of_speech": "noun"
+    },
+    "6fda0702-f8e7-4e65-9a2d-ee1b822bed01": {
+      "difficulty": "7.0",
+      "definition_en": "to enter or gain access to a place or group secretly and gradually",
+      "ipa": "/ˈɪnfɪltreɪt/",
+      "part_of_speech": "verb"
+    },
+    "a013f051-a91e-478a-a4c1-5066b837b32f": {
+      "difficulty": "8.0",
+      "definition_en": "a small hospital or room for treating the sick, especially in an institution",
+      "ipa": "/ɪnˈfɜːmri/",
+      "part_of_speech": "noun"
+    },
+    "0f532bfa-4031-4b7f-9f4f-ad66f4b3ed4e": {
+      "difficulty": "7.0",
+      "definition_en": "a condition in which part of the body becomes red, swollen, and painful",
+      "ipa": "/ˌɪnfləˈmeɪʃn/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-0e45dbfb8c559021": {
+      "synonyms": ["price rise", "rising prices", "devaluation"],
+      "collocations": ["rising inflation", "curb inflation", "the rate of inflation"],
+      "example_simple": "High inflation means prices go up quickly.",
+      "example_complex": "The central bank raised interest rates in an effort to bring soaring inflation under control.",
+      "definition_en": "a general rise in prices and fall in the value of money over time",
+      "part_of_speech": "noun"
+    },
+    "ef09a63c-a698-4eff-8bd0-39b982765a7d": {
+      "difficulty": "7.0",
+      "definition_en": "to cause something unpleasant or painful to be suffered by someone",
+      "ipa": "/ɪnˈflɪkt/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-dedc89bad5561b66": {
+      "difficulty": "6.0",
+      "synonyms": ["effect on", "impact on", "sway over"],
+      "collocations": ["have an influence on", "a strong influence on", "exert influence on"],
+      "example_simple": "Her teacher had a big influence on her career choice.",
+      "example_complex": "Advertising exerts a subtle but powerful influence on the way consumers perceive everyday products.",
+      "definition_en": "the power to affect the way someone or something develops or behaves",
+      "ipa": "/ˈɪnfluəns ɒn/",
+      "part_of_speech": "phrase"
+    }
+  }
+}

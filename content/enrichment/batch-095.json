@@ -1,0 +1,164 @@
+{
+  "meta": { "batch": "batch-095", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-69bd62c0b8583b97": {
+      "synonyms": ["oppression", "victimization", "harassment", "maltreatment"],
+      "collocations": ["religious persecution", "flee persecution", "face persecution"],
+      "example_simple": "Many families left the country to escape persecution.",
+      "example_complex": "The refugees had endured years of religious persecution before finally being granted asylum abroad."
+    },
+    "53a473dd-a7d2-470d-b46c-50226cf22791": {
+      "difficulty": "8.0",
+      "definition_en": "a person who treats others cruelly or unfairly, especially because of their beliefs or identity",
+      "ipa": "/ˈpɜːsɪkjuːtə/",
+      "part_of_speech": "noun"
+    },
+    "72e86bcb-d7f9-4dd1-a5c7-620dad8b9528": {
+      "difficulty": "7.0",
+      "definition_en": "continued effort and determination despite difficulty or delay in achieving success",
+      "ipa": "/ˌpɜːsɪˈvɪərəns/",
+      "part_of_speech": "noun"
+    },
+    "1d7db862-e896-46b9-a3ae-52a1f9879216": {
+      "difficulty": "6.0",
+      "definition_en": "to continue doing something firmly despite difficulty or opposition",
+      "ipa": "/pəˈsɪst/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-112ade0f456886f6": {
+      "synonyms": ["persevering", "tenacious", "determined", "relentless"],
+      "collocations": ["persistent effort", "persistent cough", "remain persistent"],
+      "example_simple": "She was persistent and kept asking until she got an answer.",
+      "example_complex": "His persistent refusal to compromise eventually cost him the support of his closest allies."
+    },
+    "c1117227-067a-4ca8-bc9d-d252dd2272d2": {
+      "difficulty": "8.0",
+      "definition_en": "an important or distinguished person",
+      "ipa": "/ˈpɜːsənɪdʒ/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-a9b3f53880d89eba": {
+      "synonyms": ["sweat", "sweating", "perspiring"],
+      "collocations": ["beads of perspiration", "excessive perspiration", "wipe away perspiration"],
+      "example_simple": "After the run, his shirt was soaked with perspiration.",
+      "example_complex": "Beads of perspiration formed on her forehead as she waited nervously for the interview to begin.",
+      "vi_meaning_correction": "mồ hôi, sự đổ mồ hôi"
+    },
+    "pubcol-w-0aec96ac18e02dbc": {
+      "difficulty": "7.0",
+      "ipa": "/ˈpɜːtɪnənt/"
+    },
+    "d8b81fd2-8524-47b1-8cf4-9714730c2747": {
+      "difficulty": "7.0",
+      "definition_en": "spreading widely throughout something and present everywhere",
+      "ipa": "/pəˈveɪsɪv/",
+      "part_of_speech": "adjective"
+    },
+    "f3f3d097-d83f-47da-9991-60d2ea2c5f24": {
+      "difficulty": "8.0",
+      "definition_en": "showing a deliberate and stubborn desire to behave in a way that is unreasonable or unacceptable",
+      "ipa": "/pəˈvɜːs/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-149eab4b8e99c93d": {
+      "synonyms": ["distortion", "corruption", "depravity", "deviance"],
+      "collocations": ["moral perversion", "sexual perversion", "perversion of justice"],
+      "example_simple": "The judge called the false confession a perversion of justice.",
+      "example_complex": "Critics argued that the new policy was a perversion of the ideals the organization had originally been founded to protect."
+    },
+    "986c95b3-25b8-4327-bd78-ecbe2a10bb2d": {
+      "difficulty": "6.0",
+      "definition_en": "a formal written request signed by many people asking those in authority to do something",
+      "ipa": "/pəˈtɪʃən/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-94c8c1a0746ebd90": {
+      "difficulty": "6.0",
+      "synonyms": ["minor offence", "misdemeanour", "small-scale crime"],
+      "collocations": ["commit petty crime", "tackle petty crime", "rise in petty crime"],
+      "example_simple": "The neighbourhood has a lot of petty crime like shoplifting.",
+      "example_complex": "Local authorities argued that tackling petty crime early could prevent young offenders from drifting into more serious wrongdoing.",
+      "definition_en": "a minor, non-serious criminal offence such as small theft or vandalism",
+      "ipa": "/ˌpeti ˈkraɪm/",
+      "part_of_speech": "phrase"
+    },
+    "66963047-e638-4eef-906d-17e52e949177": {
+      "difficulty": "7.0",
+      "definition_en": "a small, selfish concern with one's own minor advantage or gain",
+      "ipa": "/ˌpeti ˈɪntrəst/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-84479cc3844890dc": {
+      "difficulty": "6.0",
+      "synonyms": ["remarkable success", "extraordinary success", "spectacular achievement"],
+      "collocations": ["achieve phenomenal success", "enjoy phenomenal success", "phenomenal success overnight"],
+      "example_simple": "Her first novel was a phenomenal success and sold millions of copies.",
+      "example_complex": "The start-up's phenomenal success took even its founders by surprise, transforming a small idea into a global brand within two years.",
+      "definition_en": "an extremely great or remarkable achievement or accomplishment",
+      "ipa": "/fɪˌnɒmɪnəl səkˈses/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-6516f0baefae1123": {
+      "difficulty": "6.0",
+      "ipa": "/fəˈnɒmɪnən/"
+    },
+    "6416fe39-1445-4e2f-8671-b5a27d006156": {
+      "difficulty": "8.0",
+      "definition_en": "relating to or seeking to promote the welfare of others through generous donations",
+      "ipa": "/ˌfɪlənˈθrɒpɪk/",
+      "part_of_speech": "adjective"
+    },
+    "ec91c04b-6b11-4b8c-b43c-461338c04b48": {
+      "difficulty": "6.0",
+      "definition_en": "relating to philosophy, or calm and rational in accepting a difficult situation",
+      "ipa": "/ˌfɪləˈsɒfɪkəl/",
+      "part_of_speech": "adjective"
+    },
+    "680b8655-aa0e-4536-aa63-f3711f167fcc": {
+      "difficulty": "9.0",
+      "definition_en": "the balanced arrangement of body parts on either side of a central axis in living organisms",
+      "ipa": "/ˌfɪziəˈlɒdʒɪkəl ˌbaɪˈlætərəl ˈsɪmɪtri/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-d3d0820055914363": {
+      "difficulty": "5.0",
+      "synonyms": ["select", "choose", "single out", "identify"],
+      "collocations": ["pick out a favourite", "pick out the best", "pick someone out of a crowd"],
+      "example_simple": "Can you pick out the ripest apples from the basket?",
+      "example_complex": "From the dozens of applications, the panel struggled to pick out the few candidates who truly stood out.",
+      "definition_en": "to choose or identify someone or something from a group",
+      "ipa": "/ˌpɪk ˈaʊt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-60ee3a8fc0608f2d": {
+      "difficulty": "5.0",
+      "ipa": "/ˌpɪk ˈʌp/"
+    },
+    "pubcol-w-e67f7133e77381f7": {
+      "synonyms": ["scenic", "charming", "quaint", "pretty"],
+      "collocations": ["picturesque village", "picturesque scenery", "picturesque views"],
+      "example_simple": "We stayed in a picturesque village by the lake.",
+      "example_complex": "The winding coastal road offered picturesque views of fishing harbours that seemed untouched by time."
+    },
+    "pubcol-w-94bbcdcb03dad678": {
+      "difficulty": "8.0",
+      "synonyms": ["beg for mercy", "ask for clemency", "appeal for mercy"],
+      "collocations": ["plead for leniency", "plead for leniency in court", "lawyer pleads for leniency"],
+      "example_simple": "The lawyer asked the judge to plead for leniency for the young man.",
+      "example_complex": "His defence team pleaded for leniency, arguing that his difficult upbringing had led him to make a single, uncharacteristic mistake.",
+      "definition_en": "to formally ask for a milder or more merciful punishment",
+      "ipa": "/pliːd fə ˈliːniənsi/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-4927c125a8cbe68e": {
+      "difficulty": "6.0",
+      "ipa": "/ˌpiːs əv ˈkeɪk/"
+    },
+    "5c2f19a6-aac3-43fa-af2f-47930662ebbe": {
+      "difficulty": "7.0",
+      "definition_en": "a natural substance that gives colour to plant or animal tissue",
+      "ipa": "/ˈpɪɡmənt/",
+      "part_of_speech": "noun"
+    }
+  }
+}

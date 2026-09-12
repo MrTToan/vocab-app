@@ -1,0 +1,176 @@
+{
+  "meta": { "batch": "batch-107", "authored_by": "claude", "count": 25 },
+  "words": {
+    "8a54edce-98cd-4e93-b4b9-a0c0c95edd98": {
+      "difficulty": "8.0",
+      "definition_en": "an unwillingness to speak or to share one's thoughts and feelings",
+      "ipa": "/ˈretɪsns/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-658c8286c17e4026": {
+      "difficulty": "5.0",
+      "ipa": "/rɪˈviːl/"
+    },
+    "534353fb-1e90-4760-9147-2769d6d4ed14": {
+      "difficulty": "8.0",
+      "definition_en": "feeling or showing deep and solemn respect",
+      "ipa": "/ˈrevərənt/",
+      "part_of_speech": "adjective"
+    },
+    "ba89c489-ff8e-4fb1-a889-8fcc95c78fb6": {
+      "difficulty": "9.0",
+      "synonyms": ["deferential submission", "respectful compliance", "dutiful deference"],
+      "definition_en": "obedience shown with deep respect and awe",
+      "ipa": "/ˌrevəˈrenʃl əˈbiːdiəns/",
+      "part_of_speech": "phrase"
+    },
+    "ffb2f5e9-5717-4181-9466-e5a9d9048f7b": {
+      "difficulty": "8.0",
+      "definition_en": "an interpretation that challenges or reinterprets a widely accepted account, especially of history",
+      "ipa": "/rɪˈvɪʒənɪst vjuː/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-5547580c484c9b5d": {
+      "difficulty": "7.0",
+      "synonyms": ["revolutionary movement", "insurgent struggle", "radical cause"],
+      "collocations": ["serve the revolutionary cause", "commit to the revolutionary cause", "advance the revolutionary cause"],
+      "example_simple": "Many young people joined the fight and gave their lives for the revolutionary cause.",
+      "example_complex": "Propaganda posters framed every hardship as a necessary sacrifice for the revolutionary cause, binding ordinary citizens to the movement's larger goals.",
+      "definition_en": "the aim, movement, or ideals for which a political revolution is fought",
+      "ipa": "/ˌrevəˈluːʃənri kɔːz/",
+      "part_of_speech": "phrase"
+    },
+    "1e0b3733-bd83-48cb-8cb8-33cd73091247": {
+      "difficulty": "8.0",
+      "definition_en": "an exaggerated expression of enthusiasm, or a free-flowing, emotional piece of music",
+      "ipa": "/ˈræpsədi/",
+      "part_of_speech": "noun",
+      "vi_meaning_correction": "khúc cuồng tưởng (âm nhạc); lời ca ngợi say sưa, sự tán dương nồng nhiệt"
+    },
+    "a83a13e2-e300-4c9d-bf95-39af715b5d29": {
+      "difficulty": "8.0",
+      "synonyms": ["rigid class hierarchies", "fixed social strata", "inflexible caste structures"],
+      "definition_en": "inflexible social hierarchies that divide people into fixed, unchangeable classes",
+      "ipa": "/ˈrɪdʒɪd kɑːst ˈsɪstəmz/",
+      "part_of_speech": "phrase"
+    },
+    "e496da15-b9db-4d79-ac3c-07607a382685": {
+      "difficulty": "8.0",
+      "synonyms": ["thorough chemical testing", "meticulous chemical examinations", "exacting chemical assays"],
+      "definition_en": "thorough and precise scientific examinations of a substance's chemical composition",
+      "ipa": "/ˈrɪɡərəs ˈkemɪkl əˈnæləsiːz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-bc026b0438108d03": {
+      "difficulty": "6.0",
+      "ipa": "/rɪŋ ə bel/"
+    },
+    "8dacb341-870d-4a65-a233-fc93be8b3aac": {
+      "difficulty": "5.0",
+      "definition_en": "to wash something quickly with clean water to remove soap or dirt",
+      "ipa": "/rɪns/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-c1b66db82b69eed1": {
+      "difficulty": "6.0",
+      "synonyms": ["become famous", "shoot to stardom", "gain celebrity"],
+      "collocations": ["rise to fame overnight", "rise to fame quickly", "a rapid rise to fame"],
+      "example_simple": "The young singer rose to fame after her song went viral online.",
+      "example_complex": "Having risen to fame almost overnight, the actor struggled to adjust to the relentless scrutiny that celebrity brought.",
+      "definition_en": "to become famous, often quickly",
+      "ipa": "/raɪz tə feɪm/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-85810ab8f94b4685": {
+      "difficulty": "7.0",
+      "synonyms": ["rise to the challenge", "step up", "meet the challenge"],
+      "collocations": ["truly rise to the occasion", "rise to the occasion admirably", "always rise to the occasion"],
+      "example_simple": "When the main speaker fell ill, she rose to the occasion and gave the talk herself.",
+      "example_complex": "Faced with a crisis that would have overwhelmed most managers, he rose to the occasion and steered the company through with remarkable composure.",
+      "definition_en": "to perform well when faced with a difficult or important situation",
+      "ipa": "/raɪz tə ði əˈkeɪʒn/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-74cac1ea87fa4ed8": {
+      "difficulty": "6.0",
+      "synonyms": ["higher sea levels", "increasing ocean levels", "sea-level rise"],
+      "collocations": ["combat rising sea levels", "threatened by rising sea levels", "rising sea levels caused by climate change"],
+      "example_simple": "Rising sea levels are a serious threat to many coastal cities.",
+      "example_complex": "Low-lying island nations face an existential danger from rising sea levels, which could submerge entire communities within a few decades.",
+      "definition_en": "the gradual increase in the height of the world's oceans, largely driven by climate change",
+      "ipa": "/ˈraɪzɪŋ siː ˈlevlz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-85a389288cb54010": {
+      "synonyms": ["ritual", "ceremony", "observance"],
+      "collocations": ["a religious rite", "perform a rite", "a rite of passage"],
+      "example_simple": "The wedding included several traditional rites passed down for generations.",
+      "example_complex": "Anthropologists study the rites that mark the transition from childhood to adulthood in different cultures."
+    },
+    "647b9d62-2d60-466d-b086-6d01f00e703f": {
+      "difficulty": "5.0",
+      "definition_en": "the ground at the bottom of a river",
+      "ipa": "/ˈrɪvə bed/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-36aa90318d20fb08": {
+      "synonyms": ["gripping", "captivating", "fascinating", "compelling"],
+      "collocations": ["a riveting performance", "a riveting account", "absolutely riveting"],
+      "example_simple": "The film was so riveting that nobody left their seat.",
+      "example_complex": "Her riveting account of surviving the shipwreck held the entire audience spellbound for over an hour.",
+      "vi_meaning_correction": "hấp dẫn, cuốn hút, lôi cuốn (khiến người ta chú ý mãnh liệt)"
+    },
+    "pubcol-w-c8f78f14203cbf59": {
+      "synonyms": ["safe to drive", "fit for the road", "in good running order"],
+      "collocations": ["a roadworthy vehicle", "in roadworthy condition", "declared roadworthy"],
+      "example_simple": "The mechanic checked the brakes to make sure the car was roadworthy.",
+      "example_complex": "Before the vintage lorry could be sold, it had to pass an inspection certifying that it was fully roadworthy."
+    },
+    "pubcol-w-581aae1e9c4ccd4a": {
+      "difficulty": "6.0",
+      "ipa": "/rəʊˈbʌst/"
+    },
+    "9676f982-9887-467b-bd61-4fb6d8ea01da": {
+      "difficulty": "8.0",
+      "definition_en": "layers of rock built up over long periods of geological time",
+      "ipa": "/rɒk ˈstrɑːtə/",
+      "part_of_speech": "noun"
+    },
+    "9cda6c89-bfcc-4977-b998-f3ad081a22d5": {
+      "difficulty": "6.0",
+      "ipa": "/ˈrɒkɪt/"
+    },
+    "0c3e7997-d955-476e-beb4-61535b3d9c1f": {
+      "difficulty": "7.0",
+      "definition_en": "a rugged, rocky point of land that juts out into the sea",
+      "ipa": "/ˈrɒki ˈhedlənd/",
+      "part_of_speech": "noun"
+    },
+    "1f8617b5-a353-4fdb-9667-2f8829b1f16d": {
+      "difficulty": "6.0",
+      "definition_en": "small gnawing mammals such as rats, mice, and squirrels",
+      "ipa": "/ˈrəʊdnts/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-50b00428ff456bab": {
+      "difficulty": "6.0",
+      "synonyms": ["love marriage", "marriage for love", "love match"],
+      "collocations": ["choose a romantic marriage", "a romantic marriage of choice", "favour a romantic marriage"],
+      "example_simple": "She wanted a romantic marriage rather than one arranged by her parents.",
+      "example_complex": "In societies where arranged unions were the norm, the growing preference for romantic marriage reflected a profound shift in attitudes towards individual choice.",
+      "definition_en": "a marriage based on mutual love and personal choice rather than family arrangement",
+      "ipa": "/rəʊˈmæntɪk ˈmærɪdʒ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-97924b2429ab8de8": {
+      "difficulty": "6.0",
+      "synonyms": ["scope for improvement", "room to improve", "potential for betterment"],
+      "collocations": ["still room for improvement", "plenty of room for improvement", "leave room for improvement"],
+      "example_simple": "Your essay is good, but there is still room for improvement in the conclusion.",
+      "example_complex": "While the quarterly results were encouraging, the manager stressed that considerable room for improvement remained in customer retention.",
+      "definition_en": "the possibility or scope for something to become better",
+      "ipa": "/ruːm fər ɪmˈpruːvmənt/",
+      "part_of_speech": "phrase"
+    }
+  }
+}

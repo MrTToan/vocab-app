@@ -1,0 +1,226 @@
+{
+  "meta": { "batch": "batch-053", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-ac44e37b7fa8ec33": {
+      "difficulty": "6.0",
+      "synonyms": ["generous perk", "substantial allowance", "lavish package"],
+      "collocations": ["offer a generous benefit", "a generous benefits package", "enjoy generous benefits"],
+      "example_simple": "The company offers a generous benefit that covers all medical costs.",
+      "example_complex": "In addition to a competitive salary, the firm provides a generous benefit scheme, including pension contributions and paid parental leave.",
+      "definition_en": "a substantial or above-average payment or advantage provided to employees",
+      "ipa": "/ˈdʒenərəs ˈbenɪfɪt/",
+      "part_of_speech": "collocation"
+    },
+    "a5774848-963a-43ec-936a-127246f7120a": {
+      "difficulty": "8.0",
+      "definition_en": "an inherited tendency that makes a person more likely to develop a particular disease",
+      "ipa": "/dʒəˈnetɪk səˌseptəˈbɪləti/",
+      "part_of_speech": "phrase"
+    },
+    "6483f4a0-bf7d-4e84-ada5-c84946691097": {
+      "difficulty": "8.0",
+      "definition_en": "varieties of organisms whose genetic material has been deliberately altered in a laboratory",
+      "ipa": "/dʒəˈnetɪkli ˈmɒdɪfaɪd streɪnz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-e40a0dc33971815b": {
+      "difficulty": "5.0",
+      "synonyms": ["light exercise", "low-impact activity", "mild workout"],
+      "collocations": ["do gentle exercise", "recommend gentle exercise", "start with gentle exercise"],
+      "example_simple": "The doctor told her to do some gentle exercise every day.",
+      "example_complex": "After the operation, patients are encouraged to begin with gentle exercise such as walking before returning to more strenuous activity.",
+      "definition_en": "light, low-intensity physical activity that does not strain the body",
+      "ipa": "/ˈdʒentl ˈeksəsaɪz/",
+      "part_of_speech": "collocation"
+    },
+    "pubcol-w-5c750c93fc2349f0": {
+      "difficulty": "6.0",
+      "synonyms": ["undulating hills", "low hills", "gently sloping hills"],
+      "collocations": ["gentle, rolling hills stretch", "a landscape of gentle, rolling hills", "surrounded by gentle, rolling hills"],
+      "example_simple": "From the window we could see gentle, rolling hills in the distance.",
+      "example_complex": "The region is renowned for its gentle, rolling hills, which are dotted with vineyards and small farming villages.",
+      "definition_en": "a landscape of low hills with smooth, gradual slopes",
+      "ipa": "/ˈdʒentl ˈrəʊlɪŋ hɪlz/",
+      "part_of_speech": "phrase"
+    },
+    "3d291591-0f4a-4330-8c0e-b7086584f388": {
+      "difficulty": "7.0",
+      "definition_en": "small burrowing desert rodents often kept as pets",
+      "ipa": "/ˈdʒɜːbɪlz/",
+      "part_of_speech": "noun"
+    },
+    "b8bdd94b-4845-450b-8f17-b396a4e5951b": {
+      "difficulty": "6.0",
+      "definition_en": "a large breed of working dog often used by police and for guarding",
+      "ipa": "/ˈdʒɜːmən ˈʃepəd/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-fe8754d2d16e2577": {
+      "difficulty": "6.0",
+      "synonyms": ["enjoy", "relish", "take pleasure in", "delight in"],
+      "collocations": ["get a real kick out of", "get a kick out of watching", "still get a kick out of it"],
+      "example_simple": "The kids get a kick out of playing in the snow.",
+      "example_complex": "Even after decades on stage, she still gets a kick out of hearing the audience applaud.",
+      "definition_en": "to get a strong feeling of enjoyment or excitement from something",
+      "ipa": "/ɡet ə kɪk aʊt əv/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-f93b0ee50d07760a": {
+      "difficulty": "7.0",
+      "synonyms": ["assess", "gauge", "size up", "evaluate"],
+      "collocations": ["get a measure of the problem", "get a measure of someone", "get a measure of the situation"],
+      "example_simple": "It took a few weeks to get a measure of my new colleagues.",
+      "example_complex": "Before making any decisions, the manager wanted to get a measure of the team's strengths and weaknesses.",
+      "definition_en": "to form an assessment or judgement of someone or something",
+      "ipa": "/ɡet ə ˈmeʒər əv/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "đánh giá, ước lượng, hình dung được (ai/cái gì)"
+    },
+    "pubcol-w-094de84ee0094351": {
+      "difficulty": "6.0",
+      "ipa": "/ɡet əˈlɒŋ wɪð/"
+    },
+    "pubcol-w-89e8a0e7ee02ef5e": {
+      "difficulty": "6.0",
+      "synonyms": ["hurry up", "get moving", "get cracking", "look sharp"],
+      "collocations": ["you'd better get a move on", "come on, get a move on", "get a move on or we'll be late"],
+      "example_simple": "Get a move on, or we'll miss the train!",
+      "example_complex": "If we want to finish the project before the deadline, everyone needs to get a move on right away.",
+      "definition_en": "to hurry up or start moving more quickly",
+      "ipa": "/ɡet ə ˈmuːv ɒn/",
+      "part_of_speech": "idiom"
+    },
+    "cb988b12-7983-4d25-95c9-8b0a2044afc4": {
+      "difficulty": "6.0",
+      "definition_en": "to manage to live or cope with only just enough money or resources",
+      "ipa": "/ɡet baɪ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-d97c791636ed4a91": {
+      "difficulty": "6.0",
+      "synonyms": ["begin", "start on", "settle down to", "buckle down to"],
+      "collocations": ["get down to work", "get down to business", "get down to the details"],
+      "example_simple": "After the break, we got down to work.",
+      "example_complex": "Once the introductions were over, the committee got down to the serious business of allocating the budget.",
+      "definition_en": "to begin to focus seriously on a task",
+      "ipa": "/ɡet daʊn tuː/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-a73cc592f21eda2b": {
+      "difficulty": "8.0",
+      "synonyms": ["misunderstand", "misinterpret", "get it wrong", "misconstrue"],
+      "collocations": ["completely get the wrong end of the stick", "you've got the wrong end of the stick", "get hold of the wrong end of the stick again"],
+      "example_simple": "Sorry, I got hold of the wrong end of the stick and thought the party was tonight.",
+      "example_complex": "The journalist had clearly got hold of the wrong end of the stick, reporting a resignation when in fact the minister had merely taken leave.",
+      "definition_en": "to misunderstand something completely",
+      "ipa": "/ɡet həʊld əv ðə rɒŋ end əv ðə stɪk/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-d304547f74757e1f": {
+      "difficulty": "5.0",
+      "synonyms": ["enter", "get in", "become involved in", "fall into"],
+      "collocations": ["get into a car", "get into trouble", "get into a habit"],
+      "example_simple": "She got into the taxi and gave the driver the address.",
+      "example_complex": "Teenagers can easily get into bad habits if they are not given enough guidance and support.",
+      "definition_en": "to enter a place, state, or situation",
+      "ipa": "/ɡet ˈɪntə/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-5cd03bde1cafceb4": {
+      "difficulty": "7.0",
+      "synonyms": ["get into trouble", "get into a mess", "land in difficulty", "be in a fix"],
+      "collocations": ["get into hot water with the boss", "really get into hot water", "get into hot water over the comments"],
+      "example_simple": "He got into hot water for arriving late every day.",
+      "example_complex": "The politician got into hot water after leaked emails revealed he had misled the public.",
+      "definition_en": "to get into trouble or a difficult situation",
+      "ipa": "/ɡet ˈɪntə hɒt ˈwɔːtə/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "gặp rắc rối, lâm vào rắc rối"
+    },
+    "pubcol-w-8dcdedde4260799a": {
+      "difficulty": "5.0",
+      "synonyms": ["get into difficulty", "land in trouble", "run into problems"],
+      "collocations": ["get into trouble at school", "get into serious trouble", "get into trouble with the law"],
+      "example_simple": "He got into trouble for talking during the exam.",
+      "example_complex": "If they keep ignoring the safety rules, the workers could get into serious trouble with the inspectors.",
+      "definition_en": "to become involved in a difficult situation or to be punished for doing something wrong",
+      "ipa": "/ɡet ˈɪntə ˈtrʌbl/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "gặp rắc rối"
+    },
+    "pubcol-w-5fb004d6d9250848": {
+      "difficulty": "7.0",
+      "synonyms": ["begin well", "start well", "make a good start", "get off on the right foot"],
+      "collocations": ["get off to a good start", "get the day off to a good start", "help the project get off to a good start"],
+      "example_simple": "The team got off to a good start by winning their first game.",
+      "example_complex": "A clear agenda and a warm welcome helped the conference get off to a good start, setting a positive tone for the rest of the week.",
+      "definition_en": "to begin something well or successfully",
+      "ipa": "/ɡet ɒf tʊ ə ɡʊd stɑːt/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-43555d01afdb4e3e": {
+      "difficulty": "6.0",
+      "synonyms": ["annoy", "irritate", "bother", "get to"],
+      "collocations": ["really get on my nerves", "start to get on someone's nerves", "get on each other's nerves"],
+      "example_simple": "His constant humming gets on my nerves.",
+      "example_complex": "After weeks cooped up together, even small habits began to get on everyone's nerves.",
+      "definition_en": "to annoy or irritate someone",
+      "ipa": "/ɡet ɒn wʌnz nɜːvz/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-a9a9542889909b3b": {
+      "difficulty": "6.0",
+      "synonyms": ["get along with", "be friendly with", "hit it off with", "be on good terms with"],
+      "collocations": ["get on well with", "get on with colleagues", "get on with each other"],
+      "example_simple": "I get on with my neighbours very well.",
+      "example_complex": "Despite their different backgrounds, the two managers got on with each other surprisingly well.",
+      "definition_en": "to have a friendly relationship with someone",
+      "ipa": "/ɡet ɒn wɪð/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-33524c3c4dee70d5": {
+      "difficulty": "6.0",
+      "ipa": "/ɡet ˈəʊvə/"
+    },
+    "pubcol-w-bd9f3e5b76cd04e1": {
+      "difficulty": "5.0",
+      "synonyms": ["prepare", "make ready", "gear up", "set up"],
+      "collocations": ["get ready for school", "get ready to leave", "get everything ready"],
+      "example_simple": "I need ten minutes to get ready for the party.",
+      "example_complex": "The staff worked through the night to get everything ready for the grand opening the following morning.",
+      "definition_en": "to prepare oneself or something for an event or activity",
+      "ipa": "/ɡet ˈredi/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-d4c4529653f4c731": {
+      "difficulty": "6.0",
+      "synonyms": ["begin", "commence", "get going", "set off"],
+      "collocations": ["get started on the project", "let's get started", "get the meeting underway"],
+      "example_simple": "Let's get started before it gets too late.",
+      "example_complex": "Once the funding was approved, the researchers were eager to get underway with the first phase of the study.",
+      "definition_en": "to begin an activity or process",
+      "ipa": "/ɡet ˈstɑːtɪd ɡet ˌʌndəˈweɪ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-8a4164a2a6382602": {
+      "difficulty": "6.0",
+      "synonyms": ["get a bargain", "get the lowest price", "get good value", "strike the best deal"],
+      "collocations": ["get the best deal on a car", "shop around to get the best deal", "help customers get the best deal"],
+      "example_simple": "I compared several websites to get the best deal on my flight.",
+      "example_complex": "By negotiating directly with suppliers, the company was able to get the best deal and cut its costs significantly.",
+      "definition_en": "to obtain the most favourable price or terms available",
+      "ipa": "/ɡet ðə best diːl/",
+      "part_of_speech": "collocation"
+    },
+    "pubcol-w-a13c4b2da07b87b2": {
+      "difficulty": "7.0",
+      "synonyms": ["get lucky", "have good fortune", "catch a break", "have luck on your side"],
+      "collocations": ["finally get the breaks", "get the breaks you deserve", "get all the breaks"],
+      "example_simple": "If you get the breaks, this job could really take off.",
+      "example_complex": "Talented as she was, her career only flourished once she began to get the breaks that had long eluded her.",
+      "definition_en": "to have good luck or favourable opportunities",
+      "ipa": "/ɡet ðə breɪks/",
+      "part_of_speech": "idiom"
+    }
+  }
+}

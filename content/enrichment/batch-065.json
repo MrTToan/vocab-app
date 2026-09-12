@@ -1,0 +1,232 @@
+{
+  "meta": { "batch": "batch-065", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-3f0bf4972ef54264": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɪn ˈfeɪvər əv/",
+      "definition_en": "supporting or approving of someone or something",
+      "synonyms": ["for", "supporting", "backing", "pro"],
+      "collocations": ["strongly in favor of", "vote in favor of", "argue in favor of"],
+      "example_simple": "Most of the students were in favor of the new timetable.",
+      "example_complex": "The committee ruled in favor of the proposal after weeks of heated debate over its likely costs."
+    },
+    "pubcol-w-d39bf57bf981b16d": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɪn flʌdz əv ˈtɪəz/",
+      "definition_en": "crying a great deal; weeping uncontrollably",
+      "synonyms": ["sobbing", "weeping", "in tears", "crying hard"],
+      "collocations": ["burst in floods of tears", "leave someone in floods of tears", "end up in floods of tears"],
+      "example_simple": "She was in floods of tears when she heard the sad news.",
+      "example_complex": "By the end of the film the whole audience was in floods of tears, moved by the family's reunion.",
+      "vi_meaning_correction": "khóc nức nở, đầm đìa nước mắt"
+    },
+    "pubcol-w-b505c261c22e3c62": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɪn ˈdʒenrəl/",
+      "definition_en": "usually; considering something as a whole rather than in detail",
+      "synonyms": ["generally", "on the whole", "overall", "as a rule"],
+      "collocations": ["in general terms", "people in general", "true in general"],
+      "example_simple": "In general, I prefer tea to coffee.",
+      "example_complex": "In general, students who read widely tend to write more fluently, though there are always exceptions."
+    },
+    "pubcol-w-c6a46fdb4fec47c2": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɪn ˈɒnər əv/",
+      "definition_en": "in order to show respect or admiration for someone or something",
+      "synonyms": ["in tribute to", "to honour", "celebrating", "in recognition of"],
+      "collocations": ["a dinner in honour of", "named in honour of", "a ceremony in honour of"],
+      "example_simple": "They held a party in honour of her retirement.",
+      "example_complex": "The university established a scholarship in honour of the professor who had devoted his life to marine research."
+    },
+    "pubcol-w-284a01cb04812e33": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɪn ˈdʒepədi/",
+      "definition_en": "in a situation of danger or at risk of loss or failure",
+      "synonyms": ["at risk", "in danger", "threatened", "endangered"],
+      "collocations": ["put in jeopardy", "place jobs in jeopardy", "the plan is in jeopardy"],
+      "example_simple": "His job was in jeopardy after the company lost money.",
+      "example_complex": "A single careless comment to the press put the entire peace negotiation in jeopardy."
+    },
+    "pubcol-w-fc940843d0bc06ed": {
+      "difficulty": "5.0",
+      "ipa": "/ɪn maɪ əˈpɪnjən/"
+    },
+    "pubcol-w-199aa6e1d2817289": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɪn maɪ vjuː/",
+      "definition_en": "according to what I think or believe",
+      "synonyms": ["in my opinion", "I believe", "to my mind", "as I see it"],
+      "collocations": ["in my view, it is", "in my view, however", "clearly, in my view"],
+      "example_simple": "In my view, the film was too long.",
+      "example_complex": "In my view, the government should invest far more in public transport before widening the motorways."
+    },
+    "pubcol-w-7b474cb0b39c1773": {
+      "difficulty": "5.0",
+      "ipa": "/ɪn ˈɔːdə tuː/"
+    },
+    "pubcol-w-321d2aeba490cf9d": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɪn ˈʌðə wɜːdz/",
+      "definition_en": "used to introduce a clearer or simpler restatement of something",
+      "synonyms": ["that is to say", "put differently", "namely", "to put it another way"],
+      "collocations": ["in other words, it means", "or in other words", "in other words, we failed"],
+      "example_simple": "He said no — in other words, he refused to help.",
+      "example_complex": "The scheme was, in other words, a polite way of cutting staff without admitting to redundancies."
+    },
+    "pubcol-w-84313b42d81dde4e": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɪn pəˈtɪkjələ/",
+      "definition_en": "especially; more than others",
+      "synonyms": ["especially", "specifically", "notably", "particularly"],
+      "collocations": ["nothing in particular", "one point in particular", "in particular, students"],
+      "example_simple": "I enjoy sports, football in particular.",
+      "example_complex": "The report criticised several departments, and the finance team in particular, for poor record-keeping."
+    },
+    "pubcol-w-5368f6d88a7e1228": {
+      "difficulty": "6.0",
+      "ipa": "/ɪn pəˈtɪkjələ/"
+    },
+    "pubcol-w-7aafe489f55281ef": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɪn ˈpɜːsn/",
+      "definition_en": "by meeting someone rather than by phone, letter or online",
+      "synonyms": ["face to face", "personally", "in the flesh", "physically"],
+      "collocations": ["meet in person", "apply in person", "see it in person"],
+      "example_simple": "I'd like to thank her in person.",
+      "example_complex": "Although we had exchanged emails for months, meeting the author in person gave the collaboration a new energy."
+    },
+    "pubcol-w-7fa32470ed1cc33f": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɪn ˈprefrəns tuː/",
+      "definition_en": "rather than; chosen instead of something else",
+      "synonyms": ["rather than", "instead of", "sooner than", "over"],
+      "collocations": ["chosen in preference to", "used in preference to", "hired in preference to"],
+      "example_simple": "She drinks water in preference to soft drinks.",
+      "example_complex": "Many commuters now cycle in preference to driving, citing both cost and their own health."
+    },
+    "pubcol-w-17bf13d05ea5ebeb": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɪn ˈpʌblɪk/",
+      "definition_en": "in a place or situation where other people are present",
+      "synonyms": ["openly", "publicly", "in the open", "before others"],
+      "collocations": ["speak in public", "behave in public", "appear in public"],
+      "example_simple": "He was too shy to sing in public.",
+      "example_complex": "The minister rarely admits doubts in public, however uncertain he may be behind closed doors."
+    },
+    "pubcol-w-2b5e7119abb02c1d": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɪn ˈkwestʃən/",
+      "definition_en": "being talked about or considered; under discussion",
+      "synonyms": ["under discussion", "in dispute", "at issue", "concerned"],
+      "collocations": ["the person in question", "the day in question", "call something in question"],
+      "example_simple": "The book in question is out of print.",
+      "example_complex": "On the evening in question, the witness claims to have seen the suspect leaving the building."
+    },
+    "pubcol-w-248b675e2aa55a7e": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɪn rɪˈspɒns tuː/",
+      "definition_en": "as a reaction to or reply to something",
+      "synonyms": ["in reply to", "in reaction to", "as a result of", "answering"],
+      "collocations": ["in response to demand", "in response to criticism", "issued in response to"],
+      "example_simple": "She smiled in response to his joke.",
+      "example_complex": "In response to falling sales, the company completely redesigned its product range within a year."
+    },
+    "pubcol-w-a13beca777076567": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɪn rɪˈtɜːn fɔː/",
+      "definition_en": "as payment or an exchange for something",
+      "synonyms": ["in exchange for", "as payment for", "in repayment for", "reciprocally for"],
+      "collocations": ["get nothing in return for", "help in return for", "in return for a favour"],
+      "example_simple": "He fixed my bike in return for a meal.",
+      "example_complex": "The volunteers asked for nothing in return for their work, save the chance to learn new skills."
+    },
+    "pubcol-w-6dcbfaa6ad40f25a": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɪn ˈsiːzn/",
+      "definition_en": "available and ready to eat because it is the natural time of year for it",
+      "synonyms": ["in supply", "ripe", "available", "at its best"],
+      "collocations": ["fruit in season", "buy vegetables in season", "strawberries are in season"],
+      "example_simple": "Strawberries are cheaper when they are in season.",
+      "example_complex": "Cooking with produce that is in season not only tastes better but also cuts the cost of importing food out of season."
+    },
+    "pubcol-w-e0236c785499ad78": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɪn ʃɔːt ˈpɪəriəd əv taɪm/",
+      "definition_en": "within a brief span of time; quickly",
+      "synonyms": ["in a short time", "quickly", "rapidly", "in no time"],
+      "collocations": ["learn in a short period of time", "grow in a short period of time", "achieve in a short period of time"],
+      "example_simple": "She learned to swim in a short period of time.",
+      "example_complex": "The start-up managed to double its customer base in a short period of time, largely through word of mouth."
+    },
+    "pubcol-w-dcd3854c9e24a612": {
+      "difficulty": "6.0",
+      "ipa": "/ɪn tɜːmz əv/"
+    },
+    "pubcol-w-f7ee1edcc77bc464": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɪn ði eɪdʒ əv/",
+      "definition_en": "during a particular era or period defined by something",
+      "synonyms": ["in the era of", "during the time of", "in the days of", "in the epoch of"],
+      "collocations": ["in the age of the internet", "in the age of information", "in the age of social media"],
+      "example_simple": "In the age of the internet, news travels very fast.",
+      "example_complex": "In the age of artificial intelligence, workers are increasingly expected to retrain several times over their careers."
+    },
+    "pubcol-w-623d7cea37756473": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɪn ðə ˈdɪfɪkəlt taɪm/",
+      "definition_en": "during a hard or challenging period",
+      "synonyms": ["in hard times", "in tough times", "in a crisis", "during hardship"],
+      "collocations": ["support in difficult times", "in difficult economic times", "stand by someone in difficult times"],
+      "example_simple": "Good friends help you in difficult times.",
+      "example_complex": "In difficult times, communities that share resources tend to recover far more quickly than isolated households."
+    },
+    "pubcol-w-15c329ad8d492fdf": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɪn ði end/",
+      "definition_en": "finally, after a lot of time, thought or effort",
+      "synonyms": ["finally", "eventually", "at last", "ultimately"],
+      "collocations": ["in the end, we decided", "win in the end", "pay off in the end"],
+      "example_simple": "In the end, we decided to stay at home.",
+      "example_complex": "The negotiations dragged on for weeks, but in the end both sides accepted a modest compromise."
+    },
+    "pubcol-w-69f477009576bc2b": {
+      "difficulty": "8.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ɪn ðə nɪk əv taɪm/",
+      "definition_en": "at the last possible moment, just before it is too late",
+      "synonyms": ["just in time", "at the last minute", "barely in time", "at the eleventh hour"],
+      "collocations": ["arrive in the nick of time", "saved in the nick of time", "just in the nick of time"],
+      "example_simple": "The doctor arrived in the nick of time to save him.",
+      "example_complex": "The firefighters reached the top floor in the nick of time, moments before the ceiling collapsed."
+    },
+    "pubcol-w-e00b83084baecdb1": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɪn ðə ˈpeɪpə/",
+      "definition_en": "printed in a newspaper",
+      "synonyms": ["in the news", "in print", "reported", "published"],
+      "collocations": ["read it in the paper", "a story in the paper", "an advert in the paper"],
+      "example_simple": "I saw your photo in the paper this morning.",
+      "example_complex": "The scandal was splashed across the front page, and for a week it was all anyone in the paper wrote about."
+    }
+  }
+}

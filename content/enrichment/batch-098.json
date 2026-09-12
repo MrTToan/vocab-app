@@ -1,0 +1,164 @@
+{
+  "meta": { "batch": "batch-098", "authored_by": "claude", "count": 26 },
+  "words": {
+    "6ec319ba-d1e9-4b55-86b9-e56e5daf5f8f": {
+      "difficulty": "7.0",
+      "definition_en": "to be the strongest or most common element or feature",
+      "ipa": "/prɪˈdɒmɪneɪt/",
+      "part_of_speech": "verb"
+    },
+    "1baa8b82-a9c5-4a33-a404-68eab9ba4156": {
+      "difficulty": "7.0",
+      "definition_en": "done before an opponent can act, so as to prevent them from acting",
+      "ipa": "/priˈemptɪv/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-cc5d56abfd2dc16b": {
+      "definition_en": "having a baby or babies developing inside the body",
+      "part_of_speech": "adjective",
+      "synonyms": ["expecting", "with child", "expectant"],
+      "collocations": ["get pregnant", "heavily pregnant", "pregnant woman"],
+      "example_simple": "She is pregnant with her first child.",
+      "example_complex": "Being seven months pregnant, she decided to take extended leave from her demanding job."
+    },
+    "7918e526-21d9-4db7-817f-066075eb7970": {
+      "difficulty": "6.0",
+      "synonyms": ["ancient times", "the Stone Age", "antiquity"],
+      "definition_en": "the period before written records existed",
+      "ipa": "/ˌpriːhɪˈstɒrɪk taɪmz/",
+      "part_of_speech": "phrase"
+    },
+    "b16230d4-2a85-4ec2-8a13-51d2cde33a08": {
+      "difficulty": "8.0",
+      "definition_en": "causing harm or disadvantage to someone or something",
+      "ipa": "/ˌpredʒʊˈdɪʃl/",
+      "part_of_speech": "adjective"
+    },
+    "23a44818-de78-4264-96cf-762be4b7d35f": {
+      "difficulty": "7.0",
+      "definition_en": "before the usual or expected time; too soon",
+      "ipa": "/ˌpreməˈtjʊəli/",
+      "part_of_speech": "adverb"
+    },
+    "pubcol-w-44c728c90d841d05": {
+      "difficulty": "7.0",
+      "ipa": "/ˈpremɪs/"
+    },
+    "76f4aa16-d194-4b84-bdbe-750ffb27530c": {
+      "difficulty": "7.0",
+      "definition_en": "the state of thinking about something constantly, often to the exclusion of other things",
+      "ipa": "/priˌɒkjuˈpeɪʃn/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-732cadf53fb2608f": {
+      "synonyms": ["arrangements", "planning", "groundwork"],
+      "collocations": ["make preparations", "in preparation for", "careful preparation"],
+      "example_simple": "We spent all week on preparation for the exam.",
+      "example_complex": "Months of meticulous preparation ensured that the conference ran without a single hitch.",
+      "definition_en": "the act or process of getting ready for something",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-31c9c46ee609302f": {
+      "difficulty": "6.0",
+      "synonyms": ["draw up a plan for", "map out", "organise"],
+      "collocations": ["prepare a plan for the project", "prepare a plan for growth", "carefully prepare a plan for"],
+      "example_simple": "The team will prepare a plan for the new campaign.",
+      "example_complex": "Before the merger, consultants were hired to prepare a plan for integrating the two workforces.",
+      "definition_en": "to organise the details of how something will be done",
+      "ipa": "/prɪˈpeər ə plæn fɔː/",
+      "part_of_speech": "phrase"
+    },
+    "90f984cd-8e8e-431a-a2bf-91776d93a1e3": {
+      "difficulty": "8.0",
+      "definition_en": "the state of being greater in number, importance, or influence",
+      "ipa": "/prɪˈpɒndərəns/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-e8b242ff17ff9f77": {
+      "synonyms": ["function word", "connective"],
+      "collocations": ["preposition of place", "end with a preposition", "prepositional phrase"],
+      "example_simple": "The word \"on\" is a preposition.",
+      "example_complex": "Choosing the correct preposition is one of the trickiest aspects of English for many learners.",
+      "definition_en": "a word used before a noun or pronoun to show place, time, or direction",
+      "part_of_speech": "noun"
+    },
+    "97cc6414-446f-4790-83d7-bf28789432c3": {
+      "difficulty": "8.0",
+      "definition_en": "a right or privilege belonging to a particular person or group",
+      "ipa": "/prɪˈrɒɡətɪv/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-0e8e8e108bb3a557": {
+      "difficulty": "6.0",
+      "synonyms": ["short of time", "in a rush", "hard-pressed"],
+      "collocations": ["be pressed for time", "always pressed for time", "when pressed for time"],
+      "example_simple": "I'm pressed for time, so let's keep this short.",
+      "example_complex": "Pressed for time before the deadline, the researchers had to cut several experiments from the study.",
+      "definition_en": "not having enough time to do something",
+      "ipa": "/prest fɔː taɪm/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-c23090e7eb7bd993": {
+      "difficulty": "7.0",
+      "ipa": "/prɪˈzjuːməbli/"
+    },
+    "fd81f65f-594c-4fdd-ae9f-6cb9c344607b": {
+      "difficulty": "8.0",
+      "definition_en": "something assumed to be true beforehand as a basis for argument or action",
+      "ipa": "/ˌpriːsʌpəˈzɪʃn/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-9a22b52985f70889": {
+      "difficulty": "5.0",
+      "ipa": "/ˈprɪti mʌtʃ/"
+    },
+    "pubcol-w-eb59112e9e0fdb21": {
+      "difficulty": "7.0",
+      "ipa": "/ˈprevələns/"
+    },
+    "pubcol-w-28089e4373ea3a44": {
+      "difficulty": "7.0",
+      "ipa": "/ˈprevələnt/"
+    },
+    "aafe6649-6316-4c8c-8c25-09adab1396a3": {
+      "difficulty": "6.0",
+      "definition_en": "an animal that is hunted and eaten by another animal",
+      "ipa": "/preɪ/",
+      "part_of_speech": "noun"
+    },
+    "c3e135f9-be23-43a0-9943-3b5dd6336752": {
+      "difficulty": "7.0",
+      "definition_en": "to charge so much that people can no longer afford to buy something",
+      "ipa": "/praɪs aʊt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-c401caa536a62bb0": {
+      "difficulty": "5.0",
+      "synonyms": ["price increases", "rising prices", "cost increases"],
+      "collocations": ["steep price rises", "recent price rises", "price rises in fuel"],
+      "example_simple": "Price rises have made everyday shopping more expensive.",
+      "example_complex": "Sharp price rises in energy forced many households to cut back on their spending.",
+      "definition_en": "increases in the cost of goods or services",
+      "ipa": "/praɪs ˈraɪzɪz/",
+      "part_of_speech": "phrase"
+    },
+    "edadc951-0003-4433-ae88-28b7e2402691": {
+      "difficulty": "6.0",
+      "definition_en": "the most likely or important object of an attack, effort, or attention",
+      "ipa": "/praɪm ˈtɑːɡɪt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-d69a228741b7172e": {
+      "synonyms": ["likely", "expected", "plausible"],
+      "collocations": ["a probable cause", "the probable outcome", "highly probable"],
+      "example_simple": "Rain is probable later today.",
+      "example_complex": "Given the evidence, the most probable explanation is a fault in the wiring."
+    },
+    "706041f9-2978-4ada-8074-04823dffec51": {
+      "difficulty": "7.0",
+      "definition_en": "to investigate or examine something closely",
+      "ipa": "/prəʊb/",
+      "part_of_speech": "verb"
+    }
+  }
+}

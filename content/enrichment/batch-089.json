@@ -1,0 +1,235 @@
+{
+  "meta": { "batch": "batch-089", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-e84599215c611784": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɒn frɒm/",
+      "definition_en": "continuing forward from a particular point in time or place",
+      "synonyms": ["onward from", "starting from", "after"],
+      "collocations": ["from now on from", "move on from", "carry on from here"],
+      "example_simple": "From next week on, we will start earlier.",
+      "example_complex": "The rules apply from the date of signing on, so any earlier agreements no longer count.",
+      "vi_meaning_correction": "tiếp tục từ (một thời điểm hoặc vị trí); về sau"
+    },
+    "e0816b18-0d94-4195-a02e-3a164f59d9e8": {
+      "difficulty": "8.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɒn ɡraʊndz ˈʌðə ðæn dɪˈfens/",
+      "definition_en": "for reasons that do not involve protection or self-defence",
+      "synonyms": ["for non-defensive reasons", "on other grounds", "for other reasons"]
+    },
+    "pubcol-w-2071bddee2de6355": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɒn ˈhaɪə ˈpɜːtʃəs/",
+      "definition_en": "bought by paying in regular instalments over time rather than all at once",
+      "synonyms": ["on instalments", "on credit", "in instalments"],
+      "collocations": ["buy on hire purchase", "on hire purchase terms", "a hire purchase agreement"],
+      "example_simple": "They bought the sofa on hire purchase.",
+      "example_complex": "Because they couldn't afford it outright, the couple acquired the car on hire purchase and paid it off over three years."
+    },
+    "pubcol-w-987ff0a8c18fb76a": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɒn ˌmedɪˈkeɪʃn/",
+      "definition_en": "currently taking medicine prescribed for an illness or condition",
+      "synonyms": ["taking medicine", "under treatment", "on drugs"],
+      "collocations": ["on medication for", "put someone on medication", "stay on medication"],
+      "example_simple": "She is on medication for her blood pressure.",
+      "example_complex": "While he was on medication for anxiety, the doctor advised him to avoid alcohol entirely."
+    },
+    "pubcol-w-f1c8b61534228a3c": {
+      "difficulty": "6.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ɒn wʌnz ɡɑːd/",
+      "definition_en": "watchful and ready for possible danger or trouble",
+      "synonyms": ["alert", "wary", "vigilant", "cautious"],
+      "collocations": ["be on your guard", "stay on your guard", "on guard against"],
+      "example_simple": "Be on your guard when strangers offer you help.",
+      "example_complex": "Investors should remain on their guard against schemes that promise unusually high returns."
+    },
+    "pubcol-w-04a56203b68ea0f4": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ɒn pɪnz ənd ˈniːdlz/",
+      "definition_en": "anxious or nervous while waiting for something to happen",
+      "synonyms": ["anxious", "on edge", "nervous", "tense"],
+      "collocations": ["be on pins and needles", "wait on pins and needles", "sit on pins and needles"],
+      "example_simple": "I was on pins and needles waiting for my exam results.",
+      "example_complex": "The whole family sat on pins and needles as the surgeon finally emerged to give them news."
+    },
+    "pubcol-w-d0aefa48624f0fb4": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɒn rɪˈkwest/",
+      "definition_en": "provided or done only when someone specifically asks for it",
+      "synonyms": ["upon request", "if asked", "on demand"],
+      "collocations": ["available on request", "on request only", "provided on request"],
+      "example_simple": "A vegetarian meal is available on request.",
+      "example_complex": "Detailed references from previous employers will be supplied on request during the hiring process."
+    },
+    "pubcol-w-9be1393dfdafa0f6": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɒn seɪl/",
+      "definition_en": "offered for purchase, often at a reduced price",
+      "synonyms": ["for sale", "discounted", "reduced", "marked down"],
+      "collocations": ["go on sale", "items on sale", "on sale now"],
+      "example_simple": "These shoes are on sale this week.",
+      "example_complex": "The new smartphone goes on sale on Friday, and early buyers can get it on sale at a substantial discount."
+    },
+    "pubcol-w-e4a6db0b21d396fa": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɒn ðə bæk peɪdʒ/",
+      "definition_en": "printed on the final page of a newspaper or magazine",
+      "synonyms": ["on the last page", "at the back", "on the rear page"],
+      "collocations": ["appear on the back page", "sports on the back page", "the story on the back page"],
+      "example_simple": "The football results are on the back page.",
+      "example_complex": "The scandal was buried on the back page, while a lighter story dominated the front."
+    },
+    "pubcol-w-dcfbfdd66b4dc327": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɒn ðə brɪŋk əv wɔː/",
+      "definition_en": "very close to the outbreak of war",
+      "synonyms": ["on the verge of war", "close to war", "on the edge of conflict"],
+      "collocations": ["bring a country on the brink of war", "teeter on the brink of war", "nations on the brink of war"],
+      "example_simple": "The two countries were on the brink of war.",
+      "example_complex": "After the border incident, the region stood on the brink of war until diplomats brokered a fragile ceasefire."
+    },
+    "pubcol-w-84520ed972fb3257": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ɒn ðə flɪp saɪd/",
+      "definition_en": "considering the other or opposite aspect of a situation",
+      "synonyms": ["on the other hand", "conversely", "then again", "however"],
+      "collocations": ["but on the flip side", "on the flip side of that", "on the flip side though"],
+      "example_simple": "The job pays well; on the flip side, the hours are long.",
+      "example_complex": "Remote work offers flexibility, but on the flip side it can blur the line between professional and personal life."
+    },
+    "pubcol-w-6e4a2b929a6aebb1": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɒn ðə ɡraʊndz/",
+      "definition_en": "for the stated reason or on the stated basis",
+      "synonyms": ["on the basis", "for the reason", "on account of"],
+      "collocations": ["on the grounds that", "on the grounds of", "reject on the grounds"],
+      "example_simple": "The claim was refused on the grounds that it was late.",
+      "example_complex": "The court dismissed the appeal on the grounds of insufficient evidence rather than any procedural error."
+    },
+    "pubcol-w-6a5a271c66269d43": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ɒn ðə həʊm stretʃ/",
+      "definition_en": "in the final stage of a task or journey, close to finishing",
+      "synonyms": ["nearly finished", "in the final stretch", "close to the end"],
+      "collocations": ["be on the home stretch", "on the home stretch now", "finally on the home stretch"],
+      "example_simple": "We're on the home stretch of the project.",
+      "example_complex": "With only the conclusion left to write, she felt she was finally on the home stretch of her thesis."
+    },
+    "pubcol-w-ccef42fff7a2dd56": {
+      "difficulty": "8.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ɒn ðə hɔːnz əv ə dɪˈlemə/",
+      "definition_en": "forced to choose between two equally unpleasant options",
+      "synonyms": ["in a dilemma", "in a quandary", "torn between choices"],
+      "collocations": ["caught on the horns of a dilemma", "leave someone on the horns of a dilemma", "stuck on the horns of a dilemma"],
+      "example_simple": "He was on the horns of a dilemma about which job to take.",
+      "example_complex": "The government found itself on the horns of a dilemma: raise taxes and lose votes, or cut services and provoke outrage."
+    },
+    "pubcol-w-f542065acd6ede56": {
+      "difficulty": "6.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ɒn ðə haʊs/",
+      "definition_en": "given free of charge by a business, especially a bar or restaurant",
+      "synonyms": ["free of charge", "complimentary", "free", "no charge"],
+      "collocations": ["drinks on the house", "a round on the house", "dessert on the house"],
+      "example_simple": "The manager said our coffee was on the house.",
+      "example_complex": "To apologise for the long wait, the restaurant offered every table a dessert on the house."
+    },
+    "pubcol-w-73710e07ad77a681": {
+      "difficulty": "6.0",
+      "ipa": "/ɒn ðə ˈʌðə hænd/"
+    },
+    "pubcol-w-856ecce135a89ce0": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɒn ðə ˈaʊtskɜːts əv ðə ˈsɪti/",
+      "definition_en": "in the outer areas surrounding a city, away from its centre",
+      "synonyms": ["on the edge of the city", "in the suburbs", "on the fringes of the city"],
+      "collocations": ["live on the outskirts of the city", "a factory on the outskirts", "on the outskirts of town"],
+      "example_simple": "They live on the outskirts of the city.",
+      "example_complex": "New housing estates are spreading rapidly on the outskirts of the city as property prices in the centre soar."
+    },
+    "pubcol-w-d29befa84806e1fe": {
+      "difficulty": "6.0",
+      "ipa": "/ɒn ðə seɪm peɪdʒ/"
+    },
+    "pubcol-w-d8652df75faef5b4": {
+      "difficulty": "6.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ɒn ðə spɒt/",
+      "definition_en": "immediately and at the place where something is happening",
+      "synonyms": ["immediately", "instantly", "there and then", "at once"],
+      "collocations": ["decide on the spot", "fined on the spot", "hired on the spot"],
+      "example_simple": "She answered the question on the spot.",
+      "example_complex": "Impressed by his portfolio, the director offered him the job on the spot without waiting for further interviews."
+    },
+    "pubcol-w-724b276a9db48f0c": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɒn ðə vɜːdʒ əv ɪkˈstɪŋkʃn/",
+      "definition_en": "very close to no longer existing as a species",
+      "synonyms": ["nearly extinct", "critically endangered", "close to dying out"],
+      "collocations": ["a species on the verge of extinction", "push on the verge of extinction", "animals on the verge of extinction"],
+      "example_simple": "The tiger is on the verge of extinction in this region.",
+      "example_complex": "Decades of habitat loss have driven the rhinoceros on the verge of extinction, prompting urgent conservation efforts."
+    },
+    "pubcol-w-7e0fcea80ef2280f": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɒn ðə həʊl/",
+      "definition_en": "generally speaking; taking everything into account",
+      "synonyms": ["generally", "overall", "by and large", "in general"],
+      "collocations": ["on the whole, though", "on the whole it works", "but on the whole"],
+      "example_simple": "On the whole, the trip was a success.",
+      "example_complex": "There were a few minor complaints, but on the whole the customers were satisfied with the new service."
+    },
+    "pubcol-w-50a773e20ba750e0": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɒn vəˈkeɪʃn/",
+      "definition_en": "away from work or school, taking a holiday",
+      "synonyms": ["on holiday", "on leave", "away", "off work"],
+      "collocations": ["go on vacation", "be on vacation", "on vacation with family"],
+      "example_simple": "They are on vacation in Italy.",
+      "example_complex": "While he was on vacation, his colleagues covered his shifts so he could relax without checking his email."
+    },
+    "pubcol-w-4ac61a5087d3a6fa": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɒn tə ðə vɜːdʒ əv/",
+      "definition_en": "at the point of doing something or of something happening very soon",
+      "synonyms": ["about to", "on the point of", "close to", "on the brink of"],
+      "collocations": ["on the verge of tears", "on the verge of collapse", "on the verge of doing something"],
+      "example_simple": "She was on the verge of tears.",
+      "example_complex": "The company was on the verge of bankruptcy when an unexpected investor stepped in to rescue it."
+    },
+    "pubcol-w-b1489481304a50e4": {
+      "difficulty": "6.0",
+      "ipa": "/wʌns ɪn ə bluː muːn/"
+    },
+    "pubcol-w-7cf8710d14e7d699": {
+      "difficulty": "6.0",
+      "part_of_speech": "idiom",
+      "ipa": "/wʌns ɪn ə waɪl/",
+      "definition_en": "occasionally; from time to time",
+      "synonyms": ["occasionally", "now and then", "from time to time", "sometimes"],
+      "collocations": ["every once in a while", "just once in a while", "only once in a while"],
+      "example_simple": "We eat out once in a while.",
+      "example_complex": "Once in a while she treats herself to a weekend away, but for the most part she prefers a quiet routine at home."
+    }
+  }
+}

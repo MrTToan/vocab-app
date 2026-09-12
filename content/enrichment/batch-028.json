@@ -1,0 +1,232 @@
+{
+  "meta": { "batch": "batch-028", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-9aaca9ff2391bb96": {
+      "difficulty": "6.0",
+      "synonyms": ["come to", "regain consciousness", "revive", "wake up"],
+      "collocations": ["slowly come round", "come round after fainting", "take a while to come round"],
+      "example_simple": "She fainted, but she came round after a few minutes.",
+      "example_complex": "It took the patient several hours to come round fully after the anaesthetic wore off.",
+      "definition_en": "to regain consciousness after fainting or being knocked out",
+      "ipa": "/kʌm ˈraʊnd/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-7c97f89cc0157d7d": {
+      "difficulty": "7.0",
+      "synonyms": ["fall short", "fail", "not measure up", "be inadequate"],
+      "collocations": ["come short of expectations", "come short of the target", "come short in the end"],
+      "example_simple": "The team tried hard but came short of winning the cup.",
+      "example_complex": "Despite months of preparation, the proposal came short of the standards the committee had set.",
+      "definition_en": "to fail to reach a required or expected standard",
+      "ipa": "/kʌm ˈʃɔːt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-b49cb6cf3bcc9941": {
+      "difficulty": "6.0",
+      "synonyms": ["finish", "conclude", "cease", "wind up"],
+      "collocations": ["come to an end", "war came to an end", "everything must come to an end"],
+      "example_simple": "The summer holidays finally came to an end.",
+      "example_complex": "As the long negotiations came to an end, both sides expressed cautious optimism about the deal.",
+      "definition_en": "to finish or stop happening",
+      "ipa": "/kʌm tu ən ˈɛnd/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-79f40ed5b42f934f": {
+      "difficulty": "7.0",
+      "synonyms": ["finish", "conclude", "draw to a close", "wind down"],
+      "collocations": ["the year drew to a close", "come to an end at last", "as the meeting drew to a close"],
+      "example_simple": "The concert came to an end and the crowd began to leave.",
+      "example_complex": "As the ceremony drew to a close, the guests gathered outside for photographs.",
+      "definition_en": "to gradually finish or reach its conclusion",
+      "ipa": "/kʌm tu ən ˈɛnd drɔː tu ə kləʊz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-1e1a246c3a4899e2": {
+      "difficulty": "7.0",
+      "synonyms": ["finish", "conclude", "draw to a close", "wind down"],
+      "collocations": ["the day drew to a close", "come to an end soon", "as the term drew to a close"],
+      "example_simple": "The festival came to an end with a spectacular firework display.",
+      "example_complex": "As the financial year drew to a close, the accountants worked long hours to finalise the reports.",
+      "definition_en": "to gradually finish or reach its conclusion",
+      "ipa": "/kʌm tu ən ˈɛnd drɔː tu ə kləʊz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-7f96cbd780c87c84": {
+      "difficulty": "6.0",
+      "synonyms": ["reach a conclusion", "conclude", "decide", "infer"],
+      "collocations": ["come to a conclusion", "come to a firm conclusion", "come to the same conclusion"],
+      "example_simple": "After the meeting, they came to a conclusion about the plan.",
+      "example_complex": "Having weighed all the evidence, the jury came to a conclusion that surprised the courtroom.",
+      "definition_en": "to reach a decision or judgement after thinking about something",
+      "ipa": "/kʌm tu kənˈkluːʒən/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-f5194a4675271416": {
+      "difficulty": "7.0",
+      "synonyms": ["be revealed", "emerge", "be exposed", "surface"],
+      "collocations": ["new evidence came to light", "come to light later", "facts came to light"],
+      "example_simple": "New details about the accident came to light this week.",
+      "example_complex": "It only came to light years later that the company had concealed the safety reports.",
+      "definition_en": "to become known or be revealed after being hidden",
+      "ipa": "/kʌm tu ˈlaɪt/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-9661fee648308d0c": {
+      "difficulty": "6.0",
+      "synonyms": ["reach a conclusion", "conclude", "decide", "determine"],
+      "collocations": ["come to the conclusion that", "eventually come to the conclusion", "come to the obvious conclusion"],
+      "example_simple": "I came to the conclusion that I needed a new job.",
+      "example_complex": "After reviewing the data for weeks, the researchers came to the conclusion that the treatment was ineffective.",
+      "definition_en": "to reach a particular decision or judgement after consideration",
+      "ipa": "/kʌm tu ðə kənˈkluːʒən/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-74b643f97b3f0737": {
+      "difficulty": "7.0",
+      "synonyms": ["be criticised", "be attacked", "be condemned", "be blamed"],
+      "collocations": ["come under fire for", "come under heavy fire", "come under fire from critics"],
+      "example_simple": "The minister came under fire for his controversial remarks.",
+      "example_complex": "The airline came under fire from passengers and regulators alike after repeatedly cancelling flights without notice.",
+      "definition_en": "to be strongly criticised or attacked for something",
+      "ipa": "/kʌm ˈʌndə ˈfaɪə/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-8d640c4268549e1b": {
+      "difficulty": "6.0",
+      "synonyms": ["approach", "arise", "be raised", "be mentioned"],
+      "collocations": ["come up in conversation", "a problem came up", "the topic came up"],
+      "example_simple": "Her name came up during the meeting.",
+      "example_complex": "The question of funding came up repeatedly, and no one could offer a satisfactory answer.",
+      "definition_en": "to be mentioned or raised, or to happen unexpectedly",
+      "ipa": "/kʌm ˈʌp/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-5ac008f071859cec": {
+      "difficulty": "7.0",
+      "synonyms": ["encounter", "face", "confront", "run into"],
+      "collocations": ["come up against a problem", "come up against opposition", "come up against difficulties"],
+      "example_simple": "We came up against a few problems while building the website.",
+      "example_complex": "New businesses often come up against fierce competition and strict regulations in their first year.",
+      "definition_en": "to be faced with or have to deal with a difficulty or obstacle",
+      "ipa": "/kʌm ˈʌp əˈɡɛnst/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-566c648c231b76ae": {
+      "difficulty": "7.0",
+      "synonyms": ["encounter", "face", "confront", "grapple with"],
+      "collocations": ["come up against obstacles", "come up against resistance", "come up against a barrier"],
+      "example_simple": "The climbers came up against strong winds near the summit.",
+      "example_complex": "Reformers came up against deep-rooted resistance from those who benefited from the old system.",
+      "definition_en": "to be confronted with a difficulty or obstacle that must be overcome",
+      "ipa": "/kʌm ˈʌp əˈɡɛnst ˈsʌmθɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-b236b19e73ef21e9": {
+      "difficulty": "6.0",
+      "synonyms": ["devise", "think of", "produce", "invent"],
+      "collocations": ["come up with an idea", "come up with a solution", "come up with a plan"],
+      "example_simple": "Can you come up with a better idea?",
+      "example_complex": "The engineers came up with an ingenious solution that cut production costs in half.",
+      "definition_en": "to think of or produce an idea, plan, or solution",
+      "ipa": "/kʌm ˈʌp wɪð/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-87ee36fe440002ee": {
+      "difficulty": "8.0",
+      "synonyms": ["no matter what", "whatever happens", "regardless", "in any case"],
+      "collocations": ["come what may", "stay together come what may", "carry on come what may"],
+      "example_simple": "I'll be there for you, come what may.",
+      "example_complex": "The explorers vowed to reach the pole, come what may, even as the weather turned deadly.",
+      "definition_en": "no matter what happens; whatever the circumstances",
+      "ipa": "/kʌm wɒt ˈmeɪ/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-3e56e6a43d0de25d": {
+      "synonyms": ["farce", "sitcom", "humour", "satire"],
+      "collocations": ["romantic comedy", "stand-up comedy", "a comedy of errors"],
+      "example_simple": "We watched a funny comedy at the cinema last night.",
+      "example_complex": "The film blends dark comedy with genuine emotion, keeping the audience laughing and thinking at once.",
+      "definition_en": "a play, film, or type of entertainment that is intended to make people laugh",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-2b867d9270e055e8": {
+      "synonyms": ["cosy", "relaxing", "snug", "at ease"],
+      "collocations": ["comfortable chair", "feel comfortable", "comfortable clothes"],
+      "example_simple": "This sofa is really comfortable to sit on.",
+      "example_complex": "After years abroad, she finally felt comfortable enough to call the city her home.",
+      "definition_en": "giving a feeling of physical ease and relaxation, or free from worry",
+      "part_of_speech": "adjective"
+    },
+    "0884ee15-6dc7-4f2d-9c77-209ca8cb068d": {
+      "difficulty": "6.0",
+      "definition_en": "a magazine or book that tells a story through a series of drawings",
+      "ipa": "/ˈkɒmɪk/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-6806f9cdb5c86b97": {
+      "synonyms": ["punctuation mark", "pause mark"],
+      "collocations": ["insert a comma", "a missing comma", "put a comma"],
+      "example_simple": "You need a comma after the first word in that sentence.",
+      "example_complex": "A misplaced comma can change the entire meaning of a legal document.",
+      "definition_en": "a punctuation mark (,) used to show a short pause or separate items in a sentence",
+      "part_of_speech": "noun"
+    },
+    "72692c8a-67aa-46f2-9038-a447e9939808": {
+      "difficulty": "8.0",
+      "definition_en": "a flat plate, usually of metal or stone, fixed to a wall to remember a person or event",
+      "ipa": "/kəˈmɛmərətɪv ˈplɑːk/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-50c5ff4c9a7578ee": {
+      "synonyms": ["begin", "start", "initiate", "get under way"],
+      "collocations": ["commence work", "commence proceedings", "commence at nine"],
+      "example_simple": "The ceremony will commence at ten o'clock.",
+      "example_complex": "Construction is due to commence next spring, once all the necessary permits have been granted.",
+      "definition_en": "to begin or start something (formal)",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-42225e774a3c53b3": {
+      "difficulty": "6.0",
+      "synonyms": ["break the law", "offend", "perpetrate a crime"],
+      "collocations": ["commit a serious crime", "commit a crime against", "those who commit crimes"],
+      "example_simple": "Anyone who commits a crime should be punished.",
+      "example_complex": "The report examined why some young people commit crimes despite having stable family backgrounds.",
+      "definition_en": "to do something illegal or against the law",
+      "ipa": "/kəˈmɪt ə ˈkraɪm/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-20c7f9add43f7d62": {
+      "difficulty": "6.0",
+      "synonyms": ["break the rules", "foul", "infringe"],
+      "collocations": ["commit a foul", "commit repeated fouls", "commit a professional foul"],
+      "example_simple": "The player was sent off for committing too many fouls.",
+      "example_complex": "The defender committed a cynical foul just outside the box, earning himself a yellow card.",
+      "definition_en": "to break the rules of a sport, usually by unfairly interfering with an opponent",
+      "ipa": "/kəˈmɪt ˈfaʊlz/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "phạm lỗi (trong thể thao)"
+    },
+    "pubcol-w-655ea12d6341a21c": {
+      "difficulty": "8.0",
+      "synonyms": ["burn", "set fire to", "incinerate", "consign to the flames"],
+      "collocations": ["commit the letters to the flames", "commit to the flames", "commit his papers to the flames"],
+      "example_simple": "He committed all his old diaries to the flames.",
+      "example_complex": "In a fit of despair, the author committed the only copy of his manuscript to the flames.",
+      "definition_en": "to burn something completely, often deliberately to destroy it",
+      "ipa": "/kəˈmɪt tu ðə ˈfleɪmz/",
+      "part_of_speech": "idiom"
+    },
+    "b6ffcae4-1c83-4980-b38b-7081c8b41eba": {
+      "difficulty": "8.0",
+      "definition_en": "the shared qualities, feelings, and dignity that all human beings have in common",
+      "ipa": "/ˈkɒmən hjuːˈmænɪti/",
+      "part_of_speech": "noun"
+    },
+    "99a77345-4612-44fc-ae02-2e01928e065a": {
+      "difficulty": "7.0",
+      "definition_en": "shared by or relating to all members of a community or group",
+      "ipa": "/ˈkɒmjʊnəl/",
+      "part_of_speech": "adjective"
+    }
+  }
+}

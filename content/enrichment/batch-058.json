@@ -1,0 +1,240 @@
+{
+  "meta": { "batch": "batch-058", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-30009ba1c5584c54": {
+      "synonyms": ["bother", "inconvenience", "trouble", "nuisance"],
+      "collocations": ["a real hassle", "avoid the hassle", "too much hassle"],
+      "example_simple": "Parking in the city centre is such a hassle.",
+      "example_complex": "Rather than deal with the hassle of returning the faulty item, she simply threw it away."
+    },
+    "0b83e4f1-4395-447c-a31a-f32112fbc331": {
+      "difficulty": "7.0",
+      "definition_en": "to move or act quickly, or to make something happen sooner",
+      "ipa": "/ˈheɪsn/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-3c959078dacc2596": {
+      "synonyms": ["hate", "loathing", "animosity", "detestation"],
+      "collocations": ["deep hatred", "racial hatred", "feel hatred for"],
+      "example_simple": "She felt nothing but hatred for the man who had lied to her.",
+      "example_complex": "The novel explores how years of injustice can breed a hatred that poisons an entire community."
+    },
+    "pubcol-w-c451b834f3e0faae": {
+      "synonyms": ["arrogant", "disdainful", "conceited", "proud"],
+      "collocations": ["a haughty manner", "a haughty expression", "a haughty attitude"],
+      "example_simple": "The waiter gave us a haughty look when we asked for the cheapest wine.",
+      "example_complex": "Her haughty demeanour alienated the very colleagues whose support she needed most."
+    },
+    "6cd680cb-eb59-4af1-b87a-18227aef8271": {
+      "difficulty": "6.0",
+      "definition_en": "to pull or drag something heavy with effort",
+      "ipa": "/hɔːl/",
+      "part_of_speech": "verb"
+    },
+    "8389385c-a2e0-4870-9d75-8bd3177432dc": {
+      "difficulty": "6.0",
+      "definition_en": "to keep coming to mind in a disturbing way, or (of a ghost) to appear repeatedly in a place",
+      "ipa": "/hɔːnt/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-905239db499a59fb": {
+      "difficulty": "6.0",
+      "synonyms": ["manage to do", "struggle to do", "find it easy/hard to"],
+      "collocations": ["have no difficulty finding", "have difficulty breathing", "have great difficulty in doing"],
+      "example_simple": "She had no difficulty finding a job after graduating.",
+      "example_complex": "Elderly patients often have considerable difficulty in following complex medication schedules.",
+      "definition_en": "to find something easy or hard to do",
+      "ipa": "/hæv nəʊ ˈdɪfɪkəlti ɪn ˈduːɪŋ ˈsʌmθɪŋ/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "có (không có) khó khăn khi làm gì"
+    },
+    "pubcol-w-cc76fc638647195d": {
+      "difficulty": "6.0",
+      "synonyms": ["have an opportunity", "get a chance", "stand a chance"],
+      "collocations": ["have a chance to explain", "stand a good chance", "have no chance to"],
+      "example_simple": "I finally had a chance to speak to the manager.",
+      "example_complex": "With their strongest player injured, the team barely stood a chance of reaching the final.",
+      "definition_en": "to have an opportunity or possibility of doing something",
+      "ipa": "/hæv ə tʃɑːns tə duː ˈsʌmθɪŋ/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "có cơ hội làm gì"
+    },
+    "pubcol-w-5978d6a714c87f83": {
+      "difficulty": "7.0",
+      "synonyms": ["be good at", "have a talent for", "have an aptitude for"],
+      "collocations": ["a good head for figures", "a head for business", "a head for heights"],
+      "example_simple": "She has a good head for numbers, so she manages the accounts.",
+      "example_complex": "Having a shrewd head for business, he turned a small family shop into a national chain.",
+      "definition_en": "to be naturally good at a particular type of skill or subject",
+      "ipa": "/hæv ə ɡʊd hed fə ˈsʌmθɪŋ/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-aa57f2496d700d37": {
+      "difficulty": "7.0",
+      "synonyms": ["have a big argument", "have a fierce quarrel", "have a shouting match"],
+      "collocations": ["have a blazing row with", "a blazing row broke out", "in the middle of a blazing row"],
+      "example_simple": "They had a blazing row about money last night.",
+      "example_complex": "The couple's blazing row in the restaurant left the other diners visibly uncomfortable.",
+      "definition_en": "to have a very loud and angry argument",
+      "ipa": "/hæv ə ˈbleɪzɪŋ raʊ/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "cãi nhau to tiếng, cãi vã dữ dội"
+    },
+    "pubcol-w-f55266b90a618a14": {
+      "difficulty": "7.0",
+      "synonyms": ["have a grievance with", "have an issue with", "want a word with"],
+      "collocations": ["have a bone to pick with you", "a real bone to pick", "pick a bone about"],
+      "example_simple": "I have a bone to pick with you about the money you owe me.",
+      "example_complex": "She marched into his office, making it clear she had a bone to pick with him over the cancelled contract.",
+      "definition_en": "to want to complain to or argue with someone about something they did",
+      "ipa": "/hæv ə bəʊn tə pɪk wɪð ˈsʌmbədi/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-a5096ed82e1c9466": {
+      "difficulty": "6.0",
+      "synonyms": ["be attracted to", "fancy someone", "be infatuated with"],
+      "collocations": ["have a huge crush on", "have a secret crush", "develop a crush on"],
+      "example_simple": "She had a crush on her English teacher when she was fifteen.",
+      "example_complex": "He was too shy to admit that he'd had a crush on his colleague for months.",
+      "definition_en": "to have a strong, usually short-lived, romantic attraction to someone",
+      "ipa": "/hæv ə krʌʃ ɒn ˈsʌmbədi/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "phải lòng ai đó, cảm nắng ai đó"
+    },
+    "pubcol-w-9a8e4ed96cae88df": {
+      "difficulty": "6.0",
+      "synonyms": ["hold a degree in", "be qualified in", "have a qualification in"],
+      "collocations": ["have a degree in economics", "have a master's degree in", "have a degree from"],
+      "example_simple": "She has a degree in biology from a top university.",
+      "example_complex": "Although he has a degree in law, he chose to pursue a career in journalism.",
+      "definition_en": "to hold a university qualification in a particular subject",
+      "ipa": "/hæv ə dɪˈɡriː ɪn ˈsʌmθɪŋ/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "có bằng cấp về lĩnh vực gì"
+    },
+    "pubcol-w-be5dd846b9cec267": {
+      "difficulty": "5.0",
+      "synonyms": ["talk about", "discuss", "debate"],
+      "collocations": ["have a long discussion", "have a discussion about the plan", "have an open discussion"],
+      "example_simple": "We had a discussion about where to go on holiday.",
+      "example_complex": "The board had a heated discussion about whether to expand into overseas markets.",
+      "definition_en": "to talk about a topic with one or more people",
+      "ipa": "/hæv ə dɪˈskʌʃən əˈbaʊt ˈsʌmθɪŋ/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "thảo luận về cái gì"
+    },
+    "pubcol-w-2e15ec0515d2fd4e": {
+      "difficulty": "5.0",
+      "synonyms": ["sense", "suspect", "have a hunch"],
+      "collocations": ["have a feeling that", "have a bad feeling", "have a gut feeling"],
+      "example_simple": "I have a feeling that it's going to rain today.",
+      "example_complex": "She had a nagging feeling that something had gone terribly wrong at home.",
+      "definition_en": "to have a sense or intuition that something is true or will happen",
+      "ipa": "/hæv ə ˈfiːlɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-4db2e09b0fdd1ea9": {
+      "difficulty": "5.0",
+      "synonyms": ["get a bargain", "get a good price", "get value for money"],
+      "collocations": ["have a good deal on", "get a great deal", "strike a good deal"],
+      "example_simple": "We got a good deal on our new car.",
+      "example_complex": "By booking months in advance, they managed to get a remarkably good deal on the flights.",
+      "definition_en": "to buy something at a favourable or bargain price",
+      "ipa": "/hæv ə ɡʊd diːl/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-35152a5c071dfbf1": {
+      "difficulty": "6.0",
+      "synonyms": ["be overloaded with work", "have a lot on", "be swamped with work"],
+      "collocations": ["have a heavy workload", "cope with a heavy workload", "manage a heavy workload"],
+      "example_simple": "Nurses often have a very heavy workload.",
+      "example_complex": "Struggling under an increasingly heavy workload, many junior doctors reported symptoms of burnout.",
+      "definition_en": "to have a large amount of work to do",
+      "ipa": "/hæv ə ˈhevi ˈwɜːkləʊd/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-6406978a0461d4e7": {
+      "difficulty": "7.0",
+      "synonyms": ["have a close call", "have a lucky escape", "escape by a hair's breadth"],
+      "collocations": ["have a narrow escape", "a narrow escape from", "a lucky narrow escape"],
+      "example_simple": "We had a narrow escape when a tree fell just behind our car.",
+      "example_complex": "The climbers had a narrow escape when the avalanche stopped just metres from their tent.",
+      "definition_en": "to only just avoid danger or trouble",
+      "ipa": "/hæv ə ˈnærəʊ ɪˈskeɪp/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "thoát hiểm trong gang tấc"
+    },
+    "pubcol-w-9e0dab46c7105a3a": {
+      "difficulty": "5.0",
+      "synonyms": ["be involved with", "be in a relationship with", "be connected to"],
+      "collocations": ["have a close relationship", "have a good relationship with", "have a romantic relationship"],
+      "example_simple": "She has a good relationship with her colleagues.",
+      "example_complex": "He struggled to maintain a healthy relationship with his family while working abroad.",
+      "definition_en": "to have a personal or romantic connection with someone",
+      "ipa": "/hæv ə rɪˈleɪʃənʃɪp wɪð ˈsʌmbədi/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-2b9ef3f7c836db86": {
+      "difficulty": "7.0",
+      "synonyms": ["be fond of", "have a fondness for", "have a weakness for"],
+      "collocations": ["have a soft spot for", "always had a soft spot", "a real soft spot for"],
+      "example_simple": "She has a soft spot for her youngest grandson.",
+      "example_complex": "Despite his strict reputation, the professor clearly had a soft spot for students who asked bold questions.",
+      "definition_en": "to feel special affection or fondness for someone",
+      "ipa": "/hæv ə sɒft spɒt fə ˈsʌmwʌn/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "có tình cảm đặc biệt với ai, mềm lòng với ai"
+    },
+    "pubcol-w-0b1cf228899da34e": {
+      "difficulty": "6.0",
+      "synonyms": ["have a big impact on", "greatly affect", "strongly influence"],
+      "collocations": ["have a strong effect on", "have a great influence on", "have a lasting effect on"],
+      "example_simple": "The weather has a strong effect on my mood.",
+      "example_complex": "Her early mentor had a profound influence on the way she approached her research.",
+      "definition_en": "to significantly affect or shape someone or something",
+      "ipa": "/hæv ə strɒŋ ɪˈfekt ɒn/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-e0fd29c7d79e43b8": {
+      "difficulty": "6.0",
+      "synonyms": ["love sweets", "crave sugar", "be fond of sweets"],
+      "collocations": ["have a real sweet tooth", "satisfy a sweet tooth", "have a bit of a sweet tooth"],
+      "example_simple": "I have a sweet tooth, so I always order dessert.",
+      "example_complex": "Cafés in the area cater to those with a sweet tooth, offering an array of rich cakes and pastries.",
+      "definition_en": "to have a strong liking for sweet foods",
+      "ipa": "/hæv ə swiːt tuːθ/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-3e29a5a25bb66099": {
+      "difficulty": "6.0",
+      "synonyms": ["speak to", "have a chat with", "talk to"],
+      "collocations": ["have a quiet word with", "have a word with the manager", "need a word with you"],
+      "example_simple": "Can I have a word with you after the meeting?",
+      "example_complex": "The coach decided to have a quiet word with the player about his attitude during training.",
+      "definition_en": "to speak briefly to someone, often to give advice or a warning",
+      "ipa": "/hæv ə wɜːd wɪð ˈsʌmbədi/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-860167e66251336f": {
+      "difficulty": "5.0",
+      "synonyms": ["have a quarrel", "have a fight", "have a dispute"],
+      "collocations": ["have an argument with", "have a big row", "get into an argument"],
+      "example_simple": "They had an argument about whose turn it was to cook.",
+      "example_complex": "The two colleagues had a heated argument over how the budget should be allocated.",
+      "definition_en": "to argue or quarrel with someone",
+      "ipa": "/hæv ən ˈɑːɡjumənt/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "cãi nhau, tranh cãi"
+    },
+    "pubcol-w-ec8d79b4774d806f": {
+      "difficulty": "7.0",
+      "synonyms": ["have a firm grasp of", "master", "have a thorough understanding of"],
+      "collocations": ["have a good grip of the subject", "have a firm grip on", "lose your grip on"],
+      "example_simple": "She has an excellent grip of the new software.",
+      "example_complex": "To lead the negotiations, you need an excellent grip of both the legal and financial details.",
+      "definition_en": "to understand a subject or situation very well",
+      "ipa": "/hæv ən ˈeksələnt ɡrɪp ɒv ˈsʌmθɪŋ/",
+      "part_of_speech": "phrase"
+    }
+  }
+}

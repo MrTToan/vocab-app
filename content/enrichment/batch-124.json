@@ -1,0 +1,189 @@
+{
+  "meta": { "batch": "batch-124", "authored_by": "claude", "count": 25 },
+  "words": {
+    "b0ec79fc-d5d1-4b70-9bde-fb502d32fd84": {
+      "difficulty": "8.0",
+      "definition_en": "able to be defended against attack or objection",
+      "ipa": "/ˈtɛnəbəl/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-b32c3765e5dce97e": {
+      "synonyms": ["renter", "occupant", "lessee", "leaseholder"],
+      "collocations": ["a long-term tenant", "evict a tenant", "tenants pay rent"],
+      "example_simple": "The tenant pays her rent at the start of every month.",
+      "example_complex": "As a sitting tenant, he was legally protected from being evicted without proper notice."
+    },
+    "f0850ed5-91cc-42b3-9196-d7a9cb590e6b": {
+      "difficulty": "7.0",
+      "definition_en": "farmers who work land owned by someone else in return for rent or a share of the crops",
+      "ipa": "/ˈtɛnənt ˈfɑːməz/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-65434d2fa9492b86": {
+      "difficulty": "5.0",
+      "ipa": "/tɛnd tə/"
+    },
+    "pubcol-w-0dbf44d5afbf73ad": {
+      "difficulty": "6.0",
+      "synonyms": ["be inclined to", "be prone to", "be apt to", "be likely to"],
+      "collocations": ["tend to happen", "have a tendency to overreact", "tend to agree"],
+      "example_simple": "I tend to wake up early during the summer.",
+      "example_complex": "People who work under constant pressure tend to make more careless mistakes than those who don't.",
+      "definition_en": "to be likely or inclined to behave in a particular way or to happen regularly",
+      "ipa": "/tɛnd tə/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "có xu hướng làm gì đó"
+    },
+    "pubcol-w-054edbc6c46bf0e7": {
+      "difficulty": "6.0",
+      "ipa": "/ˈtɛndənsi/"
+    },
+    "pubcol-w-46d551dae60a987b": {
+      "synonyms": ["final", "fatal", "incurable", "closing"],
+      "collocations": ["terminal illness", "terminal decline", "the terminal stage"],
+      "example_simple": "The doctor told them it was a terminal illness.",
+      "example_complex": "By the time the disease was diagnosed, it had already reached its terminal stage."
+    },
+    "pubcol-w-2d5f4f207948db49": {
+      "synonyms": ["row of houses", "patio", "row houses"],
+      "collocations": ["a terrace of houses", "a Victorian terrace", "live in a terrace"],
+      "example_simple": "They bought a small house in a quiet terrace near the park.",
+      "example_complex": "The street was lined with elegant Georgian terraces, their facades painted in soft pastel shades."
+    },
+    "2860ebed-ad72-4d58-812e-b0499981bde9": {
+      "difficulty": "7.0",
+      "definition_en": "a method of growing crops on stepped levels cut into a hillside",
+      "ipa": "/ˈtɛrəs ˈfɑːmɪŋ/",
+      "part_of_speech": "noun"
+    },
+    "3a364207-db7f-4dc8-b9cc-445916ab65b8": {
+      "difficulty": "7.0",
+      "definition_en": "relating to the land or the Earth rather than the sea, air, or space",
+      "ipa": "/təˈrɛstriəl/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-6c80e648a67d2112": {
+      "synonyms": ["excellent", "wonderful", "fantastic", "marvellous"],
+      "collocations": ["a terrific idea", "a terrific time", "look terrific"],
+      "example_simple": "We had a terrific time at the beach yesterday.",
+      "example_complex": "The new restaurant serves terrific food, and the service is second to none.",
+      "definition_en": "extremely good; excellent",
+      "part_of_speech": "adjective",
+      "vi_meaning_correction": "tuyệt vời, rất hay"
+    },
+    "pubcol-w-79f6c35508100fd9": {
+      "synonyms": ["frightening", "terrible", "horrifying", "alarming"],
+      "collocations": ["a terrifying experience", "a terrifying ordeal", "utterly terrifying"],
+      "example_simple": "The storm was a terrifying experience for the children.",
+      "example_complex": "What made the accident so terrifying was how little warning there had been.",
+      "definition_en": "making you feel extremely frightened",
+      "part_of_speech": "adjective"
+    },
+    "bff1ad6e-bb3d-46a0-b32a-5905544d6607": {
+      "difficulty": "7.0",
+      "definition_en": "a person's legal declaration of how their property should be distributed after death; or proof of something",
+      "ipa": "/ˈtɛstəmənt/",
+      "part_of_speech": "noun"
+    },
+    "632ca1a9-4b0f-4102-98cf-7f6bfa665360": {
+      "difficulty": "8.0",
+      "definition_en": "served as clear evidence of the deep and lasting impact of something",
+      "ipa": "/ˈtɛstɪfaɪd tə ðə prəˈfaʊnd ɪˈfɛkt/",
+      "part_of_speech": "phrase"
+    },
+    "fe04b677-6d8a-4036-841c-397a31845357": {
+      "difficulty": "7.0",
+      "definition_en": "written or spoken statements praising someone's character, abilities, or a product",
+      "ipa": "/ˌtɛstɪˈməʊniəlz/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-5128a96df3cc36be": {
+      "synonyms": ["messaging", "texting", "SMS"],
+      "collocations": ["texting while driving", "spend hours texting", "constant texting"],
+      "example_simple": "Texting is the easiest way to reach me during the day.",
+      "example_complex": "Excessive texting during meals has become a common source of tension in many families.",
+      "definition_en": "the activity of sending short written messages from a mobile phone",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-9e018d494af58f77": {
+      "synonyms": ["ease", "relax", "warm", "melt"],
+      "collocations": ["relations began to thaw", "thaw the tension", "a gradual thaw"],
+      "example_simple": "After the apology, relations between the two friends slowly began to thaw.",
+      "example_complex": "Years of hostility finally started to thaw once the two nations resumed trade talks."
+    },
+    "pubcol-w-9c63b2e6c012e3cb": {
+      "difficulty": "7.0",
+      "synonyms": ["it's up to you", "your decision", "your move"],
+      "collocations": ["the ball is now in your court", "leave the ball in someone's court", "put the ball in your court"],
+      "example_simple": "I've made my offer, so now the ball is in your court.",
+      "example_complex": "We've done everything we can to reach an agreement; from here on, the ball is firmly in their court.",
+      "definition_en": "it is now your responsibility to take the next action or make a decision",
+      "ipa": "/ðə bɔːl ɪz ɪn jɔː kɔːt/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-30787c4b5ec6b034": {
+      "difficulty": "7.0",
+      "synonyms": ["the start of a decline", "the turning point", "downhill from here"],
+      "collocations": ["mark the beginning of the end", "signal the beginning of the end", "the beginning of the end for something"],
+      "example_simple": "Losing that big client was the beginning of the end for the company.",
+      "example_complex": "Historians often see the failed campaign as the beginning of the end for the once-mighty empire.",
+      "definition_en": "the point at which something starts to decline or fail, leading eventually to its collapse",
+      "ipa": "/ðə bɪˈɡɪnɪŋ əv ði ɛnd/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-1f862dd8944170d0": {
+      "difficulty": "7.0",
+      "synonyms": ["outcast", "outsider", "misfit", "odd one out"],
+      "collocations": ["the black sheep of the family", "treated like a black sheep", "become the black sheep"],
+      "example_simple": "He was always the black sheep of the family because he refused to follow tradition.",
+      "example_complex": "Regarded as the black sheep for abandoning the family business, she found little sympathy at the reunion.",
+      "definition_en": "a person who is regarded as a disgrace or embarrassment within a family or group",
+      "ipa": "/ðə blæk ʃiːp/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "thành viên cá biệt, người bị coi là nỗi hổ thẹn của gia đình"
+    },
+    "cf1fdf3b-a9ca-4f0f-8826-9a0ebdc5e568": {
+      "difficulty": "7.0",
+      "definition_en": "the highest points or tops of waves",
+      "ipa": "/ðə krɛsts əv weɪvz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-edda23fcb1251d33": {
+      "difficulty": "6.0",
+      "synonyms": ["the intended outcome", "the wanted result", "the target outcome"],
+      "collocations": ["achieve the desired result", "produce the desired result", "fail to get the desired result"],
+      "example_simple": "If you follow the recipe carefully, you'll get the desired result.",
+      "example_complex": "Despite months of effort, the new strategy failed to deliver the desired result.",
+      "definition_en": "the outcome that someone wants or aims to achieve",
+      "ipa": "/ðə dɪˈzaɪəd rɪˈzʌlt/",
+      "part_of_speech": "phrase"
+    },
+    "7890e61e-f2d4-46b9-be6b-e87868052b75": {
+      "difficulty": "8.0",
+      "definition_en": "the act of getting rid of or dealing with the money gained from a sale",
+      "ipa": "/ðə dɪˈspəʊzəl əv ðə ˈprəʊsiːdz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-15ce0f000640b154": {
+      "difficulty": "6.0",
+      "synonyms": ["first come, first served", "act early to succeed", "seize the moment"],
+      "collocations": ["the early bird catches the worm", "as the saying goes, the early bird catches the worm"],
+      "example_simple": "I always arrive first at the sale because the early bird catches the worm.",
+      "example_complex": "She submitted her application weeks before the deadline, firmly believing that the early bird catches the worm.",
+      "definition_en": "the person who acts first or arrives earliest has the best chance of success",
+      "ipa": "/ði ˈɜːli bɜːd ˈkætʃɪz ðə wɜːm/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "trâu chậm uống nước đục; ai đến sớm/hành động sớm sẽ có lợi thế"
+    },
+    "pubcol-w-9147dd5d35307c20": {
+      "difficulty": "6.0",
+      "synonyms": ["a total disaster", "a catastrophe", "the worst thing imaginable"],
+      "collocations": ["it's not the end of the world", "act like it's the end of the world", "feel like the end of the world"],
+      "example_simple": "Don't worry about failing one test; it's not the end of the world.",
+      "example_complex": "Losing the match stung, but he reminded himself that a single defeat was hardly the end of the world.",
+      "definition_en": "used to say that a bad situation is not as serious or disastrous as it seems",
+      "ipa": "/ði ɛnd əv ðə wɜːld/",
+      "part_of_speech": "idiom"
+    }
+  }
+}

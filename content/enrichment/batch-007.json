@@ -1,0 +1,232 @@
+{
+  "meta": { "batch": "batch-007", "authored_by": "claude", "count": 26 },
+  "words": {
+    "34fad0d8-651f-4fe1-a061-f6247fc3eafc": {
+      "difficulty": "7.0",
+      "definition_en": "the school, college, or university that a person formerly attended",
+      "ipa": "/ˌælmə ˈmɑːtə/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-e2c630300b0402ee": {
+      "difficulty": "5.0",
+      "synonyms": ["a loaf", "a bread loaf"],
+      "collocations": ["buy a loaf of bread", "a fresh loaf of bread", "slice a loaf of bread"],
+      "example_simple": "I bought a loaf of bread on my way home from work.",
+      "example_complex": "The bakery was so busy that they had sold out of every loaf of bread by mid-morning.",
+      "definition_en": "a portion of bread that has been shaped and baked as a single piece",
+      "ipa": "/ə ˌləʊf əv ˈbrɛd/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-0634f53fc7836efc": {
+      "difficulty": "6.0",
+      "synonyms": ["a prolonged dispute", "an ongoing conflict", "a protracted quarrel"],
+      "collocations": ["settle a long-running dispute", "a long-running dispute over land", "end a long-running dispute"],
+      "example_simple": "The two neighbours finally settled their long-running dispute over the fence.",
+      "example_complex": "The merger was delayed for years by a long-running dispute between the shareholders and the board.",
+      "definition_en": "a disagreement or conflict that has continued for a long period of time",
+      "ipa": "/ə ˌlɒŋ ˌrʌnɪŋ dɪˈspjuːt/",
+      "part_of_speech": "phrase"
+    },
+    "ea0bb69b-0165-45fb-b4b2-45b5e03ef195": {
+      "difficulty": "7.0",
+      "definition_en": "a noisy argument or heated disagreement",
+      "ipa": "/ˌɔːltəˈkeɪʃən/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-6c29a823c7114df2": {
+      "difficulty": "5.0",
+      "synonyms": ["completely", "entirely", "in total", "wholly"],
+      "collocations": ["stop something altogether", "altogether different", "altogether it cost"],
+      "example_simple": "It was a cold and rainy day, and altogether rather miserable.",
+      "example_complex": "After the new tax was added, the trip ended up costing us altogether more than we had budgeted for.",
+      "definition_en": "completely, or taking everything into account in total",
+      "ipa": "/ˌɔːltəˈɡɛðə/",
+      "part_of_speech": "adverb"
+    },
+    "pubcol-w-e6b0d83bcfff9aec": {
+      "difficulty": "7.0",
+      "synonyms": ["a well-paid job", "a profitable position", "a high-paying job"],
+      "collocations": ["land a lucrative job", "a lucrative job offer", "leave a lucrative job"],
+      "example_simple": "She left her lucrative job in banking to become a teacher.",
+      "example_complex": "He turned down a lucrative job abroad because it would have meant leaving his family behind.",
+      "definition_en": "a job that earns a large amount of money",
+      "ipa": "/ə ˌluːkrətɪv ˈdʒɒb/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-1aaa0458a26b7ebf": {
+      "difficulty": "5.0",
+      "synonyms": ["am poor at", "am weak at", "am not skilled at"],
+      "collocations": ["am not good at maths", "am not good at cooking", "am not good at remembering names"],
+      "example_simple": "I am not good at maths, so I always ask my sister for help.",
+      "example_complex": "Although she is a gifted writer, she admits she is not good at speaking in front of a large audience.",
+      "definition_en": "used to say that you lack skill or ability in something",
+      "ipa": "/æm nɒt ˈɡʊd æt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-2989481e387b9434": {
+      "difficulty": "6.0",
+      "synonyms": ["am not fond of", "dislike", "am not enthusiastic about"],
+      "collocations": ["am not keen on the idea", "am not keen on sport", "am not keen on going out"],
+      "example_simple": "I am not keen on horror films, so let's watch something else.",
+      "example_complex": "The manager was not keen on the proposal, arguing that it carried too much financial risk.",
+      "definition_en": "do not like or feel enthusiastic about something",
+      "ipa": "/æm nɒt ˈkiːn ɒn/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-64a738f7309967ad": {
+      "difficulty": "6.0",
+      "synonyms": ["a thick head of hair", "a mane of hair", "a shock of hair"],
+      "collocations": ["a mass of curly hair", "a tangled mass of hair", "a mass of dark hair"],
+      "example_simple": "She has a thick mass of curly hair that falls past her shoulders.",
+      "example_complex": "The portrait was dominated by the subject's wild mass of hair, painted in bold, sweeping strokes.",
+      "definition_en": "a thick, dense quantity of hair",
+      "ipa": "/ə ˌmæs əv ˈheə/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-230ab7ef9e927b74": {
+      "difficulty": "7.0",
+      "synonyms": ["a lowly job", "an unskilled job", "a humble job"],
+      "collocations": ["do a menial job", "a menial job in a kitchen", "stuck in a menial job"],
+      "example_simple": "He took a menial job washing dishes to pay for his studies.",
+      "example_complex": "Many well-qualified immigrants are forced into menial jobs because their foreign degrees are not recognised.",
+      "definition_en": "a low-status job that involves boring, unskilled work",
+      "ipa": "/ə ˌmiːniəl ˈdʒɒb/",
+      "part_of_speech": "phrase"
+    },
+    "550f4f2a-f5c2-464c-9943-bcca1ae94a71": {
+      "difficulty": "7.0",
+      "definition_en": "a useful or desirable feature of a place that adds to comfort or convenience",
+      "ipa": "/əˈmiːnəti/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-7ae9cb1e04061980": {
+      "difficulty": "6.0",
+      "synonyms": ["a slight dispute", "a small difference of opinion", "a serious conflict"],
+      "collocations": ["a minor disagreement over details", "a major disagreement between them", "settle a slight disagreement"],
+      "example_simple": "It started as a minor disagreement but soon turned into a serious argument.",
+      "example_complex": "What began as a slight disagreement about wording escalated into a major disagreement that split the committee.",
+      "definition_en": "a small, unimportant difference of opinion as opposed to a large, serious one",
+      "ipa": "/ə ˈmaɪnə slaɪt ˌdɪsəˈɡriːmənt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-ab780026099c62ee": {
+      "difficulty": "5.0",
+      "synonyms": ["a period of time", "a length of time", "a span of time"],
+      "collocations": ["a large amount of time", "spend a huge amount of time", "the amount of time required"],
+      "example_simple": "We spent a large amount of time preparing for the exam.",
+      "example_complex": "The amount of time required to master a new language depends heavily on how much you practise each day.",
+      "definition_en": "a quantity or length of time",
+      "ipa": "/əˈmaʊnt əv ˈtaɪm/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "lượng thời gian"
+    },
+    "8361ec4c-c8cb-4c30-a9d9-3f7ca13d2b1b": {
+      "difficulty": "8.0",
+      "definition_en": "to be effectively no better than piracy; to amount to little different from theft",
+      "ipa": "/əˈmaʊnt tə ˈlɪtl mɔːr ðən ˈpaɪrəsi/",
+      "part_of_speech": "phrase"
+    },
+    "c99fc542-434c-400d-912e-d2a6f8938002": {
+      "difficulty": "6.0",
+      "definition_en": "enough or more than enough; plentiful",
+      "ipa": "/ˈæmpl/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-939207495256478b": {
+      "difficulty": "5.0",
+      "synonyms": ["a music event", "a concert festival", "a musical celebration"],
+      "collocations": ["attend a music festival", "a summer music festival", "perform at a music festival"],
+      "example_simple": "We went to a music festival last summer and camped for three days.",
+      "example_complex": "Organising a large music festival involves months of planning, from booking artists to arranging security and sanitation.",
+      "definition_en": "an organised event, often lasting several days, at which music is performed",
+      "ipa": "/ə ˈmjuːzɪk ˌfɛstɪvəl/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-40869675ae544b90": {
+      "difficulty": "6.0",
+      "synonyms": ["a sudden end", "an unexpected ending", "an abrupt finish"],
+      "collocations": ["come to an abrupt end", "bring something to a sudden end", "an abrupt end to the meeting"],
+      "example_simple": "The concert came to an abrupt end when the power suddenly went out.",
+      "example_complex": "His promising political career was brought to a sudden end by the scandal that emerged just before the election.",
+      "definition_en": "a quick and unexpected ending to something",
+      "ipa": "/ən əˌbrʌpt ˈsʌdən ˈɛnd/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-63d1edfd8af21e84": {
+      "difficulty": "5.0",
+      "synonyms": ["a deal", "an accord", "an arrangement", "a settlement"],
+      "collocations": ["reach an agreement", "come to an agreement", "sign an agreement"],
+      "example_simple": "After hours of talking, the two sides finally reached an agreement.",
+      "example_complex": "The nations came to an agreement on trade only after each had made significant concessions.",
+      "definition_en": "an arrangement or decision that two or more people accept",
+      "ipa": "/ən əˈɡriːmənt/",
+      "part_of_speech": "noun"
+    },
+    "9703d9a8-c4cd-48bb-9afd-c2edca00f378": {
+      "difficulty": "8.0",
+      "definition_en": "a solution in which the substance is dissolved in water",
+      "ipa": "/ən ˈeɪkwiəs səˈluːʃən/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-7f25ae028fef4e89": {
+      "difficulty": "7.0",
+      "synonyms": ["a random decision", "a capricious decision", "a whimsical choice"],
+      "collocations": ["make an arbitrary decision", "a seemingly arbitrary decision", "an arbitrary decision by the court"],
+      "example_simple": "The choice of colour felt like an arbitrary decision rather than a careful one.",
+      "example_complex": "Critics argued that the panel's arbitrary decision to reject the application was based on prejudice rather than clear criteria.",
+      "definition_en": "a decision based on personal whim rather than on reason or a fixed system",
+      "ipa": "/ən ˈɑːbɪtrəri dɪˈsɪʒən/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-961bdc2b1edd2993": {
+      "difficulty": "6.0",
+      "synonyms": ["a piece of clothing", "a garment", "a clothing item"],
+      "collocations": ["every article of clothing", "an item of clothing", "a warm item of clothing"],
+      "example_simple": "Please label every article of clothing before your child goes to camp.",
+      "example_complex": "Not a single item of clothing in the museum's collection had survived without some fading or damage.",
+      "definition_en": "a single piece of clothing",
+      "ipa": "/ən ˈɑːtɪkl ˈaɪtəm əv ˈkləʊðɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-6bd0d206f6c51354": {
+      "difficulty": "6.0",
+      "synonyms": ["a running track", "a race track", "a sports track"],
+      "collocations": ["run around the athletics track", "a synthetic athletics track", "train on the athletics track"],
+      "example_simple": "The runners warmed up by jogging slowly around the athletics track.",
+      "example_complex": "The new stadium features a state-of-the-art athletics track designed to help sprinters set record times.",
+      "definition_en": "an oval track used for running and other athletics events",
+      "ipa": "/ən æθˈlɛtɪks træk/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-03fbc966609adec7": {
+      "difficulty": "7.0",
+      "synonyms": ["an expert on", "a specialist in", "a leading figure on"],
+      "collocations": ["a leading authority on", "become an authority on", "an authority on medieval history"],
+      "example_simple": "She is an authority on Roman history and often speaks at conferences.",
+      "example_complex": "Widely regarded as a leading authority on climate policy, he is frequently consulted by governments around the world.",
+      "definition_en": "a person with expert knowledge of a particular subject",
+      "ipa": "/ən ɔːˈθɒrɪti ɒn/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-4adcaa51e8e92be5": {
+      "difficulty": "6.0",
+      "synonyms": ["a morning person", "an early riser", "a night person"],
+      "collocations": ["I'm an early bird", "a real night owl", "early bird or night owl"],
+      "example_simple": "My sister is an early bird, but I'm a night owl who loves staying up late.",
+      "example_complex": "Whether you are an early bird or a night owl seems to be shaped as much by biology as by habit.",
+      "definition_en": "a person who habitually gets up early, contrasted with a night owl who stays up late",
+      "ipa": "/ən ˈɜːli bɜːd ə ˈnaɪt aʊl/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-3e7e642f1d2b3c6a": {
+      "difficulty": "6.0",
+      "synonyms": ["a promising beginning", "a hopeful start", "a good start"],
+      "collocations": ["make an encouraging start", "a promising start to the season", "get off to a promising start"],
+      "example_simple": "The team made an encouraging start, winning their first two matches.",
+      "example_complex": "Despite a promising start, the project soon ran into funding problems that stalled its progress.",
+      "definition_en": "a beginning that suggests future success is likely",
+      "ipa": "/ən ɪnˈkʌrɪdʒɪŋ ˈprɒmɪsɪŋ stɑːt/",
+      "part_of_speech": "phrase"
+    }
+  }
+}

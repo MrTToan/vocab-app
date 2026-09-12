@@ -1,0 +1,213 @@
+{
+  "meta": { "batch": "batch-055", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-eda5263074846f9f": {
+      "difficulty": "6.0",
+      "synonyms": ["help out", "assist", "lend a hand", "pitch in"],
+      "collocations": ["give someone a hand with", "lend a hand around the house", "always ready to lend a hand"],
+      "example_simple": "Can you give me a hand with these boxes?",
+      "example_complex": "Whenever the neighbours are moving furniture, he is always the first to lend a hand.",
+      "definition_en": "to help someone, especially with a practical task",
+      "ipa": "/ˌlɛnd ˌsʌmbədi ə ˈhænd/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "giúp đỡ ai đó (một tay)"
+    },
+    "pubcol-w-de05c30692c8c8b9": {
+      "difficulty": "6.0",
+      "synonyms": ["deliver a talk", "present", "speak", "brief"],
+      "collocations": ["give a presentation on", "make a presentation to the board", "prepare a presentation"],
+      "example_simple": "I have to give a presentation to my class tomorrow.",
+      "example_complex": "The consultant made a compelling presentation that persuaded the directors to approve the budget.",
+      "definition_en": "to formally show or explain information to an audience, often using slides",
+      "ipa": "/ˌɡɪv ˌmeɪk ˌprɛzənˈteɪʃənz/",
+      "part_of_speech": "collocation"
+    },
+    "pubcol-w-e8a53e5099c5b292": {
+      "difficulty": "7.0",
+      "synonyms": ["cry out", "shout", "let out a cry", "exclaim"],
+      "collocations": ["give a cry of pain", "give a cry of joy", "give a sudden cry"],
+      "example_simple": "She gave a cry when she saw the spider.",
+      "example_complex": "On reaching the summit, the exhausted climbers gave a cry of triumph that echoed across the valley.",
+      "definition_en": "to suddenly shout or make a loud sound, often from emotion or pain",
+      "ipa": "/ˌɡɪv ə ˈkraɪ/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "kêu lên, thốt lên"
+    },
+    "pubcol-w-cb2ac7b549030f4e": {
+      "difficulty": "6.0",
+      "synonyms": ["deliver a lecture", "give a talk", "teach", "lecture"],
+      "collocations": ["give a lecture on history", "attend a lecture", "deliver an engaging lecture"],
+      "example_simple": "The professor is giving a lecture on climate change today.",
+      "example_complex": "While giving the lecture, she paused to answer the thoughtful questions raised by her students.",
+      "definition_en": "to formally teach or talk about a subject to an audience of students",
+      "ipa": "/ˌɡɪvɪŋ ðə ˈlɛktʃə/",
+      "part_of_speech": "phrase"
+    },
+    "f295b0b4-c254-4451-a787-1dd34b2bab81": {
+      "difficulty": "6.0",
+      "definition_en": "to yield or let others go first; or to break and collapse under pressure",
+      "ipa": "/ˌɡɪvɪŋ ˈweɪ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-ede60422060d3de6": {
+      "synonyms": ["ice field", "ice mass", "ice sheet"],
+      "collocations": ["a melting glacier", "glacier retreat", "an ancient glacier"],
+      "example_simple": "The glacier moves slowly down the mountain valley.",
+      "example_complex": "Scientists warn that this glacier is retreating faster than at any point in recorded history."
+    },
+    "pubcol-w-49c7ccb9ec437dc5": {
+      "synonyms": ["happily", "willingly", "with pleasure", "readily"],
+      "collocations": ["gladly accept", "gladly help", "would gladly do"],
+      "example_simple": "I would gladly help you if you ask.",
+      "example_complex": "She gladly volunteered to cover his shift, knowing how much he needed the day off."
+    },
+    "pubcol-w-91080b5865f97c6a": {
+      "synonyms": ["glitzy", "dazzling", "alluring", "elegant"],
+      "collocations": ["a glamorous lifestyle", "a glamorous dress", "look glamorous"],
+      "example_simple": "She wore a glamorous dress to the party.",
+      "example_complex": "Behind the glamorous image of the film industry lies years of relentless, unglamorous work."
+    },
+    "pubcol-w-0a6ca81d300dbabb": {
+      "synonyms": ["glimpse", "peek", "quick look", "peep"],
+      "collocations": ["glance at the clock", "a quick glance", "glance over the report"],
+      "example_simple": "She gave a quick glance at her watch.",
+      "example_complex": "With a nervous glance over his shoulder, he slipped the letter into his pocket."
+    },
+    "pubcol-w-6822536d2eee76fc": {
+      "synonyms": ["blaze", "dazzle", "harsh light", "shine"],
+      "collocations": ["the glare of the sun", "reduce the glare", "screen glare"],
+      "example_simple": "The glare from the sun made it hard to drive.",
+      "example_complex": "She shielded her eyes against the glare reflecting off the snow-covered slopes."
+    },
+    "pubcol-w-eeb0893f8c3d0330": {
+      "synonyms": ["glance", "quick look", "peek", "brief sight"],
+      "collocations": ["catch a glimpse of", "a brief glimpse", "a glimpse into the future"],
+      "example_simple": "I caught a glimpse of the singer as she left the hotel.",
+      "example_complex": "The documentary offers a rare glimpse into the daily lives of deep-sea researchers."
+    },
+    "pubcol-w-43f018c15a40758b": {
+      "synonyms": ["sparkle", "shimmer", "twinkle", "shine"],
+      "collocations": ["glitter in the sunlight", "eyes glitter", "a glitter of gold"],
+      "example_simple": "The stars glitter in the night sky.",
+      "example_complex": "Not all that glitters is gold, and the seemingly perfect deal soon revealed its hidden costs."
+    },
+    "pubcol-w-246910c604fa1204": {
+      "difficulty": "6.0",
+      "synonyms": ["climate change", "planetary warming", "global heating"],
+      "collocations": ["combat global warming", "the effects of global warming", "accelerate global warming"],
+      "example_simple": "Global warming is causing sea levels to rise.",
+      "example_complex": "Governments worldwide are under pressure to cut emissions and slow the pace of global warming.",
+      "definition_en": "the gradual increase in the earth's temperature caused by rising greenhouse gases",
+      "ipa": "/ˌɡləʊbəl ˈwɔːmɪŋ/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-01a684535afb60c3": {
+      "difficulty": "7.0",
+      "ipa": "/ˌɡləʊbəlaɪˈzeɪʃən/"
+    },
+    "pubcol-w-99db2004af73b92f": {
+      "difficulty": "6.0",
+      "synonyms": ["oppose", "resist", "act against", "defy"],
+      "collocations": ["go against the rules", "go against your wishes", "go against nature"],
+      "example_simple": "I don't want to go against my parents' advice.",
+      "example_complex": "The board's decision went against everything the founder had originally stood for.",
+      "definition_en": "to oppose, resist, or be contrary to someone or something",
+      "ipa": "/ˌɡəʊ əˈɡɛnst/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-3874f62224609840": {
+      "difficulty": "7.0",
+      "synonyms": ["start over", "begin again", "go back to the drawing board", "start from scratch"],
+      "collocations": ["be back to square one", "go back to square one after failing", "end up back at square one"],
+      "example_simple": "The plan failed, so we had to go back to square one.",
+      "example_complex": "When the investors pulled out, the entire team was forced to go back to square one and rethink the whole project.",
+      "definition_en": "to return to the very beginning because a previous attempt has failed",
+      "ipa": "/ˌɡəʊ ˌbæk tə ˌskweə ˈwʌn/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "quay lại từ đầu, bắt đầu lại từ con số không"
+    },
+    "pubcol-w-7e55c3ac927b1869": {
+      "difficulty": "6.0",
+      "synonyms": ["become insolvent", "fail financially", "collapse", "go bust"],
+      "collocations": ["the company went bankrupt", "go bankrupt overnight", "risk going bankrupt"],
+      "example_simple": "The shop went bankrupt after losing all its customers.",
+      "example_complex": "Unable to repay its mounting debts, the once-thriving airline went bankrupt within two years.",
+      "definition_en": "to become unable to pay one's debts and be declared financially ruined",
+      "ipa": "/ˌɡəʊ ˈbæŋkrʌpt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-f7b1173d32de8a22": {
+      "difficulty": "7.0",
+      "synonyms": ["fall ill with", "come down with", "catch", "become sick with"],
+      "collocations": ["go down with the flu", "go down with a cold", "go down with a fever"],
+      "example_simple": "Half the class went down with a cold last week.",
+      "example_complex": "Just before the big presentation, he went down with a nasty stomach bug and had to stay home.",
+      "definition_en": "to become ill with a particular illness",
+      "ipa": "/ˌɡəʊ ˈdaʊn wɪð/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "bị ốm, mắc bệnh"
+    },
+    "pubcol-w-5da929e0c8c4e6d0": {
+      "difficulty": "6.0",
+      "synonyms": ["become eco-friendly", "live sustainably", "go eco", "adopt green habits"],
+      "collocations": ["go green at home", "encourage people to go green", "businesses going green"],
+      "example_simple": "Our school is trying to go green by recycling more.",
+      "example_complex": "Many companies are choosing to go green, not only to protect the environment but also to attract eco-conscious customers.",
+      "definition_en": "to start behaving in ways that protect the environment",
+      "ipa": "/ˌɡəʊ ˈɡriːn/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-f6290c7c27b5a1a4": {
+      "difficulty": "7.0",
+      "synonyms": ["be keen on", "enjoy", "take part in", "be into"],
+      "collocations": ["go in for sports", "go in for competitions", "not go in for"],
+      "example_simple": "I don't really go in for team sports.",
+      "example_complex": "She has always gone in for extreme challenges, from marathons to mountaineering.",
+      "definition_en": "to enjoy, be interested in, or take part in a particular activity",
+      "ipa": "/ˌɡəʊ ˈɪn fə/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-6a9aeb798b3db995": {
+      "difficulty": "6.0",
+      "synonyms": ["elaborate", "expand", "give specifics", "explain fully"],
+      "collocations": ["go into detail about", "go into great detail", "not go into detail"],
+      "example_simple": "He didn't go into detail about his plans.",
+      "example_complex": "The report goes into considerable detail about the causes of the financial collapse.",
+      "definition_en": "to explain or describe something thoroughly and specifically",
+      "ipa": "/ˌɡəʊ ˌɪntə ˈdiːteɪl/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "đi vào chi tiết"
+    },
+    "pubcol-w-4c6dd761f24c4ac4": {
+      "difficulty": "5.0",
+      "ipa": "/ˌɡəʊ ˈɒn/"
+    },
+    "pubcol-w-37d22a6426ccfb64": {
+      "difficulty": "5.0",
+      "synonyms": ["take a holiday", "go on holiday", "take a trip", "travel"],
+      "collocations": ["go on vacation with family", "go on a summer vacation", "go on vacation abroad"],
+      "example_simple": "We are going on vacation to the beach next month.",
+      "example_complex": "Rather than going on vacation abroad this year, they decided to explore the quiet villages of their own country.",
+      "definition_en": "to travel somewhere for rest and enjoyment away from work or home",
+      "ipa": "/ˌɡəʊ ɒn vəˈkeɪʃən/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-2fffdb31725a7508": {
+      "difficulty": "7.0",
+      "synonyms": ["set off on a tour", "begin a tour", "go touring", "start a tour"],
+      "collocations": ["embark on a world tour", "go on a concert tour", "embark on a tour of Europe"],
+      "example_simple": "The band is going on a world tour next year.",
+      "example_complex": "Fresh from their chart-topping album, the group embarked on an ambitious world tour spanning five continents.",
+      "definition_en": "to begin a long journey of performances or visits, especially around the world",
+      "ipa": "/ˌɡəʊ ɒn ɪmˈbɑːk ɒn ə ˌwɜːld ˈtʊə/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "đi lưu diễn (vòng quanh thế giới)"
+    },
+    "7b207da9-31b8-4f79-925e-7cf8ea726532": {
+      "difficulty": "6.0",
+      "definition_en": "to slide down a snowy slope on a small vehicle called a sled",
+      "ipa": "/ˌɡəʊ ˈslɛdɪŋ/",
+      "part_of_speech": "phrase"
+    }
+  }
+}

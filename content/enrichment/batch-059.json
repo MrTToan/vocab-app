@@ -1,0 +1,248 @@
+{
+  "meta": { "batch": "batch-059", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-82b71621b237457b": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/hæv ən ˈɪnfluəns ɒn/",
+      "definition_en": "to affect the way someone or something develops, behaves, or thinks",
+      "synonyms": ["affect", "sway", "impact", "shape"],
+      "collocations": ["have a strong influence on", "have a positive influence on", "have a lasting influence on"],
+      "example_simple": "Her teacher had an influence on her choice of career.",
+      "example_complex": "The economic crisis has had a profound influence on how young people view job security.",
+      "vi_meaning_correction": "có ảnh hưởng đến"
+    },
+    "pubcol-w-32dc178ddf1e13d2": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/hæv ən ˌɒpəˈreɪʃən; ˈɒpəreɪt ɒn ˌsʌmbədi/",
+      "definition_en": "to undergo surgery, or for a surgeon to perform surgery on someone",
+      "synonyms": ["undergo surgery", "operate on", "have surgery"],
+      "collocations": ["have an urgent operation", "operate on a patient", "have a successful operation"],
+      "example_simple": "She had an operation on her knee last week.",
+      "example_complex": "The surgeons decided to operate on him immediately to remove the tumour before it spread.",
+      "vi_meaning_correction": "phẫu thuật cho ai"
+    },
+    "pubcol-w-7114900664d91faf": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/hæv ˈdɪfɪkəlti ɪn ˈduːɪŋ ˈsʌmθɪŋ/",
+      "definition_en": "to find something hard to do",
+      "synonyms": ["struggle with", "find it hard", "have trouble"],
+      "collocations": ["have great difficulty in", "have difficulty breathing", "have difficulty concentrating"],
+      "example_simple": "I had difficulty finding the address in the dark.",
+      "example_complex": "Many students have difficulty adjusting to the workload during their first year at university.",
+      "vi_meaning_correction": "gặp khó khăn trong việc gì"
+    },
+    "pubcol-w-4e69d3eba7f1462d": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/hæv ˈɪnfluəns ɒn ˈoʊvə ˌsʌmbədi/",
+      "definition_en": "to have the power to affect a person's decisions or behaviour",
+      "synonyms": ["sway", "affect", "hold power over"],
+      "collocations": ["have a great influence over", "have influence on policy", "have little influence over"],
+      "example_simple": "His older brother has a lot of influence over him.",
+      "example_complex": "Lobby groups continue to have considerable influence over the government's environmental agenda.",
+      "vi_meaning_correction": "có ảnh hưởng, tác động lên ai"
+    },
+    "pubcol-w-36654d3c838fc856": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/hæv mɔːr ˈmʌni ðæn sɛns/",
+      "definition_en": "to spend money in a foolish or wasteful way despite being wealthy",
+      "synonyms": ["spendthrift", "wasteful with money", "extravagant"],
+      "collocations": ["clearly have more money than sense", "have more money than sense to spend", "spend as if having more money than sense"],
+      "example_simple": "He bought three sports cars in one year — he has more money than sense.",
+      "example_complex": "Anyone who pays that much for a bottle of water clearly has more money than sense.",
+      "vi_meaning_correction": "lắm tiền nhưng tiêu xài phung phí, thiếu khôn ngoan"
+    },
+    "a7d738eb-4a8f-44e2-989e-fc387b64bd93": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/hæv nɒt jɛt kʌm ɪn ˈkɒntækt/",
+      "definition_en": "to not yet have had any dealings or contact with someone or something",
+      "synonyms": ["not yet met", "not yet encountered", "not yet been exposed to"]
+    },
+    "pubcol-w-dd51ab481deb9a95": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/hæv ɔːr juːz/",
+      "definition_en": "to possess or make use of something",
+      "synonyms": ["possess or use", "own or employ", "hold or apply"],
+      "collocations": ["have or use a resource", "have or use the tools", "have or use access"],
+      "example_simple": "You must have or use a valid ticket to enter.",
+      "example_complex": "The policy sets out who may have or use confidential data within the organisation.",
+      "vi_meaning_correction": "có hoặc sử dụng cái gì"
+    },
+    "pubcol-w-47b7d7ac7f96ba11": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/hæv ˈsʌmθɪŋ ɪn ˈkɒmən/",
+      "definition_en": "to share the same interests, features, or characteristics with someone or something",
+      "synonyms": ["share", "have in common", "be alike"],
+      "collocations": ["have a lot in common", "have nothing in common", "have much in common"],
+      "example_simple": "We have a lot in common — we both love hiking and old films.",
+      "example_complex": "Despite their different backgrounds, the two writers had a great deal in common in their views on society.",
+      "vi_meaning_correction": "có điểm gì chung"
+    },
+    "pubcol-w-85f818b3bf2e190a": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/hæv ðə hɒts fɔːr ˈsʌmwʌn/",
+      "definition_en": "(informal) to feel a strong sexual attraction to someone",
+      "synonyms": ["be attracted to", "fancy", "have a crush on"],
+      "collocations": ["have the hots for a colleague", "clearly have the hots for", "have the hots for the new guy"],
+      "example_simple": "It's obvious she has the hots for the new intern.",
+      "example_complex": "He tried to act casual, but everyone could tell he had the hots for his flatmate.",
+      "vi_meaning_correction": "thấy ai đó rất quyến rũ, cảm nắng ai đó"
+    },
+    "pubcol-w-8a72cccbe98f12f8": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/hæv ðə liːd; teɪk ðə liːd/",
+      "definition_en": "to be in front of others in a competition or to move into first position",
+      "synonyms": ["be ahead", "lead", "be in front"],
+      "collocations": ["take the lead early", "have a slender lead", "take the lead in the second half"],
+      "example_simple": "Our team took the lead in the final minute of the match.",
+      "example_complex": "After trailing for most of the race, she surged forward to take the lead on the final lap.",
+      "vi_meaning_correction": "dẫn đầu; vượt lên để dẫn đầu"
+    },
+    "pubcol-w-e8eb5650624f944f": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/hæv jɔːr hɛd ɪn ðə klaʊdz/",
+      "definition_en": "to be out of touch with reality; to be daydreaming or impractical",
+      "synonyms": ["be daydreaming", "be unrealistic", "be absent-minded"],
+      "collocations": ["always have your head in the clouds", "walk around with your head in the clouds", "have your head in the clouds again"],
+      "example_simple": "Stop dreaming and pay attention — you've got your head in the clouds.",
+      "example_complex": "As a planner she was brilliant, but when it came to budgets she tended to have her head in the clouds."
+    },
+    "pubcol-w-9802bcaecef5d4e8": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/hæv, bɛər, kiːp ɪn maɪnd/",
+      "definition_en": "to remember or take something into consideration",
+      "synonyms": ["remember", "consider", "take into account"],
+      "collocations": ["keep in mind that", "bear in mind the cost", "have in mind a plan"],
+      "example_simple": "Keep in mind that the shops close early on Sundays.",
+      "example_complex": "When designing the survey, researchers must bear in mind the cultural background of the respondents."
+    },
+    "pubcol-w-df9d11eb13d772da": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/hæv, ɪnˈdʒɔɪ, əˈtʃiːv ə hjuːdʒ səkˈsɛs ɪn ˈduːɪŋ ˈsʌmθɪŋ/",
+      "definition_en": "to be very successful in doing something",
+      "synonyms": ["achieve great success", "succeed greatly", "do very well"],
+      "collocations": ["achieve huge success", "enjoy great success", "have enormous success"],
+      "example_simple": "The band achieved huge success with their first album.",
+      "example_complex": "The company enjoyed great success in expanding into overseas markets during the past decade.",
+      "vi_meaning_correction": "có/đạt được thành công lớn/rực rỡ trong việc gì"
+    },
+    "pubcol-w-f82a06e23b0ee1d5": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/hæv, prəˈdjuːs rɪˈzʌlts/",
+      "definition_en": "to lead to a successful or noticeable outcome",
+      "synonyms": ["get results", "produce outcomes", "pay off"],
+      "collocations": ["produce impressive results", "have positive results", "produce results quickly"],
+      "example_simple": "The new training method is already producing results.",
+      "example_complex": "The reforms took years to implement, but they eventually produced measurable results across the whole sector.",
+      "vi_meaning_correction": "có/mang lại kết quả"
+    },
+    "pubcol-w-3c95174e581a11ff": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/hæv, teɪk ə breɪk/",
+      "definition_en": "to stop working or an activity for a short period to rest",
+      "synonyms": ["take a rest", "pause", "have a rest"],
+      "collocations": ["take a short break", "have a coffee break", "take a well-earned break"],
+      "example_simple": "Let's take a break and have some coffee.",
+      "example_complex": "After working non-stop for six hours, the team finally took a break to recharge.",
+      "vi_meaning_correction": "nghỉ giải lao"
+    },
+    "pubcol-w-a70f81de13602207": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/hæv ə ɡreɪt ɡʊd maɪnd tuː/",
+      "definition_en": "to feel strongly inclined to do something (often something bold or critical)",
+      "synonyms": ["be inclined to", "feel like", "be tempted to"],
+      "collocations": ["have a good mind to complain", "have a great mind to leave", "have half a mind to"],
+      "example_simple": "I have a good mind to tell him exactly what I think.",
+      "example_complex": "After being kept waiting for an hour, she had a great mind to walk out and cancel the whole deal.",
+      "vi_meaning_correction": "rất muốn, có ý định (làm gì)"
+    },
+    "b3dc7e33-5a7d-4bfa-b7cd-61fd9a41ee7d": {
+      "difficulty": "7.0",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈhæzədəs/",
+      "definition_en": "dangerous or risky, especially to health or safety",
+      "synonyms": ["dangerous", "risky", "perilous", "unsafe"]
+    },
+    "pubcol-w-ca2b941516079cc6": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/hɛd fɔːr ə pleɪs/",
+      "definition_en": "to move or travel in the direction of a particular place",
+      "synonyms": ["make for", "go towards", "set off for"],
+      "collocations": ["head for home", "head for the exit", "head straight for"],
+      "example_simple": "After work, we headed for the nearest café.",
+      "example_complex": "As the storm approached, the fishing boats began to head for the safety of the harbour.",
+      "vi_meaning_correction": "thẳng tiến đến (một nơi)"
+    },
+    "pubcol-w-9cd7c186300be567": {
+      "part_of_speech": "noun",
+      "definition_en": "the title of a newspaper article, printed in large letters at the top",
+      "synonyms": ["title", "caption", "banner"],
+      "collocations": ["make the headlines", "front-page headline", "grab the headlines"],
+      "example_simple": "The story made the headlines in every newspaper.",
+      "example_complex": "The scandal dominated the headlines for weeks before the minister finally resigned."
+    },
+    "pubcol-w-66fe0da68037a04d": {
+      "part_of_speech": "noun",
+      "definition_en": "the main office or centre from which an organisation is controlled",
+      "synonyms": ["head office", "base", "main office"],
+      "collocations": ["company headquarters", "police headquarters", "move its headquarters"],
+      "example_simple": "The company's headquarters are in London.",
+      "example_complex": "The corporation relocated its headquarters to Singapore to be closer to its Asian markets."
+    },
+    "pubcol-w-e015b5e9dfbf4828": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˈhɛlθi ˈæpɪtaɪt/",
+      "definition_en": "a strong and healthy desire to eat; (figuratively) a keen enthusiasm for something",
+      "synonyms": ["good appetite", "hearty appetite", "keen appetite"],
+      "collocations": ["have a healthy appetite", "a healthy appetite for food", "a healthy appetite for learning"],
+      "example_simple": "The children came home with a healthy appetite after playing outside.",
+      "example_complex": "Even in his eighties, he retained a healthy appetite for new ideas and challenges.",
+      "vi_meaning_correction": "ăn khoẻ, ăn ngon miệng"
+    },
+    "pubcol-w-8357284bcb339ac8": {
+      "synonyms": ["piles", "stacks", "loads", "masses"],
+      "collocations": ["heaps of time", "in heaps", "heaps of money"],
+      "example_simple": "There were heaps of leaves in the garden after the storm.",
+      "example_complex": "She left the interview feeling confident, knowing she had heaps of relevant experience to offer."
+    },
+    "pubcol-w-ec1318f3a91bcdf3": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/hɑːrt tuː hɑːrt/",
+      "definition_en": "involving a frank, sincere and personal conversation between two people",
+      "synonyms": ["sincere", "frank", "candid", "intimate"],
+      "collocations": ["have a heart-to-heart", "a heart-to-heart talk", "a heart-to-heart chat"],
+      "example_simple": "We had a heart-to-heart talk about her problems at school.",
+      "example_complex": "It took a long heart-to-heart conversation before the two friends finally cleared up the misunderstanding."
+    },
+    "pubcol-w-eb5eeef6ff442323": {
+      "synonyms": ["sincere", "genuine", "wholehearted", "earnest"],
+      "collocations": ["heartfelt thanks", "heartfelt apology", "heartfelt gratitude"],
+      "example_simple": "She gave a heartfelt thank-you to everyone who helped.",
+      "example_complex": "In his speech, the director offered heartfelt gratitude to the volunteers who had made the project possible."
+    },
+    "pubcol-w-d9420082811e9242": {
+      "synonyms": ["heart", "core", "centre", "hub"],
+      "collocations": ["agricultural heartland", "industrial heartland", "the nation's heartland"],
+      "example_simple": "The region is the agricultural heartland of the country.",
+      "example_complex": "The party lost support even in its traditional heartland, signalling a deep shift in public opinion."
+    }
+  }
+}

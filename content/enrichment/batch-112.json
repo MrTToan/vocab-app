@@ -1,0 +1,215 @@
+{
+  "meta": { "batch": "batch-112", "authored_by": "claude", "count": 25 },
+  "words": {
+    "fccaf00f-472e-43d1-bc3a-6545a09cd987": {
+      "difficulty": "7.0",
+      "definition_en": "a network of pipes and treatment facilities that carries away waste water and human waste",
+      "ipa": "/ˈsuːɪdʒ ˌsɪstəm/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-b9923336b5c34a96": {
+      "difficulty": "8.0",
+      "synonyms": ["sexual abuse", "sexual victimisation", "abuse"],
+      "collocations": ["victims of sexual exploitation", "combat sexual exploitation", "child sexual exploitation"],
+      "example_simple": "The charity works to protect vulnerable children from sexual exploitation.",
+      "example_complex": "The report exposed how criminal networks profited from the sexual exploitation of trafficked women across several countries.",
+      "definition_en": "the act of taking unfair advantage of someone for sexual purposes, often involving coercion or abuse",
+      "ipa": "/ˈsɛkʃuəl ˌɛksplɔɪˈteɪʃən/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-b5a3c9cc939cbc84": {
+      "difficulty": "7.0",
+      "synonyms": ["unwanted advances", "sexual misconduct", "molestation"],
+      "collocations": ["report sexual harassment", "workplace sexual harassment", "victim of sexual harassment"],
+      "example_simple": "She reported her colleague for sexual harassment.",
+      "example_complex": "The company introduced strict policies after several employees complained about sexual harassment in the workplace.",
+      "definition_en": "unwelcome sexual behaviour, comments, or advances that make someone feel uncomfortable or threatened",
+      "ipa": "/ˈsɛkʃuəl həˈræsmənt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-8577cb2c1ee289dc": {
+      "difficulty": "6.0",
+      "synonyms": ["hurry up", "get moving", "get a move on"],
+      "collocations": ["come on, shake a leg", "shake a leg, we're late", "better shake a leg"],
+      "example_simple": "Shake a leg, or we'll miss the bus!",
+      "example_complex": "If we want to catch the early train, everyone had better shake a leg and finish packing now.",
+      "definition_en": "to hurry up or move quickly",
+      "ipa": "/ˌʃeɪk ə ˈlɛɡ/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-c73ab437668a2c7c": {
+      "difficulty": "7.0",
+      "synonyms": ["tremble", "shiver", "quake"],
+      "collocations": ["shaking like a leaf", "shake like a leaf with fear", "left him shaking like a leaf"],
+      "example_simple": "She was shaking like a leaf before her exam.",
+      "example_complex": "Standing alone on the stage under the bright lights, he was shaking like a leaf as the audience fell silent.",
+      "definition_en": "to tremble uncontrollably, usually from fear or cold",
+      "ipa": "/ˌʃeɪk laɪk ə ˈliːf/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-c6b68ec56b3f182d": {
+      "difficulty": "6.0",
+      "synonyms": ["get over a cold", "recover from a cold", "fight off a cold"],
+      "collocations": ["shake off a cold", "can't shake off this cold", "took weeks to shake off the cold"],
+      "example_simple": "It took me a week to shake off a cold.",
+      "example_complex": "Despite plenty of rest and medicine, she just couldn't shake off the cold that had lingered since winter began.",
+      "definition_en": "to recover from a cold or minor illness",
+      "ipa": "/ˌʃeɪk ɒf ə ˈkəʊld/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-49835cc1954c4024": {
+      "difficulty": "6.0",
+      "synonyms": ["stir things up", "make changes", "shake up"],
+      "collocations": ["shake things up a bit", "time to shake things up", "shake things up at work"],
+      "example_simple": "The new manager wants to shake things up at the office.",
+      "example_complex": "After years of the same routine, she decided to shake things up by moving abroad and starting an entirely new career.",
+      "definition_en": "to make significant changes to something, often to improve it or break a routine",
+      "ipa": "/ˌʃeɪk ˈθɪŋz ˌʌp/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-f8854de368f32845": {
+      "difficulty": "6.0",
+      "synonyms": ["stay fit", "keep fit", "stay in shape"],
+      "collocations": ["keep your body in good shape", "keep in good shape", "stay in good shape"],
+      "example_simple": "Exercise every day helps you keep your body in good shape.",
+      "example_complex": "To keep his body in good shape well into his sixties, he combined regular swimming with a carefully balanced diet.",
+      "definition_en": "to maintain a healthy and physically fit body",
+      "ipa": "/ˌkiːp ˈbɒdi ɪn ə ɡʊd ˈʃeɪp/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-8a3c71c79a60171d": {
+      "difficulty": "6.0",
+      "synonyms": ["improve", "get better", "get one's act together"],
+      "collocations": ["shape up or ship out", "start to shape up", "things are shaping up nicely"],
+      "example_simple": "The teacher told him to shape up or leave the class.",
+      "example_complex": "After a shaky start to the season, the young team began to shape up once the new coach introduced stricter training.",
+      "definition_en": "to improve one's behaviour or performance, or to develop in a good way",
+      "ipa": "/ˌʃeɪp ˈʌp/",
+      "part_of_speech": "phrase"
+    },
+    "44f68926-bf28-4682-ac35-f685fc0f04b6": {
+      "difficulty": "6.0",
+      "ipa": "/ʃɑːp/"
+    },
+    "pubcol-w-e950fd5a6ff06f0c": {
+      "difficulty": "6.0",
+      "synonyms": ["stabbing pain", "acute pain", "piercing pain"],
+      "collocations": ["a sharp pain in the chest", "feel a sharp pain", "sudden sharp pain"],
+      "example_simple": "I felt a sharp pain in my knee when I stood up.",
+      "example_complex": "A sudden sharp pain shot through his lower back, forcing him to stop and lean against the wall.",
+      "definition_en": "a sudden, intense, stabbing physical pain",
+      "ipa": "/ˌʃɑːp ˈpeɪn/",
+      "part_of_speech": "noun"
+    },
+    "979c492a-caa7-47fd-bbe7-801559f44abe": {
+      "difficulty": "6.0",
+      "ipa": "/ˈʃɑːpli/"
+    },
+    "pubcol-w-3c7fdd8f20c0c823": {
+      "difficulty": "7.0",
+      "synonyms": ["score", "musical notation", "printed music"],
+      "collocations": ["read sheet music", "a piece of sheet music", "buy sheet music"],
+      "example_simple": "She placed the sheet music on the piano stand.",
+      "example_complex": "Although he could play by ear, learning to read sheet music opened up a much wider range of classical repertoire for him.",
+      "definition_en": "printed or written music showing the notes for a piece to be played or sung",
+      "ipa": "/ˈʃiːt ˌmjuːzɪk/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-2db0973f709d9f0f": {
+      "difficulty": "8.0",
+      "synonyms": ["school", "shallow", "sandbank"],
+      "collocations": ["a shoal of fish", "swim in a shoal", "run aground on a shoal"],
+      "example_simple": "A large shoal of small fish moved through the clear water.",
+      "example_complex": "The divers watched in awe as a vast shoal of silver fish shifted direction all at once, glinting in the sunlight.",
+      "definition_en": "a large group of fish swimming together; also a shallow area of water",
+      "ipa": "/ʃəʊl/",
+      "part_of_speech": "noun",
+      "vi_meaning_correction": "đàn cá"
+    },
+    "571cccfa-aff7-4e8c-adbe-359e327de8a5": {
+      "difficulty": "8.0",
+      "definition_en": "a hereditary military commander who was the effective ruler of Japan for much of its history",
+      "ipa": "/ˈʃəʊɡʌn/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-6ebd7b0e950e9a10": {
+      "difficulty": "8.0",
+      "synonyms": ["chat", "chew the fat", "make small talk"],
+      "collocations": ["shoot the breeze with friends", "just shooting the breeze", "sit and shoot the breeze"],
+      "example_simple": "We sat on the porch and shot the breeze for an hour.",
+      "example_complex": "Instead of getting straight to business, the two old colleagues spent the first half-hour happily shooting the breeze about their families.",
+      "definition_en": "to have a casual, relaxed conversation about unimportant things",
+      "ipa": "/ˌʃuːt ðə ˈbriːz/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "tán gẫu, nói chuyện phiếm"
+    },
+    "pubcol-w-e519ef2e03b924ce": {
+      "difficulty": "5.0",
+      "synonyms": ["shopping centre", "mall", "retail centre"],
+      "collocations": ["go to the shopping mall", "a large shopping mall", "shopping malls are crowded"],
+      "example_simple": "We spent the afternoon at the new shopping mall.",
+      "example_complex": "Modern shopping malls have become social hubs, offering not just shops but cinemas, restaurants, and play areas for families.",
+      "definition_en": "a large indoor building with many shops, restaurants, and services",
+      "ipa": "/ˈʃɒpɪŋ ˌmɔːlz/",
+      "part_of_speech": "noun",
+      "vi_meaning_correction": "trung tâm thương mại"
+    },
+    "4c909302-cb86-4f26-8b13-d1125975a243": {
+      "difficulty": "8.0",
+      "definition_en": "short periods of time spent doing a particular activity or job",
+      "ipa": "/ˌʃɔːt ˈstɪnts/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-722563b659256a99": {
+      "difficulty": "7.0",
+      "synonyms": ["wild guess", "long shot", "random guess"],
+      "collocations": ["just a shot in the dark", "take a shot in the dark", "it was a shot in the dark"],
+      "example_simple": "I didn't know the answer, so my guess was a shot in the dark.",
+      "example_complex": "With almost no evidence to go on, naming the suspect was really just a shot in the dark that happened to pay off.",
+      "definition_en": "a wild guess or an attempt made with little chance of success",
+      "ipa": "/ˌʃɒt ɪn ðə ˈdɑːk/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "sự đoán mò, đoán liều"
+    },
+    "pubcol-w-0520b5b4fa07f93d": {
+      "difficulty": "8.0",
+      "synonyms": ["give a reason", "justify", "explain"],
+      "collocations": ["show cause why", "a show cause notice", "ordered to show cause"],
+      "example_simple": "The court asked him to show cause why he should not be punished.",
+      "example_complex": "The company was issued a show cause notice requiring it to explain, within fourteen days, why its licence should not be revoked.",
+      "definition_en": "to give an adequate reason or justification, especially in a legal context",
+      "ipa": "/ˌʃəʊ ˈkɔːz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-68d3e248730c2baf": {
+      "difficulty": "6.0",
+      "ipa": "/ˌʃəʊ ˈɒf/"
+    },
+    "pubcol-w-0e6a89d8eb9a2584": {
+      "difficulty": "5.0",
+      "ipa": "/ˌʃəʊ ˈʌp/"
+    },
+    "pubcol-w-dd7aa6b2c1d4b4fe": {
+      "synonyms": ["astute", "clever", "sharp", "canny"],
+      "collocations": ["a shrewd businessman", "a shrewd investment", "shrewd judgement"],
+      "example_simple": "She is a shrewd businesswoman who rarely makes a bad deal.",
+      "example_complex": "His shrewd assessment of the market allowed him to sell his shares just before the sudden collapse in prices."
+    },
+    "pubcol-w-dad9b5587a408533": {
+      "synonyms": ["wither", "shrink", "dry up", "wrinkle"],
+      "collocations": ["shrivel in the heat", "leaves shrivel and die", "shrivel up"],
+      "example_simple": "The plants began to shrivel in the hot sun.",
+      "example_complex": "Without regular watering, the once-lush garden slowly began to shrivel, its leaves curling and browning at the edges."
+    },
+    "pubcol-w-4ad811f0e0914294": {
+      "difficulty": "5.0",
+      "synonyms": ["turn off the computer", "power down the computer", "switch off the computer"],
+      "collocations": ["shut down the computer properly", "remember to shut down the computer", "shut down the computer before leaving"],
+      "example_simple": "Please shut down the computer before you go home.",
+      "example_complex": "The IT department reminded staff to shut down their computers each night to save energy and install overnight security updates.",
+      "definition_en": "to switch off a computer completely using its operating system",
+      "ipa": "/ˌʃʌt daʊn ðə kəmˈpjuːtə/",
+      "part_of_speech": "phrase"
+    }
+  }
+}

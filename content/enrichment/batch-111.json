@@ -1,0 +1,206 @@
+{
+  "meta": { "batch": "batch-111", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-6bb22b666cced4b9": {
+      "synonyms": ["self-service", "self-provided", "do-it-yourself"],
+      "collocations": ["self-catering apartment", "self-catering accommodation", "self-catering holiday"],
+      "example_simple": "We booked a self-catering apartment so we could cook our own meals.",
+      "example_complex": "Rather than paying for expensive hotel restaurants, the family opted for a self-catering cottage where they could prepare local produce themselves."
+    },
+    "pubcol-w-4c90f255e713e67b": {
+      "synonyms": ["selfish", "egocentric", "self-absorbed", "egotistical"],
+      "collocations": ["a self-centred person", "self-centred behaviour", "self-centred attitude"],
+      "example_simple": "He is so self-centred that he never asks how other people feel.",
+      "example_complex": "Her self-centred outlook meant she rarely considered the impact of her decisions on those around her."
+    },
+    "pubcol-w-63df492a85838b1c": {
+      "synonyms": ["independent", "autonomous", "self-sufficient"],
+      "collocations": ["self-contained flat", "self-contained unit", "self-contained system"],
+      "example_simple": "They rented a self-contained flat with its own kitchen and bathroom.",
+      "example_complex": "The research station was entirely self-contained, generating its own power and recycling its water supply."
+    },
+    "d71b2477-4140-4be9-aa3b-444544da5e60": {
+      "difficulty": "8.0",
+      "definition_en": "a strong feeling of disgust or hatred directed at oneself",
+      "ipa": "/ˌself rɪˈvʌlʃən/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-b9de8d5cc26bdf94": {
+      "synonyms": ["half-round", "arc-shaped", "curved"],
+      "collocations": ["semi-circular arch", "semi-circular shape", "semi-circular arrangement"],
+      "example_simple": "The seats were placed in a semi-circular arrangement around the stage.",
+      "example_complex": "The ancient theatre featured a semi-circular seating design that allowed sound to carry naturally to every row."
+    },
+    "pubcol-w-4b7a9e0121059483": {
+      "synonyms": ["duplex", "twin home", "paired house"],
+      "collocations": ["semi-detached house", "semi-detached home", "semi-detached property"],
+      "example_simple": "They live in a semi-detached house that shares one wall with their neighbours.",
+      "example_complex": "The suburb is dominated by semi-detached homes, each joined to an adjoining property along a single party wall."
+    },
+    "8feb631a-1c45-447d-8eca-d5065610f91c": {
+      "difficulty": "7.0",
+      "definition_en": "a gemstone that is valuable but less rare or costly than precious stones such as diamonds",
+      "ipa": "/ˌsemiˈpreʃəs dʒem/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-436f84af365608a9": {
+      "difficulty": "7.0",
+      "synonyms": ["condemn to death", "convict", "pass a death sentence"],
+      "collocations": ["sentence someone to death", "sentence someone to life imprisonment", "be sentenced to death"],
+      "example_simple": "The court sentenced the murderer to death.",
+      "example_complex": "After a lengthy trial, the judge sentenced him to life imprisonment for his role in the crimes.",
+      "definition_en": "to officially punish a criminal with death or lifelong imprisonment",
+      "ipa": "/ˈsentəns ˈsʌmbədi tə deθ/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "kết án tử hình / tù chung thân ai đó"
+    },
+    "7a4e4245-4e97-4615-88c0-0e35a3dc2614": {
+      "difficulty": "6.0",
+      "definition_en": "based on or showing tender emotions rather than reason, sometimes excessively so",
+      "ipa": "/ˌsentɪˈmentl/",
+      "part_of_speech": "adjective"
+    },
+    "7390de9c-15e0-4f8a-a2a2-2a5d8a017455": {
+      "difficulty": "7.0",
+      "definition_en": "a farm labourer in the feudal system who was bound to work on a lord's land",
+      "ipa": "/sɜːf/",
+      "part_of_speech": "noun",
+      "vi_meaning_correction": "nông nô (người lao động bị ràng buộc với đất của lãnh chúa thời phong kiến)"
+    },
+    "pubcol-w-c62f38a12c264b5d": {
+      "difficulty": "6.0",
+      "synonyms": ["grave illness", "severe illness", "critical condition"],
+      "collocations": ["suffer from a serious illness", "recover from a serious illness", "a serious illness"],
+      "example_simple": "He missed months of work because of a serious illness.",
+      "example_complex": "A serious illness in her twenties forced her to rethink her priorities and adopt a healthier lifestyle.",
+      "definition_en": "a severe or dangerous medical condition",
+      "ipa": "/ˈsɪəriəs ˈɪlnəs/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-a5cb56b9ceb15c19": {
+      "difficulty": "6.0",
+      "synonyms": ["gravely ill", "critically ill", "severely unwell"],
+      "collocations": ["become seriously ill", "seriously ill patient", "fall seriously ill"],
+      "example_simple": "Her grandfather is seriously ill in hospital.",
+      "example_complex": "When he became seriously ill during the trip, the family had to cut their holiday short and fly home.",
+      "definition_en": "suffering from a severe or dangerous medical condition",
+      "ipa": "/ˈsɪəriəsli ɪl/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "ốm nặng"
+    },
+    "ea470c96-5962-47af-b0e5-dd3e063da69e": {
+      "difficulty": "8.0",
+      "definition_en": "a storyteller who preaches moral lessons in a heavy or self-righteous way",
+      "ipa": "/ˈsɜːmənaɪzɪŋ nəˈreɪtə/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-31160b7682d728f2": {
+      "difficulty": "6.0",
+      "synonyms": ["land on the moon", "walk on the moon", "reach the moon"],
+      "collocations": ["set foot on the moon", "first to set foot on the moon", "set foot on foreign soil"],
+      "example_simple": "Neil Armstrong was the first person to set foot on the moon.",
+      "example_complex": "The moment humans set foot on the moon in 1969 marked a turning point in the history of space exploration.",
+      "definition_en": "to land on and step onto the surface of the moon",
+      "ipa": "/set fʊt ɒn ðə muːn/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-f5ea20ece17279bb": {
+      "difficulty": "5.0",
+      "synonyms": ["depart", "leave", "start out", "head off"],
+      "collocations": ["set off early", "set off on a journey", "set off for work"],
+      "example_simple": "We set off for the airport at six in the morning.",
+      "example_complex": "Eager to beat the traffic, they set off at dawn on the long drive north.",
+      "definition_en": "to begin a journey or start moving toward a destination",
+      "ipa": "/set ɒf/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-556551997c2cd82d": {
+      "difficulty": "7.0",
+      "synonyms": ["provide for", "finance", "establish"],
+      "collocations": ["set someone up in business", "set someone up for life", "set someone up with money"],
+      "example_simple": "His parents set him up with enough money to start his own shop.",
+      "example_complex": "A generous inheritance set her up for life, allowing her to pursue creative projects without financial worry.",
+      "definition_en": "to provide someone with the money or resources they need to do something",
+      "ipa": "/set ˈsʌmbədi ʌp/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-ec9dac4affbb8c55": {
+      "difficulty": "6.0",
+      "synonyms": ["be a role model", "lead by example", "set a good example"],
+      "collocations": ["set a fine example", "set a good example to others", "set an example for someone"],
+      "example_simple": "Teachers should set a fine example to their students.",
+      "example_complex": "By volunteering every weekend, she set a fine example for the younger members of the community to follow.",
+      "definition_en": "to behave in a way that others can admire and imitate",
+      "ipa": "/set ðə faɪn ɪɡˈzɑːmpl tə ˈsʌmbədi/",
+      "part_of_speech": "phrase"
+    },
+    "d3e95860-d4ea-4ca9-8fcc-7376d184b5d9": {
+      "difficulty": "7.0",
+      "definition_en": "to create the conditions that make an event or development possible",
+      "ipa": "/set ðə steɪdʒ/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-eafa3ec6a2e1f3ee": {
+      "difficulty": "5.0",
+      "ipa": "/set ʌp/"
+    },
+    "pubcol-w-c0a85de48aeb6b53": {
+      "difficulty": "6.0",
+      "synonyms": ["break a world record", "establish a record", "set a new best"],
+      "collocations": ["set a new world record", "achieve a new world record", "break a world record"],
+      "example_simple": "The sprinter set a new world record in the 100 metres.",
+      "example_complex": "By shaving two seconds off the previous time, the young swimmer achieved a new world record that experts had thought impossible.",
+      "definition_en": "to establish the best performance ever officially recorded in an activity",
+      "ipa": "/set əˈtʃiːv ə njuː wɜːld ˈrekɔːd/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-921cfb42f05251b4": {
+      "difficulty": "5.0",
+      "synonyms": ["save money", "put by", "reserve funds"],
+      "collocations": ["set aside money for", "put aside money each month", "set aside savings"],
+      "example_simple": "She sets aside money every month for a holiday.",
+      "example_complex": "Financial advisers recommend putting aside money regularly so that unexpected expenses do not derail your budget.",
+      "definition_en": "to save money by keeping it separate for a particular purpose",
+      "ipa": "/set pʊt əˈsaɪd ˈmʌni/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-f92fab42a7e9f49f": {
+      "difficulty": "7.0",
+      "synonyms": ["compose music for", "put to music", "score"],
+      "collocations": ["set a poem to music", "set words to music", "set a text to music"],
+      "example_simple": "The composer set the famous poem to music.",
+      "example_complex": "Several Romantic composers set Goethe's poems to music, transforming the verses into celebrated songs.",
+      "definition_en": "to compose music to accompany the words of a poem",
+      "ipa": "/set ə ˈpəʊɪm tə ˈmjuːzɪk/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "phổ nhạc một bài thơ"
+    },
+    "pubcol-w-161d474e014e3f7f": {
+      "difficulty": "6.0",
+      "synonyms": ["resolve a dispute", "settle an argument", "reconcile differences"],
+      "collocations": ["settle a dispute", "settle a disagreement peacefully", "settle a legal dispute"],
+      "example_simple": "The two sides met to settle their disagreement.",
+      "example_complex": "Mediators were called in to settle the long-running dispute before it reached the courts.",
+      "definition_en": "to bring an argument or conflict to an end by reaching an agreement",
+      "ipa": "/ˈsetl ə ˌdɪsəˈɡriːmənt dɪˈspjuːt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-a8460aeb55382531": {
+      "difficulty": "5.0",
+      "synonyms": ["establish a company", "found a business", "start a company"],
+      "collocations": ["set up a company", "set up a business", "set up a new firm"],
+      "example_simple": "They set up a company to sell handmade furniture.",
+      "example_complex": "After years of working for others, she decided to set up a company of her own and hire a small team.",
+      "definition_en": "to establish or start a new business organisation",
+      "ipa": "/set ʌp ə ˈkʌmpəni/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "thành lập công ty"
+    },
+    "5a533e02-95c6-4d3b-b426-5087d8c92048": {
+      "difficulty": "7.0",
+      "definition_en": "the process of removing and treating waste water and sewage",
+      "ipa": "/ˈsuːɪdʒ dɪˈspəʊzl/",
+      "part_of_speech": "noun"
+    }
+  }
+}

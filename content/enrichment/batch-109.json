@@ -1,0 +1,202 @@
+{
+  "meta": { "batch": "batch-109", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-2f6c423b8822f6bc": {
+      "difficulty": "6.0",
+      "part_of_speech": "idiom",
+      "ipa": "/seɪv fər ə ˈreɪni deɪ/",
+      "definition_en": "to keep some money aside for a time when it may be needed unexpectedly",
+      "synonyms": ["put money aside", "set aside for emergencies", "keep a nest egg"],
+      "collocations": ["always save for a rainy day", "wisely save for a rainy day", "saving something for a rainy day"],
+      "example_simple": "My grandmother taught me to save for a rainy day.",
+      "example_complex": "Rather than spending every bonus, she chose to save for a rainy day, knowing that unexpected expenses could arise at any time."
+    },
+    "pubcol-w-a440a94d5d1233f6": {
+      "synonyms": ["tasty", "flavoursome", "salty", "appetising"],
+      "collocations": ["savoury dish", "savoury snack", "sweet or savoury"],
+      "example_simple": "I prefer savoury food to sweet desserts.",
+      "example_complex": "The buffet offered a tempting range of savoury pastries alongside the sugary treats.",
+      "vi_meaning_correction": "mặn, đậm đà (không ngọt)"
+    },
+    "pubcol-w-46cde58f48d57e54": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/seɪ ˌɡʊdˈbaɪ tə ˌsʌmbədi/",
+      "definition_en": "to tell someone that you are leaving or parting from them",
+      "synonyms": ["bid farewell to someone", "take leave of someone", "wave goodbye to someone"],
+      "collocations": ["say goodbye to your friends", "never got to say goodbye", "say a final goodbye"],
+      "example_simple": "I waved to say goodbye to my classmates.",
+      "example_complex": "Before boarding the train, she paused to say goodbye to her family, promising to write every week."
+    },
+    "pubcol-w-1be944b2a4b7b371": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/seɪ həˈloʊ tə ˌsʌmbədi/",
+      "definition_en": "to greet someone when you meet or contact them",
+      "synonyms": ["greet someone", "welcome someone", "acknowledge someone"],
+      "collocations": ["say hello to your neighbours", "stop by to say hello", "say a quick hello"],
+      "example_simple": "Come in and say hello to everyone.",
+      "example_complex": "Whenever he visits the office, he makes a point of stopping by each desk to say hello to his old colleagues."
+    },
+    "pubcol-w-38dd7ff6c486fb68": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/seɪ ðə rɒŋ θɪŋ/",
+      "definition_en": "to say something inappropriate or hurtful, often by accident",
+      "synonyms": ["misspeak", "put your foot in it", "speak out of turn"],
+      "collocations": ["always say the wrong thing", "afraid of saying the wrong thing", "say the wrong thing at the wrong time"],
+      "example_simple": "I'm worried I'll say the wrong thing at the interview.",
+      "example_complex": "In such a tense meeting, one careless remark can say the wrong thing and undo weeks of careful diplomacy."
+    },
+    "e1230f07-82fc-445a-8f34-0a2f6649a658": {
+      "difficulty": "7.0"
+    },
+    "pubcol-w-97ed7f6f63625df0": {
+      "synonyms": ["scurry", "dart", "scuttle", "scramble"],
+      "collocations": ["scamper away", "scamper across the floor", "children scampering about"],
+      "example_simple": "The squirrels scamper up the tree when I come near.",
+      "example_complex": "At the first clap of thunder, the puppies scampered under the sofa and refused to come out.",
+      "vi_meaning_correction": "chạy tung tăng, chạy vụt (bằng những bước nhanh và ngắn)"
+    },
+    "f4e4d431-e4c0-4276-b121-871492d780ef": {
+      "difficulty": "7.0",
+      "definition_en": "a person who is blamed for the wrongdoings or mistakes of others",
+      "ipa": "/ˈskeɪpɡoʊt/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-503ab04b1b198278": {
+      "synonyms": ["shortage", "lack", "insufficiency", "dearth"],
+      "collocations": ["water scarcity", "scarcity of resources", "growing scarcity"],
+      "example_simple": "The scarcity of clean water is a serious problem in the region.",
+      "example_complex": "The looming scarcity of skilled workers has forced many firms to invest heavily in training programmes."
+    },
+    "pubcol-w-34305c61a64c3c5c": {
+      "part_of_speech": "adjective",
+      "definition_en": "feeling frightened or afraid of something",
+      "synonyms": ["frightened", "afraid", "terrified", "fearful"],
+      "collocations": ["scared of spiders", "scared to death", "get scared easily"],
+      "example_simple": "I was scared of the dark when I was a child.",
+      "example_complex": "Although she looked calm on stage, she later admitted she had been absolutely scared of forgetting her lines."
+    },
+    "pubcol-w-a384cff1a3694293": {
+      "part_of_speech": "noun",
+      "definition_en": "a piece of cloth worn around the neck, head or shoulders for warmth or decoration",
+      "synonyms": ["shawl", "muffler", "wrap", "neckerchief"],
+      "collocations": ["woollen scarf", "wrap a scarf around", "silk scarf"],
+      "example_simple": "She wrapped a warm scarf around her neck before going out.",
+      "example_complex": "He gave her a hand-knitted scarf, its bright colours a welcome contrast to the grey winter streets."
+    },
+    "pubcol-w-9e408b030ac55fc8": {
+      "difficulty": "8.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˈskeɪðɪŋ ˈkrɪtɪsɪzəmz əv ˈsʌmθɪŋ/",
+      "definition_en": "extremely harsh and severe criticism of something",
+      "synonyms": ["harsh criticism", "scathing attack", "blistering condemnation"],
+      "collocations": ["scathing criticism of the policy", "face scathing criticism", "scathing criticism from critics"],
+      "example_simple": "The report faced scathing criticism from the public.",
+      "example_complex": "The minister's proposal drew scathing criticisms of its cost and feasibility from economists across the political spectrum."
+    },
+    "pubcol-w-3a1e3fa7afed17e3": {
+      "part_of_speech": "noun",
+      "definition_en": "the natural features of a landscape considered in terms of their appearance",
+      "synonyms": ["landscape", "scenic view", "vista", "surroundings"],
+      "collocations": ["beautiful scenery", "mountain scenery", "enjoy the scenery"],
+      "example_simple": "The scenery along the coast is breathtaking.",
+      "example_complex": "As the train wound through the valley, passengers fell silent, absorbed by the dramatic mountain scenery."
+    },
+    "pubcol-w-631a56a01b047624": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˈʃedjuːld ˈmeɪntənəns/",
+      "definition_en": "planned repair or servicing work carried out at regular, arranged times",
+      "synonyms": ["routine servicing", "planned maintenance", "regular upkeep"],
+      "collocations": ["undergo scheduled maintenance", "scheduled maintenance work", "due for scheduled maintenance"],
+      "example_simple": "The website is offline for scheduled maintenance.",
+      "example_complex": "The airline grounded the aircraft for scheduled maintenance, ensuring every component met strict safety standards before the next flight."
+    },
+    "pubcol-w-89accb9779ed58ec": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˈʃedjuːld ˈtreɪdɪŋ ˈseʃən fliː ˈmɑːrkɪt/",
+      "definition_en": "a regular, arranged market where second-hand and cheap goods are bought and sold",
+      "synonyms": ["flea market", "street market", "open-air market"],
+      "collocations": ["visit the flea market", "browse a flea market", "flea market stall"],
+      "example_simple": "We found an old lamp at the flea market on Sunday.",
+      "example_complex": "During the scheduled trading session, the flea market buzzed with dealers haggling over vintage furniture and rare records."
+    },
+    "pubcol-w-655f83be7512e5b5": {
+      "difficulty": "5.0",
+      "part_of_speech": "noun",
+      "ipa": "/skuːl/",
+      "definition_en": "an institution where children or students are taught",
+      "synonyms": ["academy", "institution", "college"],
+      "collocations": ["public school", "private school", "attend school"],
+      "example_simple": "My little brother goes to a public school near our house.",
+      "example_complex": "The debate over whether independent schools offer a genuine advantage over state schools continues to divide educators.",
+      "vi_meaning_correction": "trường học"
+    },
+    "pubcol-w-db306f958b6315b8": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/skuːl sərˈtɪfɪkət/",
+      "definition_en": "an official document recording a student's academic results and progress at school",
+      "synonyms": ["school report", "academic record", "school transcript"],
+      "collocations": ["issue a school certificate", "present your school certificate", "official school certificate"],
+      "example_simple": "You need your school certificate to apply for university.",
+      "example_complex": "Applicants were asked to submit a certified copy of their school certificate along with their personal statement."
+    },
+    "04a7507a-44b2-4ac5-9f9e-849cf4d018cc": {
+      "difficulty": "6.0"
+    },
+    "pubcol-w-78efb1f71de4482b": {
+      "synonyms": ["frown", "glower", "glare", "grimace"],
+      "collocations": ["scowl at someone", "a deep scowl", "scowl in anger"],
+      "example_simple": "He gave me an angry scowl when I interrupted him.",
+      "example_complex": "She scowled at the referee's decision, folding her arms in silent protest."
+    },
+    "8f9cf6f8-9e61-43f4-bef4-3e4b9544a6a9": {
+      "difficulty": "7.0",
+      "definition_en": "to move or climb quickly using your hands and feet, or to struggle to do something urgently",
+      "ipa": "/ˈskræmbl/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-15ab0ffc4109e659": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/skriːm ɪn ˈpænɪk/",
+      "definition_en": "to cry out loudly because of sudden fear",
+      "synonyms": ["shriek in fear", "cry out in terror", "yell in panic"],
+      "collocations": ["scream in panic", "start to scream in panic", "screaming in panic"],
+      "example_simple": "The children screamed in panic when the lights went out.",
+      "example_complex": "As smoke filled the corridor, passengers began to scream in panic and rush toward the emergency exits."
+    },
+    "pubcol-w-768d5b4346788d8f": {
+      "synonyms": ["shriek", "squeal", "screech", "squawk"],
+      "collocations": ["a loud screech", "the screech of brakes", "screech to a halt"],
+      "example_simple": "I heard the screech of tyres before the crash.",
+      "example_complex": "The car came to a stop with a piercing screech that echoed down the empty street."
+    },
+    "5afa1fa2-dbd2-4854-8193-f881216cbd83": {
+      "difficulty": "8.0",
+      "definition_en": "a mistake made by a copyist when hand-copying a text",
+      "ipa": "/ˈskraɪbl ˈerər/",
+      "part_of_speech": "noun"
+    },
+    "5ef07886-be6d-4f61-bb6d-6e317ace42e1": {
+      "difficulty": "7.0",
+      "definition_en": "a person who copied documents by hand before printing was invented",
+      "ipa": "/skraɪb/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-c7a437d330756522": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/skrɪmp ənd seɪv/",
+      "definition_en": "to live very economically in order to save money",
+      "synonyms": ["scrimp and scrape", "pinch pennies", "tighten your belt"],
+      "collocations": ["scrimp and save for years", "have to scrimp and save", "scrimp and save every penny"],
+      "example_simple": "They had to scrimp and save to buy their first home.",
+      "example_complex": "For a decade the couple scrimped and saved, forgoing holidays and luxuries so their children could attend university."
+    }
+  }
+}

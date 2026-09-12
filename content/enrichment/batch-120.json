@@ -1,0 +1,160 @@
+{
+  "meta": { "batch": "batch-120", "authored_by": "claude", "count": 25 },
+  "words": {
+    "70c84e85-ee49-4384-845d-11ae9bc5e1e2": {
+      "difficulty": "7.0",
+      "definition_en": "unexpected lines or creases in a surface or in skin",
+      "ipa": "/səˈpraɪzɪŋ ˈrɪŋkəlz/",
+      "part_of_speech": "phrase"
+    },
+    "e8afde2c-f19f-41e9-a93a-c07381a350ce": {
+      "difficulty": "7.0",
+      "definition_en": "relating to surrealism; strange and dreamlike, combining unexpected images",
+      "ipa": "/səˈriːəlɪst/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-124ede6e7ef64319": {
+      "difficulty": "7.0",
+      "ipa": "/sərˈveɪləns/"
+    },
+    "294926f4-9f2f-4d0a-8fee-2729be796f27": {
+      "difficulty": "7.0",
+      "definition_en": "likely to be affected by or easily influenced by something",
+      "ipa": "/səˈseptəbl/",
+      "part_of_speech": "adjective"
+    },
+    "1499b6fc-8ac4-4db7-a83b-cb309a514aa3": {
+      "difficulty": "6.0",
+      "definition_en": "to believe that someone may be guilty or that something may be true, often without proof",
+      "ipa": "/səˈspekt/",
+      "part_of_speech": "verb"
+    },
+    "5c3da15d-50a4-4fa3-849c-59fd0e6cd7a2": {
+      "difficulty": "6.0",
+      "definition_en": "to officially stop something for a period of time, or to hang something so it can move freely",
+      "ipa": "/səˈspend/",
+      "part_of_speech": "verb"
+    },
+    "e7292e34-d753-42fb-af49-944670bbe5d0": {
+      "difficulty": "7.0",
+      "definition_en": "to suffer harm or be affected by something damaging",
+      "ipa": "/səˈsteɪn ˈdæmɪdʒ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-428a6de2a514e786": {
+      "difficulty": "6.0",
+      "ipa": "/səˈsteɪnəbl/"
+    },
+    "pubcol-w-a74d7c22d9a4c971": {
+      "synonyms": ["gulp", "ingest", "devour", "consume"],
+      "collocations": ["swallow hard", "swallow a pill", "hard to swallow"],
+      "example_simple": "She took a sip of water to help her swallow the tablet.",
+      "example_complex": "He had to swallow his pride and admit that his original plan had been deeply flawed."
+    },
+    "pubcol-w-5c860f3e020d6df9": {
+      "synonyms": ["crowd", "flock", "throng", "gather"],
+      "collocations": ["a swarm of bees", "swarm around", "swarm into"],
+      "example_simple": "A swarm of bees flew out of the old tree.",
+      "example_complex": "As soon as the doors opened, eager shoppers swarmed into the store to grab the discounted goods."
+    },
+    "pubcol-w-60ab5c380786ee98": {
+      "synonyms": ["swing", "rock", "wobble", "lurch"],
+      "collocations": ["sway gently", "sway back and forth", "sway in the wind"],
+      "example_simple": "The tall trees swayed gently in the evening breeze.",
+      "example_complex": "The speaker's passionate argument was enough to sway even the most sceptical members of the audience."
+    },
+    "34007cfa-4f45-423d-b3f7-cbc83e5e7d65": {
+      "difficulty": "6.0",
+      "definition_en": "to become larger or rounder, often because of injury or an increase in amount",
+      "ipa": "/swel/",
+      "part_of_speech": "verb"
+    },
+    "fa0e2635-29b7-4dd6-bb44-23edfe76fc84": {
+      "difficulty": "7.0",
+      "definition_en": "an insect that flies in a sudden, twisting, changing course",
+      "ipa": "/ˈswɜːvɪŋ ˈɪnsekt/",
+      "part_of_speech": "phrase"
+    },
+    "82b98552-a99d-4bb5-9faa-56693672fa3e": {
+      "difficulty": "7.0",
+      "definition_en": "a highly contagious viral disease that affects pigs",
+      "ipa": "/ˈswaɪn ˈfiːvə/",
+      "part_of_speech": "noun"
+    },
+    "ed6b23ca-166a-4f20-8e7f-83e057d53a1b": {
+      "difficulty": "8.0",
+      "definition_en": "relating to the grammatical arrangement of words in a sentence",
+      "ipa": "/sɪnˈtæktɪk/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-562d1c8ca6f7edc7": {
+      "difficulty": "6.0",
+      "synonyms": ["etiquette", "manners", "decorum"],
+      "collocations": ["good table manners", "teach table manners", "poor table manners"],
+      "example_simple": "Her parents taught her good table manners from a young age.",
+      "example_complex": "In formal settings, impeccable table manners can quietly signal a person's upbringing and attention to social convention.",
+      "definition_en": "the accepted rules of polite behaviour while eating a meal",
+      "ipa": "/ˈteɪbl ˈmænəz/",
+      "part_of_speech": "phrase"
+    },
+    "b3099e7a-4493-4287-82bb-c87c0db9e354": {
+      "difficulty": "8.0",
+      "synonyms": ["circuit", "trajectory", "path"],
+      "definition_en": "the curved path followed by an object moving around a central point",
+      "ipa": "/ˈteɪbl ˈɔːbɪt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-d06df69bee05d2d2": {
+      "synonyms": ["gutter press", "scandal sheet", "rag"],
+      "collocations": ["tabloid newspaper", "tabloid press", "tabloid headlines"],
+      "example_simple": "The tabloid printed a shocking story about the famous actor.",
+      "example_complex": "Serious journalists often resent being lumped together with the tabloid press, whose sensational headlines prioritise gossip over facts."
+    },
+    "aecc826a-0a83-469e-b0d3-4782ab748288": {
+      "difficulty": "7.0",
+      "definition_en": "something that is forbidden or avoided because of social or religious rules",
+      "ipa": "/təˈbuː/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-ec5f319ad88e541a": {
+      "synonyms": ["reticent", "reserved", "uncommunicative", "quiet"],
+      "collocations": ["a taciturn man", "taciturn by nature", "remain taciturn"],
+      "example_simple": "My grandfather was a taciturn man who rarely spoke about his past.",
+      "example_complex": "Despite being taciturn in meetings, she expressed her ideas eloquently and at length in her written reports."
+    },
+    "pubcol-w-8080905daee60369": {
+      "synonyms": ["strategy", "approach", "manoeuvre", "plan"],
+      "collocations": ["change tactics", "a clever tactic", "delaying tactics"],
+      "example_simple": "Changing his tactics, the coach put more players in defence.",
+      "example_complex": "The company resorted to aggressive marketing tactics in an attempt to win back customers from its rivals."
+    },
+    "pubcol-w-bd3e9c09448c417d": {
+      "synonyms": ["insensitive", "undiplomatic", "blunt", "indiscreet"],
+      "collocations": ["a tactless remark", "tactless comment", "rather tactless"],
+      "example_simple": "It was tactless of him to mention her age in front of everyone.",
+      "example_complex": "Her tactless questions about his recent divorce left the whole room feeling uncomfortable."
+    },
+    "pubcol-w-5e9b60f69165f32f": {
+      "synonyms": ["touch", "tap", "catch"],
+      "collocations": ["tag someone", "tag and run", "you're it after being tagged"],
+      "example_simple": "In the game, you have to tag another player to make them 'it'.",
+      "example_complex": "The children raced around the playground, shrieking with delight whenever someone managed to tag the fastest runner."
+    },
+    "pubcol-w-8d57229e20fbedc9": {
+      "difficulty": "7.0",
+      "synonyms": ["tall tale", "far-fetched story", "yarn"],
+      "collocations": ["tell a tall story", "a tall story about", "believe a tall story"],
+      "example_simple": "Nobody believed his tall story about catching a fish as big as a boat.",
+      "example_complex": "Whenever he returned from his travels, he would entertain us with tall stories that were clearly more invention than fact.",
+      "definition_en": "an account that is hard to believe because it is exaggerated or untrue",
+      "ipa": "/ˈtɔːl ˈstɔːri/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-6fbcee4c066010c2": {
+      "synonyms": ["traffic jam", "queue", "gridlock", "congestion"],
+      "collocations": ["a long tailback", "cause a tailback", "tailback on the motorway"],
+      "example_simple": "The accident caused a long tailback on the motorway.",
+      "example_complex": "By the time the road was cleared, the tailback stretched for several miles and drivers had been stuck for hours."
+    }
+  }
+}

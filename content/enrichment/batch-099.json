@@ -1,0 +1,177 @@
+{
+  "meta": { "batch": "batch-099", "authored_by": "claude", "count": 26 },
+  "words": {
+    "pubcol-w-1c5e578a20edb3db": {
+      "difficulty": "7.0",
+      "synonyms": ["investigate", "examine", "look into", "inquire into"],
+      "collocations": ["probe into the matter", "probe into someone's past", "probe into allegations"],
+      "example_simple": "Reporters began to probe into the company's finances.",
+      "example_complex": "A parliamentary committee was set up to probe into the alleged misuse of public funds.",
+      "definition_en": "to investigate or examine something closely and thoroughly",
+      "ipa": "/prəʊb ˈɪntuː/",
+      "part_of_speech": "phrase"
+    },
+    "da119b2f-50e8-4279-aefd-123602858c6b": {
+      "difficulty": "7.0",
+      "definition_en": "to announce something officially or publicly",
+      "ipa": "/prəˈkleɪm/",
+      "part_of_speech": "verb"
+    },
+    "b6f48875-6ad0-49ee-9c0c-56eaa6807d3d": {
+      "difficulty": "8.0",
+      "definition_en": "a natural tendency to behave in a particular way",
+      "ipa": "/prəˈklɪvəti/",
+      "part_of_speech": "noun"
+    },
+    "4b81504f-a56b-46b5-b530-1ae0134612b8": {
+      "difficulty": "7.0",
+      "definition_en": "a young person with exceptional abilities or talent",
+      "ipa": "/ˈprɒdɪdʒi/",
+      "part_of_speech": "noun"
+    },
+    "25ce3c42-aa71-497a-bb84-0d10288018b6": {
+      "difficulty": "8.0",
+      "definition_en": "a very large or abundant quantity of something",
+      "ipa": "/prəˈfjuːʒn/",
+      "part_of_speech": "noun"
+    },
+    "8033c1c9-8659-4d80-a39c-bfd27341acc5": {
+      "difficulty": "6.0",
+      "definition_en": "to officially forbid something, especially by law or rule",
+      "ipa": "/prəˈhɪbɪt/",
+      "part_of_speech": "verb"
+    },
+    "e104ed43-2023-4443-a22e-f9dd99b73730": {
+      "difficulty": "8.0",
+      "definition_en": "so high or expensive as to prevent something; tending to forbid",
+      "ipa": "/prəˈhɪbətɪv/",
+      "part_of_speech": "adjective"
+    },
+    "868e1fd2-911e-4c17-aaed-05df43da18ae": {
+      "difficulty": "7.0",
+      "definition_en": "producing a great amount of something, especially creative work",
+      "ipa": "/prəˈlɪfɪk/",
+      "part_of_speech": "adjective"
+    },
+    "a07ec7ff-ec2e-4625-bfc4-abab320e9078": {
+      "difficulty": "7.0",
+      "definition_en": "extended periods or stretches of a particular kind of weather or activity",
+      "ipa": "/prəˈlɒŋd spelz/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "những đợt kéo dài (thời tiết, hoạt động)"
+    },
+    "pubcol-w-aeef191f662035f2": {
+      "difficulty": "6.0",
+      "synonyms": ["all day long", "from morning to night", "round the clock"],
+      "collocations": ["work from dawn till dusk", "toil from dawn till dusk", "farm from dawn till dusk"],
+      "example_simple": "The farmers work from dawn till dusk during the harvest.",
+      "example_complex": "During the busy season, the volunteers laboured from dawn till dusk to rebuild the flooded village.",
+      "definition_en": "from early morning until evening; all day long",
+      "ipa": "/frɒm dɔːn tɪl dʌsk/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "từ sáng sớm đến tối muộn, suốt cả ngày"
+    },
+    "358a09bb-d18c-4c4e-b9e4-50c0d169e37f": {
+      "difficulty": "6.0",
+      "definition_en": "important, well-known, or easily noticed",
+      "ipa": "/ˈprɒmɪnənt/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-67a906e9d07716c7": {
+      "difficulty": "6.0",
+      "synonyms": ["boost tourism image", "enhance the tourist image", "market a destination"],
+      "collocations": ["promote the tourism image of a country", "promote a positive tourism image", "campaign to promote tourism image"],
+      "example_simple": "The government launched a campaign to promote the country's tourism image.",
+      "example_complex": "By hosting international festivals, the city hoped to promote a tourism image that would attract high-spending visitors.",
+      "definition_en": "to actively advertise and improve how a place is perceived as a travel destination",
+      "ipa": "/prəˈməʊt ˈtʊərɪzəm ˈɪmɪdʒ/",
+      "part_of_speech": "phrase"
+    },
+    "53f5a61a-582f-414c-975d-b80393fbefd5": {
+      "difficulty": "8.0",
+      "definition_en": "formal or official public statements or declarations",
+      "ipa": "/prəˈnaʊnsmənts/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-5fc6bd935d507d33": {
+      "difficulty": "6.0",
+      "ipa": "/prəˈpəʊz/"
+    },
+    "f0933a8f-e454-41ea-b72a-d61bb1dacb75": {
+      "difficulty": "8.0",
+      "definition_en": "privately owned and controlled, especially by a company holding exclusive rights",
+      "ipa": "/prəˈpraɪətri/",
+      "part_of_speech": "adjective"
+    },
+    "d134ad66-a530-4dfc-9c37-dcb4632a0264": {
+      "difficulty": "8.0"
+    },
+    "a9d8c30e-bb37-40c6-b162-6d4148a8f078": {
+      "difficulty": "8.0",
+      "definition_en": "the force that pushes something forward, or the act of driving it forward",
+      "ipa": "/prəˈpʌlʃn/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-b455bd0d1145feed": {
+      "difficulty": "6.0",
+      "synonyms": ["advantages and disadvantages", "upsides and downsides", "merits and drawbacks"],
+      "collocations": ["weigh the pros and cons", "consider the pros and cons", "discuss the pros and cons"],
+      "example_simple": "We discussed the pros and cons of moving to a bigger city.",
+      "example_complex": "Before adopting the new policy, the committee carefully weighed the pros and cons of each proposal.",
+      "definition_en": "the advantages and disadvantages of something",
+      "ipa": "/prəʊz ənd kɒnz/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "ưu và nhược điểm"
+    },
+    "16d3b0cf-3f77-4618-bbdb-5e00f834a2bf": {
+      "difficulty": "7.0",
+      "definition_en": "written language in its ordinary form, as distinct from poetry",
+      "ipa": "/prəʊz/",
+      "part_of_speech": "noun"
+    },
+    "0a8172fa-b077-4017-9f5f-6c80767a1446": {
+      "difficulty": "7.0",
+      "definition_en": "to officially charge someone with a crime and bring them to court",
+      "ipa": "/ˈprɒsɪkjuːt/",
+      "part_of_speech": "verb"
+    },
+    "e7fbce60-f89d-464d-909e-fcfbbe51f028": {
+      "difficulty": "7.0",
+      "definition_en": "the main character in a story, play, or film",
+      "ipa": "/prəˈtæɡənɪst/",
+      "part_of_speech": "noun"
+    },
+    "0bb1f2f2-a5f5-4f61-b77e-6051416608cd": {
+      "difficulty": "9.0",
+      "definition_en": "the living material inside a cell, including the cytoplasm and nucleus",
+      "ipa": "/ˈprəʊtəplæzəm/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-bfc83f6b250648a4": {
+      "difficulty": "5.0",
+      "synonyms": ["supply sb with st", "furnish sb with st", "equip sb with st"],
+      "collocations": ["provide students with resources", "provide residents with clean water", "provide employees with training"],
+      "example_simple": "The school provides students with free textbooks.",
+      "example_complex": "The charity aims to provide vulnerable families with access to clean water and basic healthcare.",
+      "definition_en": "to give someone something that they need",
+      "ipa": "/prəˈvaɪd ˈsʌmbədi wɪð ˈsʌmθɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-c2be681bff9cbe16": {
+      "difficulty": "5.0",
+      "synonyms": ["supply st for sb", "furnish st for sb", "make st available to sb"],
+      "collocations": ["provide food for the poor", "provide shelter for refugees", "provide support for students"],
+      "example_simple": "The city provides shelter for homeless people in winter.",
+      "example_complex": "The programme was designed to provide financial support for students from low-income backgrounds.",
+      "definition_en": "to give or supply something for someone who needs it",
+      "ipa": "/prəˈvaɪd ˈsʌmθɪŋ fɔː ˈsʌmbədi/",
+      "part_of_speech": "phrase"
+    },
+    "a7c34eab-a7b9-4b91-84bd-8fd1a2193434": {
+      "difficulty": "7.0",
+      "definition_en": "careful and sensible, avoiding unnecessary risks",
+      "ipa": "/ˈpruːdnt/",
+      "part_of_speech": "adjective"
+    }
+  }
+}

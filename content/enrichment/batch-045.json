@@ -1,0 +1,181 @@
+{
+  "meta": { "batch": "batch-045", "authored_by": "claude", "count": 25 },
+  "words": {
+    "44a7cdce-0ea6-4eef-8270-1481c2c1b2df": {
+      "difficulty": "7.0",
+      "definition_en": "to make a problem, disease, or bad situation worse",
+      "ipa": "/ɪɡˈzæsərbeɪt/",
+      "part_of_speech": "verb"
+    },
+    "b58e912e-b560-41ed-9a73-82bf2dc2cf22": {
+      "difficulty": "6.0",
+      "definition_en": "to describe something as larger, better, or worse than it really is",
+      "ipa": "/ɪɡˈzædʒəreɪt/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-8fcd29b788590ef6": {
+      "difficulty": "5.0",
+      "ipa": "/ɪɡˈzæmɪn/"
+    },
+    "00cc9627-dd42-4ecd-8912-cbfcfad9d107": {
+      "difficulty": "7.0",
+      "definition_en": "a short passage taken from a longer text, film, or piece of music",
+      "ipa": "/ˈeksɜːrpt/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-0f03b7a638cc6f08": {
+      "difficulty": "6.0",
+      "synonyms": ["overweight luggage", "extra baggage", "surplus luggage"],
+      "collocations": ["pay for excess baggage", "excess baggage charge", "excess baggage allowance"],
+      "example_simple": "I had to pay a fee for my excess baggage at the airport.",
+      "example_complex": "Because her suitcase exceeded the weight limit, she was charged a hefty excess baggage fee before boarding.",
+      "definition_en": "luggage that weighs more than the airline's allowance and for which an extra fee is charged",
+      "ipa": "/ˌekses ˈbæɡɪdʒ/",
+      "part_of_speech": "phrase"
+    },
+    "ea4f3aee-ae33-4ab4-8068-644447d91f2f": {
+      "difficulty": "8.0",
+      "synonyms": ["purely ironic use", "solely sarcastic usage"],
+      "definition_en": "a word or expression used only in an ironic, non-literal sense",
+      "ipa": "/ɪkˈskluːsɪvli aɪˈrɒnɪk ˈjuːsɪdʒ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-3fb47d6a1322cbf6": {
+      "difficulty": "7.0",
+      "synonyms": ["exert one's influence on", "use one's influence over", "sway someone"],
+      "collocations": ["exercise considerable influence", "exercise influence over decisions", "exercise one's influence on policy"],
+      "example_simple": "She used her position to exercise her influence on the committee.",
+      "example_complex": "Senior lobbyists quietly exercise their influence on lawmakers long before any bill reaches the floor.",
+      "definition_en": "to use one's power or authority to affect someone's actions or decisions",
+      "ipa": "/ˈeksərsaɪz wʌnz ˈɪnfluəns ɒn/",
+      "part_of_speech": "phrase"
+    },
+    "84099d77-069d-4d42-8416-7c9dd6c5fa81": {
+      "difficulty": "7.0",
+      "definition_en": "to apply or bring to bear a force, influence, or effort",
+      "ipa": "/ɪɡˈzɜːrt/",
+      "part_of_speech": "verb"
+    },
+    "75499b60-1725-4b35-a516-d126f42a28b1": {
+      "difficulty": "6.0",
+      "definition_en": "the waste gases produced by an engine and released into the air",
+      "ipa": "/ɪɡˈzɔːst ɪˈmɪʃənz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-8d633d997c6150e6": {
+      "difficulty": "6.0",
+      "synonyms": ["exhaust emissions", "engine fumes", "tailpipe emissions"],
+      "collocations": ["breathe in exhaust fumes", "toxic exhaust fumes", "exhaust fumes from vehicles"],
+      "example_simple": "The street was full of exhaust fumes from the heavy traffic.",
+      "example_complex": "Prolonged exposure to exhaust fumes in congested cities has been linked to respiratory illness.",
+      "definition_en": "the poisonous gases released from a vehicle's engine",
+      "ipa": "/ɪɡˈzɔːst fjuːmz/",
+      "part_of_speech": "phrase"
+    },
+    "9609424f-c9c4-492a-9a84-90da1fa7b416": {
+      "difficulty": "8.0",
+      "definition_en": "to an unreasonably high degree, especially in price or amount",
+      "ipa": "/ɪɡˈzɔːrbɪtəntli/",
+      "part_of_speech": "adverb"
+    },
+    "pubcol-w-0bf04e42d3807913": {
+      "synonyms": ["enlarge", "grow", "extend", "broaden"],
+      "collocations": ["expand rapidly", "expand the business", "expand into new markets"],
+      "example_simple": "The company plans to expand its business next year.",
+      "example_complex": "As the firm expanded into overseas markets, it had to adapt its products to local tastes.",
+      "definition_en": "to become or make something larger in size, number, or importance",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-ff93c451ac21b507": {
+      "synonyms": ["anticipate", "await", "predict", "foresee"],
+      "collocations": ["expect a result", "expect someone to do something", "expect the worst"],
+      "example_simple": "I expect the train to arrive at six o'clock.",
+      "example_complex": "Analysts expect interest rates to rise, though few can predict exactly when.",
+      "definition_en": "to think or believe that something will happen or that someone will do something",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-f45f2bc801bb77f6": {
+      "synonyms": ["trial", "test", "investigation"],
+      "collocations": ["conduct an experiment", "carry out an experiment", "a scientific experiment"],
+      "example_simple": "The students did a simple experiment in the science class.",
+      "example_complex": "Researchers conducted a controlled experiment to test whether the new drug reduced symptoms.",
+      "definition_en": "a scientific test carried out to discover or prove something",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-b780d252a12c8c47": {
+      "synonyms": ["specialist", "authority", "professional", "master"],
+      "collocations": ["a leading expert", "an expert in the field", "consult an expert"],
+      "example_simple": "She is an expert in computer programming.",
+      "example_complex": "The government called in a panel of experts to assess the safety of the new reactor.",
+      "definition_en": "a person with a high level of knowledge or skill in a particular area",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-9dda9754b3ee7600": {
+      "difficulty": "6.0",
+      "ipa": "/ɪkˈsplɔːr/"
+    },
+    "pubcol-w-300b67a8aa174f18": {
+      "difficulty": "7.0",
+      "synonyms": ["put at serious health risk", "endanger one's health", "subject to health hazards"],
+      "collocations": ["expose workers to health risks", "expose the public to major health risks", "exposed to serious health risks"],
+      "example_simple": "Working without a mask can expose people to major health risks.",
+      "example_complex": "The report warned that dumping untreated waste into the river would expose local communities to major health risks.",
+      "definition_en": "to put someone in a situation where their health could be seriously harmed",
+      "ipa": "/ɪkˈspoʊz tu ˈmeɪdʒər ˈhelθ rɪsks/",
+      "part_of_speech": "phrase"
+    },
+    "af7ed55d-e48e-44c0-a7ac-7190e3dddbf6": {
+      "difficulty": "8.0",
+      "definition_en": "a person who explains or interprets a theory, text, or idea in detail",
+      "ipa": "/ɪkˈspaʊndər/",
+      "part_of_speech": "noun"
+    },
+    "bd8aea10-72e3-4614-ad1b-1982286fcfa3": {
+      "difficulty": "7.0",
+      "definition_en": "the act of forcing someone to leave a place, school, or organization",
+      "ipa": "/ɪkˈspʌlʃən/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-c7fbcdaf308cdcd6": {
+      "synonyms": ["beautiful", "delicate", "elegant", "refined"],
+      "collocations": ["exquisite detail", "exquisite taste", "an exquisite piece of jewellery"],
+      "example_simple": "She wore an exquisite silk dress to the party.",
+      "example_complex": "The museum displays exquisite porcelain crafted with astonishing attention to detail."
+    },
+    "1a5bc180-879c-46d1-8d35-f888d4db4aa8": {
+      "difficulty": "8.0",
+      "definition_en": "extremely refined and beautiful elegance of movement or manner",
+      "ipa": "/ɪkˈskwɪzɪt ɡreɪs/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-a2bb9e582fed3e34": {
+      "difficulty": "6.0",
+      "synonyms": ["apply something", "put something into practice", "make use of something"],
+      "collocations": ["apply a rule", "apply a method", "apply knowledge"],
+      "example_simple": "You should apply this method when you solve the problem.",
+      "example_complex": "Teachers are encouraged to apply new techniques flexibly rather than follow the textbook rigidly.",
+      "definition_en": "to put something such as a rule, method, or knowledge into practical use",
+      "ipa": "/ɪkˈsɜːrt ɒn ˈsʌmθɪŋ/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "áp dụng cái gì"
+    },
+    "pubcol-w-de93ba2d15f3dbf6": {
+      "synonyms": ["lengthen", "expand", "prolong", "broaden"],
+      "collocations": ["extend a deadline", "extend the contract", "extend one's stay"],
+      "example_simple": "They decided to extend the deadline by one week.",
+      "example_complex": "The company extended its operations into Asia, opening offices in three new countries."
+    },
+    "pubcol-w-e9691a0dce6469fc": {
+      "synonyms": ["broad", "wide-ranging", "comprehensive", "vast"],
+      "collocations": ["extensive research", "extensive experience", "extensive damage"],
+      "example_simple": "She has extensive experience in teaching.",
+      "example_complex": "The earthquake caused extensive damage across the region, requiring years of reconstruction."
+    },
+    "pubcol-w-9269bb4c54761195": {
+      "synonyms": ["died out", "vanished", "wiped out", "no longer existing"],
+      "collocations": ["become extinct", "an extinct species", "nearly extinct"],
+      "example_simple": "Dinosaurs became extinct millions of years ago.",
+      "example_complex": "Conservationists warn that many species could become extinct within decades unless their habitats are protected."
+    }
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "meta": { "batch": "batch-010", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-ca6cfbebd92728d9": {
+      "difficulty": "7.0",
+      "ipa": "/ˈɑːɡjuəbli/"
+    },
+    "pubcol-w-bf1a4c6597155e9f": {
+      "difficulty": "6.0",
+      "ipa": "/ˈɑːɡjuː/"
+    },
+    "201cf055-e992-4c26-bc36-8a62e839f21d": {
+      "difficulty": "6.0",
+      "definition_en": "to present reasons opposing an idea, plan, or decision",
+      "ipa": "/ˈɑːɡjuː əˈɡenst/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-8df670c4c8d7a580": {
+      "difficulty": "8.0",
+      "synonyms": ["quibble", "dispute", "bicker", "wrangle"],
+      "collocations": ["argue the toss over something", "always argue the toss", "no point arguing the toss"],
+      "example_simple": "Just accept the referee's call and don't argue the toss.",
+      "example_complex": "Rather than argue the toss over a trivial fee, she paid it and moved on to the issues that actually mattered.",
+      "definition_en": "to dispute or complain about a decision that has already been made",
+      "ipa": "/ˈɑːɡjuː ðə tɒs/",
+      "part_of_speech": "idiom"
+    },
+    "6d45bc3b-99f4-4970-ba72-3922bca388e0": {
+      "difficulty": "7.0",
+      "definition_en": "an area that receives very little rainfall and is extremely dry",
+      "ipa": "/ˈærɪd ˈriːdʒən/",
+      "part_of_speech": "noun phrase"
+    },
+    "pubcol-w-4477369447e684ad": {
+      "difficulty": "6.0",
+      "synonyms": ["absurd price", "outrageous price", "extortionate price"],
+      "collocations": ["pay a ridiculous price", "at a ridiculous price", "charge a ridiculous price"],
+      "example_simple": "They wanted a ridiculous price for a used phone, so I said no.",
+      "example_complex": "During the shortage, sellers charged a ridiculous price for basic supplies, exploiting people who had no other option.",
+      "definition_en": "an amount of money that is unreasonably high (or occasionally surprisingly low)",
+      "ipa": "/rɪˈdɪkjələs praɪs/",
+      "part_of_speech": "noun phrase",
+      "vi_meaning_correction": "giá vô lý, giá cắt cổ (quá cao); đôi khi ngược lại là giá rẻ đến khó tin"
+    },
+    "a15e48b0-4fa1-4a3e-87b5-433f42c94b55": {
+      "difficulty": "7.0",
+      "definition_en": "the highest social class, especially people from noble families",
+      "ipa": "/ˌærɪˈstɒkrəsi/",
+      "part_of_speech": "noun"
+    },
+    "b3991bb3-7384-4057-a0f8-c110a01d9822": {
+      "difficulty": "7.0",
+      "definition_en": "members of the highest social class, typically of noble birth",
+      "ipa": "/ˈærɪstəkræts/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-6adc55581fc75b2d": {
+      "difficulty": "6.0",
+      "synonyms": ["competitor", "competing firm", "rival business"],
+      "collocations": ["a rival company", "join a rival company", "beat a rival company"],
+      "example_simple": "She left her job to work for a rival company.",
+      "example_complex": "The engineer was accused of leaking trade secrets to a rival company before resigning.",
+      "definition_en": "a business that competes with another in the same market",
+      "ipa": "/ə ˈraɪvl ˈkʌmpəni/",
+      "part_of_speech": "noun phrase"
+    },
+    "pubcol-w-e54865efa45483dd": {
+      "difficulty": "6.0",
+      "synonyms": ["holdup", "armed heist", "armed raid"],
+      "collocations": ["commit armed robbery", "convicted of armed robbery", "an armed robbery at a bank"],
+      "example_simple": "Two men were arrested for the armed robbery of a shop.",
+      "example_complex": "He was sentenced to fifteen years for an armed robbery in which a security guard was seriously injured.",
+      "definition_en": "the crime of stealing from someone using a weapon",
+      "ipa": "/ɑːmd ˈrɒbəri/",
+      "part_of_speech": "noun phrase"
+    },
+    "96dd8858-72dd-49d4-aba6-a53e14ab7c81": {
+      "difficulty": "8.0",
+      "definition_en": "an agreement to stop fighting for a period of time; a truce",
+      "ipa": "/ˈɑːmɪstɪs/",
+      "part_of_speech": "noun"
+    },
+    "05d131f8-57ca-40bc-89e3-3e4d2a91d2a6": {
+      "difficulty": "7.0",
+      "definition_en": "adding a protective covering to strengthen or defend something",
+      "ipa": "/ˈɑːmərɪŋ/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-b40e1a7ef3a0d714": {
+      "synonyms": ["organization", "layout", "plan", "agreement"],
+      "collocations": ["make an arrangement", "a seating arrangement", "come to an arrangement"],
+      "example_simple": "We made an arrangement to meet outside the station at noon.",
+      "example_complex": "Under the new arrangement, staff can work from home two days a week without prior approval.",
+      "definition_en": "a plan or agreement, or the way things are organised and placed",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-5450f3b34e6760cd": {
+      "synonyms": ["detain", "apprehend", "take into custody", "capture"],
+      "collocations": ["arrest a suspect", "under arrest", "make an arrest"],
+      "example_simple": "The police came to arrest the man at his home.",
+      "example_complex": "Officers moved in to arrest the protesters who had blocked the motorway for several hours.",
+      "definition_en": "to seize and hold someone by legal authority; the act of doing so",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-55a26178612ab845": {
+      "difficulty": "6.0",
+      "synonyms": ["detain suspects", "apprehend suspects", "take suspects into custody"],
+      "collocations": ["arrest several suspects", "arrest the main suspects", "arrest suspects in connection with"],
+      "example_simple": "Police were able to arrest two suspects the same night.",
+      "example_complex": "Detectives worked through the evidence for weeks before they could arrest the suspects behind the fraud.",
+      "definition_en": "to seize and hold people believed to have committed a crime",
+      "ipa": "/əˈrest ˈsʌspekts/",
+      "part_of_speech": "verb phrase"
+    },
+    "b6e04ac4-4b31-4927-9cc8-fad981bed5c1": {
+      "difficulty": "8.0",
+      "definition_en": "the layers of tissue forming the sides of an artery",
+      "ipa": "/ɑːˈtɪəriəl wɔːlz/",
+      "part_of_speech": "noun phrase"
+    },
+    "pubcol-w-565cecd7e8f5c606": {
+      "synonyms": ["piece", "report", "feature", "write-up"],
+      "collocations": ["read an article", "write an article", "a newspaper article"],
+      "example_simple": "I read an interesting article about climate change today.",
+      "example_complex": "Her article, published in a leading journal, challenged assumptions that researchers had accepted for decades.",
+      "definition_en": "a piece of writing on a particular subject in a newspaper, magazine, or website",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-b7ae978b3c5a0c99": {
+      "synonyms": ["eloquent", "fluent", "well-spoken", "express clearly"],
+      "collocations": ["articulate your thoughts", "a highly articulate speaker", "articulate an argument"],
+      "example_simple": "She is very articulate and explains difficult ideas clearly.",
+      "example_complex": "Few candidates could articulate their vision as persuasively as she did during the debate."
+    },
+    "pubcol-w-21839c83f19b411a": {
+      "difficulty": "6.0",
+      "ipa": "/ˌɑːtɪˈfɪʃl ɪnˈtelɪdʒəns/"
+    },
+    "pubcol-w-b8c7b282e8e7e2e3": {
+      "difficulty": "7.0",
+      "synonyms": ["a roll of thunder", "a clap of thunder", "a peal of thunder"],
+      "collocations": ["a rumble of thunder", "a distant rumble of thunder", "hear a rumble of thunder"],
+      "example_simple": "A low rumble of thunder warned us that the storm was coming.",
+      "example_complex": "As the sky darkened, a deep rumble of thunder rolled across the valley, sending the hikers hurrying for shelter.",
+      "definition_en": "a long, low sound made by thunder",
+      "ipa": "/ə ˈrʌmbl əv ˈθʌndə/",
+      "part_of_speech": "noun phrase",
+      "vi_meaning_correction": "một tiếng sấm rền, tiếng sấm ầm ì"
+    },
+    "pubcol-w-74d348a2d9fd03f9": {
+      "difficulty": "5.0",
+      "ipa": "/əz ə rɪˈzʌlt/"
+    },
+    "pubcol-w-f0f4fb48f20082f1": {
+      "difficulty": "7.0",
+      "synonyms": ["crystal clear", "perfectly clear", "distinct"],
+      "collocations": ["come through as clear as a bell", "sound as clear as a bell", "ring out as clear as a bell"],
+      "example_simple": "Her voice on the phone was as clear as a bell.",
+      "example_complex": "Despite the storm outside, the announcer's words came through the old radio as clear as a bell.",
+      "definition_en": "very easy to hear or understand; perfectly clear",
+      "ipa": "/əz ˈklɪər əz ə bel/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "rõ như chuông, nghe rất rõ ràng, rành mạch"
+    },
+    "pubcol-w-ba0cb23fcb0a2d29": {
+      "difficulty": "6.0",
+      "synonyms": ["completely free", "unrestrained", "at liberty", "carefree"],
+      "collocations": ["as free as a bird", "feel as free as a bird", "roam as free as a bird"],
+      "example_simple": "After my exams finished, I felt as free as a bird.",
+      "example_complex": "Once the debts were paid off, they sold the house and travelled the world, as free as a bird.",
+      "definition_en": "completely free to do as one wishes, with no worries or restrictions",
+      "ipa": "/əz friː əz ə bɜːd/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "tự do tự tại, thoải mái như chim trời (hoàn toàn tự do)"
+    },
+    "1ad53d4e-b343-418e-b9d1-ff88a4adf8a1": {
+      "difficulty": "5.0",
+      "definition_en": "used to describe how something seems or to make a comparison, as though it were true",
+      "ipa": "/əz ɪf/",
+      "part_of_speech": "conjunction"
+    },
+    "1ec6975f-201e-4a3e-98d4-7df8dd0bb451": {
+      "difficulty": "7.0",
+      "definition_en": "used to say that something happens frequently or usually",
+      "ipa": "/əz ɪz səʊ ˈɒfn ðə keɪs/",
+      "part_of_speech": "phrase"
+    }
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "meta": { "batch": "batch-011", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-68911b9c021b69f8": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/əz ˈlɒŋ əz/",
+      "definition_en": "on the condition that; provided that",
+      "synonyms": ["provided that", "so long as", "on condition that", "assuming that"],
+      "collocations": ["as long as you want", "as long as possible", "as long as necessary"],
+      "example_simple": "You can borrow my car as long as you drive carefully.",
+      "example_complex": "The committee agreed to fund the project as long as regular progress reports were submitted every quarter."
+    },
+    "pubcol-w-ceb172a6171a673c": {
+      "difficulty": "6.0",
+      "ipa": "/əz əˈpəʊzd tuː/"
+    },
+    "pubcol-w-145ba95c5d4150ab": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/əz pleɪn əz deɪ/",
+      "definition_en": "extremely obvious or easy to understand",
+      "synonyms": ["obvious", "crystal clear", "unmistakable", "self-evident"],
+      "collocations": ["as plain as day to everyone", "written as plain as day", "it's as plain as day"],
+      "example_simple": "It was as plain as day that she was tired.",
+      "example_complex": "To any experienced auditor, the discrepancies in the accounts were as plain as day, yet no one had raised them for months."
+    },
+    "pubcol-w-aa4a613cf8a52c0f": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/əz pʊər əz ə ˈtʃɜːtʃ maʊs/",
+      "definition_en": "extremely poor; having very little money",
+      "synonyms": ["penniless", "destitute", "impoverished", "broke"],
+      "collocations": ["as poor as a church mouse", "left as poor as a church mouse", "grow up as poor as a church mouse"],
+      "example_simple": "After losing his job, he was as poor as a church mouse.",
+      "example_complex": "Despite coming from a once-wealthy family, she now lived as poor as a church mouse in a tiny rented room."
+    },
+    "pubcol-w-e022f1e64cb7013c": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/əz raɪt əz reɪn/",
+      "definition_en": "feeling completely healthy and well again",
+      "synonyms": ["perfectly fine", "in good health", "fit and well", "recovered"],
+      "collocations": ["feel as right as rain", "be as right as rain", "right as rain again"],
+      "example_simple": "After a good night's sleep, I felt as right as rain.",
+      "example_complex": "The doctor assured us that once the fever broke, the child would be as right as rain within a day or two."
+    },
+    "pubcol-w-51c0a11fa63600bc": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/əz wel əz/",
+      "definition_en": "in addition to; and also",
+      "synonyms": ["in addition to", "along with", "besides", "together with"],
+      "collocations": ["as well as others", "speaks French as well as English", "quality as well as quantity"],
+      "example_simple": "She plays the piano as well as the violin.",
+      "example_complex": "The new policy aims to reduce costs as well as improve the overall quality of service across all departments."
+    },
+    "pubcol-w-4b8baca21f76ba07": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/əz ə rɪˈzʌlt əv/",
+      "definition_en": "because of; as a consequence of",
+      "synonyms": ["because of", "owing to", "due to", "on account of"],
+      "collocations": ["as a result of the accident", "as a result of climate change", "as a result of these changes"],
+      "example_simple": "As a result of the storm, the flight was cancelled.",
+      "example_complex": "As a result of years of underinvestment, the region's infrastructure had deteriorated to a critical point."
+    },
+    "pubcol-w-d2d6d81e925d6adf": {
+      "difficulty": "6.0",
+      "part_of_speech": "noun",
+      "ipa": "/ə skuːl əv fɪʃ/",
+      "definition_en": "a large group of fish swimming together",
+      "synonyms": ["shoal of fish", "group of fish"],
+      "collocations": ["a school of fish", "a large school of fish", "swim in a school of fish"],
+      "example_simple": "We saw a school of fish near the coral reef.",
+      "example_complex": "As the diver descended, a shimmering school of fish parted around her before regrouping in a single fluid motion."
+    },
+    "pubcol-w-024cb0ad9f275267": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/əˈskraɪb ˈsʌmθɪŋ tə ˈsʌmθɪŋ/",
+      "definition_en": "to attribute something to a particular cause or source",
+      "synonyms": ["attribute to", "credit to", "put down to", "assign to"],
+      "collocations": ["ascribe success to hard work", "ascribe the failure to bad luck", "ascribe meaning to something"],
+      "example_simple": "She ascribed her good health to a balanced diet.",
+      "example_complex": "Historians tend to ascribe the empire's collapse to a combination of economic strain and political instability rather than to any single event."
+    },
+    "af6c4836-2f1e-4313-bd9d-a9f4d8ff02c0": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/əˈskraɪbd tuː/",
+      "definition_en": "regarded as being caused by or belonging to something"
+    },
+    "pubcol-w-f320e3a303839257": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə ˈsekənd ˈhelpɪŋ/",
+      "definition_en": "a second portion of food taken during a meal",
+      "synonyms": ["second serving", "second portion", "seconds"],
+      "collocations": ["have a second helping", "ask for a second helping", "a second helping of dessert"],
+      "example_simple": "The soup was so good that I had a second helping.",
+      "example_complex": "Reaching for a second helping of the traditional stew, he admitted that the home-cooked meal easily rivalled any international cuisine he had tried."
+    },
+    "pubcol-w-a8a7e02d532429da": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə ˈsɪəriːz əv ɪˈvents/",
+      "definition_en": "a number of related events happening one after another",
+      "synonyms": ["a sequence of events", "a chain of events", "a succession of events"],
+      "collocations": ["a series of events led to", "trigger a series of events", "a series of unfortunate events"],
+      "example_simple": "A series of events forced the company to close.",
+      "example_complex": "A seemingly minor error set off a series of events that ultimately reshaped the entire industry."
+    },
+    "pubcol-w-298cd9b634999ade": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə set əv tuːlz/",
+      "definition_en": "a collection of tools kept or used together",
+      "synonyms": ["a toolkit", "a kit of tools", "a set of instruments"],
+      "collocations": ["a set of tools", "a complete set of tools", "a set of tools for the job"],
+      "example_simple": "He bought a new set of tools to fix the car.",
+      "example_complex": "The workshop provided each apprentice with a comprehensive set of tools designed for precision engineering."
+    },
+    "pubcol-w-9da8cce490956581": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/əˈsaɪd frəm/",
+      "definition_en": "apart from; in addition to; except for",
+      "synonyms": ["apart from", "besides", "except for", "other than"],
+      "collocations": ["aside from that", "aside from a few exceptions", "aside from the cost"],
+      "example_simple": "Aside from a small headache, I feel fine.",
+      "example_complex": "Aside from its obvious environmental benefits, the new transport scheme is expected to generate substantial economic returns."
+    },
+    "pubcol-w-d4c29c5903c07352": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə ˈsaɪzəbl ˈfɒləʊɪŋ/",
+      "definition_en": "a fairly large group of fans or supporters",
+      "synonyms": ["a large following", "a big fan base", "a substantial audience"],
+      "collocations": ["build a sizeable following", "attract a sizeable following", "have a sizeable following online"],
+      "example_simple": "The band has a sizeable following in Europe.",
+      "example_complex": "Within a year of launching her blog, she had amassed a sizeable following that publishers were eager to reach."
+    },
+    "pubcol-w-a7a57f845e77e28e": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə slaɪs əv bred/",
+      "definition_en": "a thin flat piece cut from a loaf of bread",
+      "synonyms": ["a piece of bread", "a slab of bread"],
+      "collocations": ["a slice of bread", "a thick slice of bread", "spread butter on a slice of bread"],
+      "example_simple": "She spread jam on a slice of bread.",
+      "example_complex": "He toasted a single slice of bread, savouring it slowly as the only quiet moment in an otherwise hectic morning."
+    },
+    "pubcol-w-40ab5e8a7a2d7e1f": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə spekˈtækjʊlə ˌpænəˈræmɪk vjuː/",
+      "definition_en": "an impressive wide view of the whole surrounding area",
+      "synonyms": ["a stunning panorama", "a breathtaking view", "a sweeping vista"],
+      "collocations": ["enjoy a spectacular panoramic view", "offer a spectacular panoramic view", "a spectacular panoramic view of the city"],
+      "example_simple": "From the top of the hill, we had a spectacular panoramic view of the sea.",
+      "example_complex": "The rooftop restaurant is renowned for its spectacular panoramic view, stretching from the harbour right across the distant mountains."
+    },
+    "pubcol-w-ab78ba9658d2ea05": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə spel əv hɒt ˈweðə/",
+      "definition_en": "a period of continuously hot weather",
+      "synonyms": ["a heatwave", "a hot period", "a warm spell"],
+      "collocations": ["a spell of hot weather", "during a spell of hot weather", "a long spell of hot weather"],
+      "example_simple": "We had a spell of hot weather last week.",
+      "example_complex": "The prolonged spell of hot weather put considerable strain on the region's water supplies and power grid."
+    },
+    "1d6640dd-49c9-4cd8-bac5-e7fe92a738a2": {
+      "difficulty": "8.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˈæsfɔːlt ˈʃɪŋɡlz/",
+      "definition_en": "flat overlapping roofing tiles made from asphalt-coated material"
+    },
+    "pubcol-w-1d882085563cf12c": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə ˈsplɪtɪŋ ˈhedeɪk/",
+      "definition_en": "a very severe, painful headache",
+      "synonyms": ["a pounding headache", "a throbbing headache", "a severe headache"],
+      "collocations": ["have a splitting headache", "get a splitting headache", "wake up with a splitting headache"],
+      "example_simple": "I can't concentrate because I have a splitting headache.",
+      "example_complex": "By the end of the twelve-hour shift she was nursing a splitting headache that no amount of painkillers seemed to ease."
+    },
+    "pubcol-w-64b5daad50738493": {
+      "difficulty": "7.0",
+      "ipa": "/əˈsɜːt/"
+    },
+    "pubcol-w-e910868a5e0ae27a": {
+      "difficulty": "6.0",
+      "ipa": "/əˈses/"
+    },
+    "pubcol-w-1de9d55f67073997": {
+      "difficulty": "6.0",
+      "ipa": "/əˈsesmənt/"
+    },
+    "pubcol-w-bd8e287067e1e483": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/əˈsjuːmɪŋ ðæt/",
+      "definition_en": "if we accept that something is true; supposing that",
+      "synonyms": ["supposing that", "provided that", "if", "on the assumption that"],
+      "collocations": ["assuming that everything goes well", "assuming that this is true", "assuming that you agree"],
+      "example_simple": "Assuming that it doesn't rain, we'll have the picnic outside.",
+      "example_complex": "Assuming that current trends continue, analysts predict the market will double in size within the next decade.",
+      "vi_meaning_correction": "giả sử rằng, giả định rằng"
+    },
+    "90d09165-d3ed-4aa2-afb5-f207d5982224": {
+      "difficulty": "7.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˈæstərɔɪdz/",
+      "definition_en": "small rocky bodies orbiting the sun, mainly between Mars and Jupiter"
+    }
+  }
+}

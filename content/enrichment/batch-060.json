@@ -1,0 +1,192 @@
+{
+  "meta": { "batch": "batch-060", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-c39f16eff359c31f": {
+      "difficulty": "6.0",
+      "synonyms": ["frantic pace", "frenetic pace", "busy schedule", "fast pace"],
+      "collocations": ["keep up a hectic pace", "the hectic pace of city life", "maintain a hectic pace"],
+      "example_simple": "Living in the city means dealing with a hectic pace every day.",
+      "example_complex": "After years of the hectic pace of corporate life, she moved to the countryside to slow down and recover.",
+      "definition_en": "a very busy, fast and often stressful rate of activity or living",
+      "ipa": "/ˈhek.tɪk peɪs/",
+      "part_of_speech": "phrase"
+    },
+    "acd749a8-a71e-4589-a294-0a523326fefd": {
+      "difficulty": "7.0",
+      "synonyms": ["help paint bond to the canvas", "help paint stick to the canvas", "help paint cling to the canvas"],
+      "definition_en": "to assist a layer of paint in bonding firmly to the surface of a canvas",
+      "ipa": "/help peɪnt ədˈhɪər tə ðə ˈkæn.vəs/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-af9e3b8bc24a082d": {
+      "difficulty": "6.0",
+      "ipa": "/hens/"
+    },
+    "pubcol-w-d54e9ace1369f976": {
+      "difficulty": "5.0",
+      "synonyms": ["headquarters", "main office", "central office"],
+      "collocations": ["the company's head office", "work at head office", "relocate the head office"],
+      "example_simple": "The bank's head office is in the centre of the city.",
+      "example_complex": "All major strategic decisions are made at the head office before being passed down to regional branches.",
+      "definition_en": "the main office of an organisation, where senior managers work and central decisions are made",
+      "ipa": "/hed ˈɒf.ɪs/",
+      "part_of_speech": "noun"
+    },
+    "9cae0d8c-6818-403b-b46f-ab38aa3acdc1": {
+      "difficulty": "7.0",
+      "definition_en": "an animal that feeds only on plants",
+      "ipa": "/ˈhɜː.bɪ.vɔːr/",
+      "part_of_speech": "noun"
+    },
+    "97eb6e23-469a-423b-a375-239e4f11070a": {
+      "difficulty": "8.0",
+      "definition_en": "the practice of passing a public position or office down within a family from one generation to the next",
+      "ipa": "/hɪˈred.ɪ.tər.i ˈɒf.ɪs.həʊl.dɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "9f146a3d-c3f8-40ba-8280-68521dc75cfa": {
+      "difficulty": "6.0",
+      "definition_en": "a woman admired for her courage or noble qualities, or the main female character in a story",
+      "ipa": "/ˈher.əʊ.ɪn/",
+      "part_of_speech": "noun"
+    },
+    "fc7f7920-ef07-4fbd-b45f-9348c50ecfa1": {
+      "difficulty": "8.0",
+      "definition_en": "consisting of parts or elements that are different or varied in kind",
+      "ipa": "/ˌhet.ər.əˈdʒiː.ni.əs/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-ca63ee7de3dbab79": {
+      "difficulty": "7.0",
+      "synonyms": ["harmful effects", "damaging effects", "adverse effects", "detrimental effects"],
+      "collocations": ["cause harmful effects", "the harmful effects of smoking", "reduce harmful effects"],
+      "example_simple": "Doctors warn about the harmful effects of eating too much sugar.",
+      "example_complex": "The report examines the long-term harmful effects of air pollution on children's respiratory health.",
+      "definition_en": "results or consequences that cause damage or injury to health, the environment or well-being",
+      "ipa": "/ˈhɑːm.fəl ɪˈfekts/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-b16248621479ac20": {
+      "difficulty": "7.0",
+      "synonyms": ["root causes", "underlying reasons", "hidden factors", "deeper causes"],
+      "collocations": ["identify the underlying causes", "address the hidden causes", "the underlying causes of the problem"],
+      "example_simple": "The report tried to find the hidden causes of the accident.",
+      "example_complex": "Rather than treating the symptoms, the study set out to uncover the underlying causes of urban poverty.",
+      "definition_en": "the real but not obvious reasons that lie beneath a situation or problem",
+      "ipa": "/ˈhɪd.ən ˌʌn.də.laɪ.ɪŋ ˈkɔː.zɪz/",
+      "part_of_speech": "phrase"
+    },
+    "23e8ff52-8494-43bf-a019-2713e3adf0a7": {
+      "difficulty": "7.0",
+      "definition_en": "extremely ugly or unpleasant to look at",
+      "ipa": "/ˈhɪd.i.əs/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-b9fdee0ae0aab2eb": {
+      "difficulty": "6.0",
+      "synonyms": ["tertiary education", "university education", "post-secondary education"],
+      "collocations": ["access to higher education", "pursue higher education", "the cost of higher education"],
+      "example_simple": "Many students take out loans to pay for higher education.",
+      "example_complex": "Governments increasingly view widening access to higher education as key to reducing social inequality.",
+      "definition_en": "education at university or college level, above secondary school",
+      "ipa": "/ˌhaɪ.ər ˌedʒ.uˈkeɪ.ʃən/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-c9addaa49db28bc1": {
+      "difficulty": "6.0",
+      "ipa": "/ˈhaɪ.laɪt/"
+    },
+    "914e2ad4-c7d4-48ee-932f-6339b31c1def": {
+      "difficulty": "8.0",
+      "definition_en": "broken into many separate pieces, or deeply divided and lacking unity",
+      "ipa": "/ˈhaɪ.li ˈfræk.tʃəd/",
+      "part_of_speech": "adjective"
+    },
+    "69d122f7-5baf-487e-92ca-3c71ba7fc643": {
+      "difficulty": "7.0",
+      "definition_en": "to make it more difficult for something to happen or for someone to do something",
+      "ipa": "/ˈhɪn.dər/",
+      "part_of_speech": "verb"
+    },
+    "933ca8a4-9294-43f7-8b15-ea6b4a4fa3fb": {
+      "difficulty": "7.0",
+      "definition_en": "any of the bones that form the hip",
+      "ipa": "/ˈhɪp.bəʊn/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-c475a74045146fb7": {
+      "difficulty": "6.0",
+      "synonyms": ["employ workers", "recruit staff", "bring on employees", "engage staff"],
+      "collocations": ["hire new staff", "take on extra employees", "hire seasonal workers"],
+      "example_simple": "The restaurant needs to hire more staff for the summer.",
+      "example_complex": "As orders surged, the firm took on hundreds of temporary employees to keep up with demand.",
+      "definition_en": "to give someone a job and start paying them to work for you",
+      "ipa": "/haɪər teɪk ɒn stɑːf ɪmˈplɔɪ.iːz/",
+      "part_of_speech": "phrase"
+    },
+    "84d01042-fff8-4e76-b879-a4f4836f3a9a": {
+      "difficulty": "8.0",
+      "definition_en": "something placed in or belonging to the wrong historical period",
+      "ipa": "/hɪˈstɒr.ɪ.kəl əˈnæk.rə.nɪ.zəm/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-34b20e2046dbc066": {
+      "difficulty": "7.0",
+      "synonyms": ["fight dirty", "play unfairly", "use a low blow", "act unfairly"],
+      "collocations": ["hit below the belt", "that was hitting below the belt", "refuse to hit below the belt"],
+      "example_simple": "Bringing up his past mistakes was hitting below the belt.",
+      "example_complex": "During the debate, she avoided personal attacks, unwilling to hit below the belt even when provoked.",
+      "definition_en": "to behave or attack someone in an unfair or unkind way",
+      "ipa": "/hɪt bɪˈləʊ ðə belt/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-1d09453acdec5bb0": {
+      "difficulty": "6.0",
+      "ipa": "/hɪt ɪt ɒf/"
+    },
+    "pubcol-w-714dfa20bb8e00e0": {
+      "difficulty": "6.0",
+      "synonyms": ["set off", "set out", "get going", "leave"],
+      "collocations": ["hit the road early", "time to hit the road", "hit the road at dawn"],
+      "example_simple": "It's getting late, so we'd better hit the road.",
+      "example_complex": "After loading the last of their bags into the car, the family hit the road before sunrise to beat the traffic.",
+      "definition_en": "to start a journey or leave a place to travel somewhere",
+      "ipa": "/hɪt ðə rəʊd/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-433af33d6718cf65": {
+      "difficulty": "6.0",
+      "synonyms": ["set off", "set out", "get on the road", "depart"],
+      "collocations": ["hit the road at dawn", "take to the road again", "hit the road for a long trip"],
+      "example_simple": "We packed the car and hit the road for the coast.",
+      "example_complex": "Every summer the band takes to the road, playing small towns that bigger tours tend to skip.",
+      "definition_en": "to leave one place and set off travelling to another",
+      "ipa": "/hɪt ðə rəʊd teɪk tə ðə rəʊd/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-0e37c8ba125f1da8": {
+      "difficulty": "6.0",
+      "ipa": "/hɪt ðə sæk/"
+    },
+    "pubcol-w-c54ac33f0f414cd3": {
+      "difficulty": "7.0",
+      "synonyms": ["hit it out of the park", "do brilliantly", "succeed spectacularly", "nail it"],
+      "collocations": ["really hit a home run", "hit a home run with the project", "hit a home run for the team"],
+      "example_simple": "Her presentation was so good that she really hit a home run.",
+      "example_complex": "With a product launch that exceeded every forecast, the marketing team felt they had hit a home run.",
+      "definition_en": "to do something extremely well or achieve a great success",
+      "ipa": "/hɪt ə həʊm rʌn/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-60a5232666b192a5": {
+      "difficulty": "7.0",
+      "synonyms": ["hit it out of the park", "knock it out of the park", "do a fantastic job", "succeed brilliantly"],
+      "collocations": ["hit a home run with the pitch", "knock it out of the park", "really knock it out of the park"],
+      "example_simple": "You knocked it out of the park with that speech!",
+      "example_complex": "The startup hit a home run with its first app, knocking it out of the park and attracting investors overnight.",
+      "definition_en": "to do something exceptionally well or achieve an outstanding success",
+      "ipa": "/hɪt ə həʊm rʌn nɒk ɪt aʊt/",
+      "part_of_speech": "idiom"
+    }
+  }
+}

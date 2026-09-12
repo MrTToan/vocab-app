@@ -1,0 +1,161 @@
+{
+  "meta": { "batch": "batch-031", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-0293238be098b3fd": {
+      "difficulty": "7.0",
+      "ipa": "/ˈkɒnstɪtjuːt/"
+    },
+    "2b572f0b-4db5-40d0-be7d-a3c8517ece3f": {
+      "difficulty": "7.0",
+      "definition_en": "to make something narrower or tighter, or to limit and restrict something",
+      "ipa": "/kənˈstrɪkt/",
+      "part_of_speech": "verb"
+    },
+    "0be1dc6c-6f76-4d7b-8240-5bc6df452149": {
+      "difficulty": "8.0",
+      "definition_en": "to interpret or understand a word, action, or statement in a particular way",
+      "ipa": "/kənˈstruː/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-dd4b89dfc792fbf2": {
+      "synonyms": ["adviser", "expert", "specialist", "counsellor"],
+      "collocations": ["hire a consultant", "management consultant", "independent consultant"],
+      "example_simple": "The company hired a consultant to improve its marketing.",
+      "example_complex": "As an independent consultant, she advises multinational firms on how to streamline their supply chains.",
+      "definition_en": "a person who gives expert professional advice to organisations or individuals",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-9db49a59249eefb6": {
+      "synonyms": ["connections", "acquaintances", "associates", "networks"],
+      "collocations": ["business contacts", "make contacts", "useful contacts"],
+      "example_simple": "She has many contacts in the fashion industry.",
+      "example_complex": "Building a wide network of professional contacts early in your career can open doors that qualifications alone cannot.",
+      "definition_en": "people you know who can help you, especially in business or work",
+      "part_of_speech": "noun"
+    },
+    "d364e91b-a870-429d-9c14-7464e38ba481": {
+      "difficulty": "7.0",
+      "definition_en": "the act of keeping something harmful under control or within limits",
+      "ipa": "/kənˈteɪnmənt/",
+      "part_of_speech": "noun"
+    },
+    "9eb7d13a-8cb0-4d68-b6f3-579a645b083a": {
+      "difficulty": "7.0",
+      "definition_en": "a substance that makes something impure or poisonous",
+      "ipa": "/kənˈtæmɪnənt/",
+      "part_of_speech": "noun"
+    },
+    "06dc812d-4172-4577-b75e-112cfa2d364c": {
+      "difficulty": "7.0",
+      "definition_en": "people living or existing at the same period of time",
+      "ipa": "/kənˈtempərəriz/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-244f18f7e3784b7f": {
+      "difficulty": "7.0",
+      "synonyms": ["modern music", "new music", "avant-garde music"],
+      "collocations": ["contemporary classical music", "contemporary composer", "listen to contemporary music"],
+      "example_simple": "She enjoys contemporary music more than old classical pieces.",
+      "example_complex": "The festival showcased contemporary music written for orchestra by living composers who blend traditional and electronic sounds.",
+      "definition_en": "modern orchestral or instrumental music composed in the present era",
+      "ipa": "/kənˌtempərəri ˈmjuːzɪk/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "nhạc đương đại (nhạc soạn cho dàn nhạc/nhạc cụ trong thời hiện đại)"
+    },
+    "19b9f4f6-0880-4988-a979-39f0b80c6c42": {
+      "difficulty": "7.0",
+      "definition_en": "a feeling that someone or something is worthless or deserves no respect",
+      "ipa": "/kənˈtempt/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-107b8d03898e79f7": {
+      "difficulty": "8.0",
+      "ipa": "/kənˈtend/"
+    },
+    "15f5743f-effa-4de4-a733-7f8f6f1969c9": {
+      "difficulty": "7.0",
+      "definition_en": "a person who competes with others to win something",
+      "ipa": "/kənˈtendə(r)/",
+      "part_of_speech": "noun"
+    },
+    "451ec4eb-994b-45bc-bf3c-d3cc34656b71": {
+      "difficulty": "8.0",
+      "definition_en": "the shallow underwater areas of seabed bordering continents and islands",
+      "ipa": "/ˌkɒntɪˈnentl ənd ˈɪnsjələ ˈʃelvz/",
+      "part_of_speech": "phrase"
+    },
+    "ce0473a8-2dad-43a4-b87a-4a687eba1347": {
+      "difficulty": "7.0",
+      "definition_en": "a plan made in advance to deal with a possible future problem or emergency",
+      "ipa": "/kənˈtɪndʒənsi plæn/",
+      "part_of_speech": "phrase"
+    },
+    "cae970dd-9a29-47c2-9967-0381e0304df5": {
+      "difficulty": "6.0",
+      "example_complex": "Metals contract as they cool, so engineers must leave gaps in bridges to allow for this movement.",
+      "definition_en": "to become smaller or shorter, especially by shrinking",
+      "ipa": "/kənˈtrækt/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-27ae1785cfa4c8d8": {
+      "difficulty": "8.0",
+      "synonyms": ["arranged marriage", "marriage of convenience", "prearranged union"],
+      "collocations": ["enter a contractual marriage", "arrange a contractual marriage", "escape a contractual marriage"],
+      "example_simple": "In some cultures, a contractual marriage is arranged by the families.",
+      "example_complex": "Critics argue that a contractual marriage, agreed for financial or social gain rather than affection, undermines the idea of free consent.",
+      "definition_en": "a marriage arranged by agreement or contract rather than by mutual choice",
+      "ipa": "/kənˈtræktʃuəl ˈmærɪdʒ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-43e76c352f455a44": {
+      "difficulty": "8.0",
+      "synonyms": ["differ markedly from", "stand in stark contrast to", "clash sharply with"],
+      "collocations": ["contrast sharply with expectations", "contrast sharply with the past", "contrast sharply with reality"],
+      "example_simple": "Her calm reply contrasted sharply with his angry shouting.",
+      "example_complex": "The city's gleaming financial district contrasts sharply with the run-down neighbourhoods that surround it.",
+      "definition_en": "to be very clearly different from something else",
+      "ipa": "/ˈkɒntrɑːst ˈʃɑːpli wɪð/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-4a0857a7b7a0e3a0": {
+      "difficulty": "6.0",
+      "ipa": "/kənˈtrɪbjuːt tə/"
+    },
+    "pubcol-w-5cc1c6b2af7e0f8c": {
+      "difficulty": "7.0",
+      "ipa": "/ˈkɒnvɜːsli/"
+    },
+    "cc3fa451-cd46-4ad6-9880-9c2123bd9989": {
+      "difficulty": "6.0",
+      "definition_en": "a continuous moving belt used to transport objects from one place to another",
+      "ipa": "/kənˈveɪə belt/",
+      "part_of_speech": "noun"
+    },
+    "f37d3003-3515-46e1-a86a-706faa34aedc": {
+      "difficulty": "8.0",
+      "definition_en": "a question that is extremely complicated and difficult to follow",
+      "ipa": "/ˈkɒnvəluːtɪd ˈkwestʃən/",
+      "part_of_speech": "phrase"
+    },
+    "3e4dcf9e-170d-41b6-9b8e-cd89f463cc67": {
+      "difficulty": "6.0",
+      "definition_en": "a container or case made of copper",
+      "ipa": "/ˈkɒpə bɒks/",
+      "part_of_speech": "noun"
+    },
+    "5d1d40ff-99f4-4122-8ccb-4df653768009": {
+      "difficulty": "6.0",
+      "definition_en": "a ridge of rock in the sea formed by the growth of coral",
+      "ipa": "/ˈkɒrəl riːf/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-1469596fc89ae50a": {
+      "difficulty": "7.0",
+      "ipa": "/ˌkɒrəˈleɪʃn/"
+    },
+    "pubcol-w-2c4587f5dfc5b8c7": {
+      "difficulty": "6.0",
+      "ipa": "/ˌkɒrɪˈspɒnd tə/"
+    }
+  }
+}

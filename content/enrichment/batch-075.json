@@ -1,0 +1,193 @@
+{
+  "meta": { "batch": "batch-075", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-b6c65d497bb75f57": {
+      "difficulty": "6.0",
+      "synonyms": ["opinion", "viewpoint", "perspective", "standpoint"],
+      "collocations": ["in my view", "hold a view", "share a view"],
+      "example_simple": "In my view, we should leave early to avoid the traffic.",
+      "example_complex": "She holds a firmly considered view that educational reform must begin at the primary level.",
+      "definition_en": "a personal opinion or way of thinking about something",
+      "ipa": "/vjuː/",
+      "part_of_speech": "noun",
+      "vi_meaning_correction": "quan điểm, cách nhìn nhận"
+    },
+    "27b1b63a-440e-4872-80ad-a4bb72de53f3": {
+      "difficulty": "7.0",
+      "definition_en": "the money that a borrower receives from a loan",
+      "ipa": "/ləʊn prəˈsiːdz/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-86fef116fc6915ba": {
+      "synonyms": ["detest", "despise", "hate", "abhor"],
+      "collocations": ["loathe the idea", "absolutely loathe", "loathe doing something"],
+      "example_simple": "I loathe getting up early on cold mornings.",
+      "example_complex": "She loathed the hypocrisy of politicians who preached honesty while concealing their own scandals."
+    },
+    "12d2473d-dd10-461d-9399-cb15a55b6919": {
+      "difficulty": "7.0",
+      "definition_en": "drugs that numb a specific part of the body without causing loss of consciousness",
+      "ipa": "/ˌləʊkəl ˌænəsˈθetɪks/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-494e49642c3a7da8": {
+      "difficulty": "6.0",
+      "synonyms": ["regional food", "local dishes", "native cooking"],
+      "collocations": ["sample the local cuisine", "authentic local cuisine", "famous for its local cuisine"],
+      "example_simple": "We tried the local cuisine at a small family restaurant.",
+      "example_complex": "Travelling through the region, we savoured the local cuisine, which reflected centuries of cultural exchange.",
+      "definition_en": "the traditional food and cooking style of a particular area",
+      "ipa": "/ˌləʊkəl kwɪˈziːn/",
+      "part_of_speech": "noun",
+      "vi_meaning_correction": "ẩm thực địa phương, món ăn đặc trưng của vùng"
+    },
+    "3c466cf0-6b2d-49fb-b822-7f68ee92658b": {
+      "difficulty": "6.0",
+      "definition_en": "a nearby place where a community's rubbish and waste are taken and disposed of",
+      "ipa": "/ˌləʊkəl ˈdʌmp/",
+      "part_of_speech": "noun"
+    },
+    "29d088c7-7612-4f9e-827e-1efdebc32647": {
+      "difficulty": "8.0",
+      "synonyms": ["send up huge columns", "spew massive clouds", "eject towering plumes"],
+      "example_simple": "The volcano can loft vast plumes of ash high into the sky.",
+      "example_complex": "During the eruption, the crater lofted vast plumes of ash and gas that drifted across several countries.",
+      "definition_en": "to send huge columns of smoke, ash, or vapour high into the air",
+      "ipa": "/lɒft vɑːst pluːmz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-ce7b83d685bdb073": {
+      "difficulty": "5.0",
+      "synonyms": ["sign in", "log on", "access your account"],
+      "collocations": ["log into your account", "fail to log into account", "log into account securely"],
+      "example_simple": "You need to log into your account to see your messages.",
+      "example_complex": "After resetting her password, she was finally able to log into her account and retrieve the lost files.",
+      "definition_en": "to enter your username and password in order to access an online account",
+      "ipa": "/lɒɡ ˈɪntə əˈkaʊnt/",
+      "part_of_speech": "phrase"
+    },
+    "c04e647b-d1d3-4e75-9802-6bcf6cfa98ae": {
+      "difficulty": "6.0",
+      "definition_en": "an area where trees are cut down and processed for timber",
+      "ipa": "/ˈlɒɡɪŋ saɪt/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-550d890c4561e1b5": {
+      "difficulty": "6.0",
+      "ipa": "/ˌlɒŋ ˌstɔːri ˈʃɔːt/"
+    },
+    "pubcol-w-6d490228d3ab2c89": {
+      "difficulty": "5.0",
+      "ipa": "/ˌlʊk ˈɑːftə/"
+    },
+    "pubcol-w-52475a9989e1408b": {
+      "difficulty": "6.0",
+      "synonyms": ["despise", "disdain", "scorn", "belittle"],
+      "collocations": ["look down on others", "look down on someone", "look down on the poor"],
+      "example_simple": "You should never look down on people who have less money than you.",
+      "example_complex": "He resented the way his wealthy relatives looked down on anyone without a university degree.",
+      "definition_en": "to regard someone as inferior or less important than oneself",
+      "ipa": "/ˌlʊk ˈdaʊn ɒn/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-bc7aa4df384a101e": {
+      "difficulty": "5.0",
+      "ipa": "/ˌlʊk ˈfɔːwəd tə/"
+    },
+    "pubcol-w-c9d6ad1d80992e8e": {
+      "difficulty": "7.0",
+      "synonyms": ["look stunning", "look fantastic", "look gorgeous"],
+      "collocations": ["look like a million dollars tonight", "really look like a million dollars"],
+      "example_simple": "In that new dress, you look like a million dollars!",
+      "example_complex": "After the makeover and a good night's sleep, she walked in looking like a million dollars.",
+      "definition_en": "to look extremely attractive, healthy, or well-dressed",
+      "ipa": "/lʊk laɪk ə ˈmɪljən ˈdɒləz/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-45bdfcba9a5eb77c": {
+      "difficulty": "6.0",
+      "synonyms": ["stay positive", "be optimistic", "see the good side"],
+      "collocations": ["try to look on the bright side", "always look on the bright side"],
+      "example_simple": "We lost the game, but look on the bright side — we played really well.",
+      "example_complex": "Even after losing his job, he chose to look on the bright side, treating it as a chance to start a new career.",
+      "definition_en": "to be optimistic and focus on the positive aspects of a situation",
+      "ipa": "/lʊk ɒn ðə ˈbraɪt saɪd/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-364095e503b9a18b": {
+      "difficulty": "6.0",
+      "synonyms": ["small change", "coins", "spare coins"],
+      "collocations": ["a handful of loose change", "donate your spare change", "pockets full of loose change"],
+      "example_simple": "I keep my loose change in a jar on the shelf.",
+      "example_complex": "He emptied his pockets of loose change and dropped it into the charity box by the door.",
+      "definition_en": "coins of low value that you carry, especially in a pocket or bag",
+      "ipa": "/ˌluːs ˈtʃeɪndʒ/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-815ec82a02ac9c61": {
+      "difficulty": "6.0",
+      "synonyms": ["forget the time", "lose oneself", "become absorbed"],
+      "collocations": ["completely lose track of time", "easy to lose track of time"],
+      "example_simple": "I was reading a good book and lost track of time.",
+      "example_complex": "So absorbed was she in her painting that she lost track of time and missed the last train home.",
+      "definition_en": "to be so busy or absorbed that you do not notice how much time has passed",
+      "ipa": "/luːz ˈtræk əv ˈtaɪm/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-99cc84a3ba0f7054": {
+      "difficulty": "7.0",
+      "synonyms": ["bereavement", "sorrow", "mourning", "heartache"],
+      "collocations": ["cope with loss and grief", "deal with loss and grief", "overwhelmed by loss and grief"],
+      "example_simple": "After her mother died, she needed time to deal with her loss and grief.",
+      "example_complex": "The counsellor helped the family work through the profound loss and grief that followed the accident.",
+      "definition_en": "the deep sorrow experienced when someone or something is taken away",
+      "ipa": "/lɒs ənd ˈɡriːf/",
+      "part_of_speech": "noun",
+      "vi_meaning_correction": "sự mất mát và đau buồn"
+    },
+    "0099a2ef-f2f0-41b3-81ac-f4137f13e990": {
+      "difficulty": "7.0",
+      "definition_en": "a lack of confidence in or respect for oneself",
+      "ipa": "/ˌləʊ ɪˈstiːm/",
+      "part_of_speech": "noun"
+    },
+    "be2454b8-bc6c-44f5-8b94-fe8c22a20870": {
+      "difficulty": "7.0",
+      "definition_en": "an area of low ground shaped like a bowl, often prone to flooding",
+      "ipa": "/ˌləʊ ˌlaɪɪŋ ˈbeɪsn/",
+      "part_of_speech": "noun"
+    },
+    "a8d32711-4e18-4fdf-a9d4-5f0174283eaa": {
+      "difficulty": "6.0",
+      "definition_en": "land that lies at or only slightly above sea level",
+      "ipa": "/ˌləʊ ˌlaɪɪŋ ˈlænd/",
+      "part_of_speech": "noun"
+    },
+    "d32e2526-1c83-4fb6-b880-e3f00fa87433": {
+      "difficulty": "7.0",
+      "definition_en": "producing a large amount of money or profit",
+      "ipa": "/ˈluːkrətɪv/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-a750c6132dbdd800": {
+      "synonyms": ["baggage", "bags", "suitcases"],
+      "collocations": ["carry-on luggage", "excess luggage", "pack your luggage"],
+      "example_simple": "We put our luggage in the car before leaving for the airport.",
+      "example_complex": "The airline charged an extra fee because her luggage exceeded the permitted weight limit.",
+      "definition_en": "the bags and suitcases you take with you when travelling",
+      "part_of_speech": "noun"
+    },
+    "a718d8bf-af8f-4202-a23b-793759b32ea7": {
+      "difficulty": "6.0",
+      "definition_en": "wood that has been cut and prepared for building or carpentry",
+      "ipa": "/ˈlʌmbə/",
+      "part_of_speech": "noun"
+    },
+    "281e5ae4-7e52-48d4-b118-0d7c1c1837b9": {
+      "difficulty": "6.0",
+      "definition_en": "factories where logs are sawn into timber and wood products",
+      "ipa": "/ˈlʌmbə mɪlz/",
+      "part_of_speech": "noun"
+    }
+  }
+}

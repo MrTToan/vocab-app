@@ -1,0 +1,208 @@
+{
+  "meta": { "batch": "batch-070", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-84fbf760adee8802": {
+      "synonyms": ["allergen", "annoyance", "nuisance", "irritating substance"],
+      "collocations": ["a skin irritant", "a common irritant", "act as an irritant"],
+      "example_simple": "Cigarette smoke is a common irritant that can make your eyes water.",
+      "example_complex": "Prolonged exposure to the chemical, a known respiratory irritant, can inflame the lungs and trigger asthma attacks."
+    },
+    "9d623f5a-d00c-493a-bd46-41917adbd9c8": {
+      "difficulty": "6.0",
+      "definition_en": "to make someone annoyed or slightly angry, or to cause soreness in a part of the body",
+      "ipa": "/ˈɪrɪteɪt/",
+      "part_of_speech": "verb"
+    },
+    "caef9f54-f0b2-4855-896b-84fef7692d80": {
+      "difficulty": "6.0",
+      "definition_en": "to be leaning forward and downward from the waist, or to be curved out of shape",
+      "ipa": "/ɪz ˌbent ˈəʊvə/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-ccfe503f9dd3536e": {
+      "difficulty": "6.0",
+      "synonyms": ["I take your point, but", "I understand what you mean, but", "fair enough, but"],
+      "collocations": ["I see your point, but I disagree", "I see your point, but consider", "I see your point, but on the other hand"],
+      "example_simple": "I see your point, but I still think we should wait a little longer.",
+      "example_complex": "I see your point, but the evidence suggests that a more cautious approach would ultimately prove wiser.",
+      "definition_en": "used to politely acknowledge someone's argument before disagreeing or adding a qualification",
+      "ipa": "/aɪ ˌsiː jɔː ˈpɔɪnt bət/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "mình hiểu ý bạn, nhưng..."
+    },
+    "pubcol-w-b521f3c100801456": {
+      "difficulty": "7.0",
+      "ipa": "/ɪt kən biː ˈɑːɡjuːd ðət/"
+    },
+    "pubcol-w-9f9046fc57cc2b33": {
+      "difficulty": "6.0",
+      "ipa": "/ɪt ɪz ˈlaɪkli ðət/"
+    },
+    "pubcol-w-a9ab5ee8b0930875": {
+      "difficulty": "8.0",
+      "synonyms": ["the height of folly", "utterly foolish", "sheer madness"],
+      "collocations": ["the height of stupidity", "the height of folly", "the height of arrogance"],
+      "example_simple": "Driving without a seatbelt is the height of stupidity.",
+      "example_complex": "Ignoring repeated safety warnings just to save a few minutes was the height of stupidity and nearly cost them their lives.",
+      "definition_en": "an extremely foolish or senseless thing to do",
+      "ipa": "/ɪt ɪz ðə ˌhaɪt əv stjuːˈpɪdɪti/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "đỉnh cao của sự ngu ngốc; cực kỳ ngu ngốc"
+    },
+    "pubcol-w-5ecb170495c28b25": {
+      "difficulty": "6.0",
+      "ipa": "/ɪt ˌsiːmz tə ˈmiː ðət/"
+    },
+    "pubcol-w-d238d959ff019cd4": {
+      "difficulty": "7.0",
+      "synonyms": ["it makes sense that", "it is logical that", "naturally"],
+      "collocations": ["it stands to reason that", "it only stands to reason", "as stands to reason"],
+      "example_simple": "It stands to reason that if you don't study, you won't pass.",
+      "example_complex": "It stands to reason that a company neglecting its employees' welfare will eventually struggle to retain talent.",
+      "definition_en": "used to say that something is obvious or logical given the circumstances",
+      "ipa": "/ɪt ˌstændz tə ˈriːzn̩/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "hiển nhiên; điều đó là hợp lý, lẽ đương nhiên"
+    },
+    "27a3393d-29be-4d85-affe-cf36ff054006": {
+      "difficulty": "7.0",
+      "synonyms": ["it makes sense", "it is logical", "naturally"],
+      "definition_en": "used to say that something is obvious or logical given the circumstances",
+      "ipa": "/ɪt ˌstændz tə ˈriːzn̩/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-7ba4a5464da57e07": {
+      "difficulty": "7.0",
+      "synonyms": ["if the worst happens", "in the worst case", "as a last resort"],
+      "collocations": ["if worse comes to worst", "if the worst comes to the worst"],
+      "example_simple": "If worse comes to worst, we can always sleep in the car.",
+      "example_complex": "If worse comes to worst and the funding falls through, we will have to postpone the entire project until next year.",
+      "definition_en": "if the most serious or difficult situation possible actually happens",
+      "ipa": "/ɪf ˌwɜːs kʌmz tə ˈwɜːst/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "trong trường hợp xấu nhất; nếu tình huống tệ nhất xảy ra"
+    },
+    "pubcol-w-af7f6841bc5c8563": {
+      "difficulty": "8.0",
+      "synonyms": ["when it rains, it pours", "misfortunes never come singly", "bad luck comes in threes"],
+      "collocations": ["it never rains but it pours", "as they say, it never rains but it pours"],
+      "example_simple": "First I lost my keys, then my phone broke — it never rains but it pours.",
+      "example_complex": "Her car was stolen the same week she lost her job and the roof started leaking; it never rains but it pours.",
+      "definition_en": "misfortunes tend to arrive all at once rather than one at a time",
+      "ipa": "/ɪt ˈnevə reɪnz bət ɪt ˈpɔːz/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-bb4d6135db205ac4": {
+      "synonyms": ["serrated", "ragged", "uneven", "notched"],
+      "collocations": ["jagged edge", "jagged rocks", "jagged peaks"],
+      "example_simple": "Be careful of the jagged edge of the broken glass.",
+      "example_complex": "The climbers picked their way carefully along the jagged ridge, wary of the sheer drop on either side."
+    },
+    "pubcol-w-b2169104666f8b3e": {
+      "difficulty": "5.0",
+      "synonyms": ["a great deal of", "a huge amount of", "plenty of"],
+      "collocations": ["a large amount of money", "a large amount of data", "a large amount of time"],
+      "example_simple": "The project required a large amount of money.",
+      "example_complex": "Processing such a large amount of data in real time demands considerable computing power.",
+      "definition_en": "a big quantity of something, used before uncountable nouns",
+      "ipa": "/ə ˌlɑːdʒ əˈmaʊnt əv/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "một lượng lớn; nhiều"
+    },
+    "pubcol-w-b656b1194b605791": {
+      "synonyms": ["terminology", "lingo", "argot", "technical language"],
+      "collocations": ["technical jargon", "legal jargon", "full of jargon"],
+      "example_simple": "The manual was full of technical jargon that I couldn't understand.",
+      "example_complex": "Doctors are often advised to avoid medical jargon so that patients can fully grasp their diagnosis."
+    },
+    "pubcol-w-ade4543ed12390da": {
+      "synonyms": ["yellowish", "sallow", "jaundice-affected"],
+      "collocations": ["a jaundiced complexion", "jaundiced skin", "a jaundiced newborn"],
+      "example_simple": "The baby looked slightly jaundiced, so the doctor ordered a blood test.",
+      "example_complex": "His jaundiced complexion and constant fatigue prompted the physician to investigate his liver function."
+    },
+    "3fd034b9-18d6-4b6d-997e-0fccfaaeae29": {
+      "difficulty": "7.0",
+      "definition_en": "to put something at risk of being harmed, lost, or failing",
+      "ipa": "/ˈdʒepədaɪz/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-06784ace5e34d887": {
+      "difficulty": "6.0",
+      "synonyms": ["time-zone fatigue", "travel fatigue", "desynchronosis"],
+      "collocations": ["suffer from jet lag", "beat jet lag", "severe jet lag"],
+      "example_simple": "After the long flight to Australia, she suffered from terrible jet lag.",
+      "example_complex": "To minimise jet lag, seasoned travellers gradually adjust their sleep schedule several days before a long-haul flight.",
+      "definition_en": "extreme tiredness felt after a long flight across several time zones",
+      "ipa": "/ˈdʒet læɡ/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-ee33e27629d97b8d": {
+      "difficulty": "6.0",
+      "synonyms": ["job hunter", "applicant", "candidate"],
+      "collocations": ["an active jobseeker", "jobseeker's allowance", "support for jobseekers"],
+      "example_simple": "The website helps jobseekers find work in their local area.",
+      "example_complex": "The government introduced new training schemes to help long-term jobseekers re-enter the labour market.",
+      "definition_en": "a person who is looking for a job",
+      "ipa": "/ˈdʒɒbˌsiːkə/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-9519637469aadb59": {
+      "difficulty": "6.0",
+      "synonyms": ["work together", "collaborate", "team up", "cooperate"],
+      "collocations": ["join hands to fight", "join hands with partners", "join hands to build"],
+      "example_simple": "The two schools joined hands to raise money for charity.",
+      "example_complex": "Governments and private firms must join hands to tackle climate change on a global scale.",
+      "definition_en": "to work together with someone in order to achieve a common goal",
+      "ipa": "/ˌdʒɔɪn ˈhændz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-160b548d3fcfff5b": {
+      "difficulty": "7.0",
+      "synonyms": ["become one of", "join", "enlist in"],
+      "collocations": ["join the ranks of", "join the ranks of the unemployed", "join the ranks of the elite"],
+      "example_simple": "After graduating, she joined the ranks of the working world.",
+      "example_complex": "With the factory's closure, hundreds more workers joined the ranks of the unemployed.",
+      "definition_en": "to become a member of a particular group, or one of a number of people in the same situation",
+      "ipa": "/ˌdʒɔɪn ðə ˈræŋks/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "gia nhập (hàng ngũ), trở thành một thành viên"
+    },
+    "pubcol-w-753ba93bcc21998e": {
+      "synonyms": ["overjoyed", "elated", "exultant", "triumphant"],
+      "collocations": ["a jubilant crowd", "jubilant celebrations", "in a jubilant mood"],
+      "example_simple": "The fans were jubilant when their team won the cup.",
+      "example_complex": "A jubilant crowd flooded the streets, celebrating the historic election result late into the night."
+    },
+    "pubcol-w-e607ccd8e57a4120": {
+      "difficulty": "7.0",
+      "synonyms": ["act prematurely", "be hasty", "act too soon"],
+      "collocations": ["jump the gun on", "don't jump the gun", "jump the gun a little"],
+      "example_simple": "Don't jump the gun — wait until we have all the facts.",
+      "example_complex": "Investors who jumped the gun and bought shares before the official announcement ended up losing money.",
+      "definition_en": "to do something too soon, before the right or proper time",
+      "ipa": "/ˌdʒʌmp ðə ˈɡʌn/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "hành động quá vội vàng, làm điều gì đó quá sớm"
+    },
+    "pubcol-w-abb1874b9d64603a": {
+      "difficulty": "6.0",
+      "synonyms": ["run a red light", "run the lights", "go through a red light"],
+      "collocations": ["jump the lights", "jump a red light", "get caught jumping the lights"],
+      "example_simple": "He jumped the lights and nearly caused an accident.",
+      "example_complex": "The driver was fined heavily for jumping the lights at a busy intersection during rush hour.",
+      "definition_en": "to drive through a traffic light while it is red",
+      "ipa": "/ˌdʒʌmp ðə ˈlaɪts/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "vượt đèn đỏ"
+    },
+    "pubcol-w-2396d2826e5c68b8": {
+      "synonyms": ["intersection", "crossroads", "interchange"],
+      "collocations": ["a busy junction", "a road junction", "at the junction"],
+      "example_simple": "Turn left at the next junction.",
+      "example_complex": "A serious collision occurred at the junction where the motorway meets the ring road.",
+      "definition_en": "a place where roads, railway lines, or wires meet or cross",
+      "part_of_speech": "noun"
+    }
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "meta": { "batch": "batch-063", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-8ff90d83c29b32f5": {
+      "part_of_speech": "noun",
+      "definition_en": "a disease or period of being unwell in body or mind",
+      "synonyms": ["sickness", "disease", "ailment", "malady"],
+      "collocations": ["a serious illness", "recover from an illness", "mental illness"],
+      "example_simple": "She missed two weeks of school because of a sudden illness.",
+      "example_complex": "The report highlights how chronic illness can gradually erode a family's savings and emotional resilience."
+    },
+    "pubcol-w-ff3b90993a05223b": {
+      "difficulty": "6.0",
+      "ipa": "/ˈɪləstreɪt/"
+    },
+    "pubcol-w-0e76292794888d4f": {
+      "part_of_speech": "noun",
+      "definition_en": "a picture, representation, or mental impression of someone or something",
+      "synonyms": ["picture", "representation", "likeness", "impression"],
+      "collocations": ["a clear image", "public image", "create an image"],
+      "example_simple": "The photographer captured a beautiful image of the sunset.",
+      "example_complex": "The company spent millions trying to reshape its public image after the scandal broke."
+    },
+    "pubcol-w-971687e355a1a283": {
+      "part_of_speech": "verb",
+      "definition_en": "to form a picture or idea of something in your mind",
+      "synonyms": ["envisage", "picture", "envision", "conceive"],
+      "collocations": ["imagine a world", "hard to imagine", "imagine yourself"],
+      "example_simple": "Close your eyes and imagine a quiet beach.",
+      "example_complex": "It is difficult to imagine how societies will adapt if automation replaces most routine jobs."
+    },
+    "db216406-3a6f-4b18-ab78-dd63deb72cc1": {
+      "difficulty": "7.0",
+      "definition_en": "copying or reproducing the behaviour, style, or work of others",
+      "ipa": "/ˈɪmɪtətɪv/",
+      "part_of_speech": "adjective"
+    },
+    "ee48c34a-2e7a-4ed8-8359-d654b2d3581e": {
+      "difficulty": "8.0",
+      "definition_en": "not relevant or important to the matter being considered",
+      "ipa": "/ˌɪməˈtɪəriəl ɪn/",
+      "part_of_speech": "phrase"
+    },
+    "102d5aaa-251d-47e9-aa00-c2faf5eac37e": {
+      "difficulty": "8.0",
+      "definition_en": "the quality of bringing one close to events or making something feel present and urgent",
+      "ipa": "/ɪˈmiːdiəsi/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-9ade7d68716f1c2a": {
+      "difficulty": "6.0",
+      "synonyms": ["instant benefits", "short-term gains", "quick rewards"],
+      "collocations": ["offer immediate benefits", "immediate benefits of exercise", "see immediate benefits"],
+      "example_simple": "Saving money now brings immediate benefits to your budget.",
+      "example_complex": "While the policy promises immediate benefits, its long-term consequences remain largely unexamined.",
+      "definition_en": "advantages that appear right away rather than in the future",
+      "ipa": "/ɪˈmiːdiət ˈbenɪfɪts/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-3e7ce50be818f71a": {
+      "synonyms": ["instantly", "right away", "at once", "promptly"],
+      "collocations": ["respond immediately", "immediately after", "act immediately"],
+      "example_simple": "Call me immediately if anything goes wrong.",
+      "example_complex": "The medical team responded immediately, stabilising the patient before further complications could arise.",
+      "definition_en": "without any delay; at once",
+      "part_of_speech": "adverb"
+    },
+    "ad5680d5-f472-4028-adde-c84a41a9f67f": {
+      "difficulty": "7.0",
+      "definition_en": "about to happen very soon",
+      "ipa": "/ˈɪmɪnənt/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-3262c84466625073": {
+      "synonyms": ["excessive", "immoderate", "intemperate", "unrestrained"],
+      "collocations": ["immoderate drinking", "immoderate demands", "immoderate use"],
+      "example_simple": "His immoderate spending left him deep in debt.",
+      "example_complex": "Critics warned that the country's immoderate reliance on fossil fuels would prove economically reckless.",
+      "vi_meaning_correction": "quá mức, vô độ, không điều độ"
+    },
+    "pubcol-w-9aa6506875554b64": {
+      "difficulty": "6.0",
+      "synonyms": ["effect on", "influence on", "bearing on"],
+      "collocations": ["a major impact on", "impact on the environment", "have an impact on"],
+      "example_simple": "The new rules had a big impact on small businesses.",
+      "example_complex": "Researchers are still measuring the long-term impact on marine life of rising ocean temperatures.",
+      "definition_en": "to have a strong effect or influence on something",
+      "ipa": "/ˈɪmpækt ɒn/",
+      "part_of_speech": "phrase"
+    },
+    "a4992252-5c94-4b17-8abb-5086e4cdc666": {
+      "difficulty": "7.0",
+      "definition_en": "a weakening or damaging of something, especially a function or ability",
+      "ipa": "/ɪmˈpeəmənt/",
+      "part_of_speech": "noun"
+    },
+    "1f4a0b14-d664-424a-92e3-b5b93cf8ed1a": {
+      "difficulty": "8.0",
+      "definition_en": "to communicate or pass on information, knowledge, or a quality to someone",
+      "ipa": "/ɪmˈpɑːt/",
+      "part_of_speech": "verb"
+    },
+    "b9e82828-be26-41ad-8906-2b680e024fac": {
+      "difficulty": "7.0",
+      "definition_en": "treating all sides fairly and without favouring anyone",
+      "ipa": "/ɪmˈpɑːʃl/",
+      "part_of_speech": "adjective"
+    },
+    "64218e68-3488-42e5-a491-423a23eab68b": {
+      "difficulty": "8.0",
+      "definition_en": "a situation in which no progress is possible; a deadlock",
+      "ipa": "/æmˈpæs/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-9ed7f13075893ecf": {
+      "synonyms": ["restless", "irritable", "edgy", "intolerant"],
+      "collocations": ["grow impatient", "impatient with", "an impatient gesture"],
+      "example_simple": "The children became impatient while waiting for the bus.",
+      "example_complex": "Investors are growing impatient with the company's failure to deliver on its promised reforms.",
+      "definition_en": "easily annoyed by delay or by having to wait",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-7f04958b4fa49900": {
+      "synonyms": ["flawless", "faultless", "immaculate", "spotless"],
+      "collocations": ["impeccable manners", "impeccable taste", "an impeccable record"],
+      "example_simple": "Her English is impeccable, without a single mistake.",
+      "example_complex": "The chef's impeccable attention to detail earned the restaurant its third Michelin star."
+    },
+    "pubcol-w-dc5399824711e4ff": {
+      "synonyms": ["obstacle", "barrier", "hindrance", "obstruction"],
+      "collocations": ["a serious impediment", "an impediment to progress", "remove an impediment"],
+      "example_simple": "Poor transport is a major impediment to rural development.",
+      "example_complex": "Bureaucratic red tape remains the greatest impediment to launching innovative start-ups in the region."
+    },
+    "eeaf1ad1-449f-4ece-9cf6-9be48bf20f85": {
+      "difficulty": "8.0",
+      "definition_en": "an earthquake that is about to happen very soon",
+      "ipa": "/ɪmˈpendɪŋ kweɪk/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-c368bff99b9d7d51": {
+      "synonyms": ["impassable", "impervious", "solid", "dense"],
+      "collocations": ["impenetrable forest", "impenetrable darkness", "an impenetrable barrier"],
+      "example_simple": "The jungle was so thick it seemed impenetrable.",
+      "example_complex": "To outsiders, the legal document's impenetrable jargon made its true meaning almost impossible to grasp."
+    },
+    "pubcol-w-9880254b11fe1451": {
+      "synonyms": ["impulsive", "rash", "hasty", "reckless"],
+      "collocations": ["an impetuous decision", "impetuous behaviour", "impetuous youth"],
+      "example_simple": "It was an impetuous decision to quit his job without a plan.",
+      "example_complex": "Her impetuous nature often led her to make bold promises she later struggled to keep.",
+      "vi_meaning_correction": "bốc đồng, hấp tấp, nóng vội"
+    },
+    "c08dcdae-5f2c-4024-9a8e-1bcf2c5094b3": {
+      "difficulty": "8.0",
+      "synonyms": ["driving force behind the substantial prosperity", "catalyst for the substantial prosperity", "stimulus for the substantial prosperity"],
+      "definition_en": "the driving force or stimulus behind considerable economic prosperity",
+      "ipa": "/ˈɪmpɪtəs fə ðə səbˈstænʃl prɒsˈperəti/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-fdff89db13e7114f": {
+      "synonyms": ["relentless", "unappeasable", "unforgiving", "inexorable"],
+      "collocations": ["an implacable enemy", "implacable opposition", "implacable hatred"],
+      "example_simple": "He faced the implacable anger of the crowd.",
+      "example_complex": "Despite years of negotiation, the two factions remained implacable, refusing any form of compromise.",
+      "vi_meaning_correction": "không thể xoa dịu, không khoan nhượng, kiên quyết"
+    },
+    "9b8f66ca-fdc3-4c5c-b109-a5bef3dedb89": {
+      "difficulty": "7.0",
+      "definition_en": "difficult to believe; not seeming true or reasonable",
+      "ipa": "/ɪmˈplɔːzəbl/",
+      "part_of_speech": "adjective"
+    }
+  }
+}

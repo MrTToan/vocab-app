@@ -1,0 +1,182 @@
+{
+  "meta": { "batch": "batch-114", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-bd731af943feccf2": {
+      "synonyms": ["insult", "slander", "smear", "aspersion"],
+      "collocations": ["a racial slur", "cast a slur on", "an ethnic slur"],
+      "example_simple": "He shouted a racial slur at the other fans.",
+      "example_complex": "The newspaper was sued for printing a slur that seriously damaged the politician's reputation."
+    },
+    "pubcol-w-8b2e03a72a77efca": {
+      "synonyms": ["cunning", "crafty", "devious", "wily"],
+      "collocations": ["a sly smile", "a sly grin", "sly and cunning"],
+      "example_simple": "She gave a sly smile when no one was watching.",
+      "example_complex": "With a sly manoeuvre, he secured the contract before his rivals even realised it was available."
+    },
+    "pubcol-w-1e476c11d4067d3d": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˌsmɔːl ˈtʃeɪndʒ/",
+      "definition_en": "coins of low value; a trivial amount of money",
+      "synonyms": ["coins", "loose change", "petty cash"],
+      "collocations": ["a handful of small change", "some small change", "small change in my pocket"],
+      "example_simple": "I keep my small change in a jar by the door.",
+      "example_complex": "Compared with the company's vast annual profits, the fine was mere small change."
+    },
+    "pubcol-w-172e4655371747a8": {
+      "synonyms": ["smidgen", "sprinkling", "handful", "modicum"],
+      "collocations": ["a smattering of French", "a smattering of applause", "a smattering of knowledge"],
+      "example_simple": "She has a smattering of Spanish from her holidays abroad.",
+      "example_complex": "A smattering of polite applause greeted the speaker's underwhelming conclusion.",
+      "vi_meaning_correction": "một chút ít (kiến thức hời hợt); một số ít rải rác"
+    },
+    "pubcol-w-90e2f1cfc83f248c": {
+      "synonyms": ["a bit", "a touch", "a trace", "a smidge"],
+      "collocations": ["a smidgen of salt", "just a smidgen", "a smidgen more"],
+      "example_simple": "Add just a smidgen of salt to the soup.",
+      "example_complex": "There wasn't even a smidgen of doubt in her voice as she made the announcement."
+    },
+    "pubcol-w-a4c719380b92374e": {
+      "synonyms": ["sneer", "simper", "grin", "leer"],
+      "collocations": ["smirk knowingly", "smirk at someone", "a smug smirk"],
+      "example_simple": "He smirked when he saw my silly mistake.",
+      "example_complex": "She smirked knowingly, as if she had anticipated his failure all along."
+    },
+    "pubcol-w-67e8a834c46fb1b4": {
+      "synonyms": ["haze", "pollution", "fumes", "smoke"],
+      "collocations": ["thick smog", "smog hangs over the city", "reduce smog"],
+      "example_simple": "The city was covered in thick smog this morning.",
+      "example_complex": "Prolonged exposure to urban smog has been linked to a range of chronic respiratory illnesses."
+    },
+    "20dfb56e-c264-4773-8663-45f720bd54c1": {
+      "difficulty": "7.0",
+      "definition_en": "protective hoods worn over the head to filter smoke and toxic gases during a fire",
+      "ipa": "/ˈsməʊk hʊdz/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-27c89d320cc1602e": {
+      "synonyms": ["catch", "tear", "rip", "hook"],
+      "collocations": ["snag your clothes", "snag on a nail", "snag a thread"],
+      "example_simple": "Be careful not to snag your sweater on that nail.",
+      "example_complex": "She snagged her stocking on the rough edge of the desk as she hurried past."
+    },
+    "pubcol-w-049e2517cc11a7d9": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˌsnæp dɪˈsɪʒn/",
+      "definition_en": "a quick decision made without careful thought or planning",
+      "synonyms": ["quick decision", "impulsive choice", "spur-of-the-moment decision"],
+      "collocations": ["make a snap decision", "a snap decision to leave", "regret a snap decision"],
+      "example_simple": "I made a snap decision to buy the last two tickets.",
+      "example_complex": "In a crisis, leaders are often forced to make snap decisions with incomplete information.",
+      "vi_meaning_correction": "quyết định chớp nhoáng, quyết định vội vàng"
+    },
+    "a0da6a72-2eba-4a4d-aeb1-136e0cedbbf8": {
+      "difficulty": "6.0",
+      "definition_en": "the long, projecting nose and mouth of an animal such as a pig",
+      "ipa": "/snaʊt/",
+      "part_of_speech": "noun"
+    },
+    "cb9cfa30-d981-47fe-9d72-aa4a7ea207fb": {
+      "difficulty": "7.0",
+      "synonyms": ["vividly conjured", "clearly summoned", "distinctly recalled"],
+      "definition_en": "brought to mind so vividly and distinctly",
+      "ipa": "/səʊ ˈklɪəli ɪˈvəʊkt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-76f78101f02f97ed": {
+      "difficulty": "7.0",
+      "synonyms": ["as well as", "as much as", "equally with"],
+      "collocations": ["not so well as before", "so well as expected", "do so well as"],
+      "example_simple": "He does not sing so well as his sister.",
+      "example_complex": "Few authors of that era wrote so well as she did about the human condition.",
+      "definition_en": "as well as; to the same degree as (chiefly in formal or older usage)",
+      "ipa": "/səʊ ˈwel æz/",
+      "part_of_speech": "phrase"
+    },
+    "38a73f44-4a85-4619-a077-6c9de991dd2b": {
+      "difficulty": "7.0",
+      "ipa": "/sɔː(r)/"
+    },
+    "pubcol-w-52b4cddb84fffb13": {
+      "difficulty": "5.0",
+      "synonyms": ["social networks", "online platforms", "social networking sites"],
+      "collocations": ["on social media", "a social media platform", "post on social media"],
+      "example_simple": "She spends hours on social media every day.",
+      "example_complex": "The campaign went viral on social media, reaching millions of users within hours.",
+      "definition_en": "websites and applications that let users create and share content and network online",
+      "ipa": "/ˌsəʊʃl ˈmiːdiə/",
+      "part_of_speech": "noun"
+    },
+    "cbe72ffc-619e-4394-bcb0-0ca8d87ae407": {
+      "difficulty": "8.0",
+      "definition_en": "the process by which a society instils particular beliefs or values into its members, often uncritically",
+      "ipa": "/səˈsaɪətl ɪnˌdɒktrɪˈneɪʃn/",
+      "part_of_speech": "phrase"
+    },
+    "3ad5d6d3-0cd2-4195-9d06-3268826ee98c": {
+      "difficulty": "8.0",
+      "definition_en": "the stream of charged particles flowing outward from the sun; the solar wind",
+      "ipa": "/ˈsəʊlə briːz/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-91a1ebf6a82e343b": {
+      "difficulty": "6.0",
+      "synonyms": ["solar-powered charger", "photovoltaic charger"],
+      "collocations": ["a portable solar charger", "use a solar charger", "a solar charger for phones"],
+      "example_simple": "I took a small solar charger on my camping trip.",
+      "example_complex": "For remote fieldwork, a solar charger is indispensable when there is no access to the electricity grid.",
+      "definition_en": "a device that uses solar panels to convert sunlight into electricity to charge batteries",
+      "ipa": "/ˈsəʊlə ˈtʃɑːdʒə(r)/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-e1686b15dec92343": {
+      "difficulty": "6.0",
+      "synonyms": ["photovoltaic panel", "solar module", "PV panel"],
+      "collocations": ["install solar panels", "rooftop solar panels", "a solar panel array"],
+      "example_simple": "They installed solar panels on the roof of their house.",
+      "example_complex": "The government offers subsidies to households that fit solar panels to reduce their carbon footprint.",
+      "definition_en": "a panel designed to absorb sunlight and convert it into electricity or heat",
+      "ipa": "/ˈsəʊlə ˈpænl/",
+      "part_of_speech": "noun"
+    },
+    "628ee3fa-0043-4890-a2b9-1370d1b4d658": {
+      "difficulty": "7.0",
+      "definition_en": "formal and dignified; serious and sincere",
+      "ipa": "/ˈsɒləm/",
+      "part_of_speech": "adjective"
+    },
+    "42114a94-d450-4524-a087-9516f2ff381f": {
+      "difficulty": "6.0",
+      "definition_en": "done or existing alone; single or isolated",
+      "ipa": "/ˈsɒlətri/",
+      "part_of_speech": "adjective"
+    },
+    "3ce52d8b-8564-4c82-8151-2835ed5278e4": {
+      "difficulty": "8.0",
+      "synonyms": ["midsummer", "midwinter"],
+      "definition_en": "either of the two times a year when the sun reaches its highest or lowest point in the sky",
+      "ipa": "/ˈsɒlstɪs/",
+      "part_of_speech": "noun"
+    },
+    "af34a81d-fa35-47b7-bd89-82dba64339ba": {
+      "difficulty": "8.0",
+      "definition_en": "the ability to pay one's debts; the state of having assets that exceed liabilities",
+      "ipa": "/ˈsɒlvənsi/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-a29041739d7a596d": {
+      "synonyms": ["gloomy", "dark", "melancholy", "grave"],
+      "collocations": ["a sombre mood", "sombre colours", "in a sombre tone"],
+      "example_simple": "The waiting room was decorated in sombre colours.",
+      "example_complex": "A sombre atmosphere fell over the crowd as news of the tragedy spread."
+    },
+    "pubcol-w-345e9ea7c857e75d": {
+      "synonyms": ["echolocation", "echo sounding", "sound navigation"],
+      "collocations": ["use sonar", "sonar equipment", "detect by sonar"],
+      "example_simple": "The submarine used sonar to find its way in the dark water.",
+      "example_complex": "Marine biologists rely on sonar to map the ocean floor and track the movements of whales.",
+      "vi_meaning_correction": "hệ thống định vị bằng sóng âm (dùng để dò tìm dưới nước)"
+    }
+  }
+}

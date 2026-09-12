@@ -1,0 +1,206 @@
+{
+  "meta": { "batch": "batch-137", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-3e61d3ee53452167": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/wɪðˈdrɔː frəm/",
+      "definition_en": "to pull out of or stop taking part in a competition or exam",
+      "synonyms": ["pull out of", "drop out of", "quit", "back out of"],
+      "collocations": ["withdraw from the competition", "withdraw from the race", "withdraw from the exam"],
+      "example_simple": "She had to withdraw from the competition because of an injury.",
+      "example_complex": "Citing exhaustion, the champion withdrew from the tournament just hours before the final match.",
+      "vi_meaning_correction": "rút khỏi (cuộc thi/cuộc đua)"
+    },
+    "pubcol-w-e5ea97b08adb2471": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/drɒp ˈaʊt əv/",
+      "definition_en": "to stop attending a course or leave school before finishing",
+      "synonyms": ["drop out", "quit", "leave", "abandon"],
+      "collocations": ["drop out of school", "withdraw from the course", "drop the course"],
+      "example_simple": "He decided to drop out of school to start his own business.",
+      "example_complex": "After struggling to keep up with the workload, several students withdrew from the course midway through the semester.",
+      "vi_meaning_correction": "bỏ dở khóa học; bỏ học"
+    },
+    "pubcol-w-efbe3c17ef2b3629": {
+      "synonyms": ["wilting", "shrivelling", "drying up", "fading"],
+      "collocations": ["withering plants", "withering flowers", "withering heat"],
+      "example_simple": "The flowers were withering in the summer heat.",
+      "example_complex": "Without regular rain, the crops were slowly withering, leaving farmers anxious about the harvest."
+    },
+    "977832ce-d11c-4a35-a3e3-14ecc7ff0603": {
+      "difficulty": "7.0",
+      "definition_en": "to refuse to give something or to keep it back",
+      "ipa": "/wɪðˈhəʊld/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-5b8791520e4a97bd": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/wɪˌðaʊt ə ˈhɪtʃ/",
+      "definition_en": "without any problems or difficulties",
+      "synonyms": ["smoothly", "seamlessly", "effortlessly", "easily"],
+      "collocations": ["go off without a hitch", "run without a hitch", "proceed without a hitch"],
+      "example_simple": "The wedding went off without a hitch.",
+      "example_complex": "Despite months of anxious preparation, the product launch proceeded without a hitch."
+    },
+    "pubcol-w-a2cfac7dea84b7fa": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/wɪˌðaʊt ə ˈʃædəʊ əv ə ˈdaʊt/",
+      "definition_en": "with complete certainty; beyond any doubt",
+      "synonyms": ["undoubtedly", "definitely", "certainly", "unquestionably"],
+      "collocations": ["know without a shadow of a doubt", "prove without a shadow of a doubt", "believe without a shadow of a doubt"],
+      "example_simple": "I know without a shadow of a doubt that she is telling the truth.",
+      "example_complex": "The DNA evidence established, without a shadow of a doubt, that the suspect had been at the scene.",
+      "vi_meaning_correction": "không chút mảy may nghi ngờ; chắc chắn không nghi ngờ gì"
+    },
+    "pubcol-w-f9da86afd4e989b0": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/wɪˌðaʊt dɪˈleɪ/",
+      "definition_en": "immediately, without any waiting",
+      "synonyms": ["immediately", "at once", "promptly", "right away"],
+      "collocations": ["act without delay", "respond without delay", "proceed without delay"],
+      "example_simple": "Please reply to this email without delay.",
+      "example_complex": "The emergency services urged residents to evacuate without delay as the floodwaters continued to rise."
+    },
+    "pubcol-w-63eb0cd6ca96953d": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/wɪˌðaʊt ˈfeɪl/",
+      "definition_en": "always, with absolute certainty and no exception",
+      "synonyms": ["always", "certainly", "invariably", "reliably"],
+      "collocations": ["every day without fail", "arrive without fail", "attend without fail"],
+      "example_simple": "He goes for a run every morning without fail.",
+      "example_complex": "No matter how busy she was, she called her grandmother every Sunday without fail."
+    },
+    "pubcol-w-fc9577268e4aa838": {
+      "part_of_speech": "adjective",
+      "definition_en": "made of wood",
+      "synonyms": ["timber", "wood", "timbered"],
+      "collocations": ["wooden floor", "wooden furniture", "wooden spoon"],
+      "example_simple": "They sat at a large wooden table.",
+      "example_complex": "The old cottage featured exposed wooden beams and a beautifully polished oak floor."
+    },
+    "pubcol-w-61732525e4126559": {
+      "part_of_speech": "noun",
+      "definition_en": "a small forest or area covered with trees",
+      "synonyms": ["forest", "woodland", "grove", "thicket"],
+      "collocations": ["walk in the woods", "a walk through the woods", "deep in the woods"],
+      "example_simple": "We went for a walk in the woods.",
+      "example_complex": "The children spent the afternoon exploring the woods behind their grandparents' house.",
+      "vi_meaning_correction": "khu rừng nhỏ"
+    },
+    "pubcol-w-a861a76766dd67a4": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ˈwɜːd hæz ɪt ðæt/",
+      "definition_en": "people are saying that; there is a rumour that",
+      "synonyms": ["rumour has it", "people say", "it is said", "the story goes"],
+      "collocations": ["word has it that", "word has it he", "as word has it"],
+      "example_simple": "Word has it that they are getting married next year.",
+      "example_complex": "Word has it that the company is planning major layoffs, though management has yet to confirm anything.",
+      "vi_meaning_correction": "nghe đồn rằng; có tin đồn rằng"
+    },
+    "pubcol-w-55c86e217b9dab92": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˈwɜːk wʌnz ˈweɪ θruː/",
+      "definition_en": "to deal with or complete something gradually, step by step",
+      "synonyms": ["get through", "plough through", "make one's way through", "tackle"],
+      "collocations": ["work your way through the list", "work your way through college", "work your way through the pile"],
+      "example_simple": "It took me all week to work my way through the report.",
+      "example_complex": "She worked her way through university by waiting tables at a local restaurant in the evenings.",
+      "vi_meaning_correction": "làm/giải quyết dần dần từng bước; tự trang trải việc học bằng cách đi làm"
+    },
+    "pubcol-w-9031305dc756c779": {
+      "difficulty": "5.0",
+      "ipa": "/ˌwɜːk ˈaʊt/"
+    },
+    "pubcol-w-a5a8ac7522cc7175": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˌwɜːk ˈəʊvətaɪm/",
+      "definition_en": "to work more hours than one's normal working time",
+      "synonyms": ["work extra hours", "work late", "put in extra hours"],
+      "collocations": ["work overtime to finish", "be paid for overtime", "work overtime every week"],
+      "example_simple": "I had to work overtime to finish the project on time.",
+      "example_complex": "Many employees are expected to work overtime during the busy holiday season, often without additional pay."
+    },
+    "pubcol-w-d4088be0eccf1635": {
+      "difficulty": "7.0",
+      "ipa": "/ˌwɜːk laɪf ˈbæləns/"
+    },
+    "pubcol-w-212b0e64c7b55fe1": {
+      "synonyms": ["agitated", "upset", "flustered", "wound up"],
+      "collocations": ["get worked up", "worked up about something", "all worked up"],
+      "example_simple": "Don't get so worked up about the exam.",
+      "example_complex": "He was so worked up over the misunderstanding that he could barely string a sentence together."
+    },
+    "pubcol-w-3e432afef624b57b": {
+      "synonyms": ["exhausted", "tired out", "drained", "shattered"],
+      "collocations": ["feel worn-out", "completely worn-out", "worn-out and exhausted"],
+      "example_simple": "After the long journey, I felt completely worn-out.",
+      "example_complex": "By the end of the double shift, the nurses were worn-out yet still attentive to every patient."
+    },
+    "pubcol-w-f0cad97953dfb126": {
+      "part_of_speech": "verb",
+      "definition_en": "to cover something by folding material around it",
+      "synonyms": ["cover", "enclose", "bundle", "envelop"],
+      "collocations": ["wrap a present", "wrap it in paper", "wrap up warmly"],
+      "example_simple": "She wrapped the gift in colourful paper.",
+      "example_complex": "He carefully wrapped the fragile vase in bubble wrap before placing it in the box."
+    },
+    "pubcol-w-bea79731137b8391": {
+      "difficulty": "6.0",
+      "ipa": "/ˌræp ˈʌp/"
+    },
+    "3f5a9a60-b3e7-46e9-baff-cd667affcf40": {
+      "difficulty": "8.0",
+      "definition_en": "to take power or control from someone forcefully",
+      "ipa": "/rest kənˈtrəʊl/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-f65c1f7d6d975166": {
+      "part_of_speech": "noun",
+      "definition_en": "the joint connecting the hand to the arm",
+      "synonyms": ["carpus"],
+      "collocations": ["sprain your wrist", "a broken wrist", "wear a watch on your wrist"],
+      "example_simple": "She wears a bracelet on her wrist.",
+      "example_complex": "He fractured his wrist when he fell while skateboarding and had to wear a cast for six weeks."
+    },
+    "pubcol-w-cf488a9116a3c4b1": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/raɪt ən ˈeseɪ/",
+      "definition_en": "to compose a piece of academic writing such as an essay, report or paper",
+      "synonyms": ["compose an essay", "produce a paper", "draft a report", "write up"],
+      "collocations": ["write an essay", "write a report", "write an assignment"],
+      "example_simple": "We have to write an essay about climate change for homework.",
+      "example_complex": "For her final module, she was required to write a 3,000-word report analysing consumer behaviour.",
+      "vi_meaning_correction": "viết tiểu luận/bài tập/báo cáo/bài"
+    },
+    "a9e773d9-bea1-40b2-ae28-01d77bfc244b": {
+      "difficulty": "5.0",
+      "definition_en": "not correct or true; not right",
+      "ipa": "/rɒŋ/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-56eb3a3ec734e5a6": {
+      "synonyms": ["sailboat", "sailing boat", "cruiser", "vessel"],
+      "collocations": ["a luxury yacht", "sail a yacht", "a yacht club"],
+      "example_simple": "They spent the summer sailing on a yacht.",
+      "example_complex": "The billionaire's luxury yacht, complete with a helipad and swimming pool, was moored in the harbour."
+    },
+    "pubcol-w-3ce2e832336a788f": {
+      "part_of_speech": "noun",
+      "definition_en": "an area of ground next to a building, often enclosed",
+      "synonyms": ["courtyard", "backyard", "garden", "compound"],
+      "collocations": ["play in the yard", "a front yard", "the back yard"],
+      "example_simple": "The children were playing in the yard.",
+      "example_complex": "Behind the factory lay a vast yard where lorries loaded and unloaded goods around the clock."
+    }
+  }
+}

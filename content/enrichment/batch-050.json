@@ -1,0 +1,208 @@
+{
+  "meta": { "batch": "batch-050", "authored_by": "claude", "count": 25 },
+  "words": {
+    "9d73dfd0-6226-4ee4-a2be-3fc9f8bf3738": {
+      "difficulty": "7.0",
+      "definition_en": "narrow, concentrated beams of laser light directed at a single point",
+      "ipa": "/ˈfəʊkəst ˈleɪzə biːmz/",
+      "part_of_speech": "phrase"
+    },
+    "ab792d5f-d3ac-40ec-a580-c5881a351b63": {
+      "difficulty": "7.0",
+      "definition_en": "an enemy or opponent",
+      "ipa": "/fəʊ/",
+      "part_of_speech": "noun"
+    },
+    "4fb09c7e-4a04-434a-86ac-59959466dede": {
+      "difficulty": "8.0",
+      "definition_en": "to prevent people who copy others' work from succeeding",
+      "ipa": "/fɔɪl ˈpleɪdʒəˌraɪzəz/",
+      "part_of_speech": "phrase"
+    },
+    "1cf30d6f-1cb1-416a-8cae-4b3468322f9a": {
+      "difficulty": "6.0",
+      "definition_en": "traditional stories passed down orally among ordinary people",
+      "ipa": "/ˈfəʊkˌteɪlz/",
+      "part_of_speech": "noun"
+    },
+    "36aa443b-e93c-4bf2-afe6-34a408371eab": {
+      "difficulty": "7.0",
+      "definition_en": "a foolish act or lack of good sense",
+      "ipa": "/ˈfɒli/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-518ee0dc1dcca108": {
+      "difficulty": "6.0",
+      "synonyms": ["preservatives", "food chemicals", "artificial ingredients"],
+      "collocations": ["harmful food additives", "artificial food additives", "banned food additives"],
+      "example_simple": "Many snacks contain food additives to make them last longer.",
+      "example_complex": "Consumer groups are calling for clearer labelling of food additives that have been linked to health problems.",
+      "definition_en": "substances added to food to preserve it or improve its taste, colour or texture",
+      "ipa": "/fuːd ˈædɪtɪvz/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-ccaf74b724751522": {
+      "difficulty": "6.0",
+      "synonyms": ["foodborne illness", "food-related sickness", "gastroenteritis"],
+      "collocations": ["get food poisoning", "cause food poisoning", "a bout of food poisoning"],
+      "example_simple": "She got food poisoning after eating undercooked chicken.",
+      "example_complex": "The restaurant was shut down after several customers reported severe food poisoning.",
+      "definition_en": "illness caused by eating food that contains harmful bacteria or toxins",
+      "ipa": "/fuːd ˈpɔɪzənɪŋ/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-fa6d34b82ea412ab": {
+      "difficulty": "7.0",
+      "synonyms": ["pay the bill", "cover the cost", "pick up the tab"],
+      "collocations": ["foot the bill for", "taxpayers foot the bill", "foot the entire bill"],
+      "example_simple": "My parents kindly offered to foot the bill for the wedding.",
+      "example_complex": "If the project runs over budget, it will be ordinary taxpayers who ultimately foot the bill.",
+      "definition_en": "to pay for something, especially something expensive",
+      "ipa": "/fʊt ðə bɪl/",
+      "part_of_speech": "idiom"
+    },
+    "5e9b36fd-de8c-4521-b041-9e12e697c850": {
+      "difficulty": "7.0",
+      "definition_en": "a secure position from which further progress can be made",
+      "ipa": "/ˈfʊthəʊld/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-9ee07e8492928075": {
+      "difficulty": "7.0",
+      "synonyms": ["come what may", "whatever happens", "through thick and thin"],
+      "collocations": ["for better or worse, ...", "stay together for better or worse", "for better or for worse"],
+      "example_simple": "For better or worse, we decided to move to the countryside.",
+      "example_complex": "Social media has, for better or worse, transformed the way we form and maintain relationships.",
+      "definition_en": "whether the result is good or bad; whatever happens",
+      "ipa": "/fə ˈbetə ɔː ˈwɜːs/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-57dee62fc1e54786": {
+      "difficulty": "8.0",
+      "synonyms": ["for show", "to make an impression", "for dramatic effect"],
+      "collocations": ["pause for effect", "add for effect", "say something for effect"],
+      "example_simple": "He paused for effect before announcing the winner.",
+      "example_complex": "The speaker dropped his voice and paused for effect, letting the shocking statistic sink in.",
+      "definition_en": "done in order to impress people or create a striking impression",
+      "ipa": "/fər ɪˈfekt/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "để gây ấn tượng, để tạo hiệu ứng"
+    },
+    "pubcol-w-747417994c22a081": {
+      "difficulty": "8.0",
+      "synonyms": ["out of fear that", "in case", "lest"],
+      "collocations": ["for fear of losing", "for fear that they would", "for fear of upsetting"],
+      "example_simple": "She spoke quietly for fear of waking the baby.",
+      "example_complex": "Many witnesses refused to come forward for fear that they would face retaliation.",
+      "definition_en": "because of being afraid that something bad might happen",
+      "ipa": "/fə ˈfɪər əv/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "vì sợ rằng, để đề phòng việc gì"
+    },
+    "pubcol-w-45365e3f6333587a": {
+      "difficulty": "6.0",
+      "synonyms": ["permanently", "forever", "once and for all"],
+      "collocations": ["leave for good", "gone for good", "stay for good"],
+      "example_simple": "After years abroad, he came home for good.",
+      "example_complex": "The factory closed for good, leaving hundreds of workers without jobs.",
+      "definition_en": "permanently; forever",
+      "ipa": "/fə ɡʊd/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-ddc6b4882f5259ea": {
+      "difficulty": "5.0",
+      "ipa": "/fər ˈɪnstəns/"
+    },
+    "pubcol-w-496ffc76cf7cfbf7": {
+      "difficulty": "7.0",
+      "synonyms": ["in my opinion", "if you ask me", "to my mind"],
+      "collocations": ["for my money, ...", "for my money it's the best", "for my money there's no better"],
+      "example_simple": "For my money, this is the best restaurant in town.",
+      "example_complex": "For my money, the original film remains far superior to any of its glossy remakes.",
+      "definition_en": "in my opinion; if you ask me",
+      "ipa": "/fə maɪ ˈmʌni/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-68d12a23b109e90c": {
+      "difficulty": "5.0",
+      "synonyms": ["on the market", "up for sale", "available to buy"],
+      "collocations": ["put up for sale", "a house for sale", "not for sale"],
+      "example_simple": "The house next door is for sale.",
+      "example_complex": "The company's flagship building was quietly put up for sale amid mounting debts.",
+      "definition_en": "available to be bought",
+      "ipa": "/fə seɪl/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-1e3e10c2d46214df": {
+      "difficulty": "5.0",
+      "ipa": "/fə ʃɔː/"
+    },
+    "pubcol-w-3ce506b3694c4b69": {
+      "difficulty": "7.0",
+      "synonyms": ["for now", "temporarily", "for the moment"],
+      "collocations": ["stay for the time being", "for the time being at least", "enough for the time being"],
+      "example_simple": "For the time being, we'll stay in this apartment.",
+      "example_complex": "The negotiations have stalled, so the existing agreement will remain in force for the time being.",
+      "definition_en": "for now; temporarily until a situation changes",
+      "ipa": "/fə ðə ˈtaɪm ˌbiːɪŋ/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-555febf5e81c66e5": {
+      "difficulty": "7.0",
+      "synonyms": ["at very short notice", "with little warning", "on short notice"],
+      "collocations": ["arrive at short notice", "cancel at short notice", "for a long time"],
+      "example_simple": "They asked me to give a speech at short notice.",
+      "example_complex": "Having planned the trip for a long time, they were annoyed to have it cancelled at short notice.",
+      "definition_en": "with little advance warning; without much time to prepare",
+      "ipa": "/ət ʃɔːt ˈnəʊtɪs/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "trong thời gian rất ngắn, được báo gấp"
+    },
+    "pubcol-w-84ee36497e2cda31": {
+      "difficulty": "5.0",
+      "synonyms": ["briefly", "for a short time", "momentarily"],
+      "collocations": ["wait for a moment", "for a while longer", "pause for a moment"],
+      "example_simple": "Please wait here for a moment.",
+      "example_complex": "For a while, it seemed as though the crisis had been averted, but the calm did not last.",
+      "definition_en": "for a short period of time",
+      "ipa": "/fər ə ˈməʊmənt/",
+      "part_of_speech": "phrase"
+    },
+    "feb4843a-f738-45e8-853a-9af6f57fa1dd": {
+      "difficulty": "8.0",
+      "definition_en": "a person or animal that searches widely for food and provisions",
+      "ipa": "/ˈfɒrɪdʒə/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-9c019e5348e806d2": {
+      "difficulty": "8.0",
+      "synonyms": ["dirt cheap", "for next to nothing", "at a bargain price"],
+      "collocations": ["buy for a song", "sell for a song", "go for a song"],
+      "example_simple": "They bought the old car for a song.",
+      "example_complex": "The painting, later valued at millions, had been picked up for a song at a country auction.",
+      "definition_en": "for a very low price; very cheaply",
+      "ipa": "/fər ə sɒŋ/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "với giá rất rẻ, mua/bán với giá bèo"
+    },
+    "054d30b2-be45-4562-abed-5a83ef7467a5": {
+      "difficulty": "7.0",
+      "definition_en": "past tense of forbid: refused to allow something",
+      "ipa": "/fəˈbæd/",
+      "part_of_speech": "verb"
+    },
+    "50558d2b-1d17-4e77-959f-346e2c979278": {
+      "difficulty": "7.0",
+      "definition_en": "the front legs of an animal",
+      "ipa": "/ˈfɔːlɪmz/",
+      "part_of_speech": "noun"
+    },
+    "0f6de9d7-3c4c-4fe5-8d79-4ae6140ee9c4": {
+      "difficulty": "8.0",
+      "definition_en": "a smaller earthquake that occurs before a larger main earthquake",
+      "ipa": "/ˈfɔːʃɒk/",
+      "part_of_speech": "noun",
+      "vi_meaning_correction": "tiền chấn (chấn động nhỏ xảy ra trước trận động đất chính)"
+    }
+  }
+}

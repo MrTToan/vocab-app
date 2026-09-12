@@ -1,0 +1,166 @@
+{
+  "meta": { "batch": "batch-082", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-6c246f4b3e99194b": {
+      "synonyms": ["in the meantime", "meantime", "at the same time", "simultaneously"],
+      "collocations": ["meanwhile, back at home", "meanwhile in the meantime", "meanwhile she waited"],
+      "example_simple": "I'll cook dinner; meanwhile, you can set the table.",
+      "example_complex": "The committee debated the proposal for hours; meanwhile, the staff quietly prepared alternative plans in case it was rejected."
+    },
+    "bd98de87-2ea4-47c3-9daf-b215b415deb8": {
+      "difficulty": "8.0",
+      "synonyms": ["reconciles", "arbitrates", "resolves", "brokers"],
+      "definition_en": "acts as a go-between to settle something complicated",
+      "ipa": "/ˈmiːdieɪts ðə ˈkɒmpleks/",
+      "part_of_speech": "phrase"
+    },
+    "88ea8996-994f-4035-bfeb-4a3610a17ebf": {
+      "difficulty": "8.0",
+      "definition_en": "a formal written work dealing systematically with a medical subject",
+      "ipa": "/ˈmedɪkl ˈtriːtɪs/",
+      "part_of_speech": "phrase"
+    },
+    "0ff114e9-148b-4532-beab-9fa16a758502": {
+      "difficulty": "6.0",
+      "definition_en": "relating to the Middle Ages",
+      "ipa": "/ˌmediˈiːvl/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-21493fb5b939b781": {
+      "difficulty": "7.0",
+      "synonyms": ["average performance", "second-rate showing", "unremarkable display"],
+      "collocations": ["deliver a mediocre performance", "settle for a mediocre performance", "a mediocre performance overall"],
+      "example_simple": "The team gave a mediocre performance and only managed a draw.",
+      "example_complex": "Despite months of rehearsal, the orchestra turned in a mediocre performance that left the critics distinctly underwhelmed.",
+      "definition_en": "a showing that is only average and not at all impressive",
+      "ipa": "/ˌmiːdiˈəʊkə pəˈfɔːməns/",
+      "part_of_speech": "phrase"
+    },
+    "3fb731e0-a8da-448b-9fdf-fe7c3ef3a667": {
+      "difficulty": "7.0",
+      "definition_en": "quiet, gentle, and unwilling to assert oneself or argue",
+      "ipa": "/miːk/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-b781643b61b13424": {
+      "difficulty": "6.0",
+      "synonyms": ["satisfy the demand for", "fulfil the need for", "cater to the demand for"],
+      "collocations": ["meet the growing demand for", "meet the need for housing", "meet consumer demand"],
+      "example_simple": "The factory expanded to meet the demand for electric cars.",
+      "example_complex": "To meet the rising demand for renewable energy, the government has invested heavily in wind and solar infrastructure.",
+      "definition_en": "to provide enough of something to satisfy what people require or want",
+      "ipa": "/miːt ðə niːd ɒv / dɪˈmɑːnd fɔː/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-92b7cdbb8ce6c8d2": {
+      "difficulty": "8.0",
+      "synonyms": ["sadness", "sorrow", "gloom", "despondency"],
+      "collocations": ["a deep melancholy", "filled with melancholy", "a sense of melancholy"],
+      "example_simple": "A feeling of melancholy came over her as she left her childhood home.",
+      "example_complex": "The novel is suffused with a quiet melancholy, evoking the bittersweet passage of time and lost youth.",
+      "definition_en": "a feeling of deep, lingering sadness",
+      "ipa": "/ˈmelənkəli/",
+      "part_of_speech": "noun"
+    },
+    "13aa8d12-1578-4bc2-8a57-f2e4b0c22024": {
+      "difficulty": "7.0",
+      "definition_en": "objects kept as reminders of a person, place, or event",
+      "ipa": "/məˈmentəʊz/",
+      "part_of_speech": "noun"
+    },
+    "52c19348-6eda-40f2-ab69-23cb52784878": {
+      "difficulty": "7.0",
+      "definition_en": "a written account of one's own memories and experiences",
+      "ipa": "/ˈmemwɑː/",
+      "part_of_speech": "noun"
+    },
+    "db1257fd-1724-4a79-912b-0e20db859564": {
+      "difficulty": "7.0",
+      "definition_en": "an autobiographical record of a person's life and experiences",
+      "ipa": "/ˈmemwɑːz/",
+      "part_of_speech": "noun"
+    },
+    "c7e065ed-3061-46fc-8a84-d9c1f72a700f": {
+      "difficulty": "7.0",
+      "definition_en": "a person or thing that is likely to cause harm; a threat",
+      "ipa": "/ˈmenəs/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-12ea3a5e0a9c7e01": {
+      "synonyms": ["repair", "fix", "patch up", "heal"],
+      "collocations": ["mend a relationship", "mend fences", "mend a broken heart"],
+      "example_simple": "They talked for hours and finally mended their friendship.",
+      "example_complex": "After years of estrangement, the two brothers made a genuine effort to mend their fractured relationship.",
+      "definition_en": "to repair something broken or to restore a damaged relationship",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-f0d18a11393f56df": {
+      "difficulty": "6.0",
+      "ipa": "/ˈmentl helθ/"
+    },
+    "pubcol-w-7ee02fc66dfb9806": {
+      "synonyms": ["refer to", "note", "bring up", "cite"],
+      "collocations": ["mention briefly", "fail to mention", "worth mentioning"],
+      "example_simple": "She mentioned that she might be a little late.",
+      "example_complex": "The report barely mentions the environmental impact, focusing instead on the projected economic gains.",
+      "definition_en": "to refer to something briefly in speech or writing",
+      "part_of_speech": "verb"
+    },
+    "8d95360d-0cc3-45e0-8a86-d916ab1c2950": {
+      "difficulty": "7.0",
+      "definition_en": "only; just; nothing more than",
+      "ipa": "/ˈmɪəli/",
+      "part_of_speech": "adverb"
+    },
+    "28504a7d-efd7-429b-9d4a-e6004e18cda5": {
+      "difficulty": "8.0",
+      "definition_en": "to do no more than compel or coerce, without other means",
+      "ipa": "/ˈmɪəli fɔːs/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-e6d2933f253d3e64": {
+      "difficulty": "6.0",
+      "ipa": "/mes ʌp/"
+    },
+    "ad0e7ef6-92d7-46d3-9b0d-f14ac2ae2c42": {
+      "difficulty": "8.0",
+      "definition_en": "how effectively the body converts food into usable energy",
+      "ipa": "/ˌmetəˈbɒlɪk ɪˈfɪʃnsi/",
+      "part_of_speech": "phrase"
+    },
+    "30f714f3-f10a-4a6c-8e9e-4dc4e6eef9c9": {
+      "difficulty": "8.0",
+      "definition_en": "the chemical reactions that sustain life within an organism",
+      "ipa": "/ˌmetəˈbɒlɪk ˈprəʊsesɪz/",
+      "part_of_speech": "phrase"
+    },
+    "237b68e1-9d28-43c9-92ae-d6289540c546": {
+      "difficulty": "8.0",
+      "definition_en": "waste substances produced by the body's chemical processes",
+      "ipa": "/ˌmetəˈbɒlɪk ˈweɪsts/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-671e483513b16aae": {
+      "synonyms": ["metabolic rate", "energy conversion", "biochemical processing"],
+      "collocations": ["a fast metabolism", "boost your metabolism", "a slow metabolism"],
+      "example_simple": "Regular exercise can help speed up your metabolism.",
+      "example_complex": "As we age, our metabolism gradually slows, making it easier to gain weight even on an unchanged diet."
+    },
+    "c069820b-4767-411a-9178-28695cbfa41f": {
+      "difficulty": "8.0",
+      "definition_en": "a complete change of form, structure, or character",
+      "ipa": "/ˌmetəˈmɔːfəsɪs/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-b231b8df0a22d518": {
+      "synonyms": ["figure of speech", "image", "analogy", "symbol"],
+      "collocations": ["a powerful metaphor", "use a metaphor", "an extended metaphor"],
+      "example_simple": "\"Time is money\" is a common metaphor.",
+      "example_complex": "The author uses the gathering storm as a metaphor for the emotional turmoil raging within her protagonist."
+    },
+    "pubcol-w-5e705951b3b2e851": {
+      "difficulty": "7.0",
+      "ipa": "/ˌmeθəˈdɒlədʒi/"
+    }
+  }
+}

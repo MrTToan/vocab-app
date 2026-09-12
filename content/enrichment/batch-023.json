@@ -1,0 +1,208 @@
+{
+  "meta": { "batch": "batch-023", "authored_by": "claude", "count": 25 },
+  "words": {
+    "acf10371-e17c-46f5-87d0-1de31b45cde1": {
+      "difficulty": "8.0",
+      "definition_en": "substances capable of causing cancer in living tissue",
+      "ipa": "/kɑːˈsɪnədʒənz/",
+      "part_of_speech": "noun"
+    },
+    "68cb8432-b032-45b1-8798-a358495613b6": {
+      "difficulty": "7.0",
+      "definition_en": "the organ system comprising the heart and blood vessels that circulates blood around the body",
+      "ipa": "/ˌkɑːdiəʊˈvæskjələ ˈsɪstəm/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-b95608fae020ca0d": {
+      "difficulty": "6.0",
+      "synonyms": ["career opportunity", "job prospect", "employment outlook"],
+      "collocations": ["excellent career prospect", "improve one's career prospect", "long-term career prospect"],
+      "example_simple": "A good degree can open up a better career prospect for young people.",
+      "example_complex": "Graduates who master a second language often enjoy a far brighter career prospect in multinational firms.",
+      "definition_en": "the chance or likelihood of future success and advancement in one's job",
+      "ipa": "/kəˈrɪə ˈprɒspekt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-5e3f3ad96fcc9bcf": {
+      "difficulty": "6.0",
+      "synonyms": ["career opportunities", "job prospects", "employment prospects"],
+      "collocations": ["boost career prospects", "damage one's career prospects", "future career prospects"],
+      "example_simple": "Learning new skills can improve your career prospects.",
+      "example_complex": "Dropping out of university may seriously limit a young person's career prospects in a competitive labour market.",
+      "definition_en": "the chances or opportunities for future success and progress in one's working life",
+      "ipa": "/kəˈrɪə ˈprɒspekts/",
+      "part_of_speech": "phrase"
+    },
+    "a0e0ee34-0555-4b57-b2b2-49fecf8337c0": {
+      "difficulty": "7.0",
+      "definition_en": "pictures that exaggerate a person's features for comic or satirical effect",
+      "ipa": "/ˈkærɪkətʃʊəz/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-63cfae4e48bf8c1e": {
+      "synonyms": ["meat-eater", "predator", "flesh-eater"],
+      "collocations": ["large carnivore", "top carnivore", "apex carnivore"],
+      "example_simple": "A lion is a carnivore that hunts other animals for food.",
+      "example_complex": "As an apex carnivore, the tiger plays a crucial role in keeping prey populations in balance."
+    },
+    "2777031d-8f5b-41c4-93e2-19bcb958ab48": {
+      "difficulty": "6.0"
+    },
+    "pubcol-w-89a7cc83f26f71ce": {
+      "difficulty": "6.0",
+      "synonyms": ["conduct a study", "perform research", "undertake a survey"],
+      "collocations": ["carry out a detailed study", "conduct a large-scale survey", "carry out extensive research"],
+      "example_simple": "The team decided to carry out a survey to find out what customers wanted.",
+      "example_complex": "Before launching the policy, the government carried out a comprehensive study into its likely social impact.",
+      "definition_en": "to organise and complete a piece of research or an investigation",
+      "ipa": "/ˈkæri aʊt kənˈdʌkt ə ˈstʌdi ˈsɜːveɪ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-1c56647382dbb0ef": {
+      "difficulty": "8.0",
+      "synonyms": ["take the blame", "bear responsibility", "take the rap"],
+      "collocations": ["carry the can for someone", "always carry the can", "left to carry the can"],
+      "example_simple": "It wasn't my mistake, but I had to carry the can for it.",
+      "example_complex": "Junior staff too often carry the can for decisions actually made by senior management.",
+      "definition_en": "to take the blame or responsibility for something that has gone wrong",
+      "ipa": "/ˈkæri ðə kæn/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-c7d27e0ae939284a": {
+      "difficulty": "6.0",
+      "synonyms": ["hand luggage", "cabin bag", "checked luggage"],
+      "collocations": ["a small carry-on bag", "collect your check-in baggage", "check-in baggage allowance"],
+      "example_simple": "You can take a carry-on bag onto the plane, but larger cases must go as check-in baggage.",
+      "example_complex": "To avoid extra fees, many budget travellers pack everything into a carry-on bag rather than paying for check-in baggage.",
+      "definition_en": "a small bag taken into the cabin versus luggage handed in to be stored in the aircraft hold",
+      "ipa": "/ˈkæri ɒn bæɡ tʃek ɪn ˈbæɡɪdʒ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-86e20af6afe892f5": {
+      "difficulty": "6.0",
+      "synonyms": ["go too far", "overdo it", "take to excess"],
+      "collocations": ["carry a joke too far", "take things too far", "carry it too far"],
+      "example_simple": "The joke was funny at first, but he carried it too far.",
+      "example_complex": "While a little discipline is healthy, parents who carry strictness too far may damage a child's confidence.",
+      "definition_en": "to do something to an extreme or beyond acceptable limits",
+      "ipa": "/ˈkæri teɪk ˈsʌmθɪŋ tuː fɑː/",
+      "part_of_speech": "idiom"
+    },
+    "961a7032-f774-4139-a713-20dcb23e1b6c": {
+      "difficulty": "7.0",
+      "definition_en": "to create or establish something through great effort",
+      "ipa": "/kɑːv aʊt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-25f8c3395440ff7a": {
+      "difficulty": "7.0",
+      "synonyms": ["commercial crop", "market crop", "commodity crop"],
+      "collocations": ["grow a cash crop", "an important cash crop", "export cash crops"],
+      "example_simple": "Coffee is an important cash crop for many farmers in this region.",
+      "example_complex": "When farmers switch from food staples to lucrative cash crops, local communities can become vulnerable to price swings on world markets.",
+      "definition_en": "a crop grown to be sold for profit rather than for the grower's own use",
+      "ipa": "/kæʃ krɒp/",
+      "part_of_speech": "noun"
+    },
+    "7ba1f571-0666-42a0-8a2d-0a1325024e9e": {
+      "difficulty": "9.0",
+      "definition_en": "the reduction of human relationships to purely monetary transactions",
+      "ipa": "/kæʃ ˈneksəs/",
+      "part_of_speech": "noun"
+    },
+    "9b669e7d-465f-4c1d-842c-8d1de950d819": {
+      "difficulty": "6.0",
+      "definition_en": "a small edible kidney-shaped nut, or the tropical tree that produces it",
+      "ipa": "/ˈkæʃuː/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-f629215b57a04c6d": {
+      "difficulty": "5.0",
+      "synonyms": ["come down with a cold", "get the flu", "fall ill with flu"],
+      "collocations": ["catch a bad cold", "catch the flu easily", "catch a cold in winter"],
+      "example_simple": "I always catch a cold when the weather turns cold.",
+      "example_complex": "Commuters packed onto crowded trains are far more likely to catch the flu during the winter months.",
+      "definition_en": "to become infected with a cold or influenza",
+      "ipa": "/kætʃ ə kəʊld ðə fluː/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-14a5d807885358e2": {
+      "difficulty": "6.0",
+      "synonyms": ["seize an opportunity", "grab a chance", "jump at the chance"],
+      "collocations": ["catch at a rare opportunity", "quick to catch at an opportunity", "catch at every opportunity"],
+      "example_simple": "She caught at the opportunity to study abroad.",
+      "example_complex": "Ambitious young professionals tend to catch at any opportunity that might accelerate their careers.",
+      "definition_en": "to take eager advantage of a chance when it arises",
+      "ipa": "/kætʃ ət ən ˌɒpəˈtjuːnəti/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-b2feee3eebb065de": {
+      "difficulty": "5.0",
+      "synonyms": ["catch fire", "go up in flames", "burst into flames"],
+      "collocations": ["suddenly catch fire", "the building was on fire", "catch fire quickly"],
+      "example_simple": "The dry grass can easily catch fire in summer.",
+      "example_complex": "Firefighters warned that overloaded electrical sockets can catch fire without any warning.",
+      "definition_en": "to start burning or be in a state of burning",
+      "ipa": "/kætʃ ˈfaɪə biː ɒn ˈfaɪə/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-1147a0db8c4acf41": {
+      "difficulty": "6.0",
+      "synonyms": ["get one's breath back", "pause for breath", "recover one's breath"],
+      "collocations": ["stop to catch one's breath", "pause to catch your breath", "hardly catch her breath"],
+      "example_simple": "After running for the bus, she stopped to catch her breath.",
+      "example_complex": "The pace of change has been so relentless that businesses have barely had time to catch their breath.",
+      "definition_en": "to rest for a moment until one can breathe normally again after exertion",
+      "ipa": "/kætʃ wʌnz breθ/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-0c15fec4be874512": {
+      "difficulty": "6.0",
+      "synonyms": ["spot", "notice", "glimpse"],
+      "collocations": ["catch sight of a friend", "suddenly catch sight of", "catch sight of the sea"],
+      "example_simple": "She was excited to catch sight of her favourite singer at the airport.",
+      "example_complex": "As the train rounded the bend, the passengers caught sight of the snow-capped mountains for the first time.",
+      "definition_en": "to see someone or something suddenly or briefly",
+      "ipa": "/kætʃ saɪt ɒv/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-42de22c6387f05cc": {
+      "difficulty": "6.0",
+      "synonyms": ["glimpse", "spot briefly", "catch sight of"],
+      "collocations": ["catch a glimpse of the star", "only catch a glimpse", "catch a fleeting glimpse of"],
+      "example_simple": "The crowd waited for hours just to catch a glimpse of the president.",
+      "example_complex": "Through the parting clouds, hikers managed to catch a glimpse of the distant summit before the mist closed in again.",
+      "definition_en": "to see someone or something for a very brief moment, often by chance",
+      "ipa": "/kætʃ saɪt ɒv kætʃ ə ɡlɪmps ɒv/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-1072e619abac70c4": {
+      "difficulty": "7.0",
+      "synonyms": ["capture public attention", "appeal to the public", "win over the public"],
+      "collocations": ["catch the public imagination", "catch the public eye", "catch the public mood"],
+      "example_simple": "The new advert really caught the public's attention.",
+      "example_complex": "A campaign that catches the public imagination can shift opinion far faster than years of official policy.",
+      "definition_en": "to attract and hold the interest or attention of ordinary people",
+      "ipa": "/kætʃ ðə ˈpʌblɪk/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-3bbbe4b1a66ed41e": {
+      "difficulty": "7.0",
+      "synonyms": ["seize the opportunity", "grab the chance", "make the most of an opportunity"],
+      "collocations": ["the early bird catches the worm", "get up early and catch the worms", "catch the worms first"],
+      "example_simple": "If you want the best deals, get there early — the early bird catches the worm.",
+      "example_complex": "In a fiercely competitive market, it is often the company that moves first, catching the worms, that reaps the greatest rewards.",
+      "definition_en": "to gain an advantage by acting before others do",
+      "ipa": "/kætʃ ðə wɜːmz/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-c270cbef8991c3e8": {
+      "difficulty": "5.0",
+      "ipa": "/kætʃ ʌp/"
+    },
+    "pubcol-w-5452241d3ba1e6fa": {
+      "difficulty": "5.0",
+      "ipa": "/kætʃ juː ˈleɪtə/"
+    }
+  }
+}

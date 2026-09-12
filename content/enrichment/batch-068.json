@@ -1,0 +1,172 @@
+{
+  "meta": { "batch": "batch-068", "authored_by": "claude", "count": 25 },
+  "words": {
+    "f1ac0200-5976-4478-997e-20285544d78c": {
+      "difficulty": "7.0",
+      "definition_en": "a large amount of money flowing into a country, market, or business",
+      "ipa": "/ˈɪnflʌks əv ˈkæpɪtl/",
+      "part_of_speech": "phrase"
+    },
+    "85fe9938-5113-48a9-9724-7b0ecc0363ab": {
+      "difficulty": "6.0",
+      "definition_en": "electromagnetic radiation with wavelengths longer than visible light, usually felt as heat",
+      "ipa": "/ˌɪnfrəˈred/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-35f8b7463f1ec720": {
+      "difficulty": "6.0",
+      "ipa": "/ˈɪnfrəstrʌktʃə/"
+    },
+    "pubcol-w-dc6048e0f0475b7a": {
+      "synonyms": ["components", "elements", "constituents"],
+      "collocations": ["fresh ingredients", "key ingredients", "list of ingredients"],
+      "example_simple": "Mix all the ingredients in a large bowl.",
+      "example_complex": "The recipe calls for only a handful of fresh ingredients, yet the resulting flavour is remarkably complex.",
+      "definition_en": "the various foods or substances that are combined to make a particular dish",
+      "part_of_speech": "noun"
+    },
+    "600f8170-4529-4c57-95d8-5ed05cf11ab6": {
+      "difficulty": "7.0",
+      "definition_en": "in a way that is a basic or permanent part of something",
+      "ipa": "/ɪnˈhɪərəntli/",
+      "part_of_speech": "adverb"
+    },
+    "b42eef3c-e285-4584-a063-0096cee5a2bb": {
+      "difficulty": "7.0",
+      "definition_en": "to prevent or slow down a process, action, or reaction",
+      "ipa": "/ɪnˈhɪbɪt/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-c5b0c16a71e80ada": {
+      "synonyms": ["wound", "harm", "damage", "trauma"],
+      "collocations": ["serious injury", "sustain an injury", "minor injury"],
+      "example_simple": "He suffered a knee injury during the match.",
+      "example_complex": "The athlete's career was cut short by a recurring injury that never fully healed.",
+      "definition_en": "physical harm or damage done to a person's body",
+      "part_of_speech": "noun"
+    },
+    "b769324e-6ec7-46d5-a8a3-5ab2eb2d891f": {
+      "difficulty": "6.0",
+      "definition_en": "lack of fairness, or a situation in which people are treated unfairly",
+      "ipa": "/ɪnˈdʒʌstɪs/",
+      "part_of_speech": "noun"
+    },
+    "0d09ad39-ef73-43d9-83fc-1aceba76f263": {
+      "difficulty": "8.0",
+      "definition_en": "unusually or excessively large in amount or degree",
+      "ipa": "/ɪˈnɔːdɪnət/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-72731fe14b55bb3b": {
+      "synonyms": ["curious", "inquiring", "probing"],
+      "collocations": ["inquisitive mind", "inquisitive nature", "inquisitive child"],
+      "example_simple": "The inquisitive child asked endless questions.",
+      "example_complex": "Her inquisitive nature drove her to investigate problems that others were content to ignore."
+    },
+    "pubcol-w-dfffc60cb13722f5": {
+      "difficulty": "7.0",
+      "synonyms": ["details", "intricacies", "particulars", "specifics"],
+      "collocations": ["know the ins and outs", "learn the ins and outs", "the ins and outs of"],
+      "example_simple": "She knows the ins and outs of the business.",
+      "example_complex": "It took him months to master the ins and outs of the new regulatory system.",
+      "definition_en": "the detailed or complicated features and workings of something",
+      "ipa": "/ðə ˌɪnz ənd ˈaʊts/",
+      "part_of_speech": "idiom"
+    },
+    "65f77814-36f9-4bc8-8ddd-371db97ee7a0": {
+      "difficulty": "7.0",
+      "definition_en": "words that are written on or carved into something such as a monument, coin, or gift",
+      "ipa": "/ɪnˈskrɪpʃn/",
+      "part_of_speech": "noun"
+    },
+    "00bae972-b5d0-4ba0-aafd-51cd52bca6c1": {
+      "difficulty": "6.0",
+      "definition_en": "a chemical substance used to kill insects",
+      "ipa": "/ɪnˈsektɪsaɪd/",
+      "part_of_speech": "noun"
+    },
+    "dd96131b-3fab-4fb4-a451-37f7a17e3066": {
+      "difficulty": "8.0",
+      "definition_en": "proceeding gradually and harmfully in a way that is not easily noticed",
+      "ipa": "/ɪnˈsɪdiəs/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-ada24bdc7fbeeecd": {
+      "difficulty": "7.0",
+      "ipa": "/ˌɪnsəʊˈfɑːr əz/"
+    },
+    "b05c2148-2f3e-40ef-a827-e0cf46a8754f": {
+      "difficulty": "6.0",
+      "definition_en": "a condition in which a person is regularly unable to sleep",
+      "ipa": "/ɪnˈsɒmniə/",
+      "part_of_speech": "noun"
+    },
+    "a8b4cb3f-d172-4091-aadc-c6b186bc89cd": {
+      "difficulty": "7.0",
+      "synonyms": ["checkpoint automation", "automated inspection"],
+      "definition_en": "the use of automated systems to carry out checks at an inspection point",
+      "ipa": "/ɪnˈspekʃn pəʊst ˌɔːtəˈmeɪʃn/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-f16555abf57282aa": {
+      "difficulty": "6.0",
+      "synonyms": ["payment plan", "hire purchase", "instalment scheme"],
+      "collocations": ["on an installment plan", "monthly installment plan", "offer an installment plan"],
+      "example_simple": "We bought the sofa on an installment plan.",
+      "example_complex": "The retailer offers an interest-free installment plan that spreads the cost over twelve months.",
+      "definition_en": "an arrangement to pay for something in regular fixed amounts over a period of time",
+      "ipa": "/ɪnˈstɔːlmənt plæn/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "trả góp, mua trả góp"
+    },
+    "pubcol-w-db008c2e3a4d29ee": {
+      "difficulty": "5.0",
+      "synonyms": ["set up a program", "load software", "deploy a program"],
+      "collocations": ["install a program", "install a new program", "install a program on your computer"],
+      "example_simple": "You need to install a program before you can open the file.",
+      "example_complex": "Before running the analysis, make sure to install a program capable of handling large datasets.",
+      "definition_en": "to set up software so that it is ready to be used on a computer",
+      "ipa": "/ɪnˈstɔːl ə ˈprəʊɡræm/",
+      "part_of_speech": "phrase"
+    },
+    "aea8226a-c865-41d2-aa98-73cd6668ac71": {
+      "difficulty": "8.0",
+      "synonyms": ["established a command economy", "set up a planned economy"],
+      "definition_en": "established an economic system that is controlled by a central authority such as the state",
+      "ipa": "/ˈɪnstɪtjuːtɪd ə ˈsentrəlaɪzd ɪˈkɒnəmi/",
+      "part_of_speech": "phrase"
+    },
+    "0dbcc9e5-d85f-420b-a8ce-fc1b8f3bd700": {
+      "difficulty": "8.0",
+      "synonyms": ["inadequate campaigning", "poor voter outreach"],
+      "definition_en": "not enough soliciting of votes, opinions, or support from people",
+      "ipa": "/ˌɪnsəˈfɪʃnt ˈkænvəsɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "00303f3e-445f-4d47-9416-0abe9306c989": {
+      "difficulty": "8.0",
+      "synonyms": ["interconnected circuits", "interacting circuits"],
+      "definition_en": "electronic circuits that influence and respond to one another",
+      "ipa": "/ˌɪntərˈæktɪŋ ˈsɜːkɪtri/",
+      "part_of_speech": "phrase"
+    },
+    "396d20e0-cf63-4536-aa3a-9fb7b43baeda": {
+      "difficulty": "7.0",
+      "definition_en": "to fit or join firmly together, especially by connecting matching parts",
+      "ipa": "/ˌɪntəˈlɒk/",
+      "part_of_speech": "verb"
+    },
+    "ad84e580-a95d-488e-894b-5bf311fb9da4": {
+      "difficulty": "7.0",
+      "definition_en": "at irregular intervals; stopping and starting rather than continuously",
+      "ipa": "/ˌɪntəˈmɪtəntli/",
+      "part_of_speech": "adverb"
+    },
+    "bbc0e063-5343-4c2e-822a-82d163b6e8eb": {
+      "difficulty": "7.0",
+      "definition_en": "bars or rods inside a structure that provide bracing and support",
+      "ipa": "/ɪnˈtɜːnl strʌts/",
+      "part_of_speech": "phrase"
+    }
+  }
+}

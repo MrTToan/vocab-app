@@ -1,0 +1,229 @@
+{
+  "meta": { "batch": "batch-136", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-38739f3e88124b27": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/wɛnˈɛvə ʃi ˈniːdɪd miː/",
+      "definition_en": "at any time that she required help or support",
+      "synonyms": ["any time she needed me", "whenever she required help", "each time she needed me"],
+      "collocations": ["was there whenever she needed me", "came whenever she needed me", "whenever she needed me most"],
+      "example_simple": "I promised to be there whenever she needed me.",
+      "example_complex": "Throughout those difficult months, he made a point of dropping everything and turning up whenever she needed him, no matter the hour.",
+      "vi_meaning_correction": "bất cứ khi nào cô ấy cần tôi"
+    },
+    "pubcol-w-3b959693d09b2240": {
+      "part_of_speech": "conjunction",
+      "definition_en": "used to introduce a choice or doubt between two or more alternatives",
+      "synonyms": ["if", "in case", "regardless of whether"],
+      "collocations": ["whether or not", "decide whether", "wonder whether"],
+      "example_simple": "I don't know whether to stay or go home.",
+      "example_complex": "The committee has yet to determine whether the new policy should apply to existing members or only to future ones."
+    },
+    "pubcol-w-99d9eb0474aef1f6": {
+      "synonyms": ["complain", "moan", "grumble", "whimper"],
+      "collocations": ["whine about something", "stop whining", "whine constantly"],
+      "example_simple": "The children began to whine when they got tired.",
+      "example_complex": "Rather than whining about the extra workload, she quietly rearranged her schedule and got on with it."
+    },
+    "pubcol-w-fea80b71da8a7d05": {
+      "synonyms": ["bristles", "facial hair", "sideburns"],
+      "collocations": ["a cat's whiskers", "twitch its whiskers", "long whiskers"],
+      "example_simple": "The cat's whiskers twitched as it watched the bird.",
+      "example_complex": "A seal uses its sensitive whiskers to detect the faint water currents left behind by passing fish."
+    },
+    "7ec6d753-4622-473c-af90-f651c4c4781b": {
+      "difficulty": "8.0",
+      "definition_en": "a small, extremely dense star that is the collapsed remnant of a low-mass star",
+      "ipa": "/ˌwaɪt ˈdwɔːf/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-a15b9238933400e7": {
+      "difficulty": "6.0",
+      "synonyms": ["fib", "harmless lie", "half-truth"],
+      "collocations": ["tell a white lie", "a little white lie", "an innocent white lie"],
+      "example_simple": "I told a white lie and said I loved the gift.",
+      "example_complex": "Most people accept that the occasional white lie can spare a friend's feelings without doing any real harm.",
+      "definition_en": "a harmless or trivial lie, especially one told to avoid hurting someone's feelings",
+      "ipa": "/ˌwaɪt ˈlaɪ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-c0b2746a1f0064f0": {
+      "difficulty": "6.0",
+      "synonyms": ["professional", "office", "clerical", "salaried"],
+      "collocations": ["white-collar job", "white-collar worker", "white-collar crime"],
+      "example_simple": "She left a white-collar job in the city to run a farm.",
+      "example_complex": "Automation is beginning to reshape white-collar professions that were once thought immune to it.",
+      "definition_en": "relating to office or professional work rather than manual labour",
+      "ipa": "/ˌwaɪt ˈkɒlə/",
+      "part_of_speech": "adjective"
+    },
+    "5e96b490-524c-4e64-9ed6-baba1a3641a2": {
+      "difficulty": "7.0",
+      "definition_en": "with complete sincerity, enthusiasm, and commitment",
+      "ipa": "/ˌhəʊlˈhɑːtɪdli/",
+      "part_of_speech": "adverb"
+    },
+    "pubcol-w-21f7996f5e64af6e": {
+      "difficulty": "6.0",
+      "synonyms": ["a broad range of", "an assortment of", "a diverse selection of"],
+      "collocations": ["offer a wide variety of", "a wide range of products", "a wide variety of options"],
+      "example_simple": "The shop sells a wide variety of fresh fruit.",
+      "example_complex": "The museum's collection spans a wide range of periods, from ancient pottery to contemporary digital art.",
+      "definition_en": "a large number of different types or kinds of something",
+      "ipa": "/ˌwaɪd vəˈraɪəti reɪndʒ əv/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "nhiều loại khác nhau; đa dạng các loại"
+    },
+    "pubcol-w-0bc72bae2d578a61": {
+      "difficulty": "7.0",
+      "synonyms": ["widely recognised", "generally accepted", "universally acknowledged"],
+      "collocations": ["widely acknowledged as", "it is widely acknowledged that", "a widely acknowledged fact"],
+      "example_simple": "She is widely acknowledged as one of the best writers of her generation.",
+      "example_complex": "It is now widely acknowledged that early intervention produces far better long-term outcomes than treatment delayed until symptoms worsen.",
+      "definition_en": "generally recognised or accepted as true by many people",
+      "ipa": "/ˌwaɪdli əkˈnɒlɪdʒd/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "được công nhận rộng rãi"
+    },
+    "pubcol-w-353d262bdbb6ea71": {
+      "difficulty": "6.0",
+      "ipa": "/ˈwaɪdspred/"
+    },
+    "99c56954-616d-46d5-a95d-572da2007472": {
+      "difficulty": "5.0",
+      "definition_en": "a berry that grows naturally in the wild rather than being cultivated",
+      "ipa": "/ˌwaɪld ˈbɛri/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-d22f135e8078070b": {
+      "difficulty": "6.0",
+      "synonyms": ["persuade", "convince", "win round", "charm"],
+      "collocations": ["win over voters", "win over the audience", "gradually win someone over"],
+      "example_simple": "It took time, but she finally won over her new colleagues.",
+      "example_complex": "The candidate's honesty and calm manner gradually won over even the sceptics in the audience.",
+      "definition_en": "to gain someone's support, approval, or affection, often through persuasion",
+      "ipa": "/ˌwɪn ˈəʊvə/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "thuyết phục, giành được sự ủng hộ (cảm tình) của ai"
+    },
+    "pubcol-w-99acfdeb4f9f0163": {
+      "difficulty": "6.0",
+      "synonyms": ["earn someone's respect", "gain someone's admiration", "command respect"],
+      "collocations": ["win the respect of colleagues", "win the respect of one's peers", "quickly win the respect of"],
+      "example_simple": "She won the respect of her students by treating them fairly.",
+      "example_complex": "Through years of patient, principled leadership, he won the respect of colleagues who had once doubted him.",
+      "definition_en": "to earn someone's admiration and high regard through one's actions",
+      "ipa": "/ˌwɪn ðə rɪˈspɛkt ɒv/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-00721c3fcb3faa52": {
+      "difficulty": "7.0",
+      "synonyms": ["winding trail", "meandering path", "twisting track"],
+      "collocations": ["a narrow winding footpath", "follow the winding footpath", "a winding footpath through the woods"],
+      "example_simple": "We followed a winding footpath up the hill.",
+      "example_complex": "A winding footpath, worn smooth by generations of walkers, threaded its way between the ancient oaks toward the river.",
+      "definition_en": "a narrow path for walkers that twists and turns rather than running straight",
+      "ipa": "/ˌwaɪndɪŋ ˈfʊtpɑːθ/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "con đường mòn quanh co"
+    },
+    "9c6c3b47-8759-43f4-9802-1e6e59dac579": {
+      "difficulty": "6.0",
+      "definition_en": "the front window of a car or other vehicle",
+      "ipa": "/ˈwɪn(d)ʃiːld/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-41357ffa22d82387": {
+      "difficulty": "5.0",
+      "synonyms": ["sensible decision", "sound decision", "prudent choice"],
+      "collocations": ["make a wise decision", "a wise decision to", "prove to be a wise decision"],
+      "example_simple": "Buying a smaller car was a wise decision.",
+      "example_complex": "Investing in staff training turned out to be a wise decision that paid for itself within a year.",
+      "definition_en": "a sensible choice based on good judgement",
+      "ipa": "/ˌwaɪz dɪˈsɪʒn/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "quyết định thông minh (khôn ngoan)"
+    },
+    "pubcol-w-75dd2ebc57509000": {
+      "difficulty": "7.0",
+      "synonyms": ["with the aim of", "in order to", "so as to"],
+      "collocations": ["with a view to improving", "with a view to expansion", "bought with a view to"],
+      "example_simple": "She saved money with a view to buying a house.",
+      "example_complex": "The company acquired the smaller firm with a view to entering the Asian market within two years.",
+      "definition_en": "with the intention or aim of doing something",
+      "ipa": "/wɪð ə ˈvjuː tuː/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "với ý định/mục đích làm gì"
+    },
+    "pubcol-w-2ed054274e99e491": {
+      "difficulty": "7.0",
+      "synonyms": ["with the aim of doing", "in order to do", "so as to do"],
+      "collocations": ["with a view to achieving", "act with a view to doing", "with a view to reducing"],
+      "example_simple": "They met with a view to reaching an agreement.",
+      "example_complex": "The government introduced the subsidy with a view to encouraging households to switch to cleaner sources of energy.",
+      "definition_en": "with the aim or intention of doing a particular thing",
+      "ipa": "/wɪð ə ˈvjuː tuː ˈduːɪŋ ˈsʌmθɪŋ/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "với ý định/hi vọng làm gì"
+    },
+    "pubcol-w-9ecd8e096d45e360": {
+      "difficulty": "7.0",
+      "synonyms": ["in order to", "so as to", "with the aim of"],
+      "collocations": ["with a view to starting", "with a view to reducing costs", "planned with a view to"],
+      "example_simple": "He took the course with a view to changing careers.",
+      "example_complex": "The land was purchased with a view to developing affordable housing over the next decade.",
+      "definition_en": "for the purpose of doing something",
+      "ipa": "/wɪð ə ˈvjuː tuː/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "với ý định làm gì; nhằm để làm gì"
+    },
+    "pubcol-w-8a46aa9aee127db7": {
+      "difficulty": "7.0",
+      "synonyms": ["with affection for", "with warmth towards", "fondly"],
+      "collocations": ["remember with fondness", "look back with fondness", "speak with fondness"],
+      "example_simple": "She still speaks with fondness about her old school.",
+      "example_complex": "Years later, he recalled with genuine fondness the mentor who had first believed in his work.",
+      "definition_en": "with warm affection or tenderness towards someone or something",
+      "ipa": "/wɪð ˈfɒndnəs tuː/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "với sự yêu mến dành cho"
+    },
+    "pubcol-w-883846e3ccb29a06": {
+      "difficulty": "7.0",
+      "ipa": "/wɪð rɪˈɡɑːd tuː/"
+    },
+    "pubcol-w-5c2c46a6aaa590d5": {
+      "difficulty": "7.0",
+      "synonyms": ["regarding", "concerning", "in relation to"],
+      "collocations": ["with respect to this matter", "vary with respect to", "with respect to the issue"],
+      "example_simple": "I have nothing to add with respect to the schedule.",
+      "example_complex": "With respect to data privacy, the new regulation imposes far stricter obligations on companies than its predecessor.",
+      "definition_en": "concerning or in relation to a particular matter",
+      "ipa": "/wɪð rɪˈspɛkt tuː/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-eeefb647c2a1e7d6": {
+      "difficulty": "6.0",
+      "synonyms": ["get on well with", "be on good terms with", "have a good rapport with"],
+      "collocations": ["get on well with someone", "be on good terms with someone", "build a good relationship with"],
+      "example_simple": "She gets on well with everyone at work.",
+      "example_complex": "A good manager works hard to stay on good terms with staff without letting friendliness undermine authority.",
+      "definition_en": "to have a good relationship or rapport with someone",
+      "ipa": "/wɪð ˈsʌmbədi/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "có mối quan hệ tốt với ai"
+    },
+    "pubcol-w-d10fc164bbf981aa": {
+      "difficulty": "7.0",
+      "synonyms": ["with good reason", "justifiably", "without justification"],
+      "collocations": ["dismissed without good cause", "complain with good cause", "act with good cause"],
+      "example_simple": "You can't be fired without good cause.",
+      "example_complex": "The tribunal ruled that the employee had been dismissed without good cause and ordered the company to pay compensation.",
+      "definition_en": "with (or without) a valid or justifiable reason",
+      "ipa": "/wɪð wɪˈðaʊt ɡʊd kɔːz/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "(một cách) có/không có lý do chính đáng"
+    }
+  }
+}

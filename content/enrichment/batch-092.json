@@ -1,0 +1,190 @@
+{
+  "meta": { "batch": "batch-092", "authored_by": "claude", "count": 25 },
+  "words": {
+    "fd0beaf6-239b-41e1-a64c-bef240bda0c1": {
+      "difficulty": "6.0",
+      "definition_en": "excessively large or roomy, more so than is needed",
+      "ipa": "/ˌoʊvərli ˈspeɪʃəs/",
+      "part_of_speech": "phrase"
+    },
+    "5e68e9ec-f135-4062-9477-73790f75d759": {
+      "difficulty": "7.0",
+      "definition_en": "supervision of a process or organisation; or an unintentional failure to notice something",
+      "ipa": "/ˈoʊvərsaɪt/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-78a29f651b4b7220": {
+      "difficulty": "6.0",
+      "synonyms": ["extra time", "extended play", "additional period"],
+      "collocations": ["go into an overtime period", "score during overtime period", "win in the overtime period"],
+      "example_simple": "The match was tied, so it went into an overtime period.",
+      "example_complex": "With the scores level at full time, both exhausted teams braced themselves for a tense overtime period that would decide the championship.",
+      "definition_en": "an extra span of play or work added beyond the normal scheduled time",
+      "ipa": "/ˈoʊvərtaɪm ˈpɪəriəd/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "hiệp phụ; khoảng thời gian thi đấu (hoặc làm việc) thêm giờ"
+    },
+    "pubcol-w-c8a56674c5c2faa0": {
+      "difficulty": "6.0",
+      "ipa": "/ˈoʊɪŋ tuː/"
+    },
+    "pubcol-w-208a17cb16c988ef": {
+      "difficulty": "6.0",
+      "synonyms": ["admit", "confess", "come clean", "acknowledge"],
+      "collocations": ["own up to a mistake", "own up to lying", "finally own up to it"],
+      "example_simple": "He finally owned up to breaking the window.",
+      "example_complex": "It takes real maturity to own up to a costly error rather than shifting the blame onto a colleague.",
+      "definition_en": "to admit or confess that you have done something wrong",
+      "ipa": "/ˌoʊn ˈʌp tuː/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-47ed417d7bbddb13": {
+      "difficulty": "5.0",
+      "synonyms": ["breathing mask", "respirator"],
+      "collocations": ["put on an oxygen mask", "wear an oxygen mask", "oxygen mask drops down"],
+      "example_simple": "The sick patient had to wear an oxygen mask to breathe.",
+      "example_complex": "In the event of a sudden loss of cabin pressure, an oxygen mask will automatically drop down in front of each passenger.",
+      "definition_en": "a mask placed over the face to supply extra oxygen for breathing",
+      "ipa": "/ˈɒksɪdʒən mɑːsk/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-172723b8eb4b6a69": {
+      "synonyms": ["peace activist", "peace-lover", "conscientious objector", "dove"],
+      "collocations": ["a committed pacifist", "pacifist beliefs", "a lifelong pacifist"],
+      "example_simple": "As a pacifist, she refused to join the army.",
+      "example_complex": "A devout pacifist, he spent his career campaigning against every armed conflict his government entered."
+    },
+    "6d25b739-7a4a-4149-bf96-1199c6db7c5f": {
+      "difficulty": "7.0",
+      "definition_en": "to calm someone who is angry or upset, or to bring peace to a troubled situation",
+      "ipa": "/ˈpæsɪfaɪ/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-fbc9320f13db98cb": {
+      "synonyms": ["row", "oar", "canoe"],
+      "collocations": ["paddle a canoe", "paddle across the lake", "paddle gently"],
+      "example_simple": "We paddled the canoe slowly across the calm lake.",
+      "example_complex": "The guide showed us how to paddle in unison so the kayak would glide smoothly against the current."
+    },
+    "pubcol-w-637bbe99a1894d70": {
+      "difficulty": "5.0",
+      "synonyms": ["rice field", "rice paddy", "rice terrace"],
+      "collocations": ["a flooded paddy field", "work in the paddy field", "terraced paddy fields"],
+      "example_simple": "Farmers grow rice in the flooded paddy field.",
+      "example_complex": "At dawn, the terraced paddy fields on the hillside glowed a vivid green under a thin layer of mist.",
+      "definition_en": "a flooded field in which rice is grown",
+      "ipa": "/ˈpædi fiːld/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-b0903e63100ce58d": {
+      "synonyms": ["children's doctor", "child specialist", "physician"],
+      "collocations": ["see a paediatrician", "consult a paediatrician", "a qualified paediatrician"],
+      "example_simple": "The mother took her baby to the paediatrician for a check-up.",
+      "example_complex": "The paediatrician reassured the anxious parents that their toddler's fever was nothing more than a routine viral infection."
+    },
+    "pubcol-w-c499db00c68b8d00": {
+      "difficulty": "6.0",
+      "synonyms": ["nuisance", "annoyance", "bother", "hassle"],
+      "collocations": ["a real pain in the neck", "such a pain in the neck", "become a pain in the neck"],
+      "example_simple": "Filling in all these forms is a real pain in the neck.",
+      "example_complex": "Commuting two hours each way is a pain in the neck, but the salary makes it just about worthwhile.",
+      "definition_en": "an informal expression for someone or something that is very annoying or troublesome",
+      "ipa": "/ˌpeɪn ɪn ðə ˈnek/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-9f7bcdca0056bc56": {
+      "difficulty": "6.0",
+      "synonyms": ["hard work pays off", "no gain without pain", "you reap what you sow"],
+      "collocations": ["remember, no pain no gain", "as they say, no pain no gain", "believe in no pain no gain"],
+      "example_simple": "Training is exhausting, but no pain, no gain.",
+      "example_complex": "She reminded herself that no pain, no gain applied to her studies too, and kept revising well past midnight.",
+      "definition_en": "the saying that you cannot achieve worthwhile results without suffering or hard effort",
+      "ipa": "/ˌnoʊ ˈpeɪn noʊ ˈɡeɪn/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "không có gì đạt được mà không nỗ lực; có công mài sắt có ngày nên kim"
+    },
+    "069ab315-75ba-412a-82ba-4ce2ca4da596": {
+      "difficulty": "7.0",
+      "definition_en": "to reduce something in size or number by removing what is unnecessary (correctly spelled 'pare down')",
+      "ipa": "/ˌpeər ˈdaʊn/",
+      "part_of_speech": "phrase"
+    },
+    "626f4825-dc58-45e0-bbc8-ab9a29f0e4c2": {
+      "difficulty": "6.0",
+      "definition_en": "a small booklet or leaflet containing information or arguments about a single subject",
+      "ipa": "/ˈpæmflət/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-93b3728217a1c4aa": {
+      "difficulty": "7.0",
+      "synonyms": ["only to be expected", "nothing unusual", "the norm", "typical"],
+      "collocations": ["that's par for the course", "pretty much par for the course", "delays are par for the course"],
+      "example_simple": "Long queues at the airport are par for the course during the holidays.",
+      "example_complex": "For a start-up in its first year, a few late nights and last-minute crises are simply par for the course.",
+      "definition_en": "what is normal or to be expected in a particular situation, especially something unwelcome",
+      "ipa": "/ˌpɑːr fər ðə ˈkɔːrs/",
+      "part_of_speech": "idiom"
+    },
+    "10f00702-addc-4ca9-9983-d37005688c21": {
+      "difficulty": "8.0",
+      "ipa": "/ˈpærədaɪm/"
+    },
+    "c1a912ca-4f9d-4b0a-b961-8792ab6e4625": {
+      "difficulty": "7.0",
+      "definition_en": "loss of the ability to move part or all of the body, usually from injury or disease",
+      "ipa": "/pəˈræləsɪs/",
+      "part_of_speech": "noun"
+    },
+    "db79130b-a3c7-4f9c-b3ea-98ce4b18f2cc": {
+      "difficulty": "8.0",
+      "definition_en": "wasps that lay their eggs in or on other insects, which their larvae then feed on",
+      "ipa": "/ˌpærəˈsɪtɪk ˈwɒsps/",
+      "part_of_speech": "noun"
+    },
+    "11251694-ce77-4950-ae09-4a5006d3a4b8": {
+      "difficulty": "9.0",
+      "definition_en": "relating to the part of the nervous system that calms the body and conserves energy",
+      "ipa": "/ˌpærəˌsɪmpəˈθetɪk/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-00e1de3f52d4da09": {
+      "synonyms": ["amnesty", "reprieve", "clemency", "forgiveness"],
+      "collocations": ["grant a pardon", "receive a full pardon", "a presidential pardon"],
+      "example_simple": "The president granted the prisoner a pardon.",
+      "example_complex": "After new evidence emerged, campaigners fought for years to secure a posthumous pardon for the wrongly convicted man."
+    },
+    "pubcol-w-a9e425645565a547": {
+      "difficulty": "5.0",
+      "synonyms": ["car park", "parking area", "taxi stand"],
+      "collocations": ["park in the parking lot", "wait at the taxi rank", "a crowded parking lot"],
+      "example_simple": "We left the car in the parking lot and took a taxi from the taxi rank.",
+      "example_complex": "The hotel offers a large parking lot for guests, and there is a busy taxi rank right outside the main entrance.",
+      "definition_en": "an area for parking cars (parking lot) and a place where taxis line up to wait for passengers (taxi rank)",
+      "ipa": "/ˈpɑːrkɪŋ lɒt ... ˈtæksi ræŋk/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "bãi đỗ xe; điểm/bến chờ taxi"
+    },
+    "2d0dc5ab-4599-429a-8b01-f03a2398bb91": {
+      "difficulty": "6.0",
+      "definition_en": "a multi-storey building or sloping structure where cars are parked",
+      "ipa": "/ˈpɑːrkɪŋ ræmp/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-bf0b5a4813b85326": {
+      "synonyms": ["stingy", "miserly", "frugal", "tight-fisted"],
+      "collocations": ["parsimonious with money", "a parsimonious budget", "notoriously parsimonious"],
+      "example_simple": "He was so parsimonious that he reused old envelopes.",
+      "example_complex": "The company's parsimonious approach to research funding eventually left it trailing far behind its more generous competitors."
+    },
+    "pubcol-w-370e20e7c1bc5013": {
+      "difficulty": "7.0",
+      "synonyms": ["an essential part", "an integral part", "a fundamental element"],
+      "collocations": ["part and parcel of the job", "part and parcel of life", "accept it as part and parcel"],
+      "example_simple": "Dealing with complaints is part and parcel of working in customer service.",
+      "example_complex": "Occasional failure, he argued, is part and parcel of any genuinely ambitious research programme.",
+      "definition_en": "an essential and unavoidable part of something",
+      "ipa": "/ˌpɑːrt ənd ˈpɑːrsl/",
+      "part_of_speech": "idiom"
+    }
+  }
+}

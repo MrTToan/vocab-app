@@ -1,0 +1,194 @@
+{
+  "meta": { "batch": "batch-073", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-defceaaba63f7c65": {
+      "synonyms": ["lounge", "idle", "loaf", "relax"],
+      "collocations": ["laze around", "laze in the sun", "laze away the afternoon"],
+      "example_simple": "On Sundays I like to laze around the house.",
+      "example_complex": "After weeks of intense deadlines, they decided to laze by the pool and do absolutely nothing for a change."
+    },
+    "pubcol-w-8fce0b1002fe288b": {
+      "difficulty": "6.0",
+      "synonyms": ["lounge on the sand", "relax on the beach", "sunbathe idly"],
+      "collocations": ["laze around on the sandy beach all day", "laze around on the sandy beach in the sun", "just want to laze around on the sandy beach"],
+      "example_simple": "During the holiday, we would laze around on the sandy beach every afternoon.",
+      "example_complex": "Rather than rushing between tourist sites, they preferred to laze around on the sandy beach, reading novels and watching the tide roll in.",
+      "definition_en": "to relax idly and do nothing while spending time on a beach",
+      "ipa": "/leɪz əˈraʊnd ɒn ðə ˈsændi biːtʃ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-dc044e1e6c435678": {
+      "difficulty": "7.0",
+      "synonyms": ["bring to the brink of", "push to the edge of", "drive close to"],
+      "collocations": ["lead the country to the verge of collapse", "lead them to the verge of bankruptcy", "lead the region to the verge of war"],
+      "example_simple": "The financial crisis led the company to the verge of collapse.",
+      "example_complex": "Years of political mismanagement led the nation to the verge of economic ruin before emergency reforms finally took hold.",
+      "definition_en": "to bring something almost to the point of a (usually negative) outcome",
+      "ipa": "/liːd ˈsʌmθɪŋ tə ðə vɜːdʒ ɒv/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-54dcec14bc838c11": {
+      "difficulty": "5.0",
+      "ipa": "/liːd tuː/"
+    },
+    "pubcol-w-2989983fc4742f77": {
+      "difficulty": "6.0",
+      "synonyms": ["leaked file", "disclosed document", "exposed paper"],
+      "collocations": ["obtain a leaked document", "publish leaked documents", "a leaked government document"],
+      "example_simple": "A leaked document revealed the company's secret plan.",
+      "example_complex": "The scandal erupted after a leaked document exposed years of hidden financial dealings within the ministry.",
+      "definition_en": "a confidential paper whose contents have been disclosed without authorisation",
+      "ipa": "/liːkt ˈdɒkjʊmənt/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-34394c648edd10ba": {
+      "difficulty": "7.0",
+      "synonyms": ["make hasty assumptions", "judge prematurely", "presume too soon"],
+      "collocations": ["jump to conclusions", "leap to the wrong conclusion", "jump to conclusions too quickly"],
+      "example_simple": "Don't jump to conclusions before you hear the whole story.",
+      "example_complex": "Investigators must weigh all the evidence carefully and avoid leaping to conclusions that could ruin an innocent person's reputation.",
+      "definition_en": "to form a judgement or opinion before knowing all the facts",
+      "ipa": "/liːp ˈdʒʌmp tə kənˈkluːʒən/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-5832863b2d450e92": {
+      "difficulty": "7.0",
+      "synonyms": ["plan meticulously", "take no risks", "be thoroughly prepared"],
+      "collocations": ["leave nothing to chance", "want to leave nothing to chance", "in order to leave nothing to chance"],
+      "example_simple": "She checked every detail because she wanted to leave nothing to chance.",
+      "example_complex": "Determined to win the contract, the team rehearsed their pitch repeatedly, leaving nothing to chance.",
+      "definition_en": "to prepare so thoroughly that nothing can go wrong",
+      "ipa": "/liːv ˈnʌθɪŋ tə tʃɑːns/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-58debec13113df01": {
+      "difficulty": "7.0",
+      "synonyms": ["keep someone uninformed", "conceal from", "withhold information from"],
+      "collocations": ["keep someone in the dark", "leave employees in the dark", "be kept in the dark about"],
+      "example_simple": "The manager kept the staff in the dark about the layoffs.",
+      "example_complex": "For months the government left citizens in the dark regarding the true scale of the environmental disaster.",
+      "definition_en": "to deliberately keep someone uninformed about something",
+      "ipa": "/liːv kiːp ˈsʌmθɪŋ ɪn ðə dɑːk/",
+      "part_of_speech": "idiom"
+    },
+    "d4879e15-2692-4f97-bb9a-8aafeccc8ccd": {
+      "difficulty": "7.0",
+      "definition_en": "a lawful entitlement to own, use, or dispose of property",
+      "ipa": "/ˈliːɡəl ˈprɒpəti raɪt/",
+      "part_of_speech": "noun"
+    },
+    "386b05fb-a681-4bd6-923a-574177680e97": {
+      "difficulty": "8.0",
+      "definition_en": "a famous military blockade celebrated in legend or history",
+      "ipa": "/ˈledʒəndri siːdʒ/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-8c6451df7b25ee54": {
+      "synonyms": ["laws", "statutes", "legal code", "regulations"],
+      "collocations": ["pass legislation", "introduce new legislation", "under current legislation"],
+      "example_simple": "The government introduced new legislation to protect the environment.",
+      "example_complex": "Sweeping legislation on data privacy was enacted after years of pressure from consumer advocacy groups."
+    },
+    "6431012d-8ba6-4709-ad0e-2005138cef94": {
+      "difficulty": "7.0",
+      "definition_en": "the official body of a country or state that has the power to make laws",
+      "ipa": "/ˈledʒɪsleɪtʃə/",
+      "part_of_speech": "noun"
+    },
+    "6ed61896-8260-49e4-9887-49ff9f25dfd1": {
+      "difficulty": "8.0",
+      "synonyms": ["is well suited to conjecture", "invites speculation", "readily allows speculative discussion"],
+      "definition_en": "to be well suited to being explored or discussed in a speculative, conjectural way",
+      "ipa": "/lend ɪtˈself tə ˈspekjələtɪv ˈtriːtmənt/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "thích hợp để được bàn luận/xử lý theo hướng suy đoán"
+    },
+    "pubcol-w-4146e8ac4e00af45": {
+      "difficulty": "5.0",
+      "synonyms": ["help out", "assist", "pitch in"],
+      "collocations": ["give me a hand", "lend a hand with", "always ready to lend a hand"],
+      "example_simple": "Could you give me a hand with these boxes?",
+      "example_complex": "Whenever the neighbours are struggling, she is quick to lend a hand without even being asked.",
+      "definition_en": "to help someone do something",
+      "ipa": "/lend ɡɪv ˈsʌmbɒdi ə hænd/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-3d54973f528b0101": {
+      "synonyms": ["distance", "extent", "span"],
+      "collocations": ["the length of the room", "two metres in length", "the full length of"],
+      "example_simple": "The length of the room is about five metres.",
+      "example_complex": "Researchers measured the length of each bridge to determine which materials best withstood expansion in the summer heat.",
+      "definition_en": "the measurement of something from one end to the other",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-0438d4841513b433": {
+      "synonyms": ["big cat", "panther", "wildcat"],
+      "collocations": ["a spotted leopard", "a leopard's spots", "prowl like a leopard"],
+      "example_simple": "A leopard has a beautiful coat covered in dark spots.",
+      "example_complex": "The elusive leopard, one of the most adaptable of the big cats, can thrive in habitats ranging from rainforest to desert.",
+      "definition_en": "a large wild cat with a yellowish coat and dark spots, native to Africa and Asia",
+      "part_of_speech": "noun"
+    },
+    "8db3beea-8d6a-4d8a-9e3c-97c7a253f51e": {
+      "difficulty": "7.0",
+      "definition_en": "less likely to do or experience something",
+      "ipa": "/les ˈlaɪəbl tuː/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-2e35818b7df003a9": {
+      "difficulty": "6.0",
+      "synonyms": ["much less", "not to mention", "never mind"],
+      "collocations": ["can't afford it, let alone", "couldn't walk, let alone run", "no time to eat, let alone sleep"],
+      "example_simple": "He can't even boil an egg, let alone cook a whole meal.",
+      "example_complex": "After the accident she could barely stand, let alone return to competitive sport within the year.",
+      "definition_en": "used to emphasise that something is even less likely or possible than another thing already mentioned",
+      "ipa": "/let əˈləʊn/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-60193896b359de6e": {
+      "difficulty": "7.0",
+      "synonyms": ["relax", "unwind", "loosen up", "let loose"],
+      "collocations": ["let your hair down", "finally let their hair down", "a chance to let one's hair down"],
+      "example_simple": "After the exams, the students let their hair down at a big party.",
+      "example_complex": "Normally reserved and formal at work, she really let her hair down at the office celebration, dancing until well past midnight.",
+      "definition_en": "to relax and enjoy yourself freely without worrying about behaving formally",
+      "ipa": "/let wʌnz heə daʊn/",
+      "part_of_speech": "idiom"
+    },
+    "f7359c95-478f-4ec7-b6f1-df800dc8f7b0": {
+      "difficulty": "6.0",
+      "ipa": "/ˈlevl ɒf/"
+    },
+    "pubcol-w-e546786d1e35e42d": {
+      "synonyms": ["bar", "handle", "crowbar"],
+      "collocations": ["pull the lever", "use it as a lever", "a control lever"],
+      "example_simple": "He pulled the lever to start the machine.",
+      "example_complex": "By using a long iron bar as a lever, the workers managed to shift the boulder that had blocked the road."
+    },
+    "6046b396-283c-4d9d-9bdd-66f28dac5859": {
+      "difficulty": "7.0",
+      "definition_en": "to officially impose and collect a tax, fee, or fine",
+      "ipa": "/ˈlevi/",
+      "part_of_speech": "verb"
+    },
+    "b601847c-8221-47bb-87d0-9ab58532b3ed": {
+      "difficulty": "8.0",
+      "synonyms": ["imposing compulsory loans", "exacting forced borrowing", "demanding mandatory loans"],
+      "definition_en": "compelling people to lend money to the state, usually under threat of penalty",
+      "ipa": "/ˈleviɪŋ fɔːst ləʊnz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-3a34a8b83ee33cc4": {
+      "synonyms": ["vocabulary", "glossary", "terminology"],
+      "collocations": ["enter the lexicon", "a specialised lexicon", "part of the everyday lexicon"],
+      "example_simple": "The word 'selfie' has entered the everyday lexicon.",
+      "example_complex": "Linguists compiled a comprehensive lexicon of the endangered language before its last fluent speakers passed away."
+    },
+    "pubcol-w-056807cc37330c49": {
+      "synonyms": ["responsible", "accountable", "answerable"],
+      "collocations": ["liable for the damage", "held liable", "liable to pay"],
+      "example_simple": "The driver was liable for the damage to the parked car.",
+      "example_complex": "Under the new regulations, companies can be held liable for any environmental harm caused by their subcontractors."
+    }
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "meta": { "batch": "batch-118", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-48168edb97efed7f": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˈstɪmjuleɪt prəˈməʊt ðə dɪˈveləpmənt ɒv/",
+      "definition_en": "to encourage or speed up the growth or progress of something",
+      "synonyms": ["foster growth of", "boost the development of", "spur the progress of", "encourage the advancement of"],
+      "collocations": ["stimulate the development of skills", "promote the development of new technology", "promote the development of the economy"],
+      "example_simple": "Good teachers stimulate the development of critical thinking in their students.",
+      "example_complex": "Government subsidies are intended to promote the development of renewable energy across the region.",
+      "vi_meaning_correction": "kích thích/thúc đẩy sự phát triển của (điều gì đó)"
+    },
+    "970c9394-37ce-4be5-8873-6867cd92899b": {
+      "difficulty": "6.0",
+      "definition_en": "a person who owns shares in a company",
+      "ipa": "/ˈstɒkˌhəʊldə/",
+      "part_of_speech": "noun"
+    },
+    "4b199e43-6de2-48c5-bb85-27bc19d8f33d": {
+      "difficulty": "7.0",
+      "definition_en": "to build up and store a large supply of goods or materials for future use",
+      "ipa": "/ˈstɒkpaɪl/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-3b2b7f2dd27b395c": {
+      "synonyms": ["thickset", "burly", "sturdy", "solid"],
+      "collocations": ["a stocky build", "a stocky man", "short and stocky"],
+      "example_simple": "He was a short, stocky man with broad shoulders.",
+      "example_complex": "The rugby player's stocky frame made him almost impossible to tackle."
+    },
+    "pubcol-w-d309c4e0c47290b1": {
+      "synonyms": ["heavy", "filling", "starchy", "leaden"],
+      "collocations": ["stodgy food", "a stodgy meal", "stodgy pudding"],
+      "example_simple": "The pudding was stodgy and left me feeling far too full.",
+      "example_complex": "After a week of stodgy hotel breakfasts, I longed for something light and fresh."
+    },
+    "8c8cf2c1-bf2f-4a58-976e-05cfd0f22ffd": {
+      "difficulty": "6.0",
+      "ipa": "/stʊd æt/"
+    },
+    "pubcol-w-dd0202168ae453fa": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/stɒp əˈbrʌptli/",
+      "definition_en": "to come to a sudden and unexpected halt",
+      "synonyms": ["halt suddenly", "come to a sudden stop", "cease abruptly"],
+      "collocations": ["the car stopped abruptly", "stop abruptly in mid-sentence", "the music stopped abruptly"],
+      "example_simple": "The bus stopped abruptly and everyone lurched forward.",
+      "example_complex": "The music stopped abruptly, leaving the dancers frozen in mid-step."
+    },
+    "pubcol-w-4ba0b704855bf01f": {
+      "difficulty": "8.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ˌstɔːm ɪn ə ˈtiːkʌp/",
+      "definition_en": "a lot of fuss or worry over something trivial and unimportant",
+      "synonyms": ["much ado about nothing", "tempest in a teapot", "fuss over nothing"],
+      "collocations": ["just a storm in a teacup", "make a storm in a teacup", "turn out to be a storm in a teacup"],
+      "example_simple": "Their big argument was really just a storm in a teacup.",
+      "example_complex": "The media treated the minor policy change as a scandal, but it proved to be a storm in a teacup."
+    },
+    "pubcol-w-96d44cbe31832867": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/stɔːm ɪz ˈbruːɪŋ/",
+      "definition_en": "signs suggest that trouble or conflict is about to happen",
+      "synonyms": ["trouble is coming", "conflict is looming", "trouble lies ahead"],
+      "collocations": ["a storm is brewing", "sense a storm brewing", "a political storm brewing"],
+      "example_simple": "From their angry faces, I could tell a storm was brewing.",
+      "example_complex": "As profits fell for the third quarter running, a storm was brewing in the boardroom."
+    },
+    "eb21af4e-de44-4e89-804a-c758ee956a93": {
+      "difficulty": "8.0",
+      "part_of_speech": "phrase",
+      "ipa": "/streɪn ˈbeɪsɪk ˌsænɪˈteɪʃn/",
+      "definition_en": "to put excessive pressure on basic hygiene and waste-disposal systems",
+      "synonyms": ["overburden sanitation", "overload sanitation services", "put pressure on sanitation"]
+    },
+    "64007072-05c3-4f6e-9cf8-07c40c40c3a8": {
+      "difficulty": "5.0",
+      "definition_en": "a dog that has no home or has wandered away from its owner",
+      "ipa": "/streɪ dɒɡ/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-784694ffca803130": {
+      "difficulty": "6.0",
+      "part_of_speech": "noun",
+      "ipa": "/striːt kraɪm/",
+      "definition_en": "criminal acts such as mugging or theft committed in public places",
+      "synonyms": ["petty crime", "urban crime", "public disorder"],
+      "collocations": ["tackle street crime", "a rise in street crime", "street crime rates"],
+      "example_simple": "The city has hired more police to reduce street crime.",
+      "example_complex": "Better street lighting and CCTV have been credited with lowering street crime across the district."
+    },
+    "pubcol-w-90415db7d3689141": {
+      "difficulty": "6.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˈstriːt ˌvendəz/",
+      "definition_en": "people who sell goods, especially food, from a stall or cart on the street",
+      "synonyms": ["street sellers", "hawkers", "peddlers"],
+      "collocations": ["local street vendors", "licensed street vendors", "street vendors selling food"],
+      "example_simple": "Street vendors sold fresh fruit along the busy road.",
+      "example_complex": "The government introduced new licences to regulate the many street vendors crowding the old quarter."
+    },
+    "f3843b52-ecc2-4278-83e7-3f004dbcdfe3": {
+      "difficulty": "7.0",
+      "definition_en": "to defeat or kill someone, or to officially cancel a law or ruling",
+      "ipa": "/straɪk daʊn/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-78fda29496da502d": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/strəʊk əv ˈlʌk/",
+      "definition_en": "an unexpected piece of good fortune",
+      "synonyms": ["piece of luck", "lucky break", "windfall"],
+      "collocations": ["a stroke of luck", "by a stroke of luck", "an amazing stroke of luck"],
+      "example_simple": "By a stroke of luck, I found my lost keys in the garden.",
+      "example_complex": "It was a remarkable stroke of luck that the investor called just as the company was about to collapse."
+    },
+    "pubcol-w-f141f9e01530bc05": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/strɒŋ ˈɑːɡjumənt, wiːk ˈɑːɡjumənt, saʊnd ˈɑːɡjumənt/",
+      "definition_en": "phrases describing the quality of reasoning: convincing, unconvincing, or well-founded",
+      "synonyms": ["convincing case", "flimsy reasoning", "valid argument"],
+      "collocations": ["put forward a strong argument", "a weak argument that falls apart", "a sound argument backed by evidence"],
+      "example_simple": "She made a strong argument for recycling, while his was a weak argument with no facts.",
+      "example_complex": "A sound argument rests on solid evidence, whereas a weak argument collapses as soon as it is questioned."
+    },
+    "4c5c6d35-dd3e-47fb-9dfa-01102fb69211": {
+      "difficulty": "8.0",
+      "definition_en": "the fundamental force that binds protons and neutrons together in an atomic nucleus",
+      "ipa": "/strɒŋ ˈnjuːkliə fɔːs/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-7ce61bfb214416e3": {
+      "synonyms": ["robust", "solid", "strong", "well-built"],
+      "collocations": ["a sturdy pair of boots", "sturdy furniture", "a sturdy frame"],
+      "example_simple": "You need a sturdy pair of boots for hiking.",
+      "example_complex": "The old bridge, built from sturdy oak beams, has withstood a century of floods."
+    },
+    "pubcol-w-6a13a5e7d7a284c8": {
+      "synonyms": ["stammer", "stumble over words", "falter"],
+      "collocations": ["stutter nervously", "develop a stutter", "stutter over a word"],
+      "example_simple": "He began to stutter when the teacher asked him to speak.",
+      "example_complex": "Overwhelmed by nerves, she started to stutter and could barely finish her sentence."
+    },
+    "8da8bd48-140c-49e4-92c4-929f994facaa": {
+      "difficulty": "8.0",
+      "definition_en": "of very great excellence, beauty, or grandeur that inspires awe",
+      "ipa": "/səˈblaɪm/",
+      "part_of_speech": "adjective"
+    },
+    "7c7d8a63-036f-477a-a2b6-850f0c1e709e": {
+      "difficulty": "7.0",
+      "definition_en": "lower in rank or importance than, or dependent on, something else",
+      "ipa": "/səˈbɔːdɪnət tuː/",
+      "part_of_speech": "phrase"
+    },
+    "46237d03-ebb3-4e3b-823e-42d28d38e2fe": {
+      "difficulty": "7.0",
+      "definition_en": "coming after something else in time; following",
+      "ipa": "/ˈsʌbsɪkwənt/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-b4d32ccb24956ee5": {
+      "difficulty": "7.0",
+      "ipa": "/ˈsʌbsɪkwəntli/"
+    },
+    "7ca6efa4-c44d-48d8-bc41-e0eb014d5c1d": {
+      "difficulty": "7.0",
+      "definition_en": "to become less intense, or to sink to a lower level",
+      "ipa": "/səbˈsaɪd/",
+      "part_of_speech": "verb"
+    },
+    "404e8fb7-dee3-49e7-85ba-b287dea864ae": {
+      "difficulty": "7.0",
+      "definition_en": "became less intense or sank to a lower level (past tense of subside)",
+      "ipa": "/səbˈsaɪdɪd/",
+      "part_of_speech": "verb"
+    }
+  }
+}

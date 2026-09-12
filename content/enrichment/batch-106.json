@@ -1,0 +1,172 @@
+{
+  "meta": { "batch": "batch-106", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-088e29b0ab007956": {
+      "part_of_speech": "noun",
+      "definition_en": "an act of politely or formally asking for something",
+      "synonyms": ["appeal", "petition", "demand", "plea"],
+      "collocations": ["make a request", "grant a request", "at someone's request"],
+      "example_simple": "She sent a request for more information about the course.",
+      "example_complex": "The committee agreed to grant his request only after reviewing the supporting documents in detail."
+    },
+    "pubcol-w-623e76c36aa2a886": {
+      "part_of_speech": "verb",
+      "definition_en": "to need something or make it necessary",
+      "synonyms": ["need", "demand", "necessitate", "call for"],
+      "collocations": ["require attention", "require approval", "as required by law"],
+      "example_simple": "This job requires a lot of patience.",
+      "example_complex": "The new regulations require companies to disclose the environmental impact of their operations."
+    },
+    "pubcol-w-2c7bf1b777859b71": {
+      "part_of_speech": "noun",
+      "definition_en": "careful study done to discover new facts or information",
+      "synonyms": ["investigation", "study", "inquiry", "analysis"],
+      "collocations": ["conduct research", "research findings", "scientific research"],
+      "example_simple": "She is doing research on how children learn languages.",
+      "example_complex": "Recent research suggests that regular exercise can significantly improve long-term memory."
+    },
+    "9033c101-9456-4892-a11a-11c06bad778b": {
+      "difficulty": "6.0",
+      "definition_en": "to look like or be similar to someone or something",
+      "ipa": "/rɪˈzɛmbəlz/",
+      "part_of_speech": "verb"
+    },
+    "b73037f1-c8bc-4b99-a4bb-deab6008bb5c": {
+      "difficulty": "7.0",
+      "definition_en": "to feel bitter or angry about something you think is unfair",
+      "ipa": "/rɪˈzɛnt/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-5bac43c023129034": {
+      "part_of_speech": "verb",
+      "definition_en": "to keep something for a special purpose or future use",
+      "synonyms": ["set aside", "save", "book", "retain"],
+      "collocations": ["reserve a table", "reserve the right", "reserve judgement"],
+      "example_simple": "I would like to reserve a table for two tonight.",
+      "example_complex": "The government decided to reserve a large area of the forest for conservation and scientific study."
+    },
+    "pubcol-w-ae373ebfd3a09e9b": {
+      "synonyms": ["suburban", "domestic", "housing"],
+      "collocations": ["residential area", "residential property", "residential neighbourhood"],
+      "example_simple": "They live in a quiet residential area near the park.",
+      "example_complex": "The council has approved plans to convert the old factory into a modern residential development."
+    },
+    "3828a0f9-29e7-4b9f-8184-07408472d7f6": {
+      "difficulty": "8.0",
+      "synonyms": ["home sprinkler", "domestic sprinkler"],
+      "definition_en": "a fire-safety device installed in homes that automatically sprays water when a fire is detected",
+      "ipa": "/ˌrɛzɪˈdɛnʃəl ˈsprɪŋklər/",
+      "part_of_speech": "noun"
+    },
+    "9fc911f7-27bb-4d78-8c2e-a57726c304e9": {
+      "difficulty": "8.0",
+      "definition_en": "the ash that remains after something has been burned",
+      "ipa": "/rɪˈzɪdjuəl æʃ/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-8d4ae7a0ee7d311c": {
+      "part_of_speech": "verb",
+      "definition_en": "to formally leave a job or position",
+      "synonyms": ["quit", "step down", "leave", "stand down"],
+      "collocations": ["resign from a post", "resign as chairman", "forced to resign"],
+      "example_simple": "He decided to resign from his job last month.",
+      "example_complex": "Under mounting political pressure, the minister chose to resign rather than face a formal inquiry."
+    },
+    "pubcol-w-cc14594905e649e0": {
+      "part_of_speech": "noun",
+      "definition_en": "the act of formally leaving a job or position",
+      "synonyms": ["departure", "stepping down", "notice"],
+      "collocations": ["hand in a resignation", "announce one's resignation", "letter of resignation"],
+      "example_simple": "She handed in her resignation after ten years with the company.",
+      "example_complex": "His sudden resignation left the board scrambling to find a suitable successor before the merger."
+    },
+    "1b06b0d8-a6f4-4be6-8424-cf8bf3ce7f5b": {
+      "difficulty": "6.0",
+      "definition_en": "to fight against or refuse to accept something",
+      "ipa": "/rɪˈzɪst/",
+      "part_of_speech": "verb"
+    },
+    "4e8b79da-51cd-4fe4-978d-5b343ac38cb5": {
+      "difficulty": "6.0",
+      "definition_en": "fighting against or refusing to accept something",
+      "ipa": "/rɪˈzɪstɪŋ/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-1dab1c55098c0330": {
+      "synonyms": ["retake", "sit again"],
+      "collocations": ["resit an exam", "resit the test", "resit a paper"],
+      "example_simple": "He has to resit the exam because he failed it.",
+      "example_complex": "Students who narrowly miss the pass mark are allowed to resit the module the following semester."
+    },
+    "pubcol-w-6dbefaf8293bcdc9": {
+      "difficulty": "8.0",
+      "synonyms": ["decide firmly", "determine", "make up one's mind"],
+      "collocations": ["resolve on a plan", "resolve against doing something", "resolve upon action"],
+      "example_simple": "She resolved on leaving the city for good.",
+      "example_complex": "After much deliberation, the board resolved upon a complete restructuring of the company's leadership.",
+      "definition_en": "to make a firm decision to do or not do something",
+      "ipa": "/rɪˈzɒlv/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-4680cad3c1a29b70": {
+      "synonyms": ["settlement", "solution", "clarity", "determination"],
+      "collocations": ["conflict resolution", "New Year's resolution", "high resolution"],
+      "example_simple": "The screen has a very high resolution, so the images look sharp.",
+      "example_complex": "The peaceful resolution of the dispute depended on both sides being willing to compromise."
+    },
+    "bb477f2d-9a9d-422d-8ac7-02a8f24bc7c9": {
+      "difficulty": "8.0",
+      "synonyms": ["turn to populism", "adopt populist tactics"],
+      "definition_en": "to turn to populist strategies that appeal to ordinary people's fears and desires, often for political gain",
+      "ipa": "/rɪˈzɔːt tə ˈpɒpjʊlɪst ˈpɒlɪtɪks/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-61493b6376389bc6": {
+      "difficulty": "7.0",
+      "synonyms": ["turn to", "fall back on", "have recourse to"],
+      "collocations": ["resort to violence", "resort to legal action", "have to resort to"],
+      "example_simple": "They had to resort to borrowing money from friends.",
+      "example_complex": "When negotiations broke down completely, the workers resorted to strike action as a last measure.",
+      "definition_en": "to turn to something, often unpleasant, because no other option is available",
+      "ipa": "/rɪˈzɔːt tə/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-e2bf55662aa92517": {
+      "difficulty": "7.0",
+      "ipa": "/rɪˈspɛktɪv/"
+    },
+    "72d7ca8d-1d9e-480d-92ec-77a690a9e260": {
+      "difficulty": "7.0",
+      "ipa": "/rɪˈspɛktɪvli/"
+    },
+    "9c798276-dfe8-4f72-ab9a-50c8b1fdb23c": {
+      "difficulty": "8.0",
+      "definition_en": "the act of giving back or compensating someone for loss, damage, or injury",
+      "ipa": "/ˌrɛstɪˈtjuːʃən/",
+      "part_of_speech": "noun"
+    },
+    "be2c155d-03a9-49e1-a22a-a0aa6a77e5dc": {
+      "difficulty": "7.0",
+      "definition_en": "control over your emotions or behaviour; the act of holding something back",
+      "ipa": "/rɪˈstreɪnt/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-6882c5d24305f097": {
+      "difficulty": "6.0",
+      "ipa": "/rɪˈzʌlt ɪn/"
+    },
+    "9b841552-b8fb-4f60-bf00-0b84dc3bfa84": {
+      "difficulty": "8.0",
+      "synonyms": ["slow its progress", "hold back its development", "impede its course"],
+      "definition_en": "to slow down or hinder the progress of something",
+      "ipa": "/rɪˈtɑːd ɪts kɔːs/",
+      "part_of_speech": "phrase"
+    },
+    "76834e97-6fd2-4622-aebd-cd294cf51ab2": {
+      "difficulty": "7.0",
+      "definition_en": "slowing down or delaying the progress or development of something",
+      "ipa": "/rɪˈtɑːdɪŋ/",
+      "part_of_speech": "verb"
+    }
+  }
+}

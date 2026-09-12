@@ -1,0 +1,161 @@
+{
+  "meta": { "batch": "batch-044", "authored_by": "claude", "count": 25 },
+  "words": {
+    "2e7f7ead-d5c1-429f-aba1-fa2191685951": {
+      "difficulty": "7.0",
+      "definition_en": "to name a list of things one by one",
+      "ipa": "/ɪˈnjuːməreɪt/",
+      "part_of_speech": "verb"
+    },
+    "d4dee750-3841-471a-8e16-63f7785a986c": {
+      "difficulty": "8.0",
+      "definition_en": "a highly desirable position of the greatest success that others admire",
+      "ipa": "/ˈenviəbl ˈpɪnəkl/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-178c1d51911eec4a": {
+      "synonyms": ["imagine", "envision", "foresee", "contemplate"],
+      "collocations": ["envisage a future", "hard to envisage", "envisage a scenario"],
+      "example_simple": "I can envisage myself living in a small house by the sea.",
+      "example_complex": "Few analysts could envisage the extent to which the technology would reshape the entire industry."
+    },
+    "330d3f25-58e6-43a5-b7e2-77c144dff450": {
+      "difficulty": "5.0",
+      "definition_en": "a feeling of resentful longing for what someone else has",
+      "ipa": "/ˈenvi/",
+      "part_of_speech": "noun"
+    },
+    "422c77fe-666c-4e6f-bcad-b78f189debff": {
+      "difficulty": "8.0",
+      "definition_en": "lasting for a very short time",
+      "ipa": "/ɪˈfemərəl/",
+      "part_of_speech": "adjective"
+    },
+    "3566971a-0795-47c9-a874-8b32540d3a3a": {
+      "difficulty": "9.0",
+      "definition_en": "relating to the theory of knowledge and how we know what we know",
+      "ipa": "/ɪˌpɪstəməˈlɒdʒɪkl/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-04746248cbfc59f3": {
+      "synonyms": ["embody", "typify", "represent", "personify"],
+      "collocations": ["epitomise an era", "epitomise a style", "perfectly epitomise"],
+      "example_simple": "This painting epitomises the artist's love of bright colours.",
+      "example_complex": "Her tireless dedication to her patients epitomises everything the medical profession should stand for."
+    },
+    "pubcol-w-5128901870c1d10b": {
+      "synonyms": ["namesake", "self-titled", "name-giving"],
+      "collocations": ["eponymous hero", "eponymous album", "eponymous character"],
+      "example_simple": "The band's first record was an eponymous album called simply \"The Waves\".",
+      "example_complex": "The novel's eponymous heroine, Emma, gives the entire book both its name and its moral centre."
+    },
+    "7ea6f1ed-12c5-4a15-98cf-a242c2a444a2": {
+      "difficulty": "7.0",
+      "definition_en": "to consider one thing to be the same as or equal to another",
+      "ipa": "/ɪˈkweɪt/",
+      "part_of_speech": "verb"
+    },
+    "23c12fbf-87cf-4d17-9948-af3f447212cd": {
+      "difficulty": "7.0",
+      "definition_en": "fair and impartial to everyone involved",
+      "ipa": "/ˈekwɪtəbl/",
+      "part_of_speech": "adjective"
+    },
+    "e66cd434-aaff-4f08-bb8d-d08f45cfe37a": {
+      "difficulty": "7.0",
+      "definition_en": "the fair sharing out of resources among people",
+      "ipa": "/ˈekwɪtəbl ˌdɪstrɪˈbjuːʃn/",
+      "part_of_speech": "phrase"
+    },
+    "64962344-946e-4189-9e06-ba8320735d83": {
+      "difficulty": "7.0",
+      "definition_en": "to destroy or get rid of something completely",
+      "ipa": "/ɪˈrædɪkeɪt/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-0f9eea576ea9cf84": {
+      "synonyms": ["unpredictable", "irregular", "inconsistent", "volatile"],
+      "collocations": ["erratic behaviour", "erratic driving", "erratic performance"],
+      "example_simple": "His erratic driving made the other passengers feel nervous.",
+      "example_complex": "The company's erratic financial performance over the past decade has left investors deeply uncertain about its future."
+    },
+    "8b46b012-3bd2-4dd2-812f-01e3fbcf72a8": {
+      "difficulty": "8.0",
+      "definition_en": "a heartbeat that is uneven or irregular in rhythm",
+      "ipa": "/ɪˈrætɪk pʌls/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-3cf4a954ba140b84": {
+      "difficulty": "6.0",
+      "synonyms": ["get away with it", "avoid punishment", "go unpunished", "evade justice"],
+      "collocations": ["escape punishment for a crime", "let someone escape punishment", "escape punishment altogether"],
+      "example_simple": "He was lucky to escape punishment after breaking the school rules.",
+      "example_complex": "Wealthy offenders too often escape punishment entirely, while minor crimes committed by the poor are prosecuted with full force.",
+      "definition_en": "to avoid being penalised for a wrongdoing",
+      "ipa": "/ɪˈskeɪp ˈpʌnɪʃmənt/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "chạy tội, thoát khỏi hình phạt"
+    },
+    "fc355622-05a9-4770-a327-bbf3ad67919a": {
+      "difficulty": "8.0",
+      "definition_en": "to deliberately avoid or abstain from something",
+      "ipa": "/ɪsˈtʃuː/",
+      "part_of_speech": "verb"
+    },
+    "1faf1c12-8df0-4ca8-b565-d5041d968f05": {
+      "difficulty": "8.0",
+      "definition_en": "to adopt or support a cause, belief, or way of life",
+      "ipa": "/ɪˈspaʊz/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-bf5f9a9da45f5080": {
+      "difficulty": "5.0",
+      "ipa": "/ɪˈstæblɪʃ/"
+    },
+    "819dc825-6fb5-4ed3-9aca-47959affdfe7": {
+      "difficulty": "6.0",
+      "definition_en": "lasting or existing forever, without end",
+      "ipa": "/ɪˈtɜːnl/",
+      "part_of_speech": "adjective"
+    },
+    "02857367-3988-482e-a9a4-e4968ede8171": {
+      "difficulty": "9.0",
+      "definition_en": "a person who studies the origins and history of words",
+      "ipa": "/ˌetɪˈmɒlədʒɪst/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-3709214fb349c5b5": {
+      "difficulty": "5.0",
+      "ipa": "/ɪˈvæljueɪt/"
+    },
+    "d69d654d-e7d9-4831-af1b-361f4001158b": {
+      "difficulty": "8.0",
+      "definition_en": "the final death, end, or collapse of something",
+      "ipa": "/ɪˈventʃuəl dɪˈmaɪz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-59acab5d0a5ee07d": {
+      "synonyms": ["timeless", "perennial", "ever-fresh", "enduring"],
+      "collocations": ["evergreen trees", "an evergreen classic", "evergreen content"],
+      "example_simple": "Pine and fir are evergreen trees that stay green all winter.",
+      "example_complex": "The song has become an evergreen classic, played on the radio decades after its original release."
+    },
+    "pubcol-w-4cd9d908b65bace5": {
+      "difficulty": "5.0",
+      "synonyms": ["occasionally", "now and then", "from time to time", "sometimes"],
+      "collocations": ["meet every so often", "happens every so often", "check every so often"],
+      "example_simple": "We still meet up for coffee every so often.",
+      "example_complex": "Every so often the old machine would break down without warning, forcing the whole production line to a halt.",
+      "definition_en": "occasionally; from time to time",
+      "ipa": "/ˈevri səʊ ˈɒfn/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "thỉnh thoảng"
+    },
+    "pubcol-w-194a0f9cd25e985c": {
+      "synonyms": ["suggestive", "reminiscent", "expressive", "poignant"],
+      "collocations": ["evocative imagery", "evocative of the past", "deeply evocative"],
+      "example_simple": "The smell of fresh bread is evocative of my grandmother's kitchen.",
+      "example_complex": "Her prose is remarkably evocative, conjuring the sights and sounds of a city that no longer exists."
+    }
+  }
+}

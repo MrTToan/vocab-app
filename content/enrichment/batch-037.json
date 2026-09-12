@@ -1,0 +1,152 @@
+{
+  "meta": { "batch": "batch-037", "authored_by": "claude", "count": 25 },
+  "words": {
+    "6b04a877-dade-42fe-b04c-a512e78da495": {
+      "difficulty": "8.0",
+      "definition_en": "to become or make something wider, larger, or more open",
+      "ipa": "/daɪˈleɪt/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-74f55636889c7216": {
+      "synonyms": ["hardworking", "industrious", "conscientious", "assiduous"],
+      "collocations": ["diligent student", "diligent effort", "diligent worker"],
+      "example_simple": "She is a diligent student who never misses a class.",
+      "example_complex": "Through diligent research and careful attention to detail, the team uncovered flaws that others had overlooked."
+    },
+    "pubcol-w-f86d317b9f1228eb": {
+      "synonyms": ["water down", "thin", "weaken", "adulterate"],
+      "collocations": ["dilute a solution", "dilute the impact", "dilute with water"],
+      "example_simple": "You should dilute the juice with a little water before drinking it.",
+      "example_complex": "Critics argued that the amendments would dilute the original legislation and weaken its protective effect."
+    },
+    "04425e5b-5b5c-423e-a1ff-65e579f9cb95": {
+      "difficulty": "6.0",
+      "definition_en": "a low level of illumination that is soft and faint",
+      "ipa": "/dɪm laɪt/",
+      "part_of_speech": "phrase"
+    },
+    "97f49a3b-64e0-4bfe-b55e-98d6e047dcbf": {
+      "difficulty": "7.0"
+    },
+    "a0b81997-55f0-44eb-b3d8-afafebf8db6e": {
+      "difficulty": "6.0",
+      "ipa": "/dɪp/"
+    },
+    "02f2a946-e3d6-41fc-b284-95decb9c2778": {
+      "difficulty": "8.0",
+      "definition_en": "a state of confusion, untidiness, or lack of organisation",
+      "ipa": "/ˌdɪsəˈreɪ/",
+      "part_of_speech": "noun"
+    },
+    "1fd0f8a3-36f4-470e-8515-d04355fd3ac6": {
+      "difficulty": "7.0",
+      "definition_en": "to recognise or perceive something, especially with difficulty",
+      "ipa": "/dɪˈsɜːn/",
+      "part_of_speech": "verb"
+    },
+    "68ca5cbb-4074-41ea-9674-355b679abc9f": {
+      "difficulty": "8.0",
+      "definition_en": "able to be seen, noticed, or recognised",
+      "ipa": "/dɪˈsɜːnəbl/",
+      "part_of_speech": "adjective"
+    },
+    "7efd9cf6-d0cf-4d0c-889b-1b617585cec8": {
+      "difficulty": "9.0",
+      "synonyms": ["separate strokes of pure colour", "distinct touches of raw pigment"],
+      "definition_en": "small, separate marks of pure, unblended colour applied to a surface",
+      "ipa": "/ˌdɪskənˈtɪnjuəs dæbz əv ʌnˈmɪkst ˈpɪɡmənt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-3ebe8a53e423957c": {
+      "difficulty": "7.0",
+      "ipa": "/dɪsˈkrepənsi/"
+    },
+    "c6f1bd4d-2719-4cc1-8551-d1d6af8f8348": {
+      "difficulty": "8.0",
+      "definition_en": "showing contempt or a feeling that someone or something is unworthy of respect",
+      "ipa": "/dɪsˈdeɪnfl/",
+      "part_of_speech": "adjective"
+    },
+    "416933cf-a166-4deb-a25d-2b29fd53c07f": {
+      "difficulty": "6.0",
+      "definition_en": "to change one's appearance or hide something so as not to be recognised",
+      "ipa": "/dɪsˈɡaɪz/",
+      "part_of_speech": "verb"
+    },
+    "a29e5ee0-1d66-4af1-9bbf-f7a52ba25edb": {
+      "difficulty": "7.0",
+      "definition_en": "causing a loss of hope, confidence, or enthusiasm",
+      "ipa": "/dɪsˈhɑːtnɪŋ/",
+      "part_of_speech": "adjective"
+    },
+    "8ec734a1-f42a-411b-934d-a6da36c0ef3f": {
+      "difficulty": "9.0",
+      "definition_en": "impartial, unbiased comment that is not influenced by personal advantage",
+      "ipa": "/dɪsˈɪntrəstɪd ˈkɒməntri/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-aedf61564743e549": {
+      "synonyms": ["hate", "detest", "disapprove of", "loathe"],
+      "collocations": ["strong dislike", "dislike intensely", "grow to dislike"],
+      "example_simple": "I really dislike getting up early on cold mornings.",
+      "example_complex": "Despite her evident dislike of public speaking, she delivered the keynote with remarkable poise.",
+      "definition_en": "to not like or to feel aversion towards someone or something",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-555914ccd5eac0df": {
+      "synonyms": ["displace", "put out of joint", "disjoint", "disrupt"],
+      "collocations": ["dislocate a shoulder", "dislocate a joint", "dislocate the economy"],
+      "example_simple": "He fell awkwardly and managed to dislocate his shoulder.",
+      "example_complex": "The sudden collapse of the industry dislocated entire communities that had depended on it for generations."
+    },
+    "8c9e7075-3abe-44d6-807a-4b001ac156c0": {
+      "difficulty": "7.0",
+      "definition_en": "to take apart a structure or system, or to gradually destroy it",
+      "ipa": "/dɪsˈmæntl/",
+      "part_of_speech": "verb"
+    },
+    "dee4c41d-3f10-4c82-acbf-9cf04eb2c76f": {
+      "difficulty": "8.0",
+      "definition_en": "to remove obstacles or barriers that block progress",
+      "ipa": "/dɪsˈmæntl ɪmˈpedɪmənts/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-e3d15e70ed54eff9": {
+      "synonyms": ["get off", "descend", "alight", "climb down"],
+      "collocations": ["dismount from a horse", "dismount a bike", "dismount safely"],
+      "example_simple": "She stopped the bike and dismounted at the corner.",
+      "example_complex": "The rider dismounted gracefully, patting the horse's neck before leading it into the stable."
+    },
+    "ae13165f-26e7-4f73-9624-ba6da2ae86f4": {
+      "difficulty": "5.0",
+      "definition_en": "to refuse to do what a rule, law, or person tells you to do",
+      "ipa": "/ˌdɪsəˈbeɪ/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-ce2fcff2aeb8adf9": {
+      "synonyms": ["chaos", "confusion", "disruption", "ailment"],
+      "collocations": ["public disorder", "sleep disorder", "in disorder"],
+      "example_simple": "The room was left in complete disorder after the party.",
+      "example_complex": "Researchers are investigating how chronic stress can trigger neurological disorders later in life."
+    },
+    "161ffe0c-0d26-440f-813c-0528f464c721": {
+      "difficulty": "8.0",
+      "definition_en": "expressing the opinion that something is of little worth; belittling",
+      "ipa": "/dɪˈspærɪdʒɪŋ/",
+      "part_of_speech": "adjective"
+    },
+    "e62e5922-fcda-4cc0-a902-2e14bfcc4ca3": {
+      "difficulty": "8.0",
+      "definition_en": "essentially different in kind and not able to be compared",
+      "ipa": "/ˈdɪspərət/",
+      "part_of_speech": "adjective"
+    },
+    "55381a00-6718-4492-832d-347b33b68c56": {
+      "difficulty": "8.0",
+      "definition_en": "a great difference or inequality between things",
+      "ipa": "/dɪˈspærəti/",
+      "part_of_speech": "noun",
+      "vi_meaning_correction": "sự chênh lệch, sự khác biệt (không bình đẳng)"
+    }
+  }
+}

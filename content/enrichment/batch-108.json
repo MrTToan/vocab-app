@@ -1,0 +1,173 @@
+{
+  "meta": { "batch": "batch-108", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-66a3fcffe47e122a": {
+      "difficulty": "6.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˌruːt ˈkɔːz/",
+      "definition_en": "the fundamental, underlying reason that something (usually a problem) happens",
+      "synonyms": ["underlying cause", "source", "origin", "primary reason"],
+      "collocations": ["identify the root cause", "root cause analysis", "address the root cause"],
+      "example_simple": "The engineers looked for the root cause of the machine failure.",
+      "example_complex": "Rather than treating the symptoms, the committee sought to determine the root cause of the recurring budget shortfalls."
+    },
+    "98c0e10b-f673-48f0-beb4-2930ba89f3fa": {
+      "difficulty": "6.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˈrɒstə/",
+      "definition_en": "a list of people's names, often showing when each is due to work or perform a duty"
+    },
+    "eb5ad2d4-966c-4d47-b35a-20824eb9fa5b": {
+      "difficulty": "5.0",
+      "ipa": "/ˈrʌfli/"
+    },
+    "d550bc03-ad8d-414e-a4a5-ed0934666d4f": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ruːˌtiːn pəˈtrɒl/",
+      "definition_en": "a regular, scheduled tour of an area to keep watch and maintain security"
+    },
+    "d74359e4-6dd1-4789-9ae7-3f7bf57c4dcb": {
+      "difficulty": "6.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˈrɔɪəlti/",
+      "definition_en": "members of a royal family; also a payment made to an owner for the use of their work or property"
+    },
+    "3726fabf-01b7-4579-adef-62c815fa6fe4": {
+      "difficulty": "6.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˈrʌbl paɪlz/",
+      "definition_en": "heaps of broken stone, brick and concrete left after a building has collapsed or been destroyed"
+    },
+    "b4efbcb9-e647-4e14-8e67-793b6957efea": {
+      "difficulty": "7.0",
+      "part_of_speech": "adjective",
+      "ipa": "/ˌruːdɪˈmentri/",
+      "definition_en": "basic and undeveloped; involving only the simplest elements of something"
+    },
+    "677c1d2c-da2e-4c92-b1b9-5b2ffbd00f8e": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˈruːlɪŋ wɒz kənˈtestɪd ɪn kɔːt/",
+      "definition_en": "a court's official decision was formally challenged through legal proceedings",
+      "synonyms": ["the verdict was challenged", "the decision was appealed", "the judgment was disputed"]
+    },
+    "pubcol-w-511ac6eac73a9ca0": {
+      "difficulty": "8.0",
+      "part_of_speech": "idiom",
+      "ipa": "/rʌn ə ˈveri taɪt ʃɪp/",
+      "definition_en": "to manage an organization or group in a strict, well-controlled and efficient way",
+      "synonyms": ["run things strictly", "keep tight control", "manage firmly"],
+      "collocations": ["run a tight ship at work", "known for running a tight ship", "she runs a tight ship"],
+      "example_simple": "Our new manager runs a very tight ship, so everyone arrives on time.",
+      "example_complex": "The head chef ran a very tight ship, insisting that every station be spotless before service began.",
+      "vi_meaning_correction": "quản lý chặt chẽ và hiệu quả"
+    },
+    "pubcol-w-241e2c74a7345e48": {
+      "difficulty": "5.0",
+      "ipa": "/rʌn ˈɪntu/"
+    },
+    "pubcol-w-ebd442e9547a34b2": {
+      "difficulty": "5.0",
+      "ipa": "/rʌn ˈaʊt ɒv/",
+      "vi_meaning_correction": "cạn kiệt, dùng hết"
+    },
+    "pubcol-w-be35aef0b516bc39": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/rʌn ðə ˈrɪsk ɒv/",
+      "definition_en": "to put oneself in a situation where something bad could happen",
+      "synonyms": ["risk", "chance", "expose oneself to"],
+      "collocations": ["run the risk of failure", "run the risk of losing", "run the risk of injury"],
+      "example_simple": "If you don't study, you run the risk of failing the exam.",
+      "example_complex": "By ignoring the safety warnings, the company ran the risk of a serious accident and heavy fines.",
+      "vi_meaning_correction": "có nguy cơ, liều gặp rủi ro"
+    },
+    "pubcol-w-3ae644d0499623cd": {
+      "difficulty": "6.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˌrʌnər ˈʌp/",
+      "definition_en": "the person or team that finishes in second place in a competition",
+      "synonyms": ["second-place finisher", "second place", "finalist"],
+      "collocations": ["the runner-up prize", "beaten into the runner-up spot", "finish as runner-up"],
+      "example_simple": "She was the runner-up in the singing contest.",
+      "example_complex": "Although he entered as the favourite, he had to settle for runner-up after a narrow defeat in the final."
+    },
+    "f9c3614d-0398-487a-a7a2-5f9039f4387b": {
+      "difficulty": "7.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˈrʌnɒf/",
+      "definition_en": "rainwater or liquid that drains off the surface of land; also a final deciding round of an election or contest"
+    },
+    "c44dc3d3-cab9-4004-82e2-71313dcfc42a": {
+      "difficulty": "8.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˌsækrəlaɪˈzeɪʃn/",
+      "definition_en": "the process of making something sacred or treating it as holy"
+    },
+    "pubcol-w-dc0802d2dbfb80d5": {
+      "difficulty": "6.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ˌseɪf ən ˈsaʊnd/",
+      "definition_en": "safe and unharmed, especially after being in danger",
+      "synonyms": ["unharmed", "safe", "secure", "out of danger"],
+      "collocations": ["arrive safe and sound", "get home safe and sound", "return safe and sound"],
+      "example_simple": "We were glad the children got home safe and sound.",
+      "example_complex": "After the storm delayed their flight for hours, the family finally landed safe and sound at midnight."
+    },
+    "643fbd9b-2a93-493b-b225-d34468d6c952": {
+      "difficulty": "8.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˈseɪliəns/",
+      "definition_en": "the quality of being especially noticeable or important"
+    },
+    "pubcol-w-0a60dc135d7f55b2": {
+      "difficulty": "7.0",
+      "ipa": "/ˈseɪliənt/"
+    },
+    "pubcol-w-40bcf5a423a5ccec": {
+      "difficulty": "6.0",
+      "part_of_speech": "adjective",
+      "ipa": "/ˌsɔːlt ən ˈpepə/",
+      "definition_en": "streaked or mixed with grey and dark colour, especially describing hair turning grey",
+      "synonyms": ["greying", "grizzled", "pepper-and-salt"],
+      "collocations": ["salt-and-pepper hair", "salt-and-pepper beard", "a salt-and-pepper moustache"],
+      "example_simple": "He had a neat salt-and-pepper beard.",
+      "example_complex": "The distinguished professor, with his salt-and-pepper hair and tweed jacket, looked every bit the part."
+    },
+    "01b820cd-5605-4b2c-b21d-f8107b50ecfb": {
+      "difficulty": "7.0",
+      "part_of_speech": "verb",
+      "ipa": "/ˈsælvɪdʒ/",
+      "definition_en": "to save something from loss, damage or destruction so it can be used again"
+    },
+    "pubcol-w-9d6bb6294bc71459": {
+      "difficulty": "5.0",
+      "ipa": "/ˈseɪm ˈhɪə/"
+    },
+    "65f50784-c0d7-463b-8d95-e4affc8e8bb6": {
+      "difficulty": "7.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˈsæŋkʃn/",
+      "definition_en": "official approval of an action; or a penalty imposed to force obedience to a rule or law (often plural)"
+    },
+    "cc4c7c9f-c566-4e18-8800-07f932dd52e8": {
+      "difficulty": "6.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˌsænɪˈteɪʃn/",
+      "definition_en": "the systems and conditions for keeping places clean and disposing of waste to protect public health"
+    },
+    "ea777d30-8230-4199-b79e-8a54a80fdd1c": {
+      "difficulty": "8.0",
+      "part_of_speech": "adjective",
+      "ipa": "/sɑːˈdɒnɪk/",
+      "definition_en": "mocking or scornful in a bitter, cynical way"
+    },
+    "7619c34a-b22f-4c3c-b108-5a4ebf6f688a": {
+      "difficulty": "7.0",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈsætʃəreɪtɪd/",
+      "definition_en": "completely soaked with liquid; or filled to full capacity so no more can be added"
+    }
+  }
+}

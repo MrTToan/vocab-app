@@ -1,0 +1,232 @@
+{
+  "meta": { "batch": "batch-127", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-25dd2bc4850f5550": {
+      "difficulty": "6.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˈtaɪm ˌmænɪdʒmənt/",
+      "definition_en": "the practice of organising and planning how to divide your time between different tasks",
+      "synonyms": ["scheduling", "time planning", "prioritisation", "organisation"],
+      "collocations": ["good time-management", "time-management skills", "poor time-management"],
+      "example_simple": "Good time-management helps me finish my homework before dinner.",
+      "example_complex": "Effective time-management is often the difference between employees who thrive under pressure and those who feel constantly overwhelmed."
+    },
+    "f530b061-96c2-4751-8f02-b78f44c34c2b": {
+      "difficulty": "8.0",
+      "part_of_speech": "noun",
+      "ipa": "/taɪˈreɪd/",
+      "definition_en": "a long, angry speech criticising someone or something"
+    },
+    "145474e0-5ee2-4d6c-87b3-a3d0c869fe93": {
+      "difficulty": "8.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˈtɪʃuː ˈswelɪŋ/",
+      "definition_en": "an abnormal enlargement of body tissue, usually caused by injury, infection or fluid build-up"
+    },
+    "pubcol-w-d2087ce58df44951": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɪn ˈdʒepədi/",
+      "definition_en": "in a dangerous situation where failure, loss or harm is likely",
+      "synonyms": ["at risk", "in danger", "under threat", "imperilled"],
+      "collocations": ["put in jeopardy", "place jobs in jeopardy", "seriously in jeopardy"],
+      "example_simple": "The heavy rain put the whole trip in jeopardy.",
+      "example_complex": "One careless email had placed the entire merger in jeopardy, and the board scrambled to reassure their nervous investors."
+    },
+    "pubcol-w-9dbde0c943ccc969": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/tʊ ə/sʌm dɪˈɡriː/",
+      "definition_en": "partly, but not completely",
+      "synonyms": ["partly", "in part", "somewhat", "to some extent"],
+      "collocations": ["true to some degree", "agree to a degree", "vary to some degree"],
+      "example_simple": "To some degree, I agree with you, but I still have doubts.",
+      "example_complex": "Her success can be attributed to talent, but to a degree it also reflects the many opportunities she was fortunate enough to receive."
+    },
+    "pubcol-w-c58d7b4d775d3f33": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/tə bi æt ə lɒs/",
+      "definition_en": "unable to think what to say or do; confused and uncertain",
+      "synonyms": ["baffled", "confused", "bewildered", "stumped"],
+      "collocations": ["be at a loss for words", "be completely at a loss", "at a loss to explain"],
+      "example_simple": "When she asked me such a difficult question, I was at a loss for words.",
+      "example_complex": "Faced with the sudden collapse of the project, even the senior managers were at a loss to explain what had gone so badly wrong."
+    },
+    "pubcol-w-d6edc06b53c9dfe5": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/tə bi baʊnd tə duː ˈsʌmθɪŋ/",
+      "definition_en": "to be certain or obliged to do something",
+      "synonyms": ["be sure to", "be obliged to", "be certain to", "be destined to"],
+      "collocations": ["bound to happen", "bound to succeed", "legally bound to"],
+      "example_simple": "If you keep practising, you are bound to improve.",
+      "example_complex": "Given the mounting pressure from shareholders, the company was bound to announce redundancies sooner or later."
+    },
+    "pubcol-w-3368f08298879b6f": {
+      "difficulty": "5.0",
+      "ipa": "/tə bi ˈɒnɪst/"
+    },
+    "pubcol-w-1c6be98e3f060c60": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/tə bi ɪn ðə muːd fər ə ˌhəʊm kʊkt miːl/",
+      "definition_en": "to feel like eating a meal prepared at home rather than eating out",
+      "synonyms": ["fancy a home-cooked meal", "feel like cooking at home", "crave home cooking"],
+      "collocations": ["be in the mood for", "not in the mood for", "in the mood for something light"],
+      "example_simple": "After a long week, I'm in the mood for a home-cooked meal instead of takeaway.",
+      "example_complex": "Exhausted from months of business travel and restaurant food, she was suddenly in the mood for a simple home-cooked meal with her family."
+    },
+    "pubcol-w-05a955998d5e509c": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/tə bi meɪd rɪˈdʌndənt/",
+      "definition_en": "to lose your job because your employer no longer needs your role",
+      "synonyms": ["be laid off", "be let go", "lose your job", "be dismissed"],
+      "collocations": ["be made redundant", "risk being made redundant", "made redundant after years"],
+      "example_simple": "He was made redundant when the factory closed down.",
+      "example_complex": "Thousands of workers were made redundant as the company shifted its production overseas to cut costs."
+    },
+    "pubcol-w-09e6e9c132a0c7c4": {
+      "difficulty": "6.0",
+      "part_of_speech": "idiom",
+      "ipa": "/tə bi ðeə fə ˌsʌmbədi/",
+      "definition_en": "to be available to support and help someone when they need it",
+      "synonyms": ["support", "stand by", "be supportive", "be a rock"],
+      "collocations": ["always be there for you", "be there for each other", "be there for someone in need"],
+      "example_simple": "Whenever I have a problem, my best friend is always there for me.",
+      "example_complex": "Even after moving to another country, she made sure her ageing parents knew she would always be there for them."
+    },
+    "pubcol-w-7c35508bfa435c1c": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/tə ɡet əˈweɪ wɪð/",
+      "definition_en": "to do something wrong without being caught or punished for it",
+      "synonyms": ["escape blame", "avoid punishment", "go unpunished", "get off"],
+      "collocations": ["get away with it", "get away with cheating", "get away with murder"],
+      "example_simple": "He thought he could get away with lying, but his teacher noticed.",
+      "example_complex": "For years the executives got away with falsifying the accounts, until an internal auditor finally exposed the fraud."
+    },
+    "pubcol-w-0781d060c85db0a4": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/tə ɡet daʊn tuː/",
+      "definition_en": "to start giving your serious attention to something",
+      "synonyms": ["begin", "get started on", "buckle down to", "set about"],
+      "collocations": ["get down to work", "get down to business", "get down to the details"],
+      "example_simple": "Let's stop chatting and get down to work.",
+      "example_complex": "Once the introductions were over, the negotiators finally got down to the difficult business of agreeing on a price."
+    },
+    "pubcol-w-4276dad663e4335c": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/tə ɡet ɒn/",
+      "definition_en": "to climb onto or board a bus, train, plane or bicycle",
+      "synonyms": ["board", "climb on", "step onto", "mount"],
+      "collocations": ["get on the bus", "get on the train", "get on a plane"],
+      "example_simple": "We got on the bus just before it left the station.",
+      "example_complex": "As the last passengers hurried to get on the crowded train, the doors slid shut and the platform emptied."
+    },
+    "pubcol-w-44041189707f3a86": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/tə rɪˈmembər ɪt ɪɡˈzæktli/",
+      "definition_en": "to recall something precisely and accurately",
+      "synonyms": ["memorise precisely", "recall accurately", "remember word for word", "commit to memory"],
+      "collocations": ["remember it exactly", "hard to remember exactly", "can't remember exactly"],
+      "example_simple": "I read the poem many times so that I could remember it exactly.",
+      "example_complex": "Although the incident happened years ago, she could still remember it exactly, down to the colour of the sky that afternoon."
+    },
+    "pubcol-w-24b045223337b149": {
+      "difficulty": "8.0",
+      "part_of_speech": "phrase",
+      "ipa": "/tə ˈsentəns ˌsʌmbədi tə ə ˈlaɪftaɪm ɪmˈprɪzənmənt/",
+      "definition_en": "to officially punish someone with imprisonment for the rest of their life",
+      "synonyms": ["jail for life", "give a life sentence", "condemn to life imprisonment"],
+      "collocations": ["sentence someone to life imprisonment", "face life imprisonment", "handed a life sentence"],
+      "example_simple": "The judge decided to sentence the man to lifetime imprisonment for the crime.",
+      "example_complex": "After a lengthy trial, the court chose to sentence the offender to lifetime imprisonment, ruling that he posed a permanent danger to the public."
+    },
+    "pubcol-w-63793b3baafd0369": {
+      "difficulty": "6.0",
+      "ipa": "/tə sʌm ɪkˈstent/"
+    },
+    "pubcol-w-9b7cd12dbdfd91d2": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/tə ˈsʌmbədi huː ɪz ˈstɑːtɪŋ ə ˈdʒɜːni/",
+      "definition_en": "addressed or offered to a person who is beginning a new venture or journey",
+      "synonyms": ["to someone setting out", "to a beginner", "to a newcomer"],
+      "collocations": ["advice to someone starting a journey", "words for someone starting out", "a gift for someone starting a journey"],
+      "example_simple": "This little book of tips is meant for somebody who is starting a journey.",
+      "example_complex": "The professor dedicated her farewell speech to somebody who is starting a journey, offering hard-won wisdom to every graduate about to leave the campus.",
+      "vi_meaning_correction": "(gửi) tới người sắp bắt đầu một hành trình mới"
+    },
+    "pubcol-w-61d21a48bcc5905f": {
+      "difficulty": "6.0",
+      "ipa": "/tə sʌm ʌp/"
+    },
+    "pubcol-w-daac5c72cd942e8e": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/tə ðə best əv maɪ ˈnɒlɪdʒ/",
+      "definition_en": "as far as I know; according to what I believe to be true",
+      "synonyms": ["as far as I know", "so far as I'm aware", "to my knowledge"],
+      "collocations": ["to the best of my knowledge and belief", "to the best of my recollection", "state to the best of my knowledge"],
+      "example_simple": "To the best of my knowledge, the shop closes at six o'clock.",
+      "example_complex": "To the best of my knowledge, no such agreement was ever signed, though I cannot rule out discussions I was not party to.",
+      "vi_meaning_correction": "theo những gì tôi biết"
+    },
+    "pubcol-w-aea5c5cddf5ea491": {
+      "difficulty": "8.0",
+      "part_of_speech": "phrase",
+      "ipa": "/tə ðɪs ɪˈfekt/",
+      "definition_en": "with this meaning or purpose; conveying this idea",
+      "synonyms": ["along these lines", "with this meaning", "to this end"],
+      "collocations": ["say something to this effect", "a statement to this effect", "words to this effect"],
+      "example_simple": "She said she was too busy, or something to this effect.",
+      "example_complex": "The minister issued a formal statement to this effect, insisting that no further concessions would be made during the negotiations.",
+      "vi_meaning_correction": "với ý nghĩa/nội dung như thế này"
+    },
+    "pubcol-w-2b0440f17fd0a00d": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/tə θrəʊ əˈweɪ/",
+      "definition_en": "to get rid of something you no longer want, or to waste an opportunity",
+      "synonyms": ["discard", "dispose of", "chuck out", "waste"],
+      "collocations": ["throw away rubbish", "throw away a chance", "throw away money"],
+      "example_simple": "Please don't throw away those old newspapers; I want to recycle them.",
+      "example_complex": "By turning down the scholarship, he threw away an opportunity that most students could only dream of."
+    },
+    "pubcol-w-801e370b2415b7aa": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/tə θrəʊ ɪn/",
+      "definition_en": "to add something extra, or to contribute a remark to a conversation",
+      "synonyms": ["add", "include", "contribute", "interject"],
+      "collocations": ["throw in a comment", "throw in for free", "throw in a few jokes"],
+      "example_simple": "The salesman threw in a free case when I bought the phone.",
+      "example_complex": "Whenever the debate grew tense, she would throw in a light-hearted remark to ease the atmosphere."
+    },
+    "pubcol-w-5a0586d5690ff24e": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/tə θrəʊ ɒf/",
+      "definition_en": "to get rid of something troublesome, or to escape from someone following you",
+      "synonyms": ["shake off", "get rid of", "cast off", "escape"],
+      "collocations": ["throw off a cold", "throw off pursuers", "throw off suspicion"],
+      "example_simple": "It took me a week to throw off that nasty cold.",
+      "example_complex": "The fugitive changed cars twice in an effort to throw off the detectives who had been tailing him for days."
+    },
+    "pubcol-w-febe662f9a496846": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/tə θrəʊ aʊt/",
+      "definition_en": "to get rid of something unwanted, or to reject an idea or proposal",
+      "synonyms": ["discard", "dispose of", "reject", "dismiss"],
+      "collocations": ["throw out the rubbish", "throw out a proposal", "throw out an idea"],
+      "example_simple": "We need to throw out all this broken furniture.",
+      "example_complex": "The committee threw out the original plan, arguing that it was far too expensive to implement."
+    }
+  }
+}

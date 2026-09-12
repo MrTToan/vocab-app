@@ -1,0 +1,211 @@
+{
+  "meta": { "batch": "batch-003", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-8bd892f63a748dad": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə ˌbʌntʃ əv ˈflaʊəz/",
+      "definition_en": "a number of flowers gathered or tied together",
+      "synonyms": ["a bouquet of flowers", "a bunch of blooms", "a posy"],
+      "collocations": ["buy a bunch of flowers", "give someone a bunch of flowers", "a fresh bunch of flowers"],
+      "example_simple": "He bought his mother a bunch of flowers for her birthday.",
+      "example_complex": "She arrived at the interview clutching a bunch of flowers, hoping the small gesture might soften the panel's first impression."
+    },
+    "pubcol-w-aa68d5550630f867": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə ˌbʌntʃ əv bəˈnɑːnəz/",
+      "definition_en": "a cluster of bananas growing or joined together, also called a comb or hand of bananas",
+      "synonyms": ["a comb of bananas", "a hand of bananas", "a cluster of bananas"],
+      "collocations": ["a whole bunch of bananas", "cut off a comb of bananas", "ripen a bunch of bananas"],
+      "example_simple": "She picked up a bunch of bananas at the market for the children.",
+      "example_complex": "In the tropical orchard, each stem carried several combs of bananas, and workers cut off a bunch of bananas whenever the fruit began to yellow."
+    },
+    "pubcol-w-e1ebbbe6139bc7e2": {
+      "difficulty": "6.0",
+      "ipa": "/ˌækəˈdemɪk ˈpreʃə/"
+    },
+    "845bffea-4e47-42a0-b04e-ee27f75b6b81": {
+      "difficulty": "8.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˌækəˈdemɪk ˈrɪɡə/",
+      "definition_en": "the quality of being academically thorough, demanding, and intellectually exacting"
+    },
+    "pubcol-w-f01bc4d95108a355": {
+      "difficulty": "5.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˌækəˈdemɪk jɪə/",
+      "definition_en": "the annual period during which a school or university holds classes",
+      "synonyms": ["school year", "academic session", "term year"],
+      "collocations": ["the start of the academic year", "during the academic year", "throughout the academic year"],
+      "example_simple": "The new academic year begins in September.",
+      "example_complex": "Enrolment figures rose sharply over the academic year, forcing the university to open additional seminar groups mid-term."
+    },
+    "pubcol-w-0b6adcfd9c7da513": {
+      "synonyms": ["speed up", "quicken", "hasten", "step up"],
+      "collocations": ["accelerate the process", "accelerate growth", "accelerate rapidly"],
+      "example_simple": "The car began to accelerate as it left the town.",
+      "example_complex": "Government incentives are expected to accelerate the shift towards renewable energy over the next decade.",
+      "vi_meaning_correction": "tăng tốc, đẩy nhanh"
+    },
+    "pubcol-w-da622a3ba9633ef8": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˈækses tə ði ˈɪntənet/",
+      "definition_en": "the ability or opportunity to connect to and use the internet",
+      "synonyms": ["internet access", "online access", "connectivity"],
+      "collocations": ["have access to the internet", "provide access to the internet", "limited access to the internet"],
+      "example_simple": "Many students still do not have access to the internet at home.",
+      "example_complex": "In remote rural areas, unreliable access to the internet remains one of the biggest barriers to online education."
+    },
+    "pubcol-w-b5719e1f2a903848": {
+      "synonyms": ["celebrated", "praised", "renowned", "lauded"],
+      "collocations": ["critically acclaimed", "widely acclaimed", "an acclaimed author"],
+      "example_simple": "The film was acclaimed by both critics and audiences.",
+      "example_complex": "Her acclaimed debut novel, praised for its lyrical prose, went on to win several international literary awards."
+    },
+    "56c4fb63-6306-44bf-a507-a24dfe46d383": {
+      "difficulty": "7.0",
+      "part_of_speech": "noun",
+      "ipa": "/əˈkɔːd/",
+      "definition_en": "a formal agreement or treaty, or a state of being in harmony"
+    },
+    "pubcol-w-3afbcfb4c94c1ba5": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/əˈkɔːdɪŋ tə/",
+      "definition_en": "as stated or reported by a particular person, source, or system",
+      "synonyms": ["as stated by", "as reported by", "based on", "per"],
+      "collocations": ["according to the report", "according to experts", "according to the plan"],
+      "example_simple": "According to the weather forecast, it will rain tomorrow.",
+      "example_complex": "According to recent research, prolonged screen time before bed can significantly disrupt sleep patterns.",
+      "vi_meaning_correction": "theo, dựa theo, căn cứ vào"
+    },
+    "pubcol-w-e5fc8009f8bf27e8": {
+      "difficulty": "6.0",
+      "ipa": "/əˈkɔːdɪŋli/"
+    },
+    "4009c75b-e56e-4776-a1fe-7f01fa06d690": {
+      "difficulty": "6.0",
+      "ipa": "/əˈkaʊnt fə/"
+    },
+    "721b6b5a-4f22-4ba2-bbb4-9f8489789cbc": {
+      "difficulty": "8.0",
+      "part_of_speech": "noun",
+      "ipa": "/əˈkriːʃn/",
+      "definition_en": "gradual growth or increase by the steady addition of layers or matter"
+    },
+    "5da6850f-1ab8-49c2-8990-85174c284462": {
+      "difficulty": "6.0",
+      "part_of_speech": "adjective",
+      "ipa": "/əˈkʌstəmd/",
+      "definition_en": "familiar with something through regular experience; used to it"
+    },
+    "a1839cd0-0da8-4f5d-9e57-16f78978f02e": {
+      "difficulty": "5.0",
+      "part_of_speech": "noun",
+      "ipa": "/ə tʃeɪndʒ/",
+      "definition_en": "an act or instance of something becoming different"
+    },
+    "pubcol-w-a3621b7db4de2d4a": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ə tʃeɪndʒ ɪz əz ɡʊd əz ə rest/",
+      "definition_en": "doing something different can be as refreshing as taking a break",
+      "synonyms": ["variety is refreshing", "a break in routine helps"],
+      "collocations": ["they say a change is as good as a rest", "believe a change is as good as a rest"],
+      "example_simple": "Instead of a holiday, I painted the house — a change is as good as a rest.",
+      "example_complex": "Rather than taking leave, she switched to a different project entirely, trusting the old saying that a change is as good as a rest."
+    },
+    "pubcol-w-689fe76af2a7cde7": {
+      "difficulty": "6.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ə tʃeɪndʒ əv hɑːt/",
+      "definition_en": "a change in one's opinion, feelings, or intentions about something",
+      "synonyms": ["change of mind", "second thoughts", "reversal"],
+      "collocations": ["have a change of heart", "a sudden change of heart", "prompt a change of heart"],
+      "example_simple": "He was going to sell the house, but then he had a change of heart.",
+      "example_complex": "After hearing the employees' concerns, the director had a change of heart and postponed the planned restructuring."
+    },
+    "pubcol-w-1d34b0f1d8b87560": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/əˈtʃiːv ə ˈpɜːsnl best/",
+      "definition_en": "to reach the best result or performance one has ever managed personally",
+      "synonyms": ["set a personal record", "reach a personal best", "beat one's own record"],
+      "collocations": ["achieve a personal best time", "achieve a new personal best", "achieve a personal best in the race"],
+      "example_simple": "She achieved a personal best in the marathon last weekend.",
+      "example_complex": "Despite the difficult conditions, the young swimmer achieved a personal best, shaving two seconds off her previous time."
+    },
+    "pubcol-w-79640de883c46249": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/əˈtʃiːv ɡəʊlz/",
+      "definition_en": "to successfully reach the aims or targets one has set",
+      "synonyms": ["reach goals", "attain goals", "meet objectives"],
+      "collocations": ["achieve your goals", "achieve long-term goals", "achieve ambitious goals"],
+      "example_simple": "Hard work helps you achieve your goals.",
+      "example_complex": "By breaking large tasks into smaller steps, students are far more likely to achieve their academic goals over time."
+    },
+    "pubcol-w-9f2f7fb82414518b": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/əˈtʃiːv səkˈses ɪn ðə ˈfjuːtʃə/",
+      "definition_en": "to become successful at some point in the years ahead",
+      "synonyms": ["succeed in the future", "attain future success", "prosper later on"],
+      "collocations": ["achieve success in the future", "help you achieve success in the future", "achieve real success in the future"],
+      "example_simple": "A good education can help you achieve success in the future.",
+      "example_complex": "Employers increasingly argue that adaptability, rather than qualifications alone, will determine who achieves success in the future."
+    },
+    "pubcol-w-27b49fe0de2aaa2f": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə ˈkwaɪə əv ˈsɪŋəz, ə kruː əv ˈseɪləz/",
+      "definition_en": "collective nouns: a choir is a group of singers and a crew is a group of sailors",
+      "synonyms": ["a chorus of singers", "a company of singers", "a team of sailors"],
+      "collocations": ["a choir of singers performed", "join a choir of singers", "a crew of sailors aboard"],
+      "example_simple": "A choir of singers performed at the church, and a crew of sailors watched from the harbour.",
+      "example_complex": "The festival opened with a choir of singers on the quayside while, out at sea, a crew of sailors raised the ship's flags in salute."
+    },
+    "pubcol-w-910d0ad2362df745": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə klɪə ˈbʌblɪŋ ˈmaʊntɪn striːm/",
+      "definition_en": "a small, transparent stream of running water that flows and gurgles down a mountain",
+      "synonyms": ["a clear mountain brook", "a sparkling upland stream", "a crystal-clear creek"],
+      "collocations": ["drink from a clear, bubbling mountain stream", "beside a clear, bubbling mountain stream", "follow a clear, bubbling mountain stream"],
+      "example_simple": "We stopped to rest beside a clear, bubbling mountain stream.",
+      "example_complex": "The trail wound upward until it met a clear, bubbling mountain stream whose icy water was pure enough to drink."
+    },
+    "pubcol-w-cdc6c126bb5587a0": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə klaʊd əv sməʊk/",
+      "definition_en": "a large, visible mass of smoke hanging or drifting in the air",
+      "synonyms": ["a plume of smoke", "a puff of smoke", "a haze of smoke"],
+      "collocations": ["a thick cloud of smoke", "a cloud of smoke rose", "disappear in a cloud of smoke"],
+      "example_simple": "A cloud of smoke rose from the burning building.",
+      "example_complex": "As the engine backfired, a cloud of smoke billowed across the road and briefly hid the traffic from view."
+    },
+    "pubcol-w-2adc71c7cfd352ad": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə ˈkəʊstl ˈsɪti/",
+      "definition_en": "a city located on or near the coast, beside the sea",
+      "synonyms": ["a seaside city", "a port city", "a coastal town"],
+      "collocations": ["live in a coastal city", "a busy coastal city", "a popular coastal city"],
+      "example_simple": "Da Nang is a beautiful coastal city in central Vietnam.",
+      "example_complex": "As sea levels rise, many low-lying coastal cities are being forced to invest heavily in flood defences."
+    },
+    "pubcol-w-ef0469ca940f5535": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə ˈkəʊzi ˈlɪtl haʊs/",
+      "definition_en": "a small house that feels warm, comfortable, and welcoming",
+      "synonyms": ["a snug little house", "a cosy cottage", "a homely little house"],
+      "collocations": ["live in a cozy little house", "a cozy little house in the country", "rent a cozy little house"],
+      "example_simple": "They live in a cozy little house near the woods.",
+      "example_complex": "After years in cramped city flats, the couple finally settled into a cozy little house where a wood stove kept every room warm."
+    }
+  }
+}

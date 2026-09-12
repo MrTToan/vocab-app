@@ -1,0 +1,164 @@
+{
+  "meta": { "batch": "batch-116", "authored_by": "claude", "count": 25 },
+  "words": {
+    "e4673b71-590b-4996-a65c-c427ef566dc4": {
+      "difficulty": "7.0",
+      "synonyms": ["spinal marrow", "medulla spinalis"],
+      "definition_en": "the thick bundle of nerve tissue running through the spine that carries signals between the brain and the body",
+      "ipa": "/ˈspaɪnl kɔːrd/",
+      "part_of_speech": "noun"
+    },
+    "7f2897c5-246a-4089-9dcd-609e78236746": {
+      "difficulty": "7.0",
+      "definition_en": "sharp, stiff bony projections that support and stiffen a fish's fins",
+      "ipa": "/ˈspaɪni fɪnz/",
+      "part_of_speech": "noun"
+    },
+    "79002b22-696a-4a7f-a2f1-047dd07189e7": {
+      "difficulty": "7.0",
+      "synonyms": ["disc galaxy", "spiral nebula"],
+      "definition_en": "a galaxy with a flat, rotating disc of stars arranged in curving arms around a bright central bulge",
+      "ipa": "/ˈspaɪrəl ˈɡæləksi/",
+      "part_of_speech": "noun"
+    },
+    "7e8f8d89-c926-4432-9510-e810f59eac3b": {
+      "difficulty": "7.0",
+      "definition_en": "to fall rapidly and uncontrollably into a much worse state or situation",
+      "ipa": "/ˈspaɪrəl ˈɪntuː/",
+      "part_of_speech": "phrase"
+    },
+    "831ebfee-26d3-4b61-a6af-eb7cb64fce97": {
+      "difficulty": "8.0",
+      "definition_en": "the continuous, rapid and seemingly uncontrollable rise in the cost of medical care",
+      "ipa": "/ˈspaɪrəlɪŋ ˈhelθkeər kɒst/",
+      "part_of_speech": "phrase"
+    },
+    "278173e9-0962-4f02-a239-8d95c0ec908c": {
+      "difficulty": "5.0",
+      "definition_en": "to forcefully expel something, especially food or liquid, from the mouth",
+      "ipa": "/spɪt aʊt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-6775b6229eeb03de": {
+      "difficulty": "7.0",
+      "synonyms": ["splurge on", "shell out for", "lavish money on"],
+      "collocations": ["splash out on a holiday", "splash out on a new car", "splash out on a wedding"],
+      "example_simple": "They decided to splash out on a big meal to celebrate her promotion.",
+      "example_complex": "Having saved for years, the couple finally splashed out on a once-in-a-lifetime honeymoon in the Maldives.",
+      "definition_en": "to spend a lot of money on something, especially for a special occasion or treat",
+      "ipa": "/splæʃ aʊt ɒn ˈsʌmθɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "31dcbef6-0247-4432-9a2f-5c7ee5c4da2d": {
+      "difficulty": "8.0",
+      "definition_en": "to break apart or split into rival, opposing groups over an issue",
+      "ipa": "/ˈsplɪntəd ˈəʊvər/",
+      "part_of_speech": "phrase"
+    },
+    "392b7525-c1fc-4e99-a441-f6d851c959ca": {
+      "difficulty": "7.0",
+      "definition_en": "a surface marked with irregular patches of colour or dirt",
+      "ipa": "/ˈsplɒtʃi ˈsɜːfɪs/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-03983c4474466a84": {
+      "difficulty": "5.0",
+      "synonyms": ["pamper", "indulge", "dote on"],
+      "collocations": ["spoil the children", "spoil someone rotten", "spoil yourself"],
+      "example_simple": "Grandparents love to spoil their grandchildren with sweets and toys.",
+      "example_complex": "Although he insisted he was on a strict budget, he couldn't resist spoiling his partner with an extravagant birthday surprise.",
+      "definition_en": "to treat someone with excessive kindness or generosity, often giving them whatever they want",
+      "ipa": "/spɔɪl ˈsʌmbədi/",
+      "part_of_speech": "phrase"
+    },
+    "7c42352e-24c5-424a-b79f-9ea248dbab36": {
+      "difficulty": "6.0",
+      "definition_en": "soft and springy, absorbing liquid easily like a sponge",
+      "ipa": "/ˈspʌndʒi/",
+      "part_of_speech": "adjective"
+    },
+    "01e8c1a7-ce43-40ce-b8dd-d8f0af7dfff9": {
+      "difficulty": "8.0",
+      "definition_en": "the process by which a material bursts into flame on its own, without an external source of ignition",
+      "ipa": "/spɒnˈteɪniəs kəmˈbʌstʃən/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-d85eae33cf239e17": {
+      "synonyms": ["spoon", "scoop", "dollop"],
+      "collocations": ["a spoonful of sugar", "a spoonful of medicine", "add a spoonful"],
+      "example_simple": "She stirred a spoonful of honey into her tea.",
+      "example_complex": "The recipe called for just a spoonful of chilli paste, yet it was enough to give the whole dish a fiery kick.",
+      "definition_en": "the amount that a spoon can hold",
+      "part_of_speech": "noun"
+    },
+    "a9caa434-18aa-4815-a844-3149ce0a08c7": {
+      "difficulty": "7.0",
+      "definition_en": "to spread out over a large area in an untidy or irregular way",
+      "ipa": "/sprɔːl/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-9a830e3697434ff9": {
+      "synonyms": ["potato", "tater", "tuber"],
+      "collocations": ["peel the spuds", "a bag of spuds", "boil some spuds"],
+      "example_simple": "He peeled a few spuds for dinner.",
+      "example_complex": "On the farm they grew rows of spuds that were dug up by hand every autumn."
+    },
+    "05a4b03b-c677-494a-9ef6-7f5f840fb856": {
+      "difficulty": "7.0",
+      "definition_en": "to encourage or drive someone to do something, or to stimulate activity",
+      "ipa": "/spɜːr/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-f6678501c3109181": {
+      "synonyms": ["gush", "squirt", "jet"],
+      "collocations": ["water spurted out", "blood spurted from", "a spurt of energy"],
+      "example_simple": "Water spurted from the broken pipe.",
+      "example_complex": "As the drill struck the reservoir, oil spurted high into the air, drenching the workers below."
+    },
+    "pubcol-w-cd7f61e35204687c": {
+      "synonyms": ["soldier", "private", "grunt"],
+      "collocations": ["a young squaddie", "squaddies on patrol", "an ordinary squaddie"],
+      "example_simple": "The young squaddie missed his family while stationed abroad.",
+      "example_complex": "The film follows a group of raw squaddies as they are hardened by their first brutal tour of duty."
+    },
+    "pubcol-w-bfed89e80ea0c1c6": {
+      "synonyms": ["plaza", "piazza", "town square"],
+      "collocations": ["the town square", "a public square", "in the main square"],
+      "example_simple": "We met our friends in the town square.",
+      "example_complex": "Thousands of demonstrators gathered in the central square, filling every corner of the historic plaza.",
+      "definition_en": "an open, usually four-sided public space in a town or city, surrounded by buildings",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-5373e5cc7751091a": {
+      "synonyms": ["squeal", "creak", "screech"],
+      "collocations": ["a high-pitched squeak", "the squeak of a door", "give a squeak"],
+      "example_simple": "The mouse gave a tiny squeak and ran away.",
+      "example_complex": "The only sound in the silent library was the faint squeak of the librarian's trolley rolling past."
+    },
+    "pubcol-w-a1259b421aa70449": {
+      "synonyms": ["press", "compress", "wring"],
+      "collocations": ["squeeze a lemon", "squeeze someone's hand", "give it a squeeze"],
+      "example_simple": "Squeeze the lemon to get the juice out.",
+      "example_complex": "Feeling nervous before the interview, she squeezed her friend's hand tightly for reassurance."
+    },
+    "pubcol-w-7318dd01041f4f81": {
+      "synonyms": ["wriggle", "writhe", "fidget"],
+      "collocations": ["squirm in your seat", "squirm with embarrassment", "make someone squirm"],
+      "example_simple": "The child began to squirm during the long, boring speech.",
+      "example_complex": "The pointed question made the minister squirm, and he struggled to give a straight answer."
+    },
+    "a233ddc1-c451-4163-9ab6-32dd4e07a50c": {
+      "difficulty": "7.0",
+      "ipa": "/ˈsteɪbɪlaɪz/"
+    },
+    "5709b944-b579-454d-a0de-30eef561a0c9": {
+      "difficulty": "7.0"
+    },
+    "pubcol-w-02992e2abbe3b3de": {
+      "synonyms": ["stutter", "stumble", "falter"],
+      "collocations": ["stammer an apology", "stammer nervously", "begin to stammer"],
+      "example_simple": "He started to stammer when the teacher asked him a difficult question.",
+      "example_complex": "Overwhelmed by the sudden attention, she could only stammer out a few broken words of thanks."
+    }
+  }
+}

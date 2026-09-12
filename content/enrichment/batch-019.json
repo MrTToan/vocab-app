@@ -1,0 +1,227 @@
+{
+  "meta": { "batch": "batch-019", "authored_by": "claude", "count": 24 },
+  "words": {
+    "db808bde-0bb6-4824-a6b8-db24411ee97c": {
+      "difficulty": "7.0",
+      "definition_en": "to be reducible in essence to a single main point or cause",
+      "ipa": "/ˌbɔɪl ˈdaʊn/",
+      "part_of_speech": "phrase"
+    },
+    "dafbff17-dfb1-4b71-8206-203d7b32682c": {
+      "difficulty": "7.0",
+      "ipa": "/ˌbɒtəm ˈaʊt/"
+    },
+    "b2754ce1-cc79-42c4-9234-1b9575717783": {
+      "difficulty": "8.0",
+      "definition_en": "belonging to a boulangerie, a French bakery selling bread and pastries",
+      "ipa": "/ˌbuːlɒ̃ʒəˈriːz/",
+      "part_of_speech": "noun"
+    },
+    "00a8315a-d785-477f-8af0-f3b8cc9b9d9e": {
+      "difficulty": "8.0",
+      "definition_en": "closely intertwined, interdependent connections between people or things",
+      "ipa": "/ˈbreɪdɪd rɪˈleɪʃənʃɪps/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-a1151aa6c3dae70c": {
+      "difficulty": "6.0",
+      "synonyms": ["trademark", "trade name", "label", "make"],
+      "collocations": ["a well-known brand name", "brand name recognition", "a premium brand name"],
+      "example_simple": "Many shoppers trust a familiar brand name when choosing which product to buy.",
+      "example_complex": "Consumers often pay a significant premium for a prestigious brand name, even when a generic version offers identical quality.",
+      "definition_en": "the name a company gives to its product to identify it and distinguish it from competitors",
+      "ipa": "/ˈbrænd neɪm/",
+      "part_of_speech": "noun"
+    },
+    "33a56f15-0556-431c-a328-38fb9de369be": {
+      "difficulty": "7.0",
+      "definition_en": "a bright yellow alloy of copper and zinc, used for musical instruments and fittings",
+      "ipa": "/brɑːs/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-59c4d8505769056c": {
+      "difficulty": "8.0",
+      "synonyms": ["bitter cold", "freezing weather", "biting cold", "arctic conditions"],
+      "collocations": ["brass-monkey weather outside", "in brass-monkey weather", "a spell of brass-monkey weather"],
+      "example_simple": "Wrap up warm because it is brass-monkey weather out there today.",
+      "example_complex": "We had planned a picnic, but the brass-monkey weather that swept in overnight forced us to stay indoors by the fire.",
+      "definition_en": "extremely cold weather (informal, humorous)",
+      "ipa": "/ˌbrɑːs ˈmʌŋki ˌweðə/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-903d7f41aa1878c1": {
+      "difficulty": "7.0",
+      "synonyms": ["livelihood", "living", "main income", "staple"],
+      "collocations": ["earn one's bread and butter", "the bread and butter of the business", "a bread-and-butter issue"],
+      "example_simple": "Teaching English is her bread and butter, so she never turns down a class.",
+      "example_complex": "While the firm experiments with luxury products, routine commercial contracts remain its bread and butter and keep the accounts healthy.",
+      "definition_en": "a person's main source of income or the core of an activity",
+      "ipa": "/ˌbred ən ˈbʌtə/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-c9fed20efe4580e9": {
+      "difficulty": "6.0",
+      "synonyms": ["quit a habit", "give up a habit", "kick a habit", "stop a habit"],
+      "collocations": ["break a bad habit", "break the habit of smoking", "try to break a habit"],
+      "example_simple": "It took her several months to break the habit of biting her nails.",
+      "example_complex": "Psychologists suggest that replacing a routine with a healthier one is far more effective than simply trying to break a habit through willpower alone.",
+      "definition_en": "to stop doing something that you have done regularly, often something harmful",
+      "ipa": "/ˌbreɪk ə ˈhæbɪt/",
+      "part_of_speech": "collocation"
+    },
+    "pubcol-w-632ca8d0679a58d0": {
+      "difficulty": "7.0",
+      "synonyms": ["cover costs", "recoup costs", "come out even"],
+      "collocations": ["break even on a project", "break even within a year", "just break even"],
+      "example_simple": "The small café finally began to break even after its first busy summer.",
+      "example_complex": "Analysts estimate the airline will only break even once passenger numbers return to their pre-crisis levels.",
+      "definition_en": "to reach a point where income equals costs, with neither profit nor loss",
+      "ipa": "/ˌbreɪk ˈiːvən/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-298c79f1f8ef1041": {
+      "difficulty": "8.0",
+      "synonyms": ["break free", "throw off one's shackles", "escape one's constraints", "gain freedom"],
+      "collocations": ["break free from one's bonds", "break from the bonds of tradition", "break from one's bonds at last"],
+      "example_simple": "She longed to break from the bonds of her strict upbringing and live on her own terms.",
+      "example_complex": "The reformers urged the nation to break from the bonds of outdated custom and embrace a more open society.",
+      "definition_en": "to free oneself from restrictions, ties, or control",
+      "ipa": "/ˌbreɪk frəm wʌnz ˈbɒndz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-5dd0df87fcfa92a8": {
+      "difficulty": "6.0",
+      "synonyms": ["burst into tears", "start crying", "break down", "weep"],
+      "collocations": ["suddenly break into tears", "break into tears of joy", "almost break into tears"],
+      "example_simple": "She broke into tears the moment she heard the sad news.",
+      "example_complex": "Overwhelmed by the unexpected reunion, the elderly man broke into tears before he could even speak.",
+      "definition_en": "to suddenly start crying",
+      "ipa": "/ˌbreɪk ˌɪntə ˈtɪəz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-d968fc04f05ce9d9": {
+      "difficulty": "6.0",
+      "synonyms": ["break the news", "announce", "reveal", "disclose"],
+      "collocations": ["break the news gently", "break news of the accident", "be the first to break news"],
+      "example_simple": "The doctor had to break the news that the operation had not fully succeeded.",
+      "example_complex": "Reporters raced to break news of the resignation before their rivals could confirm the story.",
+      "definition_en": "to be the first to tell someone about something important, often unwelcome",
+      "ipa": "/ˌbreɪk ˈnjuːz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-0a4bb9ac8c602289": {
+      "difficulty": "6.0",
+      "synonyms": ["devastate someone", "crush someone", "grieve someone deeply"],
+      "collocations": ["break someone's heart", "it breaks my heart", "break her heart"],
+      "example_simple": "It broke his heart to see his childhood home torn down.",
+      "example_complex": "Watching her once-brilliant father slowly lose his memory broke her heart in a way she had never imagined.",
+      "definition_en": "to make someone feel extremely sad or emotionally hurt",
+      "ipa": "/ˌbreɪk wʌnz ˈhɑːt/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-096e60a4fc0acb71": {
+      "difficulty": "8.0",
+      "synonyms": ["speak one's mind", "share one's thoughts", "confide", "open up"],
+      "collocations": ["break one's mind to a friend", "finally break one's mind", "break one's mind to someone"],
+      "example_simple": "He finally broke his mind to his mentor about his doubts.",
+      "example_complex": "After weeks of silence, she at last broke her mind to her closest colleague and confessed her fears about the merger.",
+      "definition_en": "to reveal or confide one's thoughts or feelings to someone",
+      "ipa": "/ˌbreɪk wʌnz ˈmaɪnd tə/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-0835b79662bf87e2": {
+      "difficulty": "6.0",
+      "synonyms": ["go back on one's word", "break faith", "fail to keep a promise", "renege"],
+      "collocations": ["break one's promise", "never break a promise", "break one's word to someone"],
+      "example_simple": "He promised to help, but he broke his promise at the last minute.",
+      "example_complex": "A leader who repeatedly breaks his promises soon finds that no one is willing to trust his word again.",
+      "definition_en": "to fail to do what one has said or pledged to do",
+      "ipa": "/ˌbreɪk wʌnz ˈprɒmɪs/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-a8240296f5c568e6": {
+      "difficulty": "7.0",
+      "synonyms": ["crush someone's spirit", "break someone's resolve", "wear someone down", "subdue"],
+      "collocations": ["break someone's will", "break the will of the prisoners", "try to break one's will"],
+      "example_simple": "Years of hardship could not break her will to succeed.",
+      "example_complex": "The harsh interrogation was designed to break the will of the captives, yet many held firm to their beliefs.",
+      "definition_en": "to destroy someone's determination or ability to resist",
+      "ipa": "/ˌbreɪk wʌnz ˈwɪl/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-9cbccc1896f7982d": {
+      "difficulty": "6.0",
+      "synonyms": ["erupt", "flare up", "burst out", "escape"],
+      "collocations": ["war broke out", "a fire broke out", "break out of prison"],
+      "example_simple": "A fire broke out in the kitchen during the night.",
+      "example_complex": "When violent protests broke out across the capital, the government imposed an immediate curfew.",
+      "definition_en": "to begin suddenly, or to escape from a place of confinement",
+      "ipa": "/ˌbreɪk ˈaʊt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-0f885a2d8893d0bc": {
+      "difficulty": "7.0",
+      "synonyms": ["cost a fortune", "be very expensive", "cost an arm and a leg"],
+      "collocations": ["won't break the bank", "without breaking the bank", "break the bank on a holiday"],
+      "example_simple": "A weekend trip to the coast doesn't have to break the bank.",
+      "example_complex": "The couple wanted a memorable wedding that would not break the bank, so they kept the guest list small.",
+      "definition_en": "to cost so much that it uses up all one's money (often used in the negative)",
+      "ipa": "/ˌbreɪk ðə ˈbæŋk/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-a6ec504837e48049": {
+      "difficulty": "6.0",
+      "synonyms": ["ease the tension", "warm things up", "get the conversation going"],
+      "collocations": ["break the ice at a party", "a joke to break the ice", "help break the ice"],
+      "example_simple": "He told a funny story to break the ice at the meeting.",
+      "example_complex": "A well-chosen icebreaker game can break the ice among strangers and set a relaxed tone for the whole workshop.",
+      "definition_en": "to do or say something to relieve tension and make people feel more comfortable",
+      "ipa": "/ˌbreɪk ði ˈaɪs/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-1ffa01ed1f10fcd4": {
+      "difficulty": "5.0",
+      "synonyms": ["break the law", "commit a crime", "violate the law", "offend"],
+      "collocations": ["break the law knowingly", "those who break the law", "break the law repeatedly"],
+      "example_simple": "You will be punished if you break the law.",
+      "example_complex": "Company executives who break the law to boost profits increasingly face criminal charges rather than mere fines.",
+      "definition_en": "to do something that is against the law",
+      "ipa": "/ˌbreɪk ðə ˈlɔː/",
+      "part_of_speech": "collocation"
+    },
+    "pubcol-w-b66efc546cb1d23e": {
+      "difficulty": "7.0",
+      "synonyms": ["disturb the peace", "cause a disturbance", "breach the peace"],
+      "collocations": ["break the peace of the town", "arrested for breaking the peace", "break the peace at night"],
+      "example_simple": "The loud party broke the peace of the quiet neighbourhood.",
+      "example_complex": "Anyone who breaks the peace during the festival will be escorted from the premises by security.",
+      "definition_en": "to disturb public order or the calm of a place",
+      "ipa": "/ˌbreɪk ðə ˈpiːs/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-2d91bd038ed8234f": {
+      "difficulty": "6.0",
+      "synonyms": ["set a world record", "smash the record", "beat the record"],
+      "collocations": ["break the world record", "break the world record for speed", "narrowly break the world record"],
+      "example_simple": "The young swimmer broke the world record in the final race.",
+      "example_complex": "To break the world record in the marathon, an athlete must combine remarkable endurance with near-perfect pacing strategy.",
+      "definition_en": "to achieve a better result than the best ever officially recorded worldwide",
+      "ipa": "/ˌbreɪk ðə ˌwɜːld ˈrekɔːd/",
+      "part_of_speech": "collocation"
+    },
+    "pubcol-w-defaa595c532abdc": {
+      "difficulty": "7.0",
+      "synonyms": ["overcome obstacles", "surmount difficulties", "get past barriers"],
+      "collocations": ["break through obstacles", "break through every obstacle", "determined to break through obstacles"],
+      "example_simple": "With hard work, she managed to break through the obstacles in her path.",
+      "example_complex": "Successful entrepreneurs are often those who break through the obstacles that discourage everyone else from even trying.",
+      "definition_en": "to overcome difficulties or barriers that stand in one's way",
+      "ipa": "/ˌbreɪk θruː ˈɒbstəkəlz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-b313d196b3846cdf": {
+      "difficulty": "6.0",
+      "ipa": "/ˌbreɪk ˈʌp/"
+    }
+  }
+}

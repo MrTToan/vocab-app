@@ -1,0 +1,244 @@
+{
+  "meta": { "batch": "batch-015", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-6f69a79005333243": {
+      "difficulty": "6.0",
+      "ipa": "/biː əˈpəʊzd tuː/"
+    },
+    "pubcol-w-cf9e855c567bf9fa": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/biː aʊt əv breθ/",
+      "definition_en": "breathing with difficulty after physical effort",
+      "synonyms": ["breathless", "panting", "gasping", "winded"],
+      "collocations": ["completely out of breath", "left out of breath", "out of breath from running"],
+      "example_simple": "After running up the stairs, I was completely out of breath.",
+      "example_complex": "By the time she reached the summit, she was so out of breath that she could barely speak."
+    },
+    "pubcol-w-c00c3f57a428cd09": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/biː aʊt əv ˈhæbɪt/",
+      "definition_en": "no longer used to doing something you once did regularly",
+      "synonyms": ["out of practice", "no longer accustomed", "rusty"],
+      "collocations": ["get out of the habit", "fall out of the habit", "be out of the habit of"],
+      "example_simple": "I used to cook every day, but now I'm out of the habit.",
+      "example_complex": "Having worked from home for years, he was completely out of the habit of commuting during rush hour."
+    },
+    "pubcol-w-50db3acc1c7d3ed4": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/biː aʊt əv ˈpɒkɪt/",
+      "definition_en": "having lost money or paid for something out of your own funds",
+      "synonyms": ["short of money", "out of funds", "financially worse off"],
+      "collocations": ["be left out of pocket", "seriously out of pocket", "out of pocket expenses"],
+      "example_simple": "The flight was cancelled and I ended up out of pocket.",
+      "example_complex": "Because the company refused to reimburse the travel costs, several employees were left significantly out of pocket.",
+      "vi_meaning_correction": "bị mất tiền, phải tự bỏ tiền túi"
+    },
+    "pubcol-w-1a7d110c9b3093c0": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/biː aʊt əv stɒk/",
+      "definition_en": "no longer available for sale in a shop",
+      "synonyms": ["sold out", "unavailable", "not in stock"],
+      "collocations": ["temporarily out of stock", "currently out of stock", "out of stock online"],
+      "example_simple": "The book I wanted was out of stock at the shop.",
+      "example_complex": "The popular console had been out of stock for weeks, forcing customers to pay inflated prices from resellers."
+    },
+    "pubcol-w-8716b48f8de0ba21": {
+      "difficulty": "8.0",
+      "part_of_speech": "idiom",
+      "ipa": "/biː ˈəʊvə hed ænd ɪəz ɪn dets/",
+      "definition_en": "to owe a very large amount of money",
+      "synonyms": ["deeply in debt", "heavily indebted", "up to your neck in debt"],
+      "collocations": ["over head and ears in debt", "drowning in debt", "buried in debt"],
+      "example_simple": "After gambling for years, he was over head and ears in debt.",
+      "example_complex": "The failing business left its owners over head and ears in debt, with creditors demanding payment they could not possibly meet."
+    },
+    "pubcol-w-6c221eae19d388bb": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/biː ræŋkt fɜːst ˈsekənd/",
+      "definition_en": "to hold the first or second position in an order of merit or standing",
+      "synonyms": ["placed first", "come first", "top-ranked", "runner-up"],
+      "collocations": ["ranked first in the world", "ranked second overall", "consistently ranked first"],
+      "example_simple": "Her team was ranked first in the competition.",
+      "example_complex": "The university has been ranked first in the country for research output for three consecutive years.",
+      "vi_meaning_correction": "được xếp hạng nhất/nhì"
+    },
+    "pubcol-w-289d729ec866bf3a": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/biː rʌf ænd ˈredi/",
+      "definition_en": "basic and not carefully made, but good enough to use",
+      "synonyms": ["makeshift", "crude", "improvised", "unpolished"],
+      "collocations": ["a rough and ready solution", "rough and ready approach", "rough and ready estimate"],
+      "example_simple": "The camp had rough and ready facilities, but we managed fine.",
+      "example_complex": "It was a rough and ready arrangement, but it kept the project running until proper systems could be installed."
+    },
+    "pubcol-w-f4da9fa4d98beec8": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/biː rʌʃt ɒf jɔː fiːt/",
+      "definition_en": "to be extremely busy with things to do",
+      "synonyms": ["run off your feet", "swamped", "flat out", "overworked"],
+      "collocations": ["rushed off my feet all day", "absolutely rushed off your feet", "rushed off their feet at work"],
+      "example_simple": "During the sale, the staff were rushed off their feet.",
+      "example_complex": "In the run-up to Christmas, the delivery drivers were rushed off their feet, working double shifts to clear the backlog."
+    },
+    "pubcol-w-a50ed0566e15cd82": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/biː ˈskeɪtɪŋ ɒn θɪn aɪs/",
+      "definition_en": "to be doing something risky that could easily lead to trouble",
+      "synonyms": ["taking a risk", "in a risky position", "courting danger"],
+      "collocations": ["skating on thin ice with the boss", "really skating on thin ice", "know you're skating on thin ice"],
+      "example_simple": "You're skating on thin ice if you keep arriving late.",
+      "example_complex": "By concealing the losses from investors, the executives were skating on thin ice that would eventually give way."
+    },
+    "pubcol-w-f0028baa571680e8": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/biː snəʊd ˈʌndə/",
+      "definition_en": "to have far more work than you can easily deal with",
+      "synonyms": ["overwhelmed", "swamped", "inundated", "buried in work"],
+      "collocations": ["snowed under with work", "completely snowed under", "snowed under at the moment"],
+      "example_simple": "I can't come out tonight; I'm snowed under with homework.",
+      "example_complex": "The small legal team was so snowed under with cases that they had to turn away new clients for months."
+    },
+    "pubcol-w-308abfa9e1f238c9": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/biː ˈteɪkən fər ə raɪd/",
+      "definition_en": "to be deceived or cheated by someone",
+      "synonyms": ["be deceived", "be conned", "be swindled", "be tricked"],
+      "collocations": ["taken for a ride by a scammer", "really taken for a ride", "don't be taken for a ride"],
+      "example_simple": "He paid too much for the car and realised he'd been taken for a ride.",
+      "example_complex": "Elderly customers are often taken for a ride by fraudsters posing as bank officials over the phone.",
+      "vi_meaning_correction": "bị lừa gạt, bị lừa dối"
+    },
+    "pubcol-w-ff524b91e73e237d": {
+      "difficulty": "8.0",
+      "part_of_speech": "idiom",
+      "ipa": "/biː ðæt æz ɪt meɪ/",
+      "definition_en": "despite that; used to concede a point before making a contrary one",
+      "synonyms": ["nevertheless", "even so", "all the same", "regardless"],
+      "collocations": ["be that as it may, we must", "be that as it may, however", "be that as it may, the fact remains"],
+      "example_simple": "The plan is expensive. Be that as it may, we have no other choice.",
+      "example_complex": "The witness may well have been mistaken about the time; be that as it may, the physical evidence still points firmly to the defendant."
+    },
+    "pubcol-w-28bb51a8d453cd76": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/biː ˈθretənd/",
+      "definition_en": "to be in danger or under the risk of harm",
+      "synonyms": ["endangered", "at risk", "menaced", "imperilled"],
+      "collocations": ["be threatened with extinction", "feel threatened", "species that are threatened"],
+      "example_simple": "Many animals are threatened by the loss of their habitat.",
+      "example_complex": "Coastal communities are increasingly threatened by rising sea levels and more frequent storms."
+    },
+    "pubcol-w-d3d4ef553300e32f": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/biː ʌp tuː wʌnz ɪəz/",
+      "definition_en": "to be very deeply involved in or overwhelmed by something",
+      "synonyms": ["swamped", "up to your neck", "overwhelmed", "snowed under"],
+      "collocations": ["up to my ears in work", "up to your ears in debt", "up to their ears in paperwork"],
+      "example_simple": "I'm up to my ears in work this week.",
+      "example_complex": "With three deadlines looming, she was up to her ears in reports and had no time to answer emails."
+    },
+    "pubcol-w-7cf7451273e5b114": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/biː waɪpt aʊt/",
+      "definition_en": "to be completely destroyed, eliminated, or exhausted",
+      "synonyms": ["destroyed", "eliminated", "annihilated", "obliterated"],
+      "collocations": ["wiped out by the storm", "completely wiped out", "wiped out overnight"],
+      "example_simple": "The whole village was wiped out by the flood.",
+      "example_complex": "An entire generation of the species could be wiped out if the disease continues to spread unchecked."
+    },
+    "pubcol-w-2337fc210661daeb": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/biː wɜːldz əˈpɑːt/",
+      "definition_en": "to be extremely different from each other",
+      "synonyms": ["vastly different", "poles apart", "utterly unlike", "at odds"],
+      "collocations": ["worlds apart in outlook", "be worlds apart on the issue", "two worlds apart"],
+      "example_simple": "The two brothers are worlds apart in personality.",
+      "example_complex": "Although they grew up in the same town, their political views were worlds apart by the time they reached university."
+    },
+    "pubcol-w-af34a03b36a5b7da": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/biː ˈəʊvə ðə muːn/",
+      "definition_en": "to be extremely happy and delighted",
+      "synonyms": ["overjoyed", "delighted", "thrilled", "elated"],
+      "collocations": ["over the moon about the news", "absolutely over the moon", "over the moon with the result"],
+      "example_simple": "She was over the moon when she passed her exam.",
+      "example_complex": "The whole team was over the moon after clinching the championship in the final minute of the match."
+    },
+    "pubcol-w-4decb08550f2c0e0": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/biː kʌm ˈʌndə ˈfaɪə/",
+      "definition_en": "to be strongly criticised for something you have done",
+      "synonyms": ["be criticised", "be attacked", "be censured", "be lambasted"],
+      "collocations": ["come under fire for the decision", "come under heavy fire", "come under fire from critics"],
+      "example_simple": "The company came under fire for polluting the river.",
+      "example_complex": "The minister came under fire from both the press and the opposition for failing to act on the warnings."
+    },
+    "pubcol-w-6c02053d302cfad2": {
+      "difficulty": "6.0",
+      "part_of_speech": "idiom",
+      "ipa": "/biː ə briːz/",
+      "definition_en": "to be very easy to do",
+      "synonyms": ["be easy", "be a piece of cake", "be effortless", "be a cinch"],
+      "collocations": ["the exam was a breeze", "it's a breeze to use", "everything was a breeze"],
+      "example_simple": "Once you get used to it, the software is a breeze.",
+      "example_complex": "Having practised for months, she found the driving test a breeze and passed without a single mistake."
+    },
+    "126eed68-19ce-439f-b45b-9259193046d2": {
+      "difficulty": "8.0",
+      "part_of_speech": "noun",
+      "ipa": "/biːtʃ ədˈvaɪzəriz/",
+      "definition_en": "official warnings about unsafe conditions at a beach, such as pollution or dangerous currents"
+    },
+    "pubcol-w-442c32970a5d9e5d": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/beər ə rɪˈzembləns tuː ˈsʌmbədi/",
+      "definition_en": "to look similar to someone",
+      "synonyms": ["look like", "resemble", "take after", "be similar to"],
+      "collocations": ["bear a striking resemblance to", "bear a strong resemblance to", "bear a close resemblance to"],
+      "example_simple": "She bears a resemblance to her older sister.",
+      "example_complex": "The young actor bears a striking resemblance to the film star of the 1950s, which helped him land the role."
+    },
+    "pubcol-w-f526f09b9236a88e": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/beə fruːt/",
+      "definition_en": "to produce successful results after a period of effort",
+      "synonyms": ["pay off", "succeed", "yield results", "come to fruition"],
+      "collocations": ["efforts bear fruit", "finally bear fruit", "begin to bear fruit"],
+      "example_simple": "Years of hard work finally bore fruit when she got the job.",
+      "example_complex": "The government's long-term investment in education is beginning to bear fruit, with literacy rates rising steadily."
+    },
+    "064e5e89-65e0-43fd-b163-190822ff7aff": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/beər aʊt/",
+      "definition_en": "to support or confirm the truth of something"
+    },
+    "pubcol-w-29df712cd31c7212": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/beə teɪk əˈsjuːm rɪˌspɒnsəˈbɪləti/",
+      "definition_en": "to accept that you are the person responsible for something",
+      "synonyms": ["take responsibility", "accept blame", "be accountable", "answer for"],
+      "collocations": ["assume full responsibility", "bear responsibility for the decision", "take responsibility for your actions"],
+      "example_simple": "As the manager, she must bear responsibility for the team's mistakes.",
+      "example_complex": "The board finally agreed to assume responsibility for the financial collapse and offered to compensate affected investors."
+    }
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "meta": { "batch": "batch-090", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-deb4e173c34f4e07": {
+      "difficulty": "7.0",
+      "synonyms": ["rarely", "very rarely", "hardly ever", "almost never"],
+      "collocations": ["happen once in a blue moon", "see someone once in a blue moon", "only once in a blue moon"],
+      "example_simple": "We only go to the cinema once in a blue moon.",
+      "example_complex": "My uncle lives overseas, so we get to see him only once in a blue moon, usually at family weddings.",
+      "definition_en": "very rarely; almost never",
+      "ipa": "/wʌns ɪn ə bluː muːn/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "hiếm khi"
+    },
+    "pubcol-w-e916b53ad96e5c41": {
+      "difficulty": "8.0",
+      "synonyms": ["one time too many", "too many times"],
+      "collocations": ["do something once too often", "try it once too often", "push someone once too often"],
+      "example_simple": "He was late once too often, and the boss finally fired him.",
+      "example_complex": "She had tested the teacher's patience once too often, and this time there was no forgiveness.",
+      "definition_en": "one more time than is safe or acceptable, so that it leads to trouble",
+      "ipa": "/wʌns tuː ˈɒfən/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "một lần quá nhiều (đến mức gặp rắc rối)"
+    },
+    "pubcol-w-a5b85cf7f01419e4": {
+      "difficulty": "5.0",
+      "synonyms": ["long ago", "a long time ago", "in the past"],
+      "collocations": ["once upon a time there was", "begin with once upon a time"],
+      "example_simple": "Once upon a time, there was a little girl who lived in a forest.",
+      "example_complex": "Once upon a time, this quiet village was a bustling port, though few traces of that era remain today.",
+      "definition_en": "a set phrase used to begin a story, meaning long ago in the past",
+      "ipa": "/wʌns əˌpɒn ə ˈtaɪm/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-42401169b038ecf8": {
+      "difficulty": "7.0",
+      "synonyms": ["continuously", "without stopping", "in a row"],
+      "collocations": ["for hours on end", "for days on end", "for weeks on end"],
+      "example_simple": "He can play video games for hours on end.",
+      "example_complex": "During the rainy season, it can pour for days on end, flooding the low-lying streets of the old quarter.",
+      "definition_en": "continuously; for a long period without stopping",
+      "ipa": "/ɒn ˈend/",
+      "part_of_speech": "phrase"
+    },
+    "21515e96-b28f-4e57-bca8-84bf3638940c": {
+      "difficulty": "7.0",
+      "definition_en": "the beginning of something, especially something unpleasant",
+      "ipa": "/ˈɒnset/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-144bc0e1949f769a": {
+      "difficulty": "5.0",
+      "synonyms": ["kitten", "cat", "pussycat"],
+      "collocations": ["a little kitty", "a cute kitty", "stroke the kitty"],
+      "example_simple": "The children played with the tiny kitty in the garden.",
+      "example_complex": "A stray kitty wandered into our yard, and before long it had made itself completely at home.",
+      "definition_en": "an informal, affectionate word for a cat or kitten",
+      "ipa": "/ˈkɪti/",
+      "part_of_speech": "noun",
+      "vi_meaning_correction": "mèo con, con mèo (cách gọi thân mật)"
+    },
+    "pubcol-w-23679056deecf55f": {
+      "synonyms": ["unclear", "murky", "impenetrable", "cloudy"],
+      "collocations": ["opaque glass", "opaque language", "become opaque"],
+      "example_simple": "The bathroom window is made of opaque glass so no one can see in.",
+      "example_complex": "The contract was written in such opaque legal jargon that even the lawyers struggled to interpret it."
+    },
+    "pubcol-w-09b09b5604f6b82b": {
+      "difficulty": "5.0",
+      "synonyms": ["outdoor market", "street market", "farmers' market"],
+      "collocations": ["visit an open-air market", "a bustling open-air market", "shop at the open-air market"],
+      "example_simple": "Every Sunday we buy fresh vegetables at the open-air market.",
+      "example_complex": "The town's open-air market, held in the main square, draws tourists eager to sample local produce and handmade crafts.",
+      "definition_en": "a market held outdoors rather than inside a building",
+      "ipa": "/ˌəʊpən eə ˈmɑːkɪt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-bbba62e603303a24": {
+      "difficulty": "7.0",
+      "synonyms": ["run at a loss", "lose money", "be unprofitable"],
+      "collocations": ["operate at a loss for years", "continue to operate at a loss", "operate at a heavy loss"],
+      "example_simple": "The new store operated at a loss for its first year.",
+      "example_complex": "Many airlines were forced to operate at a loss during the pandemic, relying on government support to survive.",
+      "definition_en": "to run a business while spending more money than it earns",
+      "ipa": "/ˈɒpəreɪt ət ə ˈlɒs/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "hoạt động thua lỗ"
+    },
+    "pubcol-w-fe96dd39756ac41b": {
+      "synonyms": ["provider", "controller", "manager"],
+      "collocations": ["tour operator", "network operator", "machine operator"],
+      "example_simple": "She works as a machine operator at the factory.",
+      "example_complex": "The mobile network operator announced that it would upgrade its infrastructure to support faster connections nationwide."
+    },
+    "11cd7a6c-8d0c-4254-a510-620faf17c052": {
+      "difficulty": "8.0",
+      "definition_en": "to state one's opinion, especially in a formal way",
+      "ipa": "/əˈpaɪn/",
+      "part_of_speech": "verb"
+    },
+    "7f5f81f7-5232-4ed7-b5d3-4bfbfd3dfb00": {
+      "difficulty": "7.0",
+      "definition_en": "academics who hold and firmly assert strong personal opinions",
+      "ipa": "/əˈpɪnjəneɪtɪd ˈskɒləz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-da91fe1562b19f36": {
+      "synonyms": ["persecute", "subjugate", "tyrannize", "repress"],
+      "collocations": ["oppress the poor", "oppress a minority", "brutally oppress"],
+      "example_simple": "The government used its army to oppress the people.",
+      "example_complex": "For decades the regime oppressed anyone who dared to speak out, silencing dissent through fear and imprisonment."
+    },
+    "pubcol-w-aa8c05be452dd322": {
+      "synonyms": ["ensemble", "philharmonic", "symphony"],
+      "collocations": ["a symphony orchestra", "conduct an orchestra", "join the orchestra"],
+      "example_simple": "The orchestra played beautifully at the concert last night.",
+      "example_complex": "As the conductor raised his baton, the entire orchestra fell silent, poised to deliver the opening movement.",
+      "definition_en": "a large group of musicians playing various instruments together",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-90d4a4fdd1d44c10": {
+      "synonyms": ["trial", "tribulation", "hardship", "nightmare"],
+      "collocations": ["go through an ordeal", "a terrible ordeal", "survive the ordeal"],
+      "example_simple": "The long flight with two small children was quite an ordeal.",
+      "example_complex": "After surviving the ordeal of being lost at sea for three days, the sailors were finally rescued by a passing ship."
+    },
+    "3128fb00-8e7a-42a1-8a99-71d4ff5dfcd1": {
+      "difficulty": "8.0",
+      "definition_en": "an official rule or law made by a government or authority",
+      "ipa": "/ˈɔːdɪnəns/",
+      "part_of_speech": "noun"
+    },
+    "8b7e94af-71db-4d02-ab20-f19edbadc591": {
+      "difficulty": "8.0",
+      "definition_en": "the geological processes by which mineral ores are created and concentrated",
+      "ipa": "/ˈɔː ˌfɔːmɪŋ ˈprəʊsesɪz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-ea211507b860b477": {
+      "difficulty": "5.0",
+      "synonyms": ["natural food", "chemical-free food"],
+      "collocations": ["buy organic food", "organic food products", "grow organic food"],
+      "example_simple": "Many people believe organic food is healthier.",
+      "example_complex": "Although organic food tends to be more expensive, a growing number of consumers are willing to pay extra to avoid pesticides.",
+      "definition_en": "food produced without artificial chemicals, pesticides, or fertilizers",
+      "ipa": "/ɔːˈɡænɪk fuːd/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "thực phẩm hữu cơ"
+    },
+    "pubcol-w-acde46540349402d": {
+      "difficulty": "7.0",
+      "synonyms": ["the mob", "the mafia", "racketeering"],
+      "collocations": ["fight organized crime", "an organized crime syndicate", "linked to organized crime"],
+      "example_simple": "The police are working hard to stop organized crime in the city.",
+      "example_complex": "Authorities suspect that the smuggling ring is connected to a wider network of organized crime operating across several countries.",
+      "definition_en": "criminal activities that are planned and controlled by powerful groups",
+      "ipa": "/ˈɔːɡənaɪzd ˈkraɪm/",
+      "part_of_speech": "phrase"
+    },
+    "9a456b4b-75b9-43ff-9c3f-9f525290b1a1": {
+      "difficulty": "8.0",
+      "definition_en": "decorative details added to something to make it more attractive",
+      "ipa": "/ˌɔːnəmenˈteɪʃn/",
+      "part_of_speech": "noun"
+    },
+    "990596fa-dfda-42e5-919f-979b1fa4e1af": {
+      "difficulty": "8.0",
+      "definition_en": "generally accepted beliefs or established, traditional views",
+      "ipa": "/ˈɔːθədɒksi/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-2956b00039abd05e": {
+      "difficulty": "8.0",
+      "ipa": "/ɒˈstensɪbli/"
+    },
+    "ea5b248c-b4aa-4923-9b12-993a7b12c2c0": {
+      "difficulty": "8.0",
+      "synonyms": ["aftereffects", "consequences", "complications"],
+      "definition_en": "the further consequences that result from recurring episodes of an illness",
+      "ipa": "/ˈʌðə ˈsiːkwəlz əv rɪˈpiːtɪd baʊts/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-80427506b996b7ac": {
+      "synonyms": ["or else", "if not", "differently"],
+      "collocations": ["unless otherwise stated", "think otherwise", "otherwise engaged"],
+      "example_simple": "Write it down, otherwise you'll forget.",
+      "example_complex": "The results were disappointing; otherwise, the experiment would have confirmed our original hypothesis.",
+      "definition_en": "used to say what would happen if something were not done; or in other respects",
+      "part_of_speech": "adverb"
+    },
+    "pubcol-w-539b2b5d03ed2359": {
+      "difficulty": "6.0",
+      "synonyms": ["outdated", "unfashionable", "out of style", "dated"],
+      "collocations": ["go out of fashion", "fall out of fashion", "become out of fashion"],
+      "example_simple": "These wide trousers went out of fashion years ago.",
+      "example_complex": "Vinyl records seemed hopelessly out of fashion for decades, yet they have made a surprising comeback among young listeners.",
+      "definition_en": "no longer popular or considered stylish",
+      "ipa": "/aʊt əv ˈfæʃn/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "lỗi thời"
+    }
+  }
+}

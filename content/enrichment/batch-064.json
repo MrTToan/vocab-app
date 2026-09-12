@@ -1,0 +1,199 @@
+{
+  "meta": { "batch": "batch-064", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-797efd83f8c15dee": {
+      "difficulty": "7.0",
+      "ipa": "/ˌɪmplɪmenˈteɪʃn/"
+    },
+    "pubcol-w-5a5f4a3ac8d3e944": {
+      "difficulty": "7.0",
+      "ipa": "/ˌɪmplɪˈkeɪʃn/"
+    },
+    "pubcol-w-8f6568c896acab6f": {
+      "difficulty": "6.0",
+      "ipa": "/ɪmˈplaɪ/"
+    },
+    "pubcol-w-f7523704e5a43209": {
+      "synonyms": ["poverty-stricken", "destitute", "poor", "needy"],
+      "collocations": ["impoverished families", "an impoverished region", "impoverished communities"],
+      "example_simple": "The war left many families impoverished and without homes.",
+      "example_complex": "Decades of political mismanagement had left the once-prosperous region impoverished, its factories shuttered and its young people fleeing abroad."
+    },
+    "79fee4e5-7ce0-47e3-8526-567a7f7bc929": {
+      "difficulty": "7.0",
+      "definition_en": "easily influenced because of a lack of critical judgement, especially when young",
+      "ipa": "/ɪmˈpreʃənəbl/",
+      "part_of_speech": "adjective"
+    },
+    "4d0525b3-85ec-4bb3-ad20-1477a45ed900": {
+      "difficulty": "6.0",
+      "definition_en": "not likely to be true or to happen",
+      "ipa": "/ɪmˈprɒbəbl/",
+      "part_of_speech": "adjective"
+    },
+    "469e462a-4cbb-412b-9bb8-6b460cf43e87": {
+      "difficulty": "8.0",
+      "definition_en": "not showing care for the consequences of an action; unwise",
+      "ipa": "/ɪmˈpruːdnt/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-ccd3e0a2ca175bcb": {
+      "difficulty": "7.0",
+      "synonyms": ["briefly", "in short", "to sum up", "in brief"],
+      "collocations": ["to put it in a nutshell", "in a nutshell, the plan", "explain it in a nutshell"],
+      "example_simple": "In a nutshell, we need more time to finish the project.",
+      "example_complex": "In a nutshell, the report argues that unless emissions fall sharply, the coastal cities will face repeated flooding within a generation.",
+      "definition_en": "in brief; expressed in as few words as possible",
+      "ipa": "/ɪn ə ˈnʌtʃel/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-f669be6f469730cc": {
+      "difficulty": "5.0",
+      "ipa": "/ɪn əˈdɪʃn/",
+      "vi_meaning_correction": "ngoài ra, thêm vào đó"
+    },
+    "pubcol-w-dd0274793f687d32": {
+      "difficulty": "5.0",
+      "synonyms": ["beforehand", "ahead of time", "in good time", "early"],
+      "collocations": ["book in advance", "pay in advance", "know in advance"],
+      "example_simple": "You should book your tickets in advance to get a good seat.",
+      "example_complex": "Because the venue sells out quickly, seasoned concert-goers reserve their places weeks in advance.",
+      "definition_en": "before a particular time; ahead of time",
+      "ipa": "/ɪn ədˈvɑːns/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-2ab7e9ea2b307d25": {
+      "difficulty": "6.0",
+      "synonyms": ["in a bid to", "in an effort to", "trying to", "so as to"],
+      "collocations": ["in an attempt to reduce", "in an attempt to improve", "in an attempt to prevent"],
+      "example_simple": "She woke up early in an attempt to finish the work on time.",
+      "example_complex": "In an attempt to curb rising traffic, the city introduced a congestion charge for cars entering the centre.",
+      "definition_en": "trying to achieve or do something",
+      "ipa": "/ɪn ən əˈtempt tə duː ˈsʌmθɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-78f415bff1b388a9": {
+      "difficulty": "7.0",
+      "synonyms": ["in recognition of", "as thanks for", "in gratitude for", "in acknowledgement of"],
+      "collocations": ["in appreciation of your support", "in appreciation of their service", "a gift in appreciation of"],
+      "example_simple": "They gave her flowers in appreciation of her hard work.",
+      "example_complex": "The company hosted a dinner in appreciation of the volunteers whose tireless efforts had made the festival possible.",
+      "definition_en": "as a way of showing thanks or gratitude for something",
+      "ipa": "/ɪn əˌpriːʃiˈeɪʃn əv/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "trong niềm cảm kích dành cho"
+    },
+    "pubcol-w-3c14fd95a2456135": {
+      "difficulty": "6.0",
+      "synonyms": ["in an effort to", "in a bid to", "trying to", "so as to"],
+      "collocations": ["in attempt to explain", "in attempt to solve", "in attempt to reach"],
+      "example_simple": "He called several times in attempt to reach her.",
+      "example_complex": "In attempt to salvage the negotiations, both sides agreed to a last-minute compromise on the disputed border.",
+      "definition_en": "trying to do or achieve something",
+      "ipa": "/ɪn əˈtempt tə duː ˈsʌmθɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-9cd4b4ff3a331561": {
+      "difficulty": "6.0",
+      "synonyms": ["while trying to", "in seeking to", "in striving to", "when attempting to"],
+      "collocations": ["in attempting to explain", "in attempting to solve", "in attempting to change"],
+      "example_simple": "In attempting to fix the car, he only made the problem worse.",
+      "example_complex": "In attempting to reconcile the two rival factions, the mediator inadvertently exposed how deep their differences ran.",
+      "definition_en": "in the process of trying to do something",
+      "ipa": "/ɪn əˈtemptɪŋ tə duː ˈsʌmθɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-09da653cefac5d2e": {
+      "difficulty": "5.0",
+      "synonyms": ["with cash", "in banknotes", "in coins"],
+      "collocations": ["pay in cash", "settle in cash", "receive in cash"],
+      "example_simple": "Can I pay in cash instead of using a card?",
+      "example_complex": "Many small vendors at the market still prefer to be paid in cash, wary of the fees that card transactions incur.",
+      "definition_en": "using notes and coins rather than a card or cheque",
+      "ipa": "/ɪn kæʃ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-6fd8b98833ad56b9": {
+      "difficulty": "5.0",
+      "synonyms": ["responsible", "in control", "at the helm", "running things"],
+      "collocations": ["be in charge", "leave someone in charge", "put in charge"],
+      "example_simple": "Who is in charge while the manager is away?",
+      "example_complex": "With the director on leave, the deputy was left in charge of a project already teetering on the edge of collapse.",
+      "definition_en": "having control of or responsibility for something or someone",
+      "ipa": "/ɪn tʃɑːdʒ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-606d0380a13fa218": {
+      "difficulty": "5.0",
+      "synonyms": ["responsible for", "in control of", "at the head of", "running"],
+      "collocations": ["in charge of the team", "in charge of operations", "put in charge of"],
+      "example_simple": "She is in charge of the marketing department.",
+      "example_complex": "The colonel placed in charge of the evacuation had barely a day to move thousands of civilians to safety.",
+      "definition_en": "having control of or responsibility for a particular thing or group",
+      "ipa": "/ɪn tʃɑːdʒ əv/",
+      "part_of_speech": "phrase"
+    },
+    "1b86c0af-a7f4-459b-8c32-60e9244f5d5a": {
+      "difficulty": "8.0",
+      "definition_en": "working together with someone or something; jointly",
+      "ipa": "/ɪn ˈkɒnsət wɪð/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-983100855f70f7b7": {
+      "difficulty": "6.0",
+      "ipa": "/ɪn kənˈkluːʒn/"
+    },
+    "pubcol-w-807be3d3a5694ffb": {
+      "difficulty": "7.0",
+      "synonyms": ["as a result", "consequently", "therefore", "as a consequence"],
+      "collocations": ["in consequence of", "suffer in consequence", "act in consequence"],
+      "example_simple": "He broke the rules and, in consequence, lost his job.",
+      "example_complex": "The bank had lent recklessly and, in consequence, found itself unable to cover the flood of withdrawals that followed.",
+      "definition_en": "as a result of something; therefore",
+      "ipa": "/ɪn ˈkɒnsɪkwəns/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "do đó, kết quả là"
+    },
+    "pubcol-w-f775a759c1363444": {
+      "difficulty": "6.0",
+      "ipa": "/ɪn ˈkɒntrɑːst/",
+      "vi_meaning_correction": "trái lại, ngược lại"
+    },
+    "pubcol-w-ac192849564454f0": {
+      "difficulty": "8.0",
+      "synonyms": ["eventually", "in time", "at the appropriate time", "sooner or later"],
+      "collocations": ["in due course you will", "reply in due course", "be dealt with in due course"],
+      "example_simple": "We will send you the results in due course.",
+      "example_complex": "The committee assured applicants that every submission would be reviewed and answered in due course, once the backlog had been cleared.",
+      "definition_en": "at the appropriate time in the future; eventually",
+      "ipa": "/ɪn djuː kɔːs/",
+      "part_of_speech": "phrase"
+    },
+    "5c3a16fa-d377-45d2-b70f-59f566dd8ecd": {
+      "difficulty": "6.0",
+      "definition_en": "in practice or reality, though not officially; effectively",
+      "ipa": "/ɪn ɪˈfekt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-c7b0af44a488a9ea": {
+      "difficulty": "8.0",
+      "synonyms": ["everywhere", "in every corner", "throughout", "high and low"],
+      "collocations": ["searched in every nook and cranny", "hidden in every nook and cranny", "explored every nook and cranny"],
+      "example_simple": "We looked for the keys in every nook and cranny of the house.",
+      "example_complex": "The old mansion held secrets in every nook and cranny, from the dusty attic trunks to the forgotten cellar passages.",
+      "definition_en": "in every part or corner of a place, even the small and hidden ones",
+      "ipa": "/ɪn ˈevri nʊk ənd ˈkræni/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-2fc799879cfdf2fb": {
+      "difficulty": "5.0",
+      "synonyms": ["actually", "in reality", "as a matter of fact", "indeed"],
+      "collocations": ["in fact, it was", "but in fact", "in fact quite the opposite"],
+      "example_simple": "He looks young, but in fact he is over fifty.",
+      "example_complex": "The policy was presented as a cost-saving measure, but in fact it shifted a far heavier burden onto the poorest households.",
+      "definition_en": "used to emphasise the truth of a statement, especially one that contrasts with what was expected",
+      "ipa": "/ɪn fækt/",
+      "part_of_speech": "phrase"
+    }
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "meta": { "batch": "batch-062", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-a6e62a706c1150c5": {
+      "difficulty": "7.0",
+      "synonyms": ["people trafficking", "modern slavery", "human smuggling"],
+      "collocations": ["combat human trafficking", "victims of human trafficking", "a human trafficking ring"],
+      "example_simple": "The police are working hard to stop human trafficking in the region.",
+      "example_complex": "International cooperation is essential to dismantle the criminal networks that profit from human trafficking.",
+      "definition_en": "the illegal trade of people for forced labour, exploitation, or prostitution",
+      "ipa": "/ˈhjuːmən ˈtræfɪkɪŋ/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-f98975039eb72c62": {
+      "synonyms": ["damp", "muggy", "moist", "sticky"],
+      "collocations": ["hot and humid", "a humid climate", "humid air"],
+      "example_simple": "The weather here is very humid in the summer.",
+      "example_complex": "Tropical regions are notoriously humid, making even a short walk feel exhausting.",
+      "definition_en": "having a high level of moisture in the air",
+      "part_of_speech": "adjective"
+    },
+    "08e3bbde-0b57-44ab-b410-f0c0c99fbb3b": {
+      "difficulty": "6.0",
+      "definition_en": "obstacles or difficulties that must be overcome (also low barriers jumped over in a race)",
+      "ipa": "/ˈhɜːdlz/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-bb49581ab3d89bca": {
+      "synonyms": ["unkind", "wounding", "cruel", "upsetting"],
+      "collocations": ["a hurtful comment", "hurtful words", "a hurtful remark"],
+      "example_simple": "Her hurtful words made him cry.",
+      "example_complex": "Although he apologised later, the hurtful remarks he made in anger were not easily forgotten.",
+      "vi_meaning_correction": "gây tổn thương (lời nói, hành động làm ai đó buồn)"
+    },
+    "pubcol-w-a537c9192c6f64df": {
+      "difficulty": "5.0",
+      "synonyms": ["by accident", "accidentally", "unexpectedly", "coincidentally"],
+      "collocations": ["meet by chance", "discover by chance", "quite by chance"],
+      "example_simple": "I met an old friend by chance at the station.",
+      "example_complex": "Quite by chance, she stumbled upon a document that would completely change the course of the investigation.",
+      "definition_en": "by accident; without being planned or intended",
+      "ipa": "/baɪ tʃɑːns/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-1a995ba88b89e617": {
+      "synonyms": ["soilless cultivation", "water culture", "hydroculture"],
+      "collocations": ["grow plants using hydroponics", "a hydroponics system", "commercial hydroponics"],
+      "example_simple": "They grow lettuce with hydroponics instead of soil.",
+      "example_complex": "Urban farms increasingly rely on hydroponics to produce fresh vegetables in limited space.",
+      "definition_en": "the method of growing plants in nutrient-rich water rather than in soil"
+    },
+    "pubcol-w-f45aa2c526b2f520": {
+      "difficulty": "7.0",
+      "synonyms": ["overactive", "restless", "frenetic", "hyper"],
+      "collocations": ["a hyperactive child", "hyperactive behaviour", "become hyperactive"],
+      "example_simple": "The hyperactive boy could not sit still in class.",
+      "example_complex": "Some studies suggest that excessive sugar can make certain children unusually hyperactive.",
+      "definition_en": "abnormally or extremely active, often unable to keep still or concentrate",
+      "ipa": "/ˌhaɪpərˈæktɪv/",
+      "part_of_speech": "adjective"
+    },
+    "efdca797-ff44-4f1e-85ee-bbeb60494b2b": {
+      "difficulty": "7.0",
+      "definition_en": "a medical condition in which the blood pressure is abnormally high",
+      "ipa": "/ˌhaɪpəˈtenʃən/",
+      "part_of_speech": "noun"
+    },
+    "5de182d3-df23-40a6-b193-437eeb76e66f": {
+      "difficulty": "7.0",
+      "definition_en": "to put someone into a sleep-like state in which they respond easily to suggestion; to fascinate completely",
+      "ipa": "/ˈhɪpnətaɪz/",
+      "part_of_speech": "verb"
+    },
+    "82f0691b-a931-4af5-917e-5c22df2c97a8": {
+      "difficulty": "8.0",
+      "definition_en": "moral standards that a person preaches to others but fails to follow themselves",
+      "ipa": "/ˌhɪpəˈkrɪtɪkəl məˈræləti/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-ed4b436c75459c85": {
+      "difficulty": "7.0",
+      "ipa": "/haɪˈpɒθəsɪs/"
+    },
+    "pubcol-w-7163cb3e43b68e65": {
+      "difficulty": "7.0",
+      "synonyms": ["I totally disagree", "I strongly disagree", "I couldn't disagree more"],
+      "collocations": ["Honestly, I couldn't agree with you less", "I couldn't agree with you less on that"],
+      "example_simple": "\"Money is the most important thing.\" \"I couldn't agree with you less.\"",
+      "example_complex": "When he claimed the policy had no downsides, I told him bluntly that I couldn't agree with him less.",
+      "definition_en": "used to say that you completely disagree with someone",
+      "ipa": "/aɪ ˈkʊdnt əˈɡriː wɪð juː les/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "tôi hoàn toàn không đồng ý với bạn"
+    },
+    "pubcol-w-6ace80622ba42cbf": {
+      "difficulty": "6.0",
+      "ipa": "/aɪ ˈfɜːmli bɪˈliːv ðæt/"
+    },
+    "pubcol-w-e12a4cbbadcc606d": {
+      "difficulty": "5.0",
+      "ipa": "/aɪ ɡes/"
+    },
+    "pubcol-w-820c1c16b364bb05": {
+      "difficulty": "5.0",
+      "ipa": "/aɪ miːn/"
+    },
+    "pubcol-w-01283e1b73eecdd0": {
+      "difficulty": "5.0",
+      "ipa": "/aɪm ɡʊd/"
+    },
+    "3395cc23-d1d6-4634-8196-d43258f8f881": {
+      "difficulty": "9.0",
+      "definition_en": "an illness or injury caused by medical examination or treatment",
+      "ipa": "/ˌaɪətrəˈdʒenɪk dɪˈziːz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-656347020104acb2": {
+      "difficulty": "5.0",
+      "synonyms": ["ID card", "ID", "identification"],
+      "collocations": ["show your identity card", "a national identity card", "carry an identity card"],
+      "example_simple": "You must show your identity card to enter the building.",
+      "example_complex": "In many countries, citizens are legally required to carry a national identity card at all times.",
+      "definition_en": "an official card that shows a person's name and other details to prove who they are",
+      "ipa": "/aɪˈdentəti kɑːd/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-54f580d0f53b5254": {
+      "difficulty": "6.0",
+      "synonyms": ["identity fraud", "ID theft"],
+      "collocations": ["a victim of identity theft", "prevent identity theft", "commit identity theft"],
+      "example_simple": "He became a victim of identity theft after losing his wallet.",
+      "example_complex": "Online shoppers should use strong passwords to reduce the risk of identity theft.",
+      "definition_en": "the crime of stealing someone's personal information in order to use it fraudulently",
+      "ipa": "/aɪˈdentəti θeft/",
+      "part_of_speech": "noun"
+    },
+    "561c11cc-8fa9-49ce-a76f-4c9230c99758": {
+      "difficulty": "7.0",
+      "definition_en": "the state of being idle; inactivity or the avoidance of work",
+      "ipa": "/ˈaɪdlnəs/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-e3a6794bcb84cd88": {
+      "difficulty": "6.0",
+      "synonyms": ["as a last resort", "failing that", "worst case scenario"],
+      "collocations": ["if all else fails, try", "if all else fails, we can"],
+      "example_simple": "If all else fails, we can ask for help.",
+      "example_complex": "We should try every option first, but if all else fails, we may have to cancel the project entirely.",
+      "definition_en": "used to say what you will do if every other method or plan does not work",
+      "ipa": "/ɪf ɔːl els feɪlz/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "nếu mọi cách khác đều thất bại (như là biện pháp cuối cùng)"
+    },
+    "0128bde2-824e-40d0-bf34-3530a5efb6e7": {
+      "difficulty": "7.0",
+      "definition_en": "not based on facts or sound reasoning; without a solid foundation",
+      "ipa": "/ˌɪl ˈfaʊndɪd/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-82945688da2d635c": {
+      "synonyms": ["rude", "impolite", "discourteous", "uncouth"],
+      "collocations": ["an ill-mannered child", "ill-mannered behaviour", "rude and ill-mannered"],
+      "example_simple": "It was ill-mannered of him to leave without saying goodbye.",
+      "example_complex": "The waiter's ill-mannered response left the customers feeling insulted and unwelcome.",
+      "vi_meaning_correction": "thô lỗ, bất lịch sự (không có phép tắc, thiếu lễ độ)"
+    },
+    "pubcol-w-848c4bd26ce5574c": {
+      "synonyms": ["unlawful", "illicit", "banned", "criminal"],
+      "collocations": ["illegal immigration", "an illegal activity", "illegal drugs"],
+      "example_simple": "It is illegal to drive without a licence.",
+      "example_complex": "The company was fined heavily for its illegal disposal of toxic waste.",
+      "definition_en": "not allowed by law; against the law",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-f0f981a27007f47d": {
+      "synonyms": ["unreadable", "indecipherable", "unclear", "scrawled"],
+      "collocations": ["illegible handwriting", "an illegible signature", "almost illegible"],
+      "example_simple": "The doctor's handwriting was completely illegible.",
+      "example_complex": "The ancient manuscript had faded so badly over the centuries that much of the text was now illegible."
+    }
+  }
+}

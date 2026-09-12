@@ -1,0 +1,182 @@
+{
+  "meta": { "batch": "batch-006", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-58ba07b7e4528395": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə ˈhʌmbəl ˈbɪɡɪnɪŋ/",
+      "definition_en": "a poor, ordinary, or unremarkable start in life or in one's career",
+      "synonyms": ["modest start", "lowly origins", "humble roots"],
+      "collocations": ["rise from humble beginnings", "despite his humble beginnings", "a humble start in life"],
+      "example_simple": "She came from a humble beginning but is now a successful doctor.",
+      "example_complex": "From such a humble beginning in a rural village, few could have predicted that he would go on to lead a multinational company.",
+      "vi_meaning_correction": "một khởi đầu khiêm tốn, xuất thân bình thường"
+    },
+    "pubcol-w-e951a26d1681116b": {
+      "difficulty": "8.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə ˌhʌŋ ˈdʒʊəri/",
+      "definition_en": "a jury that cannot reach the required agreement to deliver a verdict",
+      "synonyms": ["deadlocked jury", "undecided jury", "split jury"],
+      "collocations": ["result in a hung jury", "declare a hung jury", "a hung jury forced a retrial"],
+      "example_simple": "The trial ended in a hung jury, so it had to be held again.",
+      "example_complex": "After four days of deliberation, the judge declared a hung jury when it became clear the panel could not agree on a verdict.",
+      "vi_meaning_correction": "ban bồi thẩm không thể đi đến một phán quyết thống nhất"
+    },
+    "pubcol-w-596ab69fc47baca8": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˌɔːl bət/",
+      "definition_en": "very nearly; almost completely",
+      "synonyms": ["almost", "nearly", "virtually", "practically"],
+      "collocations": ["all but certain", "all but impossible", "all but finished"],
+      "example_simple": "The game was all but over when they scored the third goal.",
+      "example_complex": "By the end of the negotiations, a deal was all but certain, though neither side would confirm it publicly.",
+      "vi_meaning_correction": "gần như, hầu như"
+    },
+    "ee7e6b24-19e5-46b1-9fc8-13584786729e": {
+      "difficulty": "6.0",
+      "definition_en": "a minor illness or physical complaint",
+      "ipa": "/ˈeɪlmənt/",
+      "part_of_speech": "noun"
+    },
+    "d4cf3486-c96c-466d-ae20-b17bc0b17ee6": {
+      "difficulty": "6.0",
+      "definition_en": "carried through the air, or transmitted by air",
+      "ipa": "/ˈeəbɔːn/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-8c0f020b3abd012d": {
+      "synonyms": ["broadcast time", "air time", "coverage"],
+      "collocations": ["get plenty of airtime", "prime-time airtime", "buy airtime"],
+      "example_simple": "The advert got a lot of airtime during the football match.",
+      "example_complex": "Minor political parties often complain that they receive far less airtime than their larger rivals during election campaigns."
+    },
+    "f8e88eb8-3d09-46f5-b8c7-0f28219b05d6": {
+      "difficulty": "7.0",
+      "definition_en": "similar to or having the same character as something",
+      "ipa": "/əˈkɪn tə/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-ef77b751e9f58c4a": {
+      "difficulty": "8.0",
+      "ipa": "/ɔːlˈbiːɪt/"
+    },
+    "dad469b9-7eae-4efe-b652-629c3e58fd3b": {
+      "difficulty": "7.0",
+      "definition_en": "simple non-flowering water plants, ranging from single cells to seaweed",
+      "ipa": "/ˈælɡiː/",
+      "part_of_speech": "noun"
+    },
+    "72889b79-0e02-44ca-8b49-edcbfb637902": {
+      "difficulty": "7.0",
+      "definition_en": "to make someone feel isolated or hostile, or to transfer ownership of property",
+      "ipa": "/ˈeɪliəneɪt/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-a9c1c1a4b76fb99f": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ə ˌlɪtər əv ˈpʌpiz/",
+      "definition_en": "a group of young dogs born to the same mother at one time",
+      "synonyms": ["a brood of puppies", "a group of puppies"],
+      "collocations": ["a litter of six puppies", "raise a litter of puppies", "the whole litter of puppies"],
+      "example_simple": "Our dog gave birth to a litter of puppies last week.",
+      "example_complex": "The shelter was overwhelmed after taking in an entire litter of puppies that had been abandoned by the roadside."
+    },
+    "pubcol-w-6d3b7dcb198452e2": {
+      "difficulty": "6.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ˌɔːl ˈɪəz/",
+      "definition_en": "listening very attentively and with great interest",
+      "synonyms": ["listening intently", "all attention", "eager to hear"],
+      "collocations": ["I'm all ears", "be all ears", "sit there all ears"],
+      "example_simple": "Tell me what happened at the meeting; I'm all ears.",
+      "example_complex": "When she mentioned there was a way to double our savings, the whole room was suddenly all ears.",
+      "vi_meaning_correction": "lắng nghe chăm chú, dỏng tai lên nghe"
+    },
+    "1a67689b-5290-404a-a92d-95f38b5a098d": {
+      "difficulty": "6.0"
+    },
+    "9f8382be-9e79-4a81-973c-3ed8a29715da": {
+      "difficulty": "8.0",
+      "definition_en": "to reduce or relieve a fear, worry, or unpleasant feeling",
+      "ipa": "/əˈleɪ/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-36b365b52615d535": {
+      "synonyms": ["accusation", "claim", "charge", "assertion"],
+      "collocations": ["make an allegation", "deny the allegation", "an unfounded allegation"],
+      "example_simple": "He denied the allegation that he had lied to the police.",
+      "example_complex": "The company faced a serious allegation of misconduct, which it dismissed as entirely without foundation."
+    },
+    "f1f9f3c9-b3a5-470c-90f9-62a2d7fe0f90": {
+      "difficulty": "7.0",
+      "definition_en": "claims that someone has done something wrong, made without proof",
+      "ipa": "/ˌælɪˈɡeɪʃənz/",
+      "part_of_speech": "noun"
+    },
+    "fa39294d-7e1e-48a8-a339-0586c83f67f7": {
+      "difficulty": "7.0",
+      "definition_en": "according to what is claimed but not yet proven",
+      "ipa": "/əˈledʒɪdli/",
+      "part_of_speech": "adverb"
+    },
+    "5441a11b-6118-4578-97d4-aa3f03075428": {
+      "difficulty": "7.0",
+      "definition_en": "loyalty or commitment to a person, group, or cause",
+      "ipa": "/əˈliːdʒəns/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-79e0475bae4883f4": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/əˈliːvieɪt ˈpɒvəti/",
+      "definition_en": "to make the problem of poverty less severe",
+      "synonyms": ["reduce poverty", "ease poverty", "combat poverty"],
+      "collocations": ["help to alleviate poverty", "measures to alleviate poverty", "alleviate extreme poverty"],
+      "example_simple": "The new programme aims to alleviate poverty in rural areas.",
+      "example_complex": "Economists argue that investing in education is one of the most effective ways to alleviate poverty in the long term."
+    },
+    "0b7b2a14-8c3b-4b6d-b818-fc197aed4595": {
+      "difficulty": "6.0",
+      "definition_en": "a large reptile with a long body and strong jaws, related to the crocodile",
+      "ipa": "/ˈælɪɡeɪtə/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-63c54fa52eb4f79d": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/əˈlaʊ fɔː/",
+      "definition_en": "to take something into consideration when planning or calculating",
+      "synonyms": ["take into account", "make provision for", "factor in"],
+      "collocations": ["allow for delays", "allow for extra time", "allow for the possibility"],
+      "example_simple": "You should allow for traffic when planning your journey.",
+      "example_complex": "The budget must allow for unexpected costs, since construction projects rarely run exactly to plan."
+    },
+    "pubcol-w-4da8d5d4e14e087e": {
+      "synonyms": ["benefit", "grant", "subsidy", "stipend"],
+      "collocations": ["a weekly allowance", "claim an allowance", "a generous allowance"],
+      "example_simple": "My parents give me a small allowance every week.",
+      "example_complex": "Employees posted overseas receive a housing allowance to help cover the higher cost of living."
+    },
+    "6c9656e2-5438-4863-ab60-a892b6cef381": {
+      "difficulty": "7.0",
+      "definition_en": "a metal made by combining two or more metallic elements",
+      "ipa": "/ˈælɔɪ/",
+      "part_of_speech": "noun"
+    },
+    "b1852c2e-086b-473a-9452-ff83035ddb13": {
+      "difficulty": "7.0",
+      "definition_en": "the quality of being powerfully and mysteriously attractive",
+      "ipa": "/əˈljʊə/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-0ab8140ac7c00432": {
+      "synonyms": ["partner", "supporter", "associate", "confederate"],
+      "collocations": ["a close ally", "a key ally", "a trusted ally"],
+      "example_simple": "France has long been a close ally of Germany.",
+      "example_complex": "In the boardroom battle, she found an unexpected ally in the very colleague she had once opposed."
+    }
+  }
+}

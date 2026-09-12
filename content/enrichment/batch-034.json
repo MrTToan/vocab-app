@@ -1,0 +1,183 @@
+{
+  "meta": { "batch": "batch-034", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-9cb71bcab3f82b8a": {
+      "difficulty": "6.0",
+      "synonyms": ["impasse", "deadlock", "cul-de-sac", "stalemate"],
+      "collocations": ["a dead-end job", "reach a dead end", "a dead-end street"],
+      "example_simple": "The road turned out to be a dead-end, so we had to turn back.",
+      "example_complex": "After years in a dead-end job with no chance of promotion, she decided to retrain as a nurse.",
+      "definition_en": "a situation with no possibility of progress, or a road closed at one end",
+      "ipa": "/ˌded ˈend/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-5f00666aa977db2f": {
+      "difficulty": "5.0",
+      "synonyms": ["handle", "manage", "cope with", "tackle"],
+      "collocations": ["deal with a problem", "deal with a customer", "deal with the issue"],
+      "example_simple": "I will deal with this problem tomorrow morning.",
+      "example_complex": "Managers must learn to deal with conflict calmly and fairly if they want to keep their teams motivated.",
+      "definition_en": "to take action in order to solve a problem or handle a situation",
+      "ipa": "/ˈdiːl wɪð/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-b45d78325c1f6e11": {
+      "difficulty": "6.0",
+      "synonyms": ["capital punishment", "execution"],
+      "collocations": ["abolish the death penalty", "face the death penalty", "impose the death penalty"],
+      "example_simple": "Many countries have abolished the death penalty.",
+      "example_complex": "Opponents argue that the death penalty is irreversible and does little to deter serious crime.",
+      "definition_en": "the punishment of death imposed by a court for a serious crime",
+      "ipa": "/ˈdeθ ˌpenəlti/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-6087817316a710f8": {
+      "difficulty": "6.0",
+      "synonyms": ["death count", "fatalities", "casualties"],
+      "collocations": ["the death toll rose", "a rising death toll", "the death toll from the disaster"],
+      "example_simple": "The death toll from the earthquake continued to rise.",
+      "example_complex": "Aid agencies warned that the death toll could climb sharply unless clean water reached the survivors within days.",
+      "definition_en": "the number of people who die in a particular event such as a disaster or war",
+      "ipa": "/ˈdeθ ˌtəʊl/",
+      "part_of_speech": "noun"
+    },
+    "1dd4c731-42b0-46af-9346-1be619d206ef": {
+      "difficulty": "9.0",
+      "definition_en": "the reduction in the real value of coins by lowering their precious-metal content",
+      "ipa": "/dɪˈbeɪsmənt əv ðə ˈkɔɪnɪdʒ/",
+      "part_of_speech": "phrase"
+    },
+    "0f944720-a31e-4951-a1fa-4fdf1df263c8": {
+      "difficulty": "6.0",
+      "definition_en": "scattered pieces of rubbish or the remains of something broken or destroyed",
+      "ipa": "/ˈdebriː/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-6ba14f66a37c6c9e": {
+      "difficulty": "6.0",
+      "synonyms": ["heavily indebted", "owe money", "in the red"],
+      "collocations": ["be deep in debt", "run up debts", "clear one's debts"],
+      "example_simple": "After losing his job, he fell deep in debt.",
+      "example_complex": "The company sank deeply in debt after the expansion failed, and it took a decade to clear its debts.",
+      "definition_en": "to owe a very large amount of money",
+      "ipa": "/biː ˌdiːp ɪn ˈdet/",
+      "part_of_speech": "phrase"
+    },
+    "9cf48c96-fc97-4a2c-bace-f174ad797405": {
+      "difficulty": "8.0",
+      "definition_en": "to leave a place suddenly and secretly, often to avoid trouble",
+      "ipa": "/dɪˈkæmp/",
+      "part_of_speech": "verb"
+    },
+    "d63dd1a6-d0a6-498d-8c05-6a76196e2f97": {
+      "difficulty": "5.0",
+      "definition_en": "of a good enough standard; honest and respectable",
+      "ipa": "/ˈdiːsnt/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-1a8416058ab7827b": {
+      "difficulty": "6.0",
+      "synonyms": ["settle on", "opt for", "choose", "select"],
+      "collocations": ["decide on a plan", "decide on a name", "decide on a course of action"],
+      "example_simple": "We finally decided on a small hotel near the beach.",
+      "example_complex": "After weighing up several options, the committee decided on a strategy that balanced cost against long-term impact.",
+      "definition_en": "to choose something after careful thought",
+      "ipa": "/dɪˈsaɪd ɒn/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-2c76f96e5b52b9f6": {
+      "difficulty": "7.0",
+      "synonyms": ["go to war with", "take up arms against"],
+      "collocations": ["declare war on a country", "declare war on poverty", "formally declare war"],
+      "example_simple": "The two nations were about to declare war on each other.",
+      "example_complex": "The government vowed to declare war on corruption, promising sweeping reforms across every public institution.",
+      "definition_en": "to formally announce that you are starting a war against someone or something",
+      "ipa": "/dɪˈkleə ˈwɔːr ɒn/",
+      "part_of_speech": "phrase"
+    },
+    "57661ac9-89a1-485a-badb-70a965efffac": {
+      "difficulty": "6.0",
+      "ipa": "/dɪˈklaɪn/"
+    },
+    "a6682fd3-723b-4a01-963e-9097766d7463": {
+      "difficulty": "5.0",
+      "ipa": "/dɪˈkriːs/"
+    },
+    "d964d3df-c4e4-4541-a398-c37e34a82441": {
+      "difficulty": "8.0",
+      "definition_en": "to publicly criticise or condemn something as wrong or bad",
+      "ipa": "/dɪˈkraɪ/",
+      "part_of_speech": "verb"
+    },
+    "74430226-b14e-42a6-887d-b8056883f798": {
+      "difficulty": "7.0",
+      "definition_en": "to consider or regard something in a particular way",
+      "ipa": "/diːm/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-122efc10a0cb7b20": {
+      "difficulty": "6.0",
+      "synonyms": ["beat", "overcome", "vanquish", "triumph over"],
+      "collocations": ["defeat a rival", "defeat the team by two goals to one", "narrowly defeat"],
+      "example_simple": "Our team defeated the home side by three goals to one.",
+      "example_complex": "The underdogs defeated the reigning champions by four points to two, stunning a crowd that had expected an easy home win.",
+      "definition_en": "to beat an opponent by a stated margin or score",
+      "ipa": "/dɪˈfiːt/",
+      "part_of_speech": "phrase"
+    },
+    "ec9ad250-54c8-44f5-98b4-16b84ee54f5e": {
+      "difficulty": "8.0",
+      "definition_en": "to yield to another person's opinion, wishes, or authority out of respect",
+      "ipa": "/dɪˈfɜː tuː/",
+      "part_of_speech": "verb"
+    },
+    "2af23ecd-5335-4e2a-b3e3-e0bacd9ea9e5": {
+      "difficulty": "8.0",
+      "definition_en": "a self-reinforcing cycle in which falling prices lead to lower output, wages and spending, driving prices down further",
+      "ipa": "/dɪˈfleɪʃənri ˈspaɪrəl/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-cca6ff5ca0b43025": {
+      "difficulty": "6.0",
+      "ipa": "/ˌdiːˌfɒrɪˈsteɪʃn/"
+    },
+    "ac901724-60bd-4f9c-a226-31aba8b3f17c": {
+      "difficulty": "7.0",
+      "definition_en": "to change the shape of something so that it is spoiled or distorted",
+      "ipa": "/dɪˈfɔːm/",
+      "part_of_speech": "verb"
+    },
+    "9aca614d-8744-400c-8774-05726d8f4b9c": {
+      "difficulty": "6.0",
+      "definition_en": "to remove ice from frozen food or a freezer, or to become unfrozen",
+      "ipa": "/ˌdiːˈfrɒst/",
+      "part_of_speech": "verb"
+    },
+    "89dc54cc-c06b-4905-89b9-340f3be14475": {
+      "difficulty": "8.0",
+      "example_simple": "Police experts were called in to defuse the bomb.",
+      "example_complex": "Her calm words helped defuse a tense confrontation that could easily have turned violent.",
+      "definition_en": "to make a bomb safe, or to reduce the tension in a difficult situation",
+      "ipa": "/ˌdiːˈfjuːz/",
+      "part_of_speech": "verb"
+    },
+    "f425e50c-f72c-4129-9939-3251c3243889": {
+      "difficulty": "7.0",
+      "definition_en": "to openly refuse to obey a person, rule, or authority",
+      "ipa": "/dɪˈfaɪ/",
+      "part_of_speech": "verb"
+    },
+    "87d7b7e0-4989-470f-9072-5ef0428b73f8": {
+      "difficulty": "8.0",
+      "definition_en": "to decline in quality, morals, or condition, becoming worse over time",
+      "ipa": "/dɪˈdʒenəreɪt/",
+      "part_of_speech": "verb"
+    },
+    "18d9f3af-bcd8-42dc-a89e-1b7872d1efbc": {
+      "difficulty": "9.0",
+      "definition_en": "a substance used to bind materials together that can break down naturally over time",
+      "ipa": "/dɪˈɡreɪdəbl ˈbɒndɪŋ ˌeɪdʒənt/",
+      "part_of_speech": "phrase"
+    }
+  }
+}

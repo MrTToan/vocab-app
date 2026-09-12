@@ -1,0 +1,177 @@
+{
+  "meta": { "batch": "batch-026", "authored_by": "claude", "count": 25 },
+  "words": {
+    "27ebfb5f-df3a-4cf1-9b95-2d5ea71b9bdd": {
+      "difficulty": "7.0",
+      "definition_en": "a logical fallacy in which the conclusion is already assumed within the premise",
+      "ipa": "/ˌsɜːkjələ ˈriːzənɪŋ/",
+      "part_of_speech": "noun"
+    },
+    "52f6acc0-242c-4b67-917e-0435781790c0": {
+      "difficulty": "7.0",
+      "definition_en": "active engagement by ordinary citizens in public and community affairs to bring about change",
+      "ipa": "/ˌsɪvɪk ˈæktɪvɪzəm/",
+      "part_of_speech": "noun"
+    },
+    "2e57ef32-c7d6-41b7-baae-0a2a48a938fd": {
+      "difficulty": "6.0",
+      "definition_en": "a responsibility that a citizen is expected to fulfil towards their community or country",
+      "ipa": "/ˌsɪvɪk ˈdjuːti/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-013872e31d06557b": {
+      "difficulty": "5.0",
+      "ipa": "/kleɪm/"
+    },
+    "10800940-f2d9-40ee-a977-a7015edafb1a": {
+      "difficulty": "8.0",
+      "definition_en": "to assert that one holds the first or most important position over others",
+      "ipa": "/kleɪm ˈpraɪməsi/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-19de1fb315f3897b": {
+      "synonyms": ["rattle", "clang", "clank", "bang"],
+      "collocations": ["a clatter of dishes", "clatter down the stairs", "the clatter of hooves"],
+      "example_simple": "The plates fell to the floor with a loud clatter.",
+      "example_complex": "The sudden clatter of the shutters in the storm made everyone in the office look up from their desks."
+    },
+    "pubcol-w-a5b692fc0dc4cb56": {
+      "difficulty": "6.0",
+      "synonyms": ["renewable energy", "green energy", "sustainable energy"],
+      "collocations": ["clean energy sources", "invest in clean energy", "the clean energy transition"],
+      "example_simple": "Solar power is a popular source of clean energy.",
+      "example_complex": "Many governments are offering subsidies to accelerate the shift towards clean energy and cut carbon emissions.",
+      "definition_en": "energy produced from sources that do not pollute the environment",
+      "ipa": "/ˌkliːn ˈenədʒi/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-947bc7edec64cce5": {
+      "difficulty": "6.0",
+      "synonyms": ["easy conscience", "peace of mind", "untroubled mind"],
+      "collocations": ["have a clear conscience", "with a clear conscience", "keep a clear conscience"],
+      "example_simple": "I returned the money, so I have a clear conscience.",
+      "example_complex": "She could sleep with a clear conscience, knowing she had done everything possible to help her colleague.",
+      "definition_en": "the feeling of not being guilty because you have done nothing wrong",
+      "ipa": "/ˌklɪə ˈkɒnʃəns/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-6ead1c92e424dc6b": {
+      "difficulty": "5.0",
+      "synonyms": ["cloudless sky", "blue sky", "clear skies"],
+      "collocations": ["under a clear sky", "a clear sky overhead", "wake to a clear sky"],
+      "example_simple": "We went hiking under a clear sky.",
+      "example_complex": "The astronomers waited for a clear sky so they could observe the meteor shower without any clouds getting in the way.",
+      "definition_en": "a sky with no clouds",
+      "ipa": "/ˌklɪə ˈskaɪ/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-cff58430c176503a": {
+      "difficulty": "6.0",
+      "synonyms": ["unequivocally", "plainly", "unmistakably", "distinctly"],
+      "collocations": ["state clearly and definitely", "clearly and definitely explained", "answer clearly and definitely"],
+      "example_simple": "She told him clearly and definitely that she would not change her mind.",
+      "example_complex": "The report sets out clearly and definitely the steps the company must take to comply with the new regulations.",
+      "definition_en": "in a way that is easy to understand and beyond any doubt",
+      "ipa": "/ˌklɪəli ənd ˈdefɪnətli/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-f777e3ba57a92e00": {
+      "difficulty": "6.0",
+      "ipa": "/ˈklaɪmət tʃeɪndʒ/"
+    },
+    "b222f071-7c51-4e19-a33a-9a07c366e311": {
+      "difficulty": "5.0",
+      "ipa": "/klaɪm/"
+    },
+    "pubcol-w-72ecb0128ced47c2": {
+      "synonyms": ["in-group", "coterie", "faction", "circle"],
+      "collocations": ["form a clique", "an exclusive clique", "part of a clique"],
+      "example_simple": "The new student found it hard to join the popular clique at school.",
+      "example_complex": "The department was dominated by a small clique that made all the important decisions behind closed doors."
+    },
+    "c1953c4f-1698-4ac9-b4cc-1e993871a425": {
+      "difficulty": "6.0",
+      "definition_en": "blocking something or becoming blocked so that movement or flow is prevented",
+      "ipa": "/ˈklɒɡɪŋ/",
+      "part_of_speech": "verb"
+    },
+    "76415fc4-e83d-4cfa-bec5-28202b8cd9a2": {
+      "difficulty": "7.0",
+      "definition_en": "an artery that is becoming blocked by fatty deposits, restricting the flow of blood",
+      "ipa": "/ˌklɒɡɪŋ ˈɑːtəri/",
+      "part_of_speech": "noun"
+    },
+    "807b1274-f4e5-4d6d-a2f2-4ca11658e939": {
+      "difficulty": "7.0",
+      "definition_en": "strong, striking similarities between two things",
+      "ipa": "/ˌkləʊs ˈpærəlelz/",
+      "part_of_speech": "noun"
+    },
+    "0ae41ffc-c0f0-47d4-8bb3-607a4b4a5d4a": {
+      "difficulty": "6.0",
+      "definition_en": "the state of being very near to something or someone",
+      "ipa": "/ˌkləʊs prɒkˈsɪməti/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-a3c1fff282b3c48c": {
+      "difficulty": "8.0",
+      "synonyms": ["near the knuckle", "risqué", "uncomfortably frank"],
+      "collocations": ["a bit close to the bone", "cut close to the bone", "jokes that are close to the bone"],
+      "example_simple": "His joke about her recent divorce was a bit close to the bone.",
+      "example_complex": "The satire was so close to the bone that several politicians demanded the programme be taken off the air.",
+      "definition_en": "so close to the truth that it makes someone uncomfortable, or (of humour) slightly rude",
+      "ipa": "/ˌkləʊs tə ðə ˈbəʊn/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-3b9d734d6bc30b50": {
+      "difficulty": "7.0",
+      "synonyms": ["a mystery", "beyond one's understanding", "unfathomable"],
+      "collocations": ["remain a closed book", "a closed book to me", "stay a closed book"],
+      "example_simple": "Physics has always been a closed book to me.",
+      "example_complex": "Even after years of marriage, his true feelings remained a closed book to her.",
+      "definition_en": "a subject or person that someone knows nothing about or cannot understand at all",
+      "ipa": "/ˌkləʊzd ˈbʊk tə ˌsʌmbədi/",
+      "part_of_speech": "idiom"
+    },
+    "b5bd373a-c594-41a9-b04f-8f91152ff802": {
+      "difficulty": "6.0",
+      "definition_en": "moving or handling things in an awkward way, often knocking or dropping things",
+      "ipa": "/ˈklʌmzi/",
+      "part_of_speech": "adjective"
+    },
+    "fda3ac71-b9dc-415a-8a0b-73607740ac69": {
+      "difficulty": "8.0",
+      "definition_en": "to come together and merge into a single group, mass, or whole",
+      "ipa": "/ˌkəʊəˈles tuː/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-d3fa0ebb8620a9d8": {
+      "synonyms": ["alliance", "union", "bloc", "partnership"],
+      "collocations": ["form a coalition", "a coalition government", "a broad coalition"],
+      "example_simple": "The two parties formed a coalition to win the election.",
+      "example_complex": "A fragile coalition of environmental groups and local businesses lobbied against the proposed development."
+    },
+    "pubcol-w-21ba46e1b6007b51": {
+      "synonyms": ["rough", "gritty", "grainy", "harsh"],
+      "collocations": ["coarse sand", "a coarse texture", "coarse fabric"],
+      "example_simple": "The beach was covered with coarse sand that hurt our feet.",
+      "example_complex": "The sculptor preferred a coarse grade of sandpaper for the initial shaping of the stone before switching to a finer one."
+    },
+    "f1e84618-b447-44c8-b5d4-f05848cc5f52": {
+      "difficulty": "7.0",
+      "definition_en": "a bottom layer made of rough, large-grained material",
+      "ipa": "/ˌkɔːs ˈbeɪs ˌleɪə/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-7bd7eddc7e33c0b9": {
+      "difficulty": "8.0",
+      "synonyms": ["far-fetched", "fabricated", "implausible", "tall"],
+      "collocations": ["a cock-and-bull story", "a cock-and-bull excuse", "spin a cock-and-bull tale"],
+      "example_simple": "He gave some cock-and-bull story about why he was late.",
+      "example_complex": "The committee dismissed his cock-and-bull explanation for the missing funds and launched a formal investigation.",
+      "definition_en": "(of a story or excuse) absurd, far-fetched, and unlikely to be true",
+      "ipa": "/ˌkɒk ən ˈbʊl/",
+      "part_of_speech": "idiom"
+    }
+  }
+}

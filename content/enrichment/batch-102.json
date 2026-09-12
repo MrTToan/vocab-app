@@ -1,0 +1,181 @@
+{
+  "meta": { "batch": "batch-102", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-5f848a334c5e0d42": {
+      "synonyms": ["sharp", "clever", "astute", "sharp-witted"],
+      "collocations": ["quick-witted response", "quick-witted comeback", "remarkably quick-witted"],
+      "example_simple": "She is so quick-witted that she always has a funny reply ready.",
+      "example_complex": "The debater's quick-witted rebuttals left his opponent scrambling for a coherent answer."
+    },
+    "0f581e5b-55e9-434f-b920-33d24fadab7d": {
+      "difficulty": "8.0",
+      "definition_en": "in a state of inactivity or rest; quiet and still",
+      "ipa": "/kwiˈesənt/",
+      "part_of_speech": "adjective"
+    },
+    "a3e9bc05-4478-4de2-b735-50283dc75dc7": {
+      "difficulty": "7.0",
+      "definition_en": "representing the most perfect or typical example of a quality or class",
+      "ipa": "/ˌkwɪntɪˈsenʃəl/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-a4b811f8e48de158": {
+      "difficulty": "6.0",
+      "ipa": "/ˈkwəʊtə/"
+    },
+    "9589d3c9-fc62-40fb-93e2-635031d38888": {
+      "difficulty": "8.0",
+      "synonyms": ["light pressure", "photon pressure"],
+      "definition_en": "the pressure exerted upon a surface by electromagnetic radiation such as light",
+      "ipa": "/ˌreɪdiˈeɪʃən ˈpreʃə/",
+      "part_of_speech": "noun"
+    },
+    "c5c17d9a-5c3d-430d-aa91-911aa2c31efe": {
+      "difficulty": "8.0",
+      "synonyms": ["extreme green policies", "radical eco-programmes", "hardline environmental platforms"],
+      "definition_en": "far-reaching, uncompromising plans aimed at protecting the environment",
+      "ipa": "/ˈrædɪkəl ɪnˌvaɪrənˈmentl əˈdʒendəz/",
+      "part_of_speech": "phrase"
+    },
+    "047a051b-d0e2-4dc6-9469-5163f107e664": {
+      "difficulty": "6.0",
+      "definition_en": "in a way that affects the fundamental nature of something; completely",
+      "ipa": "/ˈrædɪkli/",
+      "part_of_speech": "adverb"
+    },
+    "pubcol-w-95e570bf7dcf8310": {
+      "difficulty": "6.0",
+      "synonyms": ["from poverty to wealth", "self-made success", "from nothing to fortune"],
+      "collocations": ["a rags-to-riches story", "a rags-to-riches journey", "the classic rags to riches"],
+      "example_simple": "His life is a real rags to riches story.",
+      "example_complex": "The entrepreneur's rags-to-riches rise from a slum childhood to a billion-dollar empire has inspired countless young people.",
+      "definition_en": "a rise from a state of extreme poverty to one of great wealth",
+      "ipa": "/ˌræɡz tə ˈrɪtʃɪz/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-e767e993d78c00c4": {
+      "difficulty": "7.0",
+      "ipa": "/ˈreɪn tʃek/"
+    },
+    "pubcol-w-1cae210e4945d59e": {
+      "difficulty": "6.0",
+      "ipa": "/reɪz əˈweənəs/"
+    },
+    "pubcol-w-dfea041bb3817471": {
+      "difficulty": "5.0",
+      "synonyms": ["fundraise", "collect money", "gather funds"],
+      "collocations": ["raise money for charity", "raise money quickly", "help to raise money"],
+      "example_simple": "The students ran a bake sale to raise money for the school.",
+      "example_complex": "The organisation launched an online campaign to raise money for families displaced by the flood.",
+      "definition_en": "to collect or gather funds for a particular purpose",
+      "ipa": "/reɪz ˈmʌni/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-cae2954d177217cf": {
+      "synonyms": ["digress", "wander", "meander", "prattle"],
+      "collocations": ["ramble on", "tend to ramble", "ramble aimlessly"],
+      "example_simple": "My grandfather tends to ramble on about the old days.",
+      "example_complex": "Rather than answering the question directly, the politician rambled on for several minutes about unrelated matters."
+    },
+    "89bfcdd8-7222-41d6-bd44-b8b0359eb0f1": {
+      "difficulty": "6.0",
+      "definition_en": "people who look after a forest, park, or protected area, or who patrol a region",
+      "ipa": "/ˈreɪndʒəz/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-92d2692f916d6815": {
+      "difficulty": "7.0",
+      "synonyms": ["ordinary members", "the grassroots", "the rank and file members"],
+      "collocations": ["the rank and file of the party", "rank-and-file workers", "appeal to the rank and file"],
+      "example_simple": "The rank and file of the union voted to accept the deal.",
+      "example_complex": "While the leadership backed the reform, the rank and file remained deeply sceptical of its benefits.",
+      "definition_en": "the ordinary members of an organization rather than its leaders",
+      "ipa": "/ˌræŋk ən ˈfaɪl/",
+      "part_of_speech": "idiom"
+    },
+    "b052684e-9008-4449-a0ad-6092ebdbab74": {
+      "difficulty": "5.0",
+      "ipa": "/ˈræpɪdli/"
+    },
+    "pubcol-w-d6f772f88778b226": {
+      "synonyms": ["connection", "understanding", "affinity", "bond"],
+      "collocations": ["build a rapport", "establish rapport", "a close rapport"],
+      "example_simple": "The teacher quickly built a good rapport with her new students.",
+      "example_complex": "A skilled interviewer establishes rapport within minutes, putting even nervous candidates at ease."
+    },
+    "b6fd4b09-131f-4b3e-9f45-b1e22e7f0c00": {
+      "difficulty": "7.0",
+      "definition_en": "acting too hastily or recklessly in doing something without proper thought",
+      "ipa": "/ˈræʃ tə/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-7e8b7811711c3c9e": {
+      "synonyms": ["fairly", "quite", "somewhat", "instead"],
+      "collocations": ["rather than", "would rather", "rather difficult"],
+      "example_simple": "The film was rather long, but I enjoyed it.",
+      "example_complex": "I would rather spend the weekend reading than attend yet another crowded party.",
+      "definition_en": "to a certain extent; used to express preference or a moderate degree",
+      "part_of_speech": "adverb"
+    },
+    "pubcol-w-37d5c49086004deb": {
+      "difficulty": "5.0",
+      "synonyms": ["instead of", "as opposed to", "in preference to"],
+      "collocations": ["rather than doing", "choose X rather than Y", "rather than simply"],
+      "example_simple": "We decided to walk rather than take the bus.",
+      "example_complex": "Rather than cutting jobs, the company chose to reduce everyone's hours during the downturn.",
+      "definition_en": "instead of; used to introduce a preferred or contrasting alternative",
+      "ipa": "/ˈrɑːðə ðən/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-44bac10944de59ea": {
+      "synonyms": ["harsh", "hoarse", "rowdy", "boisterous"],
+      "collocations": ["raucous laughter", "raucous crowd", "raucous noise"],
+      "example_simple": "The party next door was noisy and raucous all night.",
+      "example_complex": "The comedian's crude jokes were met with raucous laughter from the packed auditorium."
+    },
+    "pubcol-w-2cba28b15db07a44": {
+      "difficulty": "6.0",
+      "synonyms": ["glimmer of hope", "sign of hope", "silver lining"],
+      "collocations": ["a ray of hope", "offer a ray of hope", "the only ray of hope"],
+      "example_simple": "The good news gave us a ray of hope.",
+      "example_complex": "Amid the grim economic forecasts, the rise in exports offered a rare ray of hope.",
+      "definition_en": "a small sign that a difficult situation may improve",
+      "ipa": "/ˌreɪ əv ˈhəʊp/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-168294281828d2e9": {
+      "difficulty": "6.0",
+      "synonyms": ["settle differences", "meet halfway", "come to terms"],
+      "collocations": ["reach a compromise", "eventually reach a compromise", "reach a fair compromise"],
+      "example_simple": "After hours of talks, the two sides reached a compromise.",
+      "example_complex": "The negotiators managed to reach a compromise that satisfied both the workers and the management.",
+      "definition_en": "to come to an agreement in which each side gives up part of what it wants",
+      "ipa": "/ˌriːtʃ ə ˈkɒmprəmaɪz/",
+      "part_of_speech": "phrase"
+    },
+    "b2716e0e-5c23-4ebf-9dbf-e5cdfb72d3ec": {
+      "difficulty": "6.0",
+      "ipa": "/ˌriːtʃ ə ˈpiːk əv/"
+    },
+    "pubcol-w-144b67a9274ff2b8": {
+      "difficulty": "6.0",
+      "synonyms": ["make a deal", "come to terms", "settle"],
+      "collocations": ["reach an agreement", "finally reach an agreement", "reach an agreement on"],
+      "example_simple": "The two companies finally reached an agreement.",
+      "example_complex": "After months of tense negotiations, the countries reached an agreement on reducing carbon emissions.",
+      "definition_en": "to come to a mutual arrangement or understanding after discussion",
+      "ipa": "/ˌriːtʃ ən əˈɡriːmənt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-9ceb1cb0a6fc6431": {
+      "difficulty": "7.0",
+      "synonyms": ["run out of options", "hit a dead end", "reach the limit"],
+      "collocations": ["reach the end of the road", "the end of the road for", "come to the end of the road"],
+      "example_simple": "After the factory closed, many workers felt they had reached the end of the road.",
+      "example_complex": "With funding gone and no investors left, the startup had clearly reached the end of the road.",
+      "definition_en": "to reach a point where something can no longer continue or where no options remain",
+      "ipa": "/ˌriːtʃ ði ˈend əv ðə rəʊd/",
+      "part_of_speech": "idiom"
+    }
+  }
+}

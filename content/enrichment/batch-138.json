@@ -1,0 +1,66 @@
+{
+  "meta": { "batch": "batch-138", "authored_by": "claude", "count": 10 },
+  "words": {
+    "pubcol-w-aff7d18a115507cc": {
+      "synonyms": ["gape", "open the mouth wide"],
+      "collocations": ["yawn loudly", "stifle a yawn", "yawn with boredom"],
+      "example_simple": "I couldn't stop myself from yawning during the long lecture.",
+      "example_complex": "As the meeting dragged into its third hour, she tried to stifle a yawn behind her hand.",
+      "definition_en": "to open the mouth wide and breathe in deeply, usually when tired or bored",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-43ee707c1f3018b4": {
+      "synonyms": ["long for", "crave", "pine for", "hanker after"],
+      "collocations": ["yearn for freedom", "yearn for home", "yearn for a change"],
+      "example_simple": "After years abroad, he began to yearn for his family and hometown.",
+      "example_complex": "Trapped in a monotonous routine, she yearned for the kind of adventure she had known in her youth."
+    },
+    "2f1afffe-e5f1-49fa-bb1f-aa00f2198a45": {
+      "difficulty": "6.0",
+      "definition_en": "microscopic fungi used to make bread rise and to ferment alcohol",
+      "ipa": "/jiːsts/",
+      "part_of_speech": "noun"
+    },
+    "add3c9c1-3c5c-416c-9f56-9d087a90d44c": {
+      "difficulty": "7.0",
+      "definition_en": "to give in and do what someone or something insists on",
+      "ipa": "/jiːld tə ɪts dɪˈmɑːndz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-d8749ce3cafb54b4": {
+      "difficulty": "6.0",
+      "synonyms": ["free", "on the company", "complimentary", "at no charge"],
+      "collocations": ["drinks on the house", "a meal on the house", "dessert on the house"],
+      "example_simple": "The waiter said our coffee was on the house because of the delay.",
+      "example_complex": "To apologise for the mix-up, the manager insisted that the entire round of drinks be on the house.",
+      "definition_en": "(of food or drink) provided free by the restaurant or bar",
+      "ipa": "/jəʊ biː ɒn ðə ˈhaʊs/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "miễn phí (do quán/nhà hàng đãi)"
+    },
+    "pubcol-w-67476f9ec8f80d6e": {
+      "difficulty": "5.0",
+      "ipa": "/juː ˈbet/"
+    },
+    "pubcol-w-70f1296c079aff2f": {
+      "difficulty": "5.0",
+      "ipa": "/juː ˈnəʊ/"
+    },
+    "pubcol-w-b2aeb846d994ac80": {
+      "difficulty": "5.0",
+      "ipa": "/juː nəʊ ˈwɒt/"
+    },
+    "8826e973-a72e-4c6d-ad3a-730f4e0fc69f": {
+      "difficulty": "6.0",
+      "definition_en": "the young birds that have recently emerged from their eggs",
+      "ipa": "/jʌŋ ˈhætʃ/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-9000c6aedc27f83d": {
+      "synonyms": ["hostel", "guesthouse", "backpackers' lodge", "budget accommodation"],
+      "collocations": ["stay at a youth hostel", "book a youth hostel", "a youth hostel dormitory"],
+      "example_simple": "We stayed in a cheap youth hostel while travelling around Europe.",
+      "example_complex": "Rather than splurging on a hotel, the students shared a dormitory in a youth hostel to keep their trip affordable."
+    }
+  }
+}

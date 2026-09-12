@@ -1,0 +1,231 @@
+{
+  "meta": { "batch": "batch-012", "authored_by": "claude", "count": 26 },
+  "words": {
+    "665e2fa5-a37d-4b3b-a2a3-b0932d4a578f": {
+      "difficulty": "8.0",
+      "definition_en": "a defect in the eye or a lens causing blurred vision due to an irregularly curved surface",
+      "ipa": "/əˈstɪɡmətɪzəm/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-7ccdf9abc22db201": {
+      "difficulty": "6.0",
+      "synonyms": ["a turbulent relationship", "a rocky relationship", "a troubled relationship"],
+      "collocations": ["have a stormy relationship", "a stormy relationship with someone", "endure a stormy relationship"],
+      "example_simple": "They had a stormy relationship and argued almost every day.",
+      "example_complex": "After years of a stormy relationship marked by frequent break-ups, the couple finally decided to seek counselling.",
+      "definition_en": "a relationship full of arguments, conflict, and emotional upheaval",
+      "ipa": "/ə ˈstɔːmi rɪˈleɪʃənʃɪp/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-052d00467af6d18f": {
+      "difficulty": "6.0",
+      "synonyms": ["a piece of luck", "a lucky break", "good fortune"],
+      "collocations": ["by a stroke of luck", "a stroke of good luck", "have a stroke of luck"],
+      "example_simple": "By a stroke of luck, I found my lost keys under the sofa.",
+      "example_complex": "It was a stroke of luck that the investor happened to read her proposal just as the company was on the verge of collapse.",
+      "definition_en": "an unexpected event that brings good fortune",
+      "ipa": "/ə strəʊk əv lʌk/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-d11a0cdfa96b8354": {
+      "difficulty": "5.0",
+      "synonyms": ["an amount of money", "a quantity of money", "a payment"],
+      "collocations": ["a large sum of money", "spend a sum of money", "raise a sum of money"],
+      "example_simple": "She saved a large sum of money to buy her first car.",
+      "example_complex": "The charity managed to raise a considerable sum of money to fund the construction of the new hospital wing.",
+      "definition_en": "an amount of money, especially a specific or large one",
+      "ipa": "/ə sʌm əv ˈmʌni/",
+      "part_of_speech": "phrase"
+    },
+    "a2bb4f0f-5a7f-4246-9ec8-1c29cc85f093": {
+      "difficulty": "8.0",
+      "definition_en": "jaws whose two sides are not evenly matched in shape or size",
+      "ipa": "/ˌeɪsɪˈmetrɪkəl dʒɔːz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-8f0d3eea3999b3b6": {
+      "difficulty": "7.0",
+      "synonyms": ["idle", "with nothing to do", "unoccupied"],
+      "collocations": ["be at a loose end", "find yourself at a loose end", "at a loose end all afternoon"],
+      "example_simple": "I was at a loose end on Sunday, so I called a friend.",
+      "example_complex": "Having finished all his assignments early, he found himself at a loose end and offered to help organise the event.",
+      "definition_en": "having nothing particular to do and feeling bored or restless",
+      "ipa": "/ət ə luːs end/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-68fa016ac44af04d": {
+      "difficulty": "6.0",
+      "synonyms": ["at any cost", "whatever it takes", "by any means"],
+      "collocations": ["avoid something at all costs", "win at all costs", "protect it at all costs"],
+      "example_simple": "We must protect the children at all costs.",
+      "example_complex": "The government was determined to prevent the epidemic from spreading at all costs, even if it meant closing the borders.",
+      "definition_en": "regardless of the effort, expense, or sacrifice required",
+      "ipa": "/ət ɔːl kɒsts/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-5088c6171af06423": {
+      "difficulty": "6.0",
+      "synonyms": ["anyway", "in any case", "regardless"],
+      "collocations": ["at any rate, we tried", "well, at any rate", "at any rate for now"],
+      "example_simple": "It might rain later, but at any rate we should still go.",
+      "example_complex": "The results were disappointing; at any rate, they gave us valuable data for the next phase of research.",
+      "definition_en": "used to say that a statement is true whatever else happens; in any case",
+      "ipa": "/ət ˈeni reɪt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-d4b81feb3a716e50": {
+      "difficulty": "7.0",
+      "synonyms": ["directly", "firsthand", "personally"],
+      "collocations": ["experience something at first hand", "learn at first hand", "witness at first hand"],
+      "example_simple": "She saw the damage at first hand when she visited the flooded town.",
+      "example_complex": "As a volunteer nurse, he experienced at first hand the harsh conditions faced by refugees in the camp.",
+      "definition_en": "from direct personal experience rather than from others",
+      "ipa": "/ət fɜːst hænd/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-d305dc4334136409": {
+      "difficulty": "5.0",
+      "synonyms": ["finally", "eventually", "in the end"],
+      "collocations": ["at last we arrived", "home at last", "at last the wait was over"],
+      "example_simple": "After a long journey, we arrived home at last.",
+      "example_complex": "At last, after months of negotiation, the two sides reached an agreement that satisfied everyone.",
+      "definition_en": "after a long time or delay; finally",
+      "ipa": "/ət lɑːst/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-e548afc488355323": {
+      "difficulty": "5.0",
+      "synonyms": ["immediately", "right away", "simultaneously"],
+      "collocations": ["come at once", "all at once", "do two things at once"],
+      "example_simple": "Please come here at once.",
+      "example_complex": "The manager could not deal with so many complaints at once, so she asked her team for help.",
+      "definition_en": "immediately, or at the same time",
+      "ipa": "/ət wʌns/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-798461eb15272513": {
+      "difficulty": "5.0",
+      "synonyms": ["currently", "now", "at the moment"],
+      "collocations": ["at present unavailable", "at present we have", "no plans at present"],
+      "example_simple": "At present, she is working on a new project.",
+      "example_complex": "At present there is no cure for the disease, although several promising treatments are being trialled.",
+      "definition_en": "at the current time; now",
+      "ipa": "/ət ˈpreznt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-34f16824c60c56d7": {
+      "difficulty": "5.0",
+      "synonyms": ["aged", "when someone is", "by the age of"],
+      "collocations": ["at the age of ten", "retire at the age of 65", "at a young age"],
+      "example_simple": "He learned to swim at the age of five.",
+      "example_complex": "At the age of nineteen, she had already published her first novel to widespread acclaim.",
+      "definition_en": "when a person is a particular number of years old",
+      "ipa": "/ət ðə eɪdʒ əv/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-20d93d99d104a893": {
+      "difficulty": "5.0",
+      "synonyms": ["by the end of something", "when something finishes", "at the close of something"],
+      "collocations": ["at the end of the month", "at the end of the film", "at the end of the road"],
+      "example_simple": "At the end of the lesson, the teacher gave us homework.",
+      "example_complex": "At the end of the financial year, the company reviews its performance and sets new targets.",
+      "definition_en": "at the final point or moment of something",
+      "ipa": "/ət ðə end əv/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-510ac6c9aad8b207": {
+      "difficulty": "7.0",
+      "synonyms": ["ultimately", "when all is said and done", "in the final analysis"],
+      "collocations": ["at the end of the day, it's your choice", "but at the end of the day", "at the end of the day what matters"],
+      "example_simple": "At the end of the day, what matters most is that you tried your best.",
+      "example_complex": "The committee debated for hours, but at the end of the day, the decision came down to which option was most affordable.",
+      "definition_en": "used to give your final opinion after considering everything; ultimately",
+      "ipa": "/ət ðə end əv ðə deɪ/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-70895f6a1127cbd4": {
+      "difficulty": "7.0",
+      "synonyms": ["at the cost of something", "to the detriment of something", "by sacrificing something"],
+      "collocations": ["at the expense of quality", "success at the expense of health", "at the expense of others"],
+      "example_simple": "He finished the project quickly, but at the expense of quality.",
+      "example_complex": "The factory increased its output at the expense of the environment, polluting the nearby river for years.",
+      "definition_en": "causing harm or loss to something in order to gain something else",
+      "ipa": "/ət ðə ɪkˈspens əv/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-a7e50513eb3d16ac": {
+      "difficulty": "5.0",
+      "synonyms": ["right now", "currently", "at present"],
+      "collocations": ["busy at the moment", "at the moment we can't", "not available at the moment"],
+      "example_simple": "I'm busy at the moment, can I call you back?",
+      "example_complex": "At the moment the negotiations are stalled, but both parties remain hopeful that a deal can be reached soon.",
+      "definition_en": "at the present time; right now",
+      "ipa": "/ət ðə ˈməʊmənt/",
+      "part_of_speech": "phrase"
+    },
+    "e3f6d080-8bcf-411c-a05b-2227c66cad97": {
+      "difficulty": "7.0",
+      "definition_en": "available for someone to use freely whenever they want",
+      "ipa": "/ət ðeə dɪˈspəʊzəl/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-898a8f5c6d6d0809": {
+      "difficulty": "8.0",
+      "synonyms": ["at an unreasonable hour", "very early or very late", "at an antisocial hour"],
+      "collocations": ["get up at an ungodly hour", "call at an ungodly hour", "leave at an ungodly hour"],
+      "example_simple": "We had to get up at an ungodly hour to catch the flight.",
+      "example_complex": "The reporters were expected to be on standby at an ungodly hour, ready to cover any breaking news overnight.",
+      "definition_en": "at an unreasonably early or late time that is inconvenient",
+      "ipa": "/ət ən ʌnˈɡɒdli ˈaʊə/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-333775e1cbcc7e83": {
+      "difficulty": "7.0",
+      "synonyms": ["fighting bitterly", "arguing fiercely", "in fierce conflict"],
+      "collocations": ["be at each other's throats", "constantly at each other's throats", "at each other's throats over money"],
+      "example_simple": "The brothers were at each other's throats over who should inherit the house.",
+      "example_complex": "Within weeks of the merger, the two management teams were at each other's throats, unable to agree on even the smallest decisions.",
+      "definition_en": "arguing or fighting angrily and continuously with each other",
+      "ipa": "/ət iːtʃ ˈʌðəz θrəʊts/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-17fb8750386c3d42": {
+      "synonyms": ["fit", "muscular", "sporty"],
+      "collocations": ["athletic build", "athletic ability", "an athletic young man"],
+      "example_simple": "He has an athletic body because he trains every day.",
+      "example_complex": "Her athletic physique and natural coordination made her an outstanding candidate for the national gymnastics team.",
+      "definition_en": "physically strong, fit, and good at sports",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-ffa2fbc77b61b14f": {
+      "synonyms": ["mood", "ambience", "air"],
+      "collocations": ["a relaxed atmosphere", "create an atmosphere", "a tense atmosphere"],
+      "example_simple": "The café has a warm and friendly atmosphere.",
+      "example_complex": "The dim lighting and soft music created an intimate atmosphere that put every guest immediately at ease.",
+      "definition_en": "the mood or feeling of a place or situation",
+      "part_of_speech": "noun"
+    },
+    "2d1496ad-b6f3-4f4c-ae50-e7672a437ca5": {
+      "difficulty": "8.0",
+      "definition_en": "a large open central space in a building, or an upper chamber of the heart",
+      "ipa": "/ˈeɪtriəm/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-a7917289f7a8c1d1": {
+      "difficulty": "6.0",
+      "synonyms": ["a group of monkeys", "a band of monkeys", "a company of monkeys"],
+      "collocations": ["a troop of monkeys", "a troop of baboons", "a troop of wild monkeys"],
+      "example_simple": "A troop of monkeys ran across the road in front of us.",
+      "example_complex": "As dawn broke, a troop of monkeys descended from the trees to raid the tourists' unattended breakfast tables.",
+      "definition_en": "a group of monkeys that live and move together",
+      "ipa": "/ə truːp əv ˈmʌŋkiz/",
+      "part_of_speech": "phrase"
+    },
+    "683d5d8f-316a-4675-b1df-d2139405c976": {
+      "difficulty": "8.0",
+      "definition_en": "to gradually waste away or shrink, especially a body part through disuse",
+      "ipa": "/ˈætrəfi/",
+      "part_of_speech": "verb"
+    }
+  }
+}

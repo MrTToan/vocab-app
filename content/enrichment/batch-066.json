@@ -1,0 +1,196 @@
+{
+  "meta": { "batch": "batch-066", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-a0f4fde0d063e0c5": {
+      "difficulty": "8.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ɪn ðə pɪŋk/",
+      "definition_en": "in very good health or high spirits",
+      "synonyms": ["in good health", "fit and well", "hale and hearty", "in fine fettle"],
+      "collocations": ["look in the pink", "feeling in the pink", "in the pink of health"],
+      "example_simple": "After her holiday, she looked in the pink.",
+      "example_complex": "Despite his age, my grandfather remains in the pink, cycling several miles every morning."
+    },
+    "pubcol-w-b7c0425ee2765000": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ɪn ðə ˈpʌblɪk aɪ/",
+      "definition_en": "well known to the public and frequently seen in the media",
+      "synonyms": ["in the spotlight", "well known", "prominent", "high-profile"],
+      "collocations": ["live in the public eye", "remain in the public eye", "thrust into the public eye"],
+      "example_simple": "Actors are always in the public eye.",
+      "example_complex": "Politicians who spend their careers in the public eye must accept constant scrutiny of their private lives."
+    },
+    "pubcol-w-3d6350aad7b31917": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɪn ðə waɪld/",
+      "definition_en": "in a natural environment rather than in captivity",
+      "synonyms": ["in nature", "in the natural habitat", "in natural surroundings", "at large"],
+      "collocations": ["live in the wild", "survive in the wild", "found in the wild"],
+      "example_simple": "These animals are rarely seen in the wild.",
+      "example_complex": "Conservationists are working to reintroduce the endangered species into the wild after decades of captive breeding.",
+      "vi_meaning_correction": "trong tự nhiên/thiên nhiên"
+    },
+    "d3c439c1-c8df-4f11-8e60-aaa19db19812": {
+      "difficulty": "6.0",
+      "definition_en": "in this way or fashion",
+      "ipa": "/ɪn ðɪs ˈmænə/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-b40b90094a0a34a9": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɪn veɪn/",
+      "definition_en": "without success or a useful result",
+      "synonyms": ["unsuccessfully", "to no avail", "fruitlessly", "without success"],
+      "collocations": ["try in vain", "wait in vain", "die in vain"],
+      "example_simple": "They searched in vain for the missing keys.",
+      "example_complex": "All her efforts to save the failing business proved in vain, and it closed within a year.",
+      "vi_meaning_correction": "vô ích"
+    },
+    "pubcol-w-8d385a486e6ffa36": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɪn vjuː ɒv/",
+      "definition_en": "taking something into consideration; because of",
+      "synonyms": ["considering", "because of", "given", "owing to"],
+      "collocations": ["in view of the fact", "in view of recent events", "in view of this"],
+      "example_simple": "In view of the bad weather, the trip was cancelled.",
+      "example_complex": "In view of the mounting evidence against him, the defendant chose to change his plea.",
+      "vi_meaning_correction": "xét đến, vì, do (điều gì)"
+    },
+    "pubcol-w-3bd67d7403aef19d": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɪn baɪ ɪnˈstɔːlmənts/",
+      "definition_en": "paid in a series of separate payments spread over time",
+      "synonyms": ["in stages", "by hire purchase", "in part-payments", "on credit"],
+      "collocations": ["pay in instalments", "buy by instalments", "spread the cost in instalments"],
+      "example_simple": "You can pay for the sofa in instalments.",
+      "example_complex": "The dealership allowed her to buy the car by instalments, spreading the payments over three years."
+    },
+    "pubcol-w-62c5ea4b97151e54": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ɪn ə fɒɡ/",
+      "definition_en": "in a state of confusion or unable to think clearly",
+      "synonyms": ["confused", "disoriented", "bewildered", "muddled"],
+      "collocations": ["be in a fog", "walk around in a fog", "in a mental fog"],
+      "example_simple": "After the long flight, I was in a fog all day.",
+      "example_complex": "For weeks after the accident, he moved through his daily routine in a fog, unable to concentrate on anything."
+    },
+    "0b29abd3-e9f8-484e-9d58-07815c45459d": {
+      "difficulty": "7.0",
+      "definition_en": "not deliberate; accidental or unintentional",
+      "ipa": "/ˌɪnədˈvɜːtənt/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-0ac67aee50e29f3e": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɪn ə rəʊ/",
+      "definition_en": "consecutively, one after another without interruption",
+      "synonyms": ["consecutively", "in succession", "running", "back to back"],
+      "collocations": ["three times in a row", "wins in a row", "days in a row"],
+      "example_simple": "She won the prize three years in a row.",
+      "example_complex": "The team suffered five defeats in a row, putting their manager's job under serious pressure."
+    },
+    "f5a21b72-f7ca-41a0-ac59-ee518cdc7274": {
+      "difficulty": "8.0",
+      "definition_en": "breeding between closely related individuals",
+      "ipa": "/ˈɪnbriːdɪŋ/",
+      "part_of_speech": "noun"
+    },
+    "a9c6f706-5990-4b47-98f8-b81deac71ac0": {
+      "difficulty": "8.0",
+      "definition_en": "emitting light as a result of being heated; glowing brightly",
+      "ipa": "/ˌɪnkænˈdesənt/",
+      "part_of_speech": "adjective"
+    },
+    "a307fe99-c110-41b4-9e86-58297e1becec": {
+      "difficulty": "8.0",
+      "definition_en": "the state of being confined in prison; imprisonment",
+      "ipa": "/ɪnˌkɑːsəˈreɪʃən/",
+      "part_of_speech": "noun"
+    },
+    "7f6305c8-7b70-4e78-bfca-06da217461b3": {
+      "difficulty": "7.0",
+      "definition_en": "the beginning or start of something",
+      "ipa": "/ɪnˈsepʃən/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-7c65b16a090d47e2": {
+      "synonyms": ["by chance", "accidentally", "coincidentally", "fortuitously"],
+      "collocations": ["incidentally discovered", "found incidentally", "incidentally revealed"],
+      "example_simple": "The tumour was found incidentally during a routine scan.",
+      "example_complex": "Incidentally, while researching the archives, she uncovered a document that rewrote the town's history."
+    },
+    "faca96eb-9b08-4458-978d-16e38d7a2eed": {
+      "difficulty": "8.0",
+      "definition_en": "the destruction of something, especially waste, by burning",
+      "ipa": "/ɪnˌsɪnəˈreɪʃən/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-24bab9a8288d2118": {
+      "synonyms": ["beginning", "nascent", "developing", "emerging"],
+      "collocations": ["incipient stage", "incipient crisis", "incipient signs"],
+      "example_simple": "Doctors caught the incipient disease early.",
+      "example_complex": "The report warned of an incipient economic crisis that, if ignored, could spiral into a full recession."
+    },
+    "4f937148-b9ed-4307-9603-49b5248ab20f": {
+      "difficulty": "8.0",
+      "definition_en": "the early or beginning stage of a downturn or deterioration",
+      "ipa": "/ɪnˈsɪpiənt dɪˈklaɪn/",
+      "part_of_speech": "phrase"
+    },
+    "890e930a-ffda-4738-ae30-ef5e7c97f19b": {
+      "difficulty": "7.0",
+      "definition_en": "to encourage or stir up violent or unlawful behaviour",
+      "ipa": "/ɪnˈsaɪt/",
+      "part_of_speech": "verb"
+    },
+    "91726544-08f3-4cec-87df-a8d37de7ee0b": {
+      "difficulty": "7.0",
+      "definition_en": "a natural tendency or preference to act or feel in a particular way",
+      "ipa": "/ˌɪnklɪˈneɪʃən/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-05f0e7922dec7580": {
+      "difficulty": "7.0",
+      "ipa": "/ˈɪnkʌm ˌɪnɪˈkwɒləti/"
+    },
+    "pubcol-w-4051be0b6dd67a07": {
+      "difficulty": "8.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˌɪnkəmˈpliːt kəmˈbʌstʃən/",
+      "definition_en": "the burning of a fuel with insufficient oxygen, producing carbon monoxide and soot",
+      "synonyms": ["partial combustion", "inefficient burning", "incomplete burning"],
+      "collocations": ["incomplete combustion of fuel", "produce incomplete combustion", "incomplete combustion releases"],
+      "example_simple": "Incomplete combustion of gas can produce dangerous carbon monoxide.",
+      "example_complex": "A poorly maintained boiler often suffers from incomplete combustion, releasing toxic carbon monoxide into the home."
+    },
+    "ddf9d5d4-b61e-444d-8c83-1e0a002f4896": {
+      "difficulty": "8.0",
+      "definition_en": "out of place; not in keeping with the surroundings",
+      "ipa": "/ɪnˈkɒŋɡruəs/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-69612b324bb9ab2e": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ɪnˈkriːs ðə rɪsk ɒv/",
+      "definition_en": "to make the chance of something harmful happening greater",
+      "synonyms": ["heighten the risk", "raise the risk", "elevate the risk", "add to the risk"],
+      "collocations": ["increase the risk of disease", "significantly increase the risk", "increase the risk of injury"],
+      "example_simple": "Smoking increases the risk of lung cancer.",
+      "example_complex": "Studies show that a sedentary lifestyle can substantially increase the risk of cardiovascular disease."
+    },
+    "pubcol-w-792962a40d811343": {
+      "synonyms": ["disbelieving", "sceptical", "unbelieving", "doubtful"],
+      "collocations": ["an incredulous look", "an incredulous stare", "sound incredulous"],
+      "example_simple": "She gave me an incredulous look.",
+      "example_complex": "The jury remained incredulous as the witness offered an increasingly far-fetched account of events."
+    }
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "meta": { "batch": "batch-021", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-277bcd4d588242fb": {
+      "synonyms": ["cluster", "group", "bundle", "cluster"],
+      "collocations": ["a bunch of flowers", "a whole bunch of people", "a bunch of grapes"],
+      "example_simple": "She bought a bunch of bananas at the market.",
+      "example_complex": "A bunch of enthusiastic volunteers gathered the loose papers and tied them into a neat bunch.",
+      "definition_en": "a number of things of the same kind grouped or fastened together",
+      "part_of_speech": "noun"
+    },
+    "dcd61eee-06d8-4e48-98e2-1d7fee60b4be": {
+      "difficulty": "7.0",
+      "definition_en": "able to float; or cheerful, confident and optimistic",
+      "ipa": "/ˈbɔɪənt/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-a2cc4391f5ff62ef": {
+      "difficulty": "8.0",
+      "synonyms": ["overwork", "wear yourself out", "overexert", "run yourself ragged"],
+      "collocations": ["burning the candle at both ends", "warned him about burning the candle at both ends", "keep burning the candle at both ends"],
+      "example_simple": "You look exhausted because you're burning the candle at both ends.",
+      "example_complex": "Juggling a full-time job with evening classes, she was burning the candle at both ends and eventually collapsed from exhaustion.",
+      "definition_en": "to exhaust yourself by doing too much, especially staying up late and getting up early",
+      "ipa": "/bɜːn ðə ˈkændl ət bəʊθ endz/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-1db24d929f5e15e3": {
+      "difficulty": "6.0",
+      "synonyms": ["write a CD", "record a disc", "copy to CD"],
+      "collocations": ["burn a CD", "burn music onto a CD", "burn a backup CD"],
+      "example_simple": "He burned a CD of his favourite songs for the trip.",
+      "example_complex": "Before streaming became common, people would burn a CD of their playlists to play in the car.",
+      "definition_en": "to copy or record data or music onto a compact disc",
+      "ipa": "/bɜːn ə ˌsiː ˈdiː/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-7c52eafee058ba99": {
+      "synonyms": ["scholarship", "grant", "financial aid", "stipend"],
+      "collocations": ["award a bursary", "apply for a bursary", "receive a bursary"],
+      "example_simple": "She won a bursary that paid for her university tuition.",
+      "example_complex": "The foundation offers generous bursaries to talented students who could not otherwise afford higher education.",
+      "vi_meaning_correction": "học bổng, trợ cấp học phí"
+    },
+    "pubcol-w-f7b8e7bec854728e": {
+      "difficulty": "6.0",
+      "synonyms": ["start crying", "break down", "weep suddenly"],
+      "collocations": ["burst into tears", "suddenly burst into tears", "burst into tears of joy"],
+      "example_simple": "She burst into tears when she heard the sad news.",
+      "example_complex": "Overwhelmed by the surprise reunion, the young soldier burst into tears the moment he saw his mother.",
+      "definition_en": "to suddenly begin to cry",
+      "ipa": "/bɜːst ˈɪntə tɪəz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-1efc8605b8f924fa": {
+      "difficulty": "8.0",
+      "synonyms": ["make peace", "reconcile", "settle differences", "make up"],
+      "collocations": ["bury the hatchet", "decide to bury the hatchet", "finally bury the hatchet"],
+      "example_simple": "The two brothers decided to bury the hatchet and be friends again.",
+      "example_complex": "After years of rivalry, the two companies agreed to bury the hatchet and collaborate on the new project.",
+      "definition_en": "to end a quarrel or conflict and become friendly again",
+      "ipa": "/ˈberi ðə ˈhætʃɪt/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-45aa87a383563439": {
+      "difficulty": "6.0",
+      "synonyms": ["business is thriving", "business is flourishing", "trade is booming"],
+      "collocations": ["business is booming", "business is booming this year", "since then business has been booming"],
+      "example_simple": "Since the new road opened, business is booming at the café.",
+      "example_complex": "With demand at record highs and orders pouring in daily, business is booming for the small family firm.",
+      "definition_en": "a business is growing very quickly and making a lot of money",
+      "ipa": "/ˈbɪznəs ɪz ˈbuːmɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "4997bdd7-bdcc-4c70-bd49-6bdde2a934a1": {
+      "difficulty": "8.0",
+      "definition_en": "great skill and ability in running a business",
+      "ipa": "/ˈbɪznəs ˈpraʊɪs/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-bb44c653f6cc2b1e": {
+      "difficulty": "5.0",
+      "synonyms": ["work trip", "business travel", "corporate trip"],
+      "collocations": ["go on a business trip", "a short business trip", "return from a business trip"],
+      "example_simple": "My father is away on a business trip to Japan.",
+      "example_complex": "She spent most of the month on business trips, negotiating contracts with clients across three continents.",
+      "definition_en": "a journey made for work purposes rather than for pleasure",
+      "ipa": "/ˈbɪznəs trɪp/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-77a949d9b9aaf2cd": {
+      "synonyms": ["entrepreneur", "executive", "trader", "merchant"],
+      "collocations": ["a successful businessman", "a shrewd businesswoman", "a wealthy businessman"],
+      "example_simple": "Her uncle is a well-known businessman in the city.",
+      "example_complex": "As a self-made businesswoman, she built her retail empire from a single market stall.",
+      "definition_en": "a man or woman who works in business, especially at a senior level",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-9c397a23587ec776": {
+      "difficulty": "7.0",
+      "synonyms": ["busy streets", "lively streets", "crowded streets"],
+      "collocations": ["bustling streets", "the bustling streets of the city", "walk through bustling streets"],
+      "example_simple": "We wandered through the bustling streets of the old town.",
+      "example_complex": "The bustling streets of the market district were alive with vendors, shoppers and the aroma of street food.",
+      "definition_en": "streets that are full of busy, energetic activity and crowds of people",
+      "ipa": "/ˈbʌslɪŋ striːts/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-e566bd6f92c09b6b": {
+      "difficulty": "7.0",
+      "synonyms": ["were it not for", "except for", "if not for"],
+      "collocations": ["but for your help", "but for the rain", "but for one exception"],
+      "example_simple": "But for your help, I would have failed the exam.",
+      "example_complex": "But for a last-minute change in the weather, the outdoor ceremony would have gone ahead as planned.",
+      "definition_en": "except for; if it were not for a particular thing",
+      "ipa": "/bʌt fɔː/",
+      "part_of_speech": "phrase"
+    },
+    "2613bf25-ef4c-42ba-a2ff-1b9b8b1a8ea0": {
+      "difficulty": "8.0",
+      "definition_en": "to support, strengthen or reinforce something (or a structure that props up a wall)",
+      "ipa": "/ˈbʌtrɪs/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-c7e6a334b1290eae": {
+      "difficulty": "6.0",
+      "synonyms": ["get a bargain", "buy cheaply", "snap up a deal"],
+      "collocations": ["buy at a bargain", "buy at a bargain price", "pick it up at a bargain"],
+      "example_simple": "We bought the sofa at a bargain in the summer sale.",
+      "example_complex": "By waiting until the end of the season, she managed to buy the designer coat at a bargain far below its original price.",
+      "definition_en": "to buy something for much less than its usual price",
+      "ipa": "/baɪ ət ə ˈbɑːɡɪn/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-39dd4e46b65704a7": {
+      "difficulty": "8.0",
+      "synonyms": ["pay through the nose", "overpay", "pay a fortune"],
+      "collocations": ["buy it through the nose", "pay through the nose for it", "pay through the nose for tickets"],
+      "example_simple": "We had to pay through the nose for tickets to the concert.",
+      "example_complex": "Tourists who buy souvenirs near the landmark often pay through the nose for items sold far more cheaply elsewhere.",
+      "definition_en": "to pay a great deal more for something than it is really worth",
+      "ipa": "/baɪ ɪt θruː ðə nəʊz/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-50469c838fd2e229": {
+      "difficulty": "6.0",
+      "synonyms": ["definitely", "certainly", "of course", "please do"],
+      "collocations": ["by all means", "by all means, go ahead", "by all means feel free"],
+      "example_simple": "By all means, take a seat and make yourself comfortable.",
+      "example_complex": "If you feel the report needs another pair of eyes, by all means send it to the committee for review.",
+      "definition_en": "used to give permission or agree enthusiastically; certainly",
+      "ipa": "/baɪ ɔːl miːnz/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "chắc chắn rồi, cứ tự nhiên (dùng để cho phép hoặc đồng ý)"
+    },
+    "pubcol-w-35d7422cfa5a3da0": {
+      "difficulty": "6.0",
+      "synonyms": ["certainly", "of course", "please do", "definitely"],
+      "collocations": ["by all means", "by all means, come in", "by all means ask"],
+      "example_simple": "By all means, ask me if you have any questions.",
+      "example_complex": "By all means challenge the findings, but please base your objections on solid evidence.",
+      "definition_en": "used to give permission or agree willingly; certainly",
+      "ipa": "/baɪ ɔːl miːnz/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "cứ tự nhiên, chắc chắn rồi"
+    },
+    "pubcol-w-a7a06beb88d6a480": {
+      "difficulty": "7.0",
+      "ipa": "/baɪ ənd lɑːdʒ/"
+    },
+    "pubcol-w-ed1389010582e33f": {
+      "difficulty": "6.0",
+      "synonyms": ["perhaps", "possibly", "maybe"],
+      "collocations": ["by any chance", "do you by any chance know", "is there any chance"],
+      "example_simple": "Do you by any chance have a pen I could borrow?",
+      "example_complex": "I was wondering whether, by any chance, you might be free to review the draft before Friday.",
+      "definition_en": "used to ask politely whether something is possibly true or possible",
+      "ipa": "/baɪ ˈeni tʃɑːns/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-fdc524b154cc2672": {
+      "difficulty": "5.0",
+      "synonyms": ["accidentally", "by accident", "unexpectedly", "by coincidence"],
+      "collocations": ["by chance", "met by chance", "discovered it by chance"],
+      "example_simple": "I met an old friend by chance at the airport.",
+      "example_complex": "The scientist stumbled upon the crucial reaction by chance while investigating an entirely different problem.",
+      "definition_en": "in a way that is not planned or expected; accidentally",
+      "ipa": "/baɪ tʃɑːns/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-74bb706895940ef0": {
+      "difficulty": "7.0",
+      "ipa": "/baɪ kəmˈpærɪsn/"
+    },
+    "pubcol-w-53638dd0a2b4cc19": {
+      "difficulty": "6.0",
+      "synonyms": ["overwhelmingly", "easily", "considerably", "much"],
+      "collocations": ["by far the best", "by far the largest", "better by far"],
+      "example_simple": "This is by far the best restaurant in town.",
+      "example_complex": "Of all the proposals submitted, hers was by far the most detailed and persuasive.",
+      "definition_en": "by a great amount; used to emphasise a comparison",
+      "ipa": "/baɪ fɑː/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "hơn hẳn, vượt trội (dùng để nhấn mạnh so sánh)"
+    },
+    "pubcol-w-c99498f40b6af82b": {
+      "difficulty": "8.0",
+      "synonyms": ["intermittently", "irregularly", "in bursts", "sporadically"],
+      "collocations": ["by fits and starts", "progress by fits and starts", "work by fits and starts"],
+      "example_simple": "The old engine ran by fits and starts before it finally stopped.",
+      "example_complex": "The reform advanced by fits and starts, stalling for months before another burst of sudden progress.",
+      "definition_en": "happening in an irregular way, with sudden bursts of activity and long pauses",
+      "ipa": "/baɪ fɪts ənd stɑːts/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-db5bc9afe8cf9907": {
+      "difficulty": "5.0",
+      "synonyms": ["manually", "by hand", "not by machine"],
+      "collocations": ["made by hand", "washed by hand", "written by hand"],
+      "example_simple": "This sweater was knitted by hand.",
+      "example_complex": "Each piece of pottery is shaped and painted by hand, giving every item its own subtle imperfections.",
+      "definition_en": "done or made by a person rather than by a machine",
+      "ipa": "/baɪ hænd/",
+      "part_of_speech": "phrase"
+    }
+  }
+}

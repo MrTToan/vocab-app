@@ -1,0 +1,174 @@
+{
+  "meta": { "batch": "batch-087", "authored_by": "claude", "count": 25 },
+  "words": {
+    "11505fa2-fe4b-4cbd-a151-11e98f265a73": {
+      "difficulty": "7.0",
+      "definition_en": "famous or well known for something bad",
+      "ipa": "/nəʊˈtɔːriəs/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-1b259ed2295e3572": {
+      "difficulty": "6.0",
+      "synonyms": ["nutritious meals", "wholesome meals", "healthy meals"],
+      "collocations": ["prepare nourishing meals", "provide nourishing meals", "hot nourishing meals"],
+      "example_simple": "The shelter serves nourishing meals to families in need.",
+      "example_complex": "Nutritionists stress that regularly eating nourishing meals is far more effective than following short-term restrictive diets.",
+      "definition_en": "meals that supply the nutrients needed for good health",
+      "ipa": "/ˈnʌrɪʃɪŋ miːlz/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "những bữa ăn bổ dưỡng, giàu chất dinh dưỡng"
+    },
+    "cdd70f4a-4da9-4345-9d87-8201dd9987f7": {
+      "difficulty": "8.0",
+      "definition_en": "the skill and technique involved in writing novels",
+      "ipa": "/ˈnɒvəlɪsts krɑːft/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-bc57f8f3aebdf674": {
+      "difficulty": "5.0",
+      "synonyms": ["occasionally", "from time to time", "sometimes", "once in a while"],
+      "collocations": ["every now and then", "meet now and then", "happen now and then"],
+      "example_simple": "We still meet for coffee now and then.",
+      "example_complex": "Now and then she would pause her work to gaze out of the window, lost in thought.",
+      "definition_en": "occasionally; from time to time",
+      "ipa": "/ˌnaʊ ən ˈðen/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "thỉnh thoảng"
+    },
+    "pubcol-w-dac69869e68eee4d": {
+      "difficulty": "6.0",
+      "synonyms": ["not nearly", "far from", "not close to"],
+      "collocations": ["nowhere near enough", "nowhere near ready", "nowhere near as good"],
+      "example_simple": "We have nowhere near enough money to buy a house.",
+      "example_complex": "Despite months of preparation, the team was nowhere near ready to launch the product on schedule.",
+      "definition_en": "not at all close to; far from",
+      "ipa": "/ˌnəʊweə ˈnɪə/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "còn lâu mới, kém xa, không hề gần"
+    },
+    "df66398c-503e-4b37-90ce-6341cd9140c9": {
+      "difficulty": "8.0",
+      "definition_en": "the plural of nucleus; the central parts of atoms or cells",
+      "ipa": "/ˈnjuːkliaɪ/",
+      "part_of_speech": "noun"
+    },
+    "a90f6ed0-6b24-4a45-9421-c714be96d81e": {
+      "difficulty": "6.0"
+    },
+    "75f48352-4776-4f76-b1bc-e43f3306962f": {
+      "difficulty": "6.0",
+      "definition_en": "a place where elderly or sick people live and are cared for",
+      "ipa": "/ˈnɜːsɪŋ həʊm/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-3d78890d19174280": {
+      "synonyms": ["nourishing", "wholesome", "healthy"],
+      "collocations": ["nutritious food", "a nutritious diet", "highly nutritious"],
+      "example_simple": "Fruits and vegetables are very nutritious.",
+      "example_complex": "A balanced, nutritious diet can significantly reduce the risk of chronic illnesses later in life."
+    },
+    "pubcol-w-2830d7acf7340997": {
+      "synonyms": ["vow", "pledge", "promise"],
+      "collocations": ["take an oath", "swear an oath", "oath of office"],
+      "example_simple": "The witness took an oath to tell the truth.",
+      "example_complex": "Upon taking office, the president swore a solemn oath to uphold the constitution."
+    },
+    "pubcol-w-fab9b06392478ede": {
+      "synonyms": ["death notice", "eulogy", "memorial notice"],
+      "collocations": ["write an obituary", "read the obituary", "obituary column"],
+      "example_simple": "I read his obituary in the newspaper this morning.",
+      "example_complex": "The obituary paid tribute to a scientist whose quiet discoveries had reshaped modern medicine."
+    },
+    "pubcol-w-1615307cc4523f18": {
+      "synonyms": ["thing", "item", "article"],
+      "collocations": ["a solid object", "an everyday object", "identify the object"],
+      "example_simple": "There was a strange object on the table.",
+      "example_complex": "The museum displays everyday objects that reveal how ordinary people lived centuries ago.",
+      "definition_en": "a thing that can be seen or touched",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-f21c7d26621aa1cf": {
+      "difficulty": "6.0",
+      "synonyms": ["oppose", "protest against", "disagree with"],
+      "collocations": ["strongly object to", "object to the idea", "object to the plan"],
+      "example_simple": "Many people object to the new tax.",
+      "example_complex": "Residents strongly objected to the proposal to build a factory near their homes.",
+      "definition_en": "to express disapproval of or opposition to something",
+      "ipa": "/əbˈdʒekt tə ˈsʌmθɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-9cc3a6711033a17a": {
+      "synonyms": ["compulsory", "mandatory", "required"],
+      "collocations": ["obligatory for all", "an obligatory subject", "make it obligatory"],
+      "example_simple": "Attendance at the meeting is obligatory.",
+      "example_complex": "In many countries, secondary education is obligatory until the age of sixteen."
+    },
+    "pubcol-w-623a720972466b18": {
+      "synonyms": ["helpful", "accommodating", "cooperative", "courteous"],
+      "collocations": ["an obliging manner", "extremely obliging", "an obliging host"],
+      "example_simple": "The obliging waiter brought us extra napkins right away.",
+      "example_complex": "Our new neighbours proved remarkably obliging, offering to look after the house while we were away.",
+      "vi_meaning_correction": "sẵn lòng giúp đỡ, ân cần, chu đáo"
+    },
+    "pubcol-w-080e73990d22b9e3": {
+      "synonyms": ["offensive", "unpleasant", "objectionable", "repugnant"],
+      "collocations": ["obnoxious behaviour", "an obnoxious smell", "utterly obnoxious"],
+      "example_simple": "His obnoxious behaviour annoyed everyone at the party.",
+      "example_complex": "The comedian's routine crossed the line from edgy to downright obnoxious, alienating much of the audience."
+    },
+    "pubcol-w-3612d1d38455cf66": {
+      "synonyms": ["servile", "fawning", "sycophantic", "grovelling"],
+      "collocations": ["an obsequious manner", "obsequious flattery", "an obsequious smile"],
+      "example_simple": "The waiter was so obsequious that it made us uncomfortable.",
+      "example_complex": "His obsequious attempts to flatter the manager only made his colleagues trust him less."
+    },
+    "pubcol-w-4f4224f44ad29e46": {
+      "difficulty": "6.0",
+      "ipa": "/əbˈzɜːv/"
+    },
+    "pubcol-w-dc6960bc265ca7f8": {
+      "synonyms": ["outdated", "outmoded", "antiquated", "old-fashioned"],
+      "collocations": ["become obsolete", "obsolete technology", "render obsolete"],
+      "example_simple": "This software is now obsolete.",
+      "example_complex": "Rapid advances in technology can render expensive equipment obsolete within just a few years."
+    },
+    "pubcol-w-d17f8079e3532deb": {
+      "synonyms": ["barrier", "hurdle", "impediment", "hindrance"],
+      "collocations": ["overcome an obstacle", "a major obstacle", "an obstacle to progress"],
+      "example_simple": "Lack of money was the biggest obstacle to his plan.",
+      "example_complex": "Overcoming the bureaucratic obstacles proved far more difficult than solving the technical problems."
+    },
+    "pubcol-w-99f5ecea62b54b6b": {
+      "synonyms": ["maternity doctor", "OB-GYN", "birth specialist"],
+      "collocations": ["consult an obstetrician", "see an obstetrician", "an experienced obstetrician"],
+      "example_simple": "She visits her obstetrician once a month during her pregnancy.",
+      "example_complex": "The obstetrician recommended additional scans after detecting an irregularity in the pregnancy."
+    },
+    "pubcol-w-5a1746173282f677": {
+      "synonyms": ["stubborn", "headstrong", "inflexible", "unyielding"],
+      "collocations": ["an obstinate refusal", "remain obstinate", "an obstinate child"],
+      "example_simple": "He is too obstinate to admit he was wrong.",
+      "example_complex": "Her obstinate refusal to compromise eventually derailed the entire negotiation."
+    },
+    "pubcol-w-316f25585391752b": {
+      "synonyms": ["unhelpful", "uncooperative", "hindering", "blocking"],
+      "collocations": ["obstructive behaviour", "deliberately obstructive", "obstructive tactics"],
+      "example_simple": "The manager was obstructive and refused to answer our questions.",
+      "example_complex": "Rather than assisting the inquiry, several officials adopted deliberately obstructive tactics to delay it."
+    },
+    "pubcol-w-11b0b7df4e2c7b6c": {
+      "synonyms": ["sometimes", "now and then", "from time to time", "at times"],
+      "collocations": ["occasionally visit", "only occasionally", "occasionally happen"],
+      "example_simple": "We occasionally go out for dinner.",
+      "example_complex": "Although she works from home, she occasionally travels abroad to meet important clients.",
+      "definition_en": "sometimes but not often",
+      "part_of_speech": "adverb"
+    },
+    "61e06e4a-10a2-4d44-b257-6880465a7b87": {
+      "difficulty": "8.0",
+      "definition_en": "the percentage of available rooms or space that is being used",
+      "ipa": "/ˈɒkjəpənsi reɪt/",
+      "part_of_speech": "phrase"
+    }
+  }
+}

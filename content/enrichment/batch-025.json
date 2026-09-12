@@ -1,0 +1,206 @@
+{
+  "meta": { "batch": "batch-025", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-cb2743d57b7dba65": {
+      "difficulty": "7.0",
+      "synonyms": ["fresh start", "second chance", "opportunity to reform", "new beginning"],
+      "collocations": ["give someone a chance of rehabilitation", "offer a chance of rehabilitation", "a real chance of rehabilitation"],
+      "example_simple": "The programme gives young offenders a chance of rehabilitation.",
+      "example_complex": "Advocates argue that education in prisons offers inmates a genuine chance of rehabilitation rather than mere punishment.",
+      "definition_en": "an opportunity to reform and start life again after wrongdoing or misfortune",
+      "ipa": "/tʃɑːns əv ˌriːhəˌbɪlɪˈteɪʃən/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-a49f240f14bc6d85": {
+      "difficulty": "5.0",
+      "synonyms": ["improve", "get better", "turn around", "look up"],
+      "collocations": ["a change for the better", "take a change for the better", "mark a change for the better"],
+      "example_simple": "Since he started exercising, his health has been a change for the better.",
+      "example_complex": "The new management brought a welcome change for the better, boosting both morale and productivity across the company.",
+      "definition_en": "an improvement; a shift to a more positive or desirable state",
+      "ipa": "/tʃeɪndʒ fə ðə ˈbetə/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-5529ac57a6592a87": {
+      "difficulty": "5.0",
+      "synonyms": ["deteriorate", "worsen", "decline", "go downhill"],
+      "collocations": ["a change for the worse", "take a change for the worse", "a dramatic change for the worse"],
+      "example_simple": "After the accident, his mood took a change for the worse.",
+      "example_complex": "Economists warned that the sudden policy shift could trigger a change for the worse in the fragile housing market.",
+      "definition_en": "a deterioration; a shift to a more negative or undesirable state",
+      "ipa": "/tʃeɪndʒ fə ðə ˈwɜːs/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-7e758e609486c7a1": {
+      "difficulty": "7.0",
+      "synonyms": ["change ownership", "be sold", "pass to a new owner", "be transferred"],
+      "collocations": ["the property changed hands", "money changed hands", "the business changed hands"],
+      "example_simple": "The old shop has changed hands several times this year.",
+      "example_complex": "Rumours suggested that large sums of money had changed hands before the contract was finally awarded.",
+      "definition_en": "to pass from one owner or possessor to another",
+      "ipa": "/tʃeɪndʒ hændz/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-f8d60eb483254c57": {
+      "difficulty": "8.0",
+      "synonyms": ["change tack midway", "switch strategy midway", "reverse course", "shift plans halfway"],
+      "collocations": ["change horses in midstream", "risky to change horses in midstream", "don't change horses in midstream"],
+      "example_simple": "It's too late to change horses in midstream now that the project has started.",
+      "example_complex": "Replacing the lead contractor at this stage would mean changing horses in midstream, and the board feared the delays it might cause.",
+      "definition_en": "to change to a different method, leader, or plan in the middle of an activity",
+      "ipa": "/tʃeɪndʒ ˈhɔːsɪz ɪn ˈmɪdstriːm/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-7922ff8959e558a9": {
+      "difficulty": "5.0",
+      "synonyms": ["alteration in something", "shift in something", "modification of something", "variation in something"],
+      "collocations": ["a change in temperature", "a change in attitude", "a noticeable change in something"],
+      "example_simple": "There has been a big change in the weather this week.",
+      "example_complex": "Researchers detected a subtle change in consumer behaviour following the introduction of the new tax.",
+      "definition_en": "an alteration or difference in a particular thing",
+      "ipa": "/tʃeɪndʒ ɪn ˈsʌmθɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-a30901f81420c9c8": {
+      "difficulty": "7.0",
+      "synonyms": ["change one's mind", "reverse one's opinion", "backtrack", "do a U-turn"],
+      "collocations": ["suddenly change your tune", "sing a different tune", "soon changed his tune"],
+      "example_simple": "He said he hated the city, but he changed his tune after visiting.",
+      "example_complex": "Once the profits started rolling in, the sceptical investors quickly sang a different tune about the venture.",
+      "definition_en": "to change one's opinion, attitude, or manner, often abruptly",
+      "ipa": "/tʃeɪndʒ jɔː tjuːn/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-fa4cc7e945228fc7": {
+      "difficulty": "5.0",
+      "synonyms": ["personality", "nature", "temperament", "disposition"],
+      "collocations": ["a strong character", "a fictional character", "build character"],
+      "example_simple": "She has a kind and honest character.",
+      "example_complex": "The novel's protagonist is a deeply flawed character whose moral struggles drive the entire plot.",
+      "definition_en": "the set of qualities that make a person, place, or thing distinctive; a person in a story",
+      "ipa": "/ˈkærəktə/",
+      "part_of_speech": "noun",
+      "vi_meaning_correction": "tính cách, nhân vật"
+    },
+    "pubcol-w-88ae1dfa60936361": {
+      "synonyms": ["describe", "define", "typify", "distinguish"],
+      "collocations": ["characterise a period", "be characterised by", "characterise someone as"],
+      "example_simple": "We can characterise the film as a slow but moving drama.",
+      "example_complex": "Historians characterise the era as one marked by rapid industrialisation and widening social inequality."
+    },
+    "270ea1c0-0d9f-41ca-a490-cd9e886bfda4": {
+      "difficulty": "7.0",
+      "definition_en": "to describe the distinctive nature of something; to be a typical feature of",
+      "ipa": "/ˈkærəktəraɪz/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-6459230401e5cbfd": {
+      "difficulty": "6.0",
+      "synonyms": ["accuse someone of", "indict someone for", "blame someone for", "prosecute someone for"],
+      "collocations": ["charge someone with theft", "charge someone with murder", "formally charge someone with"],
+      "example_simple": "The police charged him with dangerous driving.",
+      "example_complex": "Prosecutors charged the executive with fraud after a lengthy investigation into the firm's accounts.",
+      "definition_en": "to formally accuse someone of committing a crime or offence",
+      "ipa": "/tʃɑːdʒ ˈsʌmbədi wɪð ˈsʌmθɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-1da1c3896e95c8e6": {
+      "difficulty": "6.0",
+      "synonyms": ["be accused of a crime", "be indicted", "face charges", "be prosecuted"],
+      "collocations": ["charged with a crime", "wrongly charged with a crime", "be charged with a serious crime"],
+      "example_simple": "He was charged with a crime he did not commit.",
+      "example_complex": "Those charged with a crime are presumed innocent until proven guilty in a court of law.",
+      "definition_en": "to be formally accused of committing an offence against the law",
+      "ipa": "/tʃɑːdʒ wɪð ə kraɪm/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-6dd2c32f2844f046": {
+      "difficulty": "8.0",
+      "synonyms": ["pursue impossible dreams", "chase illusions", "pursue fantasies", "aim for the unattainable"],
+      "collocations": ["stop chasing rainbows", "always chasing rainbows", "chase rainbows instead of"],
+      "example_simple": "Stop chasing rainbows and set a realistic goal.",
+      "example_complex": "Critics accused the startup of chasing rainbows, pouring millions into a technology that experts deemed unfeasible.",
+      "definition_en": "to pursue unrealistic or impossible goals",
+      "ipa": "/tʃeɪs ˈreɪnbəʊz/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-975b385407edcc66": {
+      "difficulty": "5.0",
+      "synonyms": ["check messages", "read email", "look at one's inbox", "go through email"],
+      "collocations": ["check e-mail regularly", "check your e-mail", "check e-mail in the morning"],
+      "example_simple": "I check my e-mail as soon as I wake up.",
+      "example_complex": "Many professionals feel compelled to check e-mail constantly, blurring the line between work and personal time.",
+      "definition_en": "to look at one's electronic mailbox for new messages",
+      "ipa": "/tʃek ˈiːmeɪl/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-cdb580e20d560228": {
+      "difficulty": "5.0",
+      "ipa": "/tʃek aʊt/"
+    },
+    "c9f78a6f-239c-4b9d-b3de-c6555ce133c4": {
+      "difficulty": "6.0",
+      "definition_en": "a bank account from which money can be withdrawn on demand, usually by cheque or debit card",
+      "ipa": "/ˈtʃekɪŋ əˌkaʊnt/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-1a65ba78828fd94f": {
+      "difficulty": "5.0",
+      "ipa": "/tʃɪər ʌp/"
+    },
+    "d7b58adb-dc14-47fc-94ec-2f6e38a57438": {
+      "difficulty": "7.0",
+      "definition_en": "chemical substances used to destroy or control unwanted plants and weeds",
+      "ipa": "/ˈkemɪkəl ˈhɜːbɪsaɪdz/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-d420fb2a0317d24f": {
+      "synonyms": ["babysitter", "nanny", "carer", "au pair"],
+      "collocations": ["a registered childminder", "hire a childminder", "leave the children with a childminder"],
+      "example_simple": "We leave our daughter with a childminder while we are at work.",
+      "example_complex": "Finding a reliable, qualified childminder proved far harder than the young couple had expected."
+    },
+    "pubcol-w-27c6a9382600370d": {
+      "difficulty": "6.0",
+      "ipa": "/tʃɪl aʊt/"
+    },
+    "pubcol-w-11d56afd27e2a879": {
+      "synonyms": ["ring", "peal", "toll", "sound"],
+      "collocations": ["the bells chime", "a clock chimes", "chime the hour"],
+      "example_simple": "The church bells chime every hour.",
+      "example_complex": "As the grandfather clock chimed midnight, the guests fell silent in anticipation."
+    },
+    "pubcol-w-55fdf4753e6408c4": {
+      "synonyms": ["chocolate lover", "chocolate addict", "sweet tooth", "chocophile"],
+      "collocations": ["a self-confessed chocaholic", "a hopeless chocaholic", "a real chocaholic"],
+      "example_simple": "My sister is a chocaholic who eats chocolate every day.",
+      "example_complex": "As a lifelong chocaholic, she could distinguish the finest cocoa from mass-produced bars in a single bite."
+    },
+    "pubcol-w-7bf351d21fd38383": {
+      "difficulty": "6.0",
+      "synonyms": ["select a major", "pick a field of study", "declare a major", "specialise in"],
+      "collocations": ["choose a major", "choose a concentration", "choose a major in economics"],
+      "example_simple": "In her second year, she had to choose a major.",
+      "example_complex": "Undergraduates are encouraged to explore several disciplines before they choose a major or concentration that suits their goals.",
+      "definition_en": "to select a main subject or area of specialisation at university",
+      "ipa": "/tʃuːz ə ˈmeɪdʒə/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-d25fc20f98196955": {
+      "difficulty": "6.0",
+      "synonyms": ["approach", "draw near", "get close", "come near"],
+      "collocations": ["come close to winning", "come close to success", "come dangerously close"],
+      "example_simple": "They came close to winning the match but lost in the end.",
+      "example_complex": "The negotiators came close to a historic agreement before talks collapsed at the final hour.",
+      "definition_en": "to almost reach or achieve something; to draw near",
+      "ipa": "/kəm kləʊs/",
+      "part_of_speech": "phrase"
+    },
+    "3cf6a0e6-23cf-4668-873c-09f8d7a94c92": {
+      "difficulty": "8.0",
+      "definition_en": "the natural internal cycles that regulate the body's sleep-wake pattern over roughly 24 hours",
+      "ipa": "/sɜːˈkeɪdiən ˈrɪðəmz/",
+      "part_of_speech": "noun"
+    }
+  }
+}

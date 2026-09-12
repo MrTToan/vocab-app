@@ -1,0 +1,179 @@
+{
+  "meta": { "batch": "batch-084", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-19912115ef7d956c": {
+      "difficulty": "7.0",
+      "synonyms": ["money washing", "financial concealment", "laundering"],
+      "collocations": ["money laundering scheme", "combat money laundering", "money laundering charges"],
+      "example_simple": "The bank was fined for helping criminals with money laundering.",
+      "example_complex": "Investigators uncovered an elaborate money laundering operation that funneled illicit profits through a chain of shell companies.",
+      "definition_en": "the crime of moving illegally obtained money through legitimate businesses to hide its true source",
+      "ipa": "/ˈmʌni ˌlɔːndərɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-9601258974f00b94": {
+      "synonyms": ["black-and-white", "single-colour", "monochromatic"],
+      "collocations": ["monochrome photograph", "monochrome design", "monochrome palette"],
+      "example_simple": "She took a beautiful monochrome photo of the old bridge.",
+      "example_complex": "The designer chose a monochrome scheme, relying on subtle shifts in tone rather than colour to create depth."
+    },
+    "3beb69b1-f7d6-49da-b63b-5c9b46d5e382": {
+      "difficulty": "8.0",
+      "definition_en": "the practice or state of being married to, or having a relationship with, only one partner at a time",
+      "ipa": "/məˈnɒɡəmi/",
+      "part_of_speech": "noun"
+    },
+    "d7ae323c-69b6-4ffe-b810-4c0a31c0ad8a": {
+      "difficulty": "7.0",
+      "definition_en": "a large single upright block of stone, or a large and uniform organization that resists change",
+      "ipa": "/ˈmɒnəlɪθ/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-9c060d094ecd6f53": {
+      "synonyms": ["dull", "tedious", "repetitive", "boring"],
+      "collocations": ["monotonous voice", "monotonous routine", "monotonous work"],
+      "example_simple": "The long, monotonous drive made everyone in the car sleepy.",
+      "example_complex": "After years of the same monotonous tasks, she finally quit to look for work that felt more meaningful."
+    },
+    "56bd95f8-ef5f-49fe-a48e-77106a77ac0e": {
+      "difficulty": "8.0",
+      "definition_en": "the arrangement of ropes, chains or anchors used to secure a vessel or floating structure in place",
+      "ipa": "/ˈmʊərɪŋ kənˌfɪɡjəˈreɪʃn/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-77e1620e68926d63": {
+      "difficulty": "5.0",
+      "synonyms": ["approximately", "roughly", "about", "nearly"],
+      "collocations": ["more or less finished", "more or less the same", "more or less agree"],
+      "example_simple": "The work is more or less finished, so we can relax a little.",
+      "example_complex": "Their two proposals were more or less identical, differing only in a few minor details.",
+      "definition_en": "approximately, or almost completely",
+      "ipa": "/ˌmɔːr ɔː ˈles/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-5331e32738ebf135": {
+      "difficulty": "6.0",
+      "ipa": "/mɔːrˈəʊvə/"
+    },
+    "38143634-bb7b-4a15-84a7-2ce58d524361": {
+      "difficulty": "9.0",
+      "definition_en": "molecules or factors within a cell that direct how an organism's form and structure develop",
+      "ipa": "/ˌmɔːfə(ʊ)dʒəˈnetɪk dɪˈtɜːmɪnənts/",
+      "part_of_speech": "phrase"
+    },
+    "ed7cdb01-3394-4186-a777-bc49d809b0cb": {
+      "difficulty": "7.0",
+      "definition_en": "human leaders who, unlike gods, are subject to death and human limitations",
+      "ipa": "/ˈmɔːtl ˈruːləz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-53a64aeee772e406": {
+      "synonyms": ["home loan", "loan", "lien"],
+      "collocations": ["take out a mortgage", "pay off the mortgage", "mortgage repayments"],
+      "example_simple": "They took out a mortgage to buy their first house.",
+      "example_complex": "Rising interest rates left many families struggling to keep up with their monthly mortgage repayments."
+    },
+    "fcc65ae4-33fd-4953-9641-b9b2aac5852c": {
+      "difficulty": "7.0",
+      "definition_en": "a picture or pattern made from small pieces of coloured stone, glass or tile",
+      "ipa": "/məʊˈzeɪɪk/",
+      "part_of_speech": "noun"
+    },
+    "c694ded5-5d24-4b2d-ac0a-5a76a9a39d98": {
+      "difficulty": "5.0",
+      "definition_en": "a flying insect similar to a butterfly that is usually active at night",
+      "ipa": "/mɒθ/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-7c6d7770eef9dbc6": {
+      "difficulty": "6.0",
+      "synonyms": ["travel sickness", "car sickness", "nausea"],
+      "collocations": ["suffer from motion sickness", "motion sickness pills", "prevent motion sickness"],
+      "example_simple": "I get motion sickness whenever I read in the car.",
+      "example_complex": "To ease her motion sickness on the ferry, she kept her eyes fixed on the distant horizon.",
+      "definition_en": "the feeling of nausea and dizziness caused by movement, such as travelling in a vehicle, boat or plane",
+      "ipa": "/ˈməʊʃn ˌsɪknəs/",
+      "part_of_speech": "noun",
+      "vi_meaning_correction": "say tàu xe (buồn nôn, chóng mặt khi di chuyển bằng xe, tàu, máy bay)"
+    },
+    "31c33c9e-5418-47e1-ab6a-90277f06e73a": {
+      "difficulty": "6.0",
+      "definition_en": "the ability to make coordinated movements using the muscles of the body",
+      "ipa": "/ˈməʊtə skɪl/",
+      "part_of_speech": "phrase"
+    },
+    "ad3b86a4-6dcc-410c-bbb7-0c3ac228da38": {
+      "difficulty": "6.0",
+      "definition_en": "a person who drives a car",
+      "ipa": "/ˈməʊtərɪst/",
+      "part_of_speech": "noun"
+    },
+    "2e3a1eb1-3d44-4272-b688-f84bdf9a194b": {
+      "difficulty": "9.0",
+      "definition_en": "the slender tail of a mouse, or a small plant whose flower spike resembles one",
+      "ipa": "/ˈmaʊsteɪl/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-a5b126f851f4c773": {
+      "synonyms": ["shy", "timid", "self-effacing", "dull"],
+      "collocations": ["mousy hair", "a mousy little woman", "mousy and quiet"],
+      "example_simple": "She was a mousy girl who rarely spoke in class.",
+      "example_complex": "Beneath his mousy, unassuming manner lay a surprisingly sharp and ambitious mind."
+    },
+    "pubcol-w-a3703f67a8275fa8": {
+      "difficulty": "5.0",
+      "synonyms": ["dash", "hurry", "race", "speed"],
+      "collocations": ["move rapidly forward", "move rapidly away", "move rapidly through"],
+      "example_simple": "The rabbit moved rapidly across the field when it saw the dog.",
+      "example_complex": "As the storm approached, the clouds moved rapidly across the sky and the temperature dropped.",
+      "definition_en": "to travel or change position very quickly",
+      "ipa": "/muːv ˈræpɪdli/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-3552189d19d11e24": {
+      "difficulty": "6.0",
+      "synonyms": ["moving in unison", "flocking together", "moving as one"],
+      "collocations": ["birds moving together in the same direction", "fish moving together in the same direction", "a flock moving together in the same direction"],
+      "example_simple": "The birds were moving together in the same direction across the sky.",
+      "example_complex": "Watching the whole shoal moving together in the same direction, the divers were amazed at how the fish acted as a single body.",
+      "definition_en": "travelling as a coordinated group along one shared path, like a flock or shoal",
+      "ipa": "/ˈmuːvɪŋ təˈɡeðər ɪn ðə seɪm dəˈrekʃn/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "di chuyển cùng hướng theo đàn (bầy chim, đàn cá bay/bơi cùng nhau)"
+    },
+    "07972d25-d20f-4cf6-9112-3f2ed1d4dcb3": {
+      "difficulty": "5.0",
+      "definition_en": "soft, wet earth",
+      "ipa": "/mʌd/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-78cbb16567098757": {
+      "synonyms": ["humid", "sultry", "muggy", "close", "sticky"],
+      "collocations": ["muggy weather", "a muggy afternoon", "hot and muggy"],
+      "example_simple": "It was so muggy that my shirt stuck to my back.",
+      "example_complex": "The muggy summer air hung heavily over the city, making even a short walk feel exhausting."
+    },
+    "pubcol-w-d8cca7b1c7b9c4b9": {
+      "difficulty": "7.0",
+      "synonyms": ["humid weather", "sultry weather", "close weather"],
+      "collocations": ["muggy weather", "sultry summer weather", "hot and sultry weather"],
+      "example_simple": "The muggy, sultry weather made it hard to sleep at night.",
+      "example_complex": "During the muggy, sultry weather of late July, the whole town moved slowly, seeking shade wherever it could.",
+      "definition_en": "warm, damp and uncomfortably humid weather",
+      "ipa": "/ˈmʌɡi ˈsʌltri ˈweðə/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-5a400d295a5a9224": {
+      "synonyms": ["polyglot", "many-tongued", "bilingual"],
+      "collocations": ["multilingual country", "multilingual staff", "multilingual education"],
+      "example_simple": "Switzerland is a multilingual country with several official languages.",
+      "example_complex": "The company hired a multilingual team so that it could support customers in more than a dozen languages."
+    },
+    "9dd24364-b8d3-4d3d-8cc3-720835a44bb3": {
+      "difficulty": "7.0",
+      "definition_en": "a very large number of people or things",
+      "ipa": "/ˈmʌltɪtjuːd/",
+      "part_of_speech": "noun"
+    }
+  }
+}

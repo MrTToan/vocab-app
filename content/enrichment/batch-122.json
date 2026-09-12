@@ -1,0 +1,264 @@
+{
+  "meta": { "batch": "batch-122", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-5d4b0916fd29964e": {
+      "difficulty": "8.0",
+      "part_of_speech": "idiom",
+      "ipa": "/teɪk maɪ hæt ɒf tə ˌsʌmbədi/",
+      "definition_en": "to express great admiration or respect for someone's achievement",
+      "synonyms": ["admire", "salute", "applaud", "commend"],
+      "collocations": ["really take my hat off to", "have to take my hat off", "take my hat off to them"],
+      "example_simple": "I take my hat off to her for finishing the marathon.",
+      "example_complex": "You have to take your hat off to a team that rebuilt the whole system in just three weeks.",
+      "vi_meaning_correction": "ngưỡng mộ, khâm phục ai đó"
+    },
+    "pubcol-w-3b2484e652f11aee": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk nəʊts/",
+      "definition_en": "to write down important points so you can remember them later",
+      "synonyms": ["jot down", "record", "note", "write down"],
+      "collocations": ["take detailed notes", "take notes in class", "take careful notes"],
+      "example_simple": "I always take notes during the lesson.",
+      "example_complex": "Taking notes in your own words helps you understand and remember the material far better."
+    },
+    "pubcol-w-54a7801b76070184": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk nəʊts, raɪt daʊn/",
+      "definition_en": "to write down information in short form to keep a record of it",
+      "synonyms": ["jot down", "note down", "record", "write down"],
+      "collocations": ["take notes and write down", "write down key points", "note down the details"],
+      "example_simple": "She took notes and wrote down the phone number quickly.",
+      "example_complex": "As the speaker talked, I took notes, writing down only the ideas I might forget later."
+    },
+    "pubcol-w-6bd163d94ceca500": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk ˈnəʊtɪs əv/",
+      "definition_en": "to pay attention to someone or something",
+      "synonyms": ["notice", "heed", "pay attention to", "observe"],
+      "collocations": ["take notice of the warning", "hardly take any notice", "take notice of details"],
+      "example_simple": "Please take notice of the signs at the entrance.",
+      "example_complex": "Employers soon began to take notice of her consistently excellent results."
+    },
+    "pubcol-w-7c0ed89ab3c516c0": {
+      "difficulty": "5.0",
+      "ipa": "/teɪk ɒf/"
+    },
+    "pubcol-w-e6baac54fa0c1b06": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk əˈfens/",
+      "definition_en": "to feel hurt or insulted by something someone says or does",
+      "synonyms": ["be offended", "be insulted", "resent", "be upset"],
+      "collocations": ["take offence at a remark", "easily take offence", "take offence quickly"],
+      "example_simple": "Don't take offence, but I think you're wrong.",
+      "example_complex": "He tends to take offence at the mildest criticism, which makes feedback difficult.",
+      "vi_meaning_correction": "phật ý, cảm thấy bị xúc phạm"
+    },
+    "pubcol-w-2041aa7008635d24": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk aʊt/",
+      "definition_en": "to remove something from a place, or to take someone out somewhere",
+      "synonyms": ["remove", "extract", "withdraw", "bring out"],
+      "collocations": ["take out the rubbish", "take money out", "take out a book"],
+      "example_simple": "Can you take out the trash before you leave?",
+      "example_complex": "She took out her notebook and began writing down everything the doctor said."
+    },
+    "pubcol-w-0831dad1f79980ae": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk aʊt ɪnˈʃʊərəns ɒn/",
+      "definition_en": "to buy an insurance policy to protect against loss or damage to something",
+      "synonyms": ["insure", "cover", "get insurance on"],
+      "collocations": ["take out insurance on the house", "take out insurance on your car", "take out full insurance"],
+      "example_simple": "They took out insurance on their new home.",
+      "example_complex": "Before shipping the artwork abroad, the gallery took out insurance on every piece in the collection.",
+      "vi_meaning_correction": "mua bảo hiểm cho (thứ gì đó)"
+    },
+    "pubcol-w-8348c413705a6c63": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk aʊt ə ləʊn/",
+      "definition_en": "to borrow money from a bank or lender, usually to be repaid over time",
+      "synonyms": ["borrow", "get a loan", "secure financing"],
+      "collocations": ["take out a loan", "take out a bank loan", "take out a large loan"],
+      "example_simple": "They took out a loan to buy a car.",
+      "example_complex": "Many students have to take out a loan to cover the rising cost of university tuition."
+    },
+    "pubcol-w-484d8f4b7815d176": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk pɑːt ɪn/",
+      "definition_en": "to be involved in an activity or event together with others",
+      "synonyms": ["participate in", "join in", "engage in", "get involved in"],
+      "collocations": ["take part in a competition", "take part in the discussion", "actively take part in"],
+      "example_simple": "Everyone can take part in the game.",
+      "example_complex": "Thousands of volunteers took part in the clean-up campaign across the city."
+    },
+    "pubcol-w-19e57fb7f44822d2": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk pleɪs/",
+      "definition_en": "to happen, especially as a planned event",
+      "synonyms": ["happen", "occur", "be held", "come about"],
+      "collocations": ["the event takes place", "take place next week", "where does it take place"],
+      "example_simple": "The wedding will take place on Saturday.",
+      "example_complex": "The negotiations took place behind closed doors, so few details were made public."
+    },
+    "pubcol-w-25ef114e948bc556": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk pleɪs/",
+      "definition_en": "to happen or occur, usually as a scheduled or arranged event",
+      "synonyms": ["happen", "occur", "be held", "come about"],
+      "collocations": ["take place annually", "take place in the hall", "when will it take place"],
+      "example_simple": "The meeting took place in the main hall.",
+      "example_complex": "The festival takes place every autumn and draws visitors from around the world.",
+      "vi_meaning_correction": "diễn ra, xảy ra"
+    },
+    "pubcol-w-db92934c12b68579": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk praɪˈɒrəti ˌəʊvə ˈsʌmθɪŋ/",
+      "definition_en": "to be treated as more important than something else",
+      "synonyms": ["outweigh", "come first", "take precedence over", "override"],
+      "collocations": ["take priority over everything", "safety takes priority", "take clear priority over"],
+      "example_simple": "My family takes priority over work.",
+      "example_complex": "In an emergency, patient safety must take priority over all other concerns."
+    },
+    "pubcol-w-c6e2c5d42c96db0d": {
+      "difficulty": "8.0",
+      "part_of_speech": "idiom",
+      "ipa": "/teɪk ˌsʌmbədi baɪ stɔːm/",
+      "definition_en": "to be extremely successful very quickly and win the admiration of people",
+      "synonyms": ["captivate", "win over", "conquer", "dazzle"],
+      "collocations": ["take the world by storm", "take the industry by storm", "take audiences by storm"],
+      "example_simple": "The new band took the country by storm.",
+      "example_complex": "Her debut novel took the literary world by storm, selling a million copies within months.",
+      "vi_meaning_correction": "gây tiếng vang lớn, chinh phục nhanh chóng"
+    },
+    "pubcol-w-0762983fbcd5bc73": {
+      "difficulty": "6.0",
+      "part_of_speech": "idiom",
+      "ipa": "/teɪk ˌsʌmbədi baɪ səˈpraɪz/",
+      "definition_en": "to happen unexpectedly so that someone is not prepared",
+      "synonyms": ["surprise", "catch off guard", "startle", "astonish"],
+      "collocations": ["take them by surprise", "completely take by surprise", "the news took me by surprise"],
+      "example_simple": "The sudden rain took us by surprise.",
+      "example_complex": "The announcement took the whole department by surprise, as no one had expected such a change.",
+      "vi_meaning_correction": "làm ai đó ngạc nhiên, bất ngờ"
+    },
+    "pubcol-w-0803214e730b73d5": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/teɪk ˌsʌmbədi fər ə raɪd/",
+      "definition_en": "to deceive or cheat someone, often for money",
+      "synonyms": ["deceive", "cheat", "trick", "con"],
+      "collocations": ["take you for a ride", "get taken for a ride", "take customers for a ride"],
+      "example_simple": "The salesman took them for a ride.",
+      "example_complex": "By the time she realised the investment was fake, she knew she had been taken for a ride.",
+      "vi_meaning_correction": "lừa dối, lừa gạt ai đó"
+    },
+    "pubcol-w-d90f4a6b58bf0213": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/teɪk ˌsʌmbədi ɪn/",
+      "definition_en": "to deceive or trick someone into believing something false",
+      "synonyms": ["deceive", "fool", "trick", "mislead"],
+      "collocations": ["completely take in", "be taken in by", "take in the audience"],
+      "example_simple": "Don't let his charm take you in.",
+      "example_complex": "So many people were taken in by the scam that the losses ran into millions.",
+      "vi_meaning_correction": "lừa gạt, đánh lừa ai đó"
+    },
+    "pubcol-w-b829e689193fa343": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/teɪk ˌsʌmbədi ɔː ˈsʌmθɪŋ fə ˈɡrɑːntɪd/",
+      "definition_en": "to fail to appreciate someone or something because you are too used to them",
+      "synonyms": ["undervalue", "underappreciate", "overlook", "assume"],
+      "collocations": ["take someone for granted", "take it for granted that", "never take for granted"],
+      "example_simple": "We often take our parents for granted.",
+      "example_complex": "After living abroad, she realised how much she had taken the little comforts of home for granted.",
+      "vi_meaning_correction": "không biết quý trọng, xem là điều hiển nhiên"
+    },
+    "pubcol-w-6f41f2bd463219bf": {
+      "difficulty": "8.0",
+      "part_of_speech": "idiom",
+      "ipa": "/teɪk ˈsʌmθɪŋ wɪð ə pɪntʃ əv sɔːlt/",
+      "definition_en": "to not fully believe something because it may not be true",
+      "synonyms": ["be sceptical of", "doubt", "distrust", "question"],
+      "collocations": ["take it with a pinch of salt", "take his claims with a pinch of salt", "should be taken with a pinch of salt"],
+      "example_simple": "Take his advice with a pinch of salt.",
+      "example_complex": "Online reviews can be helpful, but the more extreme ones should be taken with a pinch of salt.",
+      "vi_meaning_correction": "không tin hoàn toàn, hoài nghi về điều gì đó"
+    },
+    "pubcol-w-d5703a34bbd7c9d5": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk ˈsʌmθɪŋ ˈɪntə əˈkaʊnt/",
+      "definition_en": "to consider something when making a decision or judgement",
+      "synonyms": ["consider", "factor in", "bear in mind", "allow for"],
+      "collocations": ["take into account", "take all factors into consideration", "take into account the cost"],
+      "example_simple": "We must take the weather into account.",
+      "example_complex": "When setting the deadline, the manager took into account the team's current workload and available resources.",
+      "vi_meaning_correction": "cân nhắc, tính đến, xem xét điều gì đó"
+    },
+    "pubcol-w-4b2f2ef61224ab30": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk ðə liːd/",
+      "definition_en": "to take charge or move into first position ahead of others",
+      "synonyms": ["lead", "head", "spearhead", "go first"],
+      "collocations": ["take the lead in the race", "take the lead on a project", "take a clear lead"],
+      "example_simple": "She took the lead in the group project.",
+      "example_complex": "The company took the lead in developing greener technology long before its rivals did.",
+      "vi_meaning_correction": "dẫn đầu, giữ vai trò lãnh đạo"
+    },
+    "pubcol-w-445c4b59ea7937ce": {
+      "difficulty": "8.0",
+      "part_of_speech": "idiom",
+      "ipa": "/teɪk ðə ˈmɪki/",
+      "definition_en": "to make fun of someone in a teasing way (informal British English)",
+      "synonyms": ["tease", "mock", "make fun of", "poke fun at"],
+      "collocations": ["take the mickey out of", "stop taking the mickey", "just taking the mickey"],
+      "example_simple": "Stop taking the mickey out of my accent.",
+      "example_complex": "The comedian gently took the mickey out of the politicians in the front row.",
+      "vi_meaning_correction": "trêu chọc, chế giễu ai đó"
+    },
+    "pubcol-w-83b59521284032ce": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk ði ˌɒpəˈtjuːnəti/",
+      "definition_en": "to make use of a chance to do something",
+      "synonyms": ["seize the chance", "grasp the opportunity", "make use of", "capitalise on"],
+      "collocations": ["take the opportunity to thank", "take every opportunity", "take the opportunity while it lasts"],
+      "example_simple": "I'd like to take the opportunity to thank everyone.",
+      "example_complex": "She took the opportunity of the quiet afternoon to catch up on the work she had fallen behind on.",
+      "vi_meaning_correction": "nắm lấy cơ hội, tận dụng cơ hội"
+    },
+    "pubcol-w-9f38b039d0d707b7": {
+      "difficulty": "8.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk tə flaɪt/",
+      "definition_en": "to run away or escape quickly, especially from danger",
+      "synonyms": ["flee", "run away", "escape", "bolt"],
+      "collocations": ["take to flight at the sight of", "forced to take to flight", "take to flight in panic"],
+      "example_simple": "The birds took to flight when the dog barked.",
+      "example_complex": "At the first sound of gunfire, the crowd took to flight, scattering in every direction.",
+      "vi_meaning_correction": "bỏ chạy, tháo chạy"
+    },
+    "pubcol-w-96d68f75a24f6d5a": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk tɜːnz/",
+      "definition_en": "to do something one after another rather than all at once",
+      "synonyms": ["alternate", "rotate", "share", "swap"],
+      "collocations": ["take turns driving", "take it in turns", "take turns to speak"],
+      "example_simple": "The children take turns on the swing.",
+      "example_complex": "To keep the project going overnight, the engineers took turns monitoring the servers in shifts."
+    }
+  }
+}

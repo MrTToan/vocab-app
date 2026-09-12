@@ -1,0 +1,448 @@
+{
+  "meta": {
+    "batch": "batch-121",
+    "authored_by": "claude",
+    "count": 25
+  },
+  "words": {
+    "pubcol-w-53bd7d992ed7edf9": {
+      "difficulty": "5.0",
+      "part_of_speech": "verb",
+      "ipa": "/teɪk/",
+      "definition_en": "to reach out and hold something, or to carry, accept, or need something",
+      "synonyms": [
+        "grab",
+        "seize",
+        "grasp",
+        "accept"
+      ],
+      "collocations": [
+        "take a seat",
+        "take your time",
+        "take a photo"
+      ],
+      "example_simple": "Please take a seat while you wait for the doctor.",
+      "example_complex": "It will take considerable patience and time to master a foreign language properly.",
+      "vi_meaning_correction": "cầm, lấy, nhận; mất (thời gian)"
+    },
+    "pubcol-w-e368e2ce8ce09537": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk ə ˈbəʊt trɪp/",
+      "definition_en": "to go on a journey or excursion by boat, usually for pleasure",
+      "synonyms": [
+        "go boating",
+        "sail",
+        "cruise"
+      ],
+      "collocations": [
+        "take a boat trip along the river",
+        "take a short boat trip",
+        "take a boat trip around the island"
+      ],
+      "example_simple": "We took a boat trip along the coast last summer.",
+      "example_complex": "During our holiday in Ha Long Bay, we took a boat trip that wound between hundreds of limestone islands."
+    },
+    "pubcol-w-7afc62b8cbf82df1": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk ə breɪk/",
+      "definition_en": "to stop working or an activity for a short time in order to rest",
+      "synonyms": [
+        "rest",
+        "pause",
+        "have a rest",
+        "take five"
+      ],
+      "collocations": [
+        "take a short break",
+        "take a coffee break",
+        "take a well-earned break"
+      ],
+      "example_simple": "Let's take a break and have some coffee.",
+      "example_complex": "After hours of intense revision, she decided to take a break and go for a walk to clear her head."
+    },
+    "pubcol-w-759d9e6a6de655ec": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk ə dɪˈɡriː ət ðə ˌjuːnɪˈvɜːsɪti/",
+      "definition_en": "to study for and obtain an academic qualification at a university",
+      "synonyms": [
+        "graduate",
+        "earn a degree",
+        "study for a degree"
+      ],
+      "collocations": [
+        "take a degree in law",
+        "take a degree at a top university",
+        "take an honours degree"
+      ],
+      "example_simple": "She took a degree at the university in London.",
+      "example_complex": "He took a degree at the university in mechanical engineering before pursuing a career in aerospace design."
+    },
+    "pubcol-w-8dc3a5a756a62157": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/teɪk ə ˈfænsi tuː/",
+      "definition_en": "to begin to like someone or something, often suddenly",
+      "synonyms": [
+        "become fond of",
+        "take a liking to",
+        "grow to like"
+      ],
+      "collocations": [
+        "take a fancy to someone",
+        "take a fancy to an idea",
+        "suddenly take a fancy to"
+      ],
+      "example_simple": "My little sister took a fancy to the stray cat next door.",
+      "example_complex": "He had never shown interest in gardening, but on retirement he took a fancy to growing orchids."
+    },
+    "pubcol-w-74349788b0e51a3d": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk ə ˈfəʊtəɡrɑːf əv ˌsʌmbədi/",
+      "definition_en": "to make a photographic image of a person",
+      "synonyms": [
+        "photograph someone",
+        "snap a photo of someone",
+        "shoot a picture of someone"
+      ],
+      "collocations": [
+        "take a photograph of the group",
+        "take a photograph of the bride",
+        "take a clear photograph of someone"
+      ],
+      "example_simple": "Can you take a photograph of me in front of the temple?",
+      "example_complex": "The journalist asked permission before taking a photograph of the elderly craftsman at his workbench."
+    },
+    "pubcol-w-c40ac18ec2b94073": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk ˈpɪti ɒn ˌsʌmbədi/",
+      "definition_en": "to feel sympathy for someone and help them because of it",
+      "synonyms": [
+        "have compassion for",
+        "feel sorry for",
+        "show mercy to"
+      ],
+      "collocations": [
+        "take pity on the poor",
+        "take pity on a stray animal",
+        "take pity on someone in trouble"
+      ],
+      "example_simple": "She took pity on the hungry dog and gave it some food.",
+      "example_complex": "The examiner took pity on the nervous candidate and repeated the question more slowly.",
+      "vi_meaning_correction": "thương hại, thông cảm và giúp đỡ ai"
+    },
+    "pubcol-w-627641fad3cec951": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/teɪk ə ˈreɪn tʃek/",
+      "definition_en": "to politely refuse an offer now while suggesting you may accept it later",
+      "synonyms": [
+        "postpone",
+        "defer",
+        "put off"
+      ],
+      "collocations": [
+        "take a rain check on dinner",
+        "can I take a rain check",
+        "take a rain check for now"
+      ],
+      "example_simple": "I'm too tired tonight, so can I take a rain check on the movie?",
+      "example_complex": "Grateful for the invitation but overwhelmed with work, she asked to take a rain check until the following month."
+    },
+    "pubcol-w-217b6af1776a407e": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk ə vjuː ˈætɪtjuːd/",
+      "definition_en": "to adopt a particular opinion or way of thinking about something",
+      "synonyms": [
+        "hold an opinion",
+        "adopt a stance",
+        "form a view"
+      ],
+      "collocations": [
+        "take a dim view of",
+        "take a positive attitude",
+        "take a firm view on"
+      ],
+      "example_simple": "The teacher takes a strict view of students who arrive late.",
+      "example_complex": "Economists take differing views on whether raising interest rates will curb inflation without stalling growth."
+    },
+    "pubcol-w-7b810d262268c2f5": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk ə jɪər aʊt/",
+      "definition_en": "to spend a year away from study or work, often before starting university",
+      "synonyms": [
+        "take a gap year",
+        "have a year off",
+        "take time out"
+      ],
+      "collocations": [
+        "take a year out to travel",
+        "take a year out before university",
+        "take a year out to work"
+      ],
+      "example_simple": "He decided to take a year out to travel before going to college.",
+      "example_complex": "Many students take a year out to gain work experience, believing it makes them more mature when they finally start their degree.",
+      "vi_meaning_correction": "dành ra một năm nghỉ (thường trước khi vào đại học)"
+    },
+    "pubcol-w-1e5ec003b4a45e09": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk ˈækʃən/",
+      "definition_en": "to do something in order to deal with a problem or situation",
+      "synonyms": [
+        "act",
+        "intervene",
+        "respond",
+        "take steps"
+      ],
+      "collocations": [
+        "take immediate action",
+        "take legal action",
+        "take decisive action"
+      ],
+      "example_simple": "The government must take action to reduce pollution.",
+      "example_complex": "Unless companies take urgent action to cut emissions, the environmental damage may soon become irreversible."
+    },
+    "pubcol-w-a742d8cb8f93aa4b": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk ˈækʃənz/",
+      "definition_en": "to carry out measures or steps to achieve something or solve a problem",
+      "synonyms": [
+        "take steps",
+        "act",
+        "take measures"
+      ],
+      "collocations": [
+        "take concrete actions",
+        "take necessary actions",
+        "take corrective actions"
+      ],
+      "example_simple": "We need to take actions to protect the environment.",
+      "example_complex": "The committee agreed to take a series of coordinated actions aimed at improving workplace safety.",
+      "vi_meaning_correction": "thực hiện các hành động, thi hành các biện pháp"
+    },
+    "pubcol-w-de15b27eb22d82fd": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk ədˈvɑːntɪdʒ əv/",
+      "definition_en": "to make good use of an opportunity, or to unfairly exploit someone",
+      "synonyms": [
+        "exploit",
+        "make use of",
+        "capitalize on",
+        "utilize"
+      ],
+      "collocations": [
+        "take full advantage of",
+        "take advantage of an opportunity",
+        "take advantage of someone's kindness"
+      ],
+      "example_simple": "You should take advantage of the free lessons while you can.",
+      "example_complex": "Savvy investors took advantage of the market downturn to buy shares at greatly reduced prices."
+    },
+    "pubcol-w-8617fd73a9bbf655": {
+      "difficulty": "5.0",
+      "ipa": "/teɪk keə/"
+    },
+    "pubcol-w-eadfdf122da6be50": {
+      "difficulty": "8.0",
+      "part_of_speech": "idiom",
+      "ipa": "/teɪk ˈkʌlə wɪð ˌsʌmbədi/",
+      "definition_en": "to side firmly with someone and support their position",
+      "synonyms": [
+        "side with",
+        "align with",
+        "back",
+        "stand by"
+      ],
+      "collocations": [
+        "take colour with a faction",
+        "openly take colour with",
+        "take colour with an ally"
+      ],
+      "example_simple": "In the argument, he took colour with his old friend.",
+      "example_complex": "During the dispute over the merger, several board members quietly took colour with the chairman despite public doubts."
+    },
+    "pubcol-w-f77779de050ec6cf": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk dɪˈlaɪt ɪn/",
+      "definition_en": "to get great pleasure or enjoyment from something",
+      "synonyms": [
+        "delight in",
+        "relish",
+        "revel in",
+        "enjoy"
+      ],
+      "collocations": [
+        "take delight in teasing",
+        "take great delight in",
+        "take delight in learning"
+      ],
+      "example_simple": "The children take delight in playing in the snow.",
+      "example_complex": "She took obvious delight in surprising her guests with dishes they had never tasted before."
+    },
+    "pubcol-w-8158cf877d873618": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk ˈdræstɪk ˈmeʒəz/",
+      "definition_en": "to take extreme or severe steps to deal with a serious problem",
+      "synonyms": [
+        "take extreme measures",
+        "take radical steps",
+        "act drastically"
+      ],
+      "collocations": [
+        "take drastic measures to cut costs",
+        "forced to take drastic measures",
+        "take drastic measures against"
+      ],
+      "example_simple": "The company had to take drastic measures to avoid going bankrupt.",
+      "example_complex": "Faced with a collapsing water supply, the city took drastic measures, rationing usage and banning all non-essential consumption.",
+      "vi_meaning_correction": "áp dụng những biện pháp quyết liệt, mạnh tay"
+    },
+    "pubcol-w-9c681609bfb9f689": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk ɪˈfekt/",
+      "definition_en": "to begin to produce results, or (of a law or rule) to come into force",
+      "synonyms": [
+        "come into force",
+        "become effective",
+        "kick in"
+      ],
+      "collocations": [
+        "take effect immediately",
+        "the new law takes effect",
+        "the medicine takes effect"
+      ],
+      "example_simple": "The painkiller took effect after about twenty minutes.",
+      "example_complex": "The new tax regulations take effect at the start of the financial year, giving businesses little time to adjust."
+    },
+    "pubcol-w-3ab3368d16b5e5b5": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk ɪkˈsepʃən tuː/",
+      "definition_en": "to object strongly to something or feel offended by it",
+      "synonyms": [
+        "object to",
+        "take offence at",
+        "disagree with",
+        "protest against"
+      ],
+      "collocations": [
+        "take exception to a remark",
+        "take strong exception to",
+        "take exception to the suggestion"
+      ],
+      "example_simple": "She took exception to his rude comment about her work.",
+      "example_complex": "The senator took exception to the implication that his vote had been influenced by donations.",
+      "vi_meaning_correction": "phản đối, bất bình với điều gì"
+    },
+    "pubcol-w-e9b54dabe37b5422": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk ˈɪntə əˈkaʊnt/",
+      "definition_en": "to consider something when making a decision or judgement",
+      "synonyms": [
+        "consider",
+        "allow for",
+        "factor in",
+        "bear in mind"
+      ],
+      "collocations": [
+        "take into account the cost",
+        "fail to take into account",
+        "take all factors into account"
+      ],
+      "example_simple": "You should take into account the weather before planning the trip.",
+      "example_complex": "When assessing the essays, examiners take into account not only grammar but also coherence and range of vocabulary."
+    },
+    "pubcol-w-d1f86d00872cba12": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk ˈɪntə əˈkaʊnt kənˌsɪdəˈreɪʃən/",
+      "definition_en": "to think carefully about something before reaching a decision",
+      "synonyms": [
+        "consider",
+        "take into account",
+        "factor in",
+        "weigh up"
+      ],
+      "collocations": [
+        "take into consideration the risks",
+        "take everything into consideration",
+        "take into consideration his age"
+      ],
+      "example_simple": "The judge took into consideration his difficult childhood.",
+      "example_complex": "Taking into consideration the tight budget and the short timeline, the team opted for a simpler design."
+    },
+    "pubcol-w-23e524e47a16798f": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/teɪk ɪt fə ˈɡrɑːntɪd/",
+      "definition_en": "to assume something is true or certain without questioning it, or to fail to appreciate someone",
+      "synonyms": [
+        "assume",
+        "presume",
+        "undervalue",
+        "overlook"
+      ],
+      "collocations": [
+        "take it for granted that",
+        "take someone for granted",
+        "take one's freedom for granted"
+      ],
+      "example_simple": "We often take clean water for granted until there is a shortage.",
+      "example_complex": "Having grown up in a wealthy family, he took for granted comforts that most people could only dream of.",
+      "vi_meaning_correction": "coi là điều hiển nhiên; không biết trân trọng"
+    },
+    "pubcol-w-7c2786393bacb3ec": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk lænd ɒn liːs/",
+      "definition_en": "to rent a piece of land for a fixed period under a legal agreement",
+      "synonyms": [
+        "lease land",
+        "rent land",
+        "hold land under lease"
+      ],
+      "collocations": [
+        "take land on a long lease",
+        "take farmland on lease",
+        "take land on lease from the council"
+      ],
+      "example_simple": "The farmer took some land on lease to grow more crops.",
+      "example_complex": "Unable to afford the purchase price, the young entrepreneur took the land on lease for ten years to build his warehouse."
+    },
+    "pubcol-w-7678dccc6843a29c": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/teɪk ˈmeʒəz tə duː ˈsʌmθɪŋ/",
+      "definition_en": "to take official or planned steps in order to achieve or prevent something",
+      "synonyms": [
+        "take steps",
+        "take action",
+        "act"
+      ],
+      "collocations": [
+        "take measures to prevent",
+        "take measures to ensure safety",
+        "take strict measures to"
+      ],
+      "example_simple": "The school took measures to keep the students safe.",
+      "example_complex": "Authorities took sweeping measures to contain the outbreak, closing schools and restricting travel between provinces."
+    },
+    "pubcol-w-e853e99eee547d19": {
+      "difficulty": "6.0",
+      "ipa": "/ˌteɪk ɪt ˈiːzi/"
+    }
+  }
+}

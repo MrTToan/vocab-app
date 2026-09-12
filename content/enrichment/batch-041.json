@@ -1,0 +1,182 @@
+{
+  "meta": { "batch": "batch-041", "authored_by": "claude", "count": 25 },
+  "words": {
+    "3f6ccad6-c63e-4bc0-b89c-6cd5b7cecfa3": {
+      "difficulty": "8.0",
+      "definition_en": "questionable soundness or truth; something whose validity cannot be trusted",
+      "ipa": "/ˈdjuːbiəs vəˈlɪdəti/",
+      "part_of_speech": "phrase"
+    },
+    "bf584830-7412-4273-9f32-289b6781c474": {
+      "difficulty": "6.0",
+      "definition_en": "a woman holding a rank equivalent to a duke, or a duke's wife",
+      "ipa": "/ˈdʌtʃəs/",
+      "part_of_speech": "noun"
+    },
+    "ebd0b967-c98a-4aaf-bb55-2c29bdf2f005": {
+      "difficulty": "8.0",
+      "definition_en": "the ability of a material to be stretched into a wire without breaking",
+      "ipa": "/dʌkˈtɪləti/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-1efedc75aafcf229": {
+      "difficulty": "5.0",
+      "ipa": "/ˈdjuː tuː/"
+    },
+    "3b858e65-3d7c-4f38-b5ca-3446272cfaae": {
+      "difficulty": "8.0",
+      "definition_en": "properly and legally in force according to the required procedures",
+      "ipa": "/ˈdjuːli ɪˈfektɪv/",
+      "part_of_speech": "phrase"
+    },
+    "e7816386-098a-417e-8306-6a8c39ab68b2": {
+      "difficulty": "7.0",
+      "definition_en": "to live in or occupy a particular place",
+      "ipa": "/dwel/",
+      "part_of_speech": "verb"
+    },
+    "a5777e90-e5fe-4eda-8370-a63c2d9ff349": {
+      "difficulty": "7.0",
+      "definition_en": "to gradually become smaller in size, amount, or strength",
+      "ipa": "/ˈdwɪndl̩/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-796b0f98b23c714a": {
+      "difficulty": "7.0",
+      "synonyms": ["enthusiast", "go-getter", "keen worker", "hard worker"],
+      "collocations": ["a bunch of eager beavers", "such an eager beaver", "eager beavers at work"],
+      "example_simple": "The new interns are real eager beavers, always the first to arrive.",
+      "example_complex": "While her eager-beaver attitude impressed the managers, some colleagues found her relentless enthusiasm exhausting.",
+      "definition_en": "an enthusiastic, hard-working person who is very keen to do things",
+      "ipa": "/ˈiːɡə ˈbiːvəz/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-d92e1c54b4580c5e": {
+      "synonyms": ["enthusiasm", "keenness", "zeal", "eagerness"],
+      "collocations": ["show eagerness", "eagerness to learn", "with great eagerness"],
+      "example_simple": "She showed real eagerness to start her new job.",
+      "example_complex": "His eagerness to please often led him to accept far more work than he could reasonably handle."
+    },
+    "pubcol-w-116036ce8efe032f": {
+      "difficulty": "5.0",
+      "synonyms": ["make a living", "earn one's keep", "support oneself"],
+      "collocations": ["earn a living from", "struggle to earn a living", "earn an honest living"],
+      "example_simple": "He earns a living by teaching English online.",
+      "example_complex": "Many farmers in the region struggle to earn a decent living from increasingly unpredictable harvests.",
+      "definition_en": "to make enough money to support yourself",
+      "ipa": "/ɜːn ə ˈlɪvɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-a561cc08744a9402": {
+      "difficulty": "5.0",
+      "synonyms": ["make money", "earn cash", "bring in money"],
+      "collocations": ["earn money online", "earn extra money", "a way to earn money"],
+      "example_simple": "She earns money by selling handmade jewellery.",
+      "example_complex": "Students increasingly earn money through freelance work that fits around their study schedules.",
+      "definition_en": "to receive money in return for work or services",
+      "ipa": "/ɜːn ˈmʌni/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "kiếm tiền"
+    },
+    "9681920a-3826-42d5-9677-01f1d62299a1": {
+      "difficulty": "9.0",
+      "synonyms": ["reflectivity", "reflective power", "reflectance"],
+      "example_simple": "Snow increases the Earth's albedo because it reflects a lot of sunlight.",
+      "example_complex": "As polar ice melts, the Earth's albedo falls, so more solar radiation is absorbed and warming accelerates.",
+      "definition_en": "the proportion of the Sun's radiation that the Earth reflects back into space",
+      "ipa": "/ɜːθs ælˈbiːdəʊ/",
+      "part_of_speech": "noun"
+    },
+    "5a5bfc6b-ba78-4000-b4d3-06e55a36195c": {
+      "difficulty": "6.0",
+      "definition_en": "to eat as much as one wants, whenever one likes",
+      "ipa": "/iːt ət wɪl/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-649b91b3355f2975": {
+      "difficulty": "6.0",
+      "synonyms": ["eat sensibly", "eat in balance", "not overeat"],
+      "collocations": ["eat in moderation", "drink in moderation", "everything in moderation"],
+      "example_simple": "Doctors advise us to eat in moderation and avoid too much sugar.",
+      "example_complex": "Even foods considered unhealthy can fit into a balanced diet if you eat them in moderation.",
+      "definition_en": "to eat sensible, not excessive, amounts of food",
+      "ipa": "/iːt ɪn ˌmɒdəˈreɪʃn̩/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "ăn điều độ"
+    },
+    "pubcol-w-27c16878772a2d79": {
+      "difficulty": "7.0",
+      "synonyms": ["eat very little", "eat a great deal", "have a small/big appetite"],
+      "collocations": ["eat like a bird", "eat like a horse", "no wonder you eat like a horse"],
+      "example_simple": "My sister eats like a bird, but my brother eats like a horse.",
+      "example_complex": "After weeks of training he began to eat like a horse, whereas before the illness he had eaten like a bird.",
+      "definition_en": "to eat very little (like a bird) or to eat a great deal (like a horse)",
+      "ipa": "/iːt laɪk ə bɜːd iːt laɪk ə hɔːs/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-43ba39a752e1a457": {
+      "difficulty": "5.0",
+      "ipa": "/iːt aʊt/"
+    },
+    "pubcol-w-67213578a8683a83": {
+      "difficulty": "5.0",
+      "synonyms": ["overeating", "eating a great deal", "having a big appetite"],
+      "collocations": ["eating a lot of junk food", "eating a lot lately", "eating a lot more"],
+      "example_simple": "He has been eating a lot since he started going to the gym.",
+      "example_complex": "Eating a lot of processed food over many years can significantly raise the risk of chronic disease.",
+      "definition_en": "consuming a large quantity of food",
+      "ipa": "/ˈiːtɪŋ ə lɒt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-a77c1b28f3e4696a": {
+      "synonyms": ["quirky", "unconventional", "odd", "peculiar"],
+      "collocations": ["eccentric behaviour", "an eccentric old man", "eccentric habits"],
+      "example_simple": "Our neighbour is a bit eccentric, but everyone likes him.",
+      "example_complex": "The professor was famous for his eccentric methods, which colleagues dismissed until his results proved undeniable."
+    },
+    "f823ceaf-f7f0-497b-b105-ac6c3c8017a1": {
+      "difficulty": "8.0",
+      "definition_en": "unusual or odd behaviour; also, the degree of deviation from a circular path",
+      "ipa": "/ˌeksenˈtrɪsəti/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-34e00cb696fec92d": {
+      "synonyms": ["environmental", "biological", "green"],
+      "collocations": ["ecological balance", "ecological footprint", "ecological damage"],
+      "example_simple": "Cutting down forests can upset the ecological balance of an area.",
+      "example_complex": "Policymakers are increasingly weighing the ecological consequences of industrial expansion against short-term economic gains."
+    },
+    "pubcol-w-35c241ca2d0b086b": {
+      "synonyms": ["environmentally friendly", "eco-friendly", "sustainable"],
+      "collocations": ["ecologically sound practices", "an ecologically sound solution", "ecologically sound farming"],
+      "example_simple": "The company uses ecologically sound methods to package its products.",
+      "example_complex": "Designers are under pressure to prove that their materials are ecologically sound throughout the entire product life cycle."
+    },
+    "7a74a90f-c4f2-4c67-80b6-308993560637": {
+      "difficulty": "7.0",
+      "definition_en": "a group of countries that cooperate closely on trade and economic policy",
+      "ipa": "/ˌiːkəˈnɒmɪk blɒk/",
+      "part_of_speech": "noun"
+    },
+    "a657d222-760e-449c-94b0-098e425a7471": {
+      "difficulty": "8.0",
+      "definition_en": "the process of restoring economic growth and activity to a region or sector",
+      "ipa": "/ˌiːkəˈnɒmɪk ˌriːˌvaɪtəlaɪˈzeɪʃn̩/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-4946219507e91c2f": {
+      "synonyms": ["thrifty", "cost-effective", "frugal", "economic"],
+      "collocations": ["economical with money", "a more economical option", "economical to run"],
+      "example_simple": "A small car is more economical because it uses less fuel.",
+      "example_complex": "Switching to LED lighting proved so economical that the savings covered the installation cost within a year."
+    },
+    "pubcol-w-17a7fac7bffb6537": {
+      "synonyms": ["economic science", "political economy"],
+      "collocations": ["study economics", "the economics of", "a degree in economics"],
+      "example_simple": "She is studying economics at university.",
+      "example_complex": "Understanding the economics of renewable energy is essential for shaping realistic climate policy.",
+      "definition_en": "the study of how goods, services, and money are produced and distributed",
+      "part_of_speech": "noun"
+    }
+  }
+}

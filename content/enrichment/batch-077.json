@@ -1,0 +1,259 @@
+{
+  "meta": { "batch": "batch-077", "authored_by": "claude", "count": 26 },
+  "words": {
+    "pubcol-w-b38c3aa465fee2a9": {
+      "difficulty": "6.0",
+      "synonyms": ["contribute to", "add to", "help with"],
+      "collocations": ["make a valuable contribution", "make a significant contribution", "make a contribution to society"],
+      "example_simple": "Everyone can make a contribution to keeping the park clean.",
+      "example_complex": "The research team made a significant contribution to our understanding of climate change.",
+      "definition_en": "to give something, such as money, effort, or ideas, to help achieve something",
+      "ipa": "/ˌmeɪk ə ˌkɒntrɪˈbjuːʃən tuː/",
+      "part_of_speech": "collocation"
+    },
+    "pubcol-w-91a7b3e93a83c7ea": {
+      "difficulty": "5.0",
+      "synonyms": ["reach an agreement", "come to terms", "strike a deal"],
+      "collocations": ["make a deal with a company", "make a good deal", "make a deal to sell"],
+      "example_simple": "They made a deal with the seller to lower the price.",
+      "example_complex": "After months of negotiation, the two firms finally made a deal that satisfied both sides.",
+      "definition_en": "to make an agreement or arrangement with someone, often in business",
+      "ipa": "/ˌmeɪk ə ˈdiːl wɪð/",
+      "part_of_speech": "collocation"
+    },
+    "pubcol-w-b09d08b824a89957": {
+      "difficulty": "5.0",
+      "synonyms": ["decide", "choose", "resolve"],
+      "collocations": ["make a difficult decision", "make a final decision", "make a quick decision"],
+      "example_simple": "You need to make a decision about which course to take.",
+      "example_complex": "The board had to make a decision that would affect the company for years to come.",
+      "definition_en": "to choose what to do after thinking about it",
+      "ipa": "/ˌmeɪk ə dɪˈsɪʒən/",
+      "part_of_speech": "collocation"
+    },
+    "pubcol-w-ebc4e9f5a14d15d3": {
+      "difficulty": "6.0",
+      "synonyms": ["have an impact", "matter", "count"],
+      "collocations": ["make a real difference", "make a big difference", "make a difference to people's lives"],
+      "example_simple": "Small changes to your diet can make a difference to your health.",
+      "example_complex": "Volunteering just a few hours a week can make a genuine difference in your community.",
+      "definition_en": "to have an important effect on something or someone",
+      "ipa": "/ˌmeɪk ə ˈdɪfrəns/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-9aa4436aed2716ac": {
+      "difficulty": "5.0",
+      "synonyms": ["light a fire", "start a fire", "build a fire"],
+      "collocations": ["make a campfire", "make a fire to keep warm", "make a small fire"],
+      "example_simple": "We made a fire to keep warm during the cold night.",
+      "example_complex": "The hikers struggled to make a fire because all the wood was damp from the rain.",
+      "definition_en": "to light and build a fire, usually for warmth or cooking",
+      "ipa": "/ˌmeɪk ə ˈfaɪə/",
+      "part_of_speech": "collocation"
+    },
+    "pubcol-w-98b8447c2ede0ff0": {
+      "difficulty": "7.0",
+      "synonyms": ["embarrass", "humiliate", "make a spectacle of"],
+      "collocations": ["make a fool of yourself", "make a fool out of someone", "make a complete fool of yourself"],
+      "example_simple": "I made a fool of myself by singing badly at the party.",
+      "example_complex": "He was terrified of making a fool of himself in front of the entire committee.",
+      "definition_en": "to make someone, or yourself, look silly or stupid",
+      "ipa": "/ˌmeɪk ə ˈfuːl (aʊt) əv/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-774aeaf329619585": {
+      "difficulty": "6.0",
+      "synonyms": ["recover fully", "get better completely", "recuperate"],
+      "collocations": ["make a full recovery from illness", "expected to make a full recovery", "make a quick recovery"],
+      "example_simple": "The doctor said she would make a full recovery within a month.",
+      "example_complex": "Despite his serious injuries, the athlete made a full recovery and returned to competition.",
+      "definition_en": "to become completely healthy again after an illness or injury",
+      "ipa": "/ˌmeɪk ə ˌfʊl rɪˈkʌvəri/",
+      "part_of_speech": "collocation"
+    },
+    "pubcol-w-32857fc33a224b87": {
+      "difficulty": "7.0",
+      "synonyms": ["escape", "flee", "get away"],
+      "collocations": ["make a quick getaway", "make a clean getaway", "make a getaway by car"],
+      "example_simple": "The thieves made a getaway in a stolen car.",
+      "example_complex": "The robbers made a clean getaway before the police could arrive at the scene.",
+      "definition_en": "to escape, especially after committing a crime",
+      "ipa": "/ˌmeɪk ə ˈɡetəweɪ/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-48f0ce7124be70d4": {
+      "difficulty": "6.0",
+      "synonyms": ["cook a stew", "prepare a stew", "make a casserole"],
+      "collocations": ["make a hearty beef stew", "make a hearty vegetable stew", "a hearty winter stew"],
+      "example_simple": "On cold days I like to make a hearty stew with beef and potatoes.",
+      "example_complex": "She spent the afternoon making a hearty stew that would feed the whole family through the storm.",
+      "definition_en": "to cook a filling, satisfying dish of meat or vegetables slowly in liquid",
+      "ipa": "/ˌmeɪk ə ˌhɑːti ˈstjuː/",
+      "part_of_speech": "collocation"
+    },
+    "pubcol-w-d188238d3932418f": {
+      "difficulty": "7.0",
+      "synonyms": ["start over", "begin again", "wipe the slate clean"],
+      "collocations": ["make a fresh start", "make a clean break", "make a fresh start in life"],
+      "example_simple": "After the divorce, she moved to a new city to make a fresh start.",
+      "example_complex": "Leaving his old job behind, he was determined to make a clean break and build a completely new career.",
+      "definition_en": "to begin something again in a completely new way, leaving past problems behind",
+      "ipa": "/ˌmeɪk ə ˌfreʃ ˈstɑːt/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "bắt đầu lại từ đầu; làm lại từ đầu"
+    },
+    "pubcol-w-ba8d8db120c32f75": {
+      "difficulty": "6.0",
+      "synonyms": ["earn a living", "support oneself", "earn one's keep"],
+      "collocations": ["make a living as an artist", "make a decent living", "make a living from farming"],
+      "example_simple": "It is hard to make a living as a writer.",
+      "example_complex": "She managed to make a comfortable living by combining freelance work with part-time teaching.",
+      "definition_en": "to earn enough money to support yourself and pay for what you need",
+      "ipa": "/ˌmeɪk ə ˈlɪvɪŋ/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-3088f27c6bf3b61f": {
+      "difficulty": "5.0",
+      "synonyms": ["err", "slip up", "get something wrong"],
+      "collocations": ["make a serious mistake", "make a silly mistake", "make a common mistake"],
+      "example_simple": "Everyone makes a mistake now and then.",
+      "example_complex": "The company made a costly mistake by launching the product before it was fully tested.",
+      "definition_en": "to do something wrong or incorrectly",
+      "ipa": "/ˌmeɪk ə mɪˈsteɪk/",
+      "part_of_speech": "collocation"
+    },
+    "pubcol-w-e94d9a699a281f58": {
+      "difficulty": "5.0",
+      "synonyms": ["pay", "settle a bill", "pay up"],
+      "collocations": ["make a monthly payment", "make a payment online", "make a late payment"],
+      "example_simple": "You can make a payment by card or in cash.",
+      "example_complex": "Customers who fail to make a payment on time may be charged additional interest.",
+      "definition_en": "to pay an amount of money that is owed",
+      "ipa": "/ˌmeɪk ə ˈpeɪmənt/",
+      "part_of_speech": "collocation"
+    },
+    "pubcol-w-309fada39cbd770b": {
+      "difficulty": "5.0",
+      "synonyms": ["call", "phone", "give someone a call"],
+      "collocations": ["make a phone call", "make an urgent phone call", "make a quick phone call"],
+      "example_simple": "I need to make a phone call before we leave.",
+      "example_complex": "She stepped outside to make an important phone call to her lawyer.",
+      "definition_en": "to use a telephone to contact someone",
+      "ipa": "/ˌmeɪk ə ˈfəʊn kɔːl/",
+      "part_of_speech": "collocation"
+    },
+    "pubcol-w-f8e8b0b7037ba067": {
+      "difficulty": "5.0",
+      "synonyms": ["plan", "arrange", "organise"],
+      "collocations": ["make a plan", "make plans for the weekend", "make detailed plans"],
+      "example_simple": "Let's make a plan for our holiday next week.",
+      "example_complex": "Before starting the project, the team made careful plans to avoid any delays.",
+      "definition_en": "to decide in advance what you are going to do",
+      "ipa": "/ˌmeɪk ə ˈplæn/",
+      "part_of_speech": "collocation"
+    },
+    "pubcol-w-9a0fc10eedb34edc": {
+      "difficulty": "6.0",
+      "synonyms": ["turn a profit", "gain", "come out ahead"],
+      "collocations": ["make a profit on a sale", "make a large profit", "make a small profit"],
+      "example_simple": "The shop made a profit in its first year.",
+      "example_complex": "By cutting costs and raising prices, the business finally began to make a healthy profit.",
+      "definition_en": "to earn more money than you spend on something",
+      "ipa": "/ˌmeɪk ə ˈprɒfɪt/",
+      "part_of_speech": "collocation"
+    },
+    "pubcol-w-dc871f3ac6d5ce55": {
+      "difficulty": "5.0",
+      "synonyms": ["promise", "give one's word", "vow"],
+      "collocations": ["make a promise", "make a solemn promise", "make a promise to someone"],
+      "example_simple": "He made a promise to always tell the truth.",
+      "example_complex": "Politicians often make promises during elections that they later find impossible to keep.",
+      "definition_en": "to tell someone that you will definitely do something",
+      "ipa": "/ˌmeɪk ə ˈprɒmɪs/",
+      "part_of_speech": "collocation"
+    },
+    "pubcol-w-2779b9a03caec82b": {
+      "difficulty": "8.0",
+      "synonyms": ["make easy money", "make a fast buck", "cash in"],
+      "collocations": ["out to make a quick buck", "make a fast buck", "make a quick buck from"],
+      "example_simple": "Some people just want to make a quick buck without doing much work.",
+      "example_complex": "The scheme was designed to help a few insiders make a fast buck at the expense of ordinary investors.",
+      "definition_en": "to earn money quickly and easily, sometimes dishonestly",
+      "ipa": "/ˌmeɪk ə ˌkwɪk/fɑːst ˈbʌk/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-dfc0964a3d911113": {
+      "difficulty": "6.0",
+      "synonyms": ["give a speech", "deliver an address", "give a talk"],
+      "collocations": ["make a speech at a wedding", "make a short speech", "make a speech to the crowd"],
+      "example_simple": "The president made a speech about the economy.",
+      "example_complex": "Nervous but well prepared, she made a moving speech that received a standing ovation.",
+      "definition_en": "to speak formally to an audience",
+      "ipa": "/ˌmeɪk ə ˈspiːtʃ/",
+      "part_of_speech": "collocation"
+    },
+    "pubcol-w-14249914da4e2b3b": {
+      "difficulty": "7.0",
+      "synonyms": ["cause a stir", "attract attention", "create a sensation"],
+      "collocations": ["make a big splash", "make a splash in the industry", "make quite a splash"],
+      "example_simple": "The new singer made a splash with her first album.",
+      "example_complex": "The startup made a splash at the technology fair, drawing the attention of major investors.",
+      "definition_en": "to attract a lot of attention or make a strong impression",
+      "ipa": "/ˌmeɪk ə ˈsplæʃ/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "gây được sự chú ý; tạo tiếng vang lớn"
+    },
+    "pubcol-w-61adb2ac657a3e68": {
+      "difficulty": "6.0",
+      "synonyms": ["begin", "get going", "get started"],
+      "collocations": ["make a start on the work", "make an early start", "make a fresh start"],
+      "example_simple": "Let's make a start on the homework now.",
+      "example_complex": "We should make an early start tomorrow if we want to reach the summit before noon.",
+      "definition_en": "to begin doing something",
+      "ipa": "/ˌmeɪk ə ˈstɑːt/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "bắt đầu (làm việc gì đó)"
+    },
+    "pubcol-w-49436741cd4288a8": {
+      "difficulty": "6.0",
+      "synonyms": ["suggest", "propose", "recommend"],
+      "collocations": ["make a suggestion", "make a helpful suggestion", "make a few suggestions"],
+      "example_simple": "Can I make a suggestion about the menu?",
+      "example_complex": "The consultant made several practical suggestions for improving the company's efficiency.",
+      "definition_en": "to offer an idea or plan for someone to consider",
+      "ipa": "/ˌmeɪk ə səˈdʒestʃən/",
+      "part_of_speech": "collocation"
+    },
+    "pubcol-w-35034b9ac12139aa": {
+      "difficulty": "6.0",
+      "synonyms": ["adjust", "modify", "fine-tune"],
+      "collocations": ["make minor adjustments", "make necessary adjustments", "make adjustments to the plan"],
+      "example_simple": "We may need to make adjustments to the schedule.",
+      "example_complex": "After reviewing the feedback, the designers made several adjustments to improve the product.",
+      "definition_en": "to make small changes to something to improve it or make it more suitable",
+      "ipa": "/ˌmeɪk əˈdʒʌstmənts/",
+      "part_of_speech": "collocation"
+    },
+    "pubcol-w-93ff3ad5167ebed4": {
+      "difficulty": "6.0",
+      "synonyms": ["reach an agreement", "come to an agreement", "make a deal"],
+      "collocations": ["make an agreement with someone", "make a formal agreement", "make a written agreement"],
+      "example_simple": "The two companies made an agreement to share resources.",
+      "example_complex": "After lengthy talks, the neighbouring countries made an agreement to reduce trade barriers.",
+      "definition_en": "to reach a formal arrangement or understanding with someone",
+      "ipa": "/ˌmeɪk ən əˈɡriːmənt wɪð/",
+      "part_of_speech": "collocation"
+    },
+    "pubcol-w-0b57e35339af22f5": {
+      "difficulty": "7.0",
+      "synonyms": ["take into account", "allow for", "make concessions for"],
+      "collocations": ["make allowance for delays", "make allowances for beginners", "make allowance for the weather"],
+      "example_simple": "You should make allowance for traffic when planning your journey.",
+      "example_complex": "Teachers are encouraged to make allowances for students who are learning in a second language.",
+      "definition_en": "to consider or excuse something, or to plan for a possible situation",
+      "ipa": "/ˌmeɪk əˈlaʊəns fɔː/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "tính đến; chiếu cố; thông cảm cho"
+    }
+  }
+}

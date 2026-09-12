@@ -1,0 +1,225 @@
+{
+  "meta": { "batch": "batch-125", "authored_by": "claude", "count": 25 },
+  "words": {
+    "47f2923f-c4ab-49d1-b8f0-22748edafce9": {
+      "difficulty": "6.0",
+      "ipa": "/ðə ˈfɪɡə fɔː/"
+    },
+    "pubcol-w-6c306476b2dca524": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ðə ˈfaɪnl rɪˈzʌlt/",
+      "definition_en": "the outcome that remains after everything has been completed",
+      "synonyms": ["the outcome", "the end result", "the final outcome"],
+      "collocations": ["see the final result", "the final result was", "await the final result"],
+      "example_simple": "We waited a week to hear the final result of the test.",
+      "example_complex": "The final result of the negotiations exceeded everyone's expectations, securing a lasting agreement."
+    },
+    "05c1e998-9cfe-48d8-ae66-b3d077602f48": {
+      "difficulty": "6.0"
+    },
+    "pubcol-w-defaffcaad782b22": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ðə fʊt əv ðə ˈmaʊntɪn/",
+      "definition_en": "the lowest part of a mountain, where it meets flat ground",
+      "synonyms": ["the base of the mountain", "the mountainside", "the foothills"],
+      "collocations": ["at the foot of the mountain", "a village at the foot of the mountain", "camp at the foot of the mountain"],
+      "example_simple": "There is a small village at the foot of the mountain.",
+      "example_complex": "We pitched our tents at the foot of the mountain before beginning the steep ascent at dawn."
+    },
+    "pubcol-w-6cd08e93d1db9eb7": {
+      "difficulty": "6.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ðə ɡrɑːs ɪz ˈɔːlweɪz ˈɡriːnə ɒn ðə ˈʌðə saɪd/",
+      "definition_en": "other people's situations always seem better than your own",
+      "synonyms": ["the grass is greener elsewhere", "always wanting what you don't have"],
+      "collocations": ["think the grass is greener", "the grass is always greener on the other side", "remember the grass isn't always greener"],
+      "example_simple": "She keeps changing jobs because she thinks the grass is always greener on the other side.",
+      "example_complex": "Before envying your neighbour's life, remember that the grass is always greener on the other side of the fence.",
+      "vi_meaning_correction": "đứng núi này trông núi nọ"
+    },
+    "pubcol-w-e83ecfd66a147d27": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ðə ˈlaɪvlihʊd əv ˌsʌmbədi/",
+      "definition_en": "the means by which someone earns money to live",
+      "synonyms": ["someone's living", "someone's income", "someone's means of support"],
+      "collocations": ["threaten the livelihood of", "support the livelihood of", "depend on for their livelihood"],
+      "example_simple": "The new factory threatens the livelihood of many local fishermen.",
+      "example_complex": "The drought placed tremendous pressure on the livelihood of farmers who relied entirely on their harvest.",
+      "vi_meaning_correction": "sinh kế/đời sống của ai đó"
+    },
+    "pubcol-w-3320fd8e9461a4d8": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ðə ˈɪnə ˈsɪti ˈeəriə/",
+      "definition_en": "the central part of a city, often poor and densely populated",
+      "synonyms": ["the inner city", "the urban core", "the deprived urban area"],
+      "collocations": ["live in the inner-city area", "regenerate the inner-city area", "poverty in the inner-city area"],
+      "example_simple": "Many families in the inner-city area struggle to find affordable housing.",
+      "example_complex": "The council launched a scheme to regenerate the run-down inner-city area and attract new businesses."
+    },
+    "pubcol-w-b52c34e50d7afacf": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ðə ˈlɒdʒɪkl ˈaʊtkʌm/",
+      "definition_en": "the result that follows naturally and reasonably from a situation",
+      "synonyms": ["the natural consequence", "the reasonable result", "the inevitable outcome"],
+      "collocations": ["the logical outcome of", "reach the logical outcome", "the logical outcome would be"],
+      "example_simple": "Losing the game was the logical outcome of poor preparation.",
+      "example_complex": "Given the company's declining sales, bankruptcy was the logical outcome that analysts had long predicted."
+    },
+    "pubcol-w-b5357233b624a3e5": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ðə lʌʃ ɡriːn ˈkʌntrisaɪd/",
+      "definition_en": "rich, fertile green rural land full of plants",
+      "synonyms": ["the verdant countryside", "the fertile countryside", "the green fields"],
+      "collocations": ["surrounded by lush green countryside", "roll across the lush green countryside", "admire the lush green countryside"],
+      "example_simple": "The train passed through miles of lush green countryside.",
+      "example_complex": "From the hilltop we gazed out over the lush green countryside stretching to the distant horizon."
+    },
+    "pubcol-w-e002110a0da3c72a": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ðə meɪn skweə/",
+      "definition_en": "the main open public space at the centre of a town",
+      "synonyms": ["the central square", "the town square", "the central plaza"],
+      "collocations": ["meet in the main square", "the main square is lined with", "cross the main square"],
+      "example_simple": "We met our friends in the main square of the old town.",
+      "example_complex": "Every evening the main square filled with musicians, vendors and families enjoying the warm night air."
+    },
+    "pubcol-w-86a46a40abcbf0d6": {
+      "difficulty": "6.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ðə mɔː ðə ˈmeriə/",
+      "definition_en": "the more people who take part, the more enjoyable it will be",
+      "synonyms": ["the more people the better", "everyone is welcome"],
+      "collocations": ["the more the merrier", "come along, the more the merrier", "bring friends, the more the merrier"],
+      "example_simple": "Invite your cousins to the party too — the more the merrier!",
+      "example_complex": "Feel free to bring your colleagues to the weekend trip; as far as I'm concerned, the more the merrier."
+    },
+    "pubcol-w-6e91ac1660dbd730": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ðə məʊst aʊtˈstændɪŋ ˈæθliːt ˈtaɪtl/",
+      "definition_en": "an award given to the best-performing athlete in a competition",
+      "synonyms": ["the best athlete award", "the top athlete title", "the MVP title"],
+      "collocations": ["win the Most Outstanding Athlete title", "award the Most Outstanding Athlete title", "compete for the Most Outstanding Athlete title"],
+      "example_simple": "She won the Most Outstanding Athlete title at the school games.",
+      "example_complex": "After breaking three records in a single meet, he was the obvious choice for the Most Outstanding Athlete title.",
+      "vi_meaning_correction": "danh hiệu Vận động viên Xuất sắc nhất"
+    },
+    "pubcol-w-a9fcc6700febd6ad": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ðə məʊst ˈpresɪŋ ˈprɒbləm/",
+      "definition_en": "the most urgent problem that needs immediate attention",
+      "synonyms": ["the most urgent issue", "the most critical problem", "the biggest concern"],
+      "collocations": ["address the most pressing problem", "the most pressing problem facing", "tackle the most pressing problem"],
+      "example_simple": "For many cities, traffic is the most pressing problem today.",
+      "example_complex": "Delegates agreed that climate change remains the most pressing problem confronting the international community."
+    },
+    "pubcol-w-82fdc5fb4ea6c61d": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ðə ˈaʊtskɜːts əv ðə ˈsɪti/",
+      "definition_en": "the outer areas of a city, away from the centre",
+      "synonyms": ["the edge of the city", "the city fringes", "the suburbs"],
+      "collocations": ["live on the outskirts of the city", "a factory on the outskirts of the city", "move to the outskirts of the city"],
+      "example_simple": "They bought a house on the outskirts of the city.",
+      "example_complex": "Rising rents have pushed many young families out to the outskirts of the city, where housing is cheaper.",
+      "vi_meaning_correction": "khu vực ngoại ô thành phố"
+    },
+    "014fb80d-cc27-47db-8964-9cd65a48d35f": {
+      "difficulty": "6.0",
+      "ipa": "/ðə prəˈpɔːʃn əv/"
+    },
+    "4fca8e05-0028-4691-92e9-07e67eb24f81": {
+      "difficulty": "8.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ðə prɒkˈsɪmɪti əv ðə draɪv rɪˈdʌkʃn/",
+      "definition_en": "the closeness in time or space of a decrease in drive or motivation",
+      "synonyms": ["the nearness of", "the closeness of", "the immediacy of"]
+    },
+    "pubcol-w-b705b6f0155c1b9c": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ðə ˈredlaɪt ˈdɪstrɪkt/",
+      "definition_en": "an area of a city with many businesses connected to the sex trade",
+      "synonyms": ["the vice district", "the adult entertainment district"],
+      "collocations": ["visit the red-light district", "located in the red-light district", "clean up the red-light district"],
+      "example_simple": "Tourists often walk through the famous red-light district in Amsterdam.",
+      "example_complex": "The authorities launched a campaign to regenerate the red-light district and reduce crime in the neighbourhood."
+    },
+    "pubcol-w-5f998323e96be554": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ðə ˈrɒki ˈlændskeɪp/",
+      "definition_en": "an area of land covered with rocks and stones",
+      "synonyms": ["the stony terrain", "the rugged landscape", "the boulder-strewn terrain"],
+      "collocations": ["cross the rocky landscape", "the barren rocky landscape", "a rocky landscape stretched out"],
+      "example_simple": "The rocky landscape made walking very difficult.",
+      "example_complex": "The rover trundled slowly across the barren rocky landscape, transmitting images of the alien terrain back to Earth."
+    },
+    "pubcol-w-6bbcdb9eb82ef704": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ðə ˈstiːpɪst feɪs əv ðə ˈmaʊntɪn/",
+      "definition_en": "the most sharply sloping side of a mountain",
+      "synonyms": ["the sheerest side of the mountain", "the steepest slope", "the sheer rock face"],
+      "collocations": ["climb the steepest face of the mountain", "scale the steepest face", "tackle the steepest face of the mountain"],
+      "example_simple": "Only experienced climbers attempt the steepest face of the mountain.",
+      "example_complex": "Roped together for safety, the team began their assault on the steepest face of the mountain at first light."
+    },
+    "f8f539b6-952a-4c45-8a66-2862e53ad077": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ðə səˈbɜːbən ˈaʊtskɜːts/",
+      "definition_en": "the residential area on the edge of a town or city"
+    },
+    "pubcol-w-0f7298beb55f04a5": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ðə taɪm ɪz raɪp/",
+      "definition_en": "it is now a suitable or favourable moment to do something",
+      "synonyms": ["the time is right", "the moment has come", "conditions are favourable"],
+      "collocations": ["the time is ripe for", "feel the time is ripe", "the time is ripe to act"],
+      "example_simple": "The time is ripe to start your own business.",
+      "example_complex": "With interest rates falling and demand rising, analysts agree the time is ripe for major investment.",
+      "vi_meaning_correction": "thời cơ đã chín muồi"
+    },
+    "pubcol-w-66e47e51c6de52e8": {
+      "difficulty": "7.0",
+      "part_of_speech": "idiom",
+      "ipa": "/ðə ə bɪɡ tʃiːz/",
+      "definition_en": "an important or powerful person in an organisation",
+      "synonyms": ["the boss", "a bigwig", "a big shot", "a top dog"],
+      "collocations": ["he's the big cheese", "become a big cheese", "the big cheese around here"],
+      "example_simple": "You should ask the big cheese if you want a pay rise.",
+      "example_complex": "Despite starting in the mailroom, she is now the big cheese who runs the entire European division."
+    },
+    "pubcol-w-3887c49f346d0e07": {
+      "difficulty": "8.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ðə ˈdʒæɡɪd ˌsnəʊ ˈkʌvəd piːks/",
+      "definition_en": "sharp, uneven mountain tops covered in snow",
+      "synonyms": ["the rugged snowy summits", "the craggy snow-capped peaks", "the sharp snow-covered mountaintops"],
+      "collocations": ["gaze at the jagged, snow-covered peaks", "the jagged, snow-covered peaks rose", "tower above the jagged, snow-covered peaks"],
+      "example_simple": "The jagged, snow-covered peaks looked beautiful in the morning sun.",
+      "example_complex": "Beyond the valley, the jagged, snow-covered peaks pierced the clouds, dwarfing the tiny village below.",
+      "vi_meaning_correction": "những ngọn núi lởm chởm phủ đầy tuyết"
+    },
+    "pubcol-w-1f3ed774bc6cc597": {
+      "difficulty": "6.0",
+      "ipa": "/ðeər ɪz nəʊ daʊt ðæt/"
+    },
+    "pubcol-w-8d781104de61e4a5": {
+      "synonyms": ["afterwards", "subsequently", "from then on", "after that"],
+      "collocations": ["shortly thereafter", "soon thereafter", "the years thereafter"],
+      "example_simple": "He graduated in 2010 and moved abroad shortly thereafter.",
+      "example_complex": "The company launched its first product in spring; thereafter, sales climbed steadily for a decade."
+    }
+  }
+}

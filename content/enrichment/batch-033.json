@@ -1,0 +1,205 @@
+{
+  "meta": { "batch": "batch-033", "authored_by": "claude", "count": 25 },
+  "words": {
+    "802706a4-8ae0-4e54-b925-fec00a231178": {
+      "difficulty": "7.0",
+      "definition_en": "to push something or someone out by taking up all the available space, attention, or resources",
+      "ipa": "/ˌkraʊd ˈaʊt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-24d54f93f3b018ee": {
+      "difficulty": "7.0",
+      "synonyms": ["greatest accomplishment", "supreme achievement", "pinnacle", "career high point"],
+      "collocations": ["her crowning achievement", "the crowning achievement of his career", "represent a crowning achievement"],
+      "example_simple": "Winning the gold medal was her crowning achievement.",
+      "example_complex": "The restored cathedral is widely regarded as the crowning achievement of a decades-long architectural career.",
+      "definition_en": "the greatest or most impressive accomplishment of a person's life or career",
+      "ipa": "/ˌkraʊnɪŋ əˈtʃiːvmənt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-51f97ee30ab4a031": {
+      "difficulty": "7.0",
+      "synonyms": ["rough estimate", "approximate calculation", "ballpark figure"],
+      "collocations": ["a crude calculation suggests", "make a crude calculation", "based on a crude calculation"],
+      "example_simple": "A crude calculation shows we will need about twice as much money.",
+      "example_complex": "Even a crude calculation of the projected costs revealed that the scheme was financially unsustainable.",
+      "definition_en": "a rough, approximate estimate made without precise figures",
+      "ipa": "/ˌkruːd ˌkælkjʊˈleɪʃən/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-9f8d4e15a56dd462": {
+      "difficulty": "6.0",
+      "synonyms": ["signal", "prompt", "hint", "sign"],
+      "collocations": ["take a cue from", "on cue", "give someone a cue"],
+      "example_simple": "That was my cue to leave the room.",
+      "example_complex": "The actors waited backstage for their cue before stepping into the spotlight.",
+      "definition_en": "a signal, word, or action that tells someone it is the right moment to do or say something",
+      "ipa": "/kjuː/",
+      "part_of_speech": "noun"
+    },
+    "58dea0e1-9aa5-4f7e-a3e6-60910a2ee5ed": {
+      "difficulty": "7.0",
+      "definition_en": "to reach the highest or final point, especially after a long process",
+      "ipa": "/ˈkʌlmɪneɪt/",
+      "part_of_speech": "verb"
+    },
+    "b71b29f5-7f5a-4d2f-86cc-fb88a808e1b3": {
+      "difficulty": "8.0",
+      "definition_en": "responsibility for a fault or wrongdoing; blameworthiness",
+      "ipa": "/ˌkʌlpəˈbɪləti/",
+      "part_of_speech": "noun"
+    },
+    "4034e261-3cfb-45c5-8b19-02576a203e49": {
+      "difficulty": "8.0"
+    },
+    "pubcol-w-9608f167f2c6038d": {
+      "difficulty": "7.0",
+      "synonyms": ["make the news", "hit the headlines", "become newsworthy", "attract media attention"],
+      "collocations": ["come to make headlines", "make headlines worldwide", "make national headlines"],
+      "example_simple": "The discovery came to make headlines around the world.",
+      "example_complex": "What began as a minor local dispute eventually came to make headlines across the national press.",
+      "definition_en": "to become an important or widely reported news story",
+      "ipa": "/kʌm tə meɪk ˈhedlaɪnz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-b1cc1a29aadb7172": {
+      "difficulty": "7.0",
+      "synonyms": ["unwieldy", "bulky", "awkward", "clunky"],
+      "collocations": ["a cumbersome process", "cumbersome equipment", "cumbersome bureaucracy"],
+      "example_simple": "The old machine was heavy and cumbersome to move.",
+      "example_complex": "The application procedure is so cumbersome that many qualified candidates give up halfway through.",
+      "definition_en": "large, heavy, or complicated, and therefore difficult to use, move, or manage",
+      "ipa": "/ˈkʌmbəsəm/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-215b76364cc90466": {
+      "difficulty": "7.0",
+      "synonyms": ["crafty", "sly", "wily", "shrewd"],
+      "collocations": ["a cunning plan", "a cunning trick", "a cunning strategy"],
+      "example_simple": "The fox is often described as a cunning animal.",
+      "example_complex": "Through a series of cunning manoeuvres, she managed to outwit far more experienced rivals.",
+      "definition_en": "clever at achieving one's aims through deception, trickery, or skilful planning",
+      "ipa": "/ˈkʌnɪŋ/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-4a130aec0704c5a2": {
+      "difficulty": "6.0",
+      "synonyms": ["syllabus", "course of study", "programme of study"],
+      "collocations": ["the school curriculum", "reform the curriculum", "part of the curriculum"],
+      "example_simple": "Mathematics is a core part of the school curriculum.",
+      "example_complex": "Educators are calling for a broader curriculum that gives equal weight to the arts and the sciences.",
+      "definition_en": "the group of subjects and content studied in a school, college, or educational course",
+      "ipa": "/kəˈrɪkjʊləm/",
+      "part_of_speech": "noun"
+    },
+    "da8c682a-4165-414b-ae79-5544fb3f396e": {
+      "difficulty": "8.0",
+      "definition_en": "brief, superficial training that lacks thoroughness or depth",
+      "ipa": "/ˈkɜːsəri ˈtreɪnɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "a45eb1bb-34ed-412c-9784-fb69451461c2": {
+      "difficulty": "7.0",
+      "definition_en": "to reduce or restrict something, especially by cutting it short",
+      "ipa": "/kɜːˈteɪl/",
+      "part_of_speech": "verb"
+    },
+    "cb8302d8-f53a-4888-ae7a-6bbc95584eba": {
+      "difficulty": "7.0",
+      "definition_en": "a person who is responsible for looking after or protecting something",
+      "ipa": "/kʌˈstəʊdiən/",
+      "part_of_speech": "noun"
+    },
+    "bec195e8-2704-4ef8-aa8c-e84065f08e56": {
+      "difficulty": "7.0",
+      "definition_en": "in a way that follows usual habits or long-established practice",
+      "ipa": "/ˈkʌstəm(ə)rɪli/",
+      "part_of_speech": "adverb"
+    },
+    "pubcol-w-c3dd4f9234322675": {
+      "difficulty": "6.0",
+      "synonyms": ["customs official", "border officer", "customs agent"],
+      "collocations": ["a customs officer checked", "declare goods to a customs officer", "a customs officer at the airport"],
+      "example_simple": "The customs officer asked to see my passport.",
+      "example_complex": "A vigilant customs officer intercepted the shipment before it could clear the border.",
+      "definition_en": "an official who inspects goods and travellers entering or leaving a country",
+      "ipa": "/ˈkʌstəmz ˌɒfɪsə/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-238f7f6808741b8d": {
+      "difficulty": "7.0",
+      "synonyms": ["strike a deal", "reach an agreement", "make a deal"],
+      "collocations": ["cut a deal with", "cut a deal to avoid", "eventually cut a deal"],
+      "example_simple": "The two companies cut a deal to share the profits.",
+      "example_complex": "Facing a lengthy trial, the defendant's lawyers moved quickly to cut a deal with prosecutors.",
+      "definition_en": "to reach a business or negotiated agreement, often after bargaining",
+      "ipa": "/kʌt ə ˈdiːl/",
+      "part_of_speech": "idiom"
+    },
+    "4d54515b-23be-4fa5-993c-4b4d9d2625c9": {
+      "difficulty": "8.0",
+      "definition_en": "an upright, tube-shaped enclosed space or compartment",
+      "ipa": "/sɪˈlɪndrɪkəl ˈvɜːtɪkəl ˈtʃeɪmbə/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-a1a2aafe9ae6210a": {
+      "difficulty": "7.0",
+      "synonyms": ["distrustful", "sceptical", "pessimistic", "jaded"],
+      "collocations": ["a cynical attitude", "become cynical about", "a cynical remark"],
+      "example_simple": "He has become very cynical about politics.",
+      "example_complex": "Years of broken promises had left the voters deeply cynical about any pledge of reform.",
+      "definition_en": "believing that people are motivated mainly by self-interest; distrustful of others' sincerity",
+      "ipa": "/ˈsɪnɪkəl/",
+      "part_of_speech": "adjective",
+      "vi_meaning_correction": "hoài nghi, yếm thế; tin rằng người khác chỉ hành động vì tư lợi"
+    },
+    "e1fbcef2-7962-49fb-b9b5-6335778c9bec": {
+      "difficulty": "8.0",
+      "definition_en": "the jelly-like material that fills a cell and surrounds the nucleus",
+      "ipa": "/ˈsaɪtəʊplæzəm/",
+      "part_of_speech": "noun"
+    },
+    "a2be91a5-d83b-42b8-916a-8e8db05c7b69": {
+      "difficulty": "6.0",
+      "definition_en": "a barrier built across a river to hold back and control the flow of water",
+      "ipa": "/dæm/",
+      "part_of_speech": "noun"
+    },
+    "e9f644b0-447f-4d49-8aa2-4c45b6fd5923": {
+      "difficulty": "8.0",
+      "definition_en": "the unauthorized transfer or theft of data from a computer system",
+      "ipa": "/ˈdeɪtə ˌeksfɪlˈtreɪʃən/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-5ea0d9b1e549ed46": {
+      "difficulty": "6.0",
+      "synonyms": ["day after day", "continually", "every single day", "constantly"],
+      "collocations": ["work day in, day out", "a day in, day out routine", "the same thing day in, day out"],
+      "example_simple": "She does the same job day in, day out.",
+      "example_complex": "Day in, day out, the volunteers turned up before dawn to prepare meals for the homeless.",
+      "definition_en": "continuously, every day over a long period without change",
+      "ipa": "/ˌdeɪ ɪn ˌdeɪ ˈaʊt/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-c0c44b461d2097bf": {
+      "difficulty": "6.0",
+      "synonyms": ["conduct research", "carry out research", "investigate", "study"],
+      "collocations": ["do research on", "do research into", "do extensive research"],
+      "example_simple": "I need to do some research before writing the essay.",
+      "example_complex": "Before launching the product, the team did thorough research into consumer preferences.",
+      "definition_en": "to carry out a careful study or investigation in order to discover facts",
+      "ipa": "/duː rɪˈsɜːtʃ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-e1b049f203f26df6": {
+      "difficulty": "6.0",
+      "synonyms": ["absolutely sure", "positive", "completely certain", "convinced"],
+      "collocations": ["dead certain about", "dead certain that", "feel dead certain"],
+      "example_simple": "I'm dead certain I locked the door.",
+      "example_complex": "The witness seemed dead certain about the details, yet the evidence told a very different story.",
+      "definition_en": "completely and absolutely sure about something",
+      "ipa": "/ˌded ˈsɜːtən/",
+      "part_of_speech": "phrase"
+    }
+  }
+}

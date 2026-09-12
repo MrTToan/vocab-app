@@ -1,0 +1,179 @@
+{
+  "meta": { "batch": "batch-134", "authored_by": "claude", "count": 25 },
+  "words": {
+    "fc7af70c-8726-4975-92d8-9505f4fda2ff": {
+      "difficulty": "7.0",
+      "definition_en": "the area near or surrounding a particular place",
+      "ipa": "/vɪˈsɪnəti/",
+      "part_of_speech": "noun"
+    },
+    "ffb88e9b-ca9b-4560-89ea-8ed2ae05b344": {
+      "difficulty": "7.0",
+      "definition_en": "an energetic, intensive effort to build major roads",
+      "ipa": "/ˈvɪɡərəs ˈhaɪweɪ kənˈstrʌkʃən ˈprəʊɡræm/",
+      "part_of_speech": "phrase"
+    },
+    "42b0e604-f4b5-4886-b64d-f36d12da75bc": {
+      "difficulty": "7.0",
+      "definition_en": "chased or carried out with great energy and determination",
+      "ipa": "/ˈvɪɡərəsli pəˈsjuːd/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-b7f621d0d5fec620": {
+      "synonyms": ["acetic acid"],
+      "collocations": ["white vinegar", "a splash of vinegar", "balsamic vinegar"],
+      "example_simple": "She added a little vinegar to the salad dressing.",
+      "example_complex": "The recipe called for a tablespoon of apple cider vinegar to balance the sweetness of the sauce.",
+      "definition_en": "a sour liquid made from fermented alcohol, used in cooking and preserving food",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-c8ceaa59d3031a31": {
+      "synonyms": ["brutality", "aggression", "force", "cruelty"],
+      "collocations": ["domestic violence", "an act of violence", "an outbreak of violence"],
+      "example_simple": "The film contains a lot of violence.",
+      "example_complex": "The government introduced new measures aimed at reducing violence in the city's poorest neighbourhoods.",
+      "definition_en": "behaviour involving physical force intended to hurt or damage someone or something",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-3304fb6be0936341": {
+      "synonyms": ["aggressive", "brutal", "ferocious", "savage"],
+      "collocations": ["violent crime", "a violent storm", "a violent protest"],
+      "example_simple": "He has a violent temper.",
+      "example_complex": "The peaceful demonstration turned violent after clashes broke out between protesters and police.",
+      "definition_en": "using or involving physical force intended to hurt or damage",
+      "part_of_speech": "adjective"
+    },
+    "d279f70b-2a1b-4fb4-a7bc-38f682997c0b": {
+      "difficulty": "8.0",
+      "definition_en": "an inner region that is moving or stirring with great, turbulent force",
+      "ipa": "/ˈvaɪələntli ˈtʃɜːnɪŋ ɪnˈtɪəriə/",
+      "part_of_speech": "phrase"
+    },
+    "319b2190-dd08-4500-a000-70173c991b06": {
+      "difficulty": "8.0",
+      "definition_en": "almost complete freedom from punishment or consequences",
+      "ipa": "/ˈvɜːtʃuəl ɪmˈpjuːnəti/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-5038fbed1ceeb069": {
+      "difficulty": "6.0",
+      "synonyms": ["almost", "nearly", "practically", "all but"],
+      "collocations": ["virtually impossible", "virtually identical", "virtually every"],
+      "example_simple": "The town was virtually empty at night.",
+      "example_complex": "By the end of the century, the disease had been virtually eliminated across the developed world.",
+      "definition_en": "nearly or almost completely",
+      "ipa": "/ˈvɜːtʃuəli/",
+      "part_of_speech": "adverb"
+    },
+    "b54c48ad-de18-4527-9d47-2c2eb96c3f34": {
+      "difficulty": "7.0",
+      "definition_en": "behaviour showing high moral standards; a good or admirable quality",
+      "ipa": "/ˈvɜːtʃuː/",
+      "part_of_speech": "noun"
+    },
+    "145ce8d5-e400-416b-b8d0-33a8249c6cb1": {
+      "difficulty": "7.0",
+      "definition_en": "having or showing high moral standards",
+      "ipa": "/ˈvɜːtʃuəs/",
+      "part_of_speech": "adjective"
+    },
+    "e1bff5c5-d49e-41f6-9bae-3bba7c2fd0b9": {
+      "difficulty": "8.0",
+      "definition_en": "(of a disease or poison) extremely severe or harmful, and often spreading rapidly",
+      "ipa": "/ˈvɪrələnt/",
+      "part_of_speech": "adjective"
+    },
+    "306f6eb3-0577-40d9-b672-50501b85f35c": {
+      "difficulty": "8.0",
+      "definition_en": "(of a liquid) thick, sticky, and not flowing easily",
+      "ipa": "/ˈvɪskəs/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-bb08acf76c0b2220": {
+      "difficulty": "6.0",
+      "synonyms": ["away team", "guest team", "opposing team"],
+      "collocations": ["support the visiting team", "the visiting team's fans", "beat the visiting team"],
+      "example_simple": "The visiting team scored in the last minute.",
+      "example_complex": "Despite playing away from home, the visiting team dominated possession and secured a convincing victory.",
+      "definition_en": "the team that plays at the opponent's home ground rather than its own",
+      "ipa": "/ˈvɪzɪtɪŋ tiːm/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-d28164435ea620e8": {
+      "difficulty": "7.0",
+      "synonyms": ["monitor", "screen", "display", "VDU"],
+      "collocations": ["work at a visual display unit", "stare at a visual display unit", "a visual display unit screen"],
+      "example_simple": "Each desk had its own visual display unit.",
+      "example_complex": "Employees who spend long hours at a visual display unit are advised to take regular breaks to reduce eye strain.",
+      "definition_en": "a device with a screen that shows information from a computer; a monitor",
+      "ipa": "/ˈvɪʒuəl dɪˈspleɪ ˈjuːnɪt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-a0d73f624ffe9961": {
+      "synonyms": ["bright", "vibrant", "graphic", "striking"],
+      "collocations": ["a vivid imagination", "vivid colours", "a vivid memory"],
+      "example_simple": "She has a vivid imagination.",
+      "example_complex": "The novelist's vivid descriptions brought the crowded streets of nineteenth-century London to life."
+    },
+    "cc9fab09-5c4a-49e5-b86b-e372db43d667": {
+      "difficulty": "7.0",
+      "definition_en": "relating to the skills and training needed for a particular job or occupation",
+      "ipa": "/vəʊˈkeɪʃənl/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-a791db58e1f399ee": {
+      "difficulty": "6.0",
+      "ipa": "/vəʊˈkeɪʃənl ˈtreɪnɪŋ/"
+    },
+    "aa638f1c-24bb-4698-904b-d8fc6656e711": {
+      "difficulty": "7.0",
+      "definition_en": "to express complaints or feelings of unfair treatment",
+      "ipa": "/vɔɪs ˈɡriːvənsɪz/",
+      "part_of_speech": "phrase"
+    },
+    "7d33ff4c-8fe5-47cb-97b1-3ab29d9d9e74": {
+      "difficulty": "8.0",
+      "definition_en": "tiny solid particles of ash and dust released into the air by a volcano",
+      "ipa": "/vɒlˈkænɪk pɑːˈtɪkjʊlət/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-abdc2ad67fc8de9f": {
+      "difficulty": "6.0",
+      "synonyms": ["traffic flow", "traffic density", "amount of traffic"],
+      "collocations": ["a heavy volume of traffic", "an increase in the volume of traffic", "reduce the volume of traffic"],
+      "example_simple": "The volume of traffic increases during rush hour.",
+      "example_complex": "Planners underestimated the volume of traffic the new shopping centre would generate, leading to severe congestion.",
+      "definition_en": "the amount of vehicles moving along a road or through an area",
+      "ipa": "/ˈvɒljuːm əv ˈtræfɪk/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-1be7a30854a28eaa": {
+      "synonyms": ["pledge", "promise", "oath", "commitment"],
+      "collocations": ["marriage vows", "make a vow", "take a vow"],
+      "example_simple": "They made a vow to stay together forever.",
+      "example_complex": "She took a solemn vow of silence when she entered the monastery."
+    },
+    "pubcol-w-45fa2845201758c2": {
+      "difficulty": "7.0",
+      "synonyms": ["fight against", "battle against", "campaign against"],
+      "collocations": ["wage war on poverty", "wage war on crime", "wage war on drugs"],
+      "example_simple": "The government promised to wage war on crime.",
+      "example_complex": "The new health minister vowed to wage war on obesity by regulating the marketing of junk food to children.",
+      "definition_en": "to carry out a sustained campaign or fight against someone or something",
+      "ipa": "/weɪdʒ wɔːr ɒn/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-cf3114deb78b2e25": {
+      "synonyms": ["bet", "stake", "gamble"],
+      "collocations": ["place a wager", "win a wager", "lose a wager"],
+      "example_simple": "He placed a wager on the horse race.",
+      "example_complex": "She laid a substantial wager that the underdog would win the championship."
+    },
+    "pubcol-w-5501fdb78e778907": {
+      "synonyms": ["midriff", "middle", "waistline"],
+      "collocations": ["a slim waist", "around the waist", "waist measurement"],
+      "example_simple": "He wore a belt around his waist.",
+      "example_complex": "The tailor measured her waist carefully before adjusting the dress."
+    }
+  }
+}

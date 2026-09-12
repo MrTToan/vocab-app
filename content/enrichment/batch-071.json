@@ -1,0 +1,222 @@
+{
+  "meta": { "batch": "batch-071", "authored_by": "claude", "count": 25 },
+  "words": {
+    "75bdfa64-8da2-4431-bcd0-2e5aca0730b1": {
+      "definition_en": "a group of people chosen to hear evidence in a court and decide the verdict",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-3d7a034a83cbfb62": {
+      "synonyms": ["defend", "warrant", "vindicate", "explain"],
+      "collocations": ["justify a decision", "justify the cost", "justify your actions"],
+      "example_simple": "How can you justify spending so much money on a phone?",
+      "example_complex": "The government struggled to justify the tax increase to a public already burdened by rising prices."
+    },
+    "d2a2ca75-a09d-4c11-99bd-6783c44fd926": {
+      "difficulty": "8.0",
+      "definition_en": "to place two or more things close together, especially to compare or contrast them",
+      "ipa": "/ˈdʒʌkstəpəʊz/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-1c15bc371ffe03de": {
+      "difficulty": "6.0",
+      "synonyms": ["watch", "monitor", "look after", "mind"],
+      "collocations": ["keep an eye on the children", "keep an eye on the situation", "keep a close eye on"],
+      "example_simple": "Can you keep an eye on my bag while I go to the toilet?",
+      "example_complex": "Investors are keeping a close eye on interest rates before deciding where to put their money.",
+      "definition_en": "to watch someone or something carefully or look after them",
+      "ipa": "/kiːp ən aɪ ɒn/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-2438d811634ec862": {
+      "difficulty": "6.0",
+      "synonyms": ["be moody", "have mood swings", "be temperamental"],
+      "collocations": ["keep changing her mood", "sudden mood changes", "unpredictable mood"],
+      "example_simple": "She keeps changing her mood, so it is hard to know how she feels.",
+      "example_complex": "His tendency to keep changing his mood without warning made his colleagues cautious around him.",
+      "definition_en": "to shift emotional state repeatedly and unpredictably",
+      "ipa": "/kiːp ˈtʃeɪndʒɪŋ hɜː muːd/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "luôn thay đổi tâm trạng"
+    },
+    "pubcol-w-47edeeb9c11a02ff": {
+      "difficulty": "6.0",
+      "synonyms": ["suppress", "restrain", "hold back", "control"],
+      "collocations": ["keep prices down", "keep the noise down", "keep food down"],
+      "example_simple": "Please keep the noise down; the baby is sleeping.",
+      "example_complex": "The company introduced new suppliers in an effort to keep costs down without lowering quality.",
+      "definition_en": "to prevent something from rising, escaping, or being expressed; to hold it under control",
+      "ipa": "/kiːp daʊn/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-a0960c138ec44f15": {
+      "difficulty": "6.0",
+      "synonyms": ["stay in shape", "stay healthy", "be unfit", "be out of shape"],
+      "collocations": ["keep fit", "be out of condition", "get back into condition"],
+      "example_simple": "I go jogging every morning to keep fit.",
+      "example_complex": "After months without exercise she was badly out of condition, so she joined a gym to keep fit again.",
+      "definition_en": "to stay physically healthy through exercise; 'be out of condition' means to be unfit",
+      "ipa": "/kiːp fɪt biː aʊt əv kənˈdɪʃən/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "giữ dáng, khỏe mạnh / mất phong độ, không còn khỏe mạnh"
+    },
+    "pubcol-w-5a86f322ea7b0eac": {
+      "difficulty": "5.0",
+      "synonyms": ["continue", "carry on", "press on", "persevere"],
+      "collocations": ["keep going", "just keep going", "keep going despite"],
+      "example_simple": "I was tired, but I decided to keep going until the end.",
+      "example_complex": "Even when the project seemed hopeless, she encouraged the team to keep going and trust the plan.",
+      "definition_en": "to continue doing something without stopping",
+      "ipa": "/kiːp ˈɡəʊɪŋ/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "tiếp tục, đi tiếp"
+    },
+    "pubcol-w-f78d453b821a80b1": {
+      "difficulty": "5.0",
+      "ipa": "/kiːp ɪn tʌtʃ/"
+    },
+    "pubcol-w-73823beea431b646": {
+      "difficulty": "7.0",
+      "synonyms": ["keep up with", "match", "stay level with", "follow"],
+      "collocations": ["keep pace with demand", "keep pace with change", "struggle to keep pace with"],
+      "example_simple": "It is hard to keep pace with all the new technology.",
+      "example_complex": "Wages have failed to keep pace with the rising cost of living in most major cities.",
+      "definition_en": "to move or develop at the same rate as someone or something else",
+      "ipa": "/kiːp peɪs wɪð/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-047d310c7568d169": {
+      "difficulty": "7.0",
+      "synonyms": ["match", "stay level with", "keep abreast of", "follow"],
+      "collocations": ["keep pace with rivals", "keep up with the times", "keep pace with growth"],
+      "example_simple": "She works hard to keep up with the rest of the class.",
+      "example_complex": "Smaller firms often cannot keep pace with the research budgets of their larger competitors.",
+      "definition_en": "to move, progress, or stay informed at the same rate as someone or something else",
+      "ipa": "/kiːp peɪs ʌp wɪð/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-8abb5e4def4d206e": {
+      "difficulty": "6.0",
+      "synonyms": ["keep busy", "occupy", "engage", "entertain"],
+      "collocations": ["keep the children occupied", "keep yourself occupied", "keep sb occupied for hours"],
+      "example_simple": "We gave the kids some games to keep them occupied.",
+      "example_complex": "The airline offers films and puzzles to keep passengers occupied during long-haul flights.",
+      "definition_en": "to give someone something to do so they stay busy",
+      "ipa": "/kiːp ˌsʌmbədi ˈɒkjupaɪd/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-bd093cd593ba9551": {
+      "difficulty": "6.0",
+      "synonyms": ["keep awake", "prevent from sleeping", "keep from bed"],
+      "collocations": ["keep sb up all night", "keep the neighbours up", "sorry to keep you up"],
+      "example_simple": "The loud party next door kept me up all night.",
+      "example_complex": "Worries about the exam kept her up long after everyone else had gone to sleep.",
+      "definition_en": "to prevent someone from going to sleep or to stop them sleeping",
+      "ipa": "/kiːp ˌsʌmbədi ʌp/",
+      "part_of_speech": "phrase"
+    },
+    "5736c452-d87e-4998-b5cd-a2fc84d6afb1": {
+      "difficulty": "6.0",
+      "definition_en": "to prevent something from being produced or created",
+      "ipa": "/kiːp ˈsʌmθɪŋ frɒm ˈbiːɪŋ meɪd/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-9872519b05021a1f": {
+      "difficulty": "5.0",
+      "synonyms": ["keep grabbing", "keep taking", "repeatedly take"],
+      "collocations": ["keep taking things", "keep taking my stuff", "keep taking risks"],
+      "example_simple": "My little brother keeps taking things from my room without asking.",
+      "example_complex": "The company kept taking shortcuts on safety until an accident finally forced a change.",
+      "definition_en": "to repeatedly take or remove things, often without permission",
+      "ipa": "/kiːp ˈteɪkɪŋ θɪŋz/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "cứ lấy đồ, liên tục lấy các thứ"
+    },
+    "pubcol-w-5415c28a78af764a": {
+      "difficulty": "5.0",
+      "synonyms": ["keep checking", "keep examining", "test repeatedly"],
+      "collocations": ["keep testing the code", "keep testing your limits", "keep testing until it works"],
+      "example_simple": "The doctors keep testing his blood to check his health.",
+      "example_complex": "Good engineers keep testing their designs under extreme conditions before releasing them.",
+      "definition_en": "to continue checking or examining something repeatedly",
+      "ipa": "/kiːp ˈtestɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-a84a04d14ae61005": {
+      "difficulty": "6.0",
+      "synonyms": ["keep pace with", "match", "stay informed about", "follow"],
+      "collocations": ["keep up with the news", "keep up with friends", "keep up with demand"],
+      "example_simple": "It is difficult to keep up with all my emails.",
+      "example_complex": "Busy professionals often use apps to keep up with world events during their commute.",
+      "definition_en": "to move at the same rate as, or stay informed about, someone or something",
+      "ipa": "/kiːp ʌp wɪð/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-95188fa66e344061": {
+      "synonyms": ["teakettle", "boiler"],
+      "collocations": ["boil the kettle", "put the kettle on", "an electric kettle"],
+      "example_simple": "I put the kettle on to make a cup of tea.",
+      "example_complex": "The old kettle whistled loudly as the water reached boiling point on the stove.",
+      "definition_en": "a container with a lid, spout, and handle used for boiling water",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-4815456470787406": {
+      "difficulty": "6.0",
+      "synonyms": ["secret of success", "recipe for success", "path to success"],
+      "collocations": ["the key to success", "hard work is the key to success", "hold the key to success"],
+      "example_simple": "Hard work is the key to success in any job.",
+      "example_complex": "According to the entrepreneur, adapting quickly to change is the real key to success in modern business.",
+      "definition_en": "the most important factor that leads to achieving something",
+      "ipa": "/kiː tə səkˈses/",
+      "part_of_speech": "phrase"
+    },
+    "a214fb41-f3c7-45d7-8c4c-48a688c4c2ac": {
+      "difficulty": "7.0",
+      "definition_en": "the central, most important part on which everything else depends; the central stone at the top of an arch",
+      "ipa": "/ˈkiːstəʊn/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-a37a4b6d5f8740bc": {
+      "difficulty": "7.0",
+      "synonyms": ["make a fuss", "complain loudly", "make a scene", "protest"],
+      "collocations": ["kick up a fuss about the bill", "kick up a fuss over nothing", "start to kick up a fuss"],
+      "example_simple": "He kicked up a fuss about the cold food at the restaurant.",
+      "example_complex": "Residents kicked up a fuss about the new development, arguing it would ruin the neighbourhood's character.",
+      "definition_en": "to complain loudly or angrily and cause a disturbance about something",
+      "ipa": "/kɪk ʌp ə fʌs əˈbaʊt/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "làm ầm ĩ, phàn nàn ầm ĩ về việc gì"
+    },
+    "202653f7-b549-49dd-a444-cbda9335944b": {
+      "difficulty": "7.0",
+      "definition_en": "a medical treatment that filters waste and excess fluid from the blood when the kidneys fail",
+      "ipa": "/ˈkɪdni daɪˈæləsɪs/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-93031736133f3cd5": {
+      "difficulty": "6.0",
+      "synonyms": ["kill time", "pass the time", "while away the time"],
+      "collocations": ["kill the time", "kill time before the flight", "read to kill the time"],
+      "example_simple": "We played cards to kill the time while we waited.",
+      "example_complex": "Stuck at the airport for hours, the travellers killed the time browsing shops they had no intention of buying from.",
+      "definition_en": "to spend time doing something unimportant while waiting for something else",
+      "ipa": "/kɪl ðə taɪm/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "giết thời gian"
+    },
+    "pubcol-w-d4841bdec41be014": {
+      "difficulty": "6.0",
+      "ipa": "/kɪl taɪm/"
+    },
+    "pubcol-w-a7d5a9b1a5043a3c": {
+      "difficulty": "6.0",
+      "synonyms": ["achieve two goals at once", "double win", "two-for-one"],
+      "collocations": ["kill two birds with one stone", "a chance to kill two birds with one stone"],
+      "example_simple": "By walking to work, I kill two birds with one stone: I save money and get exercise.",
+      "example_complex": "Holding the conference in her home city let her kill two birds with one stone, combining business with a long-overdue family visit.",
+      "definition_en": "to achieve two aims with a single action",
+      "ipa": "/kɪl tuː bɜːdz wɪð wʌn stəʊn/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "một mũi tên trúng hai đích"
+    }
+  }
+}

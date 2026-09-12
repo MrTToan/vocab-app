@@ -1,0 +1,183 @@
+{
+  "meta": { "batch": "batch-104", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-30c653c7b5962057": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˈrefrəns ˈletə/",
+      "definition_en": "a formal letter written by someone who knows you, describing your abilities and character to a potential employer",
+      "synonyms": ["recommendation letter", "letter of reference", "testimonial", "character reference"],
+      "collocations": ["write a reference letter", "ask for a reference letter", "provide a reference letter"],
+      "example_simple": "My old boss agreed to write a reference letter for my new job.",
+      "example_complex": "A strong reference letter from a respected professor can significantly boost a graduate's chances of securing a competitive position.",
+      "vi_meaning_correction": "thư giới thiệu"
+    },
+    "15928c0c-527b-408d-92d3-c1b957b23458": {
+      "difficulty": "7.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˈriːfleks rɪˈspɒns/",
+      "definition_en": "an automatic, involuntary reaction to a stimulus"
+    },
+    "pubcol-w-c185212a35f713a4": {
+      "synonyms": ["abstain", "hold back", "desist", "avoid"],
+      "collocations": ["refrain from smoking", "refrain from commenting", "kindly refrain from"],
+      "example_simple": "Please refrain from talking during the exam.",
+      "example_complex": "Officials urged the public to refrain from spreading unverified rumours during the crisis."
+    },
+    "77f8d132-134b-41bb-bbde-50894731b1ee": {
+      "difficulty": "6.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˈrefjuːdʒ/",
+      "definition_en": "a place or state of safety and shelter from danger or trouble"
+    },
+    "pubcol-w-250d8c26ae4ac5c7": {
+      "synonyms": ["displaced person", "asylum seeker", "exile", "émigré"],
+      "collocations": ["refugee camp", "political refugee", "shelter refugees"],
+      "example_simple": "The refugee family finally found a safe place to live.",
+      "example_complex": "The war displaced millions of people, creating one of the largest refugee crises in recent history."
+    },
+    "8f68532f-7003-4042-98df-74aace808212": {
+      "difficulty": "7.0",
+      "part_of_speech": "verb",
+      "ipa": "/ˌriːˈfɜːbɪʃ/",
+      "definition_en": "to renovate and redecorate something, especially a building, to restore it to good condition"
+    },
+    "pubcol-w-52ca45370b6e4b29": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/rɪˈfjuːz ðə ˈɒfə/",
+      "definition_en": "to decline or turn down a proposal or invitation",
+      "synonyms": ["decline the offer", "turn down the offer", "reject the proposal", "say no"],
+      "collocations": ["politely refuse the offer", "flatly refuse the offer", "refuse the offer outright"],
+      "example_simple": "She decided to refuse the offer because the salary was too low.",
+      "example_complex": "Although the terms seemed generous, he chose to refuse the offer, sensing hidden conditions he could not accept.",
+      "vi_meaning_correction": "khước từ lời đề nghị"
+    },
+    "pubcol-w-3411327ba8e9abe4": {
+      "difficulty": "7.0",
+      "ipa": "/rɪˈfjuːt/"
+    },
+    "pubcol-w-6f7a580eb6773e50": {
+      "difficulty": "6.0",
+      "part_of_speech": "adverb",
+      "ipa": "/rɪˈɡɑːdləs/",
+      "definition_en": "without paying attention to the present situation, difficulties, or opposition",
+      "synonyms": ["nonetheless", "anyway", "notwithstanding", "in any case"],
+      "collocations": ["regardless of cost", "regardless of the consequences", "carry on regardless"],
+      "example_simple": "We will go to the beach regardless of the weather.",
+      "example_complex": "She pursued her ambition regardless of the obstacles that repeatedly stood in her way.",
+      "vi_meaning_correction": "bất chấp, không tính đến"
+    },
+    "fe0f2f64-2f02-4b7b-9bdb-4a8ad2e354e4": {
+      "difficulty": "8.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˈredʒɪmən/",
+      "definition_en": "a prescribed course of diet, exercise, or medical treatment to improve health"
+    },
+    "pubcol-w-0547027abf8e8961": {
+      "difficulty": "7.0",
+      "ipa": "/ˌriːəˌbɪlɪˈteɪʃn/"
+    },
+    "d98902e6-8e95-428b-81e0-a23c61b5dce3": {
+      "difficulty": "8.0",
+      "part_of_speech": "phrase",
+      "ipa": "/reɪnz ɪn/",
+      "definition_en": "to bring something under control or restrain it, especially spending or behaviour"
+    },
+    "27dde61e-9ef9-43df-952d-cc061f54db0d": {
+      "difficulty": "6.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˈreɪndɪə/",
+      "definition_en": "a large deer with branching antlers, native to Arctic and subarctic regions",
+      "example_simple": "In the story, reindeer pull Santa's sleigh through the sky.",
+      "example_complex": "Herds of reindeer migrate vast distances across the frozen tundra in search of grazing land."
+    },
+    "38730a6a-2b81-42ef-baa3-545696fc3185": {
+      "difficulty": "8.0"
+    },
+    "pubcol-w-2d9c06934f432aad": {
+      "synonyms": ["repeat", "restate", "recapitulate", "say again"],
+      "collocations": ["reiterate a point", "reiterate one's support", "reiterate the message"],
+      "example_simple": "Let me reiterate that safety is our top priority.",
+      "example_complex": "The minister reiterated the government's commitment to reform, addressing concerns raised by critics."
+    },
+    "pubcol-w-90afb8c10d80d7b8": {
+      "part_of_speech": "verb",
+      "definition_en": "to refuse to accept, consider, or agree to something",
+      "synonyms": ["refuse", "turn down", "decline", "dismiss"],
+      "collocations": ["reject a proposal", "reject an application", "flatly reject"],
+      "example_simple": "The company decided to reject his job application.",
+      "example_complex": "The committee rejected the amendment, arguing that it would undermine the original agreement."
+    },
+    "pubcol-w-7ab1ff05c03b8c61": {
+      "part_of_speech": "phrase",
+      "definition_en": "concerning or connected with a particular subject or thing",
+      "synonyms": ["concerning", "regarding", "pertaining to", "about"],
+      "collocations": ["issues relating to", "matters relating to", "questions relating to"],
+      "example_simple": "We discussed several problems relating to the new project.",
+      "example_complex": "The report addresses complex legal questions relating to data privacy in the digital age."
+    },
+    "pubcol-w-9649007e163d3f01": {
+      "part_of_speech": "noun",
+      "definition_en": "the way in which people, groups, or countries behave towards and deal with each other",
+      "synonyms": ["ties", "dealings", "connections", "links"],
+      "collocations": ["diplomatic relations", "public relations", "improve relations"],
+      "example_simple": "The two countries have good trade relations.",
+      "example_complex": "Decades of hostility gradually gave way to warmer relations between the neighbouring states."
+    },
+    "pubcol-w-6a73a9121a5de293": {
+      "part_of_speech": "noun",
+      "definition_en": "the way in which two or more people or things are connected, or the state of being connected",
+      "synonyms": ["connection", "bond", "association", "rapport"],
+      "collocations": ["close relationship", "build a relationship", "working relationship"],
+      "example_simple": "They have a close relationship with their neighbours.",
+      "example_complex": "Researchers explored the complex relationship between diet and long-term mental health."
+    },
+    "pubcol-w-8cd56185df9f7eed": {
+      "difficulty": "6.0",
+      "ipa": "/ˈrelətɪvli/"
+    },
+    "pubcol-w-0452c0207d356c68": {
+      "part_of_speech": "noun",
+      "definition_en": "people who belong to the same family",
+      "synonyms": ["family members", "kin", "kinsfolk", "relations"],
+      "collocations": ["close relatives", "distant relatives", "visit relatives"],
+      "example_simple": "All my relatives came to the wedding.",
+      "example_complex": "During the holidays, relatives from across the country gathered at my grandmother's house."
+    },
+    "pubcol-w-63bb094ca4821a02": {
+      "part_of_speech": "verb",
+      "definition_en": "to become or make someone less tense, anxious, or worried",
+      "synonyms": ["unwind", "rest", "calm down", "loosen up"],
+      "collocations": ["relax at home", "help you relax", "relax the rules"],
+      "example_simple": "I like to relax by reading a book after work.",
+      "example_complex": "Learning to relax under pressure is a skill that takes many athletes years to master."
+    },
+    "pubcol-w-b912a11dddb4820b": {
+      "part_of_speech": "noun",
+      "definition_en": "the state of being free from tension and anxiety, or an activity that produces this",
+      "synonyms": ["rest", "leisure", "recreation", "unwinding"],
+      "collocations": ["relaxation technique", "for relaxation", "deep relaxation"],
+      "example_simple": "She listens to soft music for relaxation.",
+      "example_complex": "The retreat offers a range of relaxation techniques designed to reduce chronic stress."
+    },
+    "pubcol-w-00174a5cfbf2335e": {
+      "part_of_speech": "adjective",
+      "definition_en": "feeling calm and free from tension or worry",
+      "synonyms": ["calm", "at ease", "laid-back", "easygoing"],
+      "collocations": ["feel relaxed", "relaxed atmosphere", "look relaxed"],
+      "example_simple": "After the holiday, I felt happy and relaxed.",
+      "example_complex": "The café's relaxed atmosphere made it the perfect place for an unhurried afternoon of writing."
+    },
+    "pubcol-w-d4b9720e2a78ccc0": {
+      "difficulty": "5.0",
+      "part_of_speech": "phrase",
+      "ipa": "/rɪˈliːs frəm ˈprɪzn/",
+      "definition_en": "to set a prisoner free and allow them to leave jail",
+      "synonyms": ["set free", "let out", "free", "discharge"],
+      "collocations": ["released from prison early", "release from prison on parole", "release from prison on bail"],
+      "example_simple": "He was released from prison after serving five years.",
+      "example_complex": "After new evidence emerged, the court ordered his immediate release from prison."
+    }
+  }
+}

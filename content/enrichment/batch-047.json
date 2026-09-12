@@ -1,0 +1,181 @@
+{
+  "meta": { "batch": "batch-047", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-cbf72aca8348ef97": {
+      "synonyms": ["consequences", "repercussions", "aftermath", "side effects"],
+      "collocations": ["political fallout", "nuclear fallout", "economic fallout"],
+      "example_simple": "The company is still dealing with the fallout from the scandal.",
+      "example_complex": "The political fallout from the leaked documents eventually forced two senior ministers to resign."
+    },
+    "pubcol-w-96f8547cc31eb08b": {
+      "difficulty": "5.0",
+      "part_of_speech": "noun",
+      "ipa": "/ˌfɔːls ˈtiːθ/",
+      "definition_en": "a set of artificial teeth worn to replace missing natural ones; dentures",
+      "synonyms": ["dentures", "dental plate", "artificial teeth"],
+      "collocations": ["wear false teeth", "a set of false teeth", "fit false teeth"],
+      "example_simple": "My grandfather has to wear false teeth.",
+      "example_complex": "After losing several teeth in the accident, she was fitted with false teeth that looked completely natural.",
+      "vi_meaning_correction": "răng giả"
+    },
+    "pubcol-w-531f0611b3375019": {
+      "synonyms": ["hesitate", "waver", "stumble", "weaken"],
+      "collocations": ["begin to falter", "never falter", "falter under pressure"],
+      "example_simple": "Her voice began to falter as she spoke about her late mother.",
+      "example_complex": "Despite mounting criticism, his determination never faltered throughout the long campaign."
+    },
+    "pubcol-w-c0ccbc773ccc410e": {
+      "difficulty": "6.0",
+      "part_of_speech": "phrase",
+      "ipa": "/ˌepɪˈdemɪk/",
+      "definition_en": "a garbled entry that appears to refer to an epidemic that forces all schools to close temporarily",
+      "synonyms": ["epidemic", "outbreak", "pandemic"],
+      "collocations": ["disease outbreak", "temporary school closure", "widespread epidemic"],
+      "example_simple": "During the epidemic, all schools had to close temporarily.",
+      "example_complex": "As the epidemic spread rapidly, the government ordered that all schools be temporarily closed to protect students."
+    },
+    "9d455e4a-9994-4462-9727-f479fee6d737": {
+      "difficulty": "7.0",
+      "definition_en": "disagreement and conflict among members of a family",
+      "ipa": "/ˈfæməli ˈdɪskɔːd/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-d767a18385f33991": {
+      "synonyms": ["starvation", "hunger", "food shortage", "dearth"],
+      "collocations": ["widespread famine", "famine relief", "cause famine"],
+      "example_simple": "Thousands of people died during the famine.",
+      "example_complex": "The prolonged drought led to a devastating famine that affected millions of people across the region."
+    },
+    "9e184f5c-0d15-4819-88ab-63418075735b": {
+      "difficulty": "7.0",
+      "definition_en": "nations severely affected by famine and widespread food shortage",
+      "ipa": "/ˈfæmɪn ˌstrɪkən ˈkʌntriz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-39219bfff3273a81": {
+      "synonyms": ["zealous", "obsessive", "extreme", "fervent"],
+      "collocations": ["fanatical devotion", "fanatical supporter", "fanatical belief"],
+      "example_simple": "He is fanatical about keeping his car clean.",
+      "example_complex": "Her fanatical dedication to the cause bordered on obsession and alienated even her closest allies."
+    },
+    "c52e8ed0-a7a5-489e-89b2-c2003ce6f19a": {
+      "difficulty": "7.0",
+      "definition_en": "overly imaginative and unrealistic; based on fantasy rather than fact",
+      "ipa": "/ˈfænsɪfəl/",
+      "part_of_speech": "adjective"
+    },
+    "4fb49935-389a-4b5e-bec6-67651dffcc07": {
+      "difficulty": "8.0",
+      "synonyms": ["entirely unsuspecting", "wholly trusting", "not at all suspicious"],
+      "definition_en": "not suspicious at all; completely free from doubt or distrust",
+      "ipa": "/fɑː frɒm ˌentəˈteɪnɪŋ səˈspɪʃən/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-bdcd90a1868adb82": {
+      "synonyms": ["implausible", "unlikely", "unbelievable", "improbable"],
+      "collocations": ["far-fetched idea", "far-fetched story", "sound far-fetched"],
+      "example_simple": "His excuse sounded rather far-fetched.",
+      "example_complex": "Although the theory seemed far-fetched at first, subsequent evidence gradually made it far more credible."
+    },
+    "pubcol-w-47daf1f204ba79d0": {
+      "synonyms": ["distant", "remote", "far-off"],
+      "collocations": ["faraway places", "a faraway land", "a faraway look"],
+      "example_simple": "She dreams of travelling to faraway places.",
+      "example_complex": "He gazed out of the window with a faraway look, lost in memories of his childhood home."
+    },
+    "pubcol-w-c5675e9623555ebe": {
+      "synonyms": ["ticket price", "charge", "fee"],
+      "collocations": ["train fare", "bus fare", "pay the fare"],
+      "example_simple": "The bus fare has gone up again this year.",
+      "example_complex": "Commuters protested angrily after the rail company announced a sharp increase in fares.",
+      "definition_en": "the money paid for a journey on public transport",
+      "part_of_speech": "noun"
+    },
+    "96a1dccd-61e8-4218-9d3e-2ca8c42b1bd3": {
+      "difficulty": "7.0",
+      "definition_en": "performed or got on better than before or than others",
+      "ipa": "/feəd ˈbetə/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-43c86a6f50dcf182": {
+      "synonyms": ["goodbye", "parting", "send-off", "adieu"],
+      "collocations": ["bid farewell", "farewell party", "a fond farewell"],
+      "example_simple": "They said a sad farewell at the airport.",
+      "example_complex": "The retiring headmaster was given a warm farewell by staff and pupils who had known him for decades.",
+      "definition_en": "an expression of good wishes when parting; a goodbye",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-f11aefe622f3d9a4": {
+      "synonyms": ["farmstead", "homestead", "country house"],
+      "collocations": ["an old farmhouse", "farmhouse kitchen", "converted farmhouse"],
+      "example_simple": "They live in an old farmhouse in the countryside.",
+      "example_complex": "The couple restored a dilapidated farmhouse, carefully preserving its original stone walls and wooden beams.",
+      "definition_en": "the main house on a farm, where the farmer lives",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-c96529e4cb5da7af": {
+      "synonyms": ["agriculture", "cultivation", "husbandry"],
+      "collocations": ["organic farming", "dairy farming", "farming community"],
+      "example_simple": "Farming is the main source of income in this area.",
+      "example_complex": "Modern farming techniques have dramatically increased yields, though often at a considerable cost to the environment.",
+      "definition_en": "the activity of growing crops or raising animals for food",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-f9c83941c51bdbe7": {
+      "synonyms": ["intriguing", "captivating", "absorbing", "compelling"],
+      "collocations": ["a fascinating story", "absolutely fascinating", "fascinating insight"],
+      "example_simple": "The documentary about the ocean was absolutely fascinating.",
+      "example_complex": "Her research offers a fascinating insight into how ancient civilisations organised their societies.",
+      "definition_en": "extremely interesting and holding one's attention",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-1c4820fecf833519": {
+      "synonyms": ["stylish", "trendy", "chic", "in vogue"],
+      "collocations": ["fashionable clothes", "highly fashionable", "a fashionable district"],
+      "example_simple": "She always wears fashionable clothes.",
+      "example_complex": "The once-neglected neighbourhood has become a fashionable district full of trendy cafés and boutiques.",
+      "definition_en": "popular and following the current style at a particular time",
+      "part_of_speech": "adjective"
+    },
+    "63804f6a-fffb-4f94-8ff0-c3561392900d": {
+      "difficulty": "8.0",
+      "definition_en": "rules that can be understood or worked out",
+      "ipa": "/ˈfæðəməbəl ruːlz/",
+      "part_of_speech": "phrase"
+    },
+    "de86e8b6-14ae-4b7c-ad79-c3b4f7d05779": {
+      "difficulty": "9.0",
+      "synonyms": ["fault escarpments", "fault cliffs"],
+      "definition_en": "steep slopes or small cliffs formed where a geological fault has displaced the ground surface",
+      "ipa": "/ˈfɔːlt skɑːps/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-5735a53c9b22e072": {
+      "difficulty": "7.0",
+      "ipa": "/ˈfiːzəbəl/"
+    },
+    "78ce5cd1-26e5-4156-8bd7-985b7db1e720": {
+      "difficulty": "5.0",
+      "definition_en": "one of the light, flat structures that cover a bird's body",
+      "ipa": "/ˈfeðə/",
+      "part_of_speech": "noun"
+    },
+    "50ae1164-69d3-4337-8867-d69470523aa6": {
+      "difficulty": "8.0",
+      "definition_en": "a very weak gravitational force",
+      "ipa": "/ˈfiːbəl ˈɡrævəti/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-acf44085d4b79dbf": {
+      "difficulty": "7.0",
+      "synonyms": ["feel deeply satisfied", "feel a surge of happiness", "glow with contentment"],
+      "collocations": ["feel a glow of satisfaction", "a warm glow of happiness", "a quiet glow of pride"],
+      "example_simple": "She felt a glow of satisfaction when she finally finished the marathon.",
+      "example_complex": "Watching his former students succeed, the old teacher felt a quiet glow of satisfaction that no salary could ever have matched.",
+      "definition_en": "to experience a warm inner feeling of contentment or joy",
+      "ipa": "/fiːl ə ɡləʊ əv ˌsætɪsˈfækʃən/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "cảm thấy lâng lâng thỏa mãn/hạnh phúc"
+    }
+  }
+}

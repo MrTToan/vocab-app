@@ -1,0 +1,207 @@
+{
+  "meta": { "batch": "batch-117", "authored_by": "claude", "count": 25 },
+  "words": {
+    "pubcol-w-442a8f9c9df2cedd": {
+      "difficulty": "6.0",
+      "synonyms": ["substitute for", "cover for", "deputise for", "fill in for"],
+      "collocations": ["stand in for a colleague", "stand in for the manager", "stand in for someone temporarily"],
+      "example_simple": "I asked a friend to stand in for me at the meeting.",
+      "example_complex": "When the lead actor fell ill, an understudy had to stand in for her at short notice.",
+      "definition_en": "to take someone's place or do their job temporarily",
+      "ipa": "/stænd ɪn fɔː/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-bed4e9a5870bd978": {
+      "difficulty": "6.0",
+      "synonyms": ["be noticeable", "be prominent", "stick out", "shine"],
+      "collocations": ["stand out from the crowd", "stand out clearly", "make something stand out"],
+      "example_simple": "Her bright red coat made her stand out in the crowd.",
+      "example_complex": "To stand out in a competitive job market, candidates increasingly rely on distinctive personal projects.",
+      "definition_en": "to be clearly noticeable or much better than others",
+      "ipa": "/stænd aʊt/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-df4520601977e9f9": {
+      "difficulty": "7.0",
+      "synonyms": ["be tried", "face trial", "be prosecuted", "appear in court"],
+      "collocations": ["stand trial for murder", "stand trial on charges", "await trial"],
+      "example_simple": "The two men will stand trial next month.",
+      "example_complex": "The former minister is due to stand trial on charges of corruption that could end his political career.",
+      "definition_en": "to be formally tried in a court of law for a crime",
+      "ipa": "/stænd traɪəl/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-7e55b99b03d1853f": {
+      "difficulty": "6.0",
+      "ipa": "/ˈstændəd əv ˈlɪvɪŋ/"
+    },
+    "fbe80b49-683f-4f04-a677-88279ed3e710": {
+      "difficulty": "7.0",
+      "definition_en": "water that is not flowing and lies still, often becoming stagnant",
+      "ipa": "/ˈstændɪŋ ˈwɔːtə/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-0c231344dd60a1a2": {
+      "difficulty": "6.0",
+      "synonyms": ["raise an issue", "bring up a problem", "point out a problem", "flag an issue"],
+      "collocations": ["start a problem in discussion", "start a problem with the plan", "start a serious problem"],
+      "example_simple": "She was the first to start a problem about the new schedule.",
+      "example_complex": "Rather than stay silent, the analyst chose to start a problem that everyone else had been avoiding.",
+      "definition_en": "to raise or bring up an issue for discussion",
+      "ipa": "/stɑːt ə ˈprɒbləm/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-dc852bb11f750ba7": {
+      "difficulty": "8.0",
+      "synonyms": ["wake with a start", "jolt awake", "wake suddenly", "startle awake"],
+      "collocations": ["start out of one's sleep in fear", "start out of one's sleep at a noise", "suddenly start out of one's sleep"],
+      "example_simple": "He started out of his sleep when the phone rang loudly.",
+      "example_complex": "A crash of thunder made her start out of her sleep, heart pounding in the dark.",
+      "definition_en": "to wake up suddenly and with a jerk, usually because of a shock or noise",
+      "ipa": "/stɑːt aʊt əv wʌnz sliːp/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-ab9d1f2dae93ce4b": {
+      "difficulty": "6.0",
+      "synonyms": ["pick a fight", "start an argument", "cause a row", "provoke a dispute"],
+      "collocations": ["start a quarrel with someone", "start a quarrel over money", "deliberately start a quarrel"],
+      "example_simple": "He is always trying to start a quarrel with his brother.",
+      "example_complex": "She refused to start a quarrel over such a trivial matter, choosing instead to walk away.",
+      "definition_en": "to begin an angry argument or dispute with someone",
+      "ipa": "/stɑːt ə ˈkwɒrəl/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-b7f4950780a6b7fb": {
+      "difficulty": "5.0",
+      "synonyms": ["boot up the computer", "turn on the computer", "power up the computer", "switch on the computer"],
+      "collocations": ["start up the computer in the morning", "start up the computer quickly", "wait for the computer to start up"],
+      "example_simple": "Please start up the computer before the meeting begins.",
+      "example_complex": "The technician showed us how to start up the computer in safe mode to fix the error.",
+      "definition_en": "to switch on a computer so that it becomes ready to use",
+      "ipa": "/stɑːt ʌp ðə kəmˈpjuːtə/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-28f65fa5dd40d357": {
+      "difficulty": "7.0",
+      "synonyms": ["start afresh", "make a fresh start", "wipe the slate clean", "begin anew"],
+      "collocations": ["start with a clean slate", "give someone a clean slate", "begin with a clean sheet"],
+      "example_simple": "After apologising, they agreed to start with a clean slate.",
+      "example_complex": "Moving to a new city gave her the chance to start with a clean slate and leave past mistakes behind.",
+      "definition_en": "to make a fresh start with no record of past mistakes held against you",
+      "ipa": "/stɑːt wɪð ə kliːn sliːt/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-b5230a07199afccf": {
+      "difficulty": "7.0",
+      "synonyms": ["get things started", "set things in motion", "kick things off", "get underway"],
+      "collocations": ["get the ball rolling on a project", "start the ball rolling with a question", "set the ball rolling early"],
+      "example_simple": "Let's get the ball rolling and start the meeting.",
+      "example_complex": "To set the ball rolling on the reform, the government announced a large investment in public transport.",
+      "definition_en": "to start something happening, especially a large or important activity",
+      "ipa": "/stɑːt ðə bɔːl ˈrəʊlɪŋ/",
+      "part_of_speech": "idiom"
+    },
+    "pubcol-w-72d359fe056d19b6": {
+      "difficulty": "6.0",
+      "synonyms": ["public school", "government school", "state-funded school"],
+      "collocations": ["attend a state school", "go to state school", "state school pupils"],
+      "example_simple": "Most children in the town go to a state school.",
+      "example_complex": "The report compared exam results at state schools with those at private institutions across the region.",
+      "definition_en": "a school that is funded and run by the government and free to attend",
+      "ipa": "/steɪt skuːl/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-c498b00172d09123": {
+      "difficulty": "6.0",
+      "synonyms": ["keep up to date", "keep current", "stay informed", "keep abreast"],
+      "collocations": ["stay up to date with the news", "stay up to date on trends", "stay up to date with technology"],
+      "example_simple": "I read the news every day to stay up to date.",
+      "example_complex": "Professionals must constantly stay up to date with new regulations to remain competitive in their field.",
+      "definition_en": "to keep informed about the latest developments or trends",
+      "ipa": "/steɪ ʌp tə deɪt/",
+      "part_of_speech": "phrase",
+      "vi_meaning_correction": "cập nhật, bắt kịp xu thế"
+    },
+    "bfcfa038-4376-40d6-936f-53bbfc6e404c": {
+      "difficulty": "6.0",
+      "ipa": "/ˈstedɪli/"
+    },
+    "15cf0170-58d8-41ca-a07f-532378d97be6": {
+      "difficulty": "5.0",
+      "ipa": "/ˈstedi/"
+    },
+    "pubcol-w-44af33c517e22c52": {
+      "difficulty": "6.0",
+      "synonyms": ["stable income", "regular income", "reliable income", "dependable earnings"],
+      "collocations": ["earn a steady income", "provide a steady income", "have a steady income"],
+      "example_simple": "A part-time job gives her a steady income.",
+      "example_complex": "Renting out the property provided a steady income that cushioned the family against economic uncertainty.",
+      "definition_en": "a regular and reliable amount of money earned over time",
+      "ipa": "/ˈstedi ˈɪnkʌm/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-2971c1c0dd520ebb": {
+      "difficulty": "8.0",
+      "synonyms": ["take the credit", "upstage someone", "grab the limelight", "outshine someone"],
+      "collocations": ["steal someone's thunder", "steal the spotlight", "not want to steal someone's thunder"],
+      "example_simple": "I didn't mean to steal her thunder at the party.",
+      "example_complex": "By announcing his own promotion first, he completely stole his colleague's thunder on her big day.",
+      "definition_en": "to take attention or praise away from someone by doing what they intended to do",
+      "ipa": "/stiːl ˈsʌmwʌnz ˈθʌndə/",
+      "part_of_speech": "idiom"
+    },
+    "0a8c33e5-fe96-4eea-9ac6-14bda9ab1100": {
+      "difficulty": "7.0",
+      "ipa": "/ˈstiːpli/"
+    },
+    "4c5759ee-7392-4516-b86b-e49458fc94f1": {
+      "difficulty": "8.0",
+      "synonyms": ["guide someone through", "lead someone through", "navigate someone through", "help someone overcome"],
+      "definition_en": "to guide someone carefully through many difficult choices or problems",
+      "ipa": "/stɪə ˈsʌmwʌn θruː ðeə ˈnjuːmərəs dɪˈleməz/",
+      "part_of_speech": "phrase"
+    },
+    "7d98f8e9-013f-4812-8d2b-539ff1a9fec1": {
+      "difficulty": "6.0",
+      "definition_en": "the main long, thin part of a plant that supports leaves and flowers",
+      "ipa": "/stem/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-0922b5599f28b281": {
+      "difficulty": "7.0",
+      "ipa": "/stem frɒm/"
+    },
+    "pubcol-w-ff8e00529253d9ec": {
+      "difficulty": "7.0",
+      "synonyms": ["persevere with", "keep at", "persist with", "stick with"],
+      "collocations": ["stick at a task", "stick at it", "stick at something difficult"],
+      "example_simple": "If you stick at it, you will improve your English.",
+      "example_complex": "Only those who are willing to stick at a demanding routine tend to master a musical instrument.",
+      "definition_en": "to keep working hard at something despite difficulties",
+      "ipa": "/stɪk æt ˈsʌmθɪŋ/",
+      "part_of_speech": "phrase"
+    },
+    "84f3aac2-b16b-4332-aa75-7799a1770eaf": {
+      "difficulty": "8.0",
+      "definition_en": "to prevent something from happening or developing, or to suppress a feeling",
+      "ipa": "/ˈstaɪfl/",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-ae2f9e7de188cbbc": {
+      "synonyms": ["suffocating", "oppressive", "airless", "sweltering"],
+      "collocations": ["stifling heat", "a stifling atmosphere", "stifling humidity"],
+      "example_simple": "The room was hot and stifling with no open windows.",
+      "example_complex": "Working under such a stifling regime of rules left the staff with little room for creativity."
+    },
+    "pubcol-w-246f51254a431b62": {
+      "difficulty": "8.0",
+      "synonyms": ["quiet but deep", "reserved but profound"],
+      "collocations": ["as they say, still waters run deep", "remember that still waters run deep", "a quiet person, but still waters run deep"],
+      "example_simple": "He rarely speaks, but still waters run deep.",
+      "example_complex": "Colleagues underestimated the quiet intern, forgetting that still waters run deep and she had years of hidden expertise.",
+      "definition_en": "a quiet person may have a deep, complex, or passionate nature",
+      "ipa": "/stɪl ˈwɔːtəz rʌn diːp/",
+      "part_of_speech": "idiom"
+    }
+  }
+}

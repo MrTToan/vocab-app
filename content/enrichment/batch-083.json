@@ -1,0 +1,183 @@
+{
+  "meta": { "batch": "batch-083", "authored_by": "claude", "count": 25 },
+  "words": {
+    "5eedc61e-2ee6-48dc-9066-0ea7e5d89aa8": {
+      "difficulty": "8.0",
+      "definition_en": "people from the middle class who hold or promote extreme political or social views",
+      "ipa": "/ˈmɪdl klɑːs ˈrædɪklz/",
+      "part_of_speech": "phrase"
+    },
+    "202f41f3-69a5-4912-80b0-295f74046bc0": {
+      "difficulty": "7.0",
+      "definition_en": "physical responses or symptoms triggered by or associated with a migraine",
+      "ipa": "/ˈmaɪɡreɪn riˈækʃnz/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-ceaaf5463947575d": {
+      "difficulty": "6.0",
+      "synonyms": ["fair weather", "gentle weather", "pleasant weather", "temperate weather"],
+      "collocations": ["enjoy mild weather", "a spell of calm weather", "unusually mild for the season"],
+      "example_simple": "We had mild, calm weather all week, so we ate outside every evening.",
+      "example_complex": "The unusually mild and calm weather this winter allowed construction to continue without the delays that heavy storms normally cause.",
+      "definition_en": "weather that is not extreme — gentle, moderate in temperature and free of strong wind or storms",
+      "ipa": "/maɪld kɑːm ˈweðə/",
+      "part_of_speech": "phrase"
+    },
+    "46f846a6-5dfc-4839-acab-dd067fa9a1da": {
+      "difficulty": "6.0",
+      "definition_en": "comparative of 'mild' — gentler, less strong, or less severe than something else",
+      "ipa": "/ˈmaɪldə/",
+      "part_of_speech": "adjective"
+    },
+    "2544a100-6a8f-46b9-b0ae-a8ef40d9b85a": {
+      "difficulty": "7.0",
+      "definition_en": "aggressively active in support of a cause, especially willing to use force",
+      "ipa": "/ˈmɪlɪtənt/",
+      "part_of_speech": "adjective"
+    },
+    "c5b452d2-18c3-4a5b-830d-689584e9d4d3": {
+      "difficulty": "7.0",
+      "definition_en": "to move around and talk to many different people at a social event; to mix together",
+      "ipa": "/ˈmɪŋɡl/",
+      "part_of_speech": "verb"
+    },
+    "05d404e0-53d5-4412-b544-73037a162aa9": {
+      "difficulty": "6.0"
+    },
+    "pubcol-w-3d59cf4b50713590": {
+      "difficulty": "6.0",
+      "synonyms": ["base pay", "minimum pay", "wage floor"],
+      "collocations": ["raise the minimum wage", "earn the minimum wage", "a minimum wage worker"],
+      "example_simple": "Many part-time workers are paid only the minimum wage.",
+      "example_complex": "Economists disagree over whether raising the minimum wage reduces poverty or simply pushes employers to cut jobs.",
+      "definition_en": "the lowest hourly or daily pay that an employer is legally allowed to give a worker",
+      "ipa": "/ˈmɪnɪməm weɪdʒ/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-e90cdf1a69951ee6": {
+      "synonyms": ["minority group", "the few", "small group"],
+      "collocations": ["an ethnic minority", "a small minority", "minority rights"],
+      "example_simple": "Only a small minority of students failed the exam.",
+      "example_complex": "The policy was designed to protect the rights of ethnic minorities who had long been excluded from public office.",
+      "definition_en": "the smaller number or part; a group that is smaller than the rest of a larger group",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-59b6536256b81897": {
+      "synonyms": ["minus sign", "subtraction sign", "negative sign"],
+      "collocations": ["a minus sign", "minus five degrees", "plus or minus"],
+      "example_simple": "The teacher wrote a minus sign between the two numbers.",
+      "example_complex": "The temperature dropped to minus ten overnight, and the report showed the figure with a clear minus in front of it.",
+      "definition_en": "the sign (−) showing subtraction or a number below zero",
+      "part_of_speech": "noun"
+    },
+    "ffddc1d0-6030-468a-9cca-ab312ed4202f": {
+      "difficulty": "8.0",
+      "definition_en": "extremely small; tiny",
+      "ipa": "/ˈmɪnəskjuːl/",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-92dd09b1803b2bbc": {
+      "difficulty": "6.0",
+      "synonyms": ["moment by moment", "constantly", "continuously", "second by second"],
+      "collocations": ["follow minute by minute", "change minute by minute", "a minute-by-minute account"],
+      "example_simple": "We followed the football score minute by minute online.",
+      "example_complex": "During the crisis, reporters gave a minute-by-minute account of events as the situation changed almost too fast to follow.",
+      "definition_en": "happening or changing continuously, from one minute to the next",
+      "ipa": "/ˈmɪnɪt baɪ ˈmɪnɪt/",
+      "part_of_speech": "idiom"
+    },
+    "03379483-660b-4b89-9fb5-d3d513aa2573": {
+      "difficulty": "8.0",
+      "definition_en": "a minor crime that is punished less severely than a serious offence",
+      "ipa": "/ˌmɪsdɪˈmiːnə/",
+      "part_of_speech": "noun"
+    },
+    "9a975b17-7f8e-4f95-a145-9e0535b293b8": {
+      "difficulty": "8.0",
+      "definition_en": "minor crimes or offences that are not considered very serious",
+      "ipa": "/ˌmɪsdɪˈmiːnəz/",
+      "part_of_speech": "noun"
+    },
+    "af4777be-743d-4957-9143-da1decb53c56": {
+      "difficulty": "8.0",
+      "definition_en": "a wrong or bad action; wrongdoing",
+      "ipa": "/ˌmɪsˈduːɪŋ/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-d4cad4e3fbc01312": {
+      "synonyms": ["unhappy", "wretched", "distressed", "gloomy"],
+      "collocations": ["feel miserable", "a miserable life", "make someone miserable"],
+      "example_simple": "She felt miserable after losing her job.",
+      "example_complex": "Cold, wet and exhausted, the hikers were thoroughly miserable by the time they finally reached the shelter.",
+      "definition_en": "very unhappy or uncomfortable",
+      "part_of_speech": "adjective"
+    },
+    "pubcol-w-bd20ff0304b169c5": {
+      "synonyms": ["misunderstand", "hear wrongly", "catch incorrectly"],
+      "collocations": ["mishear the name", "easily misheard", "mishear what someone said"],
+      "example_simple": "I think I misheard you — did you say three or thirteen?",
+      "example_complex": "On the noisy phone line she misheard the address, and as a result the parcel was delivered to the wrong street entirely.",
+      "definition_en": "to hear something wrongly and so misunderstand it",
+      "part_of_speech": "verb"
+    },
+    "pubcol-w-1d7a7747dfdb76a6": {
+      "difficulty": "6.0",
+      "synonyms": ["lose the chance", "miss the opportunity", "let a chance slip"],
+      "collocations": ["miss the boat entirely", "don't miss the boat", "afraid of missing the boat"],
+      "example_simple": "If you don't apply now, you'll miss the boat.",
+      "example_complex": "Investors who hesitated for too long missed the boat, watching prices climb far beyond what they could now afford.",
+      "definition_en": "to lose an opportunity by being too slow to act",
+      "ipa": "/mɪs ðə bəʊt/",
+      "part_of_speech": "idiom",
+      "vi_meaning_correction": "bỏ lỡ cơ hội"
+    },
+    "pubcol-w-741fca53bd761f47": {
+      "difficulty": "6.0",
+      "synonyms": ["practice exam", "trial exam", "practice test"],
+      "collocations": ["sit a mock exam", "take a mock examination", "a mock exam paper"],
+      "example_simple": "We had a mock exam last week to get ready for the real test.",
+      "example_complex": "The school runs a full mock examination each term so that students experience real exam conditions before the pressure of the final assessment.",
+      "definition_en": "a practice exam taken to prepare for a real one",
+      "ipa": "/mɒk ɪɡˌzæmɪˈneɪʃn/",
+      "part_of_speech": "phrase"
+    },
+    "d8b764c3-1c6e-4499-8bc4-49680f3eae22": {
+      "difficulty": "6.0",
+      "ipa": "/ˈmɒdərətli/"
+    },
+    "pubcol-w-e1322bcf468e90fb": {
+      "difficulty": "7.0",
+      "synonyms": ["limited success", "moderate success", "fair success"],
+      "collocations": ["achieve modest success", "enjoy modest success", "a modest success at best"],
+      "example_simple": "The film was a modest success, earning back just a little more than it cost.",
+      "example_complex": "Although the start-up never became a household name, it achieved a modest success that kept it profitable for over a decade.",
+      "definition_en": "a level of success that is limited rather than great",
+      "ipa": "/ˈmɒdɪst səkˈses/",
+      "part_of_speech": "phrase"
+    },
+    "pubcol-w-b91759bf453b621a": {
+      "synonyms": ["dampen", "wet", "humidify"],
+      "collocations": ["moisten the cloth", "moisten your lips", "moisten the soil"],
+      "example_simple": "She moistened the sponge before wiping the table.",
+      "example_complex": "Before applying the paste, moisten the surface slightly so that it bonds evenly rather than cracking as it dries."
+    },
+    "784fe8e6-a6d3-411f-8bd4-861b3b1598ce": {
+      "difficulty": "6.0",
+      "definition_en": "a hollow container used to shape a material; or a soft grey/green growth on old or damp food",
+      "ipa": "/məʊld/",
+      "part_of_speech": "noun"
+    },
+    "pubcol-w-b5d0c80a5b51a16f": {
+      "synonyms": ["particle", "unit", "compound unit"],
+      "collocations": ["a water molecule", "molecules of gas", "break down into molecules"],
+      "example_simple": "A water molecule is made of hydrogen and oxygen.",
+      "example_complex": "When the liquid is heated, its molecules move faster and gradually break free to form a gas."
+    },
+    "pubcol-w-c28a628d305b35b6": {
+      "synonyms": ["brief", "fleeting", "temporary", "short-lived"],
+      "collocations": ["a momentary pause", "momentary hesitation", "a momentary lapse"],
+      "example_simple": "There was a momentary silence before everyone started clapping.",
+      "example_complex": "A momentary lapse in concentration was all it took for the driver to miss the turning and lose several minutes."
+    }
+  }
+}
