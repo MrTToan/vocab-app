@@ -280,6 +280,38 @@ export default function AdminDashboard() {
           />
         )}
       </Section>
+
+      {/* ══════════ DATABASE HEALTH ══════════ */}
+      {/* Early-warning signal for SQLite write-contention. In-process, reset on
+          restart. A non-zero, climbing count means concurrent writes are
+          approaching the single-file write-concurrency ceiling (lib/db-busy.ts). */}
+      <h2 className="text-xl font-bold pt-2">Database health</h2>
+      <Section
+        title="Write contention"
+        subtitle={`SQLITE_BUSY / "database is locked" since restart · last ${Math.round(
+          s.dbBusy.windowMs / 60_000,
+        )} min`}
+      >
+        <div className="grid grid-cols-3 gap-3">
+          <Tile
+            label="Busy errors (total)"
+            value={s.dbBusy.total}
+            accent={s.dbBusy.total > 0 ? "var(--bad)" : undefined}
+          />
+          <Tile
+            label={`Recent (${Math.round(s.dbBusy.windowMs / 60_000)}m)`}
+            value={s.dbBusy.recent}
+            accent={s.dbBusy.recent > 0 ? "var(--bad)" : undefined}
+          />
+          <Tile
+            label="Last seen"
+            value={s.dbBusy.lastSeenAt ? new Date(s.dbBusy.lastSeenAt).toLocaleString() : "—"}
+          />
+        </div>
+        {s.dbBusy.total === 0 && (
+          <Empty>No write-contention observed — the DB is comfortably under its write ceiling.</Empty>
+        )}
+      </Section>
     </div>
   );
 }

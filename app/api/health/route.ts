@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { getDb } from "@/lib/db";
+import { getDbBusyStats } from "@/lib/db-busy";
 
 /*
  * Public liveness/readiness probe for the Docker Compose healthcheck and the
@@ -28,8 +29,10 @@ export async function GET() {
   } catch {
     ok = false;
   }
+  // Early-warning signal for SQLite write-contention: a non-zero, climbing
+  // `dbBusy.total` means concurrent writes are hitting the ceiling (lib/db-busy.ts).
   return NextResponse.json(
-    { ok },
+    { ok, dbBusy: getDbBusyStats() },
     { status: ok ? 200 : 503, headers: { "cache-control": "no-store" } },
   );
 }
