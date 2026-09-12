@@ -19,7 +19,10 @@ describe("GET /api/health", () => {
     const res = await GET();
     expect(res.status).toBe(200);
     expect(res.headers.get("cache-control")).toBe("no-store");
-    expect(await res.json()).toEqual({ ok: true });
+    const body = await res.json();
+    expect(body.ok).toBe(true);
+    // Early-warning write-contention tally is surfaced on the probe (lib/db-busy.ts).
+    expect(body.dbBusy).toMatchObject({ total: expect.any(Number), recent: expect.any(Number) });
   });
 
   it("503 {ok:false} when the DB throws", async () => {
@@ -27,6 +30,8 @@ describe("GET /api/health", () => {
     const { GET } = await import("@/app/api/health/route");
     const res = await GET();
     expect(res.status).toBe(503);
-    expect(await res.json()).toEqual({ ok: false });
+    const body = await res.json();
+    expect(body.ok).toBe(false);
+    expect(body.dbBusy).toMatchObject({ total: expect.any(Number) });
   });
 });
