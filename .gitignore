@@ -70,3 +70,7 @@ yarn-error.log*
 next-env.d.ts
 temp_img/
 MULTITENANT-CHECKLIST.md
+
+# Vocab catalog data is delivered to the server by CLI, never committed (captain 2026-09-12)
+content/collections/
+content/enrichment/
