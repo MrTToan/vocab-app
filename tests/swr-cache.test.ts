@@ -26,6 +26,7 @@ function item(id: string, studying = true): WordListItem {
     ipa: "",
     vi_meaning: "",
     tags: [],
+    difficulty: null,
     stage: "new",
     times_seen: 0,
     recent_results: [],

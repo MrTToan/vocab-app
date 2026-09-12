@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { mutate } from "swr";
 import type { Collection, Stage, Word, WordListItem } from "@/lib/types";
+import { IELTS_BANDS } from "@/lib/types";
 import {
   STAGE_ORDER,
   STAGE_LABEL,
@@ -345,6 +346,7 @@ function Row({
             synonyms: edit.synonyms,
             collocations: edit.collocations,
             tags: edit.tags,
+            difficulty: edit.difficulty,
           }),
         },
       );
@@ -405,6 +407,14 @@ function Row({
               <span className="font-bold truncate">{item.word}</span>
               {item.ipa && (
                 <span className="muted text-xs truncate">{item.ipa}</span>
+              )}
+              {item.difficulty && (
+                <span
+                  className="chip text-xs whitespace-nowrap"
+                  title={`IELTS band ${item.difficulty}`}
+                >
+                  IELTS {item.difficulty}
+                </span>
               )}
             </div>
             <div className="muted text-sm truncate">
@@ -467,6 +477,29 @@ function Row({
               <E label="Usage trap" v={edit.false_friend_note} set={(x) => setEdit({ ...edit, false_friend_note: x })} />
               <E label="Your note" v={edit.personal_note} set={(x) => setEdit({ ...edit, personal_note: x })} />
               <E label="Tags" v={edit.tags.join(", ")} set={(x) => setEdit({ ...edit, tags: splitList(x) })} />
+
+              <label className="block">
+                <span className="text-xs font-semibold muted">IELTS difficulty band</span>
+                <select
+                  className="input mt-1"
+                  value={edit.difficulty ?? ""}
+                  onChange={(e) =>
+                    setEdit({
+                      ...edit,
+                      difficulty: e.target.value
+                        ? (e.target.value as NonNullable<Word["difficulty"]>)
+                        : null,
+                    })
+                  }
+                >
+                  <option value="">— none —</option>
+                  {IELTS_BANDS.map((b) => (
+                    <option key={b} value={b}>
+                      {b}
+                    </option>
+                  ))}
+                </select>
+              </label>
 
               <div>
                 <span className="text-xs font-semibold muted">Collections</span>

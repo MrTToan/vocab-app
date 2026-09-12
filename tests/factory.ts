@@ -16,6 +16,7 @@ export function mkWord(over: Partial<Word> = {}): Word {
     false_friend_note: "",
     personal_note: "",
     tags: [],
+    difficulty: null,
     source: "manual",
     owner_id: "__system__",
     stage: "new" as Stage,
