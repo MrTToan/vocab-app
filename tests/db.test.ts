@@ -255,6 +255,73 @@ describe("hot & cascade queries never full-scan a user-growth table", () => {
   });
 });
 
+describe("words.difficulty column (IELTS band)", () => {
+  it("CONTENT_COLS includes difficulty", () => {
+    expect(dbMod.CONTENT_COLS as readonly string[]).toContain("difficulty");
+  });
+
+  it("migrate() creates words with a difficulty column on a fresh DB", async () => {
+    const { createClient } = await import("@libsql/client");
+    const probe = createClient({ url: ":memory:" });
+    await dbMod.migrate(probe);
+    const info = await probe.execute("PRAGMA table_info(words)");
+    const cols = info.rows.map((r) => String(r.name));
+    expect(cols).toContain("difficulty");
+    probe.close();
+  });
+
+  it("guarded ADD COLUMN gives an existing pre-difficulty DB the column (idempotent)", async () => {
+    const { createClient } = await import("@libsql/client");
+    const probe = createClient({ url: ":memory:" });
+    // Simulate a DB created before the difficulty column existed: a legacy words
+    // table with every CONTENT_COL EXCEPT difficulty, plus owner_id.
+    const legacyCols = (dbMod.CONTENT_COLS as readonly string[])
+      .filter((c) => c !== "difficulty")
+      .map((c) => `"${c}" TEXT`)
+      .join(", ");
+    await probe.execute(
+      `CREATE TABLE words (${legacyCols}, owner_id TEXT, PRIMARY KEY ("id"))`,
+    );
+    let cols = (await probe.execute("PRAGMA table_info(words)")).rows.map((r) =>
+      String(r.name),
+    );
+    expect(cols).not.toContain("difficulty"); // precondition: legacy shape
+
+    await dbMod.migrate(probe); // must add it via the guarded ADD COLUMN
+    cols = (await probe.execute("PRAGMA table_info(words)")).rows.map((r) =>
+      String(r.name),
+    );
+    expect(cols).toContain("difficulty");
+
+    await dbMod.migrate(probe); // re-run: idempotent, must not throw
+    cols = (await probe.execute("PRAGMA table_info(words)")).rows.map((r) =>
+      String(r.name),
+    );
+    expect(cols.filter((c) => c === "difficulty").length).toBe(1);
+    probe.close();
+  });
+
+  it("round-trips an IELTS band through the store (Word shape)", async () => {
+    const { getStore } = await import("../lib/store");
+    const s = getStore().forUser("u-difficulty");
+    const w = await s.add({ word: "meticulous", vi_meaning: "tỉ mỉ", difficulty: "8.0" });
+    expect(w.difficulty).toBe("8.0");
+    const got = await s.get(w.id);
+    expect(got?.difficulty).toBe("8.0");
+
+    // A word added without a band reads back as null (blank until enriched).
+    const plain = await s.add({ word: "plainword", vi_meaning: "từ thường" });
+    expect(plain.difficulty).toBeNull();
+    expect((await s.get(plain.id))?.difficulty).toBeNull();
+
+    // Editing the band persists and can be cleared back to null.
+    const edited = await s.update(w.id, { difficulty: "6.0" });
+    expect(edited?.difficulty).toBe("6.0");
+    const cleared = await s.update(w.id, { difficulty: null });
+    expect(cleared?.difficulty).toBeNull();
+  });
+});
+
 describe("recordResult", () => {
   it("writes the progress row and the attempt row in one call", async () => {
     const { getStore } = await import("../lib/store");

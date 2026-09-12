@@ -24,6 +24,7 @@ const BASE: Word = {
   vi_meaning: "kiên cường", definition_en: "recovers quickly", synonyms: [],
   collocations: ["highly resilient"], example_simple: "a resilient team",
   example_complex: "", false_friend_note: "", personal_note: "", tags: [],
+  difficulty: null,
   source: "manual", owner_id: "__system__", stage: "recognition", times_seen: 2,
   recent_results: ["correct"], last_seen_at: null, created_at: Date.now(),
 };

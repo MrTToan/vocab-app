@@ -20,6 +20,8 @@ export const CONTENT_COLS = [
   "personal_note",
   "tags",
   "source",
+  // IELTS target band ("5.0".."9.0"), nullable — blank until a word is enriched.
+  "difficulty",
   "created_at",
 ] as const;
 
@@ -196,6 +198,9 @@ export async function migrate(db: Client): Promise<void> {
 
   // Additive migrations for DBs created before the content/progress split.
   await addColumn(db, "words", "owner_id TEXT");
+  // IELTS target band on shared content — new DBs get it via CONTENT_COLS above;
+  // existing dev/prod DBs gain it here on next boot (nullable, blank until enriched).
+  await addColumn(db, "words", '"difficulty" TEXT');
   await addColumn(db, "collections", "owner_id TEXT");
   await addColumn(db, "collections", "visibility TEXT DEFAULT 'private'");
 

@@ -13,6 +13,15 @@ export type Stage = (typeof STAGES)[number];
 
 export type Result = "correct" | "partial" | "incorrect";
 
+/**
+ * IELTS target band a word is pitched at. Stored on `words.difficulty` as one of
+ * these strings, or NULL until the word is enriched. Rough guide: common everyday
+ * vocab 5.0–6.0, solid upper-intermediate 6.0–7.0, advanced/less-common 7.0–8.0,
+ * rare/sophisticated 8.0–9.0.
+ */
+export const IELTS_BANDS = ["5.0", "6.0", "7.0", "8.0", "9.0"] as const;
+export type IeltsBand = (typeof IELTS_BANDS)[number];
+
 /** Exercise types available in the MVP. Listening/dictation is Phase 2. */
 export const EXERCISE_TYPES = [
   "multiple_choice", // warm-up, first exposure only
@@ -64,6 +73,9 @@ export interface Word {
   false_friend_note: string;
   personal_note: string;
   tags: string[];
+  // IELTS target band the word is pitched at — one of IELTS_BANDS, or null until
+  // the word is enriched. Shared CONTENT (lives on `words`, see CONTENT_COLS).
+  difficulty: IeltsBand | null;
   source: "csv" | "manual" | "paste";
   // content ownership — `__system__` for the shared/public catalog, or a user id
   // for that user's personal word. Gates EDITING only; content is otherwise
@@ -97,6 +109,7 @@ export type WordListItem = Pick<
   | "ipa"
   | "vi_meaning"
   | "tags"
+  | "difficulty"
   | "stage"
   | "times_seen"
   | "recent_results"
@@ -145,6 +158,7 @@ export type EnrichableFields = Pick<
   | "example_simple"
   | "example_complex"
   | "false_friend_note"
+  | "difficulty"
 >;
 
 /* ─────────────────────────────  LLM I/O schemas  ────────────────────────── */
@@ -159,6 +173,8 @@ export const EnrichmentSchema = z.object({
   example_simple: z.string(),
   example_complex: z.string(),
   false_friend_note: z.string(),
+  // IELTS target band; nullable + optional so a model that omits it still parses.
+  difficulty: z.enum(IELTS_BANDS).nullable().optional(),
 });
 export type Enrichment = z.infer<typeof EnrichmentSchema>;
 
