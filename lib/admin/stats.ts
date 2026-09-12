@@ -25,6 +25,7 @@ import {
 const WINDOW_DAYS = 30;
 
 import { getDb } from "../db";
+import { getDbBusyStats, type DbBusyStats } from "../db-busy";
 
 async function connect() {
   return getDb(); // shared process-wide client (lib/db.ts)
@@ -105,6 +106,10 @@ export interface AdminStats {
     byTask: Record<QuotaTask, number>;
     topUsers: LlmUserStat[]; // heaviest consumers all-time
   };
+  // Early-warning signal for SQLite write-contention (lib/db-busy.ts). In-process
+  // and reset on restart — a non-zero, climbing `total` means concurrent writes
+  // are approaching the single-file write-concurrency ceiling.
+  dbBusy: DbBusyStats;
 }
 
 /** Compute the full owner dashboard. Aggregates in SQL; shapes series in JS. */
@@ -321,5 +326,6 @@ export async function adminStats(now: number = Date.now()): Promise<AdminStats> 
       byTask,
       topUsers: llmTopUsers,
     },
+    dbBusy: getDbBusyStats(),
   };
 }

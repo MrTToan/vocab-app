@@ -2,6 +2,7 @@ import { promises as fs } from "fs";
 import path from "path";
 import type { Client } from "@libsql/client";
 import { SYSTEM_OWNER } from "./auth/user";
+import { isBusyError, recordBusy } from "./db-busy";
 
 /** Shared-content columns of the `words` table (progress lives in user_words). */
 export const CONTENT_COLS = [
@@ -76,9 +77,33 @@ export function getDb(): Promise<Client> {
 async function open(): Promise<Client> {
   const { createClient } = await import("@libsql/client");
   const url = await resolveDatabaseUrl();
-  const db = createClient({ url, authToken: process.env.DATABASE_AUTH_TOKEN });
+  const db = withBusyDetection(createClient({ url, authToken: process.env.DATABASE_AUTH_TOKEN }));
   if (url.startsWith("file:")) await applyPragmas(db);
   await migrate(db);
+  return db;
+}
+
+/**
+ * Observe-only SQLITE_BUSY / "database is locked" detection at the single DB
+ * chokepoint. Wraps the write-carrying methods (`execute`, `batch`) so a busy
+ * error is logged once and counted (lib/db-busy.ts), then RE-THROWN unchanged —
+ * behaviour, retries and the busy_timeout are untouched. A climbing count is the
+ * early-warning signal that concurrent writes are approaching the ceiling; the
+ * tally is surfaced on /api/health and the admin stats. Non-busy errors pass
+ * straight through.
+ */
+export function withBusyDetection(db: Client): Client {
+  const wrap =
+    <A extends unknown[], R>(op: string, fn: (...args: A) => Promise<R>) =>
+    (...args: A): Promise<R> =>
+      fn(...args).catch((err: unknown) => {
+        if (isBusyError(err)) recordBusy(err, op);
+        throw err;
+      });
+  const execute = db.execute.bind(db);
+  const batch = db.batch.bind(db);
+  db.execute = wrap("execute", execute) as Client["execute"];
+  db.batch = wrap("batch", batch) as Client["batch"];
   return db;
 }
 
