@@ -6,7 +6,8 @@ and **New collection**.
 ## Single word (the normal flow)
 1. Type an English word or phrase.
 2. Press **Enrich →** and the AI drafts the full entry — Vietnamese meaning, an English definition,
-   part of speech, IPA, synonyms, collocations, two example sentences, and any "false-friend" warning.
+   part of speech, IPA, synonyms, collocations, two example sentences, an **IELTS target band**
+   (`difficulty`, `5.0`–`9.0`), and any "false-friend" warning.
 3. **Review and edit** anything, then **Save**. Nothing is saved until you say so.
 
 If no AI key is set, you get **Fill in →** instead and type the fields yourself; everything else works.
@@ -45,6 +46,17 @@ hyphenated compounds dedupe by their exact text. See `lib/lemma.ts`.
 **CSV import** is still available as an **Advanced** option folded inside *Paste a list* (expand
 "Advanced: import a CSV file"): it maps columns and can enrich each row as it imports. The old
 `/import` URL redirects here.
+
+## Import a whole source (owner tool)
+Beyond pasting a list, the site owner can import an **entire vocabulary source** — a
+book/PDF (including scanned pages, via OCR) or a vocabulary web page/list — into a **public**
+`__system__` collection using the **`import-vocab` skill**. It runs a source-agnostic pipeline:
+extract and de-duplicate the words into a seed pack, import them idempotently (deterministic ids,
+blank-safe so re-runs never wipe enriched content), then Claude-enrich the first N words —
+meaning, definition, POS, IPA, synonyms, collocations, examples, and the IELTS `difficulty` band.
+The resulting [catalog data is delivered by CLI and kept out of git](data-and-storage.md); this is
+distinct from the in-app *Paste a list* importer above and from the practice
+[question bank](question-bank.md).
 
 ## A note on trust
 Some content — synonyms, collocations, and the practice question bank — is authored **by Claude**, not

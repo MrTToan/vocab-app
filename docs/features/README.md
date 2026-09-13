@@ -20,7 +20,7 @@ session cookie; API routes still return 401 and remain the real enforcement.
 2. [Exercise types](exercise-types.md) — the exercises and how each is graded
 3. [Explore mode](explore-mode.md) — the 🔀 "new words" toggle
 4. [Question bank](question-bank.md) — pre-generated + self-refilling questions
-5. [Adding words](adding-words.md) — enrichment, duplicate & spelling checks, single add, paste-a-list import (CSV as advanced)
+5. [Adding words](adding-words.md) — enrichment (incl. IELTS difficulty band), duplicate & spelling checks, single add, paste-a-list import (CSV as advanced), whole-source import via the `import-vocab` skill
 6. [Collections](collections.md) — curated word groups (private + public packs) + scoped practice
 6b. [Pronunciation practice](pronunciation.md) — hear a word spoken & get feedback on saying it (Azure-primary, OpenAI-fallback)
 
