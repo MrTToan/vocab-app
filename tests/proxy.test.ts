@@ -54,4 +54,14 @@ describe("proxy — app documents are never cached (stale-shell guard)", () => {
     expect(res.headers.get("location")).toContain("/?signin=1");
     expect(res.headers.get("cache-control")).toBe("private, no-store");
   });
+
+  it("carries the requested deep link back to the landing notice (?next=)", () => {
+    process.env.AUTH_GOOGLE_ID = "id";
+    process.env.AUTH_SECRET = "secret";
+    const res = proxy(req("/writing/task1?id=3"));
+    const loc = new URL(res.headers.get("location")!);
+    expect(loc.pathname).toBe("/");
+    expect(loc.searchParams.get("signin")).toBe("1");
+    expect(loc.searchParams.get("next")).toBe("/writing/task1?id=3");
+  });
 });

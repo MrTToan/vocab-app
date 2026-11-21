@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import MarketingMotion from "./MarketingMotion";
 import SignInNote from "./SignInNote";
+import AppLink from "./AppLink";
 import "./marketing.css";
 
 // MNTN landing — an approved editorial redesign (cinematic photo hero, serif
@@ -12,7 +13,9 @@ import "./marketing.css";
 // the `.mntn` wrapper (see marketing.css) so the authenticated app, which owns
 // the global tokens in globals.css, is left untouched. Every CTA/nav/footer
 // link resolves to a real route or in-page anchor; product claims are the true
-// ones carried over from the previous landing page.
+// ones carried over from the previous landing page. Links into gated app routes
+// use <AppLink>, which sends a signed-out visitor straight to Google sign-in
+// (callback = that route) instead of bouncing off proxy.ts back to this page.
 
 // Fonts are scoped to marketing via variables applied on the wrapper below —
 // they are never attached to <html>, so the app's Fraunces/IBM Plex stay in place.
@@ -86,22 +89,23 @@ export default function Landing() {
           Lexi
         </Link>
         <div className="navc">
-          <Link href="/vocab">Vocab</Link>
-          <Link href="/writing">Writing</Link>
+          <AppLink to="/vocab">Vocab</AppLink>
+          <AppLink to="/writing">Writing</AppLink>
           <Link href="/how-it-works">How it works</Link>
           <Link href="/about">About</Link>
         </div>
         <div className="navr">
-          {/* "Please sign in to continue" — rendered only when the sign-in
-              proxy bounced a signed-out visitor here (?signin=1). */}
-          <Suspense fallback={null}>
-            <SignInNote />
-          </Suspense>
-          <Link href="/vocab" className="acct">
+          <AppLink to="/vocab" className="acct">
             Open app →
-          </Link>
+          </AppLink>
         </div>
       </nav>
+
+      {/* "Sign in to continue" notice + Continue with Google — rendered only
+          when the sign-in proxy bounced a signed-out deep link here (?signin=1). */}
+      <Suspense fallback={null}>
+        <SignInNote />
+      </Suspense>
 
       <div className="rail" id="mntn-rail" aria-hidden="true">
         <span className="soc">Follow the climb</span>
@@ -257,12 +261,12 @@ export default function Landing() {
             starts today.
           </h2>
           <div className="close-ctas r d1">
-            <Link className="cbtn" href="/vocab">
+            <AppLink className="cbtn" to="/vocab">
               Start practicing — free →
-            </Link>
-            <Link className="cbtn ghost" href="/writing">
+            </AppLink>
+            <AppLink className="cbtn ghost" to="/writing">
               Score my IELTS writing →
-            </Link>
+            </AppLink>
           </div>
           <p className="cnote r d2">
             Free to start · one tap with Google · your climb fits in your pocket
@@ -274,8 +278,8 @@ export default function Landing() {
         <span className="logo">Lexi</span>
         <div className="foot-links">
           <Link href="/about">About</Link>
-          <Link href="/vocab">Vocabulary</Link>
-          <Link href="/writing">Writing</Link>
+          <AppLink to="/vocab">Vocabulary</AppLink>
+          <AppLink to="/writing">Writing</AppLink>
           <Link href="/privacy">Privacy</Link>
           <Link href="/terms">Terms</Link>
         </div>

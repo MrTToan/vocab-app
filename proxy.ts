@@ -1,4 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
+import { signInBouncePath } from "@/lib/signin";
 
 /*
  * Sign-in guard (Next 16 renamed `middleware` → `proxy`; see
@@ -7,7 +8,10 @@ import { NextResponse, type NextRequest } from "next/server";
  * A signed-out visitor who opens an app page used to get the full shell with
  * every data panel showing "unauthorized" errors. Instead, when real auth is
  * configured, bounce requests without a session cookie to the landing page,
- * which shows a "Please sign in to continue" note (?signin=1).
+ * which shows a "Sign in to continue" notice with a Continue-with-Google button
+ * (?signin=1&next=<the page they asked for>, so sign-in returns them there).
+ * Landing-page CTAs don't rely on this bounce — <AppLink> sends signed-out
+ * visitors straight to sign-in; this catches deep links and bookmarks.
  *
  * COOKIE PRESENCE ONLY — no DB lookup, no JWT decode. This is a UX redirect,
  * not enforcement: a forged cookie just reaches pages whose API calls still
@@ -55,7 +59,8 @@ function guard(request: NextRequest): NextResponse {
     return NextResponse.next();
   }
 
-  return NextResponse.redirect(new URL("/?signin=1", request.url));
+  const { pathname, search } = request.nextUrl;
+  return NextResponse.redirect(new URL(signInBouncePath(pathname + search), request.url));
 }
 
 // The signed-in app surface. `:path*` is zero-or-more segments, so `/writing`
