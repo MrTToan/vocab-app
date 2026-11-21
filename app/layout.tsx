@@ -6,10 +6,30 @@ import "./globals.css";
 // own Cormorant/Inter — so the landing page doesn't download app fonts and
 // vice versa.
 
+const TITLE = "Lexi — learn English by doing";
+const DESCRIPTION =
+  "A personal English practice engine: active vocabulary drilling and IELTS writing feedback. Not a notebook — a coach.";
+
+// Share previews: the og/twitter image comes from app/opengraph-image.jpg and
+// app/twitter-image.jpg (file conventions); metadataBase makes their URLs
+// absolute. The favicon set is app/favicon.ico + icon.svg + apple-icon.png.
 export const metadata: Metadata = {
-  title: "Lexi — learn English by doing",
-  description:
-    "A personal English practice engine: active vocabulary drilling and IELTS writing feedback. Not a notebook — a coach.",
+  metadataBase: new URL("https://lexi.vnfriends.com"),
+  title: TITLE,
+  description: DESCRIPTION,
+  openGraph: {
+    type: "website",
+    siteName: "Lexi",
+    title: TITLE,
+    description: DESCRIPTION,
+    url: "/",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
 };
 
 // Root layout is just the document shell. Chrome (nav vs. full-bleed marketing)

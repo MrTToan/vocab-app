@@ -5,7 +5,6 @@ import { useEffect } from "react";
 /*
  * Client motion island for the MNTN landing page. Reproduces the prototype's
  * choreography on the server-rendered markup:
- *   · the left rail flips dark once the hero has scrolled past
  *   · the hero content fades/rises in shortly after mount
  *   · each [data-reveal] section fades/rises its .r children in on first view
  * Honors prefers-reduced-motion (everything shown immediately, no observers).
@@ -17,15 +16,7 @@ export default function MarketingMotion() {
       typeof matchMedia === "function" &&
       matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    const rail = document.getElementById("mntn-rail");
     const hero = document.getElementById("top");
-
-    const onScroll = () => {
-      const past = window.scrollY > window.innerHeight - 90;
-      rail?.classList.toggle("dark", past);
-    };
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
 
     // reveal hero content (skip the fade when reduced motion is requested)
     let heroTimer: ReturnType<typeof setTimeout> | undefined;
@@ -60,7 +51,6 @@ export default function MarketingMotion() {
     }
 
     return () => {
-      window.removeEventListener("scroll", onScroll);
       if (heroRaf) cancelAnimationFrame(heroRaf);
       if (heroTimer) clearTimeout(heroTimer);
       io?.disconnect();
