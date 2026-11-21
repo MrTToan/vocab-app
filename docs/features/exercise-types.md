@@ -33,5 +33,14 @@ how the word is actually used, not just what it means. A false-friend warning sh
 
 Every graded answer is logged for [Progress tracking](progress-tracking.md).
 
+## On the landing and How-it-works pages
+The six exercise pictures on `/` ("Six ways to drill a word") and `/how-it-works` are real
+screenshots of these exercises (`public/marketing/exercise-*.jpg`), not illustrations. They were
+captured from a local build with a throwaway test user and show **only built-in catalog words**
+(prudent, hinder, plateau, downplay, equitable, exaggerate). To refresh one, keep to the same
+rule — never a real learner's words, names or progress — and keep the square 960×960 frame with
+the card centred on the landing paper colour (`#eef1e8`), leaving enough top/bottom margin that
+the 4:3 crop on `/how-it-works` doesn't clip the card.
+
 ---
 *Under the hood: `lib/engine.ts` (`exerciseForStage`), `lib/grade.ts` (local matching), `app/practice/page.tsx`, `app/api/practice/score` (AI scoring).*

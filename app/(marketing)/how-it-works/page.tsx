@@ -314,8 +314,8 @@ export default function HowItWorks() {
             <div className="item">
               <div className="shot">
                 <Image
-                  src="/marketing/box_flashcard.jpg"
-                  alt="Flashcard exercise"
+                  src="/marketing/exercise-flashcard.jpg"
+                  alt="Lexi flashcard exercise: the Vietnamese meaning “thận trọng, khôn ngoan, dè dặt” with the English word “prudent” typed in, ready to check"
                   width={800}
                   height={600}
                   loading="lazy"
@@ -331,8 +331,8 @@ export default function HowItWorks() {
             <div className="item">
               <div className="shot">
                 <Image
-                  src="/marketing/box_cloze.jpg"
-                  alt="Cloze (fill the gap) exercise"
+                  src="/marketing/exercise-cloze.jpg"
+                  alt="Lexi fill-in-the-blank exercise: “Heavy rain and thick fog began to ____ the rescue operation,” with a Vietnamese hint and “hinder” typed in"
                   width={800}
                   height={600}
                   loading="lazy"
@@ -348,8 +348,8 @@ export default function HowItWorks() {
             <div className="item">
               <div className="shot">
                 <Image
-                  src="/marketing/box_recall.jpg"
-                  alt="Recall from definition exercise"
+                  src="/marketing/exercise-recall.jpg"
+                  alt="Lexi type-the-word exercise: a Vietnamese meaning and English definition (“to reach a stable level and stay there”) with “plateau” typed in"
                   width={800}
                   height={600}
                   loading="lazy"
@@ -365,8 +365,8 @@ export default function HowItWorks() {
             <div className="item">
               <div className="shot">
                 <Image
-                  src="/marketing/box_translation.jpg"
-                  alt="Translation exercise"
+                  src="/marketing/exercise-translation.jpg"
+                  alt="Lexi translation exercise: a Vietnamese sentence to translate into English using “downplay,” with an English translation typed in"
                   width={800}
                   height={600}
                   loading="lazy"
@@ -382,8 +382,8 @@ export default function HowItWorks() {
             <div className="item">
               <div className="shot">
                 <Image
-                  src="/marketing/box_write.jpg"
-                  alt="Write a sentence exercise"
+                  src="/marketing/exercise-write.jpg"
+                  alt="Lexi write-a-sentence exercise: the word “equitable” with its Vietnamese meaning and a learner’s own sentence typed in, ready for AI checking"
                   width={800}
                   height={600}
                   loading="lazy"
@@ -399,8 +399,8 @@ export default function HowItWorks() {
             <div className="item">
               <div className="shot">
                 <Image
-                  src="/marketing/box_scenario.jpg"
-                  alt="Scenario exercise"
+                  src="/marketing/exercise-scenario.jpg"
+                  alt="Lexi scenario exercise: “Tease a sibling (playful) for always exaggerating their adventures,” with a playful reply using “exaggerate” typed in"
                   width={800}
                   height={600}
                   loading="lazy"
