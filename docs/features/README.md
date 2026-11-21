@@ -9,11 +9,17 @@ Plain-language docs for **how each part of the app behaves today**. One file per
 The app has **two modules** — Vocabulary and IELTS Writing — reachable from the top nav, with a
 cross-skill Report. A SaaS-style landing page sits at `/`.
 
-**Signing in:** when Google auth is configured, a signed-out visitor who opens any app page
-(`/vocab`, `/practice`, `/writing`, …) is redirected to the landing page with a
-"Please sign in to continue" note (`/?signin=1`) instead of seeing a shell full of
-unauthorized errors. The redirect lives in `proxy.ts` and checks only for the presence of the
-session cookie; API routes still return 401 and remain the real enforcement.
+**Signing in:** when Google auth is configured, the landing page's app links (nav Vocab/Writing,
+"Open app", the closing CTAs, footer Vocabulary/Writing — `app/(marketing)/AppLink.tsx`) send a
+signed-out visitor straight to Google sign-in (`/api/auth/signin?callbackUrl=/vocab` or `/writing`);
+signed-in visitors go directly to the page. The landing stays static, so `AppLink` asks
+`/api/auth/session` from the client and fails open to the direct link (no auth configured, or a
+click before the answer arrives). A signed-out visitor who opens any app page directly
+(`/vocab`, `/practice`, `/writing/task1`, …) is redirected to `/?signin=1&next=<that page>`, which
+shows a "Sign in to continue" notice below the nav with a **Continue with Google** button that
+returns them to the page they asked for. The redirect lives in `proxy.ts` and checks only for the
+presence of the session cookie; API routes still return 401 and remain the real enforcement.
+Sign-in URL helpers (and the same-origin `next` check) live in `lib/signin.ts`.
 
 ## Vocabulary
 1. [Word progression](word-progression.md) — the stage ladder & how Lexi picks what you study
