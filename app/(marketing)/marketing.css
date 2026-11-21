@@ -178,42 +178,6 @@
   }
 }
 
-/* left rail */
-.mntn .rail {
-  position: fixed;
-  left: clamp(16px, 3vw, 40px);
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 45;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 18px;
-  color: #fff;
-  transition: color 0.4s;
-}
-.mntn .rail.dark {
-  color: var(--ink);
-}
-.mntn .rail .soc {
-  writing-mode: vertical-rl;
-  font-size: 11px;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  opacity: 0.7;
-}
-.mntn .rail .bar {
-  width: 1px;
-  height: 70px;
-  background: currentColor;
-  opacity: 0.5;
-}
-@media (max-width: 900px) {
-  .mntn .rail {
-    display: none;
-  }
-}
-
 /* ---------- HERO ---------- */
 .mntn .hero {
   position: relative;
@@ -280,11 +244,11 @@
 .mntn h1 {
   font-family: var(--display);
   font-weight: 500;
-  font-size: clamp(52px, 10vw, 150px);
+  font-size: clamp(52px, 9vw, 128px);
   line-height: 0.92;
   letter-spacing: -0.005em;
-  margin: 20px 0 0;
-  max-width: 14ch;
+  margin: 16px 0 0;
+  max-width: 18ch;
   text-wrap: balance;
 }
 .mntn h1 .thin {
@@ -292,35 +256,55 @@
   font-style: italic;
   color: #eef3ef;
 }
-.mntn .hero-foot {
-  position: absolute;
-  left: clamp(24px, 6vw, 80px);
-  bottom: 34px;
-  z-index: 6;
+.mntn .hero-sub {
+  margin: 24px 0 0;
+  max-width: 52ch;
+  font-size: clamp(16px, 1.6vw, 19px);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  text-wrap: pretty;
+}
+.mntn .hero-sub i {
+  font-family: var(--display);
+  font-size: 1.15em;
+  font-style: italic;
+  color: #fff;
+}
+.mntn .hero-cta {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 11px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.8);
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  margin-top: 32px;
 }
-.mntn .hero-foot .down {
-  width: 34px;
-  height: 34px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  animation: mntn-bob 2.4s ease-in-out infinite;
+.mntn .hero-proof {
+  margin: 0;
+  max-width: 40ch;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.75);
 }
-@keyframes mntn-bob {
-  0%,
-  100% {
-    transform: translateY(0);
+/* Phones: the photo's subject (the climber) sits right of centre in a wide
+   frame — shift the crop so they stay in shot at ~390px wide. */
+@media (max-width: 600px) {
+  .mntn .hero-ph img {
+    object-position: 78% center;
   }
-  50% {
-    transform: translateY(5px);
+  /* The copy runs full width over the climber here, so deepen the lower shade
+     to keep the subheadline readable. */
+  .mntn .hero-shade {
+    background: linear-gradient(0deg, rgba(13, 24, 18, 0.86) 0%, rgba(13, 24, 18, 0.55) 55%, rgba(13, 24, 18, 0.3) 100%);
+  }
+  .mntn .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+  }
+  .mntn .hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .mntn .hero-cta .cbtn {
+    justify-content: center;
   }
 }
 /* ---------- SECTION SHELL ---------- */
@@ -369,12 +353,33 @@
 .mntn .split .ph {
   aspect-ratio: 4/5;
 }
-.mntn .split .copy p {
+.mntn .benefits {
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+  max-width: 48ch;
+  display: grid;
+  gap: 14px;
+}
+.mntn .benefits li {
+  position: relative;
+  padding-left: 22px;
   color: var(--moss);
-  font-size: clamp(15px, 1.7vw, 18px);
-  line-height: 1.7;
-  margin: 22px 0 0;
-  max-width: 46ch;
+  font-size: clamp(15px, 1.5vw, 17px);
+  line-height: 1.6;
+}
+.mntn .benefits li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 10px;
+  height: 1px;
+  background: var(--gold);
+}
+.mntn .benefits strong {
+  color: var(--ink);
+  font-weight: 600;
 }
 .mntn .arrowlink {
   display: inline-flex;
@@ -499,7 +504,7 @@
   line-height: 1;
   font-variant-numeric: tabular-nums;
 }
-.mntn .st-item h4 {
+.mntn .st-item h3 {
   font-family: var(--display);
   font-weight: 500;
   font-size: 26px;
@@ -569,14 +574,19 @@
   transform: translateY(-3px);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
 }
-.mntn .cbtn.ghost {
-  background: transparent;
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.45);
+.mntn .close-alt {
+  margin: 20px 0 0;
+  font-size: 15px;
 }
-.mntn .cbtn.ghost:hover {
-  box-shadow: none;
-  background: rgba(255, 255, 255, 0.08);
+.mntn .textlink {
+  color: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.mntn .textlink:hover {
+  color: #fff;
+  border-color: #fff;
 }
 .mntn .cnote {
   margin-top: 20px;
@@ -613,6 +623,59 @@
 }
 .mntn .foot-links a:hover {
   color: #eef3ef;
+}
+
+/* ---------- ACCESSIBILITY ---------- */
+/* Skip link: hidden until keyboard focus, then pinned top-left over the hero. */
+.mntn .skip {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 100;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 14px;
+  transform: translateY(-200%);
+}
+.mntn .skip:focus-visible {
+  transform: none;
+}
+.mntn main:focus {
+  outline: none;
+}
+/* Visible keyboard focus everywhere: deep green on the paper sections, bright
+   green on the dark ones (nav/hero overlay, closing band, footer, notice). */
+.mntn a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+.mntn .nav a:focus-visible,
+.mntn .hero a:focus-visible,
+.mntn .close a:focus-visible,
+.mntn .foot a:focus-visible,
+.mntn .signin-note a:focus-visible {
+  outline-color: var(--gold-bright);
+}
+.mntn .cbtn:focus-visible,
+.mntn .signin-btn:focus-visible {
+  border-radius: 999px;
+}
+/* Subtle pressed feedback. */
+.mntn .cbtn:active,
+.mntn .signin-btn:active {
+  transform: translateY(1px);
+  box-shadow: none;
+}
+.mntn .navc a:active,
+.mntn .navr .acct:active,
+.mntn .arrowlink:active,
+.mntn .textlink:active,
+.mntn .foot-links a:active {
+  opacity: 0.6;
 }
 
 /* reveal */
@@ -663,4 +726,54 @@
     transform: none !important;
     transition: none;
   }
+}
+
+/* ---------- 404 (app/not-found.tsx) ---------- */
+.mntn.nf {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  background: linear-gradient(170deg, #1f3a2e, #152820);
+}
+.mntn .nf-in {
+  flex: 1;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 140px clamp(24px, 6vw, 80px) 96px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mntn.nf .kick {
+  color: var(--gold-bright);
+  margin: 0;
+}
+.mntn.nf h1 {
+  font-size: clamp(48px, 8vw, 104px);
+  line-height: 0.98;
+  max-width: 16ch;
+}
+.mntn.nf h1 i {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--gold-bright);
+}
+.mntn .nf-sub {
+  margin: 24px 0 0;
+  max-width: 46ch;
+  font-size: clamp(16px, 1.6vw, 18px);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+}
+.mntn .nf-ctas {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px 28px;
+  margin-top: 36px;
+}
+.mntn.nf a:focus-visible {
+  outline-color: var(--gold-bright);
 }

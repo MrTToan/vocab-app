@@ -9,8 +9,14 @@ Plain-language docs for **how each part of the app behaves today**. One file per
 The app has **two modules** — Vocabulary and IELTS Writing — reachable from the top nav, with a
 cross-skill Report. A SaaS-style landing page sits at `/`.
 
+**Landing (`/`):** a photo hero that says what Lexi is (English vocabulary & IELTS practice), one
+primary **Start practicing free** button and a short fact-only proof line; benefit bullets; the
+exercise toolkit; three steps; a closing band whose single primary button is vocab practice, with
+IELTS writing as a smaller text link. Unknown URLs get a branded 404 (`app/not-found.tsx`); shared
+links unfurl with `app/opengraph-image.jpg`.
+
 **Signing in:** when Google auth is configured, the landing page's app links (nav Vocab/Writing,
-"Open app", the closing CTAs, footer Vocabulary/Writing — `app/(marketing)/AppLink.tsx`) send a
+"Open app", the hero and closing CTAs, the closing writing link, footer Vocabulary/Writing — `app/(marketing)/AppLink.tsx`) send a
 signed-out visitor straight to Google sign-in (`/api/auth/signin?callbackUrl=/vocab` or `/writing`);
 signed-in visitors go directly to the page. The landing stays static, so `AppLink` asks
 `/api/auth/session` from the client and fails open to the direct link (no auth configured, or a

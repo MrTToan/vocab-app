@@ -78,9 +78,33 @@ const TOOLKIT = [
   },
 ];
 
+// The intro's benefit bullets: "**Bold benefit** — detail", learner outcomes
+// only (no infrastructure talk). Every claim is a real product behaviour.
+const BENEFITS = [
+  {
+    head: "Know a word only when you can use it",
+    body: "every word climbs five stages — new, recognition, recall, production, known — and only counts as known once you can produce it from memory.",
+  },
+  {
+    head: "Words come back before you forget them",
+    body: "weak or stale words resurface automatically, right before they’d slip away.",
+  },
+  {
+    head: "Paste any list, skip the busywork",
+    body: "AI fills in meanings, examples, synonyms and collocations, or start from a ready-made IELTS, academic or casual pack.",
+  },
+  {
+    head: "Prove it in your IELTS writing",
+    body: "Task 1 and Task 2 essays scored on all four official criteria, with inline fixes and a band estimate.",
+  },
+];
+
 export default function Landing() {
   return (
     <div className={`mntn ${cormorant.variable} ${inter.variable}`}>
+      <a className="skip" href="#main">
+        Skip to content
+      </a>
       <MarketingMotion />
 
       {/* NAV */}
@@ -107,172 +131,181 @@ export default function Landing() {
         <SignInNote />
       </Suspense>
 
-      <div className="rail" id="mntn-rail" aria-hidden="true">
-        <span className="soc">Follow the climb</span>
-        <span className="bar" />
-      </div>
-
-      {/* HERO */}
-      <header className="hero" id="top">
-        <div className="hero-ph">
-          <Image
-            src="/marketing/cover.jpg"
-            alt="A mountaineer on a ridge at dawn, mist filling the valley below"
-            fill
-            priority
-            sizes="100vw"
-            style={{ objectFit: "cover" }}
-          />
-        </div>
-        <div className="hero-shade" />
-
-        <div className="hero-in">
-          <h1 className="r d1">
-            Master The Words.
-            <br />
-            <span className="thin">And Everything Beyond.</span>
-          </h1>
-        </div>
-        <div className="hero-foot r d3">
-          <span className="down">↓</span> Scroll to begin
-        </div>
-      </header>
-
-      {/* INTRO SPLIT */}
-      <section className="sec" id="intro" data-reveal>
-        <div className="wrap split">
-          <div className="ph r">
+      <main id="main" tabIndex={-1}>
+        {/* HERO — what Lexi is and for whom, one primary action, one true proof
+            line (facts only; no counts we can't verify from the code). */}
+        <header className="hero" id="top">
+          <div className="hero-ph">
             <Image
-              src="/marketing/intro.jpg"
-              alt="A hiker resting at a misty mountain summit at dawn, looking out over a valley"
+              src="/marketing/cover.jpg"
+              alt="A mountaineer on a ridge at dawn, mist filling the valley below"
               fill
-              sizes="(max-width: 860px) 100vw, 55vw"
+              priority
+              sizes="100vw"
               style={{ objectFit: "cover" }}
             />
           </div>
-          <div className="copy">
-            <p className="kick r">Recognition isn&rsquo;t mastery</p>
-            <h2 className="lead-h r d1">
+          <div className="hero-shade" />
+
+          <div className="hero-in">
+            <p className="eyebrow r">English vocabulary &amp; IELTS practice</p>
+            <h1 className="r d1">
+              Master the words.
+              <br />
+              <span className="thin">Then use them.</span>
+            </h1>
+            <p className="hero-sub r d2">
               A word isn&rsquo;t learned when you <i>recognise</i> it — only when
-              you can <i>produce</i> it.
-            </h2>
-            <p className="r d2">
-              Lexi climbs a five-stage ladder — new, recognition, recall,
-              production, known — and a word is only &ldquo;known&rdquo; once
-              you can produce it from memory. Weak or stale words resurface
-              automatically, right before you&rsquo;d forget them. Paste a raw
-              list and AI fills the meanings, examples, synonyms and
-              collocations, with a multi-provider fallback chain so it keeps
-              working even when one provider is down.
+              you can <i>produce</i> it. Lexi drills the English vocabulary you need
+              for IELTS and everyday life until you can use every word yourself.
             </p>
-            <Link className="arrowlink r d2" href="/how-it-works">
-              See how it works →
+            <div className="hero-cta r d3">
+              <AppLink className="cbtn" to="/vocab">
+                Start practicing free →
+              </AppLink>
+              <p className="hero-proof">
+                Free to start · one tap with Google · IELTS writing scored on all
+                four official criteria
+              </p>
+            </div>
+          </div>
+        </header>
+
+        {/* INTRO SPLIT */}
+        <section className="sec" id="intro" data-reveal>
+          <div className="wrap split">
+            <div className="ph r">
+              <Image
+                src="/marketing/intro.jpg"
+                alt="A hiker resting at a misty mountain summit at dawn, looking out over a valley"
+                fill
+                sizes="(max-width: 860px) 100vw, 55vw"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+            <div className="copy">
+              <p className="kick r">Recognition isn&rsquo;t mastery</p>
+              <h2 className="lead-h r d1">
+                Built so words <i>stick</i> — and come out when you need them.
+              </h2>
+              <ul className="benefits r d2">
+                {BENEFITS.map((b) => (
+                  <li key={b.head}>
+                    <strong>{b.head}</strong> — {b.body}
+                  </li>
+                ))}
+              </ul>
+              <Link className="arrowlink r d2" href="/how-it-works">
+                See how it works →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* TOOLKIT */}
+        <section className="sec toolkit" id="toolkit" data-reveal>
+          <div className="wrap">
+            <div className="kit-head">
+              <div>
+                <p className="kick r">What&rsquo;s in your pack</p>
+                <h2 className="lead-h r d1">Six ways to drill a word.</h2>
+              </div>
+              <p className="label r d1" style={{ color: "var(--moss)", maxWidth: "26ch" }}>
+                The exercise adapts to where each word sits on the ladder — so you
+                can&rsquo;t just memorise the answer.
+              </p>
+            </div>
+            <div className="kit">
+              {TOOLKIT.map((t, i) => (
+                <div className={`item r d${(i % 3) + 1}`} key={t.title}>
+                  <div className="ph">
+                    <Image
+                      src={t.src}
+                      alt={t.alt}
+                      fill
+                      loading="lazy"
+                      sizes="(max-width: 520px) 100vw, (max-width: 820px) 50vw, 33vw"
+                      style={{ objectFit: "cover" }}
+                    />
+                  </div>
+                  <div className="meta">
+                    <h3>{t.title}</h3>
+                    <span className="st">{t.stage}</span>
+                  </div>
+                  <p>{t.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* STEPS */}
+        <section className="sec" id="steps" data-reveal>
+          <div className="wrap">
+            <p className="kick r">The route up</p>
+            <h2 className="lead-h r d1" style={{ maxWidth: "18ch" }}>
+              From a blank app to fluent, one climb at a time.
+            </h2>
+            <div className="steps">
+              <div className="st-item r d1">
+                <div className="no">01</div>
+                <h3>Pick your pack</h3>
+                <p>
+                  Sign in with Google, then start from a curated public pack —
+                  IELTS Task 1 &amp; 2, Casual, Academic — or paste your own list
+                  and let AI enrich it.
+                </p>
+              </div>
+              <div className="st-item r d2">
+                <div className="no">02</div>
+                <h3>Practice &amp; adapt</h3>
+                <p>
+                  Lexi serves the right exercise for every word, resurfaces the
+                  ones slipping away, and syncs your progress across every device
+                  you sign in on.
+                </p>
+              </div>
+              <div className="st-item r d3">
+                <div className="no">03</div>
+                <h3>Reach the summit</h3>
+                <p>
+                  Watch each word climb to mastery — and prove it in real IELTS
+                  Writing, scored on all four official criteria with inline fixes
+                  and a band estimate.
+                </p>
+              </div>
+            </div>
+            <Link className="arrowlink r d1" href="/how-it-works">
+              Read the full guide →
             </Link>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* TOOLKIT */}
-      <section className="sec toolkit" id="toolkit" data-reveal>
-        <div className="wrap">
-          <div className="kit-head">
-            <div>
-              <p className="kick r">What&rsquo;s in your pack</p>
-              <h2 className="lead-h r d1">Six ways to drill a word.</h2>
+        {/* CLOSING */}
+        <section className="close" data-reveal>
+          <div className="ph2" />
+          <div className="in">
+            <h2 className="r">
+              Your climb to <i>fluency</i>
+              <br />
+              starts today.
+            </h2>
+            <div className="close-ctas r d1">
+              <AppLink className="cbtn" to="/vocab">
+                Start practicing — free →
+              </AppLink>
             </div>
-            <p className="label r d1" style={{ color: "var(--moss)", maxWidth: "26ch" }}>
-              The exercise adapts to where each word sits on the ladder — so you
-              can&rsquo;t just memorise the answer.
+            <p className="close-alt r d1">
+              <AppLink className="textlink" to="/writing">
+                Or get your IELTS writing scored →
+              </AppLink>
+            </p>
+            <p className="cnote r d2">
+              Free to start · one tap with Google · your climb fits in your pocket
             </p>
           </div>
-          <div className="kit">
-            {TOOLKIT.map((t, i) => (
-              <div className={`item r d${(i % 3) + 1}`} key={t.title}>
-                <div className="ph">
-                  <Image
-                    src={t.src}
-                    alt={t.alt}
-                    fill
-                    loading="lazy"
-                    sizes="(max-width: 520px) 100vw, (max-width: 820px) 50vw, 33vw"
-                    style={{ objectFit: "cover" }}
-                  />
-                </div>
-                <div className="meta">
-                  <h3>{t.title}</h3>
-                  <span className="st">{t.stage}</span>
-                </div>
-                <p>{t.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* STEPS */}
-      <section className="sec" id="steps" data-reveal>
-        <div className="wrap">
-          <p className="kick r">The route up</p>
-          <h2 className="lead-h r d1" style={{ maxWidth: "18ch" }}>
-            From a blank app to fluent, one climb at a time.
-          </h2>
-          <div className="steps">
-            <div className="st-item r d1">
-              <div className="no">01</div>
-              <h4>Pick your pack</h4>
-              <p>
-                Sign in with Google, then start from a curated public pack —
-                IELTS Task 1 &amp; 2, Casual, Academic — or paste your own list
-                and let AI enrich it.
-              </p>
-            </div>
-            <div className="st-item r d2">
-              <div className="no">02</div>
-              <h4>Practice &amp; adapt</h4>
-              <p>
-                Lexi serves the right exercise for every word, resurfaces the
-                ones slipping away, and syncs your progress across every device
-                you sign in on.
-              </p>
-            </div>
-            <div className="st-item r d3">
-              <div className="no">03</div>
-              <h4>Reach the summit</h4>
-              <p>
-                Watch each word climb to mastery — and prove it in real IELTS
-                Writing, scored on all four official criteria with inline fixes
-                and a band estimate.
-              </p>
-            </div>
-          </div>
-          <Link className="arrowlink r d1" href="/how-it-works">
-            Read the full guide →
-          </Link>
-        </div>
-      </section>
-
-      {/* CLOSING */}
-      <section className="close" data-reveal>
-        <div className="ph2" />
-        <div className="in">
-          <h2 className="r">
-            Your climb to <i>fluency</i>
-            <br />
-            starts today.
-          </h2>
-          <div className="close-ctas r d1">
-            <AppLink className="cbtn" to="/vocab">
-              Start practicing — free →
-            </AppLink>
-            <AppLink className="cbtn ghost" to="/writing">
-              Score my IELTS writing →
-            </AppLink>
-          </div>
-          <p className="cnote r d2">
-            Free to start · one tap with Google · your climb fits in your pocket
-          </p>
-        </div>
-      </section>
+        </section>
+      </main>
 
       <footer className="foot">
         <span className="logo">Lexi</span>
