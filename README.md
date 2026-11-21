@@ -52,7 +52,7 @@ Over time, the Report shows your band trend, your average per criterion, and you
 ## Everywhere you learn
 
 - **Paste a list, get a word bank.** Drop in up to 200 words and Lexi fills in the Vietnamese meaning, an English definition, part of speech, pronunciation, synonyms, collocations and example sentences — catching misspellings and skipping duplicates along the way. Nothing is saved until you say so.
-- **Ready-made packs** to start immediately: IELTS Task 1, IELTS Task 2, Casual English 100 and Academic Writing 100. Practise a pack before adopting it; add it and keep any progress you've already made.
+- **Ready-made packs** to start immediately, drawn from a public catalog of several thousand fully-enriched words — each with pronunciation, example sentences, a full practice question bank and an IELTS target band — from focused sets like IELTS Task 1 & Task 2, Casual English 100 and Academic Writing 100 to Collocations & Idioms. Practise a pack before adopting it; add it and keep any progress you've already made.
 - **Collections are lenses, not copies.** A word can live in several collections, and your progress on it is the same everywhere it appears.
 - **One report for both halves** — mastery by rung, weak words, your daily streak, accuracy per exercise type, and your writing bands over time. Nothing to log yourself; it all comes from real practice.
 - **Works on your phone,** built for spare minutes. Your progress follows your sign-in, so you can practise on the bus and pick up on your laptop exactly where you left off.

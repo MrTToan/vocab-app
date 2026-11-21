@@ -6,9 +6,10 @@ with no auth configured (the dev seam). Everything sits in one SQLite file: **`.
 (the same client can point at a hosted Turso DB unchanged). The vocabulary module separates shared
 **content** from per-user **progress**:
 
-- **words** — the shared word content (text, meaning, examples). `owner_id` marks the
-  public catalog (`__system__`) vs. a user's personal word, and gates *editing* only — studying a
-  word is not editing it.
+- **words** — the shared word content (text, meaning, examples, and an optional
+  **IELTS target band** — `difficulty`, one of `5.0`–`9.0`, shown as a chip on the Library and
+  editable there). `owner_id` marks the public catalog (`__system__`) vs. a user's personal
+  word, and gates *editing* only — studying a word is not editing it.
 - **questions** — the shared [pre-generated + harvested question bank](question-bank.md),
   keyed by word.
 - **user_words** — a user's progress on a word (stage, times seen, recent results). "Studying"
@@ -35,6 +36,19 @@ cp .data/lexi.db ".data/lexi-backup-$(date +%Y%m%d).db"
 ```
 
 Keep a copy of `.env.local` somewhere safe too, since it holds your keys.
+
+## The public catalog & how catalog data is delivered
+The `__system__` public catalog is large — roughly **3,950 words**, each fully enriched (part of
+speech, IPA, Vietnamese meaning, English definition, synonyms, collocations, examples, and the
+`difficulty` band) and each with a 30-question practice [bank](question-bank.md).
+
+That catalog content is treated as **data, not code**. It is **never committed to git** — the
+local seed/enrichment/question-bank packs live under `content/{collections,enrichment,question-bank}/`,
+which are **gitignored**. Instead, catalog data is delivered straight to the **production database**
+by CLI: back up first, `docker cp` the packs into the app container, then apply them against
+`/app/.data/lexi.db` with a raw libSQL script (the importers use deterministic ids and are
+idempotent + blank-safe, so re-applying a pack never wipes enriched fields). This keeps the repo
+free of bulk vocabulary data while the running app stays the single source of truth for content.
 
 ## Other options
 - The same code can run against a **Google Sheet** instead of SQLite (optional, chosen by environment
